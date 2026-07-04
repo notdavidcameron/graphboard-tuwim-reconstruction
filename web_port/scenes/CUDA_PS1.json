@@ -1,0 +1,734 @@
+{
+  "id": "CUDA_PS1",
+  "title": "CUDA_PS1",
+  "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDA_PS1.BDF",
+  "pageRect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "background": {
+    "colorIndex": 0,
+    "flag": 0,
+    "bmpPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\background.bmp",
+    "bmpUrl": "../extracted_assets/bdf/CUDA_PS1/background.bmp",
+    "palettePath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\background_palette.bin",
+    "paletteUrl": "../extracted_assets/bdf/CUDA_PS1/background_palette.bin"
+  },
+  "components": [
+    {
+      "id": "00_Bitmap_Holder",
+      "type": "Bitmap_Holder",
+      "index": 0,
+      "z": 0,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "sourceOffset": 309353,
+      "privateOffset": 310485,
+      "privateSize": 197268,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "01_Sound_Holder",
+      "type": "Sound_Holder",
+      "index": 1,
+      "z": 0,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "geometryConfidence": "not_visual",
+      "sourceOffset": 507753,
+      "privateOffset": 508649,
+      "privateSize": 2265358,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_000_0007c2f5.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_000_0007c2f5.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 508661,
+          "id": 0
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_001_000803b3.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_001_000803b3.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 525235,
+          "id": 1
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_002_00083ef9.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_002_00083ef9.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 540409,
+          "id": 2
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_003_000882d5.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_003_000882d5.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 557781,
+          "id": 3
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_004_0008ba61.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_004_0008ba61.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 572001,
+          "id": 4
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_005_0008f207.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_005_0008f207.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 586247,
+          "id": 5
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_006_00092c73.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_006_00092c73.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 601203,
+          "id": 6
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_007_000967fd.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_007_000967fd.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 616445,
+          "id": 7
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_008_00099d25.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_008_00099d25.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 630053,
+          "id": 8
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_009_0009d53d.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_009_0009d53d.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 644413,
+          "id": 9
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_010_000a0807.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_010_000a0807.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 657415,
+          "id": 10
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_011_000a45c7.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_011_000a45c7.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 673223,
+          "id": 11
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_012_000a7c3d.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_012_000a7c3d.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 687165,
+          "id": 12
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_013_000ab7e9.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_013_000ab7e9.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 702441,
+          "id": 13
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_014_000af0cb.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_014_000af0cb.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 717003,
+          "id": 14
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_015_000b26bf.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_015_000b26bf.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 730815,
+          "id": 15
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_016_000b62bf.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_016_000b62bf.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 746175,
+          "id": 16
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_017_000b9f13.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_017_000b9f13.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 761619,
+          "id": 17
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_018_000bd7ff.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_018_000bd7ff.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 776191,
+          "id": 18
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_019_000c0c23.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_019_000c0c23.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 789539,
+          "id": 19
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_020_000c4883.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_020_000c4883.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 804995,
+          "id": 20
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_021_000c8015.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_021_000c8015.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 819221,
+          "id": 21
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_022_000cc089.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_022_000cc089.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 835721,
+          "id": 22
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_023_000cfecb.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_023_000cfecb.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 851659,
+          "id": 23
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_024_000d36a9.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_024_000d36a9.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 865961,
+          "id": 24
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_025_0010af37.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_025_0010af37.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 1093431,
+          "id": 25
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_026_00142807.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_026_00142807.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 1320967,
+          "id": 26
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_027_0017a0b5.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_027_0017a0b5.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 1548469,
+          "id": 27
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_028_001b175d.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_028_001b175d.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 1775453,
+          "id": 28
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_029_001e901d.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_029_001e901d.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 2002973,
+          "id": 29
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_030_001e916b.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_030_001e916b.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 2003307,
+          "id": 30
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_031_001ea62f.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_031_001ea62f.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 2008623,
+          "id": 31
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_032_001ecaa9.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_032_001ecaa9.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 2017961,
+          "id": 32
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_033_00214b35.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_033_00214b35.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 2181941,
+          "id": 33
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_034_002362e3.wav",
+          "url": "../extracted_assets/bdf/CUDA_PS1/embedded/01_Sound_Holder_034_002362e3.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 2319075,
+          "id": 34
+        }
+      ]
+    },
+    {
+      "id": "02_MultiBitmap",
+      "type": "MultiBitmap",
+      "index": 2,
+      "z": 2,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "sourceOffset": 2774007,
+      "privateOffset": 2775012,
+      "privateSize": 25064,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "03_Sprite_Holder",
+      "type": "Sprite_Holder",
+      "index": 3,
+      "z": 3,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "sourceOffset": 2800076,
+      "privateOffset": 2801610,
+      "privateSize": 335324,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "04_Text_Holder",
+      "type": "Text_Holder",
+      "index": 4,
+      "z": 4,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "sourceOffset": 3136934,
+      "privateOffset": 3138560,
+      "privateSize": 39532,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    }
+  ],
+  "script": {
+    "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\script.txt",
+    "url": "../extracted_assets/bdf/CUDA_PS1/script.txt",
+    "handlers": [
+      {
+        "name": "OnOpenPage",
+        "signature": "OnOpenPage()"
+      },
+      {
+        "name": "while",
+        "signature": "while(index < 128)"
+      },
+      {
+        "name": "OnTimer",
+        "signature": "OnTimer(void)"
+      },
+      {
+        "name": "if",
+        "signature": "if(biezacyKlawiszDemo == biezacyKlawisz)"
+      },
+      {
+        "name": "OnClosePage",
+        "signature": "OnClosePage(void)"
+      },
+      {
+        "name": "OnRButtonDown",
+        "signature": "OnRButtonDown(int x,int y)"
+      },
+      {
+        "name": "OnLButtonDown",
+        "signature": "OnLButtonDown(int x,int y)"
+      },
+      {
+        "name": "UstawAktywnoscStrony",
+        "signature": "UstawAktywnoscStrony(int nowaAkcja)"
+      },
+      {
+        "name": "if",
+        "signature": "if(nowaAkcja != 0)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(nowaAkcja)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(akcja)"
+      },
+      {
+        "name": "OnKeyDown",
+        "signature": "OnKeyDown(UINT nChar)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(nChar)"
+      },
+      {
+        "name": "OnKeyUp",
+        "signature": "OnKeyUp(UINT nChar)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(nChar)"
+      },
+      {
+        "name": "Muzyka",
+        "signature": "Muzyka(int nrRuchu, int dzwiek)"
+      },
+      {
+        "name": "if",
+        "signature": "if((nrRuchu >= 0) && (nrRuchu<=23))"
+      },
+      {
+        "name": "if",
+        "signature": "if((nrRuchu >= 24) && (nrRuchu<=28))"
+      },
+      {
+        "name": "MuzykaStop",
+        "signature": "MuzykaStop(int nrRuchu)"
+      },
+      {
+        "name": "if",
+        "signature": "if((nrRuchu >= 0) && (nrRuchu<=23))"
+      },
+      {
+        "name": "if",
+        "signature": "if(biezacyKlawisz > -1)"
+      },
+      {
+        "name": "if",
+        "signature": "if((nrRuchu >= 24) && (nrRuchu<=28))"
+      },
+      {
+        "name": "if",
+        "signature": "if(aktywnyPodklad[nrBebna])"
+      },
+      {
+        "name": "Sprite_Holder.MouseMoveIn",
+        "signature": "Sprite_Holder.MouseMoveIn(int spriteID)"
+      },
+      {
+        "name": "Sprite_Holder.MouseMoveOut",
+        "signature": "Sprite_Holder.MouseMoveOut(int spriteID)"
+      },
+      {
+        "name": "Sprite_Holder.MouseClickOnDown",
+        "signature": "Sprite_Holder.MouseClickOnDown(int spriteID)"
+      },
+      {
+        "name": "if",
+        "signature": "if((spriteID >= 0) && (spriteID<=23))"
+      },
+      {
+        "name": "if",
+        "signature": "if((spriteID >= 24) && (spriteID<=28))"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(spriteID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(glosnoscKlawiatury > -2000)"
+      },
+      {
+        "name": "if",
+        "signature": "if(glosnoscKlawiatury < 0)"
+      },
+      {
+        "name": "if",
+        "signature": "if(klawiaturaWlaczona)"
+      },
+      {
+        "name": "Sprite_Holder.MouseClickOnUp",
+        "signature": "Sprite_Holder.MouseClickOnUp(int spriteID)"
+      },
+      {
+        "name": "if",
+        "signature": "if((spriteID >= 0) && (spriteID<=23))"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(spriteID)"
+      },
+      {
+        "name": "Sound_Holder.EndPlaySound",
+        "signature": "Sound_Holder.EndPlaySound(int soundID)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(soundID)"
+      },
+      {
+        "name": "Text_Holder.EndOfSynchroText",
+        "signature": "Text_Holder.EndOfSynchroText(int textID)"
+      },
+      {
+        "name": "Text_Holder.ScrollTextUp",
+        "signature": "Text_Holder.ScrollTextUp(int textID)"
+      },
+      {
+        "name": "Text_Holder.ScrollTextDown",
+        "signature": "Text_Holder.ScrollTextDown(int textID)"
+      },
+      {
+        "name": "Text_Holder.EndScrollText",
+        "signature": "Text_Holder.EndScrollText(int textID)"
+      },
+      {
+        "name": "Text_Holder.MouseMoveIn",
+        "signature": "Text_Holder.MouseMoveIn(int textID)"
+      },
+      {
+        "name": "Text_Holder.MouseMoveOut",
+        "signature": "Text_Holder.MouseMoveOut(int textID)"
+      },
+      {
+        "name": "Text_Holder.PlayMark",
+        "signature": "Text_Holder.PlayMark(int textID,int markNo)"
+      },
+      {
+        "name": "if",
+        "signature": "if(textID == 3)"
+      },
+      {
+        "name": "if",
+        "signature": "if(maxRuchow > markNo)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseClickOnDown",
+        "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(spriteID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(glosnosc.top)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(akcja)"
+      },
+      {
+        "name": "if",
+        "signature": "if(akcja == 0)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseClickOnUp",
+        "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(spriteID)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseMoveIn",
+        "signature": "Group.Sprite_Holder.MouseMoveIn(int spriteID)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(spriteID)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseMoveOut",
+        "signature": "Group.Sprite_Holder.MouseMoveOut(int spriteID)"
+      },
+      {
+        "name": "Group.HotSpot_Holder.MouseMoveIn",
+        "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(rectID==0)"
+      },
+      {
+        "name": "if",
+        "signature": "if(toolbar)"
+      },
+      {
+        "name": "Group.Sprite_Holder.InPlace",
+        "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
+      },
+      {
+        "name": "if",
+        "signature": "if(spriteID==6)"
+      },
+      {
+        "name": "if",
+        "signature": "if(x==480)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(toolbarCase)"
+      }
+    ],
+    "rawText": "//###########################################################################\n\n//Script code\n\n//###########################################################################\n\n\n\n\n\nOnOpenPage()\n\n{\n\n\t// Add your component and variables initialization code here\n\n\t// WARNING: All variables definied on this function are global for this page\n\n\n\n   /*int index = 32;\n\n   while( index < 128 )\n\n   {\n\n      Debug( \"%c, %d\", index, index );\n\n      index++;\n\n   }\n\n   return;*/\n\n\n\n\n\n\n\n\n\n\n\n   Sprite_Holder.MoveTo( 0, 132, 329 );\n\n   Sprite_Holder.MoveTo( 1, 174, 329 );\n\n   Sprite_Holder.MoveTo( 2, 208, 331 );\n\n   Sprite_Holder.MoveTo( 3, 244, 332 );\n\n   Sprite_Holder.MoveTo( 4, 279, 334 );\n\n   Sprite_Holder.MoveTo( 5, 311, 335 );\n\n   Sprite_Holder.MoveTo( 6, 343, 337 );\n\n   Sprite_Holder.MoveTo( 7, 375, 339 );\n\n   Sprite_Holder.MoveTo( 8, 402, 339 );\n\n   Sprite_Holder.MoveTo( 9, 429, 340 );\n\n   Sprite_Holder.MoveTo( 10, 454, 341 );\n\n   Sprite_Holder.MoveTo( 11, 483, 342 );\n\n   Sprite_Holder.MoveTo( 12, 513, 341 );\n\n   Sprite_Holder.MoveTo( 13, 537, 343 );\n\n   Sprite_Holder.MoveTo( 14, 183, 331 );\n\n   Sprite_Holder.MoveTo( 15, 212, 334 );\n\n   Sprite_Holder.MoveTo( 16, 245, 334 );\n\n   Sprite_Holder.MoveTo( 17, 308, 338 );\n\n   Sprite_Holder.MoveTo( 18, 338, 339 );\n\n   Sprite_Holder.MoveTo( 19, 396, 343 );\n\n   Sprite_Holder.MoveTo( 20, 423, 342 );\n\n   Sprite_Holder.MoveTo( 21, 450, 343 );\n\n   Sprite_Holder.MoveTo( 22, 506, 343 );\n\n   Sprite_Holder.MoveTo( 23, 532, 345 );\n\n   Sprite_Holder.MoveTo( 24, 397, 308 );\n\n   Sprite_Holder.MoveTo( 25, 426, 308 );\n\n   Sprite_Holder.MoveTo( 26, 452, 307 );\n\n   Sprite_Holder.MoveTo( 27, 479, 309 );\n\n   Sprite_Holder.MoveTo( 28, 506, 309 );\n\n   Sprite_Holder.MoveTo( 29, 550, 308 );\n\n   Sprite_Holder.MoveTo( 30, 554, 268 );\n\n   Sprite_Holder.MoveTo( 31, 172, 258 );\n\n   Sprite_Holder.MoveTo( 32, 290, 262 );\n\n   Sprite_Holder.MoveTo( 33, 299, 237 );\n\n   Sprite_Holder.ChangePhase( 31, 1 );\n\n   \n\n\n\n\n\n   int stalaSciszania = -450;\n\n\n\n\n\n   int keyDown = 0;\n\n\n\n      // 0 - stop - wszystko aktywne, widzoczny tekst piosenki\n\n      // 1 - piosenka\n\n      // 2 - melodia\n\n      // 3 - demo\n\n   int akcja = 0;\n\n\n\n      // Zmienna okreslajaca glosnosc odtwarzania dzwiekow.\n\n      // left  - wartosci od 0 do 2;      0 - najglosniej\n\n      // top   - kierunek sciszania 0 - cicho, 1 glosno\n\n   CRect glosnosc;\n\n   glosnosc.SetRect( 0, 0, 0, 0 );\n\n\n\n\n\n   int klawiaturaWlaczona = 1;\n\n   Sprite_Holder.ChangePhase( 33, 1 );\n\n\n\n\n\n\n\n      // zmienna wskazujaca jaki jest odgrywany biezaco dzwiek\n\n      // -1  - zaden\n\n   int biezacyKlawisz = -1;\n\n   int biezacyKlawiszDemo = -2;\n\n\n\n      // wartosci od -2000 do 0\n\n   int glosnoscKlawiatury = 0;\n\n\n\n\n\n   int aktywnyPodklad[5];\n\n   aktywnyPodklad[0]=0;\n\n   aktywnyPodklad[1]=0;\n\n   aktywnyPodklad[2]=0;\n\n   aktywnyPodklad[3]=0;\n\n   aktywnyPodklad[4]=0;\n\n\n\n\n\n   // DLA ROBERTA\n\n   // Do tej tablicy nalezy wpisac kolejne numery ruchow pingiwna\n\n   //   0 - 13 klawisze biale (od lewej do prawej)\n\n   //  14 - 23 klawisze czarne (od lewej do prawej)\n\n   //  24 - 28 bebny\n\n   int maxRuchow =80;\n\n   int demo[ maxRuchow ];\n\n\n\n    demo[0]=16;\n\n    demo[1]=4;\n\n    demo[2]=5;\n\n    demo[3]=18;\n\n    demo[4]=18;\n\n    demo[5]=18;\n\n    demo[6]=4;\n\n    demo[7]=18;\n\n    demo[8]=7;\n\n    demo[9]=4;\n\n    demo[10]=4;\n\n    demo[11]=18;\n\n    demo[12]=7;\n\n    demo[13]=19;\n\n    demo[14]=3;\n\n    demo[15]=18;\n\n    demo[16]=17;\n\n    demo[17]=3;\n\n    demo[18]=16;\n\n    demo[19]=8;\n\n    demo[20]=17;\n\n    demo[21]=18;\n\n    demo[22]=7;\n\n    demo[23]=19;\n\n    demo[24]=19;\n\n    demo[25]=19;\n\n    demo[26]=18;\n\n    demo[27]=19;\n\n    demo[28]=20;\n\n    demo[29]=18;\n\n    demo[30]=18;\n\n    demo[31]=19;\n\n    demo[32]=20;\n\n    demo[33]=21;\n\n    demo[34]=21;\n\n    demo[35]=21;\n\n    demo[36]=20;\n\n    demo[37]=8;\n\n    demo[38]=7;\n\n    demo[39]=18;\n\n    demo[40]=8;\n\n    demo[41]=9;\n\n    demo[42]=21;\n\n    demo[43]=9;\n\n    demo[44]=8;\n\n    demo[45]=7;\n\n    demo[46]=6;\n\n    demo[47]=8;\n\n    demo[48]=4;\n\n    demo[49]=4;\n\n    demo[50]=4;\n\n    demo[51]=5;\n\n    demo[52]=18;\n\n    demo[53]=5;\n\n    demo[54]=18;\n\n    demo[55]=7;\n\n    demo[56]=5;\n\n    demo[57]=16;\n\n    demo[58]=4;\n\n    demo[59]=8;\n\n    demo[60]=9;\n\n    demo[61]=21;\n\n    demo[62]=9;\n\n    demo[63]=8;\n\n    demo[64]=7;\n\n    demo[65]=6;\n\n    demo[66]=8;\n\n    demo[67]=4;\n\n    demo[68]=4;\n\n    demo[69]=4;\n\n    demo[70]=5;\n\n    demo[71]=18;\n\n    demo[72]=5;\n\n    demo[73]=18;\n\n    demo[74]=7;\n\n    demo[75]=5;\n\n    demo[76]=16;\n\n    demo[77]=4;\n\n\n\n\n\n\n\n\n\n\n\n   LoadGroup(\"g_pios.grp\");\n\n\n\n   int toolbar=0;\n\n   int toolbarCase=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n\n\n   SetCursor(0);\n\n   //SetTimer( 5000 );\n\n   FadeScreen(1,1000);\n\n}\n\n\n\n\n\nvoid OnTimer(void)\n\n{\n\n\t// Add your timer handler code here\n\n   if( biezacyKlawiszDemo == biezacyKlawisz )\n\n   {\n\n      MuzykaStop( biezacyKlawiszDemo );\n\n      SetTimer(0);\n\n      biezacyKlawiszDemo = -2;\n\n   }\n\n\n\n   //SetTimer(0);\n\n   //UstawAktywnoscStrony( 0 );\n\n   //Group.Sound_Holder.PlayDSound(0);\n\n}\n\n\n\n\n\nvoid OnClosePage(void)\n\n{\n\n\t// Add your close page handler code here\n\n   FadeScreen(0,1000);\n\n   SetCursor(0);\n\n   CloseGroup();\n\n}\n\n\n\n\n\n\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid OnRButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   //Uruchomienie pomocy\n\n   UstawAktywnoscStrony( 0 );\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   //SetTimer(0);\n\n}\n\n\n\n\n\n\n\nvoid OnLButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   Group.Sound_Holder.Stop(0);\n\n   //SetTimer(0);\n\n}\n\n\n\n\n\n\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n// W zaleznosci od stanu biezacego i nowego jest ustawiana aktywnosc strony\n\n//\n\nvoid UstawAktywnoscStrony( int nowaAkcja )\n\n{\n\n   if( nowaAkcja != 0 )\n\n   {\n\n         MuzykaStop( 24 );\n\n         MuzykaStop( 25 );\n\n         MuzykaStop( 26 );\n\n         MuzykaStop( 27 );\n\n         MuzykaStop( 28 );\n\n   }\n\n\n\n   int leftOffset;\n\n   int upOffset;\n\n\n\n   switch( nowaAkcja )\n\n   {\n\n      case 0:   // stop\n\n\n\n            // Nalezy uaktywnic wszystkie przyciski na panelu\n\n         Group.Sprite_Holder.ChangePhase( 1, 0 );\n\n         Group.Sprite_Holder.ChangePhase( 2, 0 );\n\n         Group.Sprite_Holder.ChangePhase( 3, 0 );\n\n\n\n\n\n         switch( akcja )\n\n         {\n\n            case 2:\n\n\n\n                  // Jesli poprzednio byla odgrywana melodia\n\n                  // nalezy ukryc tekst melodi i pokazac tekst\n\n                  // piosenki przesuniety o offset melodi\n\n\n\n               Text_Holder.StopSynchroText( 2 );\n\n\n\n               DisableScreen();\n\n\n\n               Text_Holder.HideText( 2 );   // melodia\n\n               Text_Holder.GetTextOffsets( 2, &leftOffset, &upOffset );\n\n\n\n               Text_Holder.ShowText( 0 );   // piosenka\n\n               Text_Holder.SetTextOffsets( 0, leftOffset, upOffset );\n\n   \n\n               EnableScreen();\n\n               ShowBuffer();\n\n               break;\n\n\n\n            case 1:\n\n               Text_Holder.StopSynchroText( 0 );\n\n               break;\n\n\n\n            case 3:\n\n               MuzykaStop( biezacyKlawisz );\n\n               Text_Holder.StopSynchroText( 3 );\n\n               break;\n\n         }\n\n         break;\n\n\n\n      case 1:   // piosenka\n\n         Group.Sprite_Holder.ChangePhase( 1, 1 );   // mruganie\n\n         Group.Sprite_Holder.ChangePhase( 2, 2 );\n\n         Group.Sprite_Holder.ChangePhase( 3, 2 );\n\n\n\n            // piosenka\n\n         Text_Holder.PlaySynchroText( 0 );\n\n         Text_Holder.SetSoundParameters( 0, (glosnosc.left*(stalaSciszania)), 0, 0 );\n\n\n\n         break;\n\n\n\n      case 2:   // melodia\n\n         Group.Sprite_Holder.ChangePhase( 1, 2 );   \n\n         Group.Sprite_Holder.ChangePhase( 2, 1 );   // mruganie\n\n         Group.Sprite_Holder.ChangePhase( 3, 2 );\n\n\n\n         DisableScreen();\n\n\n\n         Text_Holder.GetTextOffsets( 0, &leftOffset, &upOffset );\n\n         Debug(\"%d\", upOffset );\n\n         Text_Holder.HideText( 0 );   // piosenka\n\n\n\n         Text_Holder.ShowText( 2 );   // melodia\n\n         Text_Holder.SetTextOffsets( 2, leftOffset, upOffset );\n\n   \n\n         EnableScreen();\n\n         ShowBuffer();\n\n\n\n            // piosenka\n\n         Text_Holder.PlaySynchroText( 2 );\n\n         Text_Holder.SetSoundParameters( 2, (glosnosc.left*(stalaSciszania)), 0, 0 );\n\n         break;\n\n\n\n      case 3:   // demo\n\n         Group.Sprite_Holder.ChangePhase( 1, 2 );   \n\n         Group.Sprite_Holder.ChangePhase( 2, 2 );\n\n         Group.Sprite_Holder.ChangePhase( 3, 1 );   // mruganie\n\n\n\n            // piosenka\n\n         Text_Holder.PlaySynchroText( 3 );\n\n         Text_Holder.SetSoundParameters( 3, (glosnosc.left*(stalaSciszania)), 0, 0 );\n\n         break;\n\n   }\n\n\n\n   akcja = nowaAkcja;\n\n}\n\n\n\n\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid OnKeyDown(UINT nChar)\n\n{\n\n\t// Add your keyboard handler code here\n\n   Group.Sound_Holder.Stop(0);\n\n   //SetTimer(0);\n\n\n\n      // Odgrywane jest demo - nic nie mozna robic na klawiaturze\n\n   if( akcja == 3 )\n\n      return;\n\n\n\n   if( nChar==keyDown ) return;\n\n   keyDown = nChar;\n\n\n\n   //if( biezacyKlawisz > -1 ) return;\n\n\n\n   switch(nChar)\n\n   {                \n\n      // Klawiatura   \n\n      case 9:\n\n         Muzyka(0, 1 );\n\n         break;\n\n\n\n      case 113: //Q\n\n      case 81:\n\n         Muzyka(1, 1 );\n\n         break;                         \n\n\n\n      case 119: //W\n\n      case 87:\n\n         Muzyka(2, 1 );\n\n         break;\n\n\n\n      case 101: //E\n\n      case 69:\n\n         Muzyka(3, 1 );\n\n         break;\n\n\n\n      case 114: //R\n\n      case 82:\n\n         Muzyka(4, 1 );\n\n         break;\n\n\n\n      case 116: //T\n\n      case 84:\n\n         Muzyka(5, 1 );\n\n         break;\n\n\n\n      case 121: //Y\n\n      case 89:\n\n         Muzyka(6, 1 );\n\n         break;\n\n\n\n      case 117: //U\n\n      case 85:\n\n         Muzyka(7, 1 );\n\n         break;\n\n\n\n      case 105: //I\n\n      case 73:\n\n         Muzyka(8, 1 );\n\n         break;\n\n\n\n      case 111: //O\n\n      case 79:\n\n         Muzyka(9, 1 );\n\n         break;\n\n\n\n      case 112: //P\n\n      case 80:\n\n         Muzyka(10, 1 );\n\n         break;\n\n\n\n      case 91:  //[\n\n         Muzyka(11, 1 );\n\n         break;\n\n\n\n      case 93:  //]\n\n         Muzyka(12, 1 );\n\n         break;\n\n\n\n      case 13:  // Enter\n\n         Muzyka(13, 1 );\n\n         break;\n\n\n\n      case 49:  // 1\n\n         Muzyka(14, 1 );\n\n         break;\n\n\n\n      case 50:  // 2\n\n         Muzyka(15, 1 );\n\n         break;\n\n\n\n      case 51: // 3\n\n         Muzyka(16, 1 );\n\n         break;\n\n\n\n      case 53: // 5\n\n         Muzyka(17, 1 );\n\n         break;\n\n\n\n      case 54: // 6\n\n         Muzyka(18, 1 );\n\n         break;\n\n\n\n      case 56: // 8\n\n         Muzyka(19, 1 );\n\n         break;\n\n\n\n      case 57:  //9\n\n         Muzyka(20, 1 );\n\n         break;\n\n\n\n      case 48:  // 10\n\n         Muzyka(21, 1 );\n\n         break;\n\n\n\n      case 61:  // +\n\n         Muzyka(22, 1 );\n\n         break;\n\n\n\n      case 8:  // backspace\n\n         Muzyka(23, 1 );\n\n         break;\n\n   }\n\n}\n\n\n\n\n\n\n\nvoid OnKeyUp(UINT nChar)\n\n{\n\n        //Add your command handler code here\n\n   keyDown = 0;\n\n\n\n   int nowyBK = -1;\n\n\n\n   switch(nChar)\n\n   {                \n\n      // Klawiatura   \n\n      case 9:\n\n         nowyBK=0;\n\n         break;\n\n\n\n      case 113: //Q\n\n      case 81:\n\n         nowyBK=1;\n\n         break;\n\n\n\n      case 119: //W\n\n      case 87:\n\n         nowyBK=2;\n\n         break;\n\n\n\n      case 101: //E\n\n      case 69:\n\n         nowyBK=3;\n\n         break;\n\n\n\n      case 114: //R\n\n      case 82:\n\n         nowyBK=4;\n\n         break;\n\n\n\n      case 116: //T\n\n      case 84:\n\n         nowyBK=5;\n\n         break;\n\n\n\n      case 121: //Y\n\n      case 89:\n\n         nowyBK=6;\n\n         break;\n\n\n\n      case 117: //U\n\n      case 85:\n\n         nowyBK=7;\n\n         break;\n\n\n\n      case 105: //I\n\n      case 73:\n\n         nowyBK=8;\n\n         break;\n\n\n\n      case 111: //O\n\n      case 79:\n\n         nowyBK=9;\n\n         break;\n\n\n\n      case 112: //P\n\n      case 80:\n\n         nowyBK=10;\n\n         break;\n\n\n\n      case 219:  //[\n\n         nowyBK=11;\n\n         break;\n\n\n\n      case 221:  //]\n\n         nowyBK=12;\n\n         break;\n\n\n\n      case 13:  // Enter\n\n         nowyBK=13;\n\n         break;\n\n\n\n      case 49:  // 1\n\n         nowyBK=14;\n\n         break;\n\n\n\n      case 50:  // 2\n\n         nowyBK=15;\n\n         break;\n\n\n\n      case 51: // 3\n\n         nowyBK=16;\n\n         break;\n\n\n\n      case 53: // 5\n\n         nowyBK=17;\n\n         break;\n\n\n\n      case 54: // 6\n\n         nowyBK=18;\n\n         break;\n\n\n\n      case 56: // 8\n\n         nowyBK=19;\n\n         break;\n\n\n\n      case 57:  //9\n\n         nowyBK=20;\n\n         break;\n\n\n\n      case 48:  // 10\n\n         nowyBK=21;\n\n         break;\n\n\n\n      case 61:  // +\n\n         nowyBK=22;\n\n         break;\n\n\n\n      case 8:  // backspace\n\n         nowyBK=23;\n\n         break;\n\n   }\n\n\n\n   if( nowyBK == biezacyKlawisz )\n\n      MuzykaStop(biezacyKlawisz);\n\n}\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//   nrRuchu - wskazuje ktory ruch bedzie wykonany\n\n//      \n\n//   0 - 13 klawisze biale (od lewej do prawej)\n\n//  14 - 23 klawisze czarne (od lewej do prawej)\n\n//  24 - 28 bebny\n\n//\n\nvoid Muzyka( int nrRuchu, int dzwiek )\n\n{\n\n   if( (nrRuchu >= 0) && (nrRuchu<=23) )\n\n   {\n\n         // wygaszenie poprzedniego klawisza\n\n      MuzykaStop( biezacyKlawisz );\n\n      biezacyKlawisz = nrRuchu;\n\n\n\n      if( dzwiek )\n\n         Sound_Holder.PlayDSound( nrRuchu );\n\n      Sprite_Holder.SetDeep( nrRuchu, 1 );\n\n      Sprite_Holder.ChangePhase( nrRuchu, 1 );\n\n   }\n\n\n\n   if( (nrRuchu >= 24) && (nrRuchu<=28))\n\n   {\n\n         // wylaczenie poprzedniego bebna\n\n      int nrBebna = nrRuchu-24;\n\n\n\n      if( aktywnyPodklad[nrBebna] )\n\n         MuzykaStop( nrRuchu );\n\n      else\n\n      {\n\n         Sound_Holder.PlayDSound( nrRuchu );\n\n         Sprite_Holder.ChangePhase( nrRuchu, 1 );\n\n         aktywnyPodklad[nrBebna] = 1;\n\n      }\n\n   }\n\n\n\n   Sound_Holder.SetPlayDSoundParameters( nrRuchu, glosnoscKlawiatury, 0, 0 );\n\n\n\n}\n\n\n\n\n\n//////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid MuzykaStop( int nrRuchu )\n\n{\n\n   if( (nrRuchu >= 0) && (nrRuchu<=23) )\n\n   {\n\n      if( biezacyKlawisz > -1 )\n\n      {\n\n            //Sound_Holder.Stop( nrRuchu );\n\n            Sprite_Holder.SetDeep( nrRuchu, 0 );\n\n            Sprite_Holder.ChangePhase( nrRuchu, 0 );\n\n            biezacyKlawisz = -1;\n\n      }\n\n   }\n\n\n\n   if( (nrRuchu >= 24) && (nrRuchu<=28) )\n\n   {\n\n         // wylaczenie poprzedniego bebna\n\n      int nrBebna = nrRuchu-24;\n\n\n\n      if( aktywnyPodklad[nrBebna] )\n\n      {\n\n            Sound_Holder.Stop( nrRuchu );\n\n            Sprite_Holder.ChangePhase( nrRuchu, 0 );\n\n            aktywnyPodklad[nrBebna]=0;\n\n      }\n\n   }\n\n}\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Sprite_Holder.MouseMoveIn(int spriteID)\n\n{\n\n   if( akcja == 3 ) \n\n      return;\n\n\n\n   if( (spriteID >= 24) && (spriteID<=28) && (akcja!=0))\n\n      return;\n\n\n\n   if( spriteID == 32 )\n\n      Sprite_Holder.ChangePhase( spriteID, 1 );\n\n   \n\n\n\n   SetCursor(1);\n\n}\n\n\n\n \n\nvoid Sprite_Holder.MouseMoveOut(int spriteID)\n\n{\n\n   if( spriteID == 32 )\n\n      Sprite_Holder.ChangePhase( spriteID, 0 );\n\n\n\n   SetCursor(0);\n\n}\n\n\n\n \n\n///////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Sprite_Holder.MouseClickOnDown(int spriteID)\n\n{\n\n   if( akcja == 3 ) \n\n      return;\n\n\n\n   if( (spriteID >= 24) && (spriteID<=28) && (akcja!=0))\n\n      return;\n\n\n\n   if( (spriteID >= 0) && (spriteID<=23) )\n\n   {\n\n      if( biezacyKlawisz == -1 )\n\n         Muzyka( spriteID, 1 );\n\n      return;\n\n   }\n\n\n\n   if( (spriteID >= 24) && (spriteID<=28) )\n\n   {\n\n      Sound_Holder.PlayDSound(29);\n\n      Muzyka( spriteID, 1 );\n\n      return;\n\n   }\n\n\n\n\n\n\n\n   switch( spriteID )\n\n   {\n\n      case 29:   // sciszanie \n\n         if( glosnoscKlawiatury > -2000 )\n\n         {\n\n            Sound_Holder.PlayDSound(31);\n\n            glosnoscKlawiatury -= 100;\n\n\n\n            Sound_Holder.SetPlayDSoundParameters( 24, glosnoscKlawiatury, 0, 0 );\n\n            Sound_Holder.SetPlayDSoundParameters( 25, glosnoscKlawiatury, 0, 0 );\n\n            Sound_Holder.SetPlayDSoundParameters( 26, glosnoscKlawiatury, 0, 0 );\n\n            Sound_Holder.SetPlayDSoundParameters( 27, glosnoscKlawiatury, 0, 0 );\n\n            Sound_Holder.SetPlayDSoundParameters( 28, glosnoscKlawiatury, 0, 0 );\n\n\n\n            Sprite_Holder.ChangePhase( spriteID, 1 );\n\n         }\n\n         break;\n\n\n\n      case 30:   // zglasnianie \n\n         if( glosnoscKlawiatury < 0 )\n\n         {\n\n            Sound_Holder.PlayDSound(31);\n\n            glosnoscKlawiatury += 100;\n\n\n\n            Sound_Holder.SetPlayDSoundParameters( 24, glosnoscKlawiatury, 0, 0 );\n\n            Sound_Holder.SetPlayDSoundParameters( 25, glosnoscKlawiatury, 0, 0 );\n\n            Sound_Holder.SetPlayDSoundParameters( 26, glosnoscKlawiatury, 0, 0 );\n\n            Sound_Holder.SetPlayDSoundParameters( 27, glosnoscKlawiatury, 0, 0 );\n\n            Sound_Holder.SetPlayDSoundParameters( 28, glosnoscKlawiatury, 0, 0 );\n\n\n\n            Sprite_Holder.ChangePhase( spriteID, 1 );\n\n         }\n\n         break;\n\n\n\n      case 32:   // przejscie do nastepnej planszy\n\n         Sound_Holder.PlayDSound(29);\n\n         Sprite_Holder.ChangePhase( spriteID, 1 );\n\n         LoadPage(\"cuda_ps2.bdf\");\n\n         break;         \n\n\n\n      case 33:   // wlaczenie lub wylaczenie klawiatury\n\n         if( klawiaturaWlaczona )\n\n         {\n\n               // wylaczenie klawiatury\n\n            Sound_Holder.Stop(32);\n\n            Sound_Holder.PlayDSound(33);\n\n\n\n            klawiaturaWlaczona = 0;\n\n\n\n            Sprite_Holder.ChangePhase( spriteID, 0 );\n\n            glosnoscKlawiatury = 0;\n\n            MuzykaStop( biezacyKlawisz );\n\n            MuzykaStop( 24 );\n\n            MuzykaStop( 25 );\n\n            MuzykaStop( 26 );\n\n            MuzykaStop( 27 );\n\n            MuzykaStop( 28 );\n\n         }\n\n         else\n\n         {\n\n            Sound_Holder.Stop(33);\n\n            Sound_Holder.PlayDSound(32);\n\n\n\n            Sprite_Holder.ChangePhase( spriteID, 1 );\n\n\n\n            //klawiaturaWlaczona = 1;\n\n         }\n\n         break;\n\n   }\n\n}\n\n\n\n \n\nvoid Sprite_Holder.MouseClickOnUp(int spriteID)\n\n{\n\n   if( akcja == 3 ) \n\n      return;\n\n\n\n   if( (spriteID >= 0) && (spriteID<=23) )\n\n   {\n\n      if( spriteID == biezacyKlawisz )\n\n         MuzykaStop( spriteID );\n\n      return;\n\n   }\n\n\n\n   switch( spriteID )\n\n   {\n\n      case 29:   // sciszanie \n\n      case 30:   // zglasnianie \n\n         Sprite_Holder.ChangePhase( spriteID, 0 );\n\n         break;\n\n   }\n\n}\n\n\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Sound_Holder.EndPlaySound(int soundID)\n\n{\n\n   switch( soundID )\n\n   {\n\n      case 32:\n\n         klawiaturaWlaczona = 1;\n\n         break;\n\n   }\n\n}\n\n\n\n\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Text_Holder.EndOfSynchroText(int textID)\n\n{\n\n   UstawAktywnoscStrony( 0 );\n\n}\n\n\n\n\n\n/////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Text_Holder.ScrollTextUp(int textID)\n\n{\n\n   SetCursor (2);\n\n}\n\n\n\nvoid Text_Holder.ScrollTextDown(int textID)\n\n{\n\n   SetCursor(3);\n\n}\n\n\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Text_Holder.EndScrollText(int textID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\n\n\n\n\n/////////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Text_Holder.MouseMoveIn(int textID)\n\n{\n\n      \n\n}\n\n\n\nvoid Text_Holder.MouseMoveOut(int textID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\n\n\n\n\n\n\n/////////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Text_Holder.PlayMark(int textID,int markNo)\n\n{\n\n   if( textID == 3 )\n\n   {\n\n      if( maxRuchow > markNo )\n\n      {\n\n         biezacyKlawiszDemo = demo[markNo];\n\n         SetTimer(150);\n\n         Muzyka(demo[markNo], 0 );\n\n      }\n\n   }\n\n}\n\n\n\n\n\n\n\n\n\n\n\n/////////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Group.Sprite_Holder.MouseClickOnDown(int spriteID)\n\n{\n\n   switch( spriteID )\n\n   {\n\n      case 0:\n\n         Group.Sound_Holder.PlayDSound(1);\n\n         if( glosnosc.top )\n\n         {\n\n               // podglaszanie\n\n            glosnosc.left--;\n\n               \n\n            if( glosnosc.left <= 0 )\n\n               glosnosc.top = 0;\n\n         }\n\n         else\n\n         {\n\n               // sciszanie\n\n            glosnosc.left++;\n\n               \n\n            if( glosnosc.left >= 2 )\n\n               glosnosc.top = 1;\n\n         }\n\n\n\n         Group.Sprite_Holder.ChangePhase( 0, glosnosc.left );\n\n\n\n         switch( akcja )\n\n         {\n\n            case 1:\n\n               Text_Holder.SetSoundParameters( 0, glosnosc.left*(stalaSciszania), 0, 0 );\n\n               break;\n\n            case 2:\n\n               Text_Holder.SetSoundParameters( 2, glosnosc.left*(stalaSciszania), 0, 0 );\n\n               break;\n\n            case 3:\n\n               Text_Holder.SetSoundParameters( 3, glosnosc.left*(stalaSciszania), 0, 0 );\n\n               break;\n\n         }\n\n\n\n         break;\n\n\n\n      case 1:\n\n      case 2:\n\n      case 3:\n\n         if( akcja == 0 )\n\n         {\n\n            Group.Sound_Holder.PlayDSound(1);\n\n            UstawAktywnoscStrony( spriteID );\n\n         }\n\n         break;\n\n\n\n      case 4:   // stop\n\n         Group.Sound_Holder.PlayDSound(1);\n\n         Group.Sprite_Holder.ChangePhase( 4, 1 );\n\n         UstawAktywnoscStrony( 0 );\n\n         break;\n\n\n\n      case 5:   //klawiatura\n\n         Group.Sound_Holder.PlayDSound(1);\n\n         Group.Sprite_Holder.ChangePhase( 5, 1 );\n\n         MultiBitmap.ShowBitmap(0,149,381,4);\n\n         break;\n\n      case 7:   //toolbar\n\n         Group.Sound_Holder.PlayDSound(3);\n\n         Group.Sprite_Holder.ChangePhase(spriteID,1);   \n\n         break;\n\n      case 8:\n\n         Group.Sound_Holder.PlayDSound(4);\n\n         Group.Sprite_Holder.ChangePhase(spriteID,1);   \n\n         break;\n\n      case 9:\n\n      case 10:\n\n         Group.Sound_Holder.PlayDSound(5);\n\n         Group.Sprite_Holder.ChangePhase(spriteID,1);   \n\n         break;\n\n   }\n\n}\n\n\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnUp(int spriteID)\n\n{\n\n   switch( spriteID )\n\n   {\n\n      case 4:   // stop\n\n         Group.Sprite_Holder.ChangePhase( 4, 0 );\n\n         break;\n\n\n\n      case 5:   //klawiatura\n\n         Group.Sprite_Holder.ChangePhase( 5, 0 );\n\n         MultiBitmap.HideBitmap(0);\n\n         break;\n\n      case 7:\n\n      case 8:\n\n      case 9:\n\n      case 10:\n\n         Group.Sprite_Holder.DisableTimers();\n\n\n\n         Group.Sprite_Holder.GotoXY(6,640,0);\n\n         Group.Sprite_Holder.GotoXY(7,721,329);\n\n         Group.Sprite_Holder.GotoXY(8,717,404);\n\n         Group.Sprite_Holder.GotoXY(9,704,14);\n\n         Group.Sprite_Holder.GotoXY(10,744,14);\n\n\n\n         Group.Sprite_Holder.SynchronizeTimers();\n\n         Group.Sprite_Holder.EnableTimers();\n\n         Group.Sound_Holder.PlayDSound(2);\n\n         toolbar=0;\n\n         Group.HotSpot_Holder.DisableHotSpot(1);\n\n         toolbarCase=spriteID;\n\n\n\n         return;\n\n   }\n\n\n\n}\n\n\n\n\n\n/////////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Group.Sprite_Holder.MouseMoveIn(int spriteID)\n\n{\n\n   switch( spriteID )\n\n   {\n\n      case 1:\n\n      case 2:\n\n      case 3:\n\n         if( akcja != 0 ) return;\n\n         break;\n\n      case 6:\n\n         return;\n\n   }\n\n\n\n   SetCursor( 1 );\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseMoveOut(int spriteID)\n\n{\n\n   SetCursor( 0 );\n\n}\n\n\n\n \n\n\n\n\n\n//############################################################# T O O L B A R #######\n\n//#############################################################---------------#######\n\nvoid Group.HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n   if(rectID==0)\n\n   {\n\n      if(toolbar)   return;\n\n      Group.Sprite_Holder.DisableTimers();\n\n\n\n      Group.Sprite_Holder.GotoXY(6,480,0);\n\n      Group.Sprite_Holder.GotoXY(7,560,329);\n\n      Group.Sprite_Holder.GotoXY(8,557,404);\n\n      Group.Sprite_Holder.GotoXY(9,544,14);\n\n      Group.Sprite_Holder.GotoXY(10,584,14);\n\n\n\n      Group.Sprite_Holder.SynchronizeTimers();\n\n      Group.Sprite_Holder.EnableTimers();\n\n      Group.Sound_Holder.PlayDSound(2);\n\n      SetCursor(0);\n\n   }\n\n   else\n\n   {\n\n      if(toolbar)\n\n      {\n\n         Group.Sprite_Holder.DisableTimers();\n\n\n\n         Group.Sprite_Holder.GotoXY(6,640,0);\n\n         Group.Sprite_Holder.GotoXY(7,721,329);\n\n         Group.Sprite_Holder.GotoXY(8,717,404);\n\n         Group.Sprite_Holder.GotoXY(9,704,14);\n\n         Group.Sprite_Holder.GotoXY(10,744,14);\n\n\n\n         Group.Sprite_Holder.SynchronizeTimers();\n\n         Group.Sprite_Holder.EnableTimers();\n\n         Group.Sound_Holder.PlayDSound(2);\n\n         toolbar=0;\n\n      }\n\n      Group.HotSpot_Holder.DisableHotSpot(1);\n\n      toolbarCase=0;\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.InPlace(int spriteID,int x,int y)\n\n{\n\n   if(spriteID==6)\n\n   {\n\n      if(x==480)\n\n      {\n\n         toolbar=1;\n\n         Group.HotSpot_Holder.EnableHotSpot(1);\n\n         SetCursor(0);\n\n      }\n\n      else\n\n      {\n\n         SetCursor(0);\n\n         Group.Sprite_Holder.ChangePhase(7,0);\n\n         Group.Sprite_Holder.ChangePhase(8,0);\n\n         Group.Sprite_Holder.ChangePhase(9,0);\n\n         Group.Sprite_Holder.ChangePhase(10,0);\n\n         switch(toolbarCase)\n\n         {\n\n            case 9:\t//lewo\n\n               LoadPage(\"abec_ps.bdf\");\n\n               break;\n\n            case 10:\t//prawo\n\n               LoadPage(\"tan_ps.bdf\");\n\n               break;\n\n            case 7:   //do planszy glownej   \n\n               LoadPage( \"cuda.bdf\" );\n\n               break;\n\n            case 8:   //Plansza wyboru\n\n               LoadPage(\"Wyborw.bdf\");\n\n               break;\n\n         }\n\n      }\n\n   }\n\n}\n\n//#############################################################\n\n//############################################################# \n\n \n\n\n\n\n\n "
+  },
+  "warnings": [
+    "4 component(s) have unknown geometry and default to 0,0."
+  ]
+}

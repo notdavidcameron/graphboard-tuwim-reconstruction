@@ -1,0 +1,872 @@
+//###########################################################################
+//Script code
+//###########################################################################
+
+
+OnOpenPage()
+{
+	// Add your component and variables initialization code here
+	// WARNING: All variables definied on this function are global for this page
+   /*
+   int index = 32;
+   while( index < 128 )
+   {
+      Debug( "%c, %d", index, index );
+      index++;
+   }
+   return;
+   */
+
+   int keyDown = 0;
+   int m_demo=0;
+   int keys[24];
+      
+   int stalaSciszania = -450;
+
+
+      // 0 - stop - wszystko aktywne, widzoczny tekst piosenki
+      // 1 - piosenka
+      // 2 - melodia
+      // 3 - demo
+   int akcja = 0;
+
+      // Zmienna okreslajaca glosnosc odtwarzania dzwiekow.
+      // left  - wartosci od 0 do 2;      0 - najglosniej
+      // top   - kierunek sciszania 0 - cicho, 1 glosno
+   CRect glosnosc;
+   glosnosc.SetRect( 0, 0, 0, 0 );
+
+      // Aktualnie odgrywany marker
+   int biezacyMarker = -1;
+   
+      // left, top - wspolrzedne litery
+      // right - wspomaga proces wlaczania i wylaczania liter
+      // bottom - numer markera dla ktorego bedzie sprawdzana zgodnosc
+   CRect litery[24];
+   litery[ 0 ].SetRect( 124, 59, 0, 0 );
+   litery[ 1 ].SetRect( 200, 59, 0, 0 );
+   litery[ 2 ].SetRect( 276, 59, 0, 0 );
+   litery[ 3 ].SetRect( 352, 59, 0, 0 );
+   litery[ 4 ].SetRect( 428, 59, 0, 0 );
+   litery[ 5 ].SetRect( 504, 59, 0, 0 );
+   litery[ 6 ].SetRect( 124, 149, 0, 0 );
+   litery[ 7 ].SetRect( 200, 149, 0, 0 );
+   litery[ 8 ].SetRect( 276, 149, 0, 0 );
+   litery[ 9 ].SetRect( 352, 149, 0, 0 );
+   litery[ 10 ].SetRect( 428, 149, 0, 0 );
+   litery[ 11 ].SetRect( 504, 149, 0, 0 );
+   litery[ 12 ].SetRect( 124, 239, 0, 0 );
+   litery[ 13 ].SetRect( 200, 239, 0, 0 );
+   litery[ 14 ].SetRect( 276, 239, 0, 0 );
+   litery[ 15 ].SetRect( 352, 239, 0, 0 );
+   litery[ 16 ].SetRect( 428, 239, 0, 0 );
+   litery[ 17 ].SetRect( 504, 239, 0, 0 );
+   litery[ 18 ].SetRect( 124, 329, 0, 0 );
+   litery[ 19 ].SetRect( 200, 329, 0, 0 );
+   litery[ 20 ].SetRect( 276, 329, 0, 0 );
+   litery[ 21 ].SetRect( 352, 329, 0, 0 );
+   litery[ 22 ].SetRect( 428, 329, 0, 0 );
+   litery[ 23 ].SetRect( 504, 329, 0, 0 );
+
+   RozlozLitery();
+
+
+
+   // DLA ROBERTA
+   // Do tej tablicy nalezy wpisac kolejne numery ruchow pingiwna
+   // 0 - beben 1
+   // 1 - beben 2
+   // 2 - beben 3
+   // 3 - bebenek
+   // 4 - tamtam1
+   // 5 - tamtam2
+   // 6 - talerz
+   // 7 - marakas
+   // 8 - dzwonek
+
+   int maxRuchow = 9;
+   int demo[ maxRuchow ];
+     demo[0]=2;
+     demo[1]=3;
+     demo[2]=4;
+     demo[3]=5;
+     demo[4]=8;
+     demo[5]=7;
+     demo[6]=1;
+     demo[7]=0;
+     demo[8]=6;
+
+
+   LoadGroup("g_pios.grp");
+
+      // NA TEJ PLANSZY NIE MA BLURU
+   Group.Sprite_Holder.HideSprite(5);
+
+
+   int toolbar=0;
+   int toolbarCase=0;
+   Group.HotSpot_Holder.DisableHotSpot(1);
+
+   SetCursor(0);
+   //SetTimer( 5000 );
+   FadeScreen(1,1000);
+}
+
+
+
+void OnTimer(void)
+{
+	// Add your timer handler code here
+   SetTimer(0);
+   //UstawAktywnoscStrony( 0 );
+   //Group.Sound_Holder.PlayDSound(0);
+}
+
+
+void OnClosePage(void)
+{
+	// Add your close page handler code here
+   FadeScreen(0,1000);
+   SetCursor(0);
+   CloseGroup();
+}
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////
+//
+//
+void OnRButtonDown(int x,int y)
+{
+        //Add your command handler code here
+   //Uruchomienie pomocy
+   UstawAktywnoscStrony( 0 );
+   Group.Sound_Holder.PlayDSound(0);
+   SetTimer(0);
+}
+
+
+
+void OnLButtonDown(int x,int y)
+{
+        //Add your command handler code here
+   Group.Sound_Holder.Stop(0);
+   SetTimer(0);
+}
+
+
+
+
+///////////////////////////////////////////////////////////////////////
+//
+//
+void RozlozLitery()
+{
+   int index = 0;
+   while( index < 24 )
+   {
+      Sprite_Holder.ChangePhase( index, 0 );
+      Sprite_Holder.MoveTo( index, litery[index].left, litery[index].top );
+      litery[index].right = 0;
+      index++;
+   }
+
+
+   /*
+   int nowePolozenie;
+
+   index = 0;
+   while( index < 24 )
+   {
+      nowePolozenie = Random(0,23);
+      int zapetlenie = nowePolozenie;
+      while( litery[nowePolozenie].right )
+      {
+         nowePolozenie++;
+         if( nowePolozenie==zapetlenie )
+         {
+            Debug("Zapetlenie");
+            return;
+         }
+
+         if( nowePolozenie >= 24 )
+            nowePolozenie = 0;
+      }
+
+      litery[nowePolozenie].right = 1;
+      Sprite_Holder.MoveTo( index, litery[nowePolozenie].left, litery[nowePolozenie].top );
+
+      index++;
+   }
+
+
+   index = 0;
+   while( index < 24 )
+   {
+      litery[index].right = 0;
+      index++;
+   }
+   */
+}
+
+
+
+
+///////////////////////////////////////////////////////////////////////
+// W zaleznosci od stanu biezacego i nowego jest ustawiana aktywnosc strony
+//
+void UstawAktywnoscStrony( int nowaAkcja )
+{
+   int leftOffset;
+   int upOffset;
+
+   Sound_Holder.StopAll();
+
+   switch( nowaAkcja )
+   {
+      case 0:   // stop
+
+            // Nalezy uaktywnic wszystkie przyciski na panelu
+         m_demo=0;
+         Group.Sprite_Holder.ChangePhase( 1, 0 );
+         Group.Sprite_Holder.ChangePhase( 2, 0 );
+         Group.Sprite_Holder.ChangePhase( 3, 0 );
+
+
+         switch( akcja )
+         {
+            case 2:
+
+                  // Jesli poprzednio byla odgrywana melodia
+                  // nalezy ukryc tekst melodi i pokazac tekst
+                  // piosenki przesuniety o offset melodi
+
+               Text_Holder.StopSynchroText( 2 );
+
+               DisableScreen();
+
+               Text_Holder.HideText( 2 );   // melodia
+               Text_Holder.GetTextOffsets( 2, &leftOffset, &upOffset );
+
+               Text_Holder.ShowText( 0 );   // piosenka
+               Text_Holder.SetTextOffsets( 0, leftOffset, upOffset );
+   
+               EnableScreen();
+               ShowBuffer();
+               break;
+
+            case 1:
+               Text_Holder.StopSynchroText( 0 );
+               break;
+
+            case 3:
+               Text_Holder.StopSynchroText( 3 );
+
+                  // Przywrocenie poprawnego wygladu planszy
+               int index = 0;
+               while( index < 24 )
+               {
+                  Sprite_Holder.ChangePhase( index, 0 );
+                  litery[index].right = 0;
+                  index++;
+               }
+               break;
+         }
+         break;
+
+      case 1:   // piosenka
+         Group.Sprite_Holder.ChangePhase( 1, 1 );   // mruganie
+         Group.Sprite_Holder.ChangePhase( 2, 2 );
+         Group.Sprite_Holder.ChangePhase( 3, 2 );
+
+            // piosenka
+         Text_Holder.PlaySynchroText( 0 );
+         Text_Holder.SetSoundParameters( 0, (glosnosc.left*(stalaSciszania)), 0, 0 );
+
+         break;
+
+      case 2:   // melodia
+         Group.Sprite_Holder.ChangePhase( 1, 2 );   
+         Group.Sprite_Holder.ChangePhase( 2, 1 );   // mruganie
+         Group.Sprite_Holder.ChangePhase( 3, 2 );
+
+         DisableScreen();
+
+         Text_Holder.GetTextOffsets( 0, &leftOffset, &upOffset );
+         Text_Holder.HideText( 0 );   // piosenka
+
+         Text_Holder.ShowText( 2 );   // melodia
+         Text_Holder.SetTextOffsets( 2, leftOffset, upOffset );
+   
+         EnableScreen();
+         ShowBuffer();
+
+            // piosenka
+         Text_Holder.PlaySynchroText( 2 );
+         Text_Holder.SetSoundParameters( 2, (glosnosc.left*(stalaSciszania)), 0, 0 );
+         break;
+
+      case 3:   // demo
+            // Przywrocenie poprawnego wygladu planszy
+         m_demo=1;
+         int index = 0;
+         while( index < 24 )
+         {
+            Sprite_Holder.ChangePhase( index, 0 );
+            litery[index].right = 0;
+            index++;
+         }
+
+         Group.Sprite_Holder.ChangePhase( 1, 2 );   
+         Group.Sprite_Holder.ChangePhase( 2, 2 );
+         Group.Sprite_Holder.ChangePhase( 3, 1 );   // mruganie
+
+            // piosenka
+         Text_Holder.PlaySynchroText( 3 );
+         Text_Holder.SetSoundParameters( 3, (glosnosc.left*(stalaSciszania)), 0, 0 );
+         break;
+   }
+
+   akcja = nowaAkcja;
+}
+
+
+
+
+///////////////////////////////////////////////////////////////////////
+//
+//
+void OnKeyDown(UINT nChar)
+{
+	// Add your keyboard handler code here
+   Group.Sound_Holder.Stop(0);
+   SetTimer(0);
+
+   if( akcja==3 ) return;
+
+   if( nChar == keyDown ) return;
+   keyDown = nChar;
+
+   /*
+   switch( nChar )
+   {
+      case 65:   //A
+      case 97:
+         Muzyka(0);
+         break;
+
+      case 66:   //B
+      case 98:
+         Muzyka(1);
+         break;
+
+      case 67:   //C
+      case 99:
+         Muzyka(2);
+         break;
+
+      case 68:   //D
+      case 100:
+         Muzyka(3);
+         break;
+
+      case 69:   //E
+      case 101:
+         Muzyka(4);
+         break;
+
+      case 70:   //F
+      case 102:
+         Muzyka(5);
+         break;
+
+      case 71:   //G
+      case 103:
+         Muzyka(6);
+         break;
+
+      case 72:   //H
+      case 104:
+         Muzyka(7);
+         break;
+
+      case 73:   //I
+      case 105:
+         Muzyka(8);
+         break;
+
+      case 74:   //J
+      case 106:
+         Muzyka(9);
+         break;
+
+      case 75:   //K
+      case 107:
+         Muzyka(10);
+         break;
+
+      case 76:   //L
+      case 108:
+         Muzyka(11);
+         break;
+
+      case 81:   //Ł
+      case 113:
+         Muzyka(12);
+         break;
+
+      case 77:   //M
+      case 109:
+         Muzyka(13);
+         break;
+
+      case 78:   //N
+      case 110:
+         Muzyka(14);
+         break;
+
+      case 79:   //O
+      case 111:
+         Muzyka(15);
+         break;
+
+      case 80:   //P
+      case 112:
+         Muzyka(16);
+         break;
+
+      case 82:   //R
+      case 114:
+         Muzyka(17);
+         break;
+
+      case 83:   //S
+      case 115:
+         Muzyka(18);
+         break;
+
+      case 84:   //T
+      case 116:
+         Muzyka(19);
+         break;
+
+      case 85:   //U
+      case 117:
+         Muzyka(20);
+         break;
+
+      case 87:   //W
+      case 119:
+         Muzyka(21);
+         break;
+
+      case 89:   //Y
+      case 121:
+         Muzyka(22);
+         break;
+
+      case 90:   //Z
+      case 122:
+         Muzyka(23);
+         break;
+   }
+   */
+}
+
+
+
+
+void OnKeyUp(UINT nChar)
+{
+        //Add your command handler code here
+   keyDown = 0;
+}
+
+
+///////////////////////////////////////////////////////////////////////
+//
+//
+void Muzyka( int nrRuchu )
+{
+   if( litery[nrRuchu].right == 0 )
+   {
+      if(m_demo)
+         Sound_Holder.PlayDSoundEx(nrRuchu,-10000,0,0);
+      else
+         Sound_Holder.PlayDSound( nrRuchu );
+
+      Sprite_Holder.ChangePhase( nrRuchu, 1 );
+   }
+
+   /*
+      // To jest sprawdzane czy zostal wcisniety odpowiedni marker
+   if( litery[nrRuchu].bottom == biezacyMarker )
+   {
+      litery[nrRuchu].right = 1;
+   }
+   */
+}
+
+
+///////////////////////////////////////////////////////////////////////
+//
+//
+VOID Sprite_Holder.MouseClickOnDown(int spriteID)
+{
+   if( akcja==3 )   return;
+   if(keys[spriteID])
+   {
+      keys[spriteID]=0;
+      Sound_Holder.Stop( spriteID );
+      Sprite_Holder.ChangePhase( spriteID, 0 );
+   }
+   else
+   {
+      keys[spriteID]=1;
+      Muzyka( spriteID );
+   }
+}
+
+
+
+void Sprite_Holder.MouseClickOnUp(int spriteID)
+{
+//   Sound_Holder.Stop( spriteID );
+//   Sprite_Holder.ChangePhase( spriteID, 0 );
+
+}
+
+
+
+///////////////////////////////////////////////////////////////////////
+//
+//
+void Sprite_Holder.MouseMoveIn(int spriteID)
+{
+   if( akcja!=3 )
+      SetCursor(1);
+}
+
+
+void Sprite_Holder.MouseMoveOut(int spriteID)
+{
+   SetCursor(0);
+}
+
+
+
+///////////////////////////////////////////////////////////////////////
+//
+//
+void Sound_Holder.EndPlaySound(int soundID)
+{
+   if( litery[soundID].right == 0 )
+   {
+      Sprite_Holder.ChangePhase( soundID, 0 );
+      keys[soundID]=0;
+   }
+}
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////
+//
+//
+void Text_Holder.EndOfSynchroText(int textID)
+{
+   UstawAktywnoscStrony( 0 );
+}
+
+
+/////////////////////////////////////////////////////////////////////
+//
+//
+void Text_Holder.ScrollTextUp(int textID)
+{
+   SetCursor (2);
+}
+
+void Text_Holder.ScrollTextDown(int textID)
+{
+   SetCursor(3);
+}
+
+
+
+///////////////////////////////////////////////////////////////////////
+//
+//
+void Text_Holder.EndScrollText(int textID)
+{
+   SetCursor(0);
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////
+//
+//
+void Text_Holder.MouseMoveIn(int textID)
+{
+      
+}
+
+void Text_Holder.MouseMoveOut(int textID)
+{
+   SetCursor(0);
+}
+
+
+
+
+/////////////////////////////////////////////////////////////////////////
+//
+//
+void Text_Holder.PlayMark(int textID,int markNo)
+{
+   if( textID == 3 )
+   {
+      if( maxRuchow > markNo )
+      {
+         Muzyka( demo[markNo] );
+      }
+   }
+}
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////
+//
+//
+void Group.Sprite_Holder.MouseClickOnDown(int spriteID)
+{
+   switch( spriteID )
+   {
+      case 0:
+         Group.Sound_Holder.PlayDSound(1);
+         if( glosnosc.top )
+         {
+               // podglaszanie
+            glosnosc.left--;
+               
+            if( glosnosc.left <= 0 )
+               glosnosc.top = 0;
+         }
+         else
+         {
+               // sciszanie
+            glosnosc.left++;
+               
+            if( glosnosc.left >= 2 )
+               glosnosc.top = 1;
+         }
+
+         Group.Sprite_Holder.ChangePhase( 0, glosnosc.left );
+
+         switch( akcja )
+         {
+            case 1:
+               Text_Holder.SetSoundParameters( 0, glosnosc.left*(stalaSciszania), 0, 0 );
+               break;
+            case 2:
+               Text_Holder.SetSoundParameters( 2, glosnosc.left*(stalaSciszania), 0, 0 );
+               break;
+            case 3:
+               Text_Holder.SetSoundParameters( 3, glosnosc.left*(stalaSciszania), 0, 0 );
+               break;
+         }
+
+         break;
+
+      case 1:
+      case 2:
+      case 3:
+         if( akcja == 0 )
+         {
+            Group.Sound_Holder.PlayDSound(1);
+            UstawAktywnoscStrony( spriteID );
+         }
+         break;
+
+      case 4:   // stop
+         Group.Sound_Holder.PlayDSound(1);
+         Group.Sprite_Holder.ChangePhase( 4, 1 );
+         UstawAktywnoscStrony( 0 );
+         break;
+
+      case 5:   //klawiatura
+         Group.Sound_Holder.PlayDSound(1);
+         Group.Sprite_Holder.ChangePhase( 5, 1 );
+         MultiBitmap.ShowBitmap(0,0,0,0);
+         break;
+      case 7:   //toolbar
+         Group.Sound_Holder.PlayDSound(3);
+         Group.Sprite_Holder.ChangePhase(spriteID,1);   
+         break;
+      case 8:
+         Group.Sound_Holder.PlayDSound(4);
+         Group.Sprite_Holder.ChangePhase(spriteID,1);   
+         break;
+      case 9:
+      case 10:
+         Group.Sound_Holder.PlayDSound(5);
+         Group.Sprite_Holder.ChangePhase(spriteID,1);   
+         break;
+   }
+}
+
+
+void Group.Sprite_Holder.MouseClickOnUp(int spriteID)
+{
+   switch( spriteID )
+   {
+      case 4:   // stop
+         Group.Sprite_Holder.ChangePhase( 4, 0 );
+         break;
+
+      case 5:   //klawiatura
+         Group.Sprite_Holder.ChangePhase( 5, 0 );
+         MultiBitmap.HideBitmap(0);
+         break;
+      case 7:
+      case 8:
+      case 9:
+      case 10:
+         Group.Sprite_Holder.DisableTimers();
+
+         Group.Sprite_Holder.GotoXY(6,640,0);
+         Group.Sprite_Holder.GotoXY(7,721,329);
+         Group.Sprite_Holder.GotoXY(8,717,404);
+         Group.Sprite_Holder.GotoXY(9,704,14);
+         Group.Sprite_Holder.GotoXY(10,744,14);
+
+         Group.Sprite_Holder.SynchronizeTimers();
+         Group.Sprite_Holder.EnableTimers();
+         Group.Sound_Holder.PlayDSound(2);
+         toolbar=0;
+         Group.HotSpot_Holder.DisableHotSpot(1);
+         toolbarCase=spriteID;
+
+         return;
+   }
+
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+//
+//
+void Group.Sprite_Holder.MouseMoveIn(int spriteID)
+{
+   switch( spriteID )
+   {
+      case 1:
+      case 2:
+      case 3:
+         if( akcja != 0 ) return;
+         break;
+      case 6:
+         return;
+   }
+
+   SetCursor( 1 );
+}
+
+void Group.Sprite_Holder.MouseMoveOut(int spriteID)
+{
+   SetCursor( 0 );
+}
+
+ 
+
+
+//############################################################# T O O L B A R #######
+//#############################################################---------------#######
+void Group.HotSpot_Holder.MouseMoveIn(int rectID)
+{
+   if(rectID==0)
+   {
+      if(toolbar)   return;
+      Group.Sprite_Holder.DisableTimers();
+
+      Group.Sprite_Holder.GotoXY(6,480,0);
+      Group.Sprite_Holder.GotoXY(7,560,329);
+      Group.Sprite_Holder.GotoXY(8,557,404);
+      Group.Sprite_Holder.GotoXY(9,544,14);
+      Group.Sprite_Holder.GotoXY(10,584,14);
+
+      Group.Sprite_Holder.SynchronizeTimers();
+      Group.Sprite_Holder.EnableTimers();
+      Group.Sound_Holder.PlayDSound(2);
+      SetCursor(0);
+   }
+   else
+   {
+      if(toolbar)
+      {
+         Group.Sprite_Holder.DisableTimers();
+
+         Group.Sprite_Holder.GotoXY(6,640,0);
+         Group.Sprite_Holder.GotoXY(7,721,329);
+         Group.Sprite_Holder.GotoXY(8,717,404);
+         Group.Sprite_Holder.GotoXY(9,704,14);
+         Group.Sprite_Holder.GotoXY(10,744,14);
+
+         Group.Sprite_Holder.SynchronizeTimers();
+         Group.Sprite_Holder.EnableTimers();
+         Group.Sound_Holder.PlayDSound(2);
+         toolbar=0;
+      }
+      Group.HotSpot_Holder.DisableHotSpot(1);
+      toolbarCase=0;
+   }
+}
+
+void Group.Sprite_Holder.InPlace(int spriteID,int x,int y)
+{
+   if(spriteID==6)
+   {
+      if(x==480)
+      {
+         toolbar=1;
+         Group.HotSpot_Holder.EnableHotSpot(1);
+         SetCursor(0);
+      }
+      else
+      {
+         SetCursor(0);
+         Group.Sprite_Holder.ChangePhase(7,0);
+         Group.Sprite_Holder.ChangePhase(8,0);
+         Group.Sprite_Holder.ChangePhase(9,0);
+         Group.Sprite_Holder.ChangePhase(10,0);
+         switch(toolbarCase)
+         {
+            case 9:	//lewo
+               LoadPage("zosia_ps.bdf");
+               break;
+            case 10:	//prawo
+               LoadPage("cuda_ps1.bdf");
+               break;
+            case 7:   //do planszy glownej   
+               LoadPage( "abecadlo.bdf" );
+               break;
+            case 8:   //Plansza wyboru
+               LoadPage("Wyborw.bdf");
+               break;
+         }
+      }
+   }
+}
+//#############################################################
+//############################################################# 
+ 
+
+
+ 
+ 

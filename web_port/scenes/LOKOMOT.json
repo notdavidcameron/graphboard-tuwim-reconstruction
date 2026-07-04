@@ -1,0 +1,795 @@
+{
+  "id": "LOKOMOT",
+  "title": "LOKOMOT",
+  "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\LOKOMOT.BDF",
+  "pageRect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "background": {
+    "colorIndex": 0,
+    "flag": 0,
+    "bmpPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\background.bmp",
+    "bmpUrl": "../extracted_assets/bdf/LOKOMOT/background.bmp",
+    "palettePath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\background_palette.bin",
+    "paletteUrl": "../extracted_assets/bdf/LOKOMOT/background_palette.bin"
+  },
+  "components": [
+    {
+      "id": "00_Transparent_Video_Holder",
+      "type": "Transparent_Video_Holder",
+      "index": 0,
+      "z": 0,
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 609,
+        "height": 443
+      },
+      "geometryConfidence": "serialized_entries",
+      "sourceOffset": 309357,
+      "privateOffset": 310531,
+      "privateSize": 3040090,
+      "primaryAssetUrl": "../extracted_assets/bdf/LOKOMOT/animations/00_Transparent_Video_Holder_000_0004bd0f_board_video_53x52.gif",
+      "assets": [
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_000_0004bd0f_board_video_53x52.gif",
+          "url": "../extracted_assets/bdf/LOKOMOT/animations/00_Transparent_Video_Holder_000_0004bd0f_board_video_53x52.gif",
+          "width": 53,
+          "height": 52,
+          "frameCount": 7,
+          "offset": 310543,
+          "name": null,
+          "id": 0,
+          "rect": {
+            "x": 340,
+            "y": 124,
+            "width": 53,
+            "height": 52
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 410180,
+          "streamOffset": 310543,
+          "originalRect": {
+            "x": 340,
+            "y": 124,
+            "width": 53,
+            "height": 52
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_002_00065310_board_video_49x112.gif",
+          "url": "../extracted_assets/bdf/LOKOMOT/animations/00_Transparent_Video_Holder_002_00065310_board_video_49x112.gif",
+          "width": 49,
+          "height": 112,
+          "frameCount": 5,
+          "offset": 414480,
+          "name": null,
+          "id": 2,
+          "rect": {
+            "x": 213,
+            "y": 83,
+            "width": 49,
+            "height": 112
+          },
+          "z": 1,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 531430,
+          "streamOffset": 414480,
+          "originalRect": {
+            "x": 213,
+            "y": 83,
+            "width": 49,
+            "height": 112
+          },
+          "originalZ": 1
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_004_00083812_board_video_44x56.gif",
+          "url": "../extracted_assets/bdf/LOKOMOT/animations/00_Transparent_Video_Holder_004_00083812_board_video_44x56.gif",
+          "width": 44,
+          "height": 56,
+          "frameCount": 3,
+          "offset": 538642,
+          "name": null,
+          "id": 4,
+          "rect": {
+            "x": 293,
+            "y": 137,
+            "width": 44,
+            "height": 56
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 635791,
+          "streamOffset": 538642,
+          "originalRect": {
+            "x": 293,
+            "y": 137,
+            "width": 44,
+            "height": 56
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_006_0009c29b_board_video_26x16.gif",
+          "url": "../extracted_assets/bdf/LOKOMOT/animations/00_Transparent_Video_Holder_006_0009c29b_board_video_26x16.gif",
+          "width": 26,
+          "height": 16,
+          "frameCount": 7,
+          "offset": 639643,
+          "name": null,
+          "id": 6,
+          "rect": {
+            "x": 417,
+            "y": 199,
+            "width": 26,
+            "height": 16
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 731811,
+          "streamOffset": 639643,
+          "originalRect": {
+            "x": 417,
+            "y": 199,
+            "width": 26,
+            "height": 16
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_008_000b31cf_board_video_122x106.gif",
+          "url": "../extracted_assets/bdf/LOKOMOT/animations/00_Transparent_Video_Holder_008_000b31cf_board_video_122x106.gif",
+          "width": 122,
+          "height": 106,
+          "frameCount": 11,
+          "offset": 733647,
+          "name": null,
+          "id": 8,
+          "rect": {
+            "x": 487,
+            "y": 163,
+            "width": 122,
+            "height": 106
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 919298,
+          "streamOffset": 733647,
+          "originalRect": {
+            "x": 487,
+            "y": 163,
+            "width": 122,
+            "height": 106
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_010_000e3fc6_board_video_84x84.gif",
+          "url": "../extracted_assets/bdf/LOKOMOT/animations/00_Transparent_Video_Holder_010_000e3fc6_board_video_84x84.gif",
+          "width": 84,
+          "height": 84,
+          "frameCount": 36,
+          "offset": 933830,
+          "name": null,
+          "id": 10,
+          "rect": {
+            "x": 459,
+            "y": 356,
+            "width": 84,
+            "height": 84
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 1391833,
+          "streamOffset": 933830,
+          "originalRect": {
+            "x": 459,
+            "y": 356,
+            "width": 84,
+            "height": 84
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_012_00155dd5_board_video_84x62.gif",
+          "url": "../extracted_assets/bdf/LOKOMOT/animations/00_Transparent_Video_Holder_012_00155dd5_board_video_84x62.gif",
+          "width": 84,
+          "height": 62,
+          "frameCount": 13,
+          "offset": 1400277,
+          "name": null,
+          "id": 12,
+          "rect": {
+            "x": 348,
+            "y": 290,
+            "width": 84,
+            "height": 62
+          },
+          "z": 1,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 1555336,
+          "streamOffset": 1400277,
+          "originalRect": {
+            "x": 348,
+            "y": 290,
+            "width": 84,
+            "height": 62
+          },
+          "originalZ": 1
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_014_0017d54c_board_video_79x90.gif",
+          "url": "../extracted_assets/bdf/LOKOMOT/animations/00_Transparent_Video_Holder_014_0017d54c_board_video_79x90.gif",
+          "width": 79,
+          "height": 90,
+          "frameCount": 11,
+          "offset": 1561932,
+          "name": null,
+          "id": 14,
+          "rect": {
+            "x": 13,
+            "y": 232,
+            "width": 79,
+            "height": 90
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 1726498,
+          "streamOffset": 1561932,
+          "originalRect": {
+            "x": 13,
+            "y": 232,
+            "width": 79,
+            "height": 90
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_016_001a79ae_board_video_84x113.gif",
+          "url": "../extracted_assets/bdf/LOKOMOT/animations/00_Transparent_Video_Holder_016_001a79ae_board_video_84x113.gif",
+          "width": 84,
+          "height": 113,
+          "frameCount": 5,
+          "offset": 1735086,
+          "name": null,
+          "id": 16,
+          "rect": {
+            "x": 47,
+            "y": 330,
+            "width": 84,
+            "height": 113
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 1842636,
+          "streamOffset": 1735086,
+          "originalRect": {
+            "x": 47,
+            "y": 330,
+            "width": 84,
+            "height": 113
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_018_001c484c_board_video_250x199.gif",
+          "url": "../extracted_assets/bdf/LOKOMOT/animations/00_Transparent_Video_Holder_018_001c484c_board_video_250x199.gif",
+          "width": 250,
+          "height": 199,
+          "frameCount": 25,
+          "offset": 1853516,
+          "name": null,
+          "id": 18,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 250,
+            "height": 199
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 2166254,
+          "streamOffset": 1853516,
+          "originalRect": {
+            "x": 0,
+            "y": 0,
+            "width": 250,
+            "height": 199
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_020_0021d73e_board_video_178x154.gif",
+          "url": "../extracted_assets/bdf/LOKOMOT/animations/00_Transparent_Video_Holder_020_0021d73e_board_video_178x154.gif",
+          "width": 178,
+          "height": 154,
+          "frameCount": 53,
+          "offset": 2217790,
+          "name": null,
+          "id": 20,
+          "rect": {
+            "x": 224,
+            "y": 173,
+            "width": 178,
+            "height": 154
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 3321517,
+          "streamOffset": 2217790,
+          "originalRect": {
+            "x": 224,
+            "y": 173,
+            "width": 178,
+            "height": 154
+          },
+          "originalZ": 0
+        }
+      ],
+      "audio": [
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_000_0004bd0f_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/LOKOMOT/embedded/00_Transparent_Video_Holder_000_0004bd0f_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 310543,
+          "id": 0
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_002_00065310_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/LOKOMOT/embedded/00_Transparent_Video_Holder_002_00065310_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 414480,
+          "id": 2
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_004_00083812_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/LOKOMOT/embedded/00_Transparent_Video_Holder_004_00083812_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 538642,
+          "id": 4
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_006_0009c29b_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/LOKOMOT/embedded/00_Transparent_Video_Holder_006_0009c29b_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 639643,
+          "id": 6
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_008_000b31cf_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/LOKOMOT/embedded/00_Transparent_Video_Holder_008_000b31cf_board_video_audio.wav",
+          "durationSeconds": 3.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 733647,
+          "id": 8
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_010_000e3fc6_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/LOKOMOT/embedded/00_Transparent_Video_Holder_010_000e3fc6_board_video_audio.wav",
+          "durationSeconds": 5.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 933830,
+          "id": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_012_00155dd5_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/LOKOMOT/embedded/00_Transparent_Video_Holder_012_00155dd5_board_video_audio.wav",
+          "durationSeconds": 3.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 1400277,
+          "id": 12
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_014_0017d54c_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/LOKOMOT/embedded/00_Transparent_Video_Holder_014_0017d54c_board_video_audio.wav",
+          "durationSeconds": 3.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 1561932,
+          "id": 14
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_016_001a79ae_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/LOKOMOT/embedded/00_Transparent_Video_Holder_016_001a79ae_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 1735086,
+          "id": 16
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_018_001c484c_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/LOKOMOT/embedded/00_Transparent_Video_Holder_018_001c484c_board_video_audio.wav",
+          "durationSeconds": 4.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 1853516,
+          "id": 18
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_020_0021d73e_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/LOKOMOT/embedded/00_Transparent_Video_Holder_020_0021d73e_board_video_audio.wav",
+          "durationSeconds": 7.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 2217790,
+          "id": 20
+        }
+      ]
+    },
+    {
+      "id": "01_Text_Holder",
+      "type": "Text_Holder",
+      "index": 1,
+      "z": 1,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "sourceOffset": 3350621,
+      "privateOffset": 3352247,
+      "privateSize": 17519,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "02_Sound_Holder",
+      "type": "Sound_Holder",
+      "index": 2,
+      "z": 0,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "geometryConfidence": "not_visual",
+      "sourceOffset": 3369766,
+      "privateOffset": 3370662,
+      "privateSize": 947102,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\02_Sound_Holder_000_00336eb2.wav",
+          "url": "../extracted_assets/bdf/LOKOMOT/embedded/02_Sound_Holder_000_00336eb2.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 3370674,
+          "id": 0
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\02_Sound_Holder_001_00340488.wav",
+          "url": "../extracted_assets/bdf/LOKOMOT/embedded/02_Sound_Holder_001_00340488.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 3409032,
+          "id": 1
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\02_Sound_Holder_002_003cf514.wav",
+          "url": "../extracted_assets/bdf/LOKOMOT/embedded/02_Sound_Holder_002_003cf514.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 3994900,
+          "id": 2
+        }
+      ]
+    },
+    {
+      "id": "03_Sprite_Holder",
+      "type": "Sprite_Holder",
+      "index": 3,
+      "z": 3,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "sourceOffset": 4317764,
+      "privateOffset": 4319298,
+      "privateSize": 52656,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "04_Video_Holder",
+      "type": "Video_Holder",
+      "index": 4,
+      "z": 4,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "sourceOffset": 4371954,
+      "privateOffset": 4372930,
+      "privateSize": 241,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    }
+  ],
+  "script": {
+    "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\script.txt",
+    "url": "../extracted_assets/bdf/LOKOMOT/script.txt",
+    "handlers": [
+      {
+        "name": "OnOpenPage",
+        "signature": "OnOpenPage()"
+      },
+      {
+        "name": "if",
+        "signature": "if(IsProject()==0)"
+      },
+      {
+        "name": "SetTextMode",
+        "signature": "SetTextMode(void)"
+      },
+      {
+        "name": "if",
+        "signature": "if(textMode)"
+      },
+      {
+        "name": "OnClosePage",
+        "signature": "OnClosePage(void)"
+      },
+      {
+        "name": "Transparent_Video_Holder.MouseMoveIn",
+        "signature": "Transparent_Video_Holder.MouseMoveIn(int videoID)"
+      },
+      {
+        "name": "Transparent_Video_Holder.MouseMoveOut",
+        "signature": "Transparent_Video_Holder.MouseMoveOut(int videoID)"
+      },
+      {
+        "name": "Transparent_Video_Holder.MouseClickOnDown",
+        "signature": "Transparent_Video_Holder.MouseClickOnDown(int videoID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(textMode==0)"
+      },
+      {
+        "name": "Group.HotSpot_Holder.MouseMoveIn",
+        "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(rectID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(toolbar)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(toolbarPhase)"
+      },
+      {
+        "name": "if",
+        "signature": "if(txtHotSpotOn==0)"
+      },
+      {
+        "name": "Group.Sprite_Holder.InPlace",
+        "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(spriteID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(x==480)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(toolbarCase)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(puzzleNo)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(puzzleNo)"
+      },
+      {
+        "name": "if",
+        "signature": "if(x==0)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseMoveIn",
+        "signature": "Group.Sprite_Holder.MouseMoveIn(int spriteID)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseMoveOut",
+        "signature": "Group.Sprite_Holder.MouseMoveOut(int spriteID)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseClickOnDown",
+        "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(spriteID==11)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(spriteID)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseClickOnUp",
+        "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(toolbarPhase)"
+      },
+      {
+        "name": "Group.Sprite_Holder.EndAnimation",
+        "signature": "Group.Sprite_Holder.EndAnimation(int spriteID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(toolbarPhase==0)"
+      },
+      {
+        "name": "Text_Holder.ScrollTextUp",
+        "signature": "Text_Holder.ScrollTextUp(int textID)"
+      },
+      {
+        "name": "Text_Holder.ScrollTextDown",
+        "signature": "Text_Holder.ScrollTextDown(int textID)"
+      },
+      {
+        "name": "Text_Holder.EndScrollText",
+        "signature": "Text_Holder.EndScrollText(int textID)"
+      },
+      {
+        "name": "Text_Holder.MouseMoveIn",
+        "signature": "Text_Holder.MouseMoveIn(int textID)"
+      },
+      {
+        "name": "Text_Holder.MouseMoveOut",
+        "signature": "Text_Holder.MouseMoveOut(int textID)"
+      },
+      {
+        "name": "Text_Holder.ClickOnText",
+        "signature": "Text_Holder.ClickOnText(int textID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(playStatus)"
+      },
+      {
+        "name": "Text_Holder.EndOfSynchroText",
+        "signature": "Text_Holder.EndOfSynchroText(int textID)"
+      },
+      {
+        "name": "Sound_Holder.EndPlaySound",
+        "signature": "Sound_Holder.EndPlaySound(int soundID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(soundID==0 && textMode)"
+      },
+      {
+        "name": "Sprite_Holder.MouseMoveIn",
+        "signature": "Sprite_Holder.MouseMoveIn(int spriteID)"
+      },
+      {
+        "name": "Sprite_Holder.MouseMoveOut",
+        "signature": "Sprite_Holder.MouseMoveOut(int spriteID)"
+      },
+      {
+        "name": "Sprite_Holder.MouseClickOnDown",
+        "signature": "Sprite_Holder.MouseClickOnDown(int spriteID)"
+      },
+      {
+        "name": "Sprite_Holder.MouseClickOnUp",
+        "signature": "Sprite_Holder.MouseClickOnUp(int spriteID)"
+      },
+      {
+        "name": "OnTimer",
+        "signature": "OnTimer(void)"
+      },
+      {
+        "name": "OnLButtonDown",
+        "signature": "OnLButtonDown(int x,int y)"
+      },
+      {
+        "name": "OnRButtonDown",
+        "signature": "OnRButtonDown(int x,int y)"
+      },
+      {
+        "name": "Video_Holder.TheEnd",
+        "signature": "Video_Holder.TheEnd(int videoID)"
+      },
+      {
+        "name": "Video_Holder.MouseClickOn",
+        "signature": "Video_Holder.MouseClickOn(int videoID)"
+      },
+      {
+        "name": "Transparent_Video_Holder.TheEnd",
+        "signature": "Transparent_Video_Holder.TheEnd(int videoID)"
+      },
+      {
+        "name": "while",
+        "signature": "while(xx<11)"
+      },
+      {
+        "name": "if",
+        "signature": "if(xx==11)"
+      },
+      {
+        "name": "while",
+        "signature": "while(xx<11)"
+      }
+    ],
+    "rawText": "//###########################################################################\n\n//Script code\n\n//###########################################################################\n\n\n\n\n\nOnOpenPage()\n\n{\n\n\t// Add your component and variables initialization code here\n\n\t// WARNING: All variables definied on this function are global for this page\n\n   if(IsProject()==0)   \n\n   {\n\n//      int textMode=0;\n\n      CString parentWnd;\n\n   }\n\n   int textMode=0;\n\n   int videos[12];\n\n\n\n   LoadGroup(\"cursors.grp\");\n\n   SetCursor(0);\n\n\n\n//#############################################################################\n\n   int toolbar=0;\n\n   int toolbarCase=0;\n\n   int toolbarPhase=0;\n\n   int txtHotSpotOn=0;\n\n   int playStatus=0;\n\n   int puzzleNo=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n//############################################################################\n\n\n\n   Sound_Holder.PlayDSound(1);\n\n   SetTextMode();\n\n   FadeScreen(1,1000);\n\n//   SetTimer(5000);\n\n   int canNotClick=0;\n\n}\n\n\n\nvoid SetTextMode(void)\n\n{\n\n   if(textMode)\n\n   {\n\n      Transparent_Video_Holder.Stop();\n\n      playStatus = 1;\n\n      Sound_Holder.SetPlayDSoundParameters(1,-1000,0,0);\n\n      Sound_Holder.PlayDSound(0);\n\n      Text_Holder.SetTextOffsets(0,0,0);\n\n      Text_Holder.DisableMouse(0);\n\n      Text_Holder.ShowText(0);\n\n   }\n\n   else\n\n   {\n\n      playStatus = 0;\n\n      Text_Holder.HideText(0);\n\n      Text_Holder.StopSynchroText(0);\n\n      Sound_Holder.SetPlayDSoundParameters(1,0,0,0);\n\n   }\n\n}\n\n\n\nvoid OnClosePage(void)\n\n{\n\n\t// Add your close page handler code here\n\n\n\n}\n\n\n\n\n\n \n\nvoid Transparent_Video_Holder.MouseMoveIn(int videoID)\n\n{\n\n   if(textMode==0)   SetCursor(1);\n\n}\n\n\n\n \n\nvoid Transparent_Video_Holder.MouseMoveOut(int videoID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\n \n\nvoid Transparent_Video_Holder.MouseClickOnDown(int videoID)\n\n{\n\n   if(textMode==0)  \n\n   {\n\n      Transparent_Video_Holder.Play(videoID,0);\n\n      videos[videoID]=1;\n\n   }\n\n}\n\n\n\n//############################################################# T O O L B A R #######\n\n//#############################################################---------------#######\n\nvoid Group.HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n   switch(rectID)\n\n   {\n\n      case 0:\n\n         Video_Holder.Stop();\n\n\n\n         Group.HotSpot_Holder.DisableHotSpot(0);\n\n         Group.Sprite_Holder.DisableTimers();\n\n\n\n         Group.Sprite_Holder.GotoXY(0,480,0);\n\n         Group.Sprite_Holder.GotoXY(2,544,14);\n\n         Group.Sprite_Holder.GotoXY(3,584,14);\n\n         Group.Sprite_Holder.GotoXY(4,515,84);\n\n         Group.Sprite_Holder.GotoXY(5,559,210);\n\n         Group.Sprite_Holder.GotoXY(6,558,282);\n\n         Group.Sprite_Holder.GotoXY(7,557,404);\n\n   \n\n         Group.Sprite_Holder.SynchronizeTimers();\n\n         Group.Sprite_Holder.EnableTimers();\n\n         Group.Sound_Holder.PlayDSound(0);\n\n         break;\n\n      case 1:\n\n         if(toolbar)\n\n         {\n\n            Group.Sprite_Holder.DisableTimers();\n\n            Sprite_Holder.DisableTimers();\n\n            Group.Sprite_Holder.GotoXY(0,640,0);\n\n            Group.Sprite_Holder.GotoXY(7,717,404);\n\n  \n\n            switch(toolbarPhase)\n\n            {\n\n               case 0:\n\n                  Group.Sprite_Holder.GotoXY(2,704,14);\n\n                  Group.Sprite_Holder.GotoXY(3,744,14);\n\n                  Group.Sprite_Holder.GotoXY(4,675,84);\n\n                  Group.Sprite_Holder.GotoXY(5,719,210);\n\n                  Group.Sprite_Holder.GotoXY(6,718,282);\n\n                  break;\n\n               case 1:\n\n                  Sprite_Holder.GotoXY(0,701,11);\n\n                  Sprite_Holder.GotoXY(1,711,75);\n\n                  Sprite_Holder.GotoXY(2,702,135);\n\n                  Sprite_Holder.GotoXY(3,709,200);\n\n                  Sprite_Holder.GotoXY(4,712,270);\n\n                  break;\n\n               case 2:\n\n                  Group.Sprite_Holder.GotoXY(8,693,22);\n\n                  Group.Sprite_Holder.GotoXY(9,708,156);\n\n                  break;\n\n            }\n\n            Group.Sprite_Holder.SynchronizeTimers();\n\n            Sprite_Holder.SynchronizeTimers();\n\n            Sprite_Holder.EnableTimers();\n\n            Group.Sprite_Holder.EnableTimers();\n\n\n\n            Group.Sound_Holder.PlayDSound(0);\n\n            toolbar=0;\n\n            toolbarPhase=0;\n\n         }\n\n         else\n\n         {\n\n            Group.Sprite_Holder.GotoXY(11,-56,-70);\n\n            if(toolbarCase!=11)   Group.Sound_Holder.PlayDSound(2);\n\n            SetCursor(0);\n\n         }\n\n         txtHotSpotOn=0;\n\n         Group.HotSpot_Holder.EnableHotSpot(0);\n\n         Group.HotSpot_Holder.DisableHotSpot(1);\n\n         toolbarCase=0;\n\n         break;\n\n      case 2:\n\n         Video_Holder.Stop();\n\n\n\n         if(txtHotSpotOn==0)   \n\n         {\n\n            Group.Sprite_Holder.GotoXY(11,0,0);\n\n            Group.Sound_Holder.PlayDSound(3);\t\n\n         }\n\n         break;\n\n   }\n\n}\n\n\n\n\n\nvoid Group.Sprite_Holder.InPlace(int spriteID,int x,int y)\n\n{\n\n   switch(spriteID)\n\n   {\n\n      case 0:\n\n         if(x==480)\n\n         {\n\n            toolbar=1;\n\n            Group.HotSpot_Holder.EnableHotSpot(1);\n\n            SetCursor(1);\n\n         }\n\n         else\n\n         {\n\n            SetCursor(0);\n\n            Group.Sprite_Holder.ChangePhase(2,0);\n\n            Group.Sprite_Holder.ChangePhase(3,0);\n\n            Group.Sprite_Holder.ChangePhase(4,0);\n\n            Group.Sprite_Holder.ChangePhase(5,0);\n\n            Group.Sprite_Holder.ChangePhase(6,0);\n\n            Group.Sprite_Holder.ChangePhase(7,0);\n\n            Group.Sprite_Holder.ChangePhase(8,0);\n\n            Group.Sprite_Holder.ChangePhase(9,0);\n\n            \n\n            switch(toolbarCase)\n\n            {\n\n               case 2:   //lewo   \n\n                  FadeScreen(0,1000);\n\n                  LoadPage(\"kotek.bdf\");\n\n                  break;\n\n               case 3:   //prawo\n\n                  FadeScreen(0,1000);\n\n                  LoadPage(\"mroz.bdf\");\n\n                  break;\n\n               case 4:   //recytacja\n\n                  FadeScreen(0,1000);\n\n                  LoadPage(\"lokom_r.bdf\");\n\n                  break;\n\n               case 5:   //roznice\n\n                  FadeScreen(0,1000);\n\n                  LoadPage(\"lokom_c.bdf\");\n\n                  break;\n\n               case 6:   //puzzle\n\n                  Group.Sprite_Holder.DisableTimers();\n\n                  Sprite_Holder.DisableTimers();\n\n\n\n                  Group.Sprite_Holder.GotoXY(0,480,0);\n\n                  Sprite_Holder.GotoXY(0,541,11);\n\n                  Sprite_Holder.GotoXY(1,551,75);\n\n                  Sprite_Holder.GotoXY(2,542,135);\n\n                  Sprite_Holder.GotoXY(3,549,200);\n\n                  Sprite_Holder.GotoXY(4,552,270);\n\n                  Group.Sprite_Holder.GotoXY(7,557,404);\n\n\n\n                  Group.Sprite_Holder.SynchronizeTimers();\n\n                  Sprite_Holder.SynchronizeTimers();\n\n                  Sprite_Holder.EnableTimers();\n\n                  Group.Sprite_Holder.EnableTimers();\n\n\n\n                  Group.Sound_Holder.PlayDSound(0);\n\n                  toolbarPhase=1;\n\n                  break;\n\n               case 7:   //Plansza wyboru\n\n                  FadeScreen(0,1000);\n\n                  LoadPage(\"Wyborw.bdf\");\n\n                  break;\n\n               case 8:   //puzzle trudne\n\n                  FadeScreen(0,1000);\n\n                  parentWnd.SetString(\"wszyscy.bdf\");\n\n                  switch(puzzleNo)\n\n                  {\n\n                     case 0:\n\n                        LoadPage(\"lok1p1.bdf\");\n\n                        break;\n\n                     case 1:\n\n                        LoadPage(\"lok2p1.bdf\");\n\n                        break;\n\n                     case 2:\n\n                        LoadPage(\"lok3p1.bdf\");\n\n                        break;\n\n                     case 3:\n\n                        LoadPage(\"lok4p1.bdf\");\n\n                        break;\n\n                     case 4:\n\n                        LoadPage(\"lok5p1.bdf\");\n\n                        break;\n\n                  }\n\n                  break;\n\n               case 9:   //puzzle latwe\n\n                  FadeScreen(0,1000);\n\n                  parentWnd.SetString(\"wszyscy.bdf\");\n\n                  switch(puzzleNo)\n\n                  {\n\n                     case 0:\n\n                        LoadPage(\"lok1p2.bdf\");\n\n                        break;\n\n                     case 1:\n\n                        LoadPage(\"lok2p2.bdf\");\n\n                        break;\n\n                     case 2:\n\n                        LoadPage(\"lok3p2.bdf\");\n\n                        break;\n\n                     case 3:\n\n                        LoadPage(\"lok4p2.bdf\");\n\n                        break;\n\n                     case 4:\n\n                        LoadPage(\"lok5p1.bdf\");\n\n                        break;\n\n                  }\n\n                  break;\n\n               case 12:\n\n               case 13:\n\n               case 14:\n\n               case 15:\n\n               case 16:\n\n                  Sprite_Holder.ChangePhase(0,0);\n\n                  Sprite_Holder.ChangePhase(1,0);\n\n                  Sprite_Holder.ChangePhase(2,0);\n\n                  Sprite_Holder.ChangePhase(3,0);\n\n                  Sprite_Holder.ChangePhase(4,0);\n\n\n\n                  Group.Sprite_Holder.DisableTimers();\n\n\n\n                  Group.Sprite_Holder.GotoXY(0,480,0);\n\n\n\n                  Group.Sprite_Holder.GotoXY(8,533,22);\n\n                  Group.Sprite_Holder.GotoXY(9,548,156);\n\n                  Group.Sprite_Holder.GotoXY(7,557,404);\n\n\n\n                  Group.Sprite_Holder.SynchronizeTimers();\n\n                  Group.Sprite_Holder.EnableTimers();\n\n                  Group.Sound_Holder.PlayDSound(0);\n\n                  toolbarPhase=2;\n\n                  break;\n\n            }\n\n         }\n\n         break;\n\n      case 11:\n\n         if(x==0)\n\n         {\n\n            Group.HotSpot_Holder.EnableHotSpot(1);\n\n            txtHotSpotOn=1;\n\n            SetCursor(1);\n\n         }\n\n         break;\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseMoveIn(int spriteID)\n\n{\n\n   if(spriteID && toolbar)\n\n      SetCursor(1);\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseMoveOut(int spriteID)\n\n{\n\n   if(spriteID)\n\n      SetCursor(0);\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnDown(int spriteID)\n\n{\n\n   if(spriteID==0)   return;\n\n   if(spriteID==11)\n\n   {\n\n      Group.Sprite_Holder.GotoXY(11,-56,-70);\n\n      Group.Sound_Holder.PlayDSound(2);\t\n\n      toolbarCase=spriteID;\n\n      SetCursor(0);\n\n      if(textMode)    textMode=0;\n\n      else            textMode=1;\n\n      SetTextMode();\n\n   }\n\n   else\n\n   {\n\n      Group.HotSpot_Holder.DisableHotSpot(1);\n\n      Group.Sprite_Holder.ChangePhase(spriteID,1);\n\n      switch(spriteID)\t\n\n      {\n\n         case 2:   //lewo\n\n         case 3:   //prawo \n\n            Group.Sound_Holder.PlayDSound(4);\n\n            break;\n\n         case 4:   //recytacja\n\n            Group.Sound_Holder.PlayDSound(5);\n\n            break;\n\n         case 5:   //roznice\n\n            Group.Sound_Holder.PlayDSound(6);\n\n            break;\n\n         case 6:   //puzzle\n\n            Group.Sound_Holder.PlayDSound(7);\n\n            break;\n\n         case 7:   //plansza glowna\n\n            Group.Sound_Holder.PlayDSound(8);\n\n            break;\n\n         case 8:   //puzzle latwe\n\n            Group.Sound_Holder.PlayDSound(9);\n\n            break;\n\n         case 9:   //puzzle trudne\n\n            Group.Sound_Holder.PlayDSound(10);\n\n            break;\n\n         case 10:  //parent window\n\n            Group.Sound_Holder.PlayDSound(4);\n\n            break;\n\n      }\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnUp(int spriteID)\n\n{\n\n   if(spriteID==0 || spriteID==5 || spriteID==6 || spriteID==8 || spriteID==9 || spriteID==11)   return;\n\n   Group.Sprite_Holder.DisableTimers();\n\n   Sprite_Holder.DisableTimers();\n\n\n\n   Group.Sprite_Holder.GotoXY(0,640,0);\n\n   Group.Sprite_Holder.GotoXY(7,717,404);\n\n\n\n   switch(toolbarPhase)\n\n   {\n\n      case 0:\n\n         Group.Sprite_Holder.GotoXY(2,704,14);\n\n         Group.Sprite_Holder.GotoXY(3,744,14);\n\n         Group.Sprite_Holder.GotoXY(4,675,84);\n\n         Group.Sprite_Holder.GotoXY(5,719,210);\n\n         Group.Sprite_Holder.GotoXY(6,718,282);\n\n         break;\n\n      case 1:\n\n         Sprite_Holder.GotoXY(0,701,11);\n\n         Sprite_Holder.GotoXY(1,711,75);\n\n         Sprite_Holder.GotoXY(2,702,135);\n\n         Sprite_Holder.GotoXY(3,709,200);\n\n         Sprite_Holder.GotoXY(4,712,270);\n\n         break;\n\n      case 2:\n\n         Group.Sprite_Holder.GotoXY(8,693,22);\n\n         Group.Sprite_Holder.GotoXY(9,708,156);\n\n         toolbarPhase=0;\n\n         break;\n\n   }\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Sprite_Holder.SynchronizeTimers();\n\n   Sprite_Holder.EnableTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID;\n\n}\n\n\n\nvoid Group.Sprite_Holder.EndAnimation(int spriteID)\n\n{\n\n   if(spriteID!=5 && spriteID!=6 && spriteID!=8 && spriteID!=9)   return;\n\n\n\n   Group.Sprite_Holder.ChangePhase(spriteID,2);\n\n\n\n   Group.Sprite_Holder.DisableTimers();\n\n\n\n   if(toolbarPhase==0)\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(2,704,14);\n\n      Group.Sprite_Holder.GotoXY(3,744,14);\n\n      Group.Sprite_Holder.GotoXY(4,675,84);\n\n      Group.Sprite_Holder.GotoXY(5,719,210);\n\n      Group.Sprite_Holder.GotoXY(6,718,282);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n   }\n\n   else\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(8,693,22);\n\n      Group.Sprite_Holder.GotoXY(9,708,156);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n      toolbarPhase=0;\n\n   }\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID;\n\n}\n\n//#############################################################\n\n//############################################################# \n\n\n\n\n\n\n\n\n\n\n\n \n\nvoid Text_Holder.ScrollTextUp(int textID)\n\n{\n\n   SetCursor(3);\n\n}\n\n\n\n \n\nvoid Text_Holder.ScrollTextDown(int textID)\n\n{\n\n   SetCursor(4);\n\n}\n\n\n\n \n\nvoid Text_Holder.EndScrollText(int textID)\n\n{\n\n   if(playStatus)  SetCursor(2);\n\n   else            SetCursor(5);\n\n}\n\n\n\n \n\nvoid Text_Holder.MouseMoveIn(int textID)\n\n{\n\n   if(playStatus)\n\n      SetCursor(2);\n\n   else\n\n      SetCursor(5);\n\n}\n\n\n\n \n\nvoid Text_Holder.MouseMoveOut(int textID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\n \n\nvoid Text_Holder.ClickOnText(int textID)\n\n{\n\n   if(playStatus)\n\n   {\n\n      playStatus=0;\n\n      Sound_Holder.Stop(0);\n\n      Text_Holder.StopSynchroText(0);\n\n      Sound_Holder.SetPlayDSoundParameters(1,0,0,0);\n\n      SetCursor(5);\n\n   }\n\n   else\n\n   {\n\n      playStatus=1;\n\n      Sound_Holder.SetPlayDSoundParameters(1,-1000,0,0);\n\n      Text_Holder.PlaySynchroText(0);\n\n      SetCursor(2);\n\n   }\n\n}\n\n\n\n \n\nvoid Text_Holder.EndOfSynchroText(int textID)\n\n{\n\n   if(playStatus)\n\n      SetCursor(5);\n\n   else\n\n      SetCursor(0);\n\n   playStatus=0;\n\n   Sound_Holder.SetPlayDSoundParameters(1,0,0,0);\n\n}\n\n\n\n \n\nvoid Sound_Holder.EndPlaySound(int soundID)\n\n{\n\n   if(soundID==0 && textMode)\n\n   { \n\n      playStatus=1;\n\n      Text_Holder.EnableMouse(0);\n\n      Text_Holder.PlaySynchroText(0);\n\n   }\n\n}\n\n\n\n\n\n//######################################################## \n\nvoid Sprite_Holder.MouseMoveIn(int spriteID)\n\n{\n\n   SetCursor(1);\n\n}\n\n\n\nvoid Sprite_Holder.MouseMoveOut(int spriteID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\nvoid Sprite_Holder.MouseClickOnDown(int spriteID)\n\n{\n\n   Sprite_Holder.ChangePhase(spriteID,1);\n\n   Group.Sound_Holder.PlayDSound(12);\n\n}\n\n\n\nvoid Sprite_Holder.MouseClickOnUp(int spriteID)\n\n{\n\n   Group.Sprite_Holder.DisableTimers();\n\n   Sprite_Holder.DisableTimers();\n\n\n\n   Group.Sprite_Holder.GotoXY(0,640,0);\n\n\n\n   Sprite_Holder.GotoXY(0,701,11);\n\n   Sprite_Holder.GotoXY(1,711,75);\n\n   Sprite_Holder.GotoXY(2,702,135);\n\n   Sprite_Holder.GotoXY(3,709,200);\n\n   Sprite_Holder.GotoXY(4,712,270);\n\n   Group.Sprite_Holder.GotoXY(7,717,404);\n\n\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Sprite_Holder.SynchronizeTimers();\n\n   Sprite_Holder.EnableTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID+12;\n\n   puzzleNo=spriteID;\n\n}\n\n//########################################################\n\n\n\n \n\n \n\nvoid OnTimer(void)\n\n{\n\n        //Add your command handler code here\n\n   SetTimer(0);\n\n   canNotClick=0;\n\n}\n\n \n\nvoid OnLButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   Sound_Holder.Stop(2);\n\n   SetTimer(0);\n\n}\n\n \n\nvoid OnRButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   Sound_Holder.PlayDSound(2);\n\n}\n\n \n\nvoid Video_Holder.TheEnd(int videoID)\n\n{\n\n   Video_Holder.Stop();\n\n   Sound_Holder.PlayDSound(1);\n\n   SetCursor(0);\n\n}\n\n\n\n \n\nvoid Video_Holder.MouseClickOn(int videoID)\n\n{\n\n   if(canNotClick)   return;\n\n   Video_Holder.Stop();\n\n   Sound_Holder.PlayDSound(1);\n\n   SetCursor(0);\n\n}\n\n\n\n \n\nvoid Transparent_Video_Holder.TheEnd(int videoID)\n\n{\n\n   int xx=0;\n\n   while(xx<11)\n\n   {\n\n      if(videos[xx]==0)   break;\n\n      xx++;\n\n   }\n\n   if(xx==11)\n\n   {\n\n      xx=0;\n\n      while(xx<11)\n\n      {\n\n         videos[xx]=0;\n\n         xx++;\n\n      }\n\n      SetCursor(-3);\n\n      canNotClick=1;\n\n      SetTimer(6000);\n\n      Sound_Holder.StopAll();\n\n      Video_Holder.Stop();\n\n//      Video_Holder.PlayFromTo(0,0,4716);\n\n      Video_Holder.Play(0);\n\n   }\n\n}\n\n\n\n\n\n\n\n "
+  },
+  "warnings": [
+    "3 component(s) have unknown geometry and default to 0,0.",
+    "Recovered 11 TransparentVideoHolder asset rect(s) from serialized entries."
+  ]
+}

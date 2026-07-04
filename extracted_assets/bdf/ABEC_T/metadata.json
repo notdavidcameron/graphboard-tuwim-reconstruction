@@ -1,0 +1,239 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ABEC_T.BDF",
+  "size": 471600,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Monday, November 17, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    9
+  ],
+  "background_flag": 1,
+  "background_color_index": 0,
+  "palette_size": 1024,
+  "dib_size": 0,
+  "component_list_offset": 1165,
+  "component_list_version": 1,
+  "component_count": 4,
+  "components": [
+    {
+      "index": 0,
+      "offset": 1173,
+      "clsid": "B2CDC8DE-5359-11D0-B445-008048EB5D40",
+      "display_name": "Video_Holder",
+      "private_offset": 2149,
+      "private_size": 1081,
+      "embedded": []
+    },
+    {
+      "index": 1,
+      "offset": 3230,
+      "clsid": "DA768116-5341-11D0-B444-008048EB5D40",
+      "display_name": "HotSpot_Holder",
+      "private_offset": 4335,
+      "private_size": 928,
+      "embedded": []
+    },
+    {
+      "index": 2,
+      "offset": 5263,
+      "clsid": "0D8A5736-5337-11D0-B444-008048EB5D40",
+      "display_name": "Bitmap_Holder",
+      "private_offset": 6395,
+      "private_size": 443940,
+      "embedded": []
+    },
+    {
+      "index": 3,
+      "offset": 450335,
+      "clsid": "B64F3336-5368-11D0-B445-008048EB5D40",
+      "display_name": "Sprite_Holder",
+      "private_offset": 451869,
+      "private_size": 10836,
+      "embedded": []
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ABEC_T\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ABEC_T\\script.txt",
+      "size": 8580
+    }
+  ],
+  "script": {
+    "version_offset": 462705,
+    "version": 1,
+    "string_prefix_offset": 462709,
+    "text_offset": 462712,
+    "text_length": 8580,
+    "text_end": 471292,
+    "engine_state": {
+      "offset": 471292,
+      "version": 2,
+      "block_count": 5,
+      "handler_offsets": {
+        "field_38": 701,
+        "field_3c": 0,
+        "field_30": 991,
+        "field_34": 341
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 471316,
+          "start_offset": 2238,
+          "duplicate_start_offset": 2238,
+          "case_count": 7,
+          "end_or_body_offset": 3984,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 2275
+            },
+            {
+              "value": 1,
+              "target_offset": 2443
+            },
+            {
+              "value": 2,
+              "target_offset": 2683
+            },
+            {
+              "value": 3,
+              "target_offset": 2939
+            },
+            {
+              "value": 4,
+              "target_offset": 3213
+            },
+            {
+              "value": 5,
+              "target_offset": 3476
+            },
+            {
+              "value": 6,
+              "target_offset": 3741
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 471392,
+          "start_offset": 4144,
+          "duplicate_start_offset": 4144,
+          "case_count": 1,
+          "end_or_body_offset": 4372,
+          "aux_offset": 4306,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 4181
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "file_offset": 471420,
+          "start_offset": 4878,
+          "duplicate_start_offset": 4878,
+          "case_count": 4,
+          "end_or_body_offset": 5314,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 4905
+            },
+            {
+              "value": 5,
+              "target_offset": 5087
+            },
+            {
+              "value": 8,
+              "target_offset": 5105
+            },
+            {
+              "value": 7,
+              "target_offset": 5217
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "file_offset": 471472,
+          "start_offset": 7103,
+          "duplicate_start_offset": 7103,
+          "case_count": 4,
+          "end_or_body_offset": 7483,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 3,
+              "target_offset": 7143
+            },
+            {
+              "value": 4,
+              "target_offset": 7227
+            },
+            {
+              "value": 1,
+              "target_offset": 7328
+            },
+            {
+              "value": 2,
+              "target_offset": 7426
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "file_offset": 471524,
+          "start_offset": 7624,
+          "duplicate_start_offset": 7624,
+          "case_count": 4,
+          "end_or_body_offset": 7913,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 1,
+              "target_offset": 7669
+            },
+            {
+              "value": 2,
+              "target_offset": 7764
+            },
+            {
+              "value": 3,
+              "target_offset": 7837
+            },
+            {
+              "value": 4,
+              "target_offset": 7855
+            }
+          ]
+        }
+      ],
+      "table_count": 0,
+      "table_a": [],
+      "table_b": [],
+      "versioned_tail": {
+        "field_44": 1459,
+        "field_48": 0,
+        "field_4c": 1244,
+        "field_50": 0
+      },
+      "end_offset": 471596
+    }
+  }
+}

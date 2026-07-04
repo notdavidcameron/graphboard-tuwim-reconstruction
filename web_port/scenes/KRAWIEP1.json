@@ -1,0 +1,228 @@
+{
+  "id": "KRAWIEP1",
+  "title": "KRAWIEP1",
+  "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\KRAWIEP1.BDF",
+  "pageRect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "background": {
+    "colorIndex": 0,
+    "flag": 1,
+    "bmpPath": null,
+    "bmpUrl": null,
+    "palettePath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEP1\\background_palette.bin",
+    "paletteUrl": "../extracted_assets/bdf/KRAWIEP1/background_palette.bin"
+  },
+  "components": [
+    {
+      "id": "00_Puzzle",
+      "type": "Puzzle",
+      "index": 0,
+      "z": 0,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "sourceOffset": 1173,
+      "privateOffset": 2257,
+      "privateSize": 252520,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "01_Sound_Holder",
+      "type": "Sound_Holder",
+      "index": 1,
+      "z": 0,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "geometryConfidence": "not_visual",
+      "sourceOffset": 254777,
+      "privateOffset": 255673,
+      "privateSize": 109562,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEP1\\embedded\\01_Sound_Holder_000_0003e6c5.wav",
+          "url": "../extracted_assets/bdf/KRAWIEP1/embedded/01_Sound_Holder_000_0003e6c5.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 255685,
+          "id": 0
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEP1\\embedded\\01_Sound_Holder_001_00040095.wav",
+          "url": "../extracted_assets/bdf/KRAWIEP1/embedded/01_Sound_Holder_001_00040095.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 262293,
+          "id": 1
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEP1\\embedded\\01_Sound_Holder_002_000416d5.wav",
+          "url": "../extracted_assets/bdf/KRAWIEP1/embedded/01_Sound_Holder_002_000416d5.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 267989,
+          "id": 2
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEP1\\embedded\\01_Sound_Holder_003_00042589.wav",
+          "url": "../extracted_assets/bdf/KRAWIEP1/embedded/01_Sound_Holder_003_00042589.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 271753,
+          "id": 3
+        }
+      ]
+    }
+  ],
+  "script": {
+    "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEP1\\script.txt",
+    "url": "../extracted_assets/bdf/KRAWIEP1/script.txt",
+    "handlers": [
+      {
+        "name": "OnOpenPage",
+        "signature": "OnOpenPage()"
+      },
+      {
+        "name": "if",
+        "signature": "if(IsProject()==0)"
+      },
+      {
+        "name": "OnLButtonDown",
+        "signature": "OnLButtonDown(int x,int y)"
+      },
+      {
+        "name": "OnTimer",
+        "signature": "OnTimer(void)"
+      },
+      {
+        "name": "OnClosePage",
+        "signature": "OnClosePage(void)"
+      },
+      {
+        "name": "OnKeyDown",
+        "signature": "OnKeyDown(UINT nChar)"
+      },
+      {
+        "name": "Puzzle.MouseMoveIn",
+        "signature": "Puzzle.MouseMoveIn()"
+      },
+      {
+        "name": "Puzzle.MouseMoveOut",
+        "signature": "Puzzle.MouseMoveOut()"
+      },
+      {
+        "name": "Puzzle.MouseStartDrag",
+        "signature": "Puzzle.MouseStartDrag()"
+      },
+      {
+        "name": "Puzzle.MouseDrop",
+        "signature": "Puzzle.MouseDrop()"
+      },
+      {
+        "name": "Puzzle.ChipLock",
+        "signature": "Puzzle.ChipLock()"
+      },
+      {
+        "name": "Puzzle.GameOver",
+        "signature": "Puzzle.GameOver(int puzzleID)"
+      },
+      {
+        "name": "Group.HotSpot_Holder.MouseMoveIn",
+        "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(rectID==0)"
+      },
+      {
+        "name": "if",
+        "signature": "if(toolbar)"
+      },
+      {
+        "name": "Group.Sprite_Holder.InPlace",
+        "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
+      },
+      {
+        "name": "if",
+        "signature": "if(spriteID==0)"
+      },
+      {
+        "name": "if",
+        "signature": "if(x==480)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(toolbarCase)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseMoveIn",
+        "signature": "Group.Sprite_Holder.MouseMoveIn(int spriteID)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseMoveOut",
+        "signature": "Group.Sprite_Holder.MouseMoveOut(int spriteID)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseClickOnDown",
+        "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(spriteID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(showBmp)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseClickOnUp",
+        "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(spriteID==5)"
+      },
+      {
+        "name": "Puzzle.EndShowBitmap",
+        "signature": "Puzzle.EndShowBitmap(int puzzleID)"
+      },
+      {
+        "name": "Group.Sprite_Holder.EndAnimation",
+        "signature": "Group.Sprite_Holder.EndAnimation(int spriteID)"
+      },
+      {
+        "name": "OnRButtonDown",
+        "signature": "OnRButtonDown(int x,int y)"
+      }
+    ],
+    "rawText": "//###########################################################################\n\n//Script code\n\n//###########################################################################\n\n\n\n\n\nOnOpenPage()\n\n{\n\n\t// Add your component and variables initialization code here\n\n\t// WARNING: All variables definied on this function are global for this page\n\n   if(IsProject()==0)     \n\n   {\n\n      CString parentWnd;\n\n      parentWnd.SetString(\"wszyscy.bdf\");\n\n   }\n\n\n\n   LoadGroup(\"cursors1.grp\");\n\n   SetCursor (0);\n\n\n\n   int toolbar=0;\n\n   int toolbarCase=0;\n\n   int toolbarPhase=1;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n\n\n   DisableScreen();\n\n   Puzzle.OpenPuzzle(0);\n\n   Puzzle.Mix(0,0,580,480);\n\n   EnableScreen();\n\n   ShowBuffer();\n\n   Group.Sound_Holder.PlayDSound(9);\n\n   FadeScreen(1,1000);\n\n\n\n   int showBmp=0;\n\n//   SetTimer(5000);\n\n}\n\n\n\n\n\nvoid OnLButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   SetTimer(0);\n\n   Group.Sound_Holder.Stop(12);\n\n}\n\n\n\nvoid OnTimer(void)\n\n{\n\n        //Add your command handler code here\n\n   SetTimer(0);\n\n   Group.Sound_Holder.PlayDSound(12);\n\n}\n\n\n\n\n\n\n\n\n\n\n\nvoid OnClosePage(void)\n\n{\n\n\t// Add your close page handler code here\n\n\n\n}\n\n\n\n\n\nvoid OnKeyDown(UINT nChar)\n\n{\n\n        //Add your command handler code here\n\n   Puzzle.ShowFullBitmap(90,60,3);\n\n}\n\n \n\nvoid Puzzle.MouseMoveIn()\n\n{\n\n   SetCursor (1);\n\n}\n\n\n\n \n\nvoid Puzzle.MouseMoveOut()\n\n{\n\n   SetCursor (0);\n\n}\n\n\n\n \n\nvoid Puzzle.MouseStartDrag()\n\n{\n\n   Group.Sound_Holder.PlayDSound(5);\n\n}\n\n\n\n \n\nvoid Puzzle.MouseDrop()\n\n{\n\n   Group.Sound_Holder.PlayDSound(6);\n\n}\n\n\n\n \n\nvoid Puzzle.ChipLock()\n\n{\n\n   Group.Sound_Holder.PlayDSound(7);\n\n}\n\n\n\n \n\nvoid Puzzle.GameOver(int puzzleID)\n\n{\n\n   Group.Sound_Holder.PlayDSound(8);\n\n}\n\n\n\n \n\n//############################################################# T O O L B A R #######\n\n//#############################################################---------------#######\n\nvoid Group.HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n   if(rectID==0)\n\n   {\n\n      Group.Sprite_Holder.DisableTimers();\n\n\n\n      Group.Sprite_Holder.GotoXY(0,480,0);\n\n      Group.Sprite_Holder.GotoXY(2,533,22);\n\n      Group.Sprite_Holder.GotoXY(3,548,156);\n\n      Group.Sprite_Holder.GotoXY(4,560,329);\n\n      Group.Sprite_Holder.GotoXY(1,557,404);\n\n\n\n      Group.Sprite_Holder.SynchronizeTimers();\n\n      Group.Sprite_Holder.EnableTimers();\n\n      Group.Sound_Holder.PlayDSound(0);\n\n   }\n\n   else\n\n   {\n\n      if(toolbar)\n\n      {\n\n         Group.Sprite_Holder.DisableTimers();\n\n\n\n         Group.Sprite_Holder.GotoXY(0,640,0);\n\n         Group.Sprite_Holder.GotoXY(2,693,22);\n\n         Group.Sprite_Holder.GotoXY(3,708,156);\n\n         Group.Sprite_Holder.GotoXY(4,720,329);\n\n         Group.Sprite_Holder.GotoXY(1,717,404);\n\n\n\n         Group.Sprite_Holder.SynchronizeTimers();\n\n         Group.Sprite_Holder.EnableTimers();\n\n         Group.Sound_Holder.PlayDSound(0);\n\n         toolbar=0;\n\n         toolbarPhase=0;\n\n      }\n\n      Group.HotSpot_Holder.DisableHotSpot(1);\n\n      toolbarCase=0;\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.InPlace(int spriteID,int x,int y)\n\n{\n\n   if(spriteID==0)\n\n   {\n\n      if(x==480)\n\n      {\n\n         toolbar=1;\n\n         Group.HotSpot_Holder.EnableHotSpot(1);\n\n         SetCursor(1);\n\n      }\n\n      else\n\n      {\n\n         SetCursor(0);\n\n         Group.Sprite_Holder.ChangePhase(1,0);\n\n         Group.Sprite_Holder.ChangePhase(2,0);\n\n         Group.Sprite_Holder.ChangePhase(3,0);\n\n         Group.Sprite_Holder.ChangePhase(4,0);\n\n         switch(toolbarCase)\n\n         {\n\n            case 1:   //Plansza wyboru\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"Wyborw.bdf\");\n\n               break;\n\n            case 2:   //puzzle trudne\n\n               DisableScreen();\n\n               Puzzle.OpenPuzzle(0);\n\n               Puzzle.Mix(0,0,580,480);\n\n               EnableScreen();\n\n               ShowBuffer();\n\n               break;\n\n            case 3:   //puzzle latwe\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"krawiep2.bdf\");\n\n               break;\n\n            case 4:  //plansza glowna\n\n               FadeScreen(0,1000);\n\n               LoadPage(parentWnd);\n\n               break;\n\n         }\n\n      }\n\n   }\n\n}\n\n\n\n\n\nvoid Group.Sprite_Holder.MouseMoveIn(int spriteID)\n\n{\n\n   if(spriteID)\n\n      SetCursor(1);\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseMoveOut(int spriteID)\n\n{\n\n   if(spriteID)\n\n      SetCursor(0);\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnDown(int spriteID)\n\n{\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   Group.Sprite_Holder.ChangePhase(spriteID,1);\n\n   switch(spriteID)\n\n   {\n\n      case 1:   //wybor wierszy\n\n         Group.Sound_Holder.PlayDSound(3);\n\n         break;\n\n      case 2:   //puzzle trudne\n\n         Group.Sound_Holder.PlayDSound(1);\n\n         break;\n\n      case 3:   //puzzle trudne\n\n         Group.Sound_Holder.PlayDSound(2);\n\n         break;\n\n      case 4:  //parent window\n\n         Group.Sound_Holder.PlayDSound(4);\n\n         break;\n\n      case 5:\n\n         Group.Sprite_Holder.ChangePhase(spriteID,1);\n\n         if(showBmp)\n\n         {\n\n            showBmp=0;\n\n            Puzzle.EndShowFullBitmap();\n\n         }\n\n         else\n\n         {\n\n            showBmp=1;\n\n            Group.Sound_Holder.PlayDSound(10);\n\n            Puzzle.ShowFullBitmap(40,40,-1);\n\n         }\n\n         break;\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnUp(int spriteID)\n\n{\n\n   if(spriteID==5)\n\n   {\n\n      Group.Sprite_Holder.ChangePhase(spriteID,0);\n\n      return;\n\n   }\n\n   if(spriteID==2 || spriteID==3)   return;\n\n   Group.Sprite_Holder.DisableTimers();\n\n\n\n   Group.Sprite_Holder.GotoXY(0,640,0);\n\n   Group.Sprite_Holder.GotoXY(2,693,22);\n\n   Group.Sprite_Holder.GotoXY(3,708,156);\n\n   Group.Sprite_Holder.GotoXY(4,720,329);\n\n   Group.Sprite_Holder.GotoXY(1,717,404);\n\n   toolbarPhase=0;\n\n\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID;\n\n}\n\n\n\n\n\nvoid Puzzle.EndShowBitmap(int puzzleID)\n\n{\n\n   showBmp=0;\n\n   Group.Sound_Holder.PlayDSound(11);\n\n}\n\n\n\n\n\nvoid Group.Sprite_Holder.EndAnimation(int spriteID)\n\n{\n\n   if(spriteID!=2 && spriteID!=3)   return;\n\n\n\n   Group.Sprite_Holder.ChangePhase(spriteID,2);\n\n\n\n   Group.Sprite_Holder.DisableTimers();\n\n\n\n   Group.Sprite_Holder.GotoXY(0,640,0);\n\n   Group.Sprite_Holder.GotoXY(2,693,22);\n\n   Group.Sprite_Holder.GotoXY(3,708,156);\n\n   Group.Sprite_Holder.GotoXY(4,720,329);\n\n   Group.Sprite_Holder.GotoXY(1,717,404);\n\n   toolbarPhase=0;\n\n\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID;\n\n}\n\n//#############################################################\n\n//############################################################# \n\n \n\n \n\nvoid OnRButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   Group.Sound_Holder.PlayDSound(12);\n\n}\n\n "
+  },
+  "warnings": [
+    "1 component(s) have unknown geometry and default to 0,0."
+  ]
+}

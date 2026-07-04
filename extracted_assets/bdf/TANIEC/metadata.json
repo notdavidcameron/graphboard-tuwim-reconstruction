@@ -1,0 +1,1135 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TANIEC.BDF",
+  "size": 5518039,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Tuesday, November 04, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    9
+  ],
+  "background_flag": 1,
+  "background_color_index": 149,
+  "palette_size": 1024,
+  "dib_size": 0,
+  "component_list_offset": 1165,
+  "component_list_version": 1,
+  "component_count": 6,
+  "components": [
+    {
+      "index": 0,
+      "offset": 1173,
+      "clsid": "2F3C5846-5413-11D0-B447-008048EB5D40",
+      "display_name": "Transparent_Video_Holder",
+      "private_offset": 2347,
+      "private_size": 3395405,
+      "embedded": [
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\00_Transparent_Video_Holder_000_00000937_board_video_audio.wav",
+          "offset": 2359,
+          "size": 132344,
+          "pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 3
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\animations\\00_Transparent_Video_Holder_000_00000937_board_video_144x163.gif",
+          "offset": 2359,
+          "size": 400776,
+          "frame_count": 15,
+          "width": 144,
+          "height": 163,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\00_Transparent_Video_Holder_002_0004be6e_board_video_audio.wav",
+          "offset": 310894,
+          "size": 220544,
+          "pcm_size": 220500,
+          "duration_seconds": 5.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 5
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\animations\\00_Transparent_Video_Holder_002_0004be6e_board_video_142x226.gif",
+          "offset": 310894,
+          "size": 1276516,
+          "frame_count": 35,
+          "width": 142,
+          "height": 226,
+          "transparent_index": 30,
+          "header_transparent_index": 129,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\00_Transparent_Video_Holder_004_00125c21_board_video_audio.wav",
+          "offset": 1203233,
+          "size": 132344,
+          "pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 3
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\animations\\00_Transparent_Video_Holder_004_00125c21_board_video_226x407.gif",
+          "offset": 1203233,
+          "size": 1149498,
+          "frame_count": 11,
+          "width": 226,
+          "height": 407,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\00_Transparent_Video_Holder_006_001e0021_board_video_audio.wav",
+          "offset": 1966113,
+          "size": 88244,
+          "pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 2
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\animations\\00_Transparent_Video_Holder_006_001e0021_board_video_225x109.gif",
+          "offset": 1966113,
+          "size": 251541,
+          "frame_count": 9,
+          "width": 225,
+          "height": 109,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\00_Transparent_Video_Holder_008_0021c57a_board_video_audio.wav",
+          "offset": 2213242,
+          "size": 176444,
+          "pcm_size": 176400,
+          "duration_seconds": 4.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 4
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\animations\\00_Transparent_Video_Holder_008_0021c57a_board_video_192x408.gif",
+          "offset": 2213242,
+          "size": 2668971,
+          "frame_count": 30,
+          "width": 192,
+          "height": 408,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\00_Transparent_Video_Holder_010_002c3b8b_board_video_audio.wav",
+          "offset": 2898827,
+          "size": 88244,
+          "pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 2
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\animations\\00_Transparent_Video_Holder_010_002c3b8b_board_video_104x146.gif",
+          "offset": 2898827,
+          "size": 156114,
+          "frame_count": 9,
+          "width": 104,
+          "height": 146,
+          "transparent_index": 36,
+          "header_transparent_index": 36,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\00_Transparent_Video_Holder_012_002f98c0_board_video_audio.wav",
+          "offset": 3119296,
+          "size": 176444,
+          "pcm_size": 176400,
+          "duration_seconds": 4.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 4
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\animations\\00_Transparent_Video_Holder_012_002f98c0_board_video_77x91.gif",
+          "offset": 3119296,
+          "size": 224157,
+          "frame_count": 28,
+          "width": 77,
+          "height": 91,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        }
+      ],
+      "board_video_marker_offset": 2359,
+      "board_video_streams": [
+        {
+          "index": 0,
+          "offset": 2359,
+          "end_offset": 286034,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 144,
+          "video_height": 163,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 15,
+          "header_record_count": 17,
+          "record_count": 18,
+          "audio_record_count": 3,
+          "video_record_count": 15,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\00_Transparent_Video_Holder_000_00000937_board_video_audio.wav",
+          "audio_pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\animations\\00_Transparent_Video_Holder_000_00000937_board_video_144x163.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 1,
+          "offset": 286034,
+          "end_offset": 287290,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 144,
+          "video_height": 163,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 15,
+          "header_record_count": 17,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 2,
+          "offset": 310894,
+          "end_offset": 1169301,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 142,
+          "video_height": 226,
+          "header_transparent_index": 129,
+          "frames_per_second": 10,
+          "frame_count": 35,
+          "header_record_count": 39,
+          "record_count": 40,
+          "audio_record_count": 5,
+          "video_record_count": 35,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\00_Transparent_Video_Holder_002_0004be6e_board_video_audio.wav",
+          "audio_pcm_size": 220500,
+          "duration_seconds": 5.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\animations\\00_Transparent_Video_Holder_002_0004be6e_board_video_142x226.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 3,
+          "offset": 1169301,
+          "end_offset": 1170557,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 142,
+          "video_height": 226,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 35,
+          "header_record_count": 39,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 4,
+          "offset": 1203233,
+          "end_offset": 1871929,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 226,
+          "video_height": 407,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 11,
+          "header_record_count": 13,
+          "record_count": 14,
+          "audio_record_count": 3,
+          "video_record_count": 11,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\00_Transparent_Video_Holder_004_00125c21_board_video_audio.wav",
+          "audio_pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\animations\\00_Transparent_Video_Holder_004_00125c21_board_video_226x407.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 5,
+          "offset": 1871929,
+          "end_offset": 1873185,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 226,
+          "video_height": 407,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 11,
+          "header_record_count": 13,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 6,
+          "offset": 1966113,
+          "end_offset": 2187002,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 225,
+          "video_height": 109,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 9,
+          "header_record_count": 10,
+          "record_count": 11,
+          "audio_record_count": 2,
+          "video_record_count": 9,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\00_Transparent_Video_Holder_006_001e0021_board_video_audio.wav",
+          "audio_pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\animations\\00_Transparent_Video_Holder_006_001e0021_board_video_225x109.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 7,
+          "offset": 2187002,
+          "end_offset": 2188258,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 225,
+          "video_height": 109,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 9,
+          "header_record_count": 10,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 8,
+          "offset": 2213242,
+          "end_offset": 2819103,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 192,
+          "video_height": 408,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 30,
+          "header_record_count": 33,
+          "record_count": 34,
+          "audio_record_count": 4,
+          "video_record_count": 30,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\00_Transparent_Video_Holder_008_0021c57a_board_video_audio.wav",
+          "audio_pcm_size": 176400,
+          "duration_seconds": 4.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\animations\\00_Transparent_Video_Holder_008_0021c57a_board_video_192x408.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 9,
+          "offset": 2819103,
+          "end_offset": 2820359,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 192,
+          "video_height": 408,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 30,
+          "header_record_count": 33,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 10,
+          "offset": 2898827,
+          "end_offset": 3102724,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 104,
+          "video_height": 146,
+          "header_transparent_index": 36,
+          "frames_per_second": 10,
+          "frame_count": 9,
+          "header_record_count": 10,
+          "record_count": 11,
+          "audio_record_count": 2,
+          "video_record_count": 9,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\00_Transparent_Video_Holder_010_002c3b8b_board_video_audio.wav",
+          "audio_pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\animations\\00_Transparent_Video_Holder_010_002c3b8b_board_video_104x146.gif",
+          "transparent_index": 36
+        },
+        {
+          "index": 11,
+          "offset": 3102724,
+          "end_offset": 3103980,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 104,
+          "video_height": 146,
+          "header_transparent_index": 36,
+          "frames_per_second": 10,
+          "frame_count": 9,
+          "header_record_count": 10,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 12,
+          "offset": 3119296,
+          "end_offset": 3389088,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 77,
+          "video_height": 91,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 28,
+          "header_record_count": 31,
+          "record_count": 32,
+          "audio_record_count": 4,
+          "video_record_count": 28,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\00_Transparent_Video_Holder_012_002f98c0_board_video_audio.wav",
+          "audio_pcm_size": 176400,
+          "duration_seconds": 4.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\animations\\00_Transparent_Video_Holder_012_002f98c0_board_video_77x91.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 13,
+          "offset": 3389088,
+          "end_offset": 3390344,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 77,
+          "video_height": 91,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 28,
+          "header_record_count": 31,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "offset": 3397752,
+      "clsid": "DA768116-5341-11D0-B444-008048EB5D40",
+      "display_name": "HotSpot_Holder",
+      "private_offset": 3398857,
+      "private_size": 726,
+      "embedded": []
+    },
+    {
+      "index": 2,
+      "offset": 3399583,
+      "clsid": "0D8A5736-5337-11D0-B444-008048EB5D40",
+      "display_name": "Bitmap_Holder",
+      "private_offset": 3400715,
+      "private_size": 614704,
+      "embedded": []
+    },
+    {
+      "index": 3,
+      "offset": 4015419,
+      "clsid": "B64F3336-5368-11D0-B445-008048EB5D40",
+      "display_name": "Sprite_Holder",
+      "private_offset": 4016953,
+      "private_size": 363324,
+      "embedded": []
+    },
+    {
+      "index": 4,
+      "offset": 4380277,
+      "clsid": "AD45ADB6-5290-11D0-B442-008048EB5D40",
+      "display_name": "Text_Holder",
+      "private_offset": 4381903,
+      "private_size": 13641,
+      "embedded": []
+    },
+    {
+      "index": 5,
+      "offset": 4395544,
+      "clsid": "1720D306-6932-11D0-B468-008048EB5D40",
+      "display_name": "Sound_Holder",
+      "private_offset": 4396440,
+      "private_size": 1102304,
+      "embedded": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\05_Sound_Holder_000_004315a4.wav",
+          "offset": 4396452,
+          "size": 25156,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\05_Sound_Holder_001_00437848.wav",
+          "offset": 4421704,
+          "size": 300916,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\05_Sound_Holder_002_0048101c.wav",
+          "offset": 4722716,
+          "size": 180340,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\05_Sound_Holder_003_004ad0f0.wav",
+          "offset": 4903152,
+          "size": 150018,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\05_Sound_Holder_004_004d1b52.wav",
+          "offset": 5053266,
+          "size": 249964,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\05_Sound_Holder_005_0050ec1e.wav",
+          "offset": 5303326,
+          "size": 195326,
+          "extension": ".wav"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\script.txt",
+      "size": 18660
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\00_Transparent_Video_Holder_000_00000937_board_video_audio.wav",
+      "offset": 2359,
+      "size": 132344,
+      "pcm_size": 132300,
+      "duration_seconds": 3.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 3
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\animations\\00_Transparent_Video_Holder_000_00000937_board_video_144x163.gif",
+      "offset": 2359,
+      "size": 400776,
+      "frame_count": 15,
+      "width": 144,
+      "height": 163,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\00_Transparent_Video_Holder_002_0004be6e_board_video_audio.wav",
+      "offset": 310894,
+      "size": 220544,
+      "pcm_size": 220500,
+      "duration_seconds": 5.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 5
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\animations\\00_Transparent_Video_Holder_002_0004be6e_board_video_142x226.gif",
+      "offset": 310894,
+      "size": 1276516,
+      "frame_count": 35,
+      "width": 142,
+      "height": 226,
+      "transparent_index": 30,
+      "header_transparent_index": 129,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\00_Transparent_Video_Holder_004_00125c21_board_video_audio.wav",
+      "offset": 1203233,
+      "size": 132344,
+      "pcm_size": 132300,
+      "duration_seconds": 3.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 3
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\animations\\00_Transparent_Video_Holder_004_00125c21_board_video_226x407.gif",
+      "offset": 1203233,
+      "size": 1149498,
+      "frame_count": 11,
+      "width": 226,
+      "height": 407,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\00_Transparent_Video_Holder_006_001e0021_board_video_audio.wav",
+      "offset": 1966113,
+      "size": 88244,
+      "pcm_size": 88200,
+      "duration_seconds": 2.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 2
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\animations\\00_Transparent_Video_Holder_006_001e0021_board_video_225x109.gif",
+      "offset": 1966113,
+      "size": 251541,
+      "frame_count": 9,
+      "width": 225,
+      "height": 109,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\00_Transparent_Video_Holder_008_0021c57a_board_video_audio.wav",
+      "offset": 2213242,
+      "size": 176444,
+      "pcm_size": 176400,
+      "duration_seconds": 4.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 4
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\animations\\00_Transparent_Video_Holder_008_0021c57a_board_video_192x408.gif",
+      "offset": 2213242,
+      "size": 2668971,
+      "frame_count": 30,
+      "width": 192,
+      "height": 408,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\00_Transparent_Video_Holder_010_002c3b8b_board_video_audio.wav",
+      "offset": 2898827,
+      "size": 88244,
+      "pcm_size": 88200,
+      "duration_seconds": 2.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 2
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\animations\\00_Transparent_Video_Holder_010_002c3b8b_board_video_104x146.gif",
+      "offset": 2898827,
+      "size": 156114,
+      "frame_count": 9,
+      "width": 104,
+      "height": 146,
+      "transparent_index": 36,
+      "header_transparent_index": 36,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\00_Transparent_Video_Holder_012_002f98c0_board_video_audio.wav",
+      "offset": 3119296,
+      "size": 176444,
+      "pcm_size": 176400,
+      "duration_seconds": 4.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 4
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\animations\\00_Transparent_Video_Holder_012_002f98c0_board_video_77x91.gif",
+      "offset": 3119296,
+      "size": 224157,
+      "frame_count": 28,
+      "width": 77,
+      "height": 91,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\05_Sound_Holder_000_004315a4.wav",
+      "size": 25156
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\05_Sound_Holder_001_00437848.wav",
+      "size": 300916
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\05_Sound_Holder_002_0048101c.wav",
+      "size": 180340
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\05_Sound_Holder_003_004ad0f0.wav",
+      "size": 150018
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\05_Sound_Holder_004_004d1b52.wav",
+      "size": 249964
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC\\embedded\\05_Sound_Holder_005_0050ec1e.wav",
+      "size": 195326
+    }
+  ],
+  "script": {
+    "version_offset": 5498744,
+    "version": 1,
+    "string_prefix_offset": 5498748,
+    "text_offset": 5498751,
+    "text_length": 18660,
+    "text_end": 5517411,
+    "engine_state": {
+      "offset": 5517411,
+      "version": 2,
+      "block_count": 9,
+      "handler_offsets": {
+        "field_38": 18299,
+        "field_3c": 0,
+        "field_30": 0,
+        "field_34": 382
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 5517435,
+          "start_offset": 1763,
+          "duplicate_start_offset": 1763,
+          "case_count": 7,
+          "end_or_body_offset": 4145,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 1790
+            },
+            {
+              "value": 0,
+              "target_offset": 1954
+            },
+            {
+              "value": 1,
+              "target_offset": 1969
+            },
+            {
+              "value": 3,
+              "target_offset": 1984
+            },
+            {
+              "value": 4,
+              "target_offset": 2002
+            },
+            {
+              "value": 5,
+              "target_offset": 2085
+            },
+            {
+              "value": 6,
+              "target_offset": 3166
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 5517511,
+          "start_offset": 4402,
+          "duplicate_start_offset": 4402,
+          "case_count": 3,
+          "end_or_body_offset": 7162,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 4429
+            },
+            {
+              "value": 1,
+              "target_offset": 5140
+            },
+            {
+              "value": 2,
+              "target_offset": 6995
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "file_offset": 5517555,
+          "start_offset": 5359,
+          "duplicate_start_offset": 5359,
+          "case_count": 3,
+          "end_or_body_offset": 6392,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 5404
+            },
+            {
+              "value": 1,
+              "target_offset": 5969
+            },
+            {
+              "value": 2,
+              "target_offset": 6181
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "file_offset": 5517599,
+          "start_offset": 7256,
+          "duplicate_start_offset": 7256,
+          "case_count": 2,
+          "end_or_body_offset": 11602,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 7283
+            },
+            {
+              "value": 4,
+              "target_offset": 11437
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "file_offset": 5517635,
+          "start_offset": 8048,
+          "duplicate_start_offset": 8048,
+          "case_count": 16,
+          "end_or_body_offset": 11393,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 1,
+              "target_offset": 8105
+            },
+            {
+              "value": 2,
+              "target_offset": 8247
+            },
+            {
+              "value": 3,
+              "target_offset": 8395
+            },
+            {
+              "value": 5,
+              "target_offset": 8541
+            },
+            {
+              "value": 7,
+              "target_offset": 8688
+            },
+            {
+              "value": 9,
+              "target_offset": 8831
+            },
+            {
+              "value": 6,
+              "target_offset": 8976
+            },
+            {
+              "value": 8,
+              "target_offset": 9678
+            },
+            {
+              "value": 12,
+              "target_offset": 9706
+            },
+            {
+              "value": 10,
+              "target_offset": 9857
+            },
+            {
+              "value": 11,
+              "target_offset": 10268
+            },
+            {
+              "value": 12,
+              "target_offset": 10659
+            },
+            {
+              "value": 13,
+              "target_offset": 10684
+            },
+            {
+              "value": 14,
+              "target_offset": 10709
+            },
+            {
+              "value": 15,
+              "target_offset": 10734
+            },
+            {
+              "value": 16,
+              "target_offset": 10762
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "file_offset": 5517783,
+          "start_offset": 9932,
+          "duplicate_start_offset": 9932,
+          "case_count": 2,
+          "end_or_body_offset": 10200,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 1,
+              "target_offset": 9989
+            },
+            {
+              "value": 2,
+              "target_offset": 10102
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "file_offset": 5517819,
+          "start_offset": 10343,
+          "duplicate_start_offset": 10343,
+          "case_count": 2,
+          "end_or_body_offset": 10611,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 1,
+              "target_offset": 10400
+            },
+            {
+              "value": 2,
+              "target_offset": 10513
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "file_offset": 5517855,
+          "start_offset": 12310,
+          "duplicate_start_offset": 12310,
+          "case_count": 11,
+          "end_or_body_offset": 13268,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 1,
+              "target_offset": 12349
+            },
+            {
+              "value": 2,
+              "target_offset": 12381
+            },
+            {
+              "value": 3,
+              "target_offset": 12480
+            },
+            {
+              "value": 5,
+              "target_offset": 12577
+            },
+            {
+              "value": 6,
+              "target_offset": 12673
+            },
+            {
+              "value": 12,
+              "target_offset": 12775
+            },
+            {
+              "value": 8,
+              "target_offset": 12796
+            },
+            {
+              "value": 10,
+              "target_offset": 12899
+            },
+            {
+              "value": 11,
+              "target_offset": 13003
+            },
+            {
+              "value": 7,
+              "target_offset": 13103
+            },
+            {
+              "value": 9,
+              "target_offset": 13200
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "file_offset": 5517963,
+          "start_offset": 13622,
+          "duplicate_start_offset": 13622,
+          "case_count": 3,
+          "end_or_body_offset": 14427,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 13649
+            },
+            {
+              "value": 1,
+              "target_offset": 14068
+            },
+            {
+              "value": 2,
+              "target_offset": 14235
+            }
+          ]
+        }
+      ],
+      "table_count": 1,
+      "table_a": [
+        958
+      ],
+      "table_b": [
+        8
+      ],
+      "versioned_tail": {
+        "field_44": 18429,
+        "field_48": 0,
+        "field_4c": 18560,
+        "field_50": 0
+      },
+      "end_offset": 5518035
+    }
+  }
+}

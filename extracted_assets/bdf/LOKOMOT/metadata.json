@@ -1,0 +1,1429 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\LOKOMOT.BDF",
+  "size": 4391222,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Friday, November 14, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    8
+  ],
+  "background_flag": 0,
+  "background_color_index": 0,
+  "palette_size": 1024,
+  "dib_size": 308184,
+  "component_list_offset": 309349,
+  "component_list_version": 1,
+  "component_count": 5,
+  "components": [
+    {
+      "index": 0,
+      "offset": 309357,
+      "clsid": "2F3C5846-5413-11D0-B447-008048EB5D40",
+      "display_name": "Transparent_Video_Holder",
+      "private_offset": 310531,
+      "private_size": 3040090,
+      "embedded": [
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_000_0004bd0f_board_video_audio.wav",
+          "offset": 310543,
+          "size": 88244,
+          "pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 2
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_000_0004bd0f_board_video_53x52.gif",
+          "offset": 310543,
+          "size": 22858,
+          "frame_count": 7,
+          "width": 53,
+          "height": 52,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_002_00065310_board_video_audio.wav",
+          "offset": 414480,
+          "size": 88244,
+          "pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 2
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_002_00065310_board_video_49x112.gif",
+          "offset": 414480,
+          "size": 32061,
+          "frame_count": 5,
+          "width": 49,
+          "height": 112,
+          "transparent_index": 65,
+          "header_transparent_index": 65,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_004_00083812_board_video_audio.wav",
+          "offset": 538642,
+          "size": 88244,
+          "pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 2
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_004_00083812_board_video_44x56.gif",
+          "offset": 538642,
+          "size": 9258,
+          "frame_count": 3,
+          "width": 44,
+          "height": 56,
+          "transparent_index": 225,
+          "header_transparent_index": 100,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_006_0009c29b_board_video_audio.wav",
+          "offset": 639643,
+          "size": 88244,
+          "pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 2
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_006_0009c29b_board_video_26x16.gif",
+          "offset": 639643,
+          "size": 4266,
+          "frame_count": 7,
+          "width": 26,
+          "height": 16,
+          "transparent_index": 0,
+          "header_transparent_index": 86,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_008_000b31cf_board_video_audio.wav",
+          "offset": 733647,
+          "size": 132344,
+          "pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 3
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_008_000b31cf_board_video_122x106.gif",
+          "offset": 733647,
+          "size": 162512,
+          "frame_count": 11,
+          "width": 122,
+          "height": 106,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_010_000e3fc6_board_video_audio.wav",
+          "offset": 933830,
+          "size": 220544,
+          "pcm_size": 220500,
+          "duration_seconds": 5.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 5
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_010_000e3fc6_board_video_84x84.gif",
+          "offset": 933830,
+          "size": 289953,
+          "frame_count": 36,
+          "width": 84,
+          "height": 84,
+          "transparent_index": 221,
+          "header_transparent_index": 221,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_012_00155dd5_board_video_audio.wav",
+          "offset": 1400277,
+          "size": 132344,
+          "pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 3
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_012_00155dd5_board_video_84x62.gif",
+          "offset": 1400277,
+          "size": 77956,
+          "frame_count": 13,
+          "width": 84,
+          "height": 62,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_014_0017d54c_board_video_audio.wav",
+          "offset": 1561932,
+          "size": 132344,
+          "pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 3
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_014_0017d54c_board_video_79x90.gif",
+          "offset": 1561932,
+          "size": 89824,
+          "frame_count": 11,
+          "width": 79,
+          "height": 90,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_016_001a79ae_board_video_audio.wav",
+          "offset": 1735086,
+          "size": 88244,
+          "pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 2
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_016_001a79ae_board_video_84x113.gif",
+          "offset": 1735086,
+          "size": 54786,
+          "frame_count": 5,
+          "width": 84,
+          "height": 113,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_018_001c484c_board_video_audio.wav",
+          "offset": 1853516,
+          "size": 176444,
+          "pcm_size": 176400,
+          "duration_seconds": 4.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 4
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_018_001c484c_board_video_250x199.gif",
+          "offset": 1853516,
+          "size": 1413076,
+          "frame_count": 25,
+          "width": 250,
+          "height": 199,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_020_0021d73e_board_video_audio.wav",
+          "offset": 2217790,
+          "size": 308744,
+          "pcm_size": 308700,
+          "duration_seconds": 7.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 7
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_020_0021d73e_board_video_178x154.gif",
+          "offset": 2217790,
+          "size": 1651062,
+          "frame_count": 53,
+          "width": 178,
+          "height": 154,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        }
+      ],
+      "board_video_marker_offset": 310543,
+      "board_video_streams": [
+        {
+          "index": 0,
+          "offset": 310543,
+          "end_offset": 410180,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 53,
+          "video_height": 52,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 7,
+          "header_record_count": 8,
+          "record_count": 9,
+          "audio_record_count": 2,
+          "video_record_count": 7,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_000_0004bd0f_board_video_audio.wav",
+          "audio_pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_000_0004bd0f_board_video_53x52.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 1,
+          "offset": 410180,
+          "end_offset": 411436,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 53,
+          "video_height": 52,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 7,
+          "header_record_count": 8,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 2,
+          "offset": 414480,
+          "end_offset": 531430,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 49,
+          "video_height": 112,
+          "header_transparent_index": 65,
+          "frames_per_second": 10,
+          "frame_count": 5,
+          "header_record_count": 6,
+          "record_count": 7,
+          "audio_record_count": 2,
+          "video_record_count": 5,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_002_00065310_board_video_audio.wav",
+          "audio_pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_002_00065310_board_video_49x112.gif",
+          "transparent_index": 65
+        },
+        {
+          "index": 3,
+          "offset": 531430,
+          "end_offset": 532686,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 49,
+          "video_height": 112,
+          "header_transparent_index": 65,
+          "frames_per_second": 10,
+          "frame_count": 5,
+          "header_record_count": 6,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 4,
+          "offset": 538642,
+          "end_offset": 635791,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 44,
+          "video_height": 56,
+          "header_transparent_index": 100,
+          "frames_per_second": 10,
+          "frame_count": 3,
+          "header_record_count": 4,
+          "record_count": 5,
+          "audio_record_count": 2,
+          "video_record_count": 3,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_004_00083812_board_video_audio.wav",
+          "audio_pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_004_00083812_board_video_44x56.gif",
+          "transparent_index": 225
+        },
+        {
+          "index": 5,
+          "offset": 635791,
+          "end_offset": 637047,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 44,
+          "video_height": 56,
+          "header_transparent_index": 100,
+          "frames_per_second": 10,
+          "frame_count": 3,
+          "header_record_count": 4,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 6,
+          "offset": 639643,
+          "end_offset": 731811,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 26,
+          "video_height": 16,
+          "header_transparent_index": 86,
+          "frames_per_second": 10,
+          "frame_count": 7,
+          "header_record_count": 8,
+          "record_count": 9,
+          "audio_record_count": 2,
+          "video_record_count": 7,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_006_0009c29b_board_video_audio.wav",
+          "audio_pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_006_0009c29b_board_video_26x16.gif",
+          "transparent_index": 0
+        },
+        {
+          "index": 7,
+          "offset": 731811,
+          "end_offset": 733067,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 26,
+          "video_height": 16,
+          "header_transparent_index": 86,
+          "frames_per_second": 10,
+          "frame_count": 7,
+          "header_record_count": 8,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 8,
+          "offset": 733647,
+          "end_offset": 919298,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 122,
+          "video_height": 106,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 11,
+          "header_record_count": 13,
+          "record_count": 14,
+          "audio_record_count": 3,
+          "video_record_count": 11,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_008_000b31cf_board_video_audio.wav",
+          "audio_pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_008_000b31cf_board_video_122x106.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 9,
+          "offset": 919298,
+          "end_offset": 920554,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 122,
+          "video_height": 106,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 11,
+          "header_record_count": 13,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 10,
+          "offset": 933830,
+          "end_offset": 1391833,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 84,
+          "video_height": 84,
+          "header_transparent_index": 221,
+          "frames_per_second": 10,
+          "frame_count": 36,
+          "header_record_count": 40,
+          "record_count": 41,
+          "audio_record_count": 5,
+          "video_record_count": 36,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_010_000e3fc6_board_video_audio.wav",
+          "audio_pcm_size": 220500,
+          "duration_seconds": 5.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_010_000e3fc6_board_video_84x84.gif",
+          "transparent_index": 221
+        },
+        {
+          "index": 11,
+          "offset": 1391833,
+          "end_offset": 1393089,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 84,
+          "video_height": 84,
+          "header_transparent_index": 221,
+          "frames_per_second": 10,
+          "frame_count": 36,
+          "header_record_count": 40,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 12,
+          "offset": 1400277,
+          "end_offset": 1555336,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 84,
+          "video_height": 62,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 13,
+          "header_record_count": 15,
+          "record_count": 16,
+          "audio_record_count": 3,
+          "video_record_count": 13,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_012_00155dd5_board_video_audio.wav",
+          "audio_pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_012_00155dd5_board_video_84x62.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 13,
+          "offset": 1555336,
+          "end_offset": 1556592,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 84,
+          "video_height": 62,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 13,
+          "header_record_count": 15,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 14,
+          "offset": 1561932,
+          "end_offset": 1726498,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 79,
+          "video_height": 90,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 11,
+          "header_record_count": 13,
+          "record_count": 14,
+          "audio_record_count": 3,
+          "video_record_count": 11,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_014_0017d54c_board_video_audio.wav",
+          "audio_pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_014_0017d54c_board_video_79x90.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 15,
+          "offset": 1726498,
+          "end_offset": 1727754,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 79,
+          "video_height": 90,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 11,
+          "header_record_count": 13,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 16,
+          "offset": 1735086,
+          "end_offset": 1842636,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 84,
+          "video_height": 113,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 5,
+          "header_record_count": 6,
+          "record_count": 7,
+          "audio_record_count": 2,
+          "video_record_count": 5,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_016_001a79ae_board_video_audio.wav",
+          "audio_pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_016_001a79ae_board_video_84x113.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 17,
+          "offset": 1842636,
+          "end_offset": 1843892,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 84,
+          "video_height": 113,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 5,
+          "header_record_count": 6,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 18,
+          "offset": 1853516,
+          "end_offset": 2166254,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 250,
+          "video_height": 199,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 25,
+          "header_record_count": 28,
+          "record_count": 29,
+          "audio_record_count": 4,
+          "video_record_count": 25,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_018_001c484c_board_video_audio.wav",
+          "audio_pcm_size": 176400,
+          "duration_seconds": 4.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_018_001c484c_board_video_250x199.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 19,
+          "offset": 2166254,
+          "end_offset": 2167510,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 250,
+          "video_height": 199,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 25,
+          "header_record_count": 28,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 20,
+          "offset": 2217790,
+          "end_offset": 3321517,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 178,
+          "video_height": 154,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 53,
+          "header_record_count": 59,
+          "record_count": 60,
+          "audio_record_count": 7,
+          "video_record_count": 53,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_020_0021d73e_board_video_audio.wav",
+          "audio_pcm_size": 308700,
+          "duration_seconds": 7.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_020_0021d73e_board_video_178x154.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 21,
+          "offset": 3321517,
+          "end_offset": 3322773,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 178,
+          "video_height": 154,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 53,
+          "header_record_count": 59,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "offset": 3350621,
+      "clsid": "AD45ADB6-5290-11D0-B442-008048EB5D40",
+      "display_name": "Text_Holder",
+      "private_offset": 3352247,
+      "private_size": 17519,
+      "embedded": []
+    },
+    {
+      "index": 2,
+      "offset": 3369766,
+      "clsid": "1720D306-6932-11D0-B468-008048EB5D40",
+      "display_name": "Sound_Holder",
+      "private_offset": 3370662,
+      "private_size": 947102,
+      "embedded": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\02_Sound_Holder_000_00336eb2.wav",
+          "offset": 3370674,
+          "size": 38262,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\02_Sound_Holder_001_00340488.wav",
+          "offset": 3409032,
+          "size": 585772,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\02_Sound_Holder_002_003cf514.wav",
+          "offset": 3994900,
+          "size": 322772,
+          "extension": ".wav"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "offset": 4317764,
+      "clsid": "B64F3336-5368-11D0-B445-008048EB5D40",
+      "display_name": "Sprite_Holder",
+      "private_offset": 4319298,
+      "private_size": 52656,
+      "embedded": []
+    },
+    {
+      "index": 4,
+      "offset": 4371954,
+      "clsid": "B2CDC8DE-5359-11D0-B445-008048EB5D40",
+      "display_name": "Video_Holder",
+      "private_offset": 4372930,
+      "private_size": 241,
+      "embedded": []
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "dib",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\background.dib",
+      "size": 308184
+    },
+    {
+      "kind": "bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\background.bmp",
+      "size": 308198
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\script.txt",
+      "size": 17484
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_000_0004bd0f_board_video_audio.wav",
+      "offset": 310543,
+      "size": 88244,
+      "pcm_size": 88200,
+      "duration_seconds": 2.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 2
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_000_0004bd0f_board_video_53x52.gif",
+      "offset": 310543,
+      "size": 22858,
+      "frame_count": 7,
+      "width": 53,
+      "height": 52,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_002_00065310_board_video_audio.wav",
+      "offset": 414480,
+      "size": 88244,
+      "pcm_size": 88200,
+      "duration_seconds": 2.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 2
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_002_00065310_board_video_49x112.gif",
+      "offset": 414480,
+      "size": 32061,
+      "frame_count": 5,
+      "width": 49,
+      "height": 112,
+      "transparent_index": 65,
+      "header_transparent_index": 65,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_004_00083812_board_video_audio.wav",
+      "offset": 538642,
+      "size": 88244,
+      "pcm_size": 88200,
+      "duration_seconds": 2.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 2
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_004_00083812_board_video_44x56.gif",
+      "offset": 538642,
+      "size": 9258,
+      "frame_count": 3,
+      "width": 44,
+      "height": 56,
+      "transparent_index": 225,
+      "header_transparent_index": 100,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_006_0009c29b_board_video_audio.wav",
+      "offset": 639643,
+      "size": 88244,
+      "pcm_size": 88200,
+      "duration_seconds": 2.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 2
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_006_0009c29b_board_video_26x16.gif",
+      "offset": 639643,
+      "size": 4266,
+      "frame_count": 7,
+      "width": 26,
+      "height": 16,
+      "transparent_index": 0,
+      "header_transparent_index": 86,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_008_000b31cf_board_video_audio.wav",
+      "offset": 733647,
+      "size": 132344,
+      "pcm_size": 132300,
+      "duration_seconds": 3.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 3
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_008_000b31cf_board_video_122x106.gif",
+      "offset": 733647,
+      "size": 162512,
+      "frame_count": 11,
+      "width": 122,
+      "height": 106,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_010_000e3fc6_board_video_audio.wav",
+      "offset": 933830,
+      "size": 220544,
+      "pcm_size": 220500,
+      "duration_seconds": 5.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 5
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_010_000e3fc6_board_video_84x84.gif",
+      "offset": 933830,
+      "size": 289953,
+      "frame_count": 36,
+      "width": 84,
+      "height": 84,
+      "transparent_index": 221,
+      "header_transparent_index": 221,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_012_00155dd5_board_video_audio.wav",
+      "offset": 1400277,
+      "size": 132344,
+      "pcm_size": 132300,
+      "duration_seconds": 3.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 3
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_012_00155dd5_board_video_84x62.gif",
+      "offset": 1400277,
+      "size": 77956,
+      "frame_count": 13,
+      "width": 84,
+      "height": 62,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_014_0017d54c_board_video_audio.wav",
+      "offset": 1561932,
+      "size": 132344,
+      "pcm_size": 132300,
+      "duration_seconds": 3.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 3
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_014_0017d54c_board_video_79x90.gif",
+      "offset": 1561932,
+      "size": 89824,
+      "frame_count": 11,
+      "width": 79,
+      "height": 90,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_016_001a79ae_board_video_audio.wav",
+      "offset": 1735086,
+      "size": 88244,
+      "pcm_size": 88200,
+      "duration_seconds": 2.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 2
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_016_001a79ae_board_video_84x113.gif",
+      "offset": 1735086,
+      "size": 54786,
+      "frame_count": 5,
+      "width": 84,
+      "height": 113,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_018_001c484c_board_video_audio.wav",
+      "offset": 1853516,
+      "size": 176444,
+      "pcm_size": 176400,
+      "duration_seconds": 4.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 4
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_018_001c484c_board_video_250x199.gif",
+      "offset": 1853516,
+      "size": 1413076,
+      "frame_count": 25,
+      "width": 250,
+      "height": 199,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\00_Transparent_Video_Holder_020_0021d73e_board_video_audio.wav",
+      "offset": 2217790,
+      "size": 308744,
+      "pcm_size": 308700,
+      "duration_seconds": 7.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 7
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\animations\\00_Transparent_Video_Holder_020_0021d73e_board_video_178x154.gif",
+      "offset": 2217790,
+      "size": 1651062,
+      "frame_count": 53,
+      "width": 178,
+      "height": 154,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\02_Sound_Holder_000_00336eb2.wav",
+      "size": 38262
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\02_Sound_Holder_001_00340488.wav",
+      "size": 585772
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT\\embedded\\02_Sound_Holder_002_003cf514.wav",
+      "size": 322772
+    }
+  ],
+  "script": {
+    "version_offset": 4373171,
+    "version": 1,
+    "string_prefix_offset": 4373175,
+    "text_offset": 4373178,
+    "text_length": 17484,
+    "text_end": 4390662,
+    "engine_state": {
+      "offset": 4390662,
+      "version": 2,
+      "block_count": 8,
+      "handler_offsets": {
+        "field_38": 16377,
+        "field_3c": 0,
+        "field_30": 0,
+        "field_34": 339
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 4390686,
+          "start_offset": 2176,
+          "duplicate_start_offset": 2176,
+          "case_count": 3,
+          "end_or_body_offset": 4838,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 2203
+            },
+            {
+              "value": 1,
+              "target_offset": 2851
+            },
+            {
+              "value": 2,
+              "target_offset": 4637
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 4390730,
+          "start_offset": 3122,
+          "duplicate_start_offset": 3122,
+          "case_count": 3,
+          "end_or_body_offset": 3962,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 3167
+            },
+            {
+              "value": 1,
+              "target_offset": 3504
+            },
+            {
+              "value": 2,
+              "target_offset": 3812
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "file_offset": 4390774,
+          "start_offset": 4932,
+          "duplicate_start_offset": 4932,
+          "case_count": 2,
+          "end_or_body_offset": 9924,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 4959
+            },
+            {
+              "value": 11,
+              "target_offset": 9759
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "file_offset": 4390810,
+          "start_offset": 5619,
+          "duplicate_start_offset": 5619,
+          "case_count": 13,
+          "end_or_body_offset": 9714,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 5676
+            },
+            {
+              "value": 3,
+              "target_offset": 5817
+            },
+            {
+              "value": 4,
+              "target_offset": 5961
+            },
+            {
+              "value": 5,
+              "target_offset": 6106
+            },
+            {
+              "value": 6,
+              "target_offset": 6250
+            },
+            {
+              "value": 7,
+              "target_offset": 7109
+            },
+            {
+              "value": 8,
+              "target_offset": 7259
+            },
+            {
+              "value": 9,
+              "target_offset": 8053
+            },
+            {
+              "value": 12,
+              "target_offset": 8828
+            },
+            {
+              "value": 13,
+              "target_offset": 8853
+            },
+            {
+              "value": 14,
+              "target_offset": 8878
+            },
+            {
+              "value": 15,
+              "target_offset": 8903
+            },
+            {
+              "value": 16,
+              "target_offset": 8931
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "file_offset": 4390934,
+          "start_offset": 7389,
+          "duplicate_start_offset": 7389,
+          "case_count": 5,
+          "end_or_body_offset": 7986,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 7446
+            },
+            {
+              "value": 1,
+              "target_offset": 7557
+            },
+            {
+              "value": 2,
+              "target_offset": 7668
+            },
+            {
+              "value": 3,
+              "target_offset": 7779
+            },
+            {
+              "value": 4,
+              "target_offset": 7890
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "file_offset": 4390994,
+          "start_offset": 8183,
+          "duplicate_start_offset": 8183,
+          "case_count": 5,
+          "end_or_body_offset": 8780,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 8240
+            },
+            {
+              "value": 1,
+              "target_offset": 8351
+            },
+            {
+              "value": 2,
+              "target_offset": 8462
+            },
+            {
+              "value": 3,
+              "target_offset": 8573
+            },
+            {
+              "value": 4,
+              "target_offset": 8684
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "file_offset": 4391054,
+          "start_offset": 10636,
+          "duplicate_start_offset": 10636,
+          "case_count": 9,
+          "end_or_body_offset": 11479,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 10675
+            },
+            {
+              "value": 3,
+              "target_offset": 10707
+            },
+            {
+              "value": 4,
+              "target_offset": 10806
+            },
+            {
+              "value": 5,
+              "target_offset": 10903
+            },
+            {
+              "value": 6,
+              "target_offset": 10999
+            },
+            {
+              "value": 7,
+              "target_offset": 11103
+            },
+            {
+              "value": 8,
+              "target_offset": 11205
+            },
+            {
+              "value": 9,
+              "target_offset": 11308
+            },
+            {
+              "value": 10,
+              "target_offset": 11412
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "file_offset": 4391146,
+          "start_offset": 11843,
+          "duplicate_start_offset": 11843,
+          "case_count": 3,
+          "end_or_body_offset": 12529,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 11870
+            },
+            {
+              "value": 1,
+              "target_offset": 12144
+            },
+            {
+              "value": 2,
+              "target_offset": 12389
+            }
+          ]
+        }
+      ],
+      "table_count": 1,
+      "table_a": [
+        986
+      ],
+      "table_b": [
+        8
+      ],
+      "versioned_tail": {
+        "field_44": 16494,
+        "field_48": 0,
+        "field_4c": 16625,
+        "field_50": 0
+      },
+      "end_offset": 4391218
+    }
+  }
+}

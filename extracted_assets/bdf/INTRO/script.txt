@@ -1,0 +1,45 @@
+//###########################################################################
+//Script code
+//###########################################################################
+
+
+OnOpenPage()
+{
+	// Add your component and variables initialization code here
+	// WARNING: All variables definied on this function are global for this page
+   LoadGroup("cursors.grp");
+   SetCursor(1);
+
+   FadeScreen(1,1000);
+   Transparent_Video_Holder.Play(0,0);
+   Sound_Holder.PlayDSound(0);
+}
+
+
+void OnClosePage(void)
+{
+	// Add your close page handler code here
+
+}
+
+
+ 
+void Transparent_Video_Holder.TheEnd(int videoID)
+{
+   if(videoID==9)
+   {
+      FadeScreen(0,1000);
+      LoadPage("wyborw.bdf");
+      return;
+   }
+   Transparent_Video_Holder.Play(videoID+1,0);
+}
+
+ 
+void OnLButtonDown(int x,int y)
+{
+        //Add your command handler code here
+   FadeScreen(0,1000);
+   LoadPage("wyborw.bdf");
+}
+ 

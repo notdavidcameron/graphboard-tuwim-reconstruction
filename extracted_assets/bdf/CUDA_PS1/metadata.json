@@ -1,0 +1,1158 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDA_PS1.BDF",
+  "size": 3205077,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Friday, November 14, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    8
+  ],
+  "background_flag": 0,
+  "background_color_index": 0,
+  "palette_size": 1024,
+  "dib_size": 308180,
+  "component_list_offset": 309345,
+  "component_list_version": 1,
+  "component_count": 5,
+  "components": [
+    {
+      "index": 0,
+      "offset": 309353,
+      "clsid": "0D8A5736-5337-11D0-B444-008048EB5D40",
+      "display_name": "Bitmap_Holder",
+      "private_offset": 310485,
+      "private_size": 197268,
+      "embedded": []
+    },
+    {
+      "index": 1,
+      "offset": 507753,
+      "clsid": "1720D306-6932-11D0-B468-008048EB5D40",
+      "display_name": "Sound_Holder",
+      "private_offset": 508649,
+      "private_size": 2265358,
+      "embedded": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_000_0007c2f5.wav",
+          "offset": 508661,
+          "size": 16478,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_001_000803b3.wav",
+          "offset": 525235,
+          "size": 15078,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_002_00083ef9.wav",
+          "offset": 540409,
+          "size": 17276,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_003_000882d5.wav",
+          "offset": 557781,
+          "size": 14124,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_004_0008ba61.wav",
+          "offset": 572001,
+          "size": 14150,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_005_0008f207.wav",
+          "offset": 586247,
+          "size": 14860,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_006_00092c73.wav",
+          "offset": 601203,
+          "size": 15146,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_007_000967fd.wav",
+          "offset": 616445,
+          "size": 13512,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_008_00099d25.wav",
+          "offset": 630053,
+          "size": 14264,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_009_0009d53d.wav",
+          "offset": 644413,
+          "size": 12906,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_010_000a0807.wav",
+          "offset": 657415,
+          "size": 15712,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_011_000a45c7.wav",
+          "offset": 673223,
+          "size": 13846,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_012_000a7c3d.wav",
+          "offset": 687165,
+          "size": 15180,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_013_000ab7e9.wav",
+          "offset": 702441,
+          "size": 14466,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_014_000af0cb.wav",
+          "offset": 717003,
+          "size": 13716,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_015_000b26bf.wav",
+          "offset": 730815,
+          "size": 15264,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_016_000b62bf.wav",
+          "offset": 746175,
+          "size": 15348,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_017_000b9f13.wav",
+          "offset": 761619,
+          "size": 14476,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_018_000bd7ff.wav",
+          "offset": 776191,
+          "size": 13252,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_019_000c0c23.wav",
+          "offset": 789539,
+          "size": 15360,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_020_000c4883.wav",
+          "offset": 804995,
+          "size": 14130,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_021_000c8015.wav",
+          "offset": 819221,
+          "size": 16404,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_022_000cc089.wav",
+          "offset": 835721,
+          "size": 15842,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_023_000cfecb.wav",
+          "offset": 851659,
+          "size": 14206,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_024_000d36a9.wav",
+          "offset": 865961,
+          "size": 227374,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_025_0010af37.wav",
+          "offset": 1093431,
+          "size": 227440,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_026_00142807.wav",
+          "offset": 1320967,
+          "size": 227406,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_027_0017a0b5.wav",
+          "offset": 1548469,
+          "size": 226888,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_028_001b175d.wav",
+          "offset": 1775453,
+          "size": 227424,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_029_001e901d.wav",
+          "offset": 2002973,
+          "size": 238,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_030_001e916b.wav",
+          "offset": 2003307,
+          "size": 5220,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_031_001ea62f.wav",
+          "offset": 2008623,
+          "size": 9242,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_032_001ecaa9.wav",
+          "offset": 2017961,
+          "size": 163884,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_033_00214b35.wav",
+          "offset": 2181941,
+          "size": 137038,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_034_002362e3.wav",
+          "offset": 2319075,
+          "size": 454840,
+          "extension": ".wav"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "offset": 2774007,
+      "clsid": "F7794041-1EB4-11D1-9B25-008048EB5D40",
+      "display_name": "MultiBitmap",
+      "private_offset": 2775012,
+      "private_size": 25064,
+      "embedded": [
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\multibitmap\\02_MultiBitmap_000_a1.raw",
+          "offset": 2775024,
+          "size": 24860,
+          "pixel_size": 24860,
+          "width": 600,
+          "height": 436,
+          "name": "a1"
+        }
+      ],
+      "multibitmap": {
+        "version": 1,
+        "declared_count": 1,
+        "parsed_count": 1,
+        "frames": [
+          {
+            "index": 0,
+            "name": "a1",
+            "pixel_offset": 2775024,
+            "pixel_size": 24860,
+            "metadata_offset": 2799884,
+            "width": 600,
+            "height": 436,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\multibitmap\\02_MultiBitmap_000_a1.raw"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "offset": 2800076,
+      "clsid": "B64F3336-5368-11D0-B445-008048EB5D40",
+      "display_name": "Sprite_Holder",
+      "private_offset": 2801610,
+      "private_size": 335324,
+      "embedded": []
+    },
+    {
+      "index": 4,
+      "offset": 3136934,
+      "clsid": "AD45ADB6-5290-11D0-B442-008048EB5D40",
+      "display_name": "Text_Holder",
+      "private_offset": 3138560,
+      "private_size": 39532,
+      "embedded": []
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "dib",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\background.dib",
+      "size": 308180
+    },
+    {
+      "kind": "bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\background.bmp",
+      "size": 308194
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\script.txt",
+      "size": 25794
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_000_0007c2f5.wav",
+      "size": 16478
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_001_000803b3.wav",
+      "size": 15078
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_002_00083ef9.wav",
+      "size": 17276
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_003_000882d5.wav",
+      "size": 14124
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_004_0008ba61.wav",
+      "size": 14150
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_005_0008f207.wav",
+      "size": 14860
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_006_00092c73.wav",
+      "size": 15146
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_007_000967fd.wav",
+      "size": 13512
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_008_00099d25.wav",
+      "size": 14264
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_009_0009d53d.wav",
+      "size": 12906
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_010_000a0807.wav",
+      "size": 15712
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_011_000a45c7.wav",
+      "size": 13846
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_012_000a7c3d.wav",
+      "size": 15180
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_013_000ab7e9.wav",
+      "size": 14466
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_014_000af0cb.wav",
+      "size": 13716
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_015_000b26bf.wav",
+      "size": 15264
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_016_000b62bf.wav",
+      "size": 15348
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_017_000b9f13.wav",
+      "size": 14476
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_018_000bd7ff.wav",
+      "size": 13252
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_019_000c0c23.wav",
+      "size": 15360
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_020_000c4883.wav",
+      "size": 14130
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_021_000c8015.wav",
+      "size": 16404
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_022_000cc089.wav",
+      "size": 15842
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_023_000cfecb.wav",
+      "size": 14206
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_024_000d36a9.wav",
+      "size": 227374
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_025_0010af37.wav",
+      "size": 227440
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_026_00142807.wav",
+      "size": 227406
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_027_0017a0b5.wav",
+      "size": 226888
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_028_001b175d.wav",
+      "size": 227424
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_029_001e901d.wav",
+      "size": 238
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_030_001e916b.wav",
+      "size": 5220
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_031_001ea62f.wav",
+      "size": 9242
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_032_001ecaa9.wav",
+      "size": 163884
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_033_00214b35.wav",
+      "size": 137038
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\embedded\\01_Sound_Holder_034_002362e3.wav",
+      "size": 454840
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1\\multibitmap\\02_MultiBitmap_000_a1.raw",
+      "offset": 2775024,
+      "size": 24860,
+      "pixel_size": 24860,
+      "width": 600,
+      "height": 436,
+      "name": "a1"
+    }
+  ],
+  "script": {
+    "version_offset": 3178092,
+    "version": 1,
+    "string_prefix_offset": 3178096,
+    "text_offset": 3178099,
+    "text_length": 25794,
+    "text_end": 3203893,
+    "engine_state": {
+      "offset": 3203893,
+      "version": 2,
+      "block_count": 12,
+      "handler_offsets": {
+        "field_38": 4671,
+        "field_3c": 8810,
+        "field_30": 4989,
+        "field_34": 480
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 3203917,
+          "start_offset": 5995,
+          "duplicate_start_offset": 5995,
+          "case_count": 4,
+          "end_or_body_offset": 8684,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 6097
+            },
+            {
+              "value": 1,
+              "target_offset": 7236
+            },
+            {
+              "value": 2,
+              "target_offset": 7610
+            },
+            {
+              "value": 3,
+              "target_offset": 8337
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 3203969,
+          "start_offset": 6280,
+          "duplicate_start_offset": 6280,
+          "case_count": 3,
+          "end_or_body_offset": 7188,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 6508
+            },
+            {
+              "value": 1,
+              "target_offset": 6967
+            },
+            {
+              "value": 3,
+              "target_offset": 7063
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "file_offset": 3204013,
+          "start_offset": 9145,
+          "duplicate_start_offset": 9145,
+          "case_count": 34,
+          "end_or_body_offset": 10963,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 9,
+              "target_offset": 9212
+            },
+            {
+              "value": 113,
+              "target_offset": 9274
+            },
+            {
+              "value": 81,
+              "target_offset": 9293
+            },
+            {
+              "value": 119,
+              "target_offset": 9380
+            },
+            {
+              "value": 87,
+              "target_offset": 9399
+            },
+            {
+              "value": 101,
+              "target_offset": 9461
+            },
+            {
+              "value": 69,
+              "target_offset": 9480
+            },
+            {
+              "value": 114,
+              "target_offset": 9542
+            },
+            {
+              "value": 82,
+              "target_offset": 9561
+            },
+            {
+              "value": 116,
+              "target_offset": 9623
+            },
+            {
+              "value": 84,
+              "target_offset": 9642
+            },
+            {
+              "value": 121,
+              "target_offset": 9704
+            },
+            {
+              "value": 89,
+              "target_offset": 9723
+            },
+            {
+              "value": 117,
+              "target_offset": 9785
+            },
+            {
+              "value": 85,
+              "target_offset": 9804
+            },
+            {
+              "value": 105,
+              "target_offset": 9866
+            },
+            {
+              "value": 73,
+              "target_offset": 9885
+            },
+            {
+              "value": 111,
+              "target_offset": 9947
+            },
+            {
+              "value": 79,
+              "target_offset": 9966
+            },
+            {
+              "value": 112,
+              "target_offset": 10028
+            },
+            {
+              "value": 80,
+              "target_offset": 10047
+            },
+            {
+              "value": 91,
+              "target_offset": 10113
+            },
+            {
+              "value": 93,
+              "target_offset": 10179
+            },
+            {
+              "value": 13,
+              "target_offset": 10250
+            },
+            {
+              "value": 49,
+              "target_offset": 10317
+            },
+            {
+              "value": 50,
+              "target_offset": 10384
+            },
+            {
+              "value": 51,
+              "target_offset": 10450
+            },
+            {
+              "value": 53,
+              "target_offset": 10516
+            },
+            {
+              "value": 54,
+              "target_offset": 10582
+            },
+            {
+              "value": 56,
+              "target_offset": 10648
+            },
+            {
+              "value": 57,
+              "target_offset": 10714
+            },
+            {
+              "value": 48,
+              "target_offset": 10782
+            },
+            {
+              "value": 61,
+              "target_offset": 10849
+            },
+            {
+              "value": 8,
+              "target_offset": 10923
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "file_offset": 3204305,
+          "start_offset": 11110,
+          "duplicate_start_offset": 11110,
+          "case_count": 34,
+          "end_or_body_offset": 12790,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 9,
+              "target_offset": 11177
+            },
+            {
+              "value": 113,
+              "target_offset": 11234
+            },
+            {
+              "value": 81,
+              "target_offset": 11253
+            },
+            {
+              "value": 119,
+              "target_offset": 11310
+            },
+            {
+              "value": 87,
+              "target_offset": 11329
+            },
+            {
+              "value": 101,
+              "target_offset": 11386
+            },
+            {
+              "value": 69,
+              "target_offset": 11405
+            },
+            {
+              "value": 114,
+              "target_offset": 11462
+            },
+            {
+              "value": 82,
+              "target_offset": 11481
+            },
+            {
+              "value": 116,
+              "target_offset": 11538
+            },
+            {
+              "value": 84,
+              "target_offset": 11557
+            },
+            {
+              "value": 121,
+              "target_offset": 11614
+            },
+            {
+              "value": 89,
+              "target_offset": 11633
+            },
+            {
+              "value": 117,
+              "target_offset": 11690
+            },
+            {
+              "value": 85,
+              "target_offset": 11709
+            },
+            {
+              "value": 105,
+              "target_offset": 11766
+            },
+            {
+              "value": 73,
+              "target_offset": 11785
+            },
+            {
+              "value": 111,
+              "target_offset": 11842
+            },
+            {
+              "value": 79,
+              "target_offset": 11861
+            },
+            {
+              "value": 112,
+              "target_offset": 11918
+            },
+            {
+              "value": 80,
+              "target_offset": 11937
+            },
+            {
+              "value": 219,
+              "target_offset": 11999
+            },
+            {
+              "value": 221,
+              "target_offset": 12061
+            },
+            {
+              "value": 13,
+              "target_offset": 12127
+            },
+            {
+              "value": 49,
+              "target_offset": 12189
+            },
+            {
+              "value": 50,
+              "target_offset": 12251
+            },
+            {
+              "value": 51,
+              "target_offset": 12312
+            },
+            {
+              "value": 53,
+              "target_offset": 12373
+            },
+            {
+              "value": 54,
+              "target_offset": 12434
+            },
+            {
+              "value": 56,
+              "target_offset": 12495
+            },
+            {
+              "value": 57,
+              "target_offset": 12556
+            },
+            {
+              "value": 48,
+              "target_offset": 12619
+            },
+            {
+              "value": 61,
+              "target_offset": 12681
+            },
+            {
+              "value": 8,
+              "target_offset": 12750
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "file_offset": 3204597,
+          "start_offset": 15747,
+          "duplicate_start_offset": 15747,
+          "case_count": 4,
+          "end_or_body_offset": 18107,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 29,
+              "target_offset": 15791
+            },
+            {
+              "value": 30,
+              "target_offset": 16467
+            },
+            {
+              "value": 32,
+              "target_offset": 17157
+            },
+            {
+              "value": 33,
+              "target_offset": 17369
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "file_offset": 3204649,
+          "start_offset": 18379,
+          "duplicate_start_offset": 18379,
+          "case_count": 2,
+          "end_or_body_offset": 18523,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 29,
+              "target_offset": 18420
+            },
+            {
+              "value": 30,
+              "target_offset": 18457
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "file_offset": 3204685,
+          "start_offset": 18686,
+          "duplicate_start_offset": 18686,
+          "case_count": 1,
+          "end_or_body_offset": 18762,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 32,
+              "target_offset": 18714
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "file_offset": 3204713,
+          "start_offset": 20045,
+          "duplicate_start_offset": 20045,
+          "case_count": 10,
+          "end_or_body_offset": 22051,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 20072
+            },
+            {
+              "value": 1,
+              "target_offset": 21062
+            },
+            {
+              "value": 2,
+              "target_offset": 21077
+            },
+            {
+              "value": 3,
+              "target_offset": 21095
+            },
+            {
+              "value": 4,
+              "target_offset": 21284
+            },
+            {
+              "value": 5,
+              "target_offset": 21465
+            },
+            {
+              "value": 7,
+              "target_offset": 21651
+            },
+            {
+              "value": 8,
+              "target_offset": 21785
+            },
+            {
+              "value": 9,
+              "target_offset": 21916
+            },
+            {
+              "value": 10,
+              "target_offset": 21935
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "file_offset": 3204813,
+          "start_offset": 20600,
+          "duplicate_start_offset": 20600,
+          "case_count": 3,
+          "end_or_body_offset": 21031,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 1,
+              "target_offset": 20639
+            },
+            {
+              "value": 2,
+              "target_offset": 20774
+            },
+            {
+              "value": 3,
+              "target_offset": 20909
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "file_offset": 3204857,
+          "start_offset": 22142,
+          "duplicate_start_offset": 22142,
+          "case_count": 6,
+          "end_or_body_offset": 23001,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 4,
+              "target_offset": 22179
+            },
+            {
+              "value": 5,
+              "target_offset": 22279
+            },
+            {
+              "value": 7,
+              "target_offset": 22396
+            },
+            {
+              "value": 8,
+              "target_offset": 22411
+            },
+            {
+              "value": 9,
+              "target_offset": 22426
+            },
+            {
+              "value": 10,
+              "target_offset": 22445
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "file_offset": 3204925,
+          "start_offset": 23172,
+          "duplicate_start_offset": 23172,
+          "case_count": 4,
+          "end_or_body_offset": 23316,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 1,
+              "target_offset": 23196
+            },
+            {
+              "value": 2,
+              "target_offset": 23211
+            },
+            {
+              "value": 3,
+              "target_offset": 23229
+            },
+            {
+              "value": 6,
+              "target_offset": 23296
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "file_offset": 3204977,
+          "start_offset": 25224,
+          "duplicate_start_offset": 25224,
+          "case_count": 4,
+          "end_or_body_offset": 25643,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 9,
+              "target_offset": 25270
+            },
+            {
+              "value": 10,
+              "target_offset": 25364
+            },
+            {
+              "value": 7,
+              "target_offset": 25474
+            },
+            {
+              "value": 8,
+              "target_offset": 25577
+            }
+          ]
+        }
+      ],
+      "table_count": 3,
+      "table_a": [
+        5707,
+        13124,
+        14033
+      ],
+      "table_b": [
+        8,
+        8,
+        8
+      ],
+      "versioned_tail": {
+        "field_44": 5420,
+        "field_48": 0,
+        "field_4c": 5215,
+        "field_50": 0
+      },
+      "end_offset": 3205073
+    }
+  }
+}

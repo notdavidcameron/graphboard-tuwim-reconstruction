@@ -1,0 +1,1227 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MALUSKIE.BDF",
+  "size": 16400276,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Monday, November 17, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    5
+  ],
+  "background_flag": 0,
+  "background_color_index": 0,
+  "palette_size": 1024,
+  "dib_size": 308180,
+  "component_list_offset": 309345,
+  "component_list_version": 1,
+  "component_count": 5,
+  "components": [
+    {
+      "index": 0,
+      "offset": 309353,
+      "clsid": "2F3C5846-5413-11D0-B447-008048EB5D40",
+      "display_name": "Transparent_Video_Holder",
+      "private_offset": 310527,
+      "private_size": 13950129,
+      "embedded": [
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_000_0004bd0b_board_video_audio.wav",
+          "offset": 310539,
+          "size": 529244,
+          "pcm_size": 529200,
+          "duration_seconds": 12.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 12
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_000_0004bd0b_board_video_577x217.gif",
+          "offset": 310539,
+          "size": 14925816,
+          "frame_count": 105,
+          "width": 577,
+          "height": 217,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_002_00174226_board_video_audio.wav",
+          "offset": 1524262,
+          "size": 264644,
+          "pcm_size": 264600,
+          "duration_seconds": 6.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 6
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_002_00174226_board_video_523x283.gif",
+          "offset": 1524262,
+          "size": 7393769,
+          "frame_count": 44,
+          "width": 523,
+          "height": 283,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_004_003990a0_board_video_audio.wav",
+          "offset": 3772576,
+          "size": 264644,
+          "pcm_size": 264600,
+          "duration_seconds": 6.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 6
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_004_003990a0_board_video_493x347.gif",
+          "offset": 3772576,
+          "size": 8739711,
+          "frame_count": 45,
+          "width": 493,
+          "height": 347,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_006_007290c7_board_video_audio.wav",
+          "offset": 7508167,
+          "size": 220544,
+          "pcm_size": 220500,
+          "duration_seconds": 5.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 5
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_006_007290c7_board_video_336x294.gif",
+          "offset": 7508167,
+          "size": 4486681,
+          "frame_count": 40,
+          "width": 336,
+          "height": 294,
+          "transparent_index": 233,
+          "header_transparent_index": 165,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_008_00ab57b5_board_video_audio.wav",
+          "offset": 11229109,
+          "size": 132344,
+          "pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 3
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_008_00ab57b5_board_video_123x142.gif",
+          "offset": 11229109,
+          "size": 219129,
+          "frame_count": 11,
+          "width": 123,
+          "height": 142,
+          "transparent_index": 172,
+          "header_transparent_index": 229,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_010_00b089e5_board_video_audio.wav",
+          "offset": 11569637,
+          "size": 176444,
+          "pcm_size": 176400,
+          "duration_seconds": 4.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 4
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_010_00b089e5_board_video_134x138.gif",
+          "offset": 11569637,
+          "size": 442053,
+          "frame_count": 21,
+          "width": 134,
+          "height": 138,
+          "transparent_index": 230,
+          "header_transparent_index": 229,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_012_00b8c0a3_board_video_audio.wav",
+          "offset": 12107939,
+          "size": 264644,
+          "pcm_size": 264600,
+          "duration_seconds": 6.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 6
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_012_00b8c0a3_board_video_52x74.gif",
+          "offset": 12107939,
+          "size": 198396,
+          "frame_count": 45,
+          "width": 52,
+          "height": 74,
+          "transparent_index": 172,
+          "header_transparent_index": 172,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_014_00be971d_board_video_audio.wav",
+          "offset": 12490525,
+          "size": 132344,
+          "pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 3
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_014_00be971d_board_video_529x462.gif",
+          "offset": 12490525,
+          "size": 3329937,
+          "frame_count": 12,
+          "width": 529,
+          "height": 462,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_016_00d80218_board_video_audio.wav",
+          "offset": 14156312,
+          "size": 88244,
+          "pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 2
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_016_00d80218_board_video_78x57.gif",
+          "offset": 14156312,
+          "size": 10939,
+          "frame_count": 2,
+          "width": 78,
+          "height": 57,
+          "transparent_index": 16,
+          "header_transparent_index": 23,
+          "delay_centiseconds": 10
+        }
+      ],
+      "board_video_marker_offset": 310539,
+      "board_video_streams": [
+        {
+          "index": 0,
+          "offset": 310539,
+          "end_offset": 1397014,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 577,
+          "video_height": 217,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 105,
+          "header_record_count": 116,
+          "record_count": 117,
+          "audio_record_count": 12,
+          "video_record_count": 105,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_000_0004bd0b_board_video_audio.wav",
+          "audio_pcm_size": 529200,
+          "duration_seconds": 12.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_000_0004bd0b_board_video_577x217.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 1,
+          "offset": 1397014,
+          "end_offset": 1398270,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 577,
+          "video_height": 217,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 105,
+          "header_record_count": 116,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 2,
+          "offset": 1524262,
+          "end_offset": 3622896,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 523,
+          "video_height": 283,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 44,
+          "header_record_count": 49,
+          "record_count": 50,
+          "audio_record_count": 6,
+          "video_record_count": 44,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_002_00174226_board_video_audio.wav",
+          "audio_pcm_size": 264600,
+          "duration_seconds": 6.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_002_00174226_board_video_523x283.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 3,
+          "offset": 3622896,
+          "end_offset": 3624152,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 523,
+          "video_height": 283,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 44,
+          "header_record_count": 49,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 4,
+          "offset": 3772576,
+          "end_offset": 7334667,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 493,
+          "video_height": 347,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 45,
+          "header_record_count": 50,
+          "record_count": 51,
+          "audio_record_count": 6,
+          "video_record_count": 45,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_004_003990a0_board_video_audio.wav",
+          "audio_pcm_size": 264600,
+          "duration_seconds": 6.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_004_003990a0_board_video_493x347.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 5,
+          "offset": 7334667,
+          "end_offset": 7335923,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 493,
+          "video_height": 347,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 45,
+          "header_record_count": 50,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 6,
+          "offset": 7508167,
+          "end_offset": 11128937,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 336,
+          "video_height": 294,
+          "header_transparent_index": 165,
+          "frames_per_second": 10,
+          "frame_count": 40,
+          "header_record_count": 44,
+          "record_count": 45,
+          "audio_record_count": 5,
+          "video_record_count": 40,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_006_007290c7_board_video_audio.wav",
+          "audio_pcm_size": 220500,
+          "duration_seconds": 5.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_006_007290c7_board_video_336x294.gif",
+          "transparent_index": 233
+        },
+        {
+          "index": 7,
+          "offset": 11128937,
+          "end_offset": 11130193,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 336,
+          "video_height": 294,
+          "header_transparent_index": 165,
+          "frames_per_second": 10,
+          "frame_count": 40,
+          "header_record_count": 44,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 8,
+          "offset": 11229109,
+          "end_offset": 11550641,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 123,
+          "video_height": 142,
+          "header_transparent_index": 229,
+          "frames_per_second": 10,
+          "frame_count": 11,
+          "header_record_count": 13,
+          "record_count": 14,
+          "audio_record_count": 3,
+          "video_record_count": 11,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_008_00ab57b5_board_video_audio.wav",
+          "audio_pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_008_00ab57b5_board_video_123x142.gif",
+          "transparent_index": 172
+        },
+        {
+          "index": 9,
+          "offset": 11550641,
+          "end_offset": 11551897,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 123,
+          "video_height": 142,
+          "header_transparent_index": 229,
+          "frames_per_second": 10,
+          "frame_count": 11,
+          "header_record_count": 13,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 10,
+          "offset": 11569637,
+          "end_offset": 12087783,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 134,
+          "video_height": 138,
+          "header_transparent_index": 229,
+          "frames_per_second": 10,
+          "frame_count": 21,
+          "header_record_count": 24,
+          "record_count": 25,
+          "audio_record_count": 4,
+          "video_record_count": 21,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_010_00b089e5_board_video_audio.wav",
+          "audio_pcm_size": 176400,
+          "duration_seconds": 4.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_010_00b089e5_board_video_134x138.gif",
+          "transparent_index": 230
+        },
+        {
+          "index": 11,
+          "offset": 12087783,
+          "end_offset": 12089039,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 134,
+          "video_height": 138,
+          "header_transparent_index": 229,
+          "frames_per_second": 10,
+          "frame_count": 21,
+          "header_record_count": 24,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 12,
+          "offset": 12107939,
+          "end_offset": 12485289,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 52,
+          "video_height": 74,
+          "header_transparent_index": 172,
+          "frames_per_second": 10,
+          "frame_count": 45,
+          "header_record_count": 50,
+          "record_count": 51,
+          "audio_record_count": 6,
+          "video_record_count": 45,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_012_00b8c0a3_board_video_audio.wav",
+          "audio_pcm_size": 264600,
+          "duration_seconds": 6.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_012_00b8c0a3_board_video_52x74.gif",
+          "transparent_index": 172
+        },
+        {
+          "index": 13,
+          "offset": 12485289,
+          "end_offset": 12486545,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 52,
+          "video_height": 74,
+          "header_transparent_index": 172,
+          "frames_per_second": 10,
+          "frame_count": 45,
+          "header_record_count": 50,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 14,
+          "offset": 12490525,
+          "end_offset": 13909140,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 529,
+          "video_height": 462,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 12,
+          "header_record_count": 14,
+          "record_count": 15,
+          "audio_record_count": 3,
+          "video_record_count": 12,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_014_00be971d_board_video_audio.wav",
+          "audio_pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_014_00be971d_board_video_529x462.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 15,
+          "offset": 13909140,
+          "end_offset": 13910396,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 529,
+          "video_height": 462,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 12,
+          "header_record_count": 14,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 16,
+          "offset": 14156312,
+          "end_offset": 14254712,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 78,
+          "video_height": 57,
+          "header_transparent_index": 23,
+          "frames_per_second": 10,
+          "frame_count": 2,
+          "header_record_count": 3,
+          "record_count": 4,
+          "audio_record_count": 2,
+          "video_record_count": 2,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_016_00d80218_board_video_audio.wav",
+          "audio_pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_016_00d80218_board_video_78x57.gif",
+          "transparent_index": 16
+        },
+        {
+          "index": 17,
+          "offset": 14254712,
+          "end_offset": 14255968,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 78,
+          "video_height": 57,
+          "header_transparent_index": 23,
+          "frames_per_second": 10,
+          "frame_count": 2,
+          "header_record_count": 3,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "offset": 14260656,
+      "clsid": "0D8A5736-5337-11D0-B444-008048EB5D40",
+      "display_name": "Bitmap_Holder",
+      "private_offset": 14261788,
+      "private_size": 21900,
+      "embedded": []
+    },
+    {
+      "index": 2,
+      "offset": 14283688,
+      "clsid": "DA768116-5341-11D0-B444-008048EB5D40",
+      "display_name": "HotSpot_Holder",
+      "private_offset": 14284793,
+      "private_size": 1534,
+      "embedded": []
+    },
+    {
+      "index": 3,
+      "offset": 14286327,
+      "clsid": "1720D306-6932-11D0-B468-008048EB5D40",
+      "display_name": "Sound_Holder",
+      "private_offset": 14287223,
+      "private_size": 2075224,
+      "embedded": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_000_00da0183.wav",
+          "offset": 14287235,
+          "size": 14620,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_001_00da3aff.wav",
+          "offset": 14301951,
+          "size": 12986,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_002_00da6e19.wav",
+          "offset": 14315033,
+          "size": 15070,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_003_00daa957.wav",
+          "offset": 14330199,
+          "size": 13120,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_004_00dadcf7.wav",
+          "offset": 14343415,
+          "size": 9604,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_005_00db02db.wav",
+          "offset": 14353115,
+          "size": 11590,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_006_00db3081.wav",
+          "offset": 14364801,
+          "size": 9552,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_007_00db5631.wav",
+          "offset": 14374449,
+          "size": 11584,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_008_00db83d1.wav",
+          "offset": 14386129,
+          "size": 10834,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_009_00dbae83.wav",
+          "offset": 14397059,
+          "size": 165364,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_010_00de34d7.wav",
+          "offset": 14562519,
+          "size": 1383632,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_011_00f35207.wav",
+          "offset": 15946247,
+          "size": 416108,
+          "extension": ".wav"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "offset": 16362447,
+      "clsid": "AD45ADB6-5290-11D0-B442-008048EB5D40",
+      "display_name": "Text_Holder",
+      "private_offset": 16364073,
+      "private_size": 20274,
+      "embedded": []
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "dib",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\background.dib",
+      "size": 308180
+    },
+    {
+      "kind": "bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\background.bmp",
+      "size": 308194
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\script.txt",
+      "size": 15610
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_000_0004bd0b_board_video_audio.wav",
+      "offset": 310539,
+      "size": 529244,
+      "pcm_size": 529200,
+      "duration_seconds": 12.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 12
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_000_0004bd0b_board_video_577x217.gif",
+      "offset": 310539,
+      "size": 14925816,
+      "frame_count": 105,
+      "width": 577,
+      "height": 217,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_002_00174226_board_video_audio.wav",
+      "offset": 1524262,
+      "size": 264644,
+      "pcm_size": 264600,
+      "duration_seconds": 6.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 6
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_002_00174226_board_video_523x283.gif",
+      "offset": 1524262,
+      "size": 7393769,
+      "frame_count": 44,
+      "width": 523,
+      "height": 283,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_004_003990a0_board_video_audio.wav",
+      "offset": 3772576,
+      "size": 264644,
+      "pcm_size": 264600,
+      "duration_seconds": 6.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 6
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_004_003990a0_board_video_493x347.gif",
+      "offset": 3772576,
+      "size": 8739711,
+      "frame_count": 45,
+      "width": 493,
+      "height": 347,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_006_007290c7_board_video_audio.wav",
+      "offset": 7508167,
+      "size": 220544,
+      "pcm_size": 220500,
+      "duration_seconds": 5.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 5
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_006_007290c7_board_video_336x294.gif",
+      "offset": 7508167,
+      "size": 4486681,
+      "frame_count": 40,
+      "width": 336,
+      "height": 294,
+      "transparent_index": 233,
+      "header_transparent_index": 165,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_008_00ab57b5_board_video_audio.wav",
+      "offset": 11229109,
+      "size": 132344,
+      "pcm_size": 132300,
+      "duration_seconds": 3.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 3
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_008_00ab57b5_board_video_123x142.gif",
+      "offset": 11229109,
+      "size": 219129,
+      "frame_count": 11,
+      "width": 123,
+      "height": 142,
+      "transparent_index": 172,
+      "header_transparent_index": 229,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_010_00b089e5_board_video_audio.wav",
+      "offset": 11569637,
+      "size": 176444,
+      "pcm_size": 176400,
+      "duration_seconds": 4.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 4
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_010_00b089e5_board_video_134x138.gif",
+      "offset": 11569637,
+      "size": 442053,
+      "frame_count": 21,
+      "width": 134,
+      "height": 138,
+      "transparent_index": 230,
+      "header_transparent_index": 229,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_012_00b8c0a3_board_video_audio.wav",
+      "offset": 12107939,
+      "size": 264644,
+      "pcm_size": 264600,
+      "duration_seconds": 6.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 6
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_012_00b8c0a3_board_video_52x74.gif",
+      "offset": 12107939,
+      "size": 198396,
+      "frame_count": 45,
+      "width": 52,
+      "height": 74,
+      "transparent_index": 172,
+      "header_transparent_index": 172,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_014_00be971d_board_video_audio.wav",
+      "offset": 12490525,
+      "size": 132344,
+      "pcm_size": 132300,
+      "duration_seconds": 3.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 3
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_014_00be971d_board_video_529x462.gif",
+      "offset": 12490525,
+      "size": 3329937,
+      "frame_count": 12,
+      "width": 529,
+      "height": 462,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\00_Transparent_Video_Holder_016_00d80218_board_video_audio.wav",
+      "offset": 14156312,
+      "size": 88244,
+      "pcm_size": 88200,
+      "duration_seconds": 2.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 2
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\animations\\00_Transparent_Video_Holder_016_00d80218_board_video_78x57.gif",
+      "offset": 14156312,
+      "size": 10939,
+      "frame_count": 2,
+      "width": 78,
+      "height": 57,
+      "transparent_index": 16,
+      "header_transparent_index": 23,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_000_00da0183.wav",
+      "size": 14620
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_001_00da3aff.wav",
+      "size": 12986
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_002_00da6e19.wav",
+      "size": 15070
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_003_00daa957.wav",
+      "size": 13120
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_004_00dadcf7.wav",
+      "size": 9604
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_005_00db02db.wav",
+      "size": 11590
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_006_00db3081.wav",
+      "size": 9552
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_007_00db5631.wav",
+      "size": 11584
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_008_00db83d1.wav",
+      "size": 10834
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_009_00dbae83.wav",
+      "size": 165364
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_010_00de34d7.wav",
+      "size": 1383632
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_011_00f35207.wav",
+      "size": 416108
+    }
+  ],
+  "script": {
+    "version_offset": 16384347,
+    "version": 1,
+    "string_prefix_offset": 16384351,
+    "text_offset": 16384354,
+    "text_length": 15610,
+    "text_end": 16399964,
+    "engine_state": {
+      "offset": 16399964,
+      "version": 2,
+      "block_count": 4,
+      "handler_offsets": {
+        "field_38": 15246,
+        "field_3c": 0,
+        "field_30": 0,
+        "field_34": 387
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 16399988,
+          "start_offset": 5612,
+          "duplicate_start_offset": 5612,
+          "case_count": 3,
+          "end_or_body_offset": 7802,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 5639
+            },
+            {
+              "value": 1,
+              "target_offset": 6254
+            },
+            {
+              "value": 2,
+              "target_offset": 7635
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 16400032,
+          "start_offset": 7896,
+          "duplicate_start_offset": 7896,
+          "case_count": 2,
+          "end_or_body_offset": 10273,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 7923
+            },
+            {
+              "value": 11,
+              "target_offset": 10108
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "file_offset": 16400068,
+          "start_offset": 8569,
+          "duplicate_start_offset": 8569,
+          "case_count": 8,
+          "end_or_body_offset": 10063,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 8620
+            },
+            {
+              "value": 3,
+              "target_offset": 8751
+            },
+            {
+              "value": 4,
+              "target_offset": 8885
+            },
+            {
+              "value": 5,
+              "target_offset": 9018
+            },
+            {
+              "value": 6,
+              "target_offset": 9150
+            },
+            {
+              "value": 7,
+              "target_offset": 9678
+            },
+            {
+              "value": 8,
+              "target_offset": 9816
+            },
+            {
+              "value": 9,
+              "target_offset": 9954
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "file_offset": 16400152,
+          "start_offset": 10984,
+          "duplicate_start_offset": 10984,
+          "case_count": 9,
+          "end_or_body_offset": 11827,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 11023
+            },
+            {
+              "value": 3,
+              "target_offset": 11055
+            },
+            {
+              "value": 4,
+              "target_offset": 11154
+            },
+            {
+              "value": 5,
+              "target_offset": 11251
+            },
+            {
+              "value": 6,
+              "target_offset": 11347
+            },
+            {
+              "value": 7,
+              "target_offset": 11451
+            },
+            {
+              "value": 8,
+              "target_offset": 11553
+            },
+            {
+              "value": 9,
+              "target_offset": 11656
+            },
+            {
+              "value": 10,
+              "target_offset": 11760
+            }
+          ]
+        }
+      ],
+      "table_count": 1,
+      "table_a": [
+        1685
+      ],
+      "table_b": [
+        8
+      ],
+      "versioned_tail": {
+        "field_44": 15377,
+        "field_48": 0,
+        "field_4c": 15509,
+        "field_50": 0
+      },
+      "end_offset": 16400272
+    }
+  }
+}

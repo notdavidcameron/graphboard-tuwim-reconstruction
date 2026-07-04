@@ -1,0 +1,996 @@
+//###########################################################################
+//Script code
+//###########################################################################
+
+
+OnOpenPage()
+{
+	// Add your component and variables initialization code here
+	// WARNING: All variables definied on this function are global for this page
+
+   /*int index = 32;
+   while( index < 128 )
+   {
+      Debug( "%c, %d", index, index );
+      index++;
+   }
+   return;*/
+
+
+
+   Sprite_Holder.MoveTo( 0, 125, 315 );
+   Sprite_Holder.MoveTo( 1, 163, 315 );
+   Sprite_Holder.MoveTo( 2, 202, 315 );
+   Sprite_Holder.MoveTo( 3, 235, 314 );
+   Sprite_Holder.MoveTo( 4, 272, 307 );
+   Sprite_Holder.MoveTo( 5, 300, 313 );
+   Sprite_Holder.MoveTo( 6, 333, 313 );
+   Sprite_Holder.MoveTo( 7, 364, 309 );
+   Sprite_Holder.MoveTo( 8, 395, 309 );
+   Sprite_Holder.MoveTo( 9, 422, 311 );
+   Sprite_Holder.MoveTo( 10, 444, 317 );
+   Sprite_Holder.MoveTo( 11, 468, 317 );
+   Sprite_Holder.MoveTo( 12, 486, 314 );
+   Sprite_Holder.MoveTo( 13, 515, 316 );
+   Sprite_Holder.MoveTo( 14, 174, 321 );
+   Sprite_Holder.MoveTo( 15, 212, 323 );
+   Sprite_Holder.MoveTo( 16, 247, 316 );
+   Sprite_Holder.MoveTo( 17, 303, 316 );
+   Sprite_Holder.MoveTo( 18, 333, 316 );
+   Sprite_Holder.MoveTo( 19, 388, 323 );
+   Sprite_Holder.MoveTo( 20, 417, 324 );
+   Sprite_Holder.MoveTo( 21, 439, 325 );
+   Sprite_Holder.MoveTo( 22, 488, 332 );
+   Sprite_Holder.MoveTo( 23, 513, 329 );
+   Sprite_Holder.MoveTo( 24, 344, 259 );
+
+
+
+
+
+   int stalaSciszania = -450;
+
+
+   int keyDown = 0;
+
+      // 0 - stop - wszystko aktywne, widzoczny tekst piosenki
+      // 1 - piosenka
+      // 2 - melodia
+      // 3 - demo
+   int akcja = 0;
+
+      // Zmienna okreslajaca glosnosc odtwarzania dzwiekow.
+      // left  - wartosci od 0 do 2;      0 - najglosniej
+      // top   - kierunek sciszania 0 - cicho, 1 glosno
+   CRect glosnosc;
+   glosnosc.SetRect( 0, 0, 0, 0 );
+
+
+      // aktualnie wcisniety klawisz
+   int biezacyKlawisz = -1;
+   int biezacyKlawiszDemo = -2;
+
+   // DLA ROBERTA
+   // Do tej tablicy nalezy wpisac kolejne numery ruchow pingiwna
+   //   0 - 13 klawisze biale (od lewej do prawej)
+   //  14 - 23 klawisze czarne (od lewej do prawej)
+   //;
+
+   int maxRuchow =80;
+   int demo[ maxRuchow ];
+
+//   int demoStop[ maxRuchow ];   // wylaczenie dzwiekow organow
+
+
+    demo[0]=16;
+    demo[1]=4;
+    demo[2]=5;
+    demo[3]=18;
+    demo[4]=18;
+    demo[5]=18;
+    demo[6]=4;
+    demo[7]=18;
+    demo[8]=7;
+    demo[9]=4;
+    demo[10]=4;
+    demo[11]=18;
+    demo[12]=7;
+    demo[13]=19;
+    demo[14]=3;
+    demo[15]=18;
+    demo[16]=17;
+    demo[17]=3;
+    demo[18]=16;
+    demo[19]=8;
+    demo[20]=17;
+    demo[21]=18;
+    demo[22]=7;
+    demo[23]=19;
+    demo[24]=19;
+    demo[25]=19;
+    demo[26]=18;
+    demo[27]=19;
+    demo[28]=20;
+    demo[29]=18;
+    demo[30]=18;
+    demo[31]=19;
+    demo[32]=20;
+    demo[33]=21;
+    demo[34]=21;
+    demo[35]=21;
+    demo[36]=20;
+    demo[37]=8;
+    demo[38]=7;
+    demo[39]=18;
+    demo[40]=8;
+    demo[41]=9;
+    demo[42]=21;
+    demo[43]=9;
+    demo[44]=8;
+    demo[45]=7;
+    demo[46]=6;
+    demo[47]=8;
+    demo[48]=4;
+    demo[49]=4;
+    demo[50]=4;
+    demo[51]=5;
+    demo[52]=18;
+    demo[53]=5;
+    demo[54]=18;
+    demo[55]=7;
+    demo[56]=5;
+    demo[57]=16;
+    demo[58]=4;
+    demo[59]=8;
+    demo[60]=9;
+    demo[61]=21;
+    demo[62]=9;
+    demo[63]=8;
+    demo[64]=7;
+    demo[65]=6;
+    demo[66]=8;
+    demo[67]=4;
+    demo[68]=4;
+    demo[69]=4;
+    demo[70]=5;
+    demo[71]=18;
+    demo[72]=5;
+    demo[73]=18;
+    demo[74]=7;
+    demo[75]=5;
+    demo[76]=16;
+    demo[77]=4;
+
+
+
+   LoadGroup("g_pios.grp");
+
+   int toolbar=0;
+   int toolbarCase=0;
+   Group.HotSpot_Holder.DisableHotSpot(1);
+
+   SetCursor(0);
+   //SetTimer( 5000 );
+   FadeScreen(1,1000);
+}
+
+
+void OnTimer(void)
+{
+	// Add your timer handler code here
+   if( biezacyKlawiszDemo == biezacyKlawisz )
+   {
+      MuzykaStop( biezacyKlawiszDemo );
+      SetTimer(0);
+      biezacyKlawiszDemo = -2;
+   }
+
+
+   //SetTimer(0);
+   //UstawAktywnoscStrony( 0 );
+   //Group.Sound_Holder.PlayDSound(0);
+}
+
+
+void OnClosePage(void)
+{
+	// Add your close page handler code here
+   FadeScreen(0,1000);
+   SetCursor(0);
+   CloseGroup();
+}
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////
+//
+//
+void OnRButtonDown(int x,int y)
+{
+        //Add your command handler code here
+   //Uruchomienie pomocy
+   UstawAktywnoscStrony( 0 );
+   Group.Sound_Holder.PlayDSound(0);
+   //SetTimer(0);
+}
+
+
+
+void OnLButtonDown(int x,int y)
+{
+        //Add your command handler code here
+   Group.Sound_Holder.Stop(0);
+   //SetTimer(0);
+}
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////
+// W zaleznosci od stanu biezacego i nowego jest ustawiana aktywnosc strony
+//
+void UstawAktywnoscStrony( int nowaAkcja )
+{
+   int leftOffset;
+   int upOffset;
+
+   switch( nowaAkcja )
+   {
+      case 0:   // stop
+
+            // Nalezy uaktywnic wszystkie przyciski na panelu
+         Group.Sprite_Holder.ChangePhase( 1, 0 );
+         Group.Sprite_Holder.ChangePhase( 2, 0 );
+         Group.Sprite_Holder.ChangePhase( 3, 0 );
+
+
+         switch( akcja )
+         {
+            case 2:
+
+                  // Jesli poprzednio byla odgrywana melodia
+                  // nalezy ukryc tekst melodi i pokazac tekst
+                  // piosenki przesuniety o offset melodi
+
+               Text_Holder.StopSynchroText( 2 );
+
+               DisableScreen();
+
+               Text_Holder.HideText( 2 );   // melodia
+               Text_Holder.GetTextOffsets( 2, &leftOffset, &upOffset );
+
+               Text_Holder.ShowText( 0 );   // piosenka
+               Text_Holder.SetTextOffsets( 0, leftOffset, upOffset );
+   
+               EnableScreen();
+               ShowBuffer();
+               break;
+
+            case 1:
+               Text_Holder.StopSynchroText( 0 );
+               break;
+
+            case 3:
+               MuzykaStop( biezacyKlawisz );
+               Text_Holder.StopSynchroText( 3 );
+               break;
+         }
+         break;
+
+      case 1:   // piosenka
+         Group.Sprite_Holder.ChangePhase( 1, 1 );   // mruganie
+         Group.Sprite_Holder.ChangePhase( 2, 2 );
+         Group.Sprite_Holder.ChangePhase( 3, 2 );
+
+            // piosenka
+         Text_Holder.PlaySynchroText( 0 );
+         Text_Holder.SetSoundParameters( 0, (glosnosc.left*(stalaSciszania)), 0, 0 );
+
+         break;
+
+      case 2:   // melodia
+         Group.Sprite_Holder.ChangePhase( 1, 2 );   
+         Group.Sprite_Holder.ChangePhase( 2, 1 );   // mruganie
+         Group.Sprite_Holder.ChangePhase( 3, 2 );
+
+         DisableScreen();
+
+         Text_Holder.GetTextOffsets( 0, &leftOffset, &upOffset );
+         Text_Holder.HideText( 0 );   // piosenka
+
+         Text_Holder.ShowText( 2 );   // melodia
+         Text_Holder.SetTextOffsets( 2, leftOffset, upOffset );
+   
+         EnableScreen();
+         ShowBuffer();
+
+            // piosenka
+         Text_Holder.PlaySynchroText( 2 );
+         Text_Holder.SetSoundParameters( 2, (glosnosc.left*(stalaSciszania)), 0, 0 );
+         break;
+
+      case 3:   // demo
+         Group.Sprite_Holder.ChangePhase( 1, 2 );   
+         Group.Sprite_Holder.ChangePhase( 2, 2 );
+         Group.Sprite_Holder.ChangePhase( 3, 1 );   // mruganie
+
+            // piosenka
+         Text_Holder.PlaySynchroText( 3 );
+         Text_Holder.SetSoundParameters( 3, (glosnosc.left*(stalaSciszania)), 0, 0 );
+         break;
+   }
+
+   akcja = nowaAkcja;
+}
+
+
+
+
+///////////////////////////////////////////////////////////////////////
+//
+//
+void OnKeyDown(UINT nChar)
+{
+	// Add your keyboard handler code here
+   Group.Sound_Holder.Stop(0);
+   //SetTimer(0);
+
+      // Odgrywane jest demo - nic nie mozna robic na klawiaturze
+   if( akcja == 3 )
+      return;
+
+   if( nChar==keyDown ) return;
+   keyDown = nChar;
+
+   //if( biezacyKlawisz > -1 ) return;
+
+   switch(nChar)
+   {                
+      // Klawiatura   
+      case 9:
+         Muzyka(0, 1 );
+         break;
+
+      case 113: //Q
+      case 81:
+         Muzyka(1, 1 );
+         break;                         
+
+      case 119: //W
+      case 87:
+         Muzyka(2, 1 );
+         break;
+
+      case 101: //E
+      case 69:
+         Muzyka(3, 1 );
+         break;
+
+      case 114: //R
+      case 82:
+         Muzyka(4, 1 );
+         break;
+
+      case 116: //T
+      case 84:
+         Muzyka(5, 1 );
+         break;
+
+      case 121: //Y
+      case 89:
+         Muzyka(6, 1 );
+         break;
+
+      case 117: //U
+      case 85:
+         Muzyka(7, 1 );
+         break;
+
+      case 105: //I
+      case 73:
+         Muzyka(8, 1 );
+         break;
+
+      case 111: //O
+      case 79:
+         Muzyka(9, 1 );
+         break;
+
+      case 112: //P
+      case 80:
+         Muzyka(10, 1 );
+         break;
+
+      case 91:  //[
+         Muzyka(11, 1 );
+         break;
+
+      case 93:  //]
+         Muzyka(12, 1 );
+         break;
+
+      case 13:  // Enter
+         Muzyka(13, 1 );
+         break;
+
+      case 49:  // 1
+         Muzyka(14, 1 );
+         break;
+
+      case 50:  // 2
+         Muzyka(15, 1 );
+         break;
+
+      case 51: // 3
+         Muzyka(16, 1 );
+         break;
+
+      case 53: // 5
+         Muzyka(17, 1 );
+         break;
+
+      case 54: // 6
+         Muzyka(18, 1 );
+         break;
+
+      case 56: // 8
+         Muzyka(19, 1 );
+         break;
+
+      case 57:  //9
+         Muzyka(20, 1 );
+         break;
+
+      case 48:  // 10
+         Muzyka(21, 1 );
+         break;
+
+      case 61:  // +
+         Muzyka(22, 1 );
+         break;
+
+      case 8:  // backspace
+         Muzyka(23, 1 );
+         break;
+   }
+}
+
+
+
+void OnKeyUp(UINT nChar)
+{
+        //Add your command handler code here
+   keyDown = 0;
+
+   int nowyBK = -1;
+
+   switch(nChar)
+   {                
+      // Klawiatura   
+      case 9:
+         nowyBK=0;
+         break;
+
+      case 113: //Q
+      case 81:
+         nowyBK=1;
+         break;
+
+      case 119: //W
+      case 87:
+         nowyBK=2;
+         break;
+
+      case 101: //E
+      case 69:
+         nowyBK=3;
+         break;
+
+      case 114: //R
+      case 82:
+         nowyBK=4;
+         break;
+
+      case 116: //T
+      case 84:
+         nowyBK=5;
+         break;
+
+      case 121: //Y
+      case 89:
+         nowyBK=6;
+         break;
+
+      case 117: //U
+      case 85:
+         nowyBK=7;
+         break;
+
+      case 105: //I
+      case 73:
+         nowyBK=8;
+         break;
+
+      case 111: //O
+      case 79:
+         nowyBK=9;
+         break;
+
+      case 112: //P
+      case 80:
+         nowyBK=10;
+         break;
+
+      case 219:  //[
+         nowyBK=11;
+         break;
+
+      case 221:  //]
+         nowyBK=12;
+         break;
+
+      case 13:  // Enter
+         nowyBK=13;
+         break;
+
+      case 49:  // 1
+         nowyBK=14;
+         break;
+
+      case 50:  // 2
+         nowyBK=15;
+         break;
+
+      case 51: // 3
+         nowyBK=16;
+         break;
+
+      case 53: // 5
+         nowyBK=17;
+         break;
+
+      case 54: // 6
+         nowyBK=18;
+         break;
+
+      case 56: // 8
+         nowyBK=19;
+         break;
+
+      case 57:  //9
+         nowyBK=20;
+         break;
+
+      case 48:  // 10
+         nowyBK=21;
+         break;
+
+      case 61:  // +
+         nowyBK=22;
+         break;
+
+      case 8:  // backspace
+         nowyBK=23;
+         break;
+   }
+
+   if( nowyBK == biezacyKlawisz )
+      MuzykaStop(biezacyKlawisz);
+}
+
+///////////////////////////////////////////////////////////////////////
+//   nrRuchu - wskazuje ktory ruch bedzie wykonany
+//      
+//   0 - 13 klawisze biale (od lewej do prawej)
+//  14 - 23 klawisze czarne (od lewej do prawej)
+//  24 - 28 bebny
+//
+void Muzyka( int nrRuchu, int dzwiek )
+{
+   if( (nrRuchu >= 0) && (nrRuchu<=23) )
+   {
+         // wygaszenie poprzedniego klawisza
+      MuzykaStop( biezacyKlawisz );
+      biezacyKlawisz = nrRuchu;
+
+      if( dzwiek )
+         Sound_Holder.PlayDSound( nrRuchu );
+      Sprite_Holder.SetDeep( nrRuchu, 1 );
+      Sprite_Holder.ChangePhase( nrRuchu, 1 );
+   }
+}
+
+
+//////////////////////////////////////////////////////////////////
+//
+//
+void MuzykaStop( int nrRuchu )
+{
+   if( (nrRuchu >= 0) && (nrRuchu<=23) )
+   {
+      if( biezacyKlawisz > -1 )
+      {
+            //Sound_Holder.Stop( nrRuchu );
+            Sprite_Holder.SetDeep( nrRuchu, 0 );
+            Sprite_Holder.ChangePhase( nrRuchu, 0 );
+            biezacyKlawisz = -1;
+      }
+   }
+}
+
+
+///////////////////////////////////////////////////////////////////////
+//
+//
+void Sprite_Holder.MouseMoveIn(int spriteID)
+{
+   if( akcja == 3 ) 
+      return;
+
+   if( spriteID == 24 )
+      Sprite_Holder.ChangePhase(spriteID,1);
+
+   SetCursor(1);
+}
+
+ 
+void Sprite_Holder.MouseMoveOut(int spriteID)
+{
+   if( spriteID == 24 )
+      Sprite_Holder.ChangePhase(spriteID,0);
+
+   SetCursor(0);
+}
+
+ 
+///////////////////////////////////////////////////////////////////////
+//
+//
+void Sprite_Holder.MouseClickOnDown(int spriteID)
+{
+   if( akcja == 3 ) 
+      return;
+
+   if( (spriteID >= 0) && (spriteID<=23) )
+   {
+      if( biezacyKlawisz == -1 )
+         Muzyka( spriteID, 1 );
+      return;
+   }
+
+   switch( spriteID )
+   {
+      case 24: // nastepna plansza
+         Sound_Holder.PlayDSound(24);
+         Sprite_Holder.ChangePhase( spriteID, 1 );
+         LoadPage("cuda_ps3.bdf");
+         break;
+
+      default:
+         break;
+   }
+}
+
+ 
+void Sprite_Holder.MouseClickOnUp(int spriteID)
+{
+   if( akcja == 3 ) 
+      return;
+
+   if( (spriteID >= 0) && (spriteID<=23) )
+   {
+      if( spriteID == biezacyKlawisz )
+         MuzykaStop( spriteID );
+      return;
+   }
+}
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////
+//
+//
+void Text_Holder.EndOfSynchroText(int textID)
+{
+   UstawAktywnoscStrony( 0 );
+}
+
+
+/////////////////////////////////////////////////////////////////////
+//
+//
+void Text_Holder.ScrollTextUp(int textID)
+{
+   SetCursor (2);
+}
+
+void Text_Holder.ScrollTextDown(int textID)
+{
+   SetCursor(3);
+}
+
+
+
+///////////////////////////////////////////////////////////////////////
+//
+//
+void Text_Holder.EndScrollText(int textID)
+{
+   SetCursor(0);
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////
+//
+//
+void Text_Holder.MouseMoveIn(int textID)
+{
+      
+}
+
+void Text_Holder.MouseMoveOut(int textID)
+{
+   SetCursor(0);
+}
+
+
+
+
+/////////////////////////////////////////////////////////////////////////
+//
+//
+void Text_Holder.PlayMark(int textID,int markNo)
+{
+   if( textID == 3 )
+   {
+      if( maxRuchow > markNo )
+      {
+         biezacyKlawiszDemo = demo[markNo];
+         SetTimer(150);
+         Muzyka(demo[markNo], 0 );
+        // MuzykaStop( demoStop[markNo] );
+      }
+   }
+}
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////
+//
+//
+void Group.Sprite_Holder.MouseClickOnDown(int spriteID)
+{
+   switch( spriteID )
+   {
+      case 0:
+         Group.Sound_Holder.PlayDSound(1);
+         if( glosnosc.top )
+         {
+               // podglaszanie
+            glosnosc.left--;
+               
+            if( glosnosc.left <= 0 )
+               glosnosc.top = 0;
+         }
+         else
+         {
+               // sciszanie
+            glosnosc.left++;
+               
+            if( glosnosc.left >= 2 )
+               glosnosc.top = 1;
+         }
+
+         Group.Sprite_Holder.ChangePhase( 0, glosnosc.left );
+
+         switch( akcja )
+         {
+            case 1:
+               Text_Holder.SetSoundParameters( 0, glosnosc.left*(stalaSciszania), 0, 0 );
+               break;
+            case 2:
+               Text_Holder.SetSoundParameters( 2, glosnosc.left*(stalaSciszania), 0, 0 );
+               break;
+            case 3:
+               Text_Holder.SetSoundParameters( 3, glosnosc.left*(stalaSciszania), 0, 0 );
+               break;
+         }
+
+         break;
+
+      case 1:
+      case 2:
+      case 3:
+         if( akcja == 0 )
+         {
+            Group.Sound_Holder.PlayDSound(1);
+            UstawAktywnoscStrony( spriteID );
+         }
+         break;
+
+      case 4:   // stop
+         Group.Sound_Holder.PlayDSound(1);
+         Group.Sprite_Holder.ChangePhase( 4, 1 );
+         UstawAktywnoscStrony( 0 );
+         break;
+
+      case 5:   //klawiatura
+         Group.Sound_Holder.PlayDSound(1);
+         Group.Sprite_Holder.ChangePhase( 5, 1 );
+         MultiBitmap.ShowBitmap(0,142,372,4);
+         break;
+      case 7:   //toolbar
+         Group.Sound_Holder.PlayDSound(3);
+         Group.Sprite_Holder.ChangePhase(spriteID,1);   
+         break;
+      case 8:
+         Group.Sound_Holder.PlayDSound(4);
+         Group.Sprite_Holder.ChangePhase(spriteID,1);   
+         break;
+      case 9:
+      case 10:
+         Group.Sound_Holder.PlayDSound(5);
+         Group.Sprite_Holder.ChangePhase(spriteID,1);   
+         break;
+   }
+}
+
+
+void Group.Sprite_Holder.MouseClickOnUp(int spriteID)
+{
+   switch( spriteID )
+   {
+      case 4:   // stop
+         Group.Sprite_Holder.ChangePhase( 4, 0 );
+         break;
+
+      case 5:   //klawiatura
+         Group.Sprite_Holder.ChangePhase( 5, 0 );
+         MultiBitmap.HideBitmap(0);
+         break;
+      case 7:
+      case 8:
+      case 9:
+      case 10:
+         Group.Sprite_Holder.DisableTimers();
+
+         Group.Sprite_Holder.GotoXY(6,640,0);
+         Group.Sprite_Holder.GotoXY(7,721,329);
+         Group.Sprite_Holder.GotoXY(8,717,404);
+         Group.Sprite_Holder.GotoXY(9,704,14);
+         Group.Sprite_Holder.GotoXY(10,744,14);
+
+         Group.Sprite_Holder.SynchronizeTimers();
+         Group.Sprite_Holder.EnableTimers();
+         Group.Sound_Holder.PlayDSound(2);
+         toolbar=0;
+         Group.HotSpot_Holder.DisableHotSpot(1);
+         toolbarCase=spriteID;
+
+         return;
+   }
+
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+//
+//
+void Group.Sprite_Holder.MouseMoveIn(int spriteID)
+{
+   switch( spriteID )
+   {
+      case 1:
+      case 2:
+      case 3:
+         if( akcja != 0 ) return;
+         break;
+      case 6:
+         return;
+   }
+
+   SetCursor( 1 );
+}
+
+void Group.Sprite_Holder.MouseMoveOut(int spriteID)
+{
+   SetCursor( 0 );
+}
+
+ 
+
+
+//############################################################# T O O L B A R #######
+//#############################################################---------------#######
+void Group.HotSpot_Holder.MouseMoveIn(int rectID)
+{
+   if(rectID==0)
+   {
+      if(toolbar)   return;
+      Group.Sprite_Holder.DisableTimers();
+
+      Group.Sprite_Holder.GotoXY(6,480,0);
+      Group.Sprite_Holder.GotoXY(7,560,329);
+      Group.Sprite_Holder.GotoXY(8,557,404);
+      Group.Sprite_Holder.GotoXY(9,544,14);
+      Group.Sprite_Holder.GotoXY(10,584,14);
+
+      Group.Sprite_Holder.SynchronizeTimers();
+      Group.Sprite_Holder.EnableTimers();
+      Group.Sound_Holder.PlayDSound(2);
+      SetCursor(0);
+   }
+   else
+   {
+      if(toolbar)
+      {
+         Group.Sprite_Holder.DisableTimers();
+
+         Group.Sprite_Holder.GotoXY(6,640,0);
+         Group.Sprite_Holder.GotoXY(7,721,329);
+         Group.Sprite_Holder.GotoXY(8,717,404);
+         Group.Sprite_Holder.GotoXY(9,704,14);
+         Group.Sprite_Holder.GotoXY(10,744,14);
+
+         Group.Sprite_Holder.SynchronizeTimers();
+         Group.Sprite_Holder.EnableTimers();
+         Group.Sound_Holder.PlayDSound(2);
+         toolbar=0;
+      }
+      Group.HotSpot_Holder.DisableHotSpot(1);
+      toolbarCase=0;
+   }
+}
+
+void Group.Sprite_Holder.InPlace(int spriteID,int x,int y)
+{
+   if(spriteID==6)
+   {
+      if(x==480)
+      {
+         toolbar=1;
+         Group.HotSpot_Holder.EnableHotSpot(1);
+         SetCursor(0);
+      }
+      else
+      {
+         SetCursor(0);
+         Group.Sprite_Holder.ChangePhase(7,0);
+         Group.Sprite_Holder.ChangePhase(8,0);
+         Group.Sprite_Holder.ChangePhase(9,0);
+         Group.Sprite_Holder.ChangePhase(10,0);
+         switch(toolbarCase)
+         {
+            case 9:	//lewo
+               LoadPage("abec_ps.bdf");
+               break;
+            case 10:	//prawo
+               LoadPage("tan_ps.bdf");
+               break;
+            case 7:   //do planszy glownej   
+               LoadPage( "cuda.bdf" );
+               break;
+            case 8:   //Plansza wyboru
+               LoadPage("Wyborw.bdf");
+               break;
+         }
+      }
+   }
+}
+//#############################################################
+//############################################################# 
+ 
+
+
+ 

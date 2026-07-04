@@ -1,0 +1,935 @@
+{
+  "id": "TRALALA",
+  "title": "TRALALA",
+  "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TRALALA.BDF",
+  "pageRect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "background": {
+    "colorIndex": 215,
+    "flag": 1,
+    "bmpPath": null,
+    "bmpUrl": null,
+    "palettePath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\background_palette.bin",
+    "paletteUrl": "../extracted_assets/bdf/TRALALA/background_palette.bin"
+  },
+  "components": [
+    {
+      "id": "00_Bitmap_Holder",
+      "type": "Bitmap_Holder",
+      "index": 0,
+      "z": 0,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "sourceOffset": 1173,
+      "privateOffset": 2305,
+      "privateSize": 488044,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "01_Transparent_Video_Holder",
+      "type": "Transparent_Video_Holder",
+      "index": 1,
+      "z": 1,
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 640,
+        "height": 480
+      },
+      "geometryConfidence": "serialized_entries",
+      "sourceOffset": 490349,
+      "privateOffset": 491523,
+      "privateSize": 2932074,
+      "primaryAssetUrl": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_000_0007800f_board_video_46x42.gif",
+      "assets": [
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_000_0007800f_board_video_46x42.gif",
+          "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_000_0007800f_board_video_46x42.gif",
+          "width": 46,
+          "height": 42,
+          "frameCount": 3,
+          "offset": 491535,
+          "name": null,
+          "id": 0,
+          "rect": {
+            "x": 325,
+            "y": 89,
+            "width": 46,
+            "height": 42
+          },
+          "z": 2,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 585092,
+          "streamOffset": 491535,
+          "originalRect": {
+            "x": 325,
+            "y": 89,
+            "width": 46,
+            "height": 42
+          },
+          "originalZ": 2
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_002_0008fad0_board_video_241x142.gif",
+          "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_002_0008fad0_board_video_241x142.gif",
+          "width": 241,
+          "height": 142,
+          "frameCount": 3,
+          "offset": 588496,
+          "name": null,
+          "id": 2,
+          "rect": {
+            "x": 70,
+            "y": 54,
+            "width": 241,
+            "height": 142
+          },
+          "z": 3,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 754373,
+          "streamOffset": 588496,
+          "originalRect": {
+            "x": 70,
+            "y": 54,
+            "width": 241,
+            "height": 142
+          },
+          "originalZ": 3
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_004_000c0f89_board_video_155x285.gif",
+          "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_004_000c0f89_board_video_155x285.gif",
+          "width": 155,
+          "height": 285,
+          "frameCount": 3,
+          "offset": 790409,
+          "name": null,
+          "id": 4,
+          "rect": {
+            "x": 316,
+            "y": 195,
+            "width": 155,
+            "height": 285
+          },
+          "z": 2,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 994668,
+          "streamOffset": 790409,
+          "originalRect": {
+            "x": 316,
+            "y": 195,
+            "width": 155,
+            "height": 285
+          },
+          "originalZ": 2
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_006_000fe084_board_video_78x73.gif",
+          "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_006_000fe084_board_video_78x73.gif",
+          "width": 78,
+          "height": 73,
+          "frameCount": 3,
+          "offset": 1040516,
+          "name": null,
+          "id": 6,
+          "rect": {
+            "x": 72,
+            "y": 0,
+            "width": 78,
+            "height": 73
+          },
+          "z": 2,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 1141082,
+          "streamOffset": 1040516,
+          "originalRect": {
+            "x": 72,
+            "y": 0,
+            "width": 78,
+            "height": 73
+          },
+          "originalZ": 2
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_008_00118596_board_video_83x124.gif",
+          "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_008_00118596_board_video_83x124.gif",
+          "width": 83,
+          "height": 124,
+          "frameCount": 5,
+          "offset": 1148310,
+          "name": null,
+          "id": 8,
+          "rect": {
+            "x": 557,
+            "y": 327,
+            "width": 83,
+            "height": 124
+          },
+          "z": 5,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 1268616,
+          "streamOffset": 1148310,
+          "originalRect": {
+            "x": 557,
+            "y": 327,
+            "width": 83,
+            "height": 124
+          },
+          "originalZ": 5
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_010_001389a4_board_video_69x111.gif",
+          "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_010_001389a4_board_video_69x111.gif",
+          "width": 69,
+          "height": 111,
+          "frameCount": 21,
+          "offset": 1280420,
+          "name": null,
+          "id": 10,
+          "rect": {
+            "x": 461,
+            "y": 312,
+            "width": 69,
+            "height": 111
+          },
+          "z": 3,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 1552485,
+          "streamOffset": 1280420,
+          "originalRect": {
+            "x": 461,
+            "y": 312,
+            "width": 69,
+            "height": 111
+          },
+          "originalZ": 3
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_012_0017d509_board_video_71x137.gif",
+          "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_012_0017d509_board_video_71x137.gif",
+          "width": 71,
+          "height": 137,
+          "frameCount": 11,
+          "offset": 1561865,
+          "name": null,
+          "id": 12,
+          "rect": {
+            "x": 0,
+            "y": 111,
+            "width": 71,
+            "height": 137
+          },
+          "z": 2,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 1752356,
+          "streamOffset": 1561865,
+          "originalRect": {
+            "x": 0,
+            "y": 111,
+            "width": 71,
+            "height": 137
+          },
+          "originalZ": 2
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_014_001ae918_board_video_133x112.gif",
+          "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_014_001ae918_board_video_133x112.gif",
+          "width": 133,
+          "height": 112,
+          "frameCount": 3,
+          "offset": 1763608,
+          "name": null,
+          "id": 14,
+          "rect": {
+            "x": 393,
+            "y": 0,
+            "width": 133,
+            "height": 112
+          },
+          "z": 3,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 1886310,
+          "streamOffset": 1763608,
+          "originalRect": {
+            "x": 393,
+            "y": 0,
+            "width": 133,
+            "height": 112
+          },
+          "originalZ": 3
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_016_001d0952_board_video_57x36.gif",
+          "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_016_001d0952_board_video_57x36.gif",
+          "width": 57,
+          "height": 36,
+          "frameCount": 3,
+          "offset": 1902930,
+          "name": null,
+          "id": 16,
+          "rect": {
+            "x": 15,
+            "y": 442,
+            "width": 57,
+            "height": 36
+          },
+          "z": 2,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 1995012,
+          "streamOffset": 1902930,
+          "originalRect": {
+            "x": 15,
+            "y": 442,
+            "width": 57,
+            "height": 36
+          },
+          "originalZ": 2
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_018_001e7ee0_board_video_136x162.gif",
+          "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_018_001e7ee0_board_video_136x162.gif",
+          "width": 136,
+          "height": 162,
+          "frameCount": 13,
+          "offset": 1998560,
+          "name": null,
+          "id": 18,
+          "rect": {
+            "x": 496,
+            "y": 0,
+            "width": 136,
+            "height": 162
+          },
+          "z": 4,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 2290280,
+          "streamOffset": 1998560,
+          "originalRect": {
+            "x": 496,
+            "y": 0,
+            "width": 136,
+            "height": 162
+          },
+          "originalZ": 4
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_020_00234de4_board_video_59x78.gif",
+          "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_020_00234de4_board_video_59x78.gif",
+          "width": 59,
+          "height": 78,
+          "frameCount": 5,
+          "offset": 2313700,
+          "name": null,
+          "id": 20,
+          "rect": {
+            "x": 147,
+            "y": 0,
+            "width": 59,
+            "height": 78
+          },
+          "z": 2,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 2419011,
+          "streamOffset": 2313700,
+          "originalRect": {
+            "x": 147,
+            "y": 0,
+            "width": 59,
+            "height": 78
+          },
+          "originalZ": 2
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_022_002500f7_board_video_102x111.gif",
+          "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_022_002500f7_board_video_102x111.gif",
+          "width": 102,
+          "height": 111,
+          "frameCount": 21,
+          "offset": 2425079,
+          "name": null,
+          "id": 22,
+          "rect": {
+            "x": 204,
+            "y": 0,
+            "width": 102,
+            "height": 111
+          },
+          "z": 3,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 2758687,
+          "streamOffset": 2425079,
+          "originalRect": {
+            "x": 204,
+            "y": 0,
+            "width": 102,
+            "height": 111
+          },
+          "originalZ": 3
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_024_002a4aa3_board_video_83x114.gif",
+          "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_024_002a4aa3_board_video_83x114.gif",
+          "width": 83,
+          "height": 114,
+          "frameCount": 7,
+          "offset": 2771619,
+          "name": null,
+          "id": 24,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 83,
+            "height": 114
+          },
+          "z": 2,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 2895064,
+          "streamOffset": 2771619,
+          "originalRect": {
+            "x": 0,
+            "y": 0,
+            "width": 83,
+            "height": 114
+          },
+          "originalZ": 2
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_026_002c57ac_board_video_30x18.gif",
+          "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_026_002c57ac_board_video_30x18.gif",
+          "width": 30,
+          "height": 18,
+          "frameCount": 3,
+          "offset": 2906028,
+          "name": null,
+          "id": 26,
+          "rect": {
+            "x": 21,
+            "y": 304,
+            "width": 30,
+            "height": 18
+          },
+          "z": 1,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 2997282,
+          "streamOffset": 2906028,
+          "originalRect": {
+            "x": 21,
+            "y": 304,
+            "width": 30,
+            "height": 18
+          },
+          "originalZ": 1
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_028_002dc3ce_board_video_65x67.gif",
+          "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_028_002dc3ce_board_video_65x67.gif",
+          "width": 65,
+          "height": 67,
+          "frameCount": 3,
+          "offset": 2999246,
+          "name": null,
+          "id": 28,
+          "rect": {
+            "x": 572,
+            "y": 279,
+            "width": 65,
+            "height": 67
+          },
+          "z": 5,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 3098597,
+          "streamOffset": 2999246,
+          "originalRect": {
+            "x": 572,
+            "y": 279,
+            "width": 65,
+            "height": 67
+          },
+          "originalZ": 5
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_030_002f5f1d_board_video_297x56.gif",
+          "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_030_002f5f1d_board_video_297x56.gif",
+          "width": 297,
+          "height": 56,
+          "frameCount": 28,
+          "offset": 3104541,
+          "name": null,
+          "id": 30,
+          "rect": {
+            "x": 343,
+            "y": 424,
+            "width": 297,
+            "height": 56
+          },
+          "z": 3,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 3405413,
+          "streamOffset": 3104541,
+          "originalRect": {
+            "x": 343,
+            "y": 424,
+            "width": 297,
+            "height": 56
+          },
+          "originalZ": 3
+        }
+      ],
+      "audio": [
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_000_0007800f_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_000_0007800f_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 491535,
+          "id": 0
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_002_0008fad0_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_002_0008fad0_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 588496,
+          "id": 2
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_004_000c0f89_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_004_000c0f89_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 790409,
+          "id": 4
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_006_000fe084_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_006_000fe084_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 1040516,
+          "id": 6
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_008_00118596_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_008_00118596_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 1148310,
+          "id": 8
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_010_001389a4_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_010_001389a4_board_video_audio.wav",
+          "durationSeconds": 4.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 1280420,
+          "id": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_012_0017d509_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_012_0017d509_board_video_audio.wav",
+          "durationSeconds": 3.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 1561865,
+          "id": 12
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_014_001ae918_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_014_001ae918_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 1763608,
+          "id": 14
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_016_001d0952_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_016_001d0952_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 1902930,
+          "id": 16
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_018_001e7ee0_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_018_001e7ee0_board_video_audio.wav",
+          "durationSeconds": 3.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 1998560,
+          "id": 18
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_020_00234de4_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_020_00234de4_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 2313700,
+          "id": 20
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_022_002500f7_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_022_002500f7_board_video_audio.wav",
+          "durationSeconds": 4.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 2425079,
+          "id": 22
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_024_002a4aa3_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_024_002a4aa3_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 2771619,
+          "id": 24
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_026_002c57ac_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_026_002c57ac_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 2906028,
+          "id": 26
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_028_002dc3ce_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_028_002dc3ce_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 2999246,
+          "id": 28
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_030_002f5f1d_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_030_002f5f1d_board_video_audio.wav",
+          "durationSeconds": 4.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 3104541,
+          "id": 30
+        }
+      ]
+    },
+    {
+      "id": "02_HotSpot_Holder",
+      "type": "HotSpot_Holder",
+      "index": 2,
+      "z": 2,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "sourceOffset": 3423597,
+      "privateOffset": 3424702,
+      "privateSize": 1635,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "03_Text_Holder",
+      "type": "Text_Holder",
+      "index": 3,
+      "z": 3,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "sourceOffset": 3426337,
+      "privateOffset": 3427963,
+      "privateSize": 16518,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "04_Sound_Holder",
+      "type": "Sound_Holder",
+      "index": 4,
+      "z": 0,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "geometryConfidence": "not_visual",
+      "sourceOffset": 3444481,
+      "privateOffset": 3445377,
+      "privateSize": 463784,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\04_Sound_Holder_000_0034928d.wav",
+          "url": "../extracted_assets/bdf/TRALALA/embedded/04_Sound_Holder_000_0034928d.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 3445389,
+          "id": 0
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\04_Sound_Holder_001_00366275.wav",
+          "url": "../extracted_assets/bdf/TRALALA/embedded/04_Sound_Holder_001_00366275.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 3564149,
+          "id": 1
+        }
+      ]
+    }
+  ],
+  "script": {
+    "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\script.txt",
+    "url": "../extracted_assets/bdf/TRALALA/script.txt",
+    "handlers": [
+      {
+        "name": "OnOpenPage",
+        "signature": "OnOpenPage()"
+      },
+      {
+        "name": "OnClosePage",
+        "signature": "OnClosePage(void)"
+      },
+      {
+        "name": "SetTextMode",
+        "signature": "SetTextMode()"
+      },
+      {
+        "name": "if",
+        "signature": "if(textMode==0)"
+      },
+      {
+        "name": "while",
+        "signature": "while(index < 16)"
+      },
+      {
+        "name": "while",
+        "signature": "while(index < 16)"
+      },
+      {
+        "name": "HotSpot_Holder.LeftButtonClickOn",
+        "signature": "HotSpot_Holder.LeftButtonClickOn(int rectID)"
+      },
+      {
+        "name": "HotSpot_Holder.MouseMoveIn",
+        "signature": "HotSpot_Holder.MouseMoveIn(int rectID)"
+      },
+      {
+        "name": "HotSpot_Holder.MouseMoveOut",
+        "signature": "HotSpot_Holder.MouseMoveOut(int rectID)"
+      },
+      {
+        "name": "Text_Holder.PlayMark",
+        "signature": "Text_Holder.PlayMark(int textID,int markNo)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(markNo)"
+      },
+      {
+        "name": "Text_Holder.EndOfSynchroText",
+        "signature": "Text_Holder.EndOfSynchroText(int textID)"
+      },
+      {
+        "name": "Group.HotSpot_Holder.MouseMoveIn",
+        "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(rectID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(toolbar)"
+      },
+      {
+        "name": "if",
+        "signature": "if(toolbarPhase==0)"
+      },
+      {
+        "name": "if",
+        "signature": "if(txtHotSpotOn==0)"
+      },
+      {
+        "name": "Group.Sprite_Holder.InPlace",
+        "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(spriteID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(x==480)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(toolbarCase)"
+      },
+      {
+        "name": "if",
+        "signature": "if(x==0)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseMoveIn",
+        "signature": "Group.Sprite_Holder.MouseMoveIn(int spriteID)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseMoveOut",
+        "signature": "Group.Sprite_Holder.MouseMoveOut(int spriteID)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseClickOnDown",
+        "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(spriteID==11)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(spriteID)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseClickOnUp",
+        "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(toolbarPhase==0)"
+      },
+      {
+        "name": "Group.Sprite_Holder.EndAnimation",
+        "signature": "Group.Sprite_Holder.EndAnimation(int spriteID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(toolbarPhase==0)"
+      },
+      {
+        "name": "Text_Holder.ScrollTextUp",
+        "signature": "Text_Holder.ScrollTextUp(int textID)"
+      },
+      {
+        "name": "Text_Holder.ScrollTextDown",
+        "signature": "Text_Holder.ScrollTextDown(int textID)"
+      },
+      {
+        "name": "Text_Holder.EndScrollText",
+        "signature": "Text_Holder.EndScrollText(int textID)"
+      },
+      {
+        "name": "Text_Holder.MouseMoveIn",
+        "signature": "Text_Holder.MouseMoveIn(int textID)"
+      },
+      {
+        "name": "Text_Holder.MouseMoveOut",
+        "signature": "Text_Holder.MouseMoveOut(int textID)"
+      },
+      {
+        "name": "Text_Holder.ClickOnText",
+        "signature": "Text_Holder.ClickOnText(int textID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(playStatus)"
+      },
+      {
+        "name": "Sound_Holder.EndPlaySound",
+        "signature": "Sound_Holder.EndPlaySound(int soundID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(soundID==0 && textMode)"
+      },
+      {
+        "name": "OnLButtonDown",
+        "signature": "OnLButtonDown(int x,int y)"
+      },
+      {
+        "name": "OnTimer",
+        "signature": "OnTimer(void)"
+      },
+      {
+        "name": "OnRButtonDown",
+        "signature": "OnRButtonDown(int x,int y)"
+      }
+    ],
+    "rawText": "//###########################################################################\n\n//Script code\n\n//###########################################################################\n\n\n\n\n\nOnOpenPage()\n\n{\n\n\t// Add your component and variables initialization code here\n\n\t// WARNING: All variables definied on this function are global for this page\n\n\n\n//   if( IsProject()==0 )  int textMode = 0;\n\n   int textMode = 0;\n\n\n\n   int curP=-1;\n\n\n\n\n\n   LoadGroup(\"cursors.grp\");\n\n   SetCursor(0);\n\n\n\n//#############################################################################\n\n   int toolbar=0;\n\n   int toolbarCase=0;\n\n   int toolbarPhase=0;\n\n   int txtHotSpotOn=0;\n\n   int playStatus=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n//############################################################################\n\n   SetTextMode();\n\n   FadeScreen(1,1000);\n\n//   SetTimer(5000);\n\n}\n\n\n\n\n\nvoid OnClosePage(void)\n\n{\n\n\t// Add your close page handler code here\n\n\n\n}\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid SetTextMode()\n\n{\n\n   Text_Holder.StopSynchroText(0);\n\n   Text_Holder.SetTextOffsets(0,0,0);\n\n\n\n   curP = -1;\n\n\n\n   Transparent_Video_Holder.Stop();\n\n   if(textMode==0)\n\n   {\n\n      DisableScreen();\n\n      int index = 0;\n\n      while( index < 16 )\n\n      {\n\n         Bitmap_Holder.HideBitmap(index);\n\n         index++;\n\n      }\n\n      EnableScreen();\n\n      ShowBuffer();\n\n      playStatus = 0;\n\n      Sound_Holder.Stop(0);\n\n      Text_Holder.HideText(0);\n\n      Text_Holder.PlaySynchroText(0);\n\n   }\n\n   else\n\n   {\n\n      DisableScreen();\n\n      Text_Holder.DisableMouse(0);\n\n      int index = 0;\n\n      Text_Holder.ShowText(0);\n\n      while( index < 16 )\n\n      {\n\n         Bitmap_Holder.ShowBitmap(index);\n\n         index++;\n\n      }\n\n      EnableScreen();\n\n      ShowBuffer();\n\n      playStatus = 1;   \n\n      Sound_Holder.PlayDSound(0);\n\n   }\n\n}\n\n\n\n\n\n \n\nvoid HotSpot_Holder.LeftButtonClickOn(int rectID)\n\n{\n\n   if(curP<15)   return;\n\n   Transparent_Video_Holder.Play(rectID,0);\n\n}\n\n\n\n \n\nvoid HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n   if(curP<15)   return;\n\n   SetCursor(1);\n\n}\n\n\n\n \n\nvoid HotSpot_Holder.MouseMoveOut(int rectID)\n\n{\n\n   if(curP<15)   return;\n\n   SetCursor(0);\n\n}\n\n\n\n \n\nvoid Text_Holder.PlayMark(int textID,int markNo)\n\n{\n\n   if( textMode ) return;\n\n   int olP=curP;\n\n   switch(markNo)\n\n   {\n\n      case 3:\n\n      case 4:\n\n      case 5:\n\n      case 6:\n\n      case 7:\n\n      case 9:\n\n      case 11:\n\n      case 32:\n\n      case 33:\n\n      case 34:\n\n      case 35:\n\n      case 36:\n\n      case 37:\n\n      case 38:\n\n      case 39:\n\n      case 41:\n\n         curP++;\n\n         break;\n\n   }\n\n   if(olP!=curP)  Bitmap_Holder.ShowBitmap(curP);\n\n}\n\n\n\n \n\nvoid Text_Holder.EndOfSynchroText(int textID)\n\n{\n\n   if( textMode ) return;\n\n   playStatus=0;\n\n   Transparent_Video_Holder.Play(15,0);\n\n}\n\n\n\n \n\n//############################################################# T O O L B A R #######\n\n//#############################################################---------------#######\n\nvoid Group.HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n   switch(rectID)\n\n   {\n\n      case 0:\n\n         Group.HotSpot_Holder.DisableHotSpot(0);\n\n         Group.Sprite_Holder.DisableTimers();\n\n\n\n         Group.Sprite_Holder.GotoXY(0,480,0);\n\n         Group.Sprite_Holder.GotoXY(2,544,14);\n\n         Group.Sprite_Holder.GotoXY(3,584,14);\n\n         Group.Sprite_Holder.GotoXY(4,515,84);\n\n         Group.Sprite_Holder.GotoXY(5,559,210);\n\n         Group.Sprite_Holder.GotoXY(6,558,282);\n\n         Group.Sprite_Holder.GotoXY(7,557,404);\n\n   \n\n         Group.Sprite_Holder.SynchronizeTimers();\n\n         Group.Sprite_Holder.EnableTimers();\n\n         Group.Sound_Holder.PlayDSound(0);\n\n         break;\n\n      case 1:\n\n         if(toolbar)\n\n         {\n\n            Group.Sprite_Holder.DisableTimers();\n\n   \n\n            if(toolbarPhase==0)\n\n            {\n\n               Group.Sprite_Holder.GotoXY(0,640,0);\n\n               Group.Sprite_Holder.GotoXY(2,704,14);\n\n               Group.Sprite_Holder.GotoXY(3,744,14);\n\n               Group.Sprite_Holder.GotoXY(4,675,84);\n\n               Group.Sprite_Holder.GotoXY(5,719,210);\n\n               Group.Sprite_Holder.GotoXY(6,718,282);\n\n               Group.Sprite_Holder.GotoXY(7,717,404);\n\n            }\n\n            else\n\n            {\n\n               Group.Sprite_Holder.GotoXY(0,640,0);\n\n               Group.Sprite_Holder.GotoXY(8,693,22);\n\n               Group.Sprite_Holder.GotoXY(9,708,156);\n\n               Group.Sprite_Holder.GotoXY(7,717,404);\n\n            }\n\n            Group.Sprite_Holder.SynchronizeTimers();\n\n            Group.Sprite_Holder.EnableTimers();\n\n            Group.Sound_Holder.PlayDSound(0);\n\n            toolbar=0;\n\n            toolbarPhase=0;\n\n         }\n\n         else\n\n         {\n\n            Group.Sprite_Holder.GotoXY(11,-56,-70);\n\n            if(toolbarCase!=11)  Group.Sound_Holder.PlayDSound(2);\n\n            SetCursor(0);\n\n         }\n\n         txtHotSpotOn=0;\n\n         Group.HotSpot_Holder.DisableHotSpot(1);\n\n         Group.HotSpot_Holder.EnableHotSpot(0);\n\n         toolbarCase=0;\n\n         break;\n\n      case 2:\n\n         if(txtHotSpotOn==0)   \n\n         {\n\n            Group.Sprite_Holder.GotoXY(11,0,0);\n\n            Group.Sound_Holder.PlayDSound(3);\t\n\n         }\n\n         break;\n\n   }\n\n}\n\n\n\n\n\nvoid Group.Sprite_Holder.InPlace(int spriteID,int x,int y)\n\n{\n\n   switch(spriteID)\n\n   {\n\n      case 0:\n\n         if(x==480)\n\n         {\n\n            toolbar=1;\n\n            Group.HotSpot_Holder.EnableHotSpot(1);\n\n            SetCursor(1);\n\n         }\n\n         else\n\n         {\n\n            SetCursor(0);\n\n            Group.Sprite_Holder.ChangePhase(2,0);\n\n            Group.Sprite_Holder.ChangePhase(3,0);\n\n            Group.Sprite_Holder.ChangePhase(4,0);\n\n            Group.Sprite_Holder.ChangePhase(5,0);\n\n            Group.Sprite_Holder.ChangePhase(6,0);\n\n            Group.Sprite_Holder.ChangePhase(7,0);\n\n            Group.Sprite_Holder.ChangePhase(8,0);\n\n            Group.Sprite_Holder.ChangePhase(9,0);\n\n            switch(toolbarCase)\n\n            {\n\n            case 2:   //lewo   \n\n               FadeScreen(0,1000);\n\n               LoadPage(\"grzesiu.bdf\");\n\n               break;\n\n            case 3:   //prawo\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"okulary.bdf\");\n\n               break;\n\n            case 4:   //recytacja\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"tral_r.bdf\");\n\n               break;\n\n            case 5:   //roznice\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"tralal_c.bdf\");\n\n               break;\n\n            case 6:   //puzzle\n\n               Group.Sprite_Holder.DisableTimers();\n\n\n\n               Group.Sprite_Holder.GotoXY(0,480,0);\n\n               Group.Sprite_Holder.GotoXY(8,533,22);\n\n               Group.Sprite_Holder.GotoXY(9,548,156);\n\n               Group.Sprite_Holder.GotoXY(7,557,404);\n\n\n\n               Group.Sprite_Holder.SynchronizeTimers();\n\n               Group.Sprite_Holder.EnableTimers();\n\n               Group.Sound_Holder.PlayDSound(0);\n\n               toolbarPhase=1;\n\n               break;\n\n            case 7:   //Plansza wyboru\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"Wyborw.bdf\");\n\n               break;\n\n            case 8:   //puzzle trudne\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"tralalp1.bdf\");\n\n               break;\n\n            case 9:   //puzzle latwe\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"tralalp2.bdf\");\n\n               break;\n\n            }\n\n         }\n\n         break;\n\n      case 11:\n\n         if(x==0)\n\n         {\n\n            Group.HotSpot_Holder.EnableHotSpot(1);\n\n            txtHotSpotOn=1;\n\n            SetCursor(1);\n\n         }\n\n         break;\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseMoveIn(int spriteID)\n\n{\n\n   if(spriteID && toolbar)\n\n      SetCursor(1);\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseMoveOut(int spriteID)\n\n{\n\n   if(spriteID)\n\n      SetCursor(0);\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnDown(int spriteID)\n\n{\n\n   if(spriteID==0)   return;\n\n   if(spriteID==11)\n\n   {\n\n      Group.Sprite_Holder.GotoXY(11,-56,-70);\n\n      Group.Sound_Holder.PlayDSound(2);\t\n\n      toolbarCase=spriteID;\n\n      SetCursor(0);\n\n      if(textMode)    textMode=0;\n\n      else            textMode=1;\n\n      SetTextMode();\n\n   }\n\n   else\n\n   {\n\n      Group.HotSpot_Holder.DisableHotSpot(1);\n\n      Group.Sprite_Holder.ChangePhase(spriteID,1);\n\n      switch(spriteID)\t\n\n      {\n\n         case 2:   //lewo\n\n         case 3:   //prawo \n\n            Group.Sound_Holder.PlayDSound(4);\n\n            break;\n\n         case 4:   //recytacja\n\n            Group.Sound_Holder.PlayDSound(5);\n\n            break;\n\n         case 5:   //roznice\n\n            Group.Sound_Holder.PlayDSound(6);\n\n            break;\n\n         case 6:   //puzzle\n\n            Group.Sound_Holder.PlayDSound(7);\n\n            break;\n\n         case 7:   //plansza glowna\n\n            Group.Sound_Holder.PlayDSound(8);\n\n            break;\n\n         case 8:   //puzzle latwe\n\n            Group.Sound_Holder.PlayDSound(9);\n\n            break;\n\n         case 9:   //puzzle trudne\n\n            Group.Sound_Holder.PlayDSound(10);\n\n            break;\n\n         case 10:  //parent window\n\n            Group.Sound_Holder.PlayDSound(4);\n\n            break;\n\n      }\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnUp(int spriteID)\n\n{\n\n   if(spriteID==0 || spriteID==5 || spriteID==6 || spriteID==8 || spriteID==9 || spriteID==11)   return;\n\n   Group.Sprite_Holder.DisableTimers();\n\n\n\n   if(toolbarPhase==0)\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(2,704,14);\n\n      Group.Sprite_Holder.GotoXY(3,744,14);\n\n      Group.Sprite_Holder.GotoXY(4,675,84);\n\n      Group.Sprite_Holder.GotoXY(5,719,210);\n\n      Group.Sprite_Holder.GotoXY(6,718,282);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n   }\n\n   else\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(8,693,22);\n\n      Group.Sprite_Holder.GotoXY(9,708,156);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n      toolbarPhase=0;\n\n   }\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID;\n\n}\n\n\n\nvoid Group.Sprite_Holder.EndAnimation(int spriteID)\n\n{\n\n   if(spriteID!=5 && spriteID!=6 && spriteID!=8 && spriteID!=9)   return;\n\n\n\n   Group.Sprite_Holder.ChangePhase(spriteID,2);\n\n\n\n   Group.Sprite_Holder.DisableTimers();\n\n\n\n   if(toolbarPhase==0)\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(2,704,14);\n\n      Group.Sprite_Holder.GotoXY(3,744,14);\n\n      Group.Sprite_Holder.GotoXY(4,675,84);\n\n      Group.Sprite_Holder.GotoXY(5,719,210);\n\n      Group.Sprite_Holder.GotoXY(6,718,282);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n   }\n\n   else\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(8,693,22);\n\n      Group.Sprite_Holder.GotoXY(9,708,156);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n      toolbarPhase=0;\n\n   }\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID;\n\n}\n\n//#############################################################\n\n//############################################################# \n\n\n\n\n\n\n\n\n\n\n\n \n\nvoid Text_Holder.ScrollTextUp(int textID)\n\n{\n\n   if( textMode == 0 ) return;\n\n\n\n   SetCursor(3);\n\n}\n\n\n\n \n\nvoid Text_Holder.ScrollTextDown(int textID)\n\n{\n\n   if( textMode == 0 ) return;\n\n\n\n   SetCursor(4);\n\n}\n\n\n\n \n\nvoid Text_Holder.EndScrollText(int textID)\n\n{\n\n   if( textMode == 0 ) return;\n\n   if(playStatus)  SetCursor(2);\n\n   else            SetCursor(5);\n\n}\n\n\n\n \n\nvoid Text_Holder.MouseMoveIn(int textID)\n\n{\n\n   if( textMode == 0 ) return;\n\n\n\n   if(playStatus)\n\n      SetCursor(2);\n\n   else\n\n      SetCursor(5);\n\n}\n\n\n\n \n\nvoid Text_Holder.MouseMoveOut(int textID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\n \n\nvoid Text_Holder.ClickOnText(int textID)\n\n{\n\n   if( textMode == 0 ) return;\n\n\n\n   if(playStatus)\n\n   {\n\n      playStatus=0;\n\n      Sound_Holder.Stop(0);\n\n      Text_Holder.StopSynchroText(0);\n\n      SetCursor(5);\n\n   }\n\n   else\n\n   {\n\n      playStatus=1;\n\n      Text_Holder.PlaySynchroText(0);\n\n      SetCursor(2);\n\n   }\n\n}\n\n\n\nvoid Sound_Holder.EndPlaySound(int soundID)\n\n{\n\n   if(soundID==0 && textMode)\n\n   { \n\n      playStatus=1;\n\n      Text_Holder.EnableMouse(0);\n\n      Text_Holder.PlaySynchroText(0);\n\n   }\n\n}\n\n  \n\nvoid OnLButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   Sound_Holder.Stop(1);\n\n   SetTimer(0);\n\n}\n\n \n\nvoid OnTimer(void)\n\n{\n\n        //Add your command handler code here\n\n   SetTimer(0);\n\n   Sound_Holder.PlayDSound(1);\n\n}\n\n \n\nvoid OnRButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   Sound_Holder.PlayDSound(1);\n\n}\n\n "
+  },
+  "warnings": [
+    "3 component(s) have unknown geometry and default to 0,0.",
+    "Recovered 16 TransparentVideoHolder asset rect(s) from serialized entries."
+  ]
+}

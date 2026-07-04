@@ -1,0 +1,370 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MURARZ.BDF",
+  "size": 1684708,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Wednesday, November 12, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    8
+  ],
+  "background_flag": 0,
+  "background_color_index": 0,
+  "palette_size": 1024,
+  "dib_size": 308180,
+  "component_list_offset": 309345,
+  "component_list_version": 1,
+  "component_count": 4,
+  "components": [
+    {
+      "index": 0,
+      "offset": 309353,
+      "clsid": "0D8A5736-5337-11D0-B444-008048EB5D40",
+      "display_name": "Bitmap_Holder",
+      "private_offset": 310485,
+      "private_size": 42636,
+      "embedded": []
+    },
+    {
+      "index": 1,
+      "offset": 353121,
+      "clsid": "DA768116-5341-11D0-B444-008048EB5D40",
+      "display_name": "HotSpot_Holder",
+      "private_offset": 354226,
+      "private_size": 726,
+      "embedded": []
+    },
+    {
+      "index": 2,
+      "offset": 354952,
+      "clsid": "1720D306-6932-11D0-B468-008048EB5D40",
+      "display_name": "Sound_Holder",
+      "private_offset": 355848,
+      "private_size": 1299798,
+      "embedded": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_000_00056e14.wav",
+          "offset": 355860,
+          "size": 705838,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_001_001033a2.wav",
+          "offset": 1061794,
+          "size": 26926,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_002_00109d30.wav",
+          "offset": 1088816,
+          "size": 22830,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_003_0010f6be.wav",
+          "offset": 1111742,
+          "size": 120196,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_004_0012cca2.wav",
+          "offset": 1232034,
+          "size": 234432,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_005_001660c2.wav",
+          "offset": 1466562,
+          "size": 61516,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_006_0017516e.wav",
+          "offset": 1528174,
+          "size": 127380,
+          "extension": ".wav"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "offset": 1655646,
+      "clsid": "AD45ADB6-5290-11D0-B442-008048EB5D40",
+      "display_name": "Text_Holder",
+      "private_offset": 1657272,
+      "private_size": 13207,
+      "embedded": []
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "dib",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ\\background.dib",
+      "size": 308180
+    },
+    {
+      "kind": "bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ\\background.bmp",
+      "size": 308194
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ\\script.txt",
+      "size": 13842
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_000_00056e14.wav",
+      "size": 705838
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_001_001033a2.wav",
+      "size": 26926
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_002_00109d30.wav",
+      "size": 22830
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_003_0010f6be.wav",
+      "size": 120196
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_004_0012cca2.wav",
+      "size": 234432
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_005_001660c2.wav",
+      "size": 61516
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_006_0017516e.wav",
+      "size": 127380
+    }
+  ],
+  "script": {
+    "version_offset": 1670479,
+    "version": 1,
+    "string_prefix_offset": 1670483,
+    "text_offset": 1670486,
+    "text_length": 13842,
+    "text_end": 1684328,
+    "engine_state": {
+      "offset": 1684328,
+      "version": 2,
+      "block_count": 5,
+      "handler_offsets": {
+        "field_38": 13481,
+        "field_3c": 0,
+        "field_30": 0,
+        "field_34": 341
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 1684352,
+          "start_offset": 2466,
+          "duplicate_start_offset": 2466,
+          "case_count": 6,
+          "end_or_body_offset": 3027,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 2499
+            },
+            {
+              "value": 1,
+              "target_offset": 2589
+            },
+            {
+              "value": 2,
+              "target_offset": 2680
+            },
+            {
+              "value": 3,
+              "target_offset": 2771
+            },
+            {
+              "value": 4,
+              "target_offset": 2862
+            },
+            {
+              "value": 5,
+              "target_offset": 2953
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 1684420,
+          "start_offset": 3644,
+          "duplicate_start_offset": 3644,
+          "case_count": 3,
+          "end_or_body_offset": 5835,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 3671
+            },
+            {
+              "value": 1,
+              "target_offset": 4286
+            },
+            {
+              "value": 2,
+              "target_offset": 5668
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "file_offset": 1684464,
+          "start_offset": 5929,
+          "duplicate_start_offset": 5929,
+          "case_count": 2,
+          "end_or_body_offset": 8309,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 5956
+            },
+            {
+              "value": 11,
+              "target_offset": 8144
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "file_offset": 1684500,
+          "start_offset": 6602,
+          "duplicate_start_offset": 6602,
+          "case_count": 8,
+          "end_or_body_offset": 8099,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 6653
+            },
+            {
+              "value": 3,
+              "target_offset": 6785
+            },
+            {
+              "value": 4,
+              "target_offset": 6918
+            },
+            {
+              "value": 5,
+              "target_offset": 7052
+            },
+            {
+              "value": 6,
+              "target_offset": 7185
+            },
+            {
+              "value": 7,
+              "target_offset": 7713
+            },
+            {
+              "value": 8,
+              "target_offset": 7851
+            },
+            {
+              "value": 9,
+              "target_offset": 7989
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "file_offset": 1684584,
+          "start_offset": 9019,
+          "duplicate_start_offset": 9019,
+          "case_count": 9,
+          "end_or_body_offset": 9862,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 9058
+            },
+            {
+              "value": 3,
+              "target_offset": 9090
+            },
+            {
+              "value": 4,
+              "target_offset": 9189
+            },
+            {
+              "value": 5,
+              "target_offset": 9286
+            },
+            {
+              "value": 6,
+              "target_offset": 9382
+            },
+            {
+              "value": 7,
+              "target_offset": 9486
+            },
+            {
+              "value": 8,
+              "target_offset": 9588
+            },
+            {
+              "value": 9,
+              "target_offset": 9691
+            },
+            {
+              "value": 10,
+              "target_offset": 9795
+            }
+          ]
+        }
+      ],
+      "table_count": 1,
+      "table_a": [
+        988
+      ],
+      "table_b": [
+        8
+      ],
+      "versioned_tail": {
+        "field_44": 13611,
+        "field_48": 0,
+        "field_4c": 13742,
+        "field_50": 0
+      },
+      "end_offset": 1684704
+    }
+  }
+}

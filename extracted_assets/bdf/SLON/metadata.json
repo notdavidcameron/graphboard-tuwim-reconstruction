@@ -1,0 +1,5346 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLON.BDF",
+  "size": 3869704,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Wednesday, November 12, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    8
+  ],
+  "background_flag": 1,
+  "background_color_index": 229,
+  "palette_size": 1024,
+  "dib_size": 0,
+  "component_list_offset": 1165,
+  "component_list_version": 1,
+  "component_count": 5,
+  "components": [
+    {
+      "index": 0,
+      "offset": 1173,
+      "clsid": "F7794041-1EB4-11D1-9B25-008048EB5D40",
+      "display_name": "MultiBitmap",
+      "private_offset": 2178,
+      "private_size": 2987356,
+      "embedded": [
+        {
+          "kind": "multibitmap_bmp",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_000_niebo 01.bmp",
+          "offset": 2190,
+          "size": 86838,
+          "pixel_size": 85760,
+          "width": 640,
+          "height": 134,
+          "name": "niebo 01"
+        },
+        {
+          "kind": "multibitmap_bmp",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_001_niebo 02.bmp",
+          "offset": 88146,
+          "size": 86838,
+          "pixel_size": 85760,
+          "width": 640,
+          "height": 134,
+          "name": "niebo 02"
+        },
+        {
+          "kind": "multibitmap_bmp",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_002_niebo 03.bmp",
+          "offset": 174102,
+          "size": 86838,
+          "pixel_size": 85760,
+          "width": 640,
+          "height": 134,
+          "name": "niebo 03"
+        },
+        {
+          "kind": "multibitmap_bmp",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_003_niebo 04.bmp",
+          "offset": 260058,
+          "size": 86838,
+          "pixel_size": 85760,
+          "width": 640,
+          "height": 134,
+          "name": "niebo 04"
+        },
+        {
+          "kind": "multibitmap_bmp",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_004_niebo 05.bmp",
+          "offset": 346014,
+          "size": 86838,
+          "pixel_size": 85760,
+          "width": 640,
+          "height": 134,
+          "name": "niebo 05"
+        },
+        {
+          "kind": "multibitmap_bmp",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_005_niebo 06.bmp",
+          "offset": 431970,
+          "size": 86838,
+          "pixel_size": 85760,
+          "width": 640,
+          "height": 134,
+          "name": "niebo 06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_006_tlo 01.raw",
+          "offset": 517926,
+          "size": 235520,
+          "pixel_size": 235520,
+          "width": 640,
+          "height": 480,
+          "name": "tlo 01"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_007_tlo 02.raw",
+          "offset": 753642,
+          "size": 235520,
+          "pixel_size": 235520,
+          "width": 640,
+          "height": 480,
+          "name": "tlo 02"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_008_tlo 03.raw",
+          "offset": 989358,
+          "size": 235520,
+          "pixel_size": 235520,
+          "width": 640,
+          "height": 480,
+          "name": "tlo 03"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_009_tlo 04.raw",
+          "offset": 1225074,
+          "size": 235520,
+          "pixel_size": 235520,
+          "width": 640,
+          "height": 480,
+          "name": "tlo 04"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_010_tlo 05.raw",
+          "offset": 1460790,
+          "size": 235520,
+          "pixel_size": 235520,
+          "width": 640,
+          "height": 480,
+          "name": "tlo 05"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_011_tlo 06.raw",
+          "offset": 1696506,
+          "size": 235520,
+          "pixel_size": 235520,
+          "width": 640,
+          "height": 480,
+          "name": "tlo 06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_012_s01.raw",
+          "offset": 1932222,
+          "size": 56580,
+          "pixel_size": 56580,
+          "width": 539,
+          "height": 337,
+          "name": "s01"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_013_s02.raw",
+          "offset": 1988998,
+          "size": 56580,
+          "pixel_size": 56580,
+          "width": 539,
+          "height": 337,
+          "name": "s02"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_014_s03.raw",
+          "offset": 2045774,
+          "size": 56580,
+          "pixel_size": 56580,
+          "width": 539,
+          "height": 337,
+          "name": "s03"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_015_s04.raw",
+          "offset": 2102550,
+          "size": 56580,
+          "pixel_size": 56580,
+          "width": 539,
+          "height": 337,
+          "name": "s04"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_016_s05.raw",
+          "offset": 2159326,
+          "size": 56580,
+          "pixel_size": 56580,
+          "width": 539,
+          "height": 337,
+          "name": "s05"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_017_s06.raw",
+          "offset": 2216102,
+          "size": 56580,
+          "pixel_size": 56580,
+          "width": 539,
+          "height": 337,
+          "name": "s06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_018_p01.raw",
+          "offset": 2272878,
+          "size": 2256,
+          "pixel_size": 2256,
+          "width": 379,
+          "height": 141,
+          "name": "p01"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_019_p02.raw",
+          "offset": 2275330,
+          "size": 2256,
+          "pixel_size": 2256,
+          "width": 379,
+          "height": 141,
+          "name": "p02"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_020_p03.raw",
+          "offset": 2277782,
+          "size": 2256,
+          "pixel_size": 2256,
+          "width": 379,
+          "height": 141,
+          "name": "p03"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_021_p04.raw",
+          "offset": 2280234,
+          "size": 2256,
+          "pixel_size": 2256,
+          "width": 379,
+          "height": 141,
+          "name": "p04"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_022_p05.raw",
+          "offset": 2282686,
+          "size": 2256,
+          "pixel_size": 2256,
+          "width": 379,
+          "height": 141,
+          "name": "p05"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_023_p06.raw",
+          "offset": 2285138,
+          "size": 2256,
+          "pixel_size": 2256,
+          "width": 379,
+          "height": 141,
+          "name": "p06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_024_p01.raw",
+          "offset": 2287590,
+          "size": 1560,
+          "pixel_size": 1560,
+          "width": 449,
+          "height": 129,
+          "name": "p01"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_025_p02.raw",
+          "offset": 2289346,
+          "size": 1560,
+          "pixel_size": 1560,
+          "width": 449,
+          "height": 129,
+          "name": "p02"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_026_p03.raw",
+          "offset": 2291102,
+          "size": 1560,
+          "pixel_size": 1560,
+          "width": 449,
+          "height": 129,
+          "name": "p03"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_027_p04.raw",
+          "offset": 2292858,
+          "size": 1560,
+          "pixel_size": 1560,
+          "width": 449,
+          "height": 129,
+          "name": "p04"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_028_p05.raw",
+          "offset": 2294614,
+          "size": 1560,
+          "pixel_size": 1560,
+          "width": 449,
+          "height": 129,
+          "name": "p05"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_029_p06.raw",
+          "offset": 2296370,
+          "size": 1560,
+          "pixel_size": 1560,
+          "width": 449,
+          "height": 129,
+          "name": "p06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_030_p01.raw",
+          "offset": 2298126,
+          "size": 1792,
+          "pixel_size": 1792,
+          "width": 544,
+          "height": 131,
+          "name": "p01"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_031_p02.raw",
+          "offset": 2300114,
+          "size": 1792,
+          "pixel_size": 1792,
+          "width": 544,
+          "height": 131,
+          "name": "p02"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_032_p03.raw",
+          "offset": 2302102,
+          "size": 1792,
+          "pixel_size": 1792,
+          "width": 544,
+          "height": 131,
+          "name": "p03"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_033_p04.raw",
+          "offset": 2304090,
+          "size": 1792,
+          "pixel_size": 1792,
+          "width": 544,
+          "height": 131,
+          "name": "p04"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_034_p05.raw",
+          "offset": 2306078,
+          "size": 1792,
+          "pixel_size": 1792,
+          "width": 544,
+          "height": 131,
+          "name": "p05"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_035_pi06.raw",
+          "offset": 2308066,
+          "size": 1792,
+          "pixel_size": 1792,
+          "width": 544,
+          "height": 131,
+          "name": "pi06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_036_korona 01.raw",
+          "offset": 2310054,
+          "size": 4452,
+          "pixel_size": 4452,
+          "width": 417,
+          "height": 61,
+          "name": "korona 01"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_037_korona 02.raw",
+          "offset": 2314702,
+          "size": 4452,
+          "pixel_size": 4452,
+          "width": 417,
+          "height": 61,
+          "name": "korona 02"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_038_korona 03.raw",
+          "offset": 2319350,
+          "size": 4452,
+          "pixel_size": 4452,
+          "width": 417,
+          "height": 61,
+          "name": "korona 03"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_039_korona 04.raw",
+          "offset": 2323998,
+          "size": 4452,
+          "pixel_size": 4452,
+          "width": 417,
+          "height": 61,
+          "name": "korona 04"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_040_korona 05.raw",
+          "offset": 2328646,
+          "size": 4452,
+          "pixel_size": 4452,
+          "width": 417,
+          "height": 61,
+          "name": "korona 05"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_041_korona 06.raw",
+          "offset": 2333294,
+          "size": 4452,
+          "pixel_size": 4452,
+          "width": 417,
+          "height": 61,
+          "name": "korona 06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_042_korona 01.raw",
+          "offset": 2337942,
+          "size": 2520,
+          "pixel_size": 2520,
+          "width": 475,
+          "height": 83,
+          "name": "korona 01"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_043_korona 02.raw",
+          "offset": 2340658,
+          "size": 2520,
+          "pixel_size": 2520,
+          "width": 475,
+          "height": 83,
+          "name": "korona 02"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_044_korona 03.raw",
+          "offset": 2343374,
+          "size": 2520,
+          "pixel_size": 2520,
+          "width": 475,
+          "height": 83,
+          "name": "korona 03"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_045_korona 04.raw",
+          "offset": 2346090,
+          "size": 2520,
+          "pixel_size": 2520,
+          "width": 475,
+          "height": 83,
+          "name": "korona 04"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_046_korona 05.raw",
+          "offset": 2348806,
+          "size": 2520,
+          "pixel_size": 2520,
+          "width": 475,
+          "height": 83,
+          "name": "korona 05"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_047_korona 06.raw",
+          "offset": 2351522,
+          "size": 2520,
+          "pixel_size": 2520,
+          "width": 475,
+          "height": 83,
+          "name": "korona 06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_048_korona 01.raw",
+          "offset": 2354238,
+          "size": 2688,
+          "pixel_size": 2688,
+          "width": 559,
+          "height": 91,
+          "name": "korona 01"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_049_korona 02.raw",
+          "offset": 2357122,
+          "size": 2688,
+          "pixel_size": 2688,
+          "width": 559,
+          "height": 91,
+          "name": "korona 02"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_050_korona 03.raw",
+          "offset": 2360006,
+          "size": 2688,
+          "pixel_size": 2688,
+          "width": 559,
+          "height": 91,
+          "name": "korona 03"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_051_korona 04.raw",
+          "offset": 2362890,
+          "size": 2688,
+          "pixel_size": 2688,
+          "width": 559,
+          "height": 91,
+          "name": "korona 04"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_052_korona 05.raw",
+          "offset": 2365774,
+          "size": 2688,
+          "pixel_size": 2688,
+          "width": 559,
+          "height": 91,
+          "name": "korona 05"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_053_korona 06.raw",
+          "offset": 2368658,
+          "size": 2688,
+          "pixel_size": 2688,
+          "width": 559,
+          "height": 91,
+          "name": "korona 06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_054_kamienie.raw",
+          "offset": 2371542,
+          "size": 9800,
+          "pixel_size": 9800,
+          "width": 408,
+          "height": 474,
+          "name": "kamienie "
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_055_kamienie.raw",
+          "offset": 2381538,
+          "size": 9800,
+          "pixel_size": 9800,
+          "width": 408,
+          "height": 474,
+          "name": "kamienie "
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_056_kamienie.raw",
+          "offset": 2391534,
+          "size": 9800,
+          "pixel_size": 9800,
+          "width": 408,
+          "height": 474,
+          "name": "kamienie "
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_057_kamienie.raw",
+          "offset": 2401530,
+          "size": 9800,
+          "pixel_size": 9800,
+          "width": 408,
+          "height": 474,
+          "name": "kamienie "
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_058_kamienie.raw",
+          "offset": 2411526,
+          "size": 9800,
+          "pixel_size": 9800,
+          "width": 408,
+          "height": 474,
+          "name": "kamienie "
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_059_kamienie.raw",
+          "offset": 2421522,
+          "size": 9800,
+          "pixel_size": 9800,
+          "width": 408,
+          "height": 474,
+          "name": "kamienie "
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_060_k01.raw",
+          "offset": 2431518,
+          "size": 4400,
+          "pixel_size": 4400,
+          "width": 538,
+          "height": 475,
+          "name": "k01"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_061_k02.raw",
+          "offset": 2436114,
+          "size": 4400,
+          "pixel_size": 4400,
+          "width": 538,
+          "height": 475,
+          "name": "k02"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_062_k03.raw",
+          "offset": 2440710,
+          "size": 4400,
+          "pixel_size": 4400,
+          "width": 538,
+          "height": 475,
+          "name": "k03"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_063_k04.raw",
+          "offset": 2445306,
+          "size": 4400,
+          "pixel_size": 4400,
+          "width": 538,
+          "height": 475,
+          "name": "k04"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_064_k05.raw",
+          "offset": 2449902,
+          "size": 4400,
+          "pixel_size": 4400,
+          "width": 538,
+          "height": 475,
+          "name": "k05"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_065_k06.raw",
+          "offset": 2454498,
+          "size": 4400,
+          "pixel_size": 4400,
+          "width": 538,
+          "height": 475,
+          "name": "k06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_066_kwiat 01.raw",
+          "offset": 2459094,
+          "size": 8096,
+          "pixel_size": 8096,
+          "width": 85,
+          "height": 411,
+          "name": "kwiat 01"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_067_kwiat 02.raw",
+          "offset": 2467386,
+          "size": 8096,
+          "pixel_size": 8096,
+          "width": 85,
+          "height": 411,
+          "name": "kwiat 02"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_068_kwiat 03.raw",
+          "offset": 2475678,
+          "size": 8096,
+          "pixel_size": 8096,
+          "width": 85,
+          "height": 411,
+          "name": "kwiat 03"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_069_kwiat 04.raw",
+          "offset": 2483970,
+          "size": 8096,
+          "pixel_size": 8096,
+          "width": 85,
+          "height": 411,
+          "name": "kwiat 04"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_070_kwiat 05.raw",
+          "offset": 2492262,
+          "size": 8096,
+          "pixel_size": 8096,
+          "width": 85,
+          "height": 411,
+          "name": "kwiat 05"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_071_kwiat 06.raw",
+          "offset": 2500554,
+          "size": 8096,
+          "pixel_size": 8096,
+          "width": 85,
+          "height": 411,
+          "name": "kwiat 06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_072_kwiat 01.raw",
+          "offset": 2508846,
+          "size": 12760,
+          "pixel_size": 12760,
+          "width": 160,
+          "height": 406,
+          "name": "kwiat 01"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_073_kwiat 02.raw",
+          "offset": 2521802,
+          "size": 12760,
+          "pixel_size": 12760,
+          "width": 160,
+          "height": 406,
+          "name": "kwiat 02"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_074_kwiat 03.raw",
+          "offset": 2534758,
+          "size": 12760,
+          "pixel_size": 12760,
+          "width": 160,
+          "height": 406,
+          "name": "kwiat 03"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_075_kwiat 04.raw",
+          "offset": 2547714,
+          "size": 12760,
+          "pixel_size": 12760,
+          "width": 160,
+          "height": 406,
+          "name": "kwiat 04"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_076_kwiat 05.raw",
+          "offset": 2560670,
+          "size": 12760,
+          "pixel_size": 12760,
+          "width": 160,
+          "height": 406,
+          "name": "kwiat 05"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_077_kwiat 06.raw",
+          "offset": 2573626,
+          "size": 12760,
+          "pixel_size": 12760,
+          "width": 160,
+          "height": 406,
+          "name": "kwiat 06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_078_kwiat 01.raw",
+          "offset": 2586582,
+          "size": 11520,
+          "pixel_size": 11520,
+          "width": 117,
+          "height": 350,
+          "name": "kwiat 01"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_079_kwiat 02.raw",
+          "offset": 2598298,
+          "size": 11520,
+          "pixel_size": 11520,
+          "width": 117,
+          "height": 350,
+          "name": "kwiat 02"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_080_kwiat 03.raw",
+          "offset": 2610014,
+          "size": 11520,
+          "pixel_size": 11520,
+          "width": 117,
+          "height": 350,
+          "name": "kwiat 03"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_081_kwiat 04.raw",
+          "offset": 2621730,
+          "size": 11520,
+          "pixel_size": 11520,
+          "width": 117,
+          "height": 350,
+          "name": "kwiat 04"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_082_kwiat 05.raw",
+          "offset": 2633446,
+          "size": 11520,
+          "pixel_size": 11520,
+          "width": 117,
+          "height": 350,
+          "name": "kwiat 05"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_083_kwiat 06.raw",
+          "offset": 2645162,
+          "size": 11520,
+          "pixel_size": 11520,
+          "width": 117,
+          "height": 350,
+          "name": "kwiat 06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_084_kwiat 01.raw",
+          "offset": 2656878,
+          "size": 6080,
+          "pixel_size": 6080,
+          "width": 106,
+          "height": 195,
+          "name": "kwiat 01"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_085_kwiat 02.raw",
+          "offset": 2663154,
+          "size": 6080,
+          "pixel_size": 6080,
+          "width": 106,
+          "height": 195,
+          "name": "kwiat 02"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_086_kwiat 03.raw",
+          "offset": 2669430,
+          "size": 6080,
+          "pixel_size": 6080,
+          "width": 106,
+          "height": 195,
+          "name": "kwiat 03"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_087_kwiat 04.raw",
+          "offset": 2675706,
+          "size": 6080,
+          "pixel_size": 6080,
+          "width": 106,
+          "height": 195,
+          "name": "kwiat 04"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_088_kwiat 05.raw",
+          "offset": 2681982,
+          "size": 6080,
+          "pixel_size": 6080,
+          "width": 106,
+          "height": 195,
+          "name": "kwiat 05"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_089_kwiat 06.raw",
+          "offset": 2688258,
+          "size": 6080,
+          "pixel_size": 6080,
+          "width": 106,
+          "height": 195,
+          "name": "kwiat 06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_090_kwiat 01.raw",
+          "offset": 2694534,
+          "size": 5396,
+          "pixel_size": 5396,
+          "width": 190,
+          "height": 265,
+          "name": "kwiat 01"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_091_kwiat 02.raw",
+          "offset": 2700126,
+          "size": 5396,
+          "pixel_size": 5396,
+          "width": 190,
+          "height": 265,
+          "name": "kwiat 02"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_092_kwiat 03.raw",
+          "offset": 2705718,
+          "size": 5396,
+          "pixel_size": 5396,
+          "width": 190,
+          "height": 265,
+          "name": "kwiat 03"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_093_kwiat 04.raw",
+          "offset": 2711310,
+          "size": 5396,
+          "pixel_size": 5396,
+          "width": 190,
+          "height": 265,
+          "name": "kwiat 04"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_094_kwiat 05.raw",
+          "offset": 2716902,
+          "size": 5396,
+          "pixel_size": 5396,
+          "width": 190,
+          "height": 265,
+          "name": "kwiat 05"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_095_kwiat 06.raw",
+          "offset": 2722494,
+          "size": 5396,
+          "pixel_size": 5396,
+          "width": 190,
+          "height": 265,
+          "name": "kwiat 06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_096_kwiat 01.raw",
+          "offset": 2728086,
+          "size": 13184,
+          "pixel_size": 13184,
+          "width": 157,
+          "height": 266,
+          "name": "kwiat 01"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_097_kwiat 02.raw",
+          "offset": 2741466,
+          "size": 13184,
+          "pixel_size": 13184,
+          "width": 157,
+          "height": 266,
+          "name": "kwiat 02"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_098_kwiat 03.raw",
+          "offset": 2754846,
+          "size": 13184,
+          "pixel_size": 13184,
+          "width": 157,
+          "height": 266,
+          "name": "kwiat 03"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_099_kwiat 04.raw",
+          "offset": 2768226,
+          "size": 13184,
+          "pixel_size": 13184,
+          "width": 157,
+          "height": 266,
+          "name": "kwiat 04"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_100_kwiat 05.raw",
+          "offset": 2781606,
+          "size": 13184,
+          "pixel_size": 13184,
+          "width": 157,
+          "height": 266,
+          "name": "kwiat 05"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_101_kwiat 06.raw",
+          "offset": 2794986,
+          "size": 13184,
+          "pixel_size": 13184,
+          "width": 157,
+          "height": 266,
+          "name": "kwiat 06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_102_kwiat 01.raw",
+          "offset": 2808366,
+          "size": 3904,
+          "pixel_size": 3904,
+          "width": 619,
+          "height": 196,
+          "name": "kwiat 01"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_103_kwiat 02.raw",
+          "offset": 2812466,
+          "size": 3904,
+          "pixel_size": 3904,
+          "width": 619,
+          "height": 196,
+          "name": "kwiat 02"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_104_kwiat 03.raw",
+          "offset": 2816566,
+          "size": 3904,
+          "pixel_size": 3904,
+          "width": 619,
+          "height": 196,
+          "name": "kwiat 03"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_105_kwiat 04.raw",
+          "offset": 2820666,
+          "size": 3904,
+          "pixel_size": 3904,
+          "width": 619,
+          "height": 196,
+          "name": "kwiat 04"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_106_kwiat 05.raw",
+          "offset": 2824766,
+          "size": 3904,
+          "pixel_size": 3904,
+          "width": 619,
+          "height": 196,
+          "name": "kwiat 05"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_107_kwiat 06.raw",
+          "offset": 2828866,
+          "size": 3904,
+          "pixel_size": 3904,
+          "width": 619,
+          "height": 196,
+          "name": "kwiat 06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_108_kwiat 01.raw",
+          "offset": 2832966,
+          "size": 2756,
+          "pixel_size": 2756,
+          "width": 175,
+          "height": 470,
+          "name": "kwiat 01"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_109_kwiat 02.raw",
+          "offset": 2835918,
+          "size": 2756,
+          "pixel_size": 2756,
+          "width": 175,
+          "height": 470,
+          "name": "kwiat 02"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_110_kwiat 03.raw",
+          "offset": 2838870,
+          "size": 2756,
+          "pixel_size": 2756,
+          "width": 175,
+          "height": 470,
+          "name": "kwiat 03"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_111_kwiat 04.raw",
+          "offset": 2841822,
+          "size": 2756,
+          "pixel_size": 2756,
+          "width": 175,
+          "height": 470,
+          "name": "kwiat 04"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_112_kwiat 05.raw",
+          "offset": 2844774,
+          "size": 2756,
+          "pixel_size": 2756,
+          "width": 175,
+          "height": 470,
+          "name": "kwiat 05"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_113_kwiat 06.raw",
+          "offset": 2847726,
+          "size": 2756,
+          "pixel_size": 2756,
+          "width": 175,
+          "height": 470,
+          "name": "kwiat 06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_114_srodek 01.raw",
+          "offset": 2850678,
+          "size": 960,
+          "pixel_size": 960,
+          "width": 54,
+          "height": 384,
+          "name": "srodek 01"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_115_srodek 02.raw",
+          "offset": 2851834,
+          "size": 960,
+          "pixel_size": 960,
+          "width": 54,
+          "height": 384,
+          "name": "srodek 02"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_116_srodek 03.raw",
+          "offset": 2852990,
+          "size": 960,
+          "pixel_size": 960,
+          "width": 54,
+          "height": 384,
+          "name": "srodek 03"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_117_srodek 04.raw",
+          "offset": 2854146,
+          "size": 960,
+          "pixel_size": 960,
+          "width": 54,
+          "height": 384,
+          "name": "srodek 04"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_118_srodek 05.raw",
+          "offset": 2855302,
+          "size": 960,
+          "pixel_size": 960,
+          "width": 54,
+          "height": 384,
+          "name": "srodek 05"
+        },
+        {
+          "kind": "multibitmap_bmp",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_119_srodek 06.bmp",
+          "offset": 2856458,
+          "size": 2038,
+          "pixel_size": 960,
+          "width": 32,
+          "height": 30,
+          "name": "srodek 06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_120_srodek 01.raw",
+          "offset": 2857614,
+          "size": 1224,
+          "pixel_size": 1224,
+          "width": 120,
+          "height": 371,
+          "name": "srodek 01"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_121_srodek 02.raw",
+          "offset": 2859034,
+          "size": 1224,
+          "pixel_size": 1224,
+          "width": 120,
+          "height": 371,
+          "name": "srodek 02"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_122_srodek 03.raw",
+          "offset": 2860454,
+          "size": 1224,
+          "pixel_size": 1224,
+          "width": 120,
+          "height": 371,
+          "name": "srodek 03"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_123_srodek 04.raw",
+          "offset": 2861874,
+          "size": 1224,
+          "pixel_size": 1224,
+          "width": 120,
+          "height": 371,
+          "name": "srodek 04"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_124_srodek 05.raw",
+          "offset": 2863294,
+          "size": 1224,
+          "pixel_size": 1224,
+          "width": 120,
+          "height": 371,
+          "name": "srodek 05"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_125_srodek 06.raw",
+          "offset": 2864714,
+          "size": 1224,
+          "pixel_size": 1224,
+          "width": 120,
+          "height": 371,
+          "name": "srodek 06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_126_srodek 01.raw",
+          "offset": 2866134,
+          "size": 1152,
+          "pixel_size": 1152,
+          "width": 73,
+          "height": 321,
+          "name": "srodek 01"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_127_srodek 02.raw",
+          "offset": 2867482,
+          "size": 1152,
+          "pixel_size": 1152,
+          "width": 73,
+          "height": 321,
+          "name": "srodek 02"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_128_srodek 03.raw",
+          "offset": 2868830,
+          "size": 1152,
+          "pixel_size": 1152,
+          "width": 73,
+          "height": 321,
+          "name": "srodek 03"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_129_srodek 04.raw",
+          "offset": 2870178,
+          "size": 1152,
+          "pixel_size": 1152,
+          "width": 73,
+          "height": 321,
+          "name": "srodek 04"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_130_srodek 05.raw",
+          "offset": 2871526,
+          "size": 1152,
+          "pixel_size": 1152,
+          "width": 73,
+          "height": 321,
+          "name": "srodek 05"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_131_srodek 06.raw",
+          "offset": 2872874,
+          "size": 1152,
+          "pixel_size": 1152,
+          "width": 73,
+          "height": 321,
+          "name": "srodek 06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_132_srodek 01.raw",
+          "offset": 2874222,
+          "size": 700,
+          "pixel_size": 700,
+          "width": 74,
+          "height": 169,
+          "name": "srodek 01"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_133_srodek 02.raw",
+          "offset": 2875118,
+          "size": 700,
+          "pixel_size": 700,
+          "width": 74,
+          "height": 169,
+          "name": "srodek 02"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_134_srodek 03.raw",
+          "offset": 2876014,
+          "size": 700,
+          "pixel_size": 700,
+          "width": 74,
+          "height": 169,
+          "name": "srodek 03"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_135_srodek 04.raw",
+          "offset": 2876910,
+          "size": 700,
+          "pixel_size": 700,
+          "width": 74,
+          "height": 169,
+          "name": "srodek 04"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_136_srodek 05.raw",
+          "offset": 2877806,
+          "size": 700,
+          "pixel_size": 700,
+          "width": 74,
+          "height": 169,
+          "name": "srodek 05"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_137_srodek 06.raw",
+          "offset": 2878702,
+          "size": 700,
+          "pixel_size": 700,
+          "width": 74,
+          "height": 169,
+          "name": "srodek 06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_138_srodek 01.raw",
+          "offset": 2879598,
+          "size": 756,
+          "pixel_size": 756,
+          "width": 167,
+          "height": 244,
+          "name": "srodek 01"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_139_srodek 02.raw",
+          "offset": 2880550,
+          "size": 756,
+          "pixel_size": 756,
+          "width": 167,
+          "height": 244,
+          "name": "srodek 02"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_140_srodek 03.raw",
+          "offset": 2881502,
+          "size": 756,
+          "pixel_size": 756,
+          "width": 167,
+          "height": 244,
+          "name": "srodek 03"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_141_srodek 04.raw",
+          "offset": 2882454,
+          "size": 756,
+          "pixel_size": 756,
+          "width": 167,
+          "height": 244,
+          "name": "srodek 04"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_142_srodek 05.raw",
+          "offset": 2883406,
+          "size": 756,
+          "pixel_size": 756,
+          "width": 167,
+          "height": 244,
+          "name": "srodek 05"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_143_srodek 06.raw",
+          "offset": 2884358,
+          "size": 756,
+          "pixel_size": 756,
+          "width": 167,
+          "height": 244,
+          "name": "srodek 06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_144_srodek 01.raw",
+          "offset": 2885310,
+          "size": 1480,
+          "pixel_size": 1480,
+          "width": 114,
+          "height": 239,
+          "name": "srodek 01"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_145_srodek 02.raw",
+          "offset": 2886986,
+          "size": 1480,
+          "pixel_size": 1480,
+          "width": 114,
+          "height": 239,
+          "name": "srodek 02"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_146_srodek 03.raw",
+          "offset": 2888662,
+          "size": 1480,
+          "pixel_size": 1480,
+          "width": 114,
+          "height": 239,
+          "name": "srodek 03"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_147_srodek 04.raw",
+          "offset": 2890338,
+          "size": 1480,
+          "pixel_size": 1480,
+          "width": 114,
+          "height": 239,
+          "name": "srodek 04"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_148_srodek 05.raw",
+          "offset": 2892014,
+          "size": 1480,
+          "pixel_size": 1480,
+          "width": 114,
+          "height": 239,
+          "name": "srodek 05"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_149_srodek 06.raw",
+          "offset": 2893690,
+          "size": 1480,
+          "pixel_size": 1480,
+          "width": 114,
+          "height": 239,
+          "name": "srodek 06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_150_srodek 01.raw",
+          "offset": 2895366,
+          "size": 420,
+          "pixel_size": 420,
+          "width": 599,
+          "height": 176,
+          "name": "srodek 01"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_151_srodek 02.raw",
+          "offset": 2895982,
+          "size": 420,
+          "pixel_size": 420,
+          "width": 599,
+          "height": 176,
+          "name": "srodek 02"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_152_srodek 03.raw",
+          "offset": 2896598,
+          "size": 420,
+          "pixel_size": 420,
+          "width": 599,
+          "height": 176,
+          "name": "srodek 03"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_153_srodek 04.raw",
+          "offset": 2897214,
+          "size": 420,
+          "pixel_size": 420,
+          "width": 599,
+          "height": 176,
+          "name": "srodek 04"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_154_srodek 05.raw",
+          "offset": 2897830,
+          "size": 420,
+          "pixel_size": 420,
+          "width": 599,
+          "height": 176,
+          "name": "srodek 05"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_155_srodek 06.raw",
+          "offset": 2898446,
+          "size": 420,
+          "pixel_size": 420,
+          "width": 599,
+          "height": 176,
+          "name": "srodek 06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_156_srodek 01.raw",
+          "offset": 2899062,
+          "size": 360,
+          "pixel_size": 360,
+          "width": 158,
+          "height": 453,
+          "name": "srodek 01"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_157_srodek 02.raw",
+          "offset": 2899618,
+          "size": 360,
+          "pixel_size": 360,
+          "width": 158,
+          "height": 453,
+          "name": "srodek 02"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_158_srodek 03.raw",
+          "offset": 2900174,
+          "size": 360,
+          "pixel_size": 360,
+          "width": 158,
+          "height": 453,
+          "name": "srodek 03"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_159_srodek 04.raw",
+          "offset": 2900730,
+          "size": 360,
+          "pixel_size": 360,
+          "width": 158,
+          "height": 453,
+          "name": "srodek 04"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_160_srodek 05.raw",
+          "offset": 2901286,
+          "size": 360,
+          "pixel_size": 360,
+          "width": 158,
+          "height": 453,
+          "name": "srodek 05"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_161_srodek 06.raw",
+          "offset": 2901842,
+          "size": 360,
+          "pixel_size": 360,
+          "width": 18,
+          "height": 18,
+          "name": "srodek 06"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_162_puszki.raw",
+          "offset": 2902398,
+          "size": 86944,
+          "pixel_size": 86944,
+          "width": 606,
+          "height": 474,
+          "name": "puszki"
+        },
+        {
+          "kind": "multibitmap_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\animations\\00_MultiBitmap_niebo 01_640x134.gif",
+          "size": 584991,
+          "frame_count": 6,
+          "width": 640,
+          "height": 134,
+          "delay_centiseconds": 10
+        }
+      ],
+      "multibitmap": {
+        "version": 1,
+        "declared_count": 163,
+        "parsed_count": 163,
+        "frames": [
+          {
+            "index": 0,
+            "name": "niebo 01",
+            "pixel_offset": 2190,
+            "pixel_size": 85760,
+            "metadata_offset": 87950,
+            "width": 640,
+            "height": 134,
+            "bmp_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_000_niebo 01.bmp"
+          },
+          {
+            "index": 1,
+            "name": "niebo 02",
+            "pixel_offset": 88146,
+            "pixel_size": 85760,
+            "metadata_offset": 173906,
+            "width": 640,
+            "height": 134,
+            "bmp_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_001_niebo 02.bmp"
+          },
+          {
+            "index": 2,
+            "name": "niebo 03",
+            "pixel_offset": 174102,
+            "pixel_size": 85760,
+            "metadata_offset": 259862,
+            "width": 640,
+            "height": 134,
+            "bmp_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_002_niebo 03.bmp"
+          },
+          {
+            "index": 3,
+            "name": "niebo 04",
+            "pixel_offset": 260058,
+            "pixel_size": 85760,
+            "metadata_offset": 345818,
+            "width": 640,
+            "height": 134,
+            "bmp_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_003_niebo 04.bmp"
+          },
+          {
+            "index": 4,
+            "name": "niebo 05",
+            "pixel_offset": 346014,
+            "pixel_size": 85760,
+            "metadata_offset": 431774,
+            "width": 640,
+            "height": 134,
+            "bmp_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_004_niebo 05.bmp"
+          },
+          {
+            "index": 5,
+            "name": "niebo 06",
+            "pixel_offset": 431970,
+            "pixel_size": 85760,
+            "metadata_offset": 517730,
+            "width": 640,
+            "height": 134,
+            "bmp_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_005_niebo 06.bmp"
+          },
+          {
+            "index": 6,
+            "name": "tlo 01",
+            "pixel_offset": 517926,
+            "pixel_size": 235520,
+            "metadata_offset": 753446,
+            "width": 640,
+            "height": 480,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_006_tlo 01.raw"
+          },
+          {
+            "index": 7,
+            "name": "tlo 02",
+            "pixel_offset": 753642,
+            "pixel_size": 235520,
+            "metadata_offset": 989162,
+            "width": 640,
+            "height": 480,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_007_tlo 02.raw"
+          },
+          {
+            "index": 8,
+            "name": "tlo 03",
+            "pixel_offset": 989358,
+            "pixel_size": 235520,
+            "metadata_offset": 1224878,
+            "width": 640,
+            "height": 480,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_008_tlo 03.raw"
+          },
+          {
+            "index": 9,
+            "name": "tlo 04",
+            "pixel_offset": 1225074,
+            "pixel_size": 235520,
+            "metadata_offset": 1460594,
+            "width": 640,
+            "height": 480,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_009_tlo 04.raw"
+          },
+          {
+            "index": 10,
+            "name": "tlo 05",
+            "pixel_offset": 1460790,
+            "pixel_size": 235520,
+            "metadata_offset": 1696310,
+            "width": 640,
+            "height": 480,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_010_tlo 05.raw"
+          },
+          {
+            "index": 11,
+            "name": "tlo 06",
+            "pixel_offset": 1696506,
+            "pixel_size": 235520,
+            "metadata_offset": 1932026,
+            "width": 640,
+            "height": 480,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_011_tlo 06.raw"
+          },
+          {
+            "index": 12,
+            "name": "s01",
+            "pixel_offset": 1932222,
+            "pixel_size": 56580,
+            "metadata_offset": 1988802,
+            "width": 539,
+            "height": 337,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_012_s01.raw"
+          },
+          {
+            "index": 13,
+            "name": "s02",
+            "pixel_offset": 1988998,
+            "pixel_size": 56580,
+            "metadata_offset": 2045578,
+            "width": 539,
+            "height": 337,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_013_s02.raw"
+          },
+          {
+            "index": 14,
+            "name": "s03",
+            "pixel_offset": 2045774,
+            "pixel_size": 56580,
+            "metadata_offset": 2102354,
+            "width": 539,
+            "height": 337,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_014_s03.raw"
+          },
+          {
+            "index": 15,
+            "name": "s04",
+            "pixel_offset": 2102550,
+            "pixel_size": 56580,
+            "metadata_offset": 2159130,
+            "width": 539,
+            "height": 337,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_015_s04.raw"
+          },
+          {
+            "index": 16,
+            "name": "s05",
+            "pixel_offset": 2159326,
+            "pixel_size": 56580,
+            "metadata_offset": 2215906,
+            "width": 539,
+            "height": 337,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_016_s05.raw"
+          },
+          {
+            "index": 17,
+            "name": "s06",
+            "pixel_offset": 2216102,
+            "pixel_size": 56580,
+            "metadata_offset": 2272682,
+            "width": 539,
+            "height": 337,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_017_s06.raw"
+          },
+          {
+            "index": 18,
+            "name": "p01",
+            "pixel_offset": 2272878,
+            "pixel_size": 2256,
+            "metadata_offset": 2275134,
+            "width": 379,
+            "height": 141,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_018_p01.raw"
+          },
+          {
+            "index": 19,
+            "name": "p02",
+            "pixel_offset": 2275330,
+            "pixel_size": 2256,
+            "metadata_offset": 2277586,
+            "width": 379,
+            "height": 141,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_019_p02.raw"
+          },
+          {
+            "index": 20,
+            "name": "p03",
+            "pixel_offset": 2277782,
+            "pixel_size": 2256,
+            "metadata_offset": 2280038,
+            "width": 379,
+            "height": 141,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_020_p03.raw"
+          },
+          {
+            "index": 21,
+            "name": "p04",
+            "pixel_offset": 2280234,
+            "pixel_size": 2256,
+            "metadata_offset": 2282490,
+            "width": 379,
+            "height": 141,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_021_p04.raw"
+          },
+          {
+            "index": 22,
+            "name": "p05",
+            "pixel_offset": 2282686,
+            "pixel_size": 2256,
+            "metadata_offset": 2284942,
+            "width": 379,
+            "height": 141,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_022_p05.raw"
+          },
+          {
+            "index": 23,
+            "name": "p06",
+            "pixel_offset": 2285138,
+            "pixel_size": 2256,
+            "metadata_offset": 2287394,
+            "width": 379,
+            "height": 141,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_023_p06.raw"
+          },
+          {
+            "index": 24,
+            "name": "p01",
+            "pixel_offset": 2287590,
+            "pixel_size": 1560,
+            "metadata_offset": 2289150,
+            "width": 449,
+            "height": 129,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_024_p01.raw"
+          },
+          {
+            "index": 25,
+            "name": "p02",
+            "pixel_offset": 2289346,
+            "pixel_size": 1560,
+            "metadata_offset": 2290906,
+            "width": 449,
+            "height": 129,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_025_p02.raw"
+          },
+          {
+            "index": 26,
+            "name": "p03",
+            "pixel_offset": 2291102,
+            "pixel_size": 1560,
+            "metadata_offset": 2292662,
+            "width": 449,
+            "height": 129,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_026_p03.raw"
+          },
+          {
+            "index": 27,
+            "name": "p04",
+            "pixel_offset": 2292858,
+            "pixel_size": 1560,
+            "metadata_offset": 2294418,
+            "width": 449,
+            "height": 129,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_027_p04.raw"
+          },
+          {
+            "index": 28,
+            "name": "p05",
+            "pixel_offset": 2294614,
+            "pixel_size": 1560,
+            "metadata_offset": 2296174,
+            "width": 449,
+            "height": 129,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_028_p05.raw"
+          },
+          {
+            "index": 29,
+            "name": "p06",
+            "pixel_offset": 2296370,
+            "pixel_size": 1560,
+            "metadata_offset": 2297930,
+            "width": 449,
+            "height": 129,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_029_p06.raw"
+          },
+          {
+            "index": 30,
+            "name": "p01",
+            "pixel_offset": 2298126,
+            "pixel_size": 1792,
+            "metadata_offset": 2299918,
+            "width": 544,
+            "height": 131,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_030_p01.raw"
+          },
+          {
+            "index": 31,
+            "name": "p02",
+            "pixel_offset": 2300114,
+            "pixel_size": 1792,
+            "metadata_offset": 2301906,
+            "width": 544,
+            "height": 131,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_031_p02.raw"
+          },
+          {
+            "index": 32,
+            "name": "p03",
+            "pixel_offset": 2302102,
+            "pixel_size": 1792,
+            "metadata_offset": 2303894,
+            "width": 544,
+            "height": 131,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_032_p03.raw"
+          },
+          {
+            "index": 33,
+            "name": "p04",
+            "pixel_offset": 2304090,
+            "pixel_size": 1792,
+            "metadata_offset": 2305882,
+            "width": 544,
+            "height": 131,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_033_p04.raw"
+          },
+          {
+            "index": 34,
+            "name": "p05",
+            "pixel_offset": 2306078,
+            "pixel_size": 1792,
+            "metadata_offset": 2307870,
+            "width": 544,
+            "height": 131,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_034_p05.raw"
+          },
+          {
+            "index": 35,
+            "name": "pi06",
+            "pixel_offset": 2308066,
+            "pixel_size": 1792,
+            "metadata_offset": 2309858,
+            "width": 544,
+            "height": 131,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_035_pi06.raw"
+          },
+          {
+            "index": 36,
+            "name": "korona 01",
+            "pixel_offset": 2310054,
+            "pixel_size": 4452,
+            "metadata_offset": 2314506,
+            "width": 417,
+            "height": 61,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_036_korona 01.raw"
+          },
+          {
+            "index": 37,
+            "name": "korona 02",
+            "pixel_offset": 2314702,
+            "pixel_size": 4452,
+            "metadata_offset": 2319154,
+            "width": 417,
+            "height": 61,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_037_korona 02.raw"
+          },
+          {
+            "index": 38,
+            "name": "korona 03",
+            "pixel_offset": 2319350,
+            "pixel_size": 4452,
+            "metadata_offset": 2323802,
+            "width": 417,
+            "height": 61,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_038_korona 03.raw"
+          },
+          {
+            "index": 39,
+            "name": "korona 04",
+            "pixel_offset": 2323998,
+            "pixel_size": 4452,
+            "metadata_offset": 2328450,
+            "width": 417,
+            "height": 61,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_039_korona 04.raw"
+          },
+          {
+            "index": 40,
+            "name": "korona 05",
+            "pixel_offset": 2328646,
+            "pixel_size": 4452,
+            "metadata_offset": 2333098,
+            "width": 417,
+            "height": 61,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_040_korona 05.raw"
+          },
+          {
+            "index": 41,
+            "name": "korona 06",
+            "pixel_offset": 2333294,
+            "pixel_size": 4452,
+            "metadata_offset": 2337746,
+            "width": 417,
+            "height": 61,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_041_korona 06.raw"
+          },
+          {
+            "index": 42,
+            "name": "korona 01",
+            "pixel_offset": 2337942,
+            "pixel_size": 2520,
+            "metadata_offset": 2340462,
+            "width": 475,
+            "height": 83,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_042_korona 01.raw"
+          },
+          {
+            "index": 43,
+            "name": "korona 02",
+            "pixel_offset": 2340658,
+            "pixel_size": 2520,
+            "metadata_offset": 2343178,
+            "width": 475,
+            "height": 83,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_043_korona 02.raw"
+          },
+          {
+            "index": 44,
+            "name": "korona 03",
+            "pixel_offset": 2343374,
+            "pixel_size": 2520,
+            "metadata_offset": 2345894,
+            "width": 475,
+            "height": 83,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_044_korona 03.raw"
+          },
+          {
+            "index": 45,
+            "name": "korona 04",
+            "pixel_offset": 2346090,
+            "pixel_size": 2520,
+            "metadata_offset": 2348610,
+            "width": 475,
+            "height": 83,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_045_korona 04.raw"
+          },
+          {
+            "index": 46,
+            "name": "korona 05",
+            "pixel_offset": 2348806,
+            "pixel_size": 2520,
+            "metadata_offset": 2351326,
+            "width": 475,
+            "height": 83,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_046_korona 05.raw"
+          },
+          {
+            "index": 47,
+            "name": "korona 06",
+            "pixel_offset": 2351522,
+            "pixel_size": 2520,
+            "metadata_offset": 2354042,
+            "width": 475,
+            "height": 83,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_047_korona 06.raw"
+          },
+          {
+            "index": 48,
+            "name": "korona 01",
+            "pixel_offset": 2354238,
+            "pixel_size": 2688,
+            "metadata_offset": 2356926,
+            "width": 559,
+            "height": 91,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_048_korona 01.raw"
+          },
+          {
+            "index": 49,
+            "name": "korona 02",
+            "pixel_offset": 2357122,
+            "pixel_size": 2688,
+            "metadata_offset": 2359810,
+            "width": 559,
+            "height": 91,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_049_korona 02.raw"
+          },
+          {
+            "index": 50,
+            "name": "korona 03",
+            "pixel_offset": 2360006,
+            "pixel_size": 2688,
+            "metadata_offset": 2362694,
+            "width": 559,
+            "height": 91,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_050_korona 03.raw"
+          },
+          {
+            "index": 51,
+            "name": "korona 04",
+            "pixel_offset": 2362890,
+            "pixel_size": 2688,
+            "metadata_offset": 2365578,
+            "width": 559,
+            "height": 91,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_051_korona 04.raw"
+          },
+          {
+            "index": 52,
+            "name": "korona 05",
+            "pixel_offset": 2365774,
+            "pixel_size": 2688,
+            "metadata_offset": 2368462,
+            "width": 559,
+            "height": 91,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_052_korona 05.raw"
+          },
+          {
+            "index": 53,
+            "name": "korona 06",
+            "pixel_offset": 2368658,
+            "pixel_size": 2688,
+            "metadata_offset": 2371346,
+            "width": 559,
+            "height": 91,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_053_korona 06.raw"
+          },
+          {
+            "index": 54,
+            "name": "kamienie ",
+            "pixel_offset": 2371542,
+            "pixel_size": 9800,
+            "metadata_offset": 2381342,
+            "width": 408,
+            "height": 474,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_054_kamienie.raw"
+          },
+          {
+            "index": 55,
+            "name": "kamienie ",
+            "pixel_offset": 2381538,
+            "pixel_size": 9800,
+            "metadata_offset": 2391338,
+            "width": 408,
+            "height": 474,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_055_kamienie.raw"
+          },
+          {
+            "index": 56,
+            "name": "kamienie ",
+            "pixel_offset": 2391534,
+            "pixel_size": 9800,
+            "metadata_offset": 2401334,
+            "width": 408,
+            "height": 474,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_056_kamienie.raw"
+          },
+          {
+            "index": 57,
+            "name": "kamienie ",
+            "pixel_offset": 2401530,
+            "pixel_size": 9800,
+            "metadata_offset": 2411330,
+            "width": 408,
+            "height": 474,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_057_kamienie.raw"
+          },
+          {
+            "index": 58,
+            "name": "kamienie ",
+            "pixel_offset": 2411526,
+            "pixel_size": 9800,
+            "metadata_offset": 2421326,
+            "width": 408,
+            "height": 474,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_058_kamienie.raw"
+          },
+          {
+            "index": 59,
+            "name": "kamienie ",
+            "pixel_offset": 2421522,
+            "pixel_size": 9800,
+            "metadata_offset": 2431322,
+            "width": 408,
+            "height": 474,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_059_kamienie.raw"
+          },
+          {
+            "index": 60,
+            "name": "k01",
+            "pixel_offset": 2431518,
+            "pixel_size": 4400,
+            "metadata_offset": 2435918,
+            "width": 538,
+            "height": 475,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_060_k01.raw"
+          },
+          {
+            "index": 61,
+            "name": "k02",
+            "pixel_offset": 2436114,
+            "pixel_size": 4400,
+            "metadata_offset": 2440514,
+            "width": 538,
+            "height": 475,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_061_k02.raw"
+          },
+          {
+            "index": 62,
+            "name": "k03",
+            "pixel_offset": 2440710,
+            "pixel_size": 4400,
+            "metadata_offset": 2445110,
+            "width": 538,
+            "height": 475,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_062_k03.raw"
+          },
+          {
+            "index": 63,
+            "name": "k04",
+            "pixel_offset": 2445306,
+            "pixel_size": 4400,
+            "metadata_offset": 2449706,
+            "width": 538,
+            "height": 475,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_063_k04.raw"
+          },
+          {
+            "index": 64,
+            "name": "k05",
+            "pixel_offset": 2449902,
+            "pixel_size": 4400,
+            "metadata_offset": 2454302,
+            "width": 538,
+            "height": 475,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_064_k05.raw"
+          },
+          {
+            "index": 65,
+            "name": "k06",
+            "pixel_offset": 2454498,
+            "pixel_size": 4400,
+            "metadata_offset": 2458898,
+            "width": 538,
+            "height": 475,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_065_k06.raw"
+          },
+          {
+            "index": 66,
+            "name": "kwiat 01",
+            "pixel_offset": 2459094,
+            "pixel_size": 8096,
+            "metadata_offset": 2467190,
+            "width": 85,
+            "height": 411,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_066_kwiat 01.raw"
+          },
+          {
+            "index": 67,
+            "name": "kwiat 02",
+            "pixel_offset": 2467386,
+            "pixel_size": 8096,
+            "metadata_offset": 2475482,
+            "width": 85,
+            "height": 411,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_067_kwiat 02.raw"
+          },
+          {
+            "index": 68,
+            "name": "kwiat 03",
+            "pixel_offset": 2475678,
+            "pixel_size": 8096,
+            "metadata_offset": 2483774,
+            "width": 85,
+            "height": 411,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_068_kwiat 03.raw"
+          },
+          {
+            "index": 69,
+            "name": "kwiat 04",
+            "pixel_offset": 2483970,
+            "pixel_size": 8096,
+            "metadata_offset": 2492066,
+            "width": 85,
+            "height": 411,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_069_kwiat 04.raw"
+          },
+          {
+            "index": 70,
+            "name": "kwiat 05",
+            "pixel_offset": 2492262,
+            "pixel_size": 8096,
+            "metadata_offset": 2500358,
+            "width": 85,
+            "height": 411,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_070_kwiat 05.raw"
+          },
+          {
+            "index": 71,
+            "name": "kwiat 06",
+            "pixel_offset": 2500554,
+            "pixel_size": 8096,
+            "metadata_offset": 2508650,
+            "width": 85,
+            "height": 411,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_071_kwiat 06.raw"
+          },
+          {
+            "index": 72,
+            "name": "kwiat 01",
+            "pixel_offset": 2508846,
+            "pixel_size": 12760,
+            "metadata_offset": 2521606,
+            "width": 160,
+            "height": 406,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_072_kwiat 01.raw"
+          },
+          {
+            "index": 73,
+            "name": "kwiat 02",
+            "pixel_offset": 2521802,
+            "pixel_size": 12760,
+            "metadata_offset": 2534562,
+            "width": 160,
+            "height": 406,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_073_kwiat 02.raw"
+          },
+          {
+            "index": 74,
+            "name": "kwiat 03",
+            "pixel_offset": 2534758,
+            "pixel_size": 12760,
+            "metadata_offset": 2547518,
+            "width": 160,
+            "height": 406,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_074_kwiat 03.raw"
+          },
+          {
+            "index": 75,
+            "name": "kwiat 04",
+            "pixel_offset": 2547714,
+            "pixel_size": 12760,
+            "metadata_offset": 2560474,
+            "width": 160,
+            "height": 406,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_075_kwiat 04.raw"
+          },
+          {
+            "index": 76,
+            "name": "kwiat 05",
+            "pixel_offset": 2560670,
+            "pixel_size": 12760,
+            "metadata_offset": 2573430,
+            "width": 160,
+            "height": 406,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_076_kwiat 05.raw"
+          },
+          {
+            "index": 77,
+            "name": "kwiat 06",
+            "pixel_offset": 2573626,
+            "pixel_size": 12760,
+            "metadata_offset": 2586386,
+            "width": 160,
+            "height": 406,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_077_kwiat 06.raw"
+          },
+          {
+            "index": 78,
+            "name": "kwiat 01",
+            "pixel_offset": 2586582,
+            "pixel_size": 11520,
+            "metadata_offset": 2598102,
+            "width": 117,
+            "height": 350,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_078_kwiat 01.raw"
+          },
+          {
+            "index": 79,
+            "name": "kwiat 02",
+            "pixel_offset": 2598298,
+            "pixel_size": 11520,
+            "metadata_offset": 2609818,
+            "width": 117,
+            "height": 350,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_079_kwiat 02.raw"
+          },
+          {
+            "index": 80,
+            "name": "kwiat 03",
+            "pixel_offset": 2610014,
+            "pixel_size": 11520,
+            "metadata_offset": 2621534,
+            "width": 117,
+            "height": 350,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_080_kwiat 03.raw"
+          },
+          {
+            "index": 81,
+            "name": "kwiat 04",
+            "pixel_offset": 2621730,
+            "pixel_size": 11520,
+            "metadata_offset": 2633250,
+            "width": 117,
+            "height": 350,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_081_kwiat 04.raw"
+          },
+          {
+            "index": 82,
+            "name": "kwiat 05",
+            "pixel_offset": 2633446,
+            "pixel_size": 11520,
+            "metadata_offset": 2644966,
+            "width": 117,
+            "height": 350,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_082_kwiat 05.raw"
+          },
+          {
+            "index": 83,
+            "name": "kwiat 06",
+            "pixel_offset": 2645162,
+            "pixel_size": 11520,
+            "metadata_offset": 2656682,
+            "width": 117,
+            "height": 350,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_083_kwiat 06.raw"
+          },
+          {
+            "index": 84,
+            "name": "kwiat 01",
+            "pixel_offset": 2656878,
+            "pixel_size": 6080,
+            "metadata_offset": 2662958,
+            "width": 106,
+            "height": 195,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_084_kwiat 01.raw"
+          },
+          {
+            "index": 85,
+            "name": "kwiat 02",
+            "pixel_offset": 2663154,
+            "pixel_size": 6080,
+            "metadata_offset": 2669234,
+            "width": 106,
+            "height": 195,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_085_kwiat 02.raw"
+          },
+          {
+            "index": 86,
+            "name": "kwiat 03",
+            "pixel_offset": 2669430,
+            "pixel_size": 6080,
+            "metadata_offset": 2675510,
+            "width": 106,
+            "height": 195,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_086_kwiat 03.raw"
+          },
+          {
+            "index": 87,
+            "name": "kwiat 04",
+            "pixel_offset": 2675706,
+            "pixel_size": 6080,
+            "metadata_offset": 2681786,
+            "width": 106,
+            "height": 195,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_087_kwiat 04.raw"
+          },
+          {
+            "index": 88,
+            "name": "kwiat 05",
+            "pixel_offset": 2681982,
+            "pixel_size": 6080,
+            "metadata_offset": 2688062,
+            "width": 106,
+            "height": 195,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_088_kwiat 05.raw"
+          },
+          {
+            "index": 89,
+            "name": "kwiat 06",
+            "pixel_offset": 2688258,
+            "pixel_size": 6080,
+            "metadata_offset": 2694338,
+            "width": 106,
+            "height": 195,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_089_kwiat 06.raw"
+          },
+          {
+            "index": 90,
+            "name": "kwiat 01",
+            "pixel_offset": 2694534,
+            "pixel_size": 5396,
+            "metadata_offset": 2699930,
+            "width": 190,
+            "height": 265,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_090_kwiat 01.raw"
+          },
+          {
+            "index": 91,
+            "name": "kwiat 02",
+            "pixel_offset": 2700126,
+            "pixel_size": 5396,
+            "metadata_offset": 2705522,
+            "width": 190,
+            "height": 265,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_091_kwiat 02.raw"
+          },
+          {
+            "index": 92,
+            "name": "kwiat 03",
+            "pixel_offset": 2705718,
+            "pixel_size": 5396,
+            "metadata_offset": 2711114,
+            "width": 190,
+            "height": 265,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_092_kwiat 03.raw"
+          },
+          {
+            "index": 93,
+            "name": "kwiat 04",
+            "pixel_offset": 2711310,
+            "pixel_size": 5396,
+            "metadata_offset": 2716706,
+            "width": 190,
+            "height": 265,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_093_kwiat 04.raw"
+          },
+          {
+            "index": 94,
+            "name": "kwiat 05",
+            "pixel_offset": 2716902,
+            "pixel_size": 5396,
+            "metadata_offset": 2722298,
+            "width": 190,
+            "height": 265,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_094_kwiat 05.raw"
+          },
+          {
+            "index": 95,
+            "name": "kwiat 06",
+            "pixel_offset": 2722494,
+            "pixel_size": 5396,
+            "metadata_offset": 2727890,
+            "width": 190,
+            "height": 265,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_095_kwiat 06.raw"
+          },
+          {
+            "index": 96,
+            "name": "kwiat 01",
+            "pixel_offset": 2728086,
+            "pixel_size": 13184,
+            "metadata_offset": 2741270,
+            "width": 157,
+            "height": 266,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_096_kwiat 01.raw"
+          },
+          {
+            "index": 97,
+            "name": "kwiat 02",
+            "pixel_offset": 2741466,
+            "pixel_size": 13184,
+            "metadata_offset": 2754650,
+            "width": 157,
+            "height": 266,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_097_kwiat 02.raw"
+          },
+          {
+            "index": 98,
+            "name": "kwiat 03",
+            "pixel_offset": 2754846,
+            "pixel_size": 13184,
+            "metadata_offset": 2768030,
+            "width": 157,
+            "height": 266,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_098_kwiat 03.raw"
+          },
+          {
+            "index": 99,
+            "name": "kwiat 04",
+            "pixel_offset": 2768226,
+            "pixel_size": 13184,
+            "metadata_offset": 2781410,
+            "width": 157,
+            "height": 266,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_099_kwiat 04.raw"
+          },
+          {
+            "index": 100,
+            "name": "kwiat 05",
+            "pixel_offset": 2781606,
+            "pixel_size": 13184,
+            "metadata_offset": 2794790,
+            "width": 157,
+            "height": 266,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_100_kwiat 05.raw"
+          },
+          {
+            "index": 101,
+            "name": "kwiat 06",
+            "pixel_offset": 2794986,
+            "pixel_size": 13184,
+            "metadata_offset": 2808170,
+            "width": 157,
+            "height": 266,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_101_kwiat 06.raw"
+          },
+          {
+            "index": 102,
+            "name": "kwiat 01",
+            "pixel_offset": 2808366,
+            "pixel_size": 3904,
+            "metadata_offset": 2812270,
+            "width": 619,
+            "height": 196,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_102_kwiat 01.raw"
+          },
+          {
+            "index": 103,
+            "name": "kwiat 02",
+            "pixel_offset": 2812466,
+            "pixel_size": 3904,
+            "metadata_offset": 2816370,
+            "width": 619,
+            "height": 196,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_103_kwiat 02.raw"
+          },
+          {
+            "index": 104,
+            "name": "kwiat 03",
+            "pixel_offset": 2816566,
+            "pixel_size": 3904,
+            "metadata_offset": 2820470,
+            "width": 619,
+            "height": 196,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_104_kwiat 03.raw"
+          },
+          {
+            "index": 105,
+            "name": "kwiat 04",
+            "pixel_offset": 2820666,
+            "pixel_size": 3904,
+            "metadata_offset": 2824570,
+            "width": 619,
+            "height": 196,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_105_kwiat 04.raw"
+          },
+          {
+            "index": 106,
+            "name": "kwiat 05",
+            "pixel_offset": 2824766,
+            "pixel_size": 3904,
+            "metadata_offset": 2828670,
+            "width": 619,
+            "height": 196,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_106_kwiat 05.raw"
+          },
+          {
+            "index": 107,
+            "name": "kwiat 06",
+            "pixel_offset": 2828866,
+            "pixel_size": 3904,
+            "metadata_offset": 2832770,
+            "width": 619,
+            "height": 196,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_107_kwiat 06.raw"
+          },
+          {
+            "index": 108,
+            "name": "kwiat 01",
+            "pixel_offset": 2832966,
+            "pixel_size": 2756,
+            "metadata_offset": 2835722,
+            "width": 175,
+            "height": 470,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_108_kwiat 01.raw"
+          },
+          {
+            "index": 109,
+            "name": "kwiat 02",
+            "pixel_offset": 2835918,
+            "pixel_size": 2756,
+            "metadata_offset": 2838674,
+            "width": 175,
+            "height": 470,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_109_kwiat 02.raw"
+          },
+          {
+            "index": 110,
+            "name": "kwiat 03",
+            "pixel_offset": 2838870,
+            "pixel_size": 2756,
+            "metadata_offset": 2841626,
+            "width": 175,
+            "height": 470,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_110_kwiat 03.raw"
+          },
+          {
+            "index": 111,
+            "name": "kwiat 04",
+            "pixel_offset": 2841822,
+            "pixel_size": 2756,
+            "metadata_offset": 2844578,
+            "width": 175,
+            "height": 470,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_111_kwiat 04.raw"
+          },
+          {
+            "index": 112,
+            "name": "kwiat 05",
+            "pixel_offset": 2844774,
+            "pixel_size": 2756,
+            "metadata_offset": 2847530,
+            "width": 175,
+            "height": 470,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_112_kwiat 05.raw"
+          },
+          {
+            "index": 113,
+            "name": "kwiat 06",
+            "pixel_offset": 2847726,
+            "pixel_size": 2756,
+            "metadata_offset": 2850482,
+            "width": 175,
+            "height": 470,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_113_kwiat 06.raw"
+          },
+          {
+            "index": 114,
+            "name": "srodek 01",
+            "pixel_offset": 2850678,
+            "pixel_size": 960,
+            "metadata_offset": 2851638,
+            "width": 54,
+            "height": 384,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_114_srodek 01.raw"
+          },
+          {
+            "index": 115,
+            "name": "srodek 02",
+            "pixel_offset": 2851834,
+            "pixel_size": 960,
+            "metadata_offset": 2852794,
+            "width": 54,
+            "height": 384,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_115_srodek 02.raw"
+          },
+          {
+            "index": 116,
+            "name": "srodek 03",
+            "pixel_offset": 2852990,
+            "pixel_size": 960,
+            "metadata_offset": 2853950,
+            "width": 54,
+            "height": 384,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_116_srodek 03.raw"
+          },
+          {
+            "index": 117,
+            "name": "srodek 04",
+            "pixel_offset": 2854146,
+            "pixel_size": 960,
+            "metadata_offset": 2855106,
+            "width": 54,
+            "height": 384,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_117_srodek 04.raw"
+          },
+          {
+            "index": 118,
+            "name": "srodek 05",
+            "pixel_offset": 2855302,
+            "pixel_size": 960,
+            "metadata_offset": 2856262,
+            "width": 54,
+            "height": 384,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_118_srodek 05.raw"
+          },
+          {
+            "index": 119,
+            "name": "srodek 06",
+            "pixel_offset": 2856458,
+            "pixel_size": 960,
+            "metadata_offset": 2857418,
+            "width": 32,
+            "height": 30,
+            "bmp_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_119_srodek 06.bmp"
+          },
+          {
+            "index": 120,
+            "name": "srodek 01",
+            "pixel_offset": 2857614,
+            "pixel_size": 1224,
+            "metadata_offset": 2858838,
+            "width": 120,
+            "height": 371,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_120_srodek 01.raw"
+          },
+          {
+            "index": 121,
+            "name": "srodek 02",
+            "pixel_offset": 2859034,
+            "pixel_size": 1224,
+            "metadata_offset": 2860258,
+            "width": 120,
+            "height": 371,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_121_srodek 02.raw"
+          },
+          {
+            "index": 122,
+            "name": "srodek 03",
+            "pixel_offset": 2860454,
+            "pixel_size": 1224,
+            "metadata_offset": 2861678,
+            "width": 120,
+            "height": 371,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_122_srodek 03.raw"
+          },
+          {
+            "index": 123,
+            "name": "srodek 04",
+            "pixel_offset": 2861874,
+            "pixel_size": 1224,
+            "metadata_offset": 2863098,
+            "width": 120,
+            "height": 371,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_123_srodek 04.raw"
+          },
+          {
+            "index": 124,
+            "name": "srodek 05",
+            "pixel_offset": 2863294,
+            "pixel_size": 1224,
+            "metadata_offset": 2864518,
+            "width": 120,
+            "height": 371,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_124_srodek 05.raw"
+          },
+          {
+            "index": 125,
+            "name": "srodek 06",
+            "pixel_offset": 2864714,
+            "pixel_size": 1224,
+            "metadata_offset": 2865938,
+            "width": 120,
+            "height": 371,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_125_srodek 06.raw"
+          },
+          {
+            "index": 126,
+            "name": "srodek 01",
+            "pixel_offset": 2866134,
+            "pixel_size": 1152,
+            "metadata_offset": 2867286,
+            "width": 73,
+            "height": 321,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_126_srodek 01.raw"
+          },
+          {
+            "index": 127,
+            "name": "srodek 02",
+            "pixel_offset": 2867482,
+            "pixel_size": 1152,
+            "metadata_offset": 2868634,
+            "width": 73,
+            "height": 321,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_127_srodek 02.raw"
+          },
+          {
+            "index": 128,
+            "name": "srodek 03",
+            "pixel_offset": 2868830,
+            "pixel_size": 1152,
+            "metadata_offset": 2869982,
+            "width": 73,
+            "height": 321,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_128_srodek 03.raw"
+          },
+          {
+            "index": 129,
+            "name": "srodek 04",
+            "pixel_offset": 2870178,
+            "pixel_size": 1152,
+            "metadata_offset": 2871330,
+            "width": 73,
+            "height": 321,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_129_srodek 04.raw"
+          },
+          {
+            "index": 130,
+            "name": "srodek 05",
+            "pixel_offset": 2871526,
+            "pixel_size": 1152,
+            "metadata_offset": 2872678,
+            "width": 73,
+            "height": 321,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_130_srodek 05.raw"
+          },
+          {
+            "index": 131,
+            "name": "srodek 06",
+            "pixel_offset": 2872874,
+            "pixel_size": 1152,
+            "metadata_offset": 2874026,
+            "width": 73,
+            "height": 321,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_131_srodek 06.raw"
+          },
+          {
+            "index": 132,
+            "name": "srodek 01",
+            "pixel_offset": 2874222,
+            "pixel_size": 700,
+            "metadata_offset": 2874922,
+            "width": 74,
+            "height": 169,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_132_srodek 01.raw"
+          },
+          {
+            "index": 133,
+            "name": "srodek 02",
+            "pixel_offset": 2875118,
+            "pixel_size": 700,
+            "metadata_offset": 2875818,
+            "width": 74,
+            "height": 169,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_133_srodek 02.raw"
+          },
+          {
+            "index": 134,
+            "name": "srodek 03",
+            "pixel_offset": 2876014,
+            "pixel_size": 700,
+            "metadata_offset": 2876714,
+            "width": 74,
+            "height": 169,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_134_srodek 03.raw"
+          },
+          {
+            "index": 135,
+            "name": "srodek 04",
+            "pixel_offset": 2876910,
+            "pixel_size": 700,
+            "metadata_offset": 2877610,
+            "width": 74,
+            "height": 169,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_135_srodek 04.raw"
+          },
+          {
+            "index": 136,
+            "name": "srodek 05",
+            "pixel_offset": 2877806,
+            "pixel_size": 700,
+            "metadata_offset": 2878506,
+            "width": 74,
+            "height": 169,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_136_srodek 05.raw"
+          },
+          {
+            "index": 137,
+            "name": "srodek 06",
+            "pixel_offset": 2878702,
+            "pixel_size": 700,
+            "metadata_offset": 2879402,
+            "width": 74,
+            "height": 169,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_137_srodek 06.raw"
+          },
+          {
+            "index": 138,
+            "name": "srodek 01",
+            "pixel_offset": 2879598,
+            "pixel_size": 756,
+            "metadata_offset": 2880354,
+            "width": 167,
+            "height": 244,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_138_srodek 01.raw"
+          },
+          {
+            "index": 139,
+            "name": "srodek 02",
+            "pixel_offset": 2880550,
+            "pixel_size": 756,
+            "metadata_offset": 2881306,
+            "width": 167,
+            "height": 244,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_139_srodek 02.raw"
+          },
+          {
+            "index": 140,
+            "name": "srodek 03",
+            "pixel_offset": 2881502,
+            "pixel_size": 756,
+            "metadata_offset": 2882258,
+            "width": 167,
+            "height": 244,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_140_srodek 03.raw"
+          },
+          {
+            "index": 141,
+            "name": "srodek 04",
+            "pixel_offset": 2882454,
+            "pixel_size": 756,
+            "metadata_offset": 2883210,
+            "width": 167,
+            "height": 244,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_141_srodek 04.raw"
+          },
+          {
+            "index": 142,
+            "name": "srodek 05",
+            "pixel_offset": 2883406,
+            "pixel_size": 756,
+            "metadata_offset": 2884162,
+            "width": 167,
+            "height": 244,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_142_srodek 05.raw"
+          },
+          {
+            "index": 143,
+            "name": "srodek 06",
+            "pixel_offset": 2884358,
+            "pixel_size": 756,
+            "metadata_offset": 2885114,
+            "width": 167,
+            "height": 244,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_143_srodek 06.raw"
+          },
+          {
+            "index": 144,
+            "name": "srodek 01",
+            "pixel_offset": 2885310,
+            "pixel_size": 1480,
+            "metadata_offset": 2886790,
+            "width": 114,
+            "height": 239,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_144_srodek 01.raw"
+          },
+          {
+            "index": 145,
+            "name": "srodek 02",
+            "pixel_offset": 2886986,
+            "pixel_size": 1480,
+            "metadata_offset": 2888466,
+            "width": 114,
+            "height": 239,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_145_srodek 02.raw"
+          },
+          {
+            "index": 146,
+            "name": "srodek 03",
+            "pixel_offset": 2888662,
+            "pixel_size": 1480,
+            "metadata_offset": 2890142,
+            "width": 114,
+            "height": 239,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_146_srodek 03.raw"
+          },
+          {
+            "index": 147,
+            "name": "srodek 04",
+            "pixel_offset": 2890338,
+            "pixel_size": 1480,
+            "metadata_offset": 2891818,
+            "width": 114,
+            "height": 239,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_147_srodek 04.raw"
+          },
+          {
+            "index": 148,
+            "name": "srodek 05",
+            "pixel_offset": 2892014,
+            "pixel_size": 1480,
+            "metadata_offset": 2893494,
+            "width": 114,
+            "height": 239,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_148_srodek 05.raw"
+          },
+          {
+            "index": 149,
+            "name": "srodek 06",
+            "pixel_offset": 2893690,
+            "pixel_size": 1480,
+            "metadata_offset": 2895170,
+            "width": 114,
+            "height": 239,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_149_srodek 06.raw"
+          },
+          {
+            "index": 150,
+            "name": "srodek 01",
+            "pixel_offset": 2895366,
+            "pixel_size": 420,
+            "metadata_offset": 2895786,
+            "width": 599,
+            "height": 176,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_150_srodek 01.raw"
+          },
+          {
+            "index": 151,
+            "name": "srodek 02",
+            "pixel_offset": 2895982,
+            "pixel_size": 420,
+            "metadata_offset": 2896402,
+            "width": 599,
+            "height": 176,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_151_srodek 02.raw"
+          },
+          {
+            "index": 152,
+            "name": "srodek 03",
+            "pixel_offset": 2896598,
+            "pixel_size": 420,
+            "metadata_offset": 2897018,
+            "width": 599,
+            "height": 176,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_152_srodek 03.raw"
+          },
+          {
+            "index": 153,
+            "name": "srodek 04",
+            "pixel_offset": 2897214,
+            "pixel_size": 420,
+            "metadata_offset": 2897634,
+            "width": 599,
+            "height": 176,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_153_srodek 04.raw"
+          },
+          {
+            "index": 154,
+            "name": "srodek 05",
+            "pixel_offset": 2897830,
+            "pixel_size": 420,
+            "metadata_offset": 2898250,
+            "width": 599,
+            "height": 176,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_154_srodek 05.raw"
+          },
+          {
+            "index": 155,
+            "name": "srodek 06",
+            "pixel_offset": 2898446,
+            "pixel_size": 420,
+            "metadata_offset": 2898866,
+            "width": 599,
+            "height": 176,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_155_srodek 06.raw"
+          },
+          {
+            "index": 156,
+            "name": "srodek 01",
+            "pixel_offset": 2899062,
+            "pixel_size": 360,
+            "metadata_offset": 2899422,
+            "width": 158,
+            "height": 453,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_156_srodek 01.raw"
+          },
+          {
+            "index": 157,
+            "name": "srodek 02",
+            "pixel_offset": 2899618,
+            "pixel_size": 360,
+            "metadata_offset": 2899978,
+            "width": 158,
+            "height": 453,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_157_srodek 02.raw"
+          },
+          {
+            "index": 158,
+            "name": "srodek 03",
+            "pixel_offset": 2900174,
+            "pixel_size": 360,
+            "metadata_offset": 2900534,
+            "width": 158,
+            "height": 453,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_158_srodek 03.raw"
+          },
+          {
+            "index": 159,
+            "name": "srodek 04",
+            "pixel_offset": 2900730,
+            "pixel_size": 360,
+            "metadata_offset": 2901090,
+            "width": 158,
+            "height": 453,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_159_srodek 04.raw"
+          },
+          {
+            "index": 160,
+            "name": "srodek 05",
+            "pixel_offset": 2901286,
+            "pixel_size": 360,
+            "metadata_offset": 2901646,
+            "width": 158,
+            "height": 453,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_160_srodek 05.raw"
+          },
+          {
+            "index": 161,
+            "name": "srodek 06",
+            "pixel_offset": 2901842,
+            "pixel_size": 360,
+            "metadata_offset": 2902202,
+            "width": 18,
+            "height": 18,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_161_srodek 06.raw"
+          },
+          {
+            "index": 162,
+            "name": "puszki",
+            "pixel_offset": 2902398,
+            "pixel_size": 86944,
+            "metadata_offset": 2989342,
+            "width": 606,
+            "height": 474,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_162_puszki.raw"
+          }
+        ]
+      }
+    },
+    {
+      "index": 1,
+      "offset": 2989534,
+      "clsid": "AD45ADB6-5290-11D0-B442-008048EB5D40",
+      "display_name": "Text_Holder",
+      "private_offset": 2991160,
+      "private_size": 18187,
+      "embedded": []
+    },
+    {
+      "index": 2,
+      "offset": 3009347,
+      "clsid": "B64F3336-5368-11D0-B445-008048EB5D40",
+      "display_name": "Sprite_Holder",
+      "private_offset": 3010881,
+      "private_size": 43972,
+      "embedded": []
+    },
+    {
+      "index": 3,
+      "offset": 3054853,
+      "clsid": "1720D306-6932-11D0-B468-008048EB5D40",
+      "display_name": "Sound_Holder",
+      "private_offset": 3055749,
+      "private_size": 793954,
+      "embedded": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\embedded\\03_Sound_Holder_000_002ea091.wav",
+          "offset": 3055761,
+          "size": 106520,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\embedded\\03_Sound_Holder_001_00304109.wav",
+          "offset": 3162377,
+          "size": 34588,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\embedded\\03_Sound_Holder_002_0030c885.wav",
+          "offset": 3197061,
+          "size": 38816,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\embedded\\03_Sound_Holder_003_00316085.wav",
+          "offset": 3235973,
+          "size": 275828,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\embedded\\03_Sound_Holder_004_00359659.wav",
+          "offset": 3511897,
+          "size": 337714,
+          "extension": ".wav"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "offset": 3849703,
+      "clsid": "DA768116-5341-11D0-B444-008048EB5D40",
+      "display_name": "HotSpot_Holder",
+      "private_offset": 3850808,
+      "private_size": 524,
+      "embedded": []
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\script.txt",
+      "size": 17821
+    },
+    {
+      "kind": "multibitmap_bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_000_niebo 01.bmp",
+      "offset": 2190,
+      "size": 86838,
+      "pixel_size": 85760,
+      "width": 640,
+      "height": 134,
+      "name": "niebo 01"
+    },
+    {
+      "kind": "multibitmap_bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_001_niebo 02.bmp",
+      "offset": 88146,
+      "size": 86838,
+      "pixel_size": 85760,
+      "width": 640,
+      "height": 134,
+      "name": "niebo 02"
+    },
+    {
+      "kind": "multibitmap_bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_002_niebo 03.bmp",
+      "offset": 174102,
+      "size": 86838,
+      "pixel_size": 85760,
+      "width": 640,
+      "height": 134,
+      "name": "niebo 03"
+    },
+    {
+      "kind": "multibitmap_bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_003_niebo 04.bmp",
+      "offset": 260058,
+      "size": 86838,
+      "pixel_size": 85760,
+      "width": 640,
+      "height": 134,
+      "name": "niebo 04"
+    },
+    {
+      "kind": "multibitmap_bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_004_niebo 05.bmp",
+      "offset": 346014,
+      "size": 86838,
+      "pixel_size": 85760,
+      "width": 640,
+      "height": 134,
+      "name": "niebo 05"
+    },
+    {
+      "kind": "multibitmap_bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_005_niebo 06.bmp",
+      "offset": 431970,
+      "size": 86838,
+      "pixel_size": 85760,
+      "width": 640,
+      "height": 134,
+      "name": "niebo 06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_006_tlo 01.raw",
+      "offset": 517926,
+      "size": 235520,
+      "pixel_size": 235520,
+      "width": 640,
+      "height": 480,
+      "name": "tlo 01"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_007_tlo 02.raw",
+      "offset": 753642,
+      "size": 235520,
+      "pixel_size": 235520,
+      "width": 640,
+      "height": 480,
+      "name": "tlo 02"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_008_tlo 03.raw",
+      "offset": 989358,
+      "size": 235520,
+      "pixel_size": 235520,
+      "width": 640,
+      "height": 480,
+      "name": "tlo 03"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_009_tlo 04.raw",
+      "offset": 1225074,
+      "size": 235520,
+      "pixel_size": 235520,
+      "width": 640,
+      "height": 480,
+      "name": "tlo 04"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_010_tlo 05.raw",
+      "offset": 1460790,
+      "size": 235520,
+      "pixel_size": 235520,
+      "width": 640,
+      "height": 480,
+      "name": "tlo 05"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_011_tlo 06.raw",
+      "offset": 1696506,
+      "size": 235520,
+      "pixel_size": 235520,
+      "width": 640,
+      "height": 480,
+      "name": "tlo 06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_012_s01.raw",
+      "offset": 1932222,
+      "size": 56580,
+      "pixel_size": 56580,
+      "width": 539,
+      "height": 337,
+      "name": "s01"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_013_s02.raw",
+      "offset": 1988998,
+      "size": 56580,
+      "pixel_size": 56580,
+      "width": 539,
+      "height": 337,
+      "name": "s02"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_014_s03.raw",
+      "offset": 2045774,
+      "size": 56580,
+      "pixel_size": 56580,
+      "width": 539,
+      "height": 337,
+      "name": "s03"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_015_s04.raw",
+      "offset": 2102550,
+      "size": 56580,
+      "pixel_size": 56580,
+      "width": 539,
+      "height": 337,
+      "name": "s04"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_016_s05.raw",
+      "offset": 2159326,
+      "size": 56580,
+      "pixel_size": 56580,
+      "width": 539,
+      "height": 337,
+      "name": "s05"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_017_s06.raw",
+      "offset": 2216102,
+      "size": 56580,
+      "pixel_size": 56580,
+      "width": 539,
+      "height": 337,
+      "name": "s06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_018_p01.raw",
+      "offset": 2272878,
+      "size": 2256,
+      "pixel_size": 2256,
+      "width": 379,
+      "height": 141,
+      "name": "p01"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_019_p02.raw",
+      "offset": 2275330,
+      "size": 2256,
+      "pixel_size": 2256,
+      "width": 379,
+      "height": 141,
+      "name": "p02"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_020_p03.raw",
+      "offset": 2277782,
+      "size": 2256,
+      "pixel_size": 2256,
+      "width": 379,
+      "height": 141,
+      "name": "p03"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_021_p04.raw",
+      "offset": 2280234,
+      "size": 2256,
+      "pixel_size": 2256,
+      "width": 379,
+      "height": 141,
+      "name": "p04"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_022_p05.raw",
+      "offset": 2282686,
+      "size": 2256,
+      "pixel_size": 2256,
+      "width": 379,
+      "height": 141,
+      "name": "p05"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_023_p06.raw",
+      "offset": 2285138,
+      "size": 2256,
+      "pixel_size": 2256,
+      "width": 379,
+      "height": 141,
+      "name": "p06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_024_p01.raw",
+      "offset": 2287590,
+      "size": 1560,
+      "pixel_size": 1560,
+      "width": 449,
+      "height": 129,
+      "name": "p01"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_025_p02.raw",
+      "offset": 2289346,
+      "size": 1560,
+      "pixel_size": 1560,
+      "width": 449,
+      "height": 129,
+      "name": "p02"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_026_p03.raw",
+      "offset": 2291102,
+      "size": 1560,
+      "pixel_size": 1560,
+      "width": 449,
+      "height": 129,
+      "name": "p03"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_027_p04.raw",
+      "offset": 2292858,
+      "size": 1560,
+      "pixel_size": 1560,
+      "width": 449,
+      "height": 129,
+      "name": "p04"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_028_p05.raw",
+      "offset": 2294614,
+      "size": 1560,
+      "pixel_size": 1560,
+      "width": 449,
+      "height": 129,
+      "name": "p05"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_029_p06.raw",
+      "offset": 2296370,
+      "size": 1560,
+      "pixel_size": 1560,
+      "width": 449,
+      "height": 129,
+      "name": "p06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_030_p01.raw",
+      "offset": 2298126,
+      "size": 1792,
+      "pixel_size": 1792,
+      "width": 544,
+      "height": 131,
+      "name": "p01"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_031_p02.raw",
+      "offset": 2300114,
+      "size": 1792,
+      "pixel_size": 1792,
+      "width": 544,
+      "height": 131,
+      "name": "p02"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_032_p03.raw",
+      "offset": 2302102,
+      "size": 1792,
+      "pixel_size": 1792,
+      "width": 544,
+      "height": 131,
+      "name": "p03"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_033_p04.raw",
+      "offset": 2304090,
+      "size": 1792,
+      "pixel_size": 1792,
+      "width": 544,
+      "height": 131,
+      "name": "p04"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_034_p05.raw",
+      "offset": 2306078,
+      "size": 1792,
+      "pixel_size": 1792,
+      "width": 544,
+      "height": 131,
+      "name": "p05"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_035_pi06.raw",
+      "offset": 2308066,
+      "size": 1792,
+      "pixel_size": 1792,
+      "width": 544,
+      "height": 131,
+      "name": "pi06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_036_korona 01.raw",
+      "offset": 2310054,
+      "size": 4452,
+      "pixel_size": 4452,
+      "width": 417,
+      "height": 61,
+      "name": "korona 01"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_037_korona 02.raw",
+      "offset": 2314702,
+      "size": 4452,
+      "pixel_size": 4452,
+      "width": 417,
+      "height": 61,
+      "name": "korona 02"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_038_korona 03.raw",
+      "offset": 2319350,
+      "size": 4452,
+      "pixel_size": 4452,
+      "width": 417,
+      "height": 61,
+      "name": "korona 03"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_039_korona 04.raw",
+      "offset": 2323998,
+      "size": 4452,
+      "pixel_size": 4452,
+      "width": 417,
+      "height": 61,
+      "name": "korona 04"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_040_korona 05.raw",
+      "offset": 2328646,
+      "size": 4452,
+      "pixel_size": 4452,
+      "width": 417,
+      "height": 61,
+      "name": "korona 05"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_041_korona 06.raw",
+      "offset": 2333294,
+      "size": 4452,
+      "pixel_size": 4452,
+      "width": 417,
+      "height": 61,
+      "name": "korona 06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_042_korona 01.raw",
+      "offset": 2337942,
+      "size": 2520,
+      "pixel_size": 2520,
+      "width": 475,
+      "height": 83,
+      "name": "korona 01"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_043_korona 02.raw",
+      "offset": 2340658,
+      "size": 2520,
+      "pixel_size": 2520,
+      "width": 475,
+      "height": 83,
+      "name": "korona 02"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_044_korona 03.raw",
+      "offset": 2343374,
+      "size": 2520,
+      "pixel_size": 2520,
+      "width": 475,
+      "height": 83,
+      "name": "korona 03"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_045_korona 04.raw",
+      "offset": 2346090,
+      "size": 2520,
+      "pixel_size": 2520,
+      "width": 475,
+      "height": 83,
+      "name": "korona 04"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_046_korona 05.raw",
+      "offset": 2348806,
+      "size": 2520,
+      "pixel_size": 2520,
+      "width": 475,
+      "height": 83,
+      "name": "korona 05"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_047_korona 06.raw",
+      "offset": 2351522,
+      "size": 2520,
+      "pixel_size": 2520,
+      "width": 475,
+      "height": 83,
+      "name": "korona 06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_048_korona 01.raw",
+      "offset": 2354238,
+      "size": 2688,
+      "pixel_size": 2688,
+      "width": 559,
+      "height": 91,
+      "name": "korona 01"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_049_korona 02.raw",
+      "offset": 2357122,
+      "size": 2688,
+      "pixel_size": 2688,
+      "width": 559,
+      "height": 91,
+      "name": "korona 02"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_050_korona 03.raw",
+      "offset": 2360006,
+      "size": 2688,
+      "pixel_size": 2688,
+      "width": 559,
+      "height": 91,
+      "name": "korona 03"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_051_korona 04.raw",
+      "offset": 2362890,
+      "size": 2688,
+      "pixel_size": 2688,
+      "width": 559,
+      "height": 91,
+      "name": "korona 04"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_052_korona 05.raw",
+      "offset": 2365774,
+      "size": 2688,
+      "pixel_size": 2688,
+      "width": 559,
+      "height": 91,
+      "name": "korona 05"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_053_korona 06.raw",
+      "offset": 2368658,
+      "size": 2688,
+      "pixel_size": 2688,
+      "width": 559,
+      "height": 91,
+      "name": "korona 06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_054_kamienie.raw",
+      "offset": 2371542,
+      "size": 9800,
+      "pixel_size": 9800,
+      "width": 408,
+      "height": 474,
+      "name": "kamienie "
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_055_kamienie.raw",
+      "offset": 2381538,
+      "size": 9800,
+      "pixel_size": 9800,
+      "width": 408,
+      "height": 474,
+      "name": "kamienie "
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_056_kamienie.raw",
+      "offset": 2391534,
+      "size": 9800,
+      "pixel_size": 9800,
+      "width": 408,
+      "height": 474,
+      "name": "kamienie "
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_057_kamienie.raw",
+      "offset": 2401530,
+      "size": 9800,
+      "pixel_size": 9800,
+      "width": 408,
+      "height": 474,
+      "name": "kamienie "
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_058_kamienie.raw",
+      "offset": 2411526,
+      "size": 9800,
+      "pixel_size": 9800,
+      "width": 408,
+      "height": 474,
+      "name": "kamienie "
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_059_kamienie.raw",
+      "offset": 2421522,
+      "size": 9800,
+      "pixel_size": 9800,
+      "width": 408,
+      "height": 474,
+      "name": "kamienie "
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_060_k01.raw",
+      "offset": 2431518,
+      "size": 4400,
+      "pixel_size": 4400,
+      "width": 538,
+      "height": 475,
+      "name": "k01"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_061_k02.raw",
+      "offset": 2436114,
+      "size": 4400,
+      "pixel_size": 4400,
+      "width": 538,
+      "height": 475,
+      "name": "k02"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_062_k03.raw",
+      "offset": 2440710,
+      "size": 4400,
+      "pixel_size": 4400,
+      "width": 538,
+      "height": 475,
+      "name": "k03"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_063_k04.raw",
+      "offset": 2445306,
+      "size": 4400,
+      "pixel_size": 4400,
+      "width": 538,
+      "height": 475,
+      "name": "k04"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_064_k05.raw",
+      "offset": 2449902,
+      "size": 4400,
+      "pixel_size": 4400,
+      "width": 538,
+      "height": 475,
+      "name": "k05"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_065_k06.raw",
+      "offset": 2454498,
+      "size": 4400,
+      "pixel_size": 4400,
+      "width": 538,
+      "height": 475,
+      "name": "k06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_066_kwiat 01.raw",
+      "offset": 2459094,
+      "size": 8096,
+      "pixel_size": 8096,
+      "width": 85,
+      "height": 411,
+      "name": "kwiat 01"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_067_kwiat 02.raw",
+      "offset": 2467386,
+      "size": 8096,
+      "pixel_size": 8096,
+      "width": 85,
+      "height": 411,
+      "name": "kwiat 02"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_068_kwiat 03.raw",
+      "offset": 2475678,
+      "size": 8096,
+      "pixel_size": 8096,
+      "width": 85,
+      "height": 411,
+      "name": "kwiat 03"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_069_kwiat 04.raw",
+      "offset": 2483970,
+      "size": 8096,
+      "pixel_size": 8096,
+      "width": 85,
+      "height": 411,
+      "name": "kwiat 04"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_070_kwiat 05.raw",
+      "offset": 2492262,
+      "size": 8096,
+      "pixel_size": 8096,
+      "width": 85,
+      "height": 411,
+      "name": "kwiat 05"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_071_kwiat 06.raw",
+      "offset": 2500554,
+      "size": 8096,
+      "pixel_size": 8096,
+      "width": 85,
+      "height": 411,
+      "name": "kwiat 06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_072_kwiat 01.raw",
+      "offset": 2508846,
+      "size": 12760,
+      "pixel_size": 12760,
+      "width": 160,
+      "height": 406,
+      "name": "kwiat 01"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_073_kwiat 02.raw",
+      "offset": 2521802,
+      "size": 12760,
+      "pixel_size": 12760,
+      "width": 160,
+      "height": 406,
+      "name": "kwiat 02"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_074_kwiat 03.raw",
+      "offset": 2534758,
+      "size": 12760,
+      "pixel_size": 12760,
+      "width": 160,
+      "height": 406,
+      "name": "kwiat 03"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_075_kwiat 04.raw",
+      "offset": 2547714,
+      "size": 12760,
+      "pixel_size": 12760,
+      "width": 160,
+      "height": 406,
+      "name": "kwiat 04"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_076_kwiat 05.raw",
+      "offset": 2560670,
+      "size": 12760,
+      "pixel_size": 12760,
+      "width": 160,
+      "height": 406,
+      "name": "kwiat 05"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_077_kwiat 06.raw",
+      "offset": 2573626,
+      "size": 12760,
+      "pixel_size": 12760,
+      "width": 160,
+      "height": 406,
+      "name": "kwiat 06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_078_kwiat 01.raw",
+      "offset": 2586582,
+      "size": 11520,
+      "pixel_size": 11520,
+      "width": 117,
+      "height": 350,
+      "name": "kwiat 01"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_079_kwiat 02.raw",
+      "offset": 2598298,
+      "size": 11520,
+      "pixel_size": 11520,
+      "width": 117,
+      "height": 350,
+      "name": "kwiat 02"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_080_kwiat 03.raw",
+      "offset": 2610014,
+      "size": 11520,
+      "pixel_size": 11520,
+      "width": 117,
+      "height": 350,
+      "name": "kwiat 03"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_081_kwiat 04.raw",
+      "offset": 2621730,
+      "size": 11520,
+      "pixel_size": 11520,
+      "width": 117,
+      "height": 350,
+      "name": "kwiat 04"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_082_kwiat 05.raw",
+      "offset": 2633446,
+      "size": 11520,
+      "pixel_size": 11520,
+      "width": 117,
+      "height": 350,
+      "name": "kwiat 05"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_083_kwiat 06.raw",
+      "offset": 2645162,
+      "size": 11520,
+      "pixel_size": 11520,
+      "width": 117,
+      "height": 350,
+      "name": "kwiat 06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_084_kwiat 01.raw",
+      "offset": 2656878,
+      "size": 6080,
+      "pixel_size": 6080,
+      "width": 106,
+      "height": 195,
+      "name": "kwiat 01"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_085_kwiat 02.raw",
+      "offset": 2663154,
+      "size": 6080,
+      "pixel_size": 6080,
+      "width": 106,
+      "height": 195,
+      "name": "kwiat 02"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_086_kwiat 03.raw",
+      "offset": 2669430,
+      "size": 6080,
+      "pixel_size": 6080,
+      "width": 106,
+      "height": 195,
+      "name": "kwiat 03"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_087_kwiat 04.raw",
+      "offset": 2675706,
+      "size": 6080,
+      "pixel_size": 6080,
+      "width": 106,
+      "height": 195,
+      "name": "kwiat 04"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_088_kwiat 05.raw",
+      "offset": 2681982,
+      "size": 6080,
+      "pixel_size": 6080,
+      "width": 106,
+      "height": 195,
+      "name": "kwiat 05"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_089_kwiat 06.raw",
+      "offset": 2688258,
+      "size": 6080,
+      "pixel_size": 6080,
+      "width": 106,
+      "height": 195,
+      "name": "kwiat 06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_090_kwiat 01.raw",
+      "offset": 2694534,
+      "size": 5396,
+      "pixel_size": 5396,
+      "width": 190,
+      "height": 265,
+      "name": "kwiat 01"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_091_kwiat 02.raw",
+      "offset": 2700126,
+      "size": 5396,
+      "pixel_size": 5396,
+      "width": 190,
+      "height": 265,
+      "name": "kwiat 02"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_092_kwiat 03.raw",
+      "offset": 2705718,
+      "size": 5396,
+      "pixel_size": 5396,
+      "width": 190,
+      "height": 265,
+      "name": "kwiat 03"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_093_kwiat 04.raw",
+      "offset": 2711310,
+      "size": 5396,
+      "pixel_size": 5396,
+      "width": 190,
+      "height": 265,
+      "name": "kwiat 04"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_094_kwiat 05.raw",
+      "offset": 2716902,
+      "size": 5396,
+      "pixel_size": 5396,
+      "width": 190,
+      "height": 265,
+      "name": "kwiat 05"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_095_kwiat 06.raw",
+      "offset": 2722494,
+      "size": 5396,
+      "pixel_size": 5396,
+      "width": 190,
+      "height": 265,
+      "name": "kwiat 06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_096_kwiat 01.raw",
+      "offset": 2728086,
+      "size": 13184,
+      "pixel_size": 13184,
+      "width": 157,
+      "height": 266,
+      "name": "kwiat 01"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_097_kwiat 02.raw",
+      "offset": 2741466,
+      "size": 13184,
+      "pixel_size": 13184,
+      "width": 157,
+      "height": 266,
+      "name": "kwiat 02"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_098_kwiat 03.raw",
+      "offset": 2754846,
+      "size": 13184,
+      "pixel_size": 13184,
+      "width": 157,
+      "height": 266,
+      "name": "kwiat 03"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_099_kwiat 04.raw",
+      "offset": 2768226,
+      "size": 13184,
+      "pixel_size": 13184,
+      "width": 157,
+      "height": 266,
+      "name": "kwiat 04"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_100_kwiat 05.raw",
+      "offset": 2781606,
+      "size": 13184,
+      "pixel_size": 13184,
+      "width": 157,
+      "height": 266,
+      "name": "kwiat 05"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_101_kwiat 06.raw",
+      "offset": 2794986,
+      "size": 13184,
+      "pixel_size": 13184,
+      "width": 157,
+      "height": 266,
+      "name": "kwiat 06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_102_kwiat 01.raw",
+      "offset": 2808366,
+      "size": 3904,
+      "pixel_size": 3904,
+      "width": 619,
+      "height": 196,
+      "name": "kwiat 01"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_103_kwiat 02.raw",
+      "offset": 2812466,
+      "size": 3904,
+      "pixel_size": 3904,
+      "width": 619,
+      "height": 196,
+      "name": "kwiat 02"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_104_kwiat 03.raw",
+      "offset": 2816566,
+      "size": 3904,
+      "pixel_size": 3904,
+      "width": 619,
+      "height": 196,
+      "name": "kwiat 03"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_105_kwiat 04.raw",
+      "offset": 2820666,
+      "size": 3904,
+      "pixel_size": 3904,
+      "width": 619,
+      "height": 196,
+      "name": "kwiat 04"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_106_kwiat 05.raw",
+      "offset": 2824766,
+      "size": 3904,
+      "pixel_size": 3904,
+      "width": 619,
+      "height": 196,
+      "name": "kwiat 05"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_107_kwiat 06.raw",
+      "offset": 2828866,
+      "size": 3904,
+      "pixel_size": 3904,
+      "width": 619,
+      "height": 196,
+      "name": "kwiat 06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_108_kwiat 01.raw",
+      "offset": 2832966,
+      "size": 2756,
+      "pixel_size": 2756,
+      "width": 175,
+      "height": 470,
+      "name": "kwiat 01"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_109_kwiat 02.raw",
+      "offset": 2835918,
+      "size": 2756,
+      "pixel_size": 2756,
+      "width": 175,
+      "height": 470,
+      "name": "kwiat 02"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_110_kwiat 03.raw",
+      "offset": 2838870,
+      "size": 2756,
+      "pixel_size": 2756,
+      "width": 175,
+      "height": 470,
+      "name": "kwiat 03"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_111_kwiat 04.raw",
+      "offset": 2841822,
+      "size": 2756,
+      "pixel_size": 2756,
+      "width": 175,
+      "height": 470,
+      "name": "kwiat 04"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_112_kwiat 05.raw",
+      "offset": 2844774,
+      "size": 2756,
+      "pixel_size": 2756,
+      "width": 175,
+      "height": 470,
+      "name": "kwiat 05"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_113_kwiat 06.raw",
+      "offset": 2847726,
+      "size": 2756,
+      "pixel_size": 2756,
+      "width": 175,
+      "height": 470,
+      "name": "kwiat 06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_114_srodek 01.raw",
+      "offset": 2850678,
+      "size": 960,
+      "pixel_size": 960,
+      "width": 54,
+      "height": 384,
+      "name": "srodek 01"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_115_srodek 02.raw",
+      "offset": 2851834,
+      "size": 960,
+      "pixel_size": 960,
+      "width": 54,
+      "height": 384,
+      "name": "srodek 02"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_116_srodek 03.raw",
+      "offset": 2852990,
+      "size": 960,
+      "pixel_size": 960,
+      "width": 54,
+      "height": 384,
+      "name": "srodek 03"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_117_srodek 04.raw",
+      "offset": 2854146,
+      "size": 960,
+      "pixel_size": 960,
+      "width": 54,
+      "height": 384,
+      "name": "srodek 04"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_118_srodek 05.raw",
+      "offset": 2855302,
+      "size": 960,
+      "pixel_size": 960,
+      "width": 54,
+      "height": 384,
+      "name": "srodek 05"
+    },
+    {
+      "kind": "multibitmap_bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_119_srodek 06.bmp",
+      "offset": 2856458,
+      "size": 2038,
+      "pixel_size": 960,
+      "width": 32,
+      "height": 30,
+      "name": "srodek 06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_120_srodek 01.raw",
+      "offset": 2857614,
+      "size": 1224,
+      "pixel_size": 1224,
+      "width": 120,
+      "height": 371,
+      "name": "srodek 01"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_121_srodek 02.raw",
+      "offset": 2859034,
+      "size": 1224,
+      "pixel_size": 1224,
+      "width": 120,
+      "height": 371,
+      "name": "srodek 02"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_122_srodek 03.raw",
+      "offset": 2860454,
+      "size": 1224,
+      "pixel_size": 1224,
+      "width": 120,
+      "height": 371,
+      "name": "srodek 03"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_123_srodek 04.raw",
+      "offset": 2861874,
+      "size": 1224,
+      "pixel_size": 1224,
+      "width": 120,
+      "height": 371,
+      "name": "srodek 04"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_124_srodek 05.raw",
+      "offset": 2863294,
+      "size": 1224,
+      "pixel_size": 1224,
+      "width": 120,
+      "height": 371,
+      "name": "srodek 05"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_125_srodek 06.raw",
+      "offset": 2864714,
+      "size": 1224,
+      "pixel_size": 1224,
+      "width": 120,
+      "height": 371,
+      "name": "srodek 06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_126_srodek 01.raw",
+      "offset": 2866134,
+      "size": 1152,
+      "pixel_size": 1152,
+      "width": 73,
+      "height": 321,
+      "name": "srodek 01"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_127_srodek 02.raw",
+      "offset": 2867482,
+      "size": 1152,
+      "pixel_size": 1152,
+      "width": 73,
+      "height": 321,
+      "name": "srodek 02"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_128_srodek 03.raw",
+      "offset": 2868830,
+      "size": 1152,
+      "pixel_size": 1152,
+      "width": 73,
+      "height": 321,
+      "name": "srodek 03"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_129_srodek 04.raw",
+      "offset": 2870178,
+      "size": 1152,
+      "pixel_size": 1152,
+      "width": 73,
+      "height": 321,
+      "name": "srodek 04"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_130_srodek 05.raw",
+      "offset": 2871526,
+      "size": 1152,
+      "pixel_size": 1152,
+      "width": 73,
+      "height": 321,
+      "name": "srodek 05"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_131_srodek 06.raw",
+      "offset": 2872874,
+      "size": 1152,
+      "pixel_size": 1152,
+      "width": 73,
+      "height": 321,
+      "name": "srodek 06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_132_srodek 01.raw",
+      "offset": 2874222,
+      "size": 700,
+      "pixel_size": 700,
+      "width": 74,
+      "height": 169,
+      "name": "srodek 01"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_133_srodek 02.raw",
+      "offset": 2875118,
+      "size": 700,
+      "pixel_size": 700,
+      "width": 74,
+      "height": 169,
+      "name": "srodek 02"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_134_srodek 03.raw",
+      "offset": 2876014,
+      "size": 700,
+      "pixel_size": 700,
+      "width": 74,
+      "height": 169,
+      "name": "srodek 03"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_135_srodek 04.raw",
+      "offset": 2876910,
+      "size": 700,
+      "pixel_size": 700,
+      "width": 74,
+      "height": 169,
+      "name": "srodek 04"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_136_srodek 05.raw",
+      "offset": 2877806,
+      "size": 700,
+      "pixel_size": 700,
+      "width": 74,
+      "height": 169,
+      "name": "srodek 05"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_137_srodek 06.raw",
+      "offset": 2878702,
+      "size": 700,
+      "pixel_size": 700,
+      "width": 74,
+      "height": 169,
+      "name": "srodek 06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_138_srodek 01.raw",
+      "offset": 2879598,
+      "size": 756,
+      "pixel_size": 756,
+      "width": 167,
+      "height": 244,
+      "name": "srodek 01"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_139_srodek 02.raw",
+      "offset": 2880550,
+      "size": 756,
+      "pixel_size": 756,
+      "width": 167,
+      "height": 244,
+      "name": "srodek 02"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_140_srodek 03.raw",
+      "offset": 2881502,
+      "size": 756,
+      "pixel_size": 756,
+      "width": 167,
+      "height": 244,
+      "name": "srodek 03"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_141_srodek 04.raw",
+      "offset": 2882454,
+      "size": 756,
+      "pixel_size": 756,
+      "width": 167,
+      "height": 244,
+      "name": "srodek 04"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_142_srodek 05.raw",
+      "offset": 2883406,
+      "size": 756,
+      "pixel_size": 756,
+      "width": 167,
+      "height": 244,
+      "name": "srodek 05"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_143_srodek 06.raw",
+      "offset": 2884358,
+      "size": 756,
+      "pixel_size": 756,
+      "width": 167,
+      "height": 244,
+      "name": "srodek 06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_144_srodek 01.raw",
+      "offset": 2885310,
+      "size": 1480,
+      "pixel_size": 1480,
+      "width": 114,
+      "height": 239,
+      "name": "srodek 01"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_145_srodek 02.raw",
+      "offset": 2886986,
+      "size": 1480,
+      "pixel_size": 1480,
+      "width": 114,
+      "height": 239,
+      "name": "srodek 02"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_146_srodek 03.raw",
+      "offset": 2888662,
+      "size": 1480,
+      "pixel_size": 1480,
+      "width": 114,
+      "height": 239,
+      "name": "srodek 03"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_147_srodek 04.raw",
+      "offset": 2890338,
+      "size": 1480,
+      "pixel_size": 1480,
+      "width": 114,
+      "height": 239,
+      "name": "srodek 04"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_148_srodek 05.raw",
+      "offset": 2892014,
+      "size": 1480,
+      "pixel_size": 1480,
+      "width": 114,
+      "height": 239,
+      "name": "srodek 05"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_149_srodek 06.raw",
+      "offset": 2893690,
+      "size": 1480,
+      "pixel_size": 1480,
+      "width": 114,
+      "height": 239,
+      "name": "srodek 06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_150_srodek 01.raw",
+      "offset": 2895366,
+      "size": 420,
+      "pixel_size": 420,
+      "width": 599,
+      "height": 176,
+      "name": "srodek 01"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_151_srodek 02.raw",
+      "offset": 2895982,
+      "size": 420,
+      "pixel_size": 420,
+      "width": 599,
+      "height": 176,
+      "name": "srodek 02"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_152_srodek 03.raw",
+      "offset": 2896598,
+      "size": 420,
+      "pixel_size": 420,
+      "width": 599,
+      "height": 176,
+      "name": "srodek 03"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_153_srodek 04.raw",
+      "offset": 2897214,
+      "size": 420,
+      "pixel_size": 420,
+      "width": 599,
+      "height": 176,
+      "name": "srodek 04"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_154_srodek 05.raw",
+      "offset": 2897830,
+      "size": 420,
+      "pixel_size": 420,
+      "width": 599,
+      "height": 176,
+      "name": "srodek 05"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_155_srodek 06.raw",
+      "offset": 2898446,
+      "size": 420,
+      "pixel_size": 420,
+      "width": 599,
+      "height": 176,
+      "name": "srodek 06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_156_srodek 01.raw",
+      "offset": 2899062,
+      "size": 360,
+      "pixel_size": 360,
+      "width": 158,
+      "height": 453,
+      "name": "srodek 01"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_157_srodek 02.raw",
+      "offset": 2899618,
+      "size": 360,
+      "pixel_size": 360,
+      "width": 158,
+      "height": 453,
+      "name": "srodek 02"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_158_srodek 03.raw",
+      "offset": 2900174,
+      "size": 360,
+      "pixel_size": 360,
+      "width": 158,
+      "height": 453,
+      "name": "srodek 03"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_159_srodek 04.raw",
+      "offset": 2900730,
+      "size": 360,
+      "pixel_size": 360,
+      "width": 158,
+      "height": 453,
+      "name": "srodek 04"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_160_srodek 05.raw",
+      "offset": 2901286,
+      "size": 360,
+      "pixel_size": 360,
+      "width": 158,
+      "height": 453,
+      "name": "srodek 05"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_161_srodek 06.raw",
+      "offset": 2901842,
+      "size": 360,
+      "pixel_size": 360,
+      "width": 18,
+      "height": 18,
+      "name": "srodek 06"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_162_puszki.raw",
+      "offset": 2902398,
+      "size": 86944,
+      "pixel_size": 86944,
+      "width": 606,
+      "height": 474,
+      "name": "puszki"
+    },
+    {
+      "kind": "multibitmap_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\animations\\00_MultiBitmap_niebo 01_640x134.gif",
+      "size": 584991,
+      "frame_count": 6,
+      "width": 640,
+      "height": 134,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\embedded\\03_Sound_Holder_000_002ea091.wav",
+      "size": 106520
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\embedded\\03_Sound_Holder_001_00304109.wav",
+      "size": 34588
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\embedded\\03_Sound_Holder_002_0030c885.wav",
+      "size": 38816
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\embedded\\03_Sound_Holder_003_00316085.wav",
+      "size": 275828
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\embedded\\03_Sound_Holder_004_00359659.wav",
+      "size": 337714
+    }
+  ],
+  "script": {
+    "version_offset": 3851332,
+    "version": 1,
+    "string_prefix_offset": 3851336,
+    "text_offset": 3851339,
+    "text_length": 17821,
+    "text_end": 3869160,
+    "engine_state": {
+      "offset": 3869160,
+      "version": 2,
+      "block_count": 8,
+      "handler_offsets": {
+        "field_38": 17460,
+        "field_3c": 0,
+        "field_30": 0,
+        "field_34": 382
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 3869184,
+          "start_offset": 3653,
+          "duplicate_start_offset": 3653,
+          "case_count": 3,
+          "end_or_body_offset": 6284,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 3680
+            },
+            {
+              "value": 1,
+              "target_offset": 4295
+            },
+            {
+              "value": 2,
+              "target_offset": 6116
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 3869228,
+          "start_offset": 4566,
+          "duplicate_start_offset": 4566,
+          "case_count": 3,
+          "end_or_body_offset": 5354,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 4611
+            },
+            {
+              "value": 1,
+              "target_offset": 4948
+            },
+            {
+              "value": 2,
+              "target_offset": 5204
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "file_offset": 3869272,
+          "start_offset": 6378,
+          "duplicate_start_offset": 6378,
+          "case_count": 2,
+          "end_or_body_offset": 11016,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 6405
+            },
+            {
+              "value": 11,
+              "target_offset": 10851
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "file_offset": 3869308,
+          "start_offset": 7138,
+          "duplicate_start_offset": 7138,
+          "case_count": 13,
+          "end_or_body_offset": 10806,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 7195
+            },
+            {
+              "value": 3,
+              "target_offset": 7338
+            },
+            {
+              "value": 4,
+              "target_offset": 7484
+            },
+            {
+              "value": 5,
+              "target_offset": 7628
+            },
+            {
+              "value": 6,
+              "target_offset": 7771
+            },
+            {
+              "value": 7,
+              "target_offset": 8576
+            },
+            {
+              "value": 8,
+              "target_offset": 8726
+            },
+            {
+              "value": 9,
+              "target_offset": 9358
+            },
+            {
+              "value": 12,
+              "target_offset": 9971
+            },
+            {
+              "value": 13,
+              "target_offset": 9996
+            },
+            {
+              "value": 14,
+              "target_offset": 10021
+            },
+            {
+              "value": 15,
+              "target_offset": 10046
+            },
+            {
+              "value": 16,
+              "target_offset": 10074
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "file_offset": 3869432,
+          "start_offset": 8801,
+          "duplicate_start_offset": 8801,
+          "case_count": 4,
+          "end_or_body_offset": 9291,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 8858
+            },
+            {
+              "value": 1,
+              "target_offset": 8970
+            },
+            {
+              "value": 2,
+              "target_offset": 9082
+            },
+            {
+              "value": 3,
+              "target_offset": 9194
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "file_offset": 3869484,
+          "start_offset": 9433,
+          "duplicate_start_offset": 9433,
+          "case_count": 4,
+          "end_or_body_offset": 9923,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 9490
+            },
+            {
+              "value": 1,
+              "target_offset": 9602
+            },
+            {
+              "value": 2,
+              "target_offset": 9714
+            },
+            {
+              "value": 3,
+              "target_offset": 9826
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "file_offset": 3869536,
+          "start_offset": 11795,
+          "duplicate_start_offset": 11795,
+          "case_count": 9,
+          "end_or_body_offset": 12638,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 11834
+            },
+            {
+              "value": 3,
+              "target_offset": 11866
+            },
+            {
+              "value": 4,
+              "target_offset": 11965
+            },
+            {
+              "value": 5,
+              "target_offset": 12062
+            },
+            {
+              "value": 6,
+              "target_offset": 12158
+            },
+            {
+              "value": 7,
+              "target_offset": 12262
+            },
+            {
+              "value": 8,
+              "target_offset": 12364
+            },
+            {
+              "value": 9,
+              "target_offset": 12467
+            },
+            {
+              "value": 10,
+              "target_offset": 12571
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "file_offset": 3869628,
+          "start_offset": 13002,
+          "duplicate_start_offset": 13002,
+          "case_count": 3,
+          "end_or_body_offset": 13645,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 13029
+            },
+            {
+              "value": 1,
+              "target_offset": 13303
+            },
+            {
+              "value": 2,
+              "target_offset": 13505
+            }
+          ]
+        }
+      ],
+      "table_count": 1,
+      "table_a": [
+        2425
+      ],
+      "table_b": [
+        8
+      ],
+      "versioned_tail": {
+        "field_44": 17590,
+        "field_48": 0,
+        "field_4c": 17721,
+        "field_50": 0
+      },
+      "end_offset": 3869700
+    }
+  }
+}

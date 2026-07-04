@@ -1,0 +1,294 @@
+//###########################################################################
+//Script code
+//###########################################################################
+
+
+OnOpenPage()
+{
+	// Add your component and variables initialization code here
+	// WARNING: All variables definied on this function are global for this page
+
+   LoadGroup("cursors1.grp");
+   SetCursor (0);
+
+   int toolbar=0;
+   int toolbarCase=0;
+   int toolbarPhase=1;
+   Group.HotSpot_Holder.DisableHotSpot(1);
+
+   DisableScreen();
+   Puzzle.OpenPuzzle(0);
+   Puzzle.Mix(0,0,580,480);
+   EnableScreen();
+   ShowBuffer();
+   Group.Sound_Holder.PlayDSound(9);
+   FadeScreen(1,1000);
+
+   int showBmp=0;
+//   SetTimer(5000);
+}
+
+
+void OnLButtonDown(int x,int y)
+{
+        //Add your command handler code here
+   SetTimer(0);
+   Group.Sound_Holder.Stop(12);
+}
+
+void OnTimer(void)
+{
+        //Add your command handler code here
+   SetTimer(0);
+   Group.Sound_Holder.PlayDSound(12);
+}
+
+
+
+
+void OnClosePage(void)
+{
+	// Add your close page handler code here
+
+}
+
+
+void OnKeyDown(UINT nChar)
+{
+        //Add your command handler code here
+   Puzzle.ShowFullBitmap(90,60,3);
+}
+ 
+void Puzzle.MouseMoveIn()
+{
+   SetCursor (1);
+}
+
+ 
+void Puzzle.MouseMoveOut()
+{
+   SetCursor (0);
+}
+
+ 
+void Puzzle.MouseStartDrag()
+{
+   Group.Sound_Holder.PlayDSound(5);
+}
+
+ 
+void Puzzle.MouseDrop()
+{
+   Group.Sound_Holder.PlayDSound(6);
+}
+
+ 
+void Puzzle.ChipLock()
+{
+   Group.Sound_Holder.PlayDSound(7);
+}
+
+ 
+void Puzzle.GameOver(int puzzleID)
+{
+   Group.Sound_Holder.PlayDSound(8);
+}
+
+ 
+//############################################################# T O O L B A R #######
+//#############################################################---------------#######
+void Group.HotSpot_Holder.MouseMoveIn(int rectID)
+{
+   if(rectID==0)
+   {
+      Group.Sprite_Holder.DisableTimers();
+
+      Group.Sprite_Holder.GotoXY(0,480,0);
+      Group.Sprite_Holder.GotoXY(2,533,22);
+      Group.Sprite_Holder.GotoXY(3,548,156);
+      Group.Sprite_Holder.GotoXY(4,560,329);
+      Group.Sprite_Holder.GotoXY(1,557,404);
+
+      Group.Sprite_Holder.SynchronizeTimers();
+      Group.Sprite_Holder.EnableTimers();
+      Group.Sound_Holder.PlayDSound(0);
+   }
+   else
+   {
+      if(toolbar)
+      {
+         Group.Sprite_Holder.DisableTimers();
+
+         Group.Sprite_Holder.GotoXY(0,640,0);
+         Group.Sprite_Holder.GotoXY(2,693,22);
+         Group.Sprite_Holder.GotoXY(3,708,156);
+         Group.Sprite_Holder.GotoXY(4,720,329);
+         Group.Sprite_Holder.GotoXY(1,717,404);
+
+         Group.Sprite_Holder.SynchronizeTimers();
+         Group.Sprite_Holder.EnableTimers();
+         Group.Sound_Holder.PlayDSound(0);
+         toolbar=0;
+         toolbarPhase=0;
+      }
+      Group.HotSpot_Holder.DisableHotSpot(1);
+      toolbarCase=0;
+   }
+}
+
+void Group.Sprite_Holder.InPlace(int spriteID,int x,int y)
+{
+   if(spriteID==0)
+   {
+      if(x==480)
+      {
+         toolbar=1;
+         Group.HotSpot_Holder.EnableHotSpot(1);
+         SetCursor(1);
+      }
+      else
+      {
+         SetCursor(0);
+         Group.Sprite_Holder.ChangePhase(1,0);
+         Group.Sprite_Holder.ChangePhase(2,0);
+         Group.Sprite_Holder.ChangePhase(3,0);
+         Group.Sprite_Holder.ChangePhase(4,0);
+         switch(toolbarCase)
+         {
+            case 1:   //Plansza wyboru
+               FadeScreen(0,1000);
+               LoadPage("Wyborw.bdf");
+               break;
+            case 2:   //puzzle trudne
+               DisableScreen();
+               Puzzle.OpenPuzzle(0);
+               Puzzle.Mix(0,0,580,480);
+               EnableScreen();
+               ShowBuffer();
+               break;
+            case 3:   //puzzle latwe
+               FadeScreen(0,1000);
+               LoadPage("ryce1p2.bdf");
+               break;
+            case 4:  //plansza glowna
+               FadeScreen(0,1000);
+               LoadPage("rycerz.bdf");
+               break;
+         }
+      }
+   }
+}
+
+
+void Group.Sprite_Holder.MouseMoveIn(int spriteID)
+{
+   if(spriteID)
+      SetCursor(1);
+}
+
+void Group.Sprite_Holder.MouseMoveOut(int spriteID)
+{
+   if(spriteID)
+      SetCursor(0);
+}
+
+
+void Group.Sprite_Holder.MouseClickOnDown(int spriteID)
+{
+   Group.HotSpot_Holder.DisableHotSpot(1);
+   Group.Sprite_Holder.ChangePhase(spriteID,1);
+   switch(spriteID)
+   {
+      case 1:   //wybor wierszy
+         Group.Sound_Holder.PlayDSound(3);
+         break;
+      case 2:   //puzzle trudne
+         Group.Sound_Holder.PlayDSound(1);
+         break;
+      case 3:   //puzzle trudne
+         Group.Sound_Holder.PlayDSound(2);
+         break;
+      case 4:  //parent window
+         Group.Sound_Holder.PlayDSound(4);
+         break;
+      case 5:
+         Group.Sprite_Holder.ChangePhase(spriteID,1);
+         if(showBmp)
+         {
+            showBmp=0;
+            Puzzle.EndShowFullBitmap();
+         }
+         else
+         {
+            showBmp=1;
+            Group.Sound_Holder.PlayDSound(10);
+            Puzzle.ShowFullBitmap(40,40,-1);
+         }
+         break;
+   }
+}
+
+void Group.Sprite_Holder.MouseClickOnUp(int spriteID)
+{
+   if(spriteID==5)
+   {
+      Group.Sprite_Holder.ChangePhase(spriteID,0);
+      return;
+   }
+   if(spriteID==2 || spriteID==3)   return;
+   Group.Sprite_Holder.DisableTimers();
+
+   Group.Sprite_Holder.GotoXY(0,640,0);
+   Group.Sprite_Holder.GotoXY(2,693,22);
+   Group.Sprite_Holder.GotoXY(3,708,156);
+   Group.Sprite_Holder.GotoXY(4,720,329);
+   Group.Sprite_Holder.GotoXY(1,717,404);
+   toolbarPhase=0;
+
+   Group.Sprite_Holder.SynchronizeTimers();
+   Group.Sprite_Holder.EnableTimers();
+   Group.Sound_Holder.PlayDSound(0);
+   toolbar=0;
+   Group.HotSpot_Holder.DisableHotSpot(1);
+   toolbarCase=spriteID;
+}
+
+
+void Puzzle.EndShowBitmap(int puzzleID)
+{
+   showBmp=0;
+   Group.Sound_Holder.PlayDSound(11);
+}
+
+void Group.Sprite_Holder.EndAnimation(int spriteID)
+{
+   if(spriteID!=2 && spriteID!=3)   return;
+
+   Group.Sprite_Holder.ChangePhase(spriteID,2);
+
+   Group.Sprite_Holder.DisableTimers();
+
+   Group.Sprite_Holder.GotoXY(0,640,0);
+   Group.Sprite_Holder.GotoXY(2,693,22);
+   Group.Sprite_Holder.GotoXY(3,708,156);
+   Group.Sprite_Holder.GotoXY(4,720,329);
+   Group.Sprite_Holder.GotoXY(1,717,404);
+   toolbarPhase=0;
+
+   Group.Sprite_Holder.SynchronizeTimers();
+   Group.Sprite_Holder.EnableTimers();
+   Group.Sound_Holder.PlayDSound(0);
+   toolbar=0;
+   Group.HotSpot_Holder.DisableHotSpot(1);
+   toolbarCase=spriteID;
+}
+//#############################################################
+//############################################################# 
+ 
+ 
+void OnRButtonDown(int x,int y)
+{
+        //Add your command handler code here
+   Group.Sound_Holder.PlayDSound(12);
+}
+ 

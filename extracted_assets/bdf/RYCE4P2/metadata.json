@@ -1,0 +1,193 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RYCE4P2.BDF",
+  "size": 366461,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Tuesday, November 04, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    8
+  ],
+  "background_flag": 1,
+  "background_color_index": 230,
+  "palette_size": 1024,
+  "dib_size": 0,
+  "component_list_offset": 1165,
+  "component_list_version": 1,
+  "component_count": 2,
+  "components": [
+    {
+      "index": 0,
+      "offset": 1173,
+      "clsid": "196E7596-AB2B-11D0-B2A5-008048EB5D40",
+      "display_name": "Puzzle",
+      "private_offset": 2257,
+      "private_size": 237764,
+      "embedded": []
+    },
+    {
+      "index": 1,
+      "offset": 240021,
+      "clsid": "1720D306-6932-11D0-B468-008048EB5D40",
+      "display_name": "Sound_Holder",
+      "private_offset": 240917,
+      "private_size": 118474,
+      "embedded": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCE4P2\\embedded\\01_Sound_Holder_000_0003ad21.wav",
+          "offset": 240929,
+          "size": 8754,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCE4P2\\embedded\\01_Sound_Holder_001_0003cfb3.wav",
+          "offset": 249779,
+          "size": 5780,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCE4P2\\embedded\\01_Sound_Holder_002_0003e6a7.wav",
+          "offset": 255655,
+          "size": 10158,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCE4P2\\embedded\\01_Sound_Holder_003_00040eb5.wav",
+          "offset": 265909,
+          "size": 93390,
+          "extension": ".wav"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCE4P2\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCE4P2\\script.txt",
+      "size": 6903
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCE4P2\\embedded\\01_Sound_Holder_000_0003ad21.wav",
+      "size": 8754
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCE4P2\\embedded\\01_Sound_Holder_001_0003cfb3.wav",
+      "size": 5780
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCE4P2\\embedded\\01_Sound_Holder_002_0003e6a7.wav",
+      "size": 10158
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCE4P2\\embedded\\01_Sound_Holder_003_00040eb5.wav",
+      "size": 93390
+    }
+  ],
+  "script": {
+    "version_offset": 359391,
+    "version": 1,
+    "string_prefix_offset": 359395,
+    "text_offset": 359398,
+    "text_length": 6903,
+    "text_end": 366301,
+    "engine_state": {
+      "offset": 366301,
+      "version": 2,
+      "block_count": 2,
+      "handler_offsets": {
+        "field_38": 877,
+        "field_3c": 1092,
+        "field_30": 0,
+        "field_34": 341
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 366325,
+          "start_offset": 3396,
+          "duplicate_start_offset": 3396,
+          "case_count": 4,
+          "end_or_body_offset": 4068,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 1,
+              "target_offset": 3454
+            },
+            {
+              "value": 2,
+              "target_offset": 3592
+            },
+            {
+              "value": 3,
+              "target_offset": 3730
+            },
+            {
+              "value": 4,
+              "target_offset": 3966
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 366377,
+          "start_offset": 4458,
+          "duplicate_start_offset": 4458,
+          "case_count": 5,
+          "end_or_body_offset": 5197,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 1,
+              "target_offset": 4503
+            },
+            {
+              "value": 2,
+              "target_offset": 4597
+            },
+            {
+              "value": 3,
+              "target_offset": 4691
+            },
+            {
+              "value": 4,
+              "target_offset": 4784
+            },
+            {
+              "value": 5,
+              "target_offset": 4860
+            }
+          ]
+        }
+      ],
+      "table_count": 0,
+      "table_a": [],
+      "table_b": [],
+      "versioned_tail": {
+        "field_44": 746,
+        "field_48": 0,
+        "field_4c": 6796,
+        "field_50": 0
+      },
+      "end_offset": 366457
+    }
+  }
+}

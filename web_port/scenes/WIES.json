@@ -1,0 +1,496 @@
+{
+  "id": "WIES",
+  "title": "WIES",
+  "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WIES.BDF",
+  "pageRect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "background": {
+    "colorIndex": 0,
+    "flag": 1,
+    "bmpPath": null,
+    "bmpUrl": null,
+    "palettePath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\background_palette.bin",
+    "paletteUrl": "../extracted_assets/bdf/WIES/background_palette.bin"
+  },
+  "components": [
+    {
+      "id": "00_Panorama",
+      "type": "Panorama",
+      "index": 0,
+      "z": 0,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "sourceOffset": 1173,
+      "privateOffset": 2763,
+      "privateSize": 4582880,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "01_Text_Holder",
+      "type": "Text_Holder",
+      "index": 1,
+      "z": 1,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "sourceOffset": 4585643,
+      "privateOffset": 4587269,
+      "privateSize": 13140,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "02_Sound_Holder",
+      "type": "Sound_Holder",
+      "index": 2,
+      "z": 0,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "geometryConfidence": "not_visual",
+      "sourceOffset": 4600409,
+      "privateOffset": 4601305,
+      "privateSize": 1796730,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_000_004635e5.wav",
+          "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_000_004635e5.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 4601317,
+          "id": 0
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_001_0046cc09.wav",
+          "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_001_0046cc09.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 4639753,
+          "id": 1
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_002_0047581d.wav",
+          "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_002_0047581d.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 4675613,
+          "id": 2
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_003_004978c5.wav",
+          "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_003_004978c5.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 4815045,
+          "id": 3
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_004_004a26e7.wav",
+          "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_004_004a26e7.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 4859623,
+          "id": 4
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_005_004a505d.wav",
+          "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_005_004a505d.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 4870237,
+          "id": 5
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_006_004b76e7.wav",
+          "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_006_004b76e7.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 4945639,
+          "id": 6
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_007_004c97fd.wav",
+          "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_007_004c97fd.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 5019645,
+          "id": 7
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_008_004d53cb.wav",
+          "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_008_004d53cb.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 5067723,
+          "id": 8
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_009_004e367b.wav",
+          "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_009_004e367b.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 5125755,
+          "id": 9
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_010_004f8819.wav",
+          "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_010_004f8819.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 5212185,
+          "id": 10
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_011_0050b1d7.wav",
+          "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_011_0050b1d7.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 5288407,
+          "id": 11
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_012_005144d5.wav",
+          "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_012_005144d5.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 5326037,
+          "id": 12
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_013_0052d1d3.wav",
+          "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_013_0052d1d3.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 5427667,
+          "id": 13
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_014_00541371.wav",
+          "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_014_00541371.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 5510001,
+          "id": 14
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_015_005d53fd.wav",
+          "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_015_005d53fd.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 6116349,
+          "id": 15
+        }
+      ]
+    },
+    {
+      "id": "03_Sprite_Holder",
+      "type": "Sprite_Holder",
+      "index": 3,
+      "z": 3,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "sourceOffset": 6398035,
+      "privateOffset": 6399569,
+      "privateSize": 43308,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    }
+  ],
+  "script": {
+    "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\script.txt",
+    "url": "../extracted_assets/bdf/WIES/script.txt",
+    "handlers": [
+      {
+        "name": "OnOpenPage",
+        "signature": "OnOpenPage()"
+      },
+      {
+        "name": "if",
+        "signature": "if(IsProject()==0)"
+      },
+      {
+        "name": "SetTextMode",
+        "signature": "SetTextMode(void)"
+      },
+      {
+        "name": "if",
+        "signature": "if(textMode)"
+      },
+      {
+        "name": "OnClosePage",
+        "signature": "OnClosePage(void)"
+      },
+      {
+        "name": "Panorama.SpriteMouseMoveIn",
+        "signature": "Panorama.SpriteMouseMoveIn(int panoramaNo,int spriteNo)"
+      },
+      {
+        "name": "Panorama.SpriteMouseMoveOut",
+        "signature": "Panorama.SpriteMouseMoveOut()"
+      },
+      {
+        "name": "Panorama.ClickOnSprite",
+        "signature": "Panorama.ClickOnSprite(int panoramaNo,int spriteNo)"
+      },
+      {
+        "name": "Panorama.SpriteEndAnimation",
+        "signature": "Panorama.SpriteEndAnimation(int panoramaNo,int spriteNo)"
+      },
+      {
+        "name": "Group.HotSpot_Holder.MouseMoveIn",
+        "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(rectID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(toolbar)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(toolbarPhase)"
+      },
+      {
+        "name": "if",
+        "signature": "if(txtHotSpotOn==0)"
+      },
+      {
+        "name": "Group.Sprite_Holder.InPlace",
+        "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(spriteID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(x==480)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(toolbarCase)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(puzzleNo)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(puzzleNo)"
+      },
+      {
+        "name": "if",
+        "signature": "if(x==0)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseMoveIn",
+        "signature": "Group.Sprite_Holder.MouseMoveIn(int spriteID)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseMoveOut",
+        "signature": "Group.Sprite_Holder.MouseMoveOut(int spriteID)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseClickOnDown",
+        "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(spriteID==11)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(spriteID)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseClickOnUp",
+        "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(toolbarPhase)"
+      },
+      {
+        "name": "Group.Sprite_Holder.EndAnimation",
+        "signature": "Group.Sprite_Holder.EndAnimation(int spriteID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(toolbarPhase==0)"
+      },
+      {
+        "name": "Text_Holder.ScrollTextUp",
+        "signature": "Text_Holder.ScrollTextUp(int textID)"
+      },
+      {
+        "name": "Text_Holder.ScrollTextDown",
+        "signature": "Text_Holder.ScrollTextDown(int textID)"
+      },
+      {
+        "name": "Text_Holder.EndScrollText",
+        "signature": "Text_Holder.EndScrollText(int textID)"
+      },
+      {
+        "name": "Text_Holder.MouseMoveIn",
+        "signature": "Text_Holder.MouseMoveIn(int textID)"
+      },
+      {
+        "name": "Text_Holder.MouseMoveOut",
+        "signature": "Text_Holder.MouseMoveOut(int textID)"
+      },
+      {
+        "name": "Text_Holder.ClickOnText",
+        "signature": "Text_Holder.ClickOnText(int textID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(playStatus)"
+      },
+      {
+        "name": "Text_Holder.EndOfSynchroText",
+        "signature": "Text_Holder.EndOfSynchroText(int textID)"
+      },
+      {
+        "name": "Sound_Holder.EndPlaySound",
+        "signature": "Sound_Holder.EndPlaySound(int soundID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(soundID==0 && textMode)"
+      },
+      {
+        "name": "Sprite_Holder.MouseMoveIn",
+        "signature": "Sprite_Holder.MouseMoveIn(int spriteID)"
+      },
+      {
+        "name": "Sprite_Holder.MouseMoveOut",
+        "signature": "Sprite_Holder.MouseMoveOut(int spriteID)"
+      },
+      {
+        "name": "Sprite_Holder.MouseClickOnDown",
+        "signature": "Sprite_Holder.MouseClickOnDown(int spriteID)"
+      },
+      {
+        "name": "Sprite_Holder.MouseClickOnUp",
+        "signature": "Sprite_Holder.MouseClickOnUp(int spriteID)"
+      },
+      {
+        "name": "Panorama.ZoomIn",
+        "signature": "Panorama.ZoomIn(int panoramaNo)"
+      },
+      {
+        "name": "Panorama.ZoomOut",
+        "signature": "Panorama.ZoomOut(int panoramaNo)"
+      },
+      {
+        "name": "Panorama.ZoomEnd",
+        "signature": "Panorama.ZoomEnd()"
+      },
+      {
+        "name": "Panorama.MoveLeft",
+        "signature": "Panorama.MoveLeft(int panoramaNo)"
+      },
+      {
+        "name": "Panorama.MoveRight",
+        "signature": "Panorama.MoveRight(int panoramaNo)"
+      },
+      {
+        "name": "Panorama.MoveTop",
+        "signature": "Panorama.MoveTop(int panoramaNo)"
+      },
+      {
+        "name": "Panorama.MoveBottom",
+        "signature": "Panorama.MoveBottom(int panoramaNo)"
+      },
+      {
+        "name": "Panorama.HorMoveEnd",
+        "signature": "Panorama.HorMoveEnd()"
+      },
+      {
+        "name": "Panorama.VertMoveEnd",
+        "signature": "Panorama.VertMoveEnd()"
+      },
+      {
+        "name": "OnTimer",
+        "signature": "OnTimer(void)"
+      },
+      {
+        "name": "OnLButtonDown",
+        "signature": "OnLButtonDown(int x,int y)"
+      },
+      {
+        "name": "OnRButtonDown",
+        "signature": "OnRButtonDown(int x,int y)"
+      }
+    ],
+    "rawText": "//###########################################################################\n\n//Script code\n\n//###########################################################################\n\n\n\n\n\nOnOpenPage()\n\n{\n\n\t// Add your component and variables initialization code here\n\n\t// WARNING: All variables definied on this function are global for this page\n\n   if(IsProject()==0)   \n\n   {\n\n//      int textMode=0;\n\n      CString parentWnd;\n\n   }\n\n   int textMode=0;\n\n\n\n   int move=0;\n\n   int mOn=0;\n\n\n\n   LoadGroup(\"Cursors.grp\");\n\n   SetCursor(0);\n\n   Panorama.OpenPanorama(0);\n\n\n\n//#############################################################################\n\n   int toolbar=0;\n\n   int toolbarCase=0;\n\n   int toolbarPhase=0;\n\n   int txtHotSpotOn=0;\n\n   int playStatus=0;\n\n   int puzzleNo=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n//############################################################################\n\n\n\n   Sound_Holder.PlayDSound(14);\n\n   SetTextMode();\n\n   FadeScreen(1,1000);\n\n//   SetTimer(5000);\n\n}\n\n\n\nvoid SetTextMode(void)\n\n{\n\n   if(textMode)\n\n   {\n\n      DisableScreen();\n\n      Panorama.SetZoom(1);\n\n      Panorama.SetHorAngle(0);\n\n      Panorama.SetVertOffset(1000);\n\n\n\n      playStatus = 1;\n\n      Sound_Holder.SetPlayDSoundParameters(14,-1000,0,0);\n\n      Sound_Holder.PlayDSound(0);\n\n      Text_Holder.SetTextOffsets(0,0,0);\n\n      Text_Holder.DisableMouse(0);\n\n      Text_Holder.ShowText(0);\n\n      Panorama.Disable();\n\n      EnableScreen();\n\n      ShowBuffer();\n\n   }\n\n   else\n\n   {\n\n      playStatus = 0;\n\n      Text_Holder.HideText(0);\n\n      Text_Holder.StopSynchroText(0);\n\n      Sound_Holder.SetPlayDSoundParameters(14,0,0,0);\n\n      Panorama.Enable();\n\n   }\n\n}\n\n\n\nvoid OnClosePage(void)\n\n{\n\n\t// Add your close page handler code here\n\n\n\n}\n\n\n\n\n\n \n\nvoid Panorama.SpriteMouseMoveIn(int panoramaNo,int spriteNo)\n\n{\n\n   SetCursor(1);\n\n   mOn=1;\n\n}\n\n\n\n \n\nvoid Panorama.SpriteMouseMoveOut()\n\n{\n\n   mOn=0;\n\n   if(move)   SetCursor(move);\n\n   else       SetCursor(0);\n\n}\n\n\n\n \n\n\n\nvoid Panorama.ClickOnSprite(int panoramaNo,int spriteNo)\n\n{\n\n   Sound_Holder.PlayDSound(spriteNo+1);\n\n}\n\n\n\n\n\nvoid Panorama.SpriteEndAnimation(int panoramaNo,int spriteNo)\n\n{\n\n   Panorama.ResetSprite(spriteNo);\n\n}\n\n\n\n\n\n//############################################################# T O O L B A R #######\n\n//#############################################################---------------#######\n\nvoid Group.HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n   switch(rectID)\n\n   {\n\n      case 0:\n\n         Panorama.Disable();\n\n         Group.Sprite_Holder.DisableTimers();\n\n         Group.HotSpot_Holder.DisableHotSpot(0);\n\n\n\n         Group.Sprite_Holder.GotoXY(0,480,0);\n\n         Group.Sprite_Holder.GotoXY(2,544,14);\n\n         Group.Sprite_Holder.GotoXY(3,584,14);\n\n         Group.Sprite_Holder.GotoXY(4,515,84);\n\n         Group.Sprite_Holder.GotoXY(5,559,210);\n\n         Group.Sprite_Holder.GotoXY(6,558,282);\n\n         Group.Sprite_Holder.GotoXY(7,557,404);\n\n   \n\n         Group.Sprite_Holder.SynchronizeTimers();\n\n         Group.Sprite_Holder.EnableTimers();\n\n         Group.Sound_Holder.PlayDSound(0);\n\n         break;\n\n      case 1:\n\n         if(textMode==0)     Panorama.Enable();\n\n         if(toolbar)\n\n         {\n\n            Group.Sprite_Holder.DisableTimers();\n\n            Sprite_Holder.DisableTimers();\n\n            Group.Sprite_Holder.GotoXY(0,640,0);\n\n            Group.Sprite_Holder.GotoXY(7,717,404);\n\n  \n\n            switch(toolbarPhase)\n\n            {\n\n               case 0:\n\n                  Group.Sprite_Holder.GotoXY(2,704,14);\n\n                  Group.Sprite_Holder.GotoXY(3,744,14);\n\n                  Group.Sprite_Holder.GotoXY(4,675,84);\n\n                  Group.Sprite_Holder.GotoXY(5,719,210);\n\n                  Group.Sprite_Holder.GotoXY(6,718,282);\n\n                  break;\n\n               case 1:\n\n                  Sprite_Holder.GotoXY(0,714,18);\n\n                  Sprite_Holder.GotoXY(1,703,93);\n\n                  Sprite_Holder.GotoXY(2,715,179);\n\n                  Sprite_Holder.GotoXY(3,712,262);\n\n                  break;\n\n               case 2:\n\n                  Group.Sprite_Holder.GotoXY(8,693,22);\n\n                  Group.Sprite_Holder.GotoXY(9,708,156);\n\n                  break;\n\n            }\n\n            Sprite_Holder.SynchronizeTimers();\n\n            Group.Sprite_Holder.SynchronizeTimers();\n\n            Group.Sprite_Holder.EnableTimers();\n\n            Sprite_Holder.EnableTimers();\n\n            Group.Sound_Holder.PlayDSound(0);\n\n            toolbar=0;\n\n            toolbarPhase=0;\n\n         }\n\n         else\n\n         {\n\n            Group.Sprite_Holder.GotoXY(11,-56,-70);\n\n            if(toolbarCase!=11)   Group.Sound_Holder.PlayDSound(2);\n\n            SetCursor(0);\n\n         }\n\n         txtHotSpotOn=0;\n\n         Group.HotSpot_Holder.DisableHotSpot(1);\n\n         Group.HotSpot_Holder.EnableHotSpot(0);\n\n         toolbarCase=0;\n\n         break;\n\n      case 2:\n\n         Panorama.Disable();\n\n         if(txtHotSpotOn==0)   \n\n         {\n\n            Group.Sprite_Holder.GotoXY(11,0,0);\n\n            Group.Sound_Holder.PlayDSound(3);\t\n\n         }\n\n         break;\n\n   }\n\n}\n\n\n\n\n\nvoid Group.Sprite_Holder.InPlace(int spriteID,int x,int y)\n\n{\n\n   switch(spriteID)\n\n   {\n\n      case 0:\n\n         if(x==480)\n\n         {\n\n            toolbar=1;\n\n            Group.HotSpot_Holder.EnableHotSpot(1);\n\n            SetCursor(1);\n\n         }\n\n         else\n\n         {\n\n            SetCursor(0);\n\n            Group.Sprite_Holder.ChangePhase(2,0);\n\n            Group.Sprite_Holder.ChangePhase(3,0);\n\n            Group.Sprite_Holder.ChangePhase(4,0);\n\n            Group.Sprite_Holder.ChangePhase(5,0);\n\n            Group.Sprite_Holder.ChangePhase(6,0);\n\n            Group.Sprite_Holder.ChangePhase(7,0);\n\n            Group.Sprite_Holder.ChangePhase(8,0);\n\n            Group.Sprite_Holder.ChangePhase(9,0);\n\n            \n\n            switch(toolbarCase)\n\n            {\n\n               case 2:   //lewo   \n\n                  FadeScreen(0,1000);\n\n                  LoadPage(\"figielek.bdf\");\n\n                  break;\n\n               case 3:   //prawo\n\n                  FadeScreen(0,1000);\n\n                  LoadPage(\"kotek.bdf\");\n\n                  break;\n\n               case 4:   //recytacja\n\n                  FadeScreen(0,1000);\n\n                  LoadPage(\"wies_r.bdf\");\n\n                  break;\n\n               case 5:   //roznice\n\n                  FadeScreen(0,1000);\n\n                  LoadPage(\"wies_c.bdf\");\n\n                  break;\n\n               case 6:   //puzzle\n\n                  Group.Sprite_Holder.DisableTimers();\n\n                  Sprite_Holder.DisableTimers();\n\n\n\n                  Group.Sprite_Holder.GotoXY(0,480,0);\n\n                  Sprite_Holder.GotoXY(0,544,18);\n\n                  Sprite_Holder.GotoXY(1,543,93);\n\n                  Sprite_Holder.GotoXY(2,555,179);\n\n                  Sprite_Holder.GotoXY(3,552,262);\n\n                  Group.Sprite_Holder.GotoXY(7,557,404);\n\n\n\n                  Sprite_Holder.SynchronizeTimers();\n\n                  Group.Sprite_Holder.SynchronizeTimers();\n\n                  Group.Sprite_Holder.EnableTimers();\n\n                  Sprite_Holder.EnableTimers();\n\n                  Group.Sound_Holder.PlayDSound(0);\n\n                  toolbarPhase=1;\n\n                  break;\n\n               case 7:   //Plansza wyboru\n\n                  FadeScreen(0,1000);\n\n                  LoadPage(\"Wyborw.bdf\");\n\n                  break;\n\n               case 8:   //puzzle trudne\n\n                  FadeScreen(0,1000);\n\n                  parentWnd.SetString(\"wies.bdf\");\n\n                  switch(puzzleNo)\n\n                  {\n\n                     case 0:\n\n                        LoadPage(\"wies1p1.bdf\");\n\n                        break;\n\n                     case 1:\n\n                        LoadPage(\"wies2p1.bdf\");\n\n                        break;\n\n                     case 2:\n\n                        LoadPage(\"wies3p1.bdf\");\n\n                        break;\n\n                     case 3:\n\n                        LoadPage(\"wies4p1.bdf\");\n\n                        break;\n\n                  }\n\n                  break;\n\n               case 9:   //puzzle latwe\n\n                  FadeScreen(0,1000);\n\n                  parentWnd.SetString(\"wies.bdf\");\n\n                  switch(puzzleNo)\n\n                  {\n\n                     case 0:\n\n                        LoadPage(\"wies1p2.bdf\");\n\n                        break;\n\n                     case 1:\n\n                        LoadPage(\"wies1p2.bdf\");\n\n                        break;\n\n                     case 2:\n\n                        LoadPage(\"wies1p2.bdf\");\n\n                        break;\n\n                     case 3:\n\n                        LoadPage(\"wies1p2.bdf\");\n\n                        break;\n\n                  }\n\n                  break;\n\n               case 12:\n\n               case 13:\n\n               case 14:\n\n               case 15:\n\n               case 16:\n\n                  Sprite_Holder.ChangePhase(0,0);\n\n                  Sprite_Holder.ChangePhase(1,0);\n\n                  Sprite_Holder.ChangePhase(2,0);\n\n                  Sprite_Holder.ChangePhase(3,0);\n\n\n\n                  Group.Sprite_Holder.DisableTimers();\n\n\n\n                  Group.Sprite_Holder.GotoXY(0,480,0);\n\n\n\n                  Group.Sprite_Holder.GotoXY(8,533,22);\n\n                  Group.Sprite_Holder.GotoXY(9,548,156);\n\n                  Group.Sprite_Holder.GotoXY(7,557,404);\n\n\n\n                  Group.Sprite_Holder.SynchronizeTimers();\n\n                  Group.Sprite_Holder.EnableTimers();\n\n                  Group.Sound_Holder.PlayDSound(0);\n\n                  toolbarPhase=2;\n\n                  break;\n\n            }\n\n         }\n\n         break;\n\n      case 11:\n\n         if(x==0)\n\n         {\n\n            Group.HotSpot_Holder.EnableHotSpot(1);\n\n            txtHotSpotOn=1;\n\n            SetCursor(1);\n\n         }\n\n         break;\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseMoveIn(int spriteID)\n\n{\n\n   if(spriteID && toolbar)\n\n      SetCursor(1);\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseMoveOut(int spriteID)\n\n{\n\n   if(spriteID)\n\n      SetCursor(0);\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnDown(int spriteID)\n\n{\n\n   if(spriteID==0)   return;\n\n   if(spriteID==11)\n\n   {\n\n      Group.Sprite_Holder.GotoXY(11,-56,-70);\n\n      Group.Sound_Holder.PlayDSound(2);\t\n\n      toolbarCase=spriteID;\n\n      SetCursor(0);\n\n      if(textMode)    textMode=0;\n\n      else            textMode=1;\n\n      SetTextMode();\n\n   }\n\n   else\n\n   {\n\n      Group.HotSpot_Holder.DisableHotSpot(1);\n\n      Group.Sprite_Holder.ChangePhase(spriteID,1);\n\n      switch(spriteID)\t\n\n      {\n\n         case 2:   //lewo\n\n         case 3:   //prawo \n\n            Group.Sound_Holder.PlayDSound(4);\n\n            break;\n\n         case 4:   //recytacja\n\n            Group.Sound_Holder.PlayDSound(5);\n\n            break;\n\n         case 5:   //roznice\n\n            Group.Sound_Holder.PlayDSound(6);\n\n            break;\n\n         case 6:   //puzzle\n\n            Group.Sound_Holder.PlayDSound(7);\n\n            break;\n\n         case 7:   //plansza glowna\n\n            Group.Sound_Holder.PlayDSound(8);\n\n            break;\n\n         case 8:   //puzzle latwe\n\n            Group.Sound_Holder.PlayDSound(9);\n\n            break;\n\n         case 9:   //puzzle trudne\n\n            Group.Sound_Holder.PlayDSound(10);\n\n            break;\n\n         case 10:  //parent window\n\n            Group.Sound_Holder.PlayDSound(4);\n\n            break;\n\n      }\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnUp(int spriteID)\n\n{\n\n   if(spriteID==0 || spriteID==5 || spriteID==6 || spriteID==8 || spriteID==9 || spriteID==11)   return;\n\n   Group.Sprite_Holder.DisableTimers();\n\n\n\n   Group.Sprite_Holder.GotoXY(0,640,0);\n\n   Group.Sprite_Holder.GotoXY(7,717,404);\n\n\n\n   switch(toolbarPhase)\n\n   {\n\n      case 0:\n\n         Group.Sprite_Holder.GotoXY(2,704,14);\n\n         Group.Sprite_Holder.GotoXY(3,744,14);\n\n         Group.Sprite_Holder.GotoXY(4,675,84);\n\n         Group.Sprite_Holder.GotoXY(5,719,210);\n\n         Group.Sprite_Holder.GotoXY(6,718,282);\n\n         break;\n\n      case 1:\n\n         Sprite_Holder.GotoXY(0,714,18);\n\n         Sprite_Holder.GotoXY(1,703,93);\n\n         Sprite_Holder.GotoXY(2,715,179);\n\n         Sprite_Holder.GotoXY(3,712,262);\n\n         break;\n\n      case 2:\n\n         Group.Sprite_Holder.GotoXY(8,693,22);\n\n         Group.Sprite_Holder.GotoXY(9,708,156);\n\n         toolbarPhase=0;\n\n         break;\n\n   }\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID;\n\n}\n\n\n\nvoid Group.Sprite_Holder.EndAnimation(int spriteID)\n\n{\n\n   if(spriteID!=5 && spriteID!=6 && spriteID!=8 && spriteID!=9)   return;\n\n\n\n   Group.Sprite_Holder.ChangePhase(spriteID,2);\n\n\n\n   Group.Sprite_Holder.DisableTimers();\n\n\n\n   if(toolbarPhase==0)\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(2,704,14);\n\n      Group.Sprite_Holder.GotoXY(3,744,14);\n\n      Group.Sprite_Holder.GotoXY(4,675,84);\n\n      Group.Sprite_Holder.GotoXY(5,719,210);\n\n      Group.Sprite_Holder.GotoXY(6,718,282);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n   }\n\n   else\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(8,693,22);\n\n      Group.Sprite_Holder.GotoXY(9,708,156);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n      toolbarPhase=0;\n\n   }\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID;\n\n}\n\n//#############################################################\n\n//############################################################# \n\n\n\n\n\n\n\n\n\n\n\n \n\nvoid Text_Holder.ScrollTextUp(int textID)\n\n{\n\n   SetCursor(3);\n\n}\n\n\n\n \n\nvoid Text_Holder.ScrollTextDown(int textID)\n\n{\n\n   SetCursor(4);\n\n}\n\n\n\n \n\nvoid Text_Holder.EndScrollText(int textID)\n\n{\n\n   if(playStatus)  SetCursor(2);\n\n   else            SetCursor(5);\n\n}\n\n\n\n \n\nvoid Text_Holder.MouseMoveIn(int textID)\n\n{\n\n   if(playStatus)\n\n      SetCursor(2);\n\n   else\n\n      SetCursor(5);\n\n}\n\n\n\n \n\nvoid Text_Holder.MouseMoveOut(int textID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\n \n\nvoid Text_Holder.ClickOnText(int textID)\n\n{\n\n   if(playStatus)\n\n   {\n\n      playStatus=0;\n\n      Sound_Holder.Stop(0);\n\n      Text_Holder.StopSynchroText(0);\n\n      Sound_Holder.SetPlayDSoundParameters(14,0,0,0);\n\n      SetCursor(5);\n\n   }\n\n   else\n\n   {\n\n      playStatus=1;\n\n      Text_Holder.PlaySynchroText(0);\n\n      Sound_Holder.SetPlayDSoundParameters(14,-1000,0,0);\n\n      SetCursor(2);\n\n   }\n\n}\n\n\n\n \n\nvoid Text_Holder.EndOfSynchroText(int textID)\n\n{\n\n   if(playStatus)\n\n      SetCursor(5);\n\n   else\n\n      SetCursor(0);\n\n   playStatus=0;\n\n   Sound_Holder.SetPlayDSoundParameters(14,0,0,0);\n\n}\n\n\n\n \n\nvoid Sound_Holder.EndPlaySound(int soundID)\n\n{\n\n   if(soundID==0 && textMode)\n\n   { \n\n      playStatus=1;\n\n      Text_Holder.EnableMouse(0);\n\n      Text_Holder.PlaySynchroText(0);\n\n   }\n\n}\n\n\n\n\n\n//######################################################## \n\nvoid Sprite_Holder.MouseMoveIn(int spriteID)\n\n{\n\n   SetCursor(1);\n\n}\n\n\n\nvoid Sprite_Holder.MouseMoveOut(int spriteID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\nvoid Sprite_Holder.MouseClickOnDown(int spriteID)\n\n{\n\n   Sprite_Holder.ChangePhase(spriteID,1);\n\n   Group.Sound_Holder.PlayDSound(12);\n\n}\n\n\n\nvoid Sprite_Holder.MouseClickOnUp(int spriteID)\n\n{\n\n   Group.Sprite_Holder.DisableTimers();\n\n   Sprite_Holder.DisableTimers();\n\n\n\n   Group.Sprite_Holder.GotoXY(0,640,0);\n\n\n\n   Sprite_Holder.GotoXY(0,714,18);\n\n   Sprite_Holder.GotoXY(1,703,93);\n\n   Sprite_Holder.GotoXY(2,715,179);\n\n   Sprite_Holder.GotoXY(3,712,262);\n\n   Group.Sprite_Holder.GotoXY(7,717,404);\n\n\n\n   Sprite_Holder.SynchronizeTimers();\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n   Sprite_Holder.EnableTimers();\n\n\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID+12;\n\n   puzzleNo=spriteID;\n\n}\n\n//########################################################\n\n\n\n \n\n\n\n \n\n \n\nvoid Panorama.ZoomIn(int panoramaNo)\n\n{\n\n}\n\n\n\n \n\nvoid Panorama.ZoomOut(int panoramaNo)\n\n{\n\n\n\n}\n\n\n\n \n\nvoid Panorama.ZoomEnd()\n\n{\n\n\n\n}\n\n\n\n \n\nvoid Panorama.MoveLeft(int panoramaNo)\n\n{\n\n   move=6;\n\n   SetCursor(6);\n\n}\n\n\n\n \n\nvoid Panorama.MoveRight(int panoramaNo)\n\n{\n\n   move=7;\n\n   SetCursor(7);\n\n}\n\n\n\n \n\nvoid Panorama.MoveTop(int panoramaNo)\n\n{\n\n   move=3;\n\n   SetCursor(3);\n\n}\n\n\n\n \n\nvoid Panorama.MoveBottom(int panoramaNo)\n\n{\n\n   move=4;\n\n   SetCursor(4);\n\n}\n\n\n\n \n\nvoid Panorama.HorMoveEnd()\n\n{\n\n   move=0;\n\n   SetCursor(mOn);\n\n}\n\n\n\n \n\nvoid Panorama.VertMoveEnd()\n\n{\n\n   move=0;\n\n   SetCursor(mOn);\n\n}\n\n\n\n   \n\nvoid OnTimer(void)\n\n{\n\n        //Add your command handler code here\n\n   SetTimer(0);\n\n   Sound_Holder.PlayDSound(15);\n\n}\n\n \n\nvoid OnLButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   SetTimer(0);\n\n   Sound_Holder.Stop(15);\n\n}\n\n \n\nvoid OnRButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   if(x<16 || x>608 || y<40 || y>440)   \n\n      Sound_Holder.PlayDSound(15);\n\n}\n\n "
+  },
+  "warnings": [
+    "3 component(s) have unknown geometry and default to 0,0."
+  ]
+}

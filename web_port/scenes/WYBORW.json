@@ -1,0 +1,1609 @@
+{
+  "id": "WYBORW",
+  "title": "WYBORW",
+  "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WYBORW.BDF",
+  "pageRect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "background": {
+    "colorIndex": 0,
+    "flag": 0,
+    "bmpPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\background.bmp",
+    "bmpUrl": "../extracted_assets/bdf/WYBORW/background.bmp",
+    "palettePath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\background_palette.bin",
+    "paletteUrl": "../extracted_assets/bdf/WYBORW/background_palette.bin"
+  },
+  "components": [
+    {
+      "id": "00_Transparent_Video_Holder",
+      "type": "Transparent_Video_Holder",
+      "index": 0,
+      "z": 0,
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 640,
+        "height": 480
+      },
+      "geometryConfidence": "serialized_entries",
+      "sourceOffset": 309353,
+      "privateOffset": 310527,
+      "privateSize": 5322456,
+      "primaryAssetUrl": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_000_0004bd0b_board_video_138x96.gif",
+      "assets": [
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_000_0004bd0b_board_video_138x96.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_000_0004bd0b_board_video_138x96.gif",
+          "width": 138,
+          "height": 96,
+          "frameCount": 8,
+          "offset": 310539,
+          "name": null,
+          "id": 0,
+          "rect": {
+            "x": 117,
+            "y": 384,
+            "width": 138,
+            "height": 96
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 470765,
+          "streamOffset": 310539,
+          "originalRect": {
+            "x": 117,
+            "y": 384,
+            "width": 138,
+            "height": 96
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_002_000768d9_board_video_60x53.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_002_000768d9_board_video_60x53.gif",
+          "width": 60,
+          "height": 53,
+          "frameCount": 8,
+          "offset": 485593,
+          "name": null,
+          "id": 2,
+          "rect": {
+            "x": 563,
+            "y": 140,
+            "width": 60,
+            "height": 53
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 593807,
+          "streamOffset": 485593,
+          "originalRect": {
+            "x": 563,
+            "y": 140,
+            "width": 60,
+            "height": 53
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_004_00092167_board_video_30x73.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_004_00092167_board_video_30x73.gif",
+          "width": 30,
+          "height": 73,
+          "frameCount": 3,
+          "offset": 598375,
+          "name": null,
+          "id": 4,
+          "rect": {
+            "x": 58,
+            "y": 232,
+            "width": 30,
+            "height": 73
+          },
+          "z": 1,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 694547,
+          "streamOffset": 598375,
+          "originalRect": {
+            "x": 58,
+            "y": 232,
+            "width": 30,
+            "height": 73
+          },
+          "originalZ": 1
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_006_000aa79f_board_video_108x67.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_006_000aa79f_board_video_108x67.gif",
+          "width": 108,
+          "height": 67,
+          "frameCount": 8,
+          "offset": 698271,
+          "name": null,
+          "id": 6,
+          "rect": {
+            "x": 10,
+            "y": 413,
+            "width": 108,
+            "height": 67
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 833145,
+          "streamOffset": 698271,
+          "originalRect": {
+            "x": 10,
+            "y": 413,
+            "width": 108,
+            "height": 67
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_008_000cd829_board_video_138x70.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_008_000cd829_board_video_138x70.gif",
+          "width": 138,
+          "height": 70,
+          "frameCount": 14,
+          "offset": 841769,
+          "name": null,
+          "id": 8,
+          "rect": {
+            "x": 249,
+            "y": 376,
+            "width": 138,
+            "height": 70
+          },
+          "z": 1,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 1021499,
+          "streamOffset": 841769,
+          "originalRect": {
+            "x": 249,
+            "y": 376,
+            "width": 138,
+            "height": 70
+          },
+          "originalZ": 1
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_010_000fc1ef_board_video_45x52.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_010_000fc1ef_board_video_45x52.gif",
+          "width": 45,
+          "height": 52,
+          "frameCount": 11,
+          "offset": 1032687,
+          "name": null,
+          "id": 10,
+          "rect": {
+            "x": 106,
+            "y": 0,
+            "width": 45,
+            "height": 52
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 1187623,
+          "streamOffset": 1032687,
+          "originalRect": {
+            "x": 106,
+            "y": 0,
+            "width": 45,
+            "height": 52
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_012_00122e53_board_video_90x76.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_012_00122e53_board_video_90x76.gif",
+          "width": 90,
+          "height": 76,
+          "frameCount": 6,
+          "offset": 1191507,
+          "name": null,
+          "id": 12,
+          "rect": {
+            "x": 533,
+            "y": 354,
+            "width": 90,
+            "height": 76
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 1314884,
+          "streamOffset": 1191507,
+          "originalRect": {
+            "x": 533,
+            "y": 354,
+            "width": 90,
+            "height": 76
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_014_00143100_board_video_144x309.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_014_00143100_board_video_144x309.gif",
+          "width": 144,
+          "height": 309,
+          "frameCount": 9,
+          "offset": 1323264,
+          "name": null,
+          "id": 14,
+          "rect": {
+            "x": 242,
+            "y": 83,
+            "width": 144,
+            "height": 309
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 1565379,
+          "streamOffset": 1323264,
+          "originalRect": {
+            "x": 242,
+            "y": 83,
+            "width": 144,
+            "height": 309
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_016_001895ff_board_video_57x55.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_016_001895ff_board_video_57x55.gif",
+          "width": 57,
+          "height": 55,
+          "frameCount": 9,
+          "offset": 1611263,
+          "name": null,
+          "id": 16,
+          "rect": {
+            "x": 0,
+            "y": 253,
+            "width": 57,
+            "height": 55
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 1721050,
+          "streamOffset": 1611263,
+          "originalRect": {
+            "x": 0,
+            "y": 253,
+            "width": 57,
+            "height": 55
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_018_001a552a_board_video_204x223.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_018_001a552a_board_video_204x223.gif",
+          "width": 204,
+          "height": 223,
+          "frameCount": 7,
+          "offset": 1725738,
+          "name": null,
+          "id": 18,
+          "rect": {
+            "x": 117,
+            "y": 160,
+            "width": 204,
+            "height": 223
+          },
+          "z": 1,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 1995820,
+          "streamOffset": 1725738,
+          "originalRect": {
+            "x": 117,
+            "y": 160,
+            "width": 204,
+            "height": 223
+          },
+          "originalZ": 1
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_020_001f2b4c_board_video_122x193.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_020_001f2b4c_board_video_122x193.gif",
+          "width": 122,
+          "height": 193,
+          "frameCount": 12,
+          "offset": 2042700,
+          "name": null,
+          "id": 20,
+          "rect": {
+            "x": 436,
+            "y": 281,
+            "width": 122,
+            "height": 193
+          },
+          "z": 1,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 2258828,
+          "streamOffset": 2042700,
+          "originalRect": {
+            "x": 436,
+            "y": 281,
+            "width": 122,
+            "height": 193
+          },
+          "originalZ": 1
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_022_0022da74_board_video_92x87.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_022_0022da74_board_video_92x87.gif",
+          "width": 92,
+          "height": 87,
+          "frameCount": 8,
+          "offset": 2284148,
+          "name": null,
+          "id": 22,
+          "rect": {
+            "x": 296,
+            "y": 252,
+            "width": 92,
+            "height": 87
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 2422225,
+          "streamOffset": 2284148,
+          "originalRect": {
+            "x": 296,
+            "y": 252,
+            "width": 92,
+            "height": 87
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_024_00251a81_board_video_37x41.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_024_00251a81_board_video_37x41.gif",
+          "width": 37,
+          "height": 41,
+          "frameCount": 2,
+          "offset": 2431617,
+          "name": null,
+          "id": 24,
+          "rect": {
+            "x": 165,
+            "y": 68,
+            "width": 37,
+            "height": 41
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 2568430,
+          "streamOffset": 2431617,
+          "originalRect": {
+            "x": 165,
+            "y": 68,
+            "width": 37,
+            "height": 41
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_026_00273cc2_board_video_68x40.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_026_00273cc2_board_video_68x40.gif",
+          "width": 68,
+          "height": 40,
+          "frameCount": 20,
+          "offset": 2571458,
+          "name": null,
+          "id": 26,
+          "rect": {
+            "x": 482,
+            "y": 371,
+            "width": 68,
+            "height": 40
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 2745924,
+          "streamOffset": 2571458,
+          "originalRect": {
+            "x": 482,
+            "y": 371,
+            "width": 68,
+            "height": 40
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_028_0029f650_board_video_184x217.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_028_0029f650_board_video_184x217.gif",
+          "width": 184,
+          "height": 217,
+          "frameCount": 3,
+          "offset": 2750032,
+          "name": null,
+          "id": 28,
+          "rect": {
+            "x": 4,
+            "y": 196,
+            "width": 184,
+            "height": 217
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 2866150,
+          "streamOffset": 2750032,
+          "originalRect": {
+            "x": 4,
+            "y": 196,
+            "width": 184,
+            "height": 217
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_030_002c5d4a_board_video_375x302.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_030_002c5d4a_board_video_375x302.gif",
+          "width": 375,
+          "height": 302,
+          "frameCount": 13,
+          "offset": 2907466,
+          "name": null,
+          "id": 30,
+          "rect": {
+            "x": 265,
+            "y": 66,
+            "width": 375,
+            "height": 302
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 3292961,
+          "streamOffset": 2907466,
+          "originalRect": {
+            "x": 265,
+            "y": 66,
+            "width": 375,
+            "height": 302
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_032_0034001d_board_video_46x34.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_032_0034001d_board_video_46x34.gif",
+          "width": 46,
+          "height": 34,
+          "frameCount": 30,
+          "offset": 3407901,
+          "name": null,
+          "id": 32,
+          "rect": {
+            "x": 54,
+            "y": 192,
+            "width": 46,
+            "height": 34
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 3609250,
+          "streamOffset": 3407901,
+          "originalRect": {
+            "x": 54,
+            "y": 192,
+            "width": 46,
+            "height": 34
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_034_00371e6e_board_video_63x72.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_034_00371e6e_board_video_63x72.gif",
+          "width": 63,
+          "height": 72,
+          "frameCount": 6,
+          "offset": 3612270,
+          "name": null,
+          "id": 34,
+          "rect": {
+            "x": 432,
+            "y": 50,
+            "width": 63,
+            "height": 72
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 3720696,
+          "streamOffset": 3612270,
+          "originalRect": {
+            "x": 432,
+            "y": 50,
+            "width": 63,
+            "height": 72
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_036_0038dd64_board_video_52x54.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_036_0038dd64_board_video_52x54.gif",
+          "width": 52,
+          "height": 54,
+          "frameCount": 3,
+          "offset": 3726692,
+          "name": null,
+          "id": 36,
+          "rect": {
+            "x": 114,
+            "y": 227,
+            "width": 52,
+            "height": 54
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 3824265,
+          "streamOffset": 3726692,
+          "originalRect": {
+            "x": 114,
+            "y": 227,
+            "width": 52,
+            "height": 54
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_038_003a6aed_board_video_43x32.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_038_003a6aed_board_video_43x32.gif",
+          "width": 43,
+          "height": 32,
+          "frameCount": 3,
+          "offset": 3828461,
+          "name": null,
+          "id": 38,
+          "rect": {
+            "x": 232,
+            "y": 288,
+            "width": 43,
+            "height": 32
+          },
+          "z": 1,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 3920720,
+          "streamOffset": 3828461,
+          "originalRect": {
+            "x": 232,
+            "y": 288,
+            "width": 43,
+            "height": 32
+          },
+          "originalZ": 1
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_040_003bde3c_board_video_104x113.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_040_003bde3c_board_video_104x113.gif",
+          "width": 104,
+          "height": 113,
+          "frameCount": 15,
+          "offset": 3923516,
+          "name": null,
+          "id": 40,
+          "rect": {
+            "x": 529,
+            "y": 8,
+            "width": 104,
+            "height": 113
+          },
+          "z": 1,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 4177626,
+          "streamOffset": 3923516,
+          "originalRect": {
+            "x": 529,
+            "y": 8,
+            "width": 104,
+            "height": 113
+          },
+          "originalZ": 1
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_042_003ff22e_board_video_39x56.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_042_003ff22e_board_video_39x56.gif",
+          "width": 39,
+          "height": 56,
+          "frameCount": 3,
+          "offset": 4190766,
+          "name": null,
+          "id": 42,
+          "rect": {
+            "x": 494,
+            "y": 70,
+            "width": 39,
+            "height": 56
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 4285286,
+          "streamOffset": 4190766,
+          "originalRect": {
+            "x": 494,
+            "y": 70,
+            "width": 39,
+            "height": 56
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_044_00417192_board_video_46x34.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_044_00417192_board_video_46x34.gif",
+          "width": 46,
+          "height": 34,
+          "frameCount": 3,
+          "offset": 4288914,
+          "name": null,
+          "id": 44,
+          "rect": {
+            "x": 362,
+            "y": 84,
+            "width": 46,
+            "height": 34
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 4381257,
+          "streamOffset": 4288914,
+          "originalRect": {
+            "x": 362,
+            "y": 84,
+            "width": 46,
+            "height": 34
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_046_0042e615_board_video_24x91.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_046_0042e615_board_video_24x91.gif",
+          "width": 24,
+          "height": 91,
+          "frameCount": 6,
+          "offset": 4384277,
+          "name": null,
+          "id": 46,
+          "rect": {
+            "x": 394,
+            "y": 292,
+            "width": 24,
+            "height": 91
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 4484955,
+          "streamOffset": 4384277,
+          "originalRect": {
+            "x": 394,
+            "y": 292,
+            "width": 24,
+            "height": 91
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_048_00447d4f_board_video_27x30.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_048_00447d4f_board_video_27x30.gif",
+          "width": 27,
+          "height": 30,
+          "frameCount": 2,
+          "offset": 4488527,
+          "name": null,
+          "id": 48,
+          "rect": {
+            "x": 283,
+            "y": 44,
+            "width": 27,
+            "height": 30
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 4579782,
+          "streamOffset": 4488527,
+          "originalRect": {
+            "x": 283,
+            "y": 44,
+            "width": 27,
+            "height": 30
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_050_0045ea7a_board_video_295x480.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_050_0045ea7a_board_video_295x480.gif",
+          "width": 295,
+          "height": 480,
+          "frameCount": 7,
+          "offset": 4582010,
+          "name": null,
+          "id": 50,
+          "rect": {
+            "x": 175,
+            "y": 0,
+            "width": 295,
+            "height": 480
+          },
+          "z": 6,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 4968946,
+          "streamOffset": 4582010,
+          "originalRect": {
+            "x": 175,
+            "y": 0,
+            "width": 295,
+            "height": 480
+          },
+          "originalZ": 6
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\animations\\00_Transparent_Video_Holder_052_004e025e_board_video_295x480.gif",
+          "url": "../extracted_assets/bdf/WYBORW/animations/00_Transparent_Video_Holder_052_004e025e_board_video_295x480.gif",
+          "width": 295,
+          "height": 480,
+          "frameCount": 7,
+          "offset": 5112414,
+          "name": null,
+          "id": 52,
+          "rect": {
+            "x": 175,
+            "y": 0,
+            "width": 295,
+            "height": 480
+          },
+          "z": 6,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 5489519,
+          "streamOffset": 5112414,
+          "originalRect": {
+            "x": 175,
+            "y": 0,
+            "width": 295,
+            "height": 480
+          },
+          "originalZ": 6
+        }
+      ],
+      "audio": [
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_000_0004bd0b_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_000_0004bd0b_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 310539,
+          "id": 0
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_002_000768d9_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_002_000768d9_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 485593,
+          "id": 2
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_004_00092167_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_004_00092167_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 598375,
+          "id": 4
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_006_000aa79f_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_006_000aa79f_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 698271,
+          "id": 6
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_008_000cd829_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_008_000cd829_board_video_audio.wav",
+          "durationSeconds": 3.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 841769,
+          "id": 8
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_010_000fc1ef_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_010_000fc1ef_board_video_audio.wav",
+          "durationSeconds": 3.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 1032687,
+          "id": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_012_00122e53_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_012_00122e53_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 1191507,
+          "id": 12
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_014_00143100_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_014_00143100_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 1323264,
+          "id": 14
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_016_001895ff_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_016_001895ff_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 1611263,
+          "id": 16
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_018_001a552a_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_018_001a552a_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 1725738,
+          "id": 18
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_020_001f2b4c_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_020_001f2b4c_board_video_audio.wav",
+          "durationSeconds": 3.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 2042700,
+          "id": 20
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_022_0022da74_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_022_0022da74_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 2284148,
+          "id": 22
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_024_00251a81_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_024_00251a81_board_video_audio.wav",
+          "durationSeconds": 3.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 2431617,
+          "id": 24
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_026_00273cc2_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_026_00273cc2_board_video_audio.wav",
+          "durationSeconds": 3.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 2571458,
+          "id": 26
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_028_0029f650_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_028_0029f650_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 2750032,
+          "id": 28
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_030_002c5d4a_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_030_002c5d4a_board_video_audio.wav",
+          "durationSeconds": 3.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 2907466,
+          "id": 30
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_032_0034001d_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_032_0034001d_board_video_audio.wav",
+          "durationSeconds": 4.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 3407901,
+          "id": 32
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_034_00371e6e_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_034_00371e6e_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 3612270,
+          "id": 34
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_036_0038dd64_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_036_0038dd64_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 3726692,
+          "id": 36
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_038_003a6aed_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_038_003a6aed_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 3828461,
+          "id": 38
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_040_003bde3c_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_040_003bde3c_board_video_audio.wav",
+          "durationSeconds": 3.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 3923516,
+          "id": 40
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_042_003ff22e_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_042_003ff22e_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 4190766,
+          "id": 42
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_044_00417192_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_044_00417192_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 4288914,
+          "id": 44
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_046_0042e615_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_046_0042e615_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 4384277,
+          "id": 46
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_048_00447d4f_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_048_00447d4f_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 4488527,
+          "id": 48
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_050_0045ea7a_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_050_0045ea7a_board_video_audio.wav",
+          "durationSeconds": 3.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 4582010,
+          "id": 50
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\00_Transparent_Video_Holder_052_004e025e_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/00_Transparent_Video_Holder_052_004e025e_board_video_audio.wav",
+          "durationSeconds": 3.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 5112414,
+          "id": 52
+        }
+      ]
+    },
+    {
+      "id": "01_HotSpot_Holder",
+      "type": "HotSpot_Holder",
+      "index": 1,
+      "z": 1,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "sourceOffset": 5632983,
+      "privateOffset": 5634088,
+      "privateSize": 5170,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "02_Text_Holder",
+      "type": "Text_Holder",
+      "index": 2,
+      "z": 2,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "sourceOffset": 5639258,
+      "privateOffset": 5640884,
+      "privateSize": 12126,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "03_Bitmap_Holder",
+      "type": "Bitmap_Holder",
+      "index": 3,
+      "z": 3,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "sourceOffset": 5653010,
+      "privateOffset": 5654142,
+      "privateSize": 37352,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "04_Sound_Holder",
+      "type": "Sound_Holder",
+      "index": 4,
+      "z": 0,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "geometryConfidence": "not_visual",
+      "sourceOffset": 5691494,
+      "privateOffset": 5692390,
+      "privateSize": 3712604,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_000_0056dbf2.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_000_0056dbf2.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 5692402,
+          "id": 0
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_001_00578232.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_001_00578232.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 5734962,
+          "id": 1
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_002_0057e8e8.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_002_0057e8e8.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 5761256,
+          "id": 2
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_003_00591f2a.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_003_00591f2a.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 5840682,
+          "id": 3
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_004_005a1100.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_004_005a1100.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 5902592,
+          "id": 4
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_005_005c01bc.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_005_005c01bc.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 6029756,
+          "id": 5
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_006_005c789c.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_006_005c789c.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 6060188,
+          "id": 6
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_007_005d0ec0.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_007_005d0ec0.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 6098624,
+          "id": 7
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_008_005da772.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_008_005da772.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 6137714,
+          "id": 8
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_009_005e3d48.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_009_005e3d48.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 6176072,
+          "id": 9
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_010_005ebca0.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_010_005ebca0.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 6208672,
+          "id": 10
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_011_0060916c.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_011_0060916c.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 6328684,
+          "id": 11
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_012_00626154.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_012_00626154.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 6447444,
+          "id": 12
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_013_0062caf0.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_013_0062caf0.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 6474480,
+          "id": 13
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_014_00655144.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_014_00655144.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 6639940,
+          "id": 14
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_015_0065a07e.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_015_0065a07e.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 6660222,
+          "id": 15
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_016_0067118a.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_016_0067118a.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 6754698,
+          "id": 16
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_017_00683252.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_017_00683252.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 6828626,
+          "id": 17
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_018_00699c12.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_018_00699c12.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 6921234,
+          "id": 18
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_019_006a20c4.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_019_006a20c4.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 6955204,
+          "id": 19
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_020_006bc13c.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_020_006bc13c.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 7061820,
+          "id": 20
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_021_006d3d3a.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_021_006d3d3a.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 7159098,
+          "id": 21
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_022_006d9fde.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_022_006d9fde.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 7184350,
+          "id": 22
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_023_006ecb9e.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_023_006ecb9e.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 7261086,
+          "id": 23
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_024_006fcec4.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_024_006fcec4.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 7327428,
+          "id": 24
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_025_00712d92.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_025_00712d92.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 7417234,
+          "id": 25
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_026_0079c95a.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_026_0079c95a.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 7981402,
+          "id": 26
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\embedded\\04_Sound_Holder_027_007c3082.wav",
+          "url": "../extracted_assets/bdf/WYBORW/embedded/04_Sound_Holder_027_007c3082.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 8138882,
+          "id": 27
+        }
+      ]
+    }
+  ],
+  "script": {
+    "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW\\script.txt",
+    "url": "../extracted_assets/bdf/WYBORW/script.txt",
+    "handlers": [
+      {
+        "name": "OnOpenPage",
+        "signature": "OnOpenPage()"
+      },
+      {
+        "name": "while",
+        "signature": "while(tmp<51)"
+      },
+      {
+        "name": "OnClosePage",
+        "signature": "OnClosePage(void)"
+      },
+      {
+        "name": "Transparent_Video_Holder.TheEnd",
+        "signature": "Transparent_Video_Holder.TheEnd(int videoID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(videoID<25)"
+      },
+      {
+        "name": "if",
+        "signature": "if(hots==0)"
+      },
+      {
+        "name": "if",
+        "signature": "if(videoID==25)"
+      },
+      {
+        "name": "while",
+        "signature": "while(tmp<51)"
+      },
+      {
+        "name": "if",
+        "signature": "if(videoID==26)"
+      },
+      {
+        "name": "Group.HotSpot_Holder.LeftButtonClickOn",
+        "signature": "Group.HotSpot_Holder.LeftButtonClickOn(int rectID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(menu && rectID==1)"
+      },
+      {
+        "name": "while",
+        "signature": "while(tmp<51)"
+      },
+      {
+        "name": "Transparent_Video_Holder.MouseMoveIn",
+        "signature": "Transparent_Video_Holder.MouseMoveIn(int videoID)"
+      },
+      {
+        "name": "HotSpot_Holder.LeftButtonClickOn",
+        "signature": "HotSpot_Holder.LeftButtonClickOn(int rectID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(rectID<26)"
+      },
+      {
+        "name": "if",
+        "signature": "if(rectID!=25)"
+      },
+      {
+        "name": "if",
+        "signature": "if(curPlay>=0)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(rectID)"
+      },
+      {
+        "name": "Sound_Holder.EndPlaySound",
+        "signature": "Sound_Holder.EndPlaySound(int soundID)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(soundID)"
+      },
+      {
+        "name": "HotSpot_Holder.MouseMoveIn",
+        "signature": "HotSpot_Holder.MouseMoveIn(int rectID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(rectID>25 && rectID<51)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(rectID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(rectID<25)"
+      },
+      {
+        "name": "if",
+        "signature": "if(curPlay>=0)"
+      },
+      {
+        "name": "HotSpot_Holder.MouseMoveOut",
+        "signature": "HotSpot_Holder.MouseMoveOut(int rectID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(rectID>25 && rectID<51)"
+      },
+      {
+        "name": "Group.HotSpot_Holder.MouseMoveIn",
+        "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(rectID==0)"
+      },
+      {
+        "name": "if",
+        "signature": "if(toolbar)"
+      },
+      {
+        "name": "Group.Sprite_Holder.InPlace",
+        "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
+      },
+      {
+        "name": "if",
+        "signature": "if(spriteID==0)"
+      },
+      {
+        "name": "if",
+        "signature": "if(x==480)"
+      },
+      {
+        "name": "if",
+        "signature": "if(exit)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseMoveIn",
+        "signature": "Group.Sprite_Holder.MouseMoveIn(int spriteID)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseMoveOut",
+        "signature": "Group.Sprite_Holder.MouseMoveOut(int spriteID)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseClickOnDown",
+        "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseClickOnUp",
+        "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(spriteID)"
+      },
+      {
+        "name": "OnTimer",
+        "signature": "OnTimer(void)"
+      },
+      {
+        "name": "OnLButtonDown",
+        "signature": "OnLButtonDown(int x,int y)"
+      },
+      {
+        "name": "OnRButtonDown",
+        "signature": "OnRButtonDown(int x,int y)"
+      }
+    ],
+    "rawText": "//###########################################################################\n\n//Script code\n\n//###########################################################################\n\n\n\n\n\nOnOpenPage()\n\n{\n\n\t// Add your component and variables initialization code here\n\n\t// WARNING: All variables definied on this function are global for this page\n\n   \n\n   LoadGroup(\"cursors.grp\");\n\n   SetCursor(0);\n\n\n\n   int curPlay=-1;\n\n   int toolbar=0;\n\n   int exit=0;\n\n   int menu=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   int tmp=26;\n\n   int load=0;\n\n   int rozwija=0;\n\n   while(tmp<51)\n\n   {\n\n      HotSpot_Holder.DisableHotSpot(tmp);\n\n      tmp++;\n\n   }\n\n\n\n   Sound_Holder.PlayDSound(25);\n\n\n\n   int hots=0;\n\n   int deep;\n\n//   int play=Random(0,24);\n\n//   Transparent_Video_Holder.GetDeep(play,&deep);\n\n//   Transparent_Video_Holder.SetDeep(play,deep+2);\n\n//   Transparent_Video_Holder.Play(play,0);\n\n//   curPlay=play;\n\n   FadeScreen(1,1000);\n\n}\n\n\n\n\n\nvoid OnClosePage(void)\n\n{\n\n\t// Add your close page handler code here\n\n   FadeScreen(0,1000);\n\n}\n\n\n\n\n\nvoid Transparent_Video_Holder.TheEnd(int videoID)\n\n{\n\n   if(videoID<25)\n\n   {\n\n//      Transparent_Video_Holder.GetDeep(videoID,&deep);\n\n//      Transparent_Video_Holder.SetDeep(videoID,deep-2);\n\n      if(hots==0)\n\n      {\n\n//         int play=videoID;\n\n//         while(play==videoID)   play=Random(0,24);\n\n//         Transparent_Video_Holder.GetDeep(play,&deep);\n\n//         Transparent_Video_Holder.SetDeep(play,deep+2);\n\n//         Transparent_Video_Holder.Play(play,0);\n\n         return;\n\n      }\n\n      return;\n\n   }\n\n   if(videoID==25)\n\n   {\n\n      Group.HotSpot_Holder.EnableHotSpot(1);\n\n      tmp=26;\n\n      rozwija=0;\n\n      while(tmp<51)\n\n      {\n\n         HotSpot_Holder.EnableHotSpot(tmp);\n\n         tmp++;\n\n      }\n\n   }\n\n   else\n\n   {\n\n      if(videoID==26)\n\n      {\n\n         rozwija=0;\n\n         if(toolbar==0)     Group.HotSpot_Holder.DisableHotSpot(1);\n\n//         if(hots==0)\n\n//         {\n\n//            int play=videoID;\n\n//            while(play==videoID)   play=Random(0,24);\n\n//            Transparent_Video_Holder.SetDeep(play,2);\n\n//            Transparent_Video_Holder.Play(play,0);\n\n//         }\n\n      }\n\n   }\n\n}\n\n\n\n\n\nvoid Group.HotSpot_Holder.LeftButtonClickOn(int rectID)\n\n{\n\n   if(menu && rectID==1)\n\n   {\n\n      tmp=26;\n\n      while(tmp<51)\n\n      {\n\n         HotSpot_Holder.DisableHotSpot(tmp);\n\n         tmp++;\n\n      }\n\n      Transparent_Video_Holder.Play(26,0);\n\n      Transparent_Video_Holder.HideFirsLastVideoFrame(25);\n\n      menu=0;\n\n   }\n\n}\n\n\n\n\n\nvoid Transparent_Video_Holder.MouseMoveIn(int videoID)\n\n{\n\n   if(load)   return;\n\n   if(menu)   SetCursor(0);\n\n}\n\n\n\n\n\nvoid HotSpot_Holder.LeftButtonClickOn(int rectID)\n\n{\n\n   if(load || rozwija)   return;\n\n   if(rectID<26)\n\n   {\n\n      if(rectID!=25)  \n\n      {\n\n         load=1;   \n\n         hots=1;\n\n      }\n\n      else            \n\n      {\n\n         rozwija=1;\n\n         menu=1;\n\n         SetCursor(0);\n\n      }\n\n      if(rectID==25)  \n\n         Transparent_Video_Holder.Play(rectID,0);\n\n      else\n\n      {\n\n         if(curPlay>=0)\n\n         {\n\n            Transparent_Video_Holder.GetDeep(curPlay,&deep);\n\n            Transparent_Video_Holder.SetDeep(curPlay,deep-2);\n\n         }\n\n         Sound_Holder.SetPlayDSoundParameters(25,-1000,0,0);\n\n         switch(rectID)\n\n         {\n\n            case 0:\n\n               Sound_Holder.PlayDSound(0);\n\n               break;\n\n            case 11:\n\n               Sound_Holder.PlayDSound(1);\n\n               break;\n\n            case 20:\n\n               Sound_Holder.PlayDSound(2);\n\n               break;\n\n            case 9:\n\n               Sound_Holder.PlayDSound(3);\n\n               break;\n\n            case 3:\n\n               Sound_Holder.PlayDSound(4);\n\n               break;\n\n            case 7:\n\n               Sound_Holder.PlayDSound(5);\n\n               break;\n\n            case 13:\n\n               Sound_Holder.PlayDSound(6);\n\n               break;\n\n            case 6:\n\n               Sound_Holder.PlayDSound(7);\n\n               break;\n\n            case 5:\n\n               Sound_Holder.PlayDSound(8);\n\n               break;\n\n            case 1:\n\n               Sound_Holder.PlayDSound(9);\n\n               break;\n\n            case 18:\n\n               Sound_Holder.PlayDSound(10);\n\n               break;\n\n            case 22:\n\n               Sound_Holder.PlayDSound(11);\n\n               break;\n\n            case 12:\n\n               Sound_Holder.PlayDSound(12);\n\n               break;\n\n            case 8:\n\n               Sound_Holder.PlayDSound(13);\n\n               break;\n\n            case 24:\n\n               Sound_Holder.PlayDSound(14);\n\n               break;\n\n            case 14:\n\n               Sound_Holder.PlayDSound(15);\n\n               break;\n\n            case 15:\n\n               Sound_Holder.PlayDSound(16);\n\n               break;\n\n            case 17:\n\n               Sound_Holder.PlayDSound(17);\n\n               break;\n\n            case 16:\n\n               Sound_Holder.PlayDSound(18);\n\n               break;\n\n            case 19:\n\n               Sound_Holder.PlayDSound(19);\n\n               break;\n\n            case 21:\n\n               Sound_Holder.PlayDSound(20);\n\n               break;\n\n            case 10:\n\n               Sound_Holder.PlayDSound(21);\n\n               break;\n\n            case 4:\n\n               Sound_Holder.PlayDSound(22);\n\n               break;\n\n            case 2:\n\n               Sound_Holder.PlayDSound(23);\n\n               break;\n\n            case 23:\n\n               Sound_Holder.PlayDSound(24);\n\n               break;\n\n         }\n\n      }\n\n   }\n\n   else\n\n   {\n\n      load=1;\n\n      Sound_Holder.SetPlayDSoundParameters(25,-1000,0,0);\n\n      Sound_Holder.PlayDSound(rectID-26);\n\n   }\n\n}\n\n\n\n\n\nvoid Sound_Holder.EndPlaySound(int soundID)\n\n{\n\n   switch(soundID)\n\n   {\n\n      case 0:\n\n         LoadPage(\"Abecadlo.bdf\");\n\n         break;\n\n      case 1:\n\n         LoadPage(\"murzynek.bdf\");\n\n         break;\n\n      case 2:\n\n         LoadPage(\"cuda.bdf\");\n\n         break;\n\n      case 3:\n\n         LoadPage(\"mich0.bdf\");\n\n         break;\n\n      case 4:\n\n         LoadPage(\"dyzio.bdf\");\n\n         break;\n\n      case 5:\n\n         LoadPage(\"figielek.bdf\");\n\n         break;\n\n      case 6:\n\n         LoadPage(\"wies.bdf\");   \n\n         break;\n\n      case 7:\n\n         LoadPage(\"kotek.bdf\");\n\n         break;\n\n      case 8:\n\n         LoadPage(\"lokomot.bdf\");\n\n         break;\n\n      case 9:\n\n         LoadPage(\"mroz.bdf\");\n\n         break;\n\n      case 10:\n\n         LoadPage(\"grzesiu.bdf\");\n\n         break;\n\n      case 11:\n\n         LoadPage(\"tralala.bdf\");\n\n         break;\n\n      case 12:\n\n         LoadPage(\"okulary.bdf\");\n\n         break;\n\n      case 13:\n\n         LoadPage(\"maluskie.bdf\");\n\n         break;\n\n      case 14:\n\n         LoadPage(\"pstryk.bdf\");\n\n         break;\n\n      case 15:\n\n         LoadPage(\"plotki.bdf\");\n\n         break;\n\n      case 16:\n\n         LoadPage(\"radio.bdf\");\n\n         break;\n\n      case 17:\n\n         LoadPage(\"rycerz.bdf\");\n\n         break;\n\n      case 18:\n\n         LoadPage(\"rzeczka.bdf\");\n\n         break;\n\n      case 19:\n\n         LoadPage(\"slon.bdf\");\n\n         break;\n\n      case 20:\n\n         LoadPage(\"slowik.bdf\");\n\n         break;\n\n      case 21:\n\n         LoadPage(\"taniec.bdf\");\n\n         break;\n\n      case 22:\n\n         LoadPage(\"rachunek.bdf\");\n\n         break;\n\n      case 23:\n\n         LoadPage(\"wszyscy.bdf\");\n\n         break;\n\n      case 24:\n\n         LoadPage(\"zosia.bdf\");\n\n         break;\n\n   }\n\n}\n\n\n\n \n\nvoid HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n   if(load)   return;\n\n   SetCursor(1);\n\n   if(rectID>25 && rectID<51)\n\n   {\n\n      Bitmap_Holder.ShowBitmap(rectID-26);\n\n      return;      \n\n   }\n\n   if(menu)   return;\n\n\n\n   switch(rectID)\n\n   {\n\n      case 0:\n\n         Text_Holder.SetText(0,\"Q Abecadło\");\n\n         break;\n\n      case 1:\n\n         Text_Holder.SetText(0,\"Mróz\");\n\n         break;\n\n      case 2:\n\n         Text_Holder.SetText(0,\"Wszyscy dla wszystkich\");\n\n         break;\n\n      case 3:\n\n         Text_Holder.SetText(0,\"Dyzio marzyciel\");\n\n         break;\n\n      case 4:\n\n         Text_Holder.SetText(0,\"Trudny rachunek\");\n\n         break;\n\n      case 5:\n\n         Text_Holder.SetText(0,\"Lokomotywa\");\n\n         break;\n\n      case 6:\n\n         Text_Holder.SetText(0,\"Kotek\");\n\n         break;\n\n      case 7:\n\n         Text_Holder.SetText(0,\"Figielek\");\n\n         break;\n\n      case 8:\n\n         Text_Holder.SetText(0,\"Pan Maluśkiewicz i wieloryb\");\n\n         break;\n\n      case 9:\n\n         Text_Holder.SetText(0,\"Dwa Michały\");\n\n         break;\n\n      case 10:\n\n         Text_Holder.SetText(0,\"Q Taniec\");\n\n         break;\n\n      case 11:\n\n         Text_Holder.SetText(0,\"Bambo\");\n\n         break;\n\n      case 12:\n\n         Text_Holder.SetText(0,\"Okulary\");\n\n         break;\n\n      case 13:\n\n         Text_Holder.SetText(0,\"Idzie Grześ\");\n\n         break;\n\n      case 14:\n\n         Text_Holder.SetText(0,\"Ptasie plotki\");\n\n         break;\n\n      case 15:\n\n         Text_Holder.SetText(0,\"Ptasie radio\");\n\n         break;\n\n      case 16:\n\n         Text_Holder.SetText(0,\"Rzeczka\");\n\n         break;\n\n      case 17:\n\n         Text_Holder.SetText(0,\"Rycerz Krzykalski\");\n\n         break;\n\n      case 18:\n\n         Text_Holder.SetText(0,\"O Grzesiu kłamczuchu i jego cioci\");\n\n         break;\n\n      case 19:\n\n         Text_Holder.SetText(0,\"Słoń Trąbalski\");\n\n         break;\n\n      case 20:\n\n         Text_Holder.SetText(0,\"Q Cuda i dziwy\");\n\n         break;\n\n      case 21:\n\n         Text_Holder.SetText(0,\"Spóźniony słowik\");\n\n         break;\n\n      case 22:\n\n         Text_Holder.SetText(0,\"O panu Tralalińskim\");\n\n         break;\n\n      case 23:\n\n         Text_Holder.SetText(0,\"Q Zosia Samosia\");\n\n         break;\n\n      case 24:\n\n         Text_Holder.SetText(0,\"Pstryk\");\n\n         break;\n\n   }\n\n   if(rectID<25)\n\n   {\n\n      if(curPlay>=0)\n\n      {\n\n         Transparent_Video_Holder.GetDeep(curPlay,&deep);\n\n         Transparent_Video_Holder.SetDeep(curPlay,deep-2);\n\n      }\n\n      Transparent_Video_Holder.GetDeep(rectID,&deep);\n\n      Transparent_Video_Holder.SetDeep(rectID,deep+2);\n\n      Transparent_Video_Holder.Play(rectID,0);\n\n      curPlay=rectID;\n\n   }\n\n}\n\n\n\n \n\nvoid HotSpot_Holder.MouseMoveOut(int rectID)\n\n{\n\n   if(load)   return;\n\n   SetCursor(0);\n\n   if(rectID>25 && rectID<51)\n\n   {\n\n      Bitmap_Holder.HideBitmap(rectID-26);\n\n      return;      \n\n   }\n\n   Text_Holder.SetText(0,\" \");\n\n}\n\n\n\n//#############################################################\n\n//#############################################################\n\nvoid Group.HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n   if(rectID==0)\n\n   {\n\n      Group.Sprite_Holder.DisableTimers();\n\n      Group.Sprite_Holder.GotoXY(0,480,0);\n\n      Group.Sprite_Holder.GotoXY(1,560,404);\n\n      Group.Sprite_Holder.SynchronizeTimers();\n\n      Group.Sprite_Holder.EnableTimers();\n\n      Group.Sound_Holder.PlayDSound(0);\n\n   }\n\n   else\n\n   {\n\n      if(menu)   \n\n         SetCursor(1);\n\n      if(toolbar)\n\n      {\n\n         Group.Sprite_Holder.DisableTimers();\n\n         Group.Sprite_Holder.GotoXY(0,640,0);\n\n         Group.Sprite_Holder.GotoXY(1,720,404);\n\n         Group.Sprite_Holder.SynchronizeTimers();\n\n         Group.Sprite_Holder.EnableTimers();\n\n         Group.Sound_Holder.PlayDSound(0);\n\n         toolbar=0;\n\n         if(menu==0)   \n\n            Group.HotSpot_Holder.DisableHotSpot(1);\n\n      }\n\n   }\n\n}\n\n\n\n \n\nvoid Group.Sprite_Holder.InPlace(int spriteID,int x,int y)\n\n{\n\n   if(spriteID==0)\n\n   {\n\n      if(x==480)\n\n      {\n\n         toolbar=1;\n\n         Group.HotSpot_Holder.EnableHotSpot(1);\n\n      }\n\n      else\n\n      {\n\n         if(exit)\n\n         {\n\n            Group.Sprite_Holder.ChangePhase(spriteID,1);\n\n//            FadeScreen(0,1000);\n\n            LoadPage(\"TheEnd.bdf\");\n\n         }\n\n      }\n\n   }\n\n}\n\n\n\n\n\nvoid Group.Sprite_Holder.MouseMoveIn(int spriteID)\n\n{\n\n   if(spriteID && toolbar)\n\n      SetCursor(1);\n\n}\n\n\n\n\n\nvoid Group.Sprite_Holder.MouseMoveOut(int spriteID)\n\n{\n\n   if(spriteID)\n\n      SetCursor(0);\n\n}\n\n\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnDown(int spriteID)\n\n{\n\n   if(spriteID==1)   //Wyjscie z programu\n\n   {\n\n      Sound_Holder.PlayDSound(26);\n\n      Group.Sprite_Holder.ChangePhase(spriteID,1);\n\n      Group.Sprite_Holder.DisableTimers();\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(1,720,404);\n\n      Group.Sprite_Holder.SynchronizeTimers();\n\n      Group.Sprite_Holder.EnableTimers();\n\n      toolbar=0;\n\n      Group.HotSpot_Holder.DisableHotSpot(1);\n\n      Group.Sound_Holder.PlayDSound(0);\n\n      exit=1;\n\n   }\n\n}\n\n\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnUp(int spriteID)\n\n{\n\n   if(spriteID)\n\n   {\n\n      Group.Sprite_Holder.ChangePhase(spriteID,0);\n\n   }\n\n}\n\n\n\n//#############################################################\n\n//############################################################# \n\n \n\n \n\nvoid OnTimer(void)\n\n{\n\n        //Add your command handler code here\n\n   SetTimer(0);\n\n   Sound_Holder.PlayDSound(27);\n\n}\n\n \n\nvoid OnLButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   SetTimer(0);\n\n   Sound_Holder.Stop(27);\n\n}\n\n \n\nvoid OnRButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   Sound_Holder.PlayDSound(27);\n\n}\n\n "
+  },
+  "warnings": [
+    "3 component(s) have unknown geometry and default to 0,0.",
+    "Recovered 27 TransparentVideoHolder asset rect(s) from serialized entries."
+  ]
+}

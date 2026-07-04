@@ -1,0 +1,288 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MICH1.BDF",
+  "size": 1627856,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Tuesday, October 28, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    8
+  ],
+  "background_flag": 0,
+  "background_color_index": 0,
+  "palette_size": 1024,
+  "dib_size": 308180,
+  "component_list_offset": 309345,
+  "component_list_version": 1,
+  "component_count": 4,
+  "components": [
+    {
+      "index": 0,
+      "offset": 309353,
+      "clsid": "B64F3336-5368-11D0-B445-008048EB5D40",
+      "display_name": "Sprite_Holder",
+      "private_offset": 310887,
+      "private_size": 82408,
+      "embedded": []
+    },
+    {
+      "index": 1,
+      "offset": 393295,
+      "clsid": "2F3C5846-5413-11D0-B447-008048EB5D40",
+      "display_name": "Transparent_Video_Holder",
+      "private_offset": 394469,
+      "private_size": 300380,
+      "embedded": [],
+      "board_video_marker_offset": 394481
+    },
+    {
+      "index": 2,
+      "offset": 694849,
+      "clsid": "1720D306-6932-11D0-B468-008048EB5D40",
+      "display_name": "Sound_Holder",
+      "private_offset": 695745,
+      "private_size": 906144,
+      "embedded": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH1\\embedded\\02_Sound_Holder_000_000a9dcd.wav",
+          "offset": 695757,
+          "size": 838294,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH1\\embedded\\02_Sound_Holder_001_001768c3.wav",
+          "offset": 1534147,
+          "size": 5518,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH1\\embedded\\02_Sound_Holder_002_00177eb1.wav",
+          "offset": 1539761,
+          "size": 62036,
+          "extension": ".wav"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "offset": 1601889,
+      "clsid": "AD45ADB6-5290-11D0-B442-008048EB5D40",
+      "display_name": "Text_Holder",
+      "private_offset": 1603515,
+      "private_size": 11564,
+      "embedded": []
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH1\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "dib",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH1\\background.dib",
+      "size": 308180
+    },
+    {
+      "kind": "bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH1\\background.bmp",
+      "size": 308194
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH1\\script.txt",
+      "size": 12458
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH1\\embedded\\02_Sound_Holder_000_000a9dcd.wav",
+      "size": 838294
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH1\\embedded\\02_Sound_Holder_001_001768c3.wav",
+      "size": 5518
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH1\\embedded\\02_Sound_Holder_002_00177eb1.wav",
+      "size": 62036
+    }
+  ],
+  "script": {
+    "version_offset": 1615079,
+    "version": 1,
+    "string_prefix_offset": 1615083,
+    "text_offset": 1615086,
+    "text_length": 12458,
+    "text_end": 1627544,
+    "engine_state": {
+      "offset": 1627544,
+      "version": 2,
+      "block_count": 4,
+      "handler_offsets": {
+        "field_38": 0,
+        "field_3c": 0,
+        "field_30": 0,
+        "field_34": 339
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 1627568,
+          "start_offset": 2499,
+          "duplicate_start_offset": 2499,
+          "case_count": 3,
+          "end_or_body_offset": 4690,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 2526
+            },
+            {
+              "value": 1,
+              "target_offset": 3141
+            },
+            {
+              "value": 2,
+              "target_offset": 4523
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 1627612,
+          "start_offset": 4784,
+          "duplicate_start_offset": 4784,
+          "case_count": 2,
+          "end_or_body_offset": 7184,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 4811
+            },
+            {
+              "value": 11,
+              "target_offset": 7019
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "file_offset": 1627648,
+          "start_offset": 5457,
+          "duplicate_start_offset": 5457,
+          "case_count": 8,
+          "end_or_body_offset": 6974,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 5508
+            },
+            {
+              "value": 3,
+              "target_offset": 5636
+            },
+            {
+              "value": 4,
+              "target_offset": 5769
+            },
+            {
+              "value": 5,
+              "target_offset": 5903
+            },
+            {
+              "value": 6,
+              "target_offset": 6036
+            },
+            {
+              "value": 7,
+              "target_offset": 6564
+            },
+            {
+              "value": 8,
+              "target_offset": 6702
+            },
+            {
+              "value": 9,
+              "target_offset": 6864
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "file_offset": 1627732,
+          "start_offset": 7894,
+          "duplicate_start_offset": 7894,
+          "case_count": 9,
+          "end_or_body_offset": 8737,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 7933
+            },
+            {
+              "value": 3,
+              "target_offset": 7965
+            },
+            {
+              "value": 4,
+              "target_offset": 8064
+            },
+            {
+              "value": 5,
+              "target_offset": 8161
+            },
+            {
+              "value": 6,
+              "target_offset": 8257
+            },
+            {
+              "value": 7,
+              "target_offset": 8361
+            },
+            {
+              "value": 8,
+              "target_offset": 8463
+            },
+            {
+              "value": 9,
+              "target_offset": 8566
+            },
+            {
+              "value": 10,
+              "target_offset": 8670
+            }
+          ]
+        }
+      ],
+      "table_count": 1,
+      "table_a": [
+        1038
+      ],
+      "table_b": [
+        8
+      ],
+      "versioned_tail": {
+        "field_44": 0,
+        "field_48": 0,
+        "field_4c": 0,
+        "field_50": 0
+      },
+      "end_offset": 1627852
+    }
+  }
+}

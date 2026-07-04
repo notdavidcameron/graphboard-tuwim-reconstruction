@@ -1,0 +1,77 @@
+//###########################################################################
+//Script code
+//###########################################################################
+
+
+OnOpenPage()
+{
+	// Add your component and variables initialization code here
+	// WARNING: All variables definied on this function are global for this page
+   int play=0;
+   LoadGroup("Cursors.grp");
+   SetCursor(0);
+   FadeScreen(1,1000);
+   SetTimer(20000);
+
+}
+
+
+void OnClosePage(void)
+{
+	// Add your close page handler code here
+}
+
+
+ 
+void OnTimer(void)
+{
+        //Add your command handler code here
+   FadeScreen(0,1000);
+   Exit();
+}
+ 
+void OnLButtonDown(int x,int y)
+{
+        //Add your command handler code here
+}
+ 
+void HotSpot_Holder.MouseMoveIn(int rectID)
+{
+   SetCursor(1);
+}
+
+ 
+void HotSpot_Holder.MouseMoveOut(int rectID)
+{
+   if(play==0)   SetCursor(0);
+}
+
+ 
+void HotSpot_Holder.LeftButtonClickOn(int rectID)
+{
+   play=1;
+   HotSpot_Holder.DisableHotSpot(1);
+   Group.HotSpot_Holder.DisableHotSpot(1);
+   SetTimer(0);
+   FadeScreen(0,1000);
+   SetCursor(-2);
+   Bitmap_Holder.ShowBitmap(0);
+   FadeScreen(1,1000);
+   Transparent_Video_Holder.ShowFirsLastVideoFrame(0);
+   Transparent_Video_Holder.Play(0,0);
+}
+
+ 
+void Group.HotSpot_Holder.LeftButtonClickOn(int rectID)
+{
+   FadeScreen(0,1000);
+   Exit();
+}
+
+ 
+void Transparent_Video_Holder.TheEnd(int videoID)
+{
+   SetTimer(1000);
+}
+
+ 

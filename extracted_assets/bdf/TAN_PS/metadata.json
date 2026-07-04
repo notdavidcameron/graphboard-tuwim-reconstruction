@@ -1,0 +1,776 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TAN_PS.BDF",
+  "size": 12140342,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Friday, November 14, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    8
+  ],
+  "background_flag": 0,
+  "background_color_index": 0,
+  "palette_size": 1024,
+  "dib_size": 308180,
+  "component_list_offset": 309345,
+  "component_list_version": 1,
+  "component_count": 6,
+  "components": [
+    {
+      "index": 0,
+      "offset": 309353,
+      "clsid": "0D8A5736-5337-11D0-B444-008048EB5D40",
+      "display_name": "Bitmap_Holder",
+      "private_offset": 310485,
+      "private_size": 283556,
+      "embedded": []
+    },
+    {
+      "index": 1,
+      "offset": 594041,
+      "clsid": "DA768116-5341-11D0-B444-008048EB5D40",
+      "display_name": "HotSpot_Holder",
+      "private_offset": 595146,
+      "private_size": 1231,
+      "embedded": []
+    },
+    {
+      "index": 2,
+      "offset": 596377,
+      "clsid": "1720D306-6932-11D0-B468-008048EB5D40",
+      "display_name": "Sound_Holder",
+      "private_offset": 597273,
+      "private_size": 255182,
+      "embedded": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_000_00091d25.wav",
+          "offset": 597285,
+          "size": 26194,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_001_000983d7.wav",
+          "offset": 623575,
+          "size": 19490,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_002_0009d059.wav",
+          "offset": 643161,
+          "size": 20934,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_003_000a227f.wav",
+          "offset": 664191,
+          "size": 20788,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_004_000a7413.wav",
+          "offset": 685075,
+          "size": 21038,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_005_000ac6a1.wav",
+          "offset": 706209,
+          "size": 18970,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_006_000b111b.wav",
+          "offset": 725275,
+          "size": 20102,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_007_000b6001.wav",
+          "offset": 745473,
+          "size": 21440,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_008_000bb421.wav",
+          "offset": 767009,
+          "size": 924,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_009_000bb81d.wav",
+          "offset": 768029,
+          "size": 1160,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_010_000bbd05.wav",
+          "offset": 769285,
+          "size": 1426,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_011_000bc2f7.wav",
+          "offset": 770807,
+          "size": 18514,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_012_000c0ba9.wav",
+          "offset": 789417,
+          "size": 15310,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_013_000c47d7.wav",
+          "offset": 804823,
+          "size": 47540,
+          "extension": ".wav"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "offset": 852455,
+      "clsid": "AD45ADB6-5290-11D0-B442-008048EB5D40",
+      "display_name": "Text_Holder",
+      "private_offset": 854081,
+      "private_size": 10638770,
+      "embedded": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\03_Text_Holder_000_000d0915.wav",
+          "offset": 854293,
+          "size": 4801736,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\03_Text_Holder_001_00565209.wav",
+          "offset": 5657097,
+          "size": 4946284,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\03_Text_Holder_002_00a1ced6.wav",
+          "offset": 10604246,
+          "size": 849836,
+          "extension": ".wav"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "offset": 11492851,
+      "clsid": "B64F3336-5368-11D0-B445-008048EB5D40",
+      "display_name": "Sprite_Holder",
+      "private_offset": 11494385,
+      "private_size": 317652,
+      "embedded": []
+    },
+    {
+      "index": 5,
+      "offset": 11812037,
+      "clsid": "F7794041-1EB4-11D1-9B25-008048EB5D40",
+      "display_name": "MultiBitmap",
+      "private_offset": 11813042,
+      "private_size": 307404,
+      "embedded": [
+        {
+          "kind": "multibitmap_bmp",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\multibitmap\\05_MultiBitmap_000_taniec_b1.bmp",
+          "offset": 11813054,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "taniec_b1"
+        }
+      ],
+      "multibitmap": {
+        "version": 1,
+        "declared_count": 1,
+        "parsed_count": 1,
+        "frames": [
+          {
+            "index": 0,
+            "name": "taniec_b1",
+            "pixel_offset": 11813054,
+            "pixel_size": 307200,
+            "metadata_offset": 12120254,
+            "width": 640,
+            "height": 480,
+            "bmp_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\multibitmap\\05_MultiBitmap_000_taniec_b1.bmp"
+          }
+        ]
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "dib",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\background.dib",
+      "size": 308180
+    },
+    {
+      "kind": "bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\background.bmp",
+      "size": 308194
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\script.txt",
+      "size": 19057
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_000_00091d25.wav",
+      "size": 26194
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_001_000983d7.wav",
+      "size": 19490
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_002_0009d059.wav",
+      "size": 20934
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_003_000a227f.wav",
+      "size": 20788
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_004_000a7413.wav",
+      "size": 21038
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_005_000ac6a1.wav",
+      "size": 18970
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_006_000b111b.wav",
+      "size": 20102
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_007_000b6001.wav",
+      "size": 21440
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_008_000bb421.wav",
+      "size": 924
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_009_000bb81d.wav",
+      "size": 1160
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_010_000bbd05.wav",
+      "size": 1426
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_011_000bc2f7.wav",
+      "size": 18514
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_012_000c0ba9.wav",
+      "size": 15310
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_013_000c47d7.wav",
+      "size": 47540
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\03_Text_Holder_000_000d0915.wav",
+      "size": 4801736
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\03_Text_Holder_001_00565209.wav",
+      "size": 4946284
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\03_Text_Holder_002_00a1ced6.wav",
+      "size": 849836
+    },
+    {
+      "kind": "multibitmap_bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\multibitmap\\05_MultiBitmap_000_taniec_b1.bmp",
+      "offset": 11813054,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "taniec_b1"
+    }
+  ],
+  "script": {
+    "version_offset": 12120446,
+    "version": 1,
+    "string_prefix_offset": 12120450,
+    "text_offset": 12120453,
+    "text_length": 19057,
+    "text_end": 12139510,
+    "engine_state": {
+      "offset": 12139510,
+      "version": 2,
+      "block_count": 10,
+      "handler_offsets": {
+        "field_38": 2657,
+        "field_3c": 6373,
+        "field_30": 2815,
+        "field_34": 474
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 12139534,
+          "start_offset": 3638,
+          "duplicate_start_offset": 3638,
+          "case_count": 4,
+          "end_or_body_offset": 6247,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 3740
+            },
+            {
+              "value": 1,
+              "target_offset": 4833
+            },
+            {
+              "value": 2,
+              "target_offset": 5207
+            },
+            {
+              "value": 3,
+              "target_offset": 5900
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 12139586,
+          "start_offset": 3923,
+          "duplicate_start_offset": 3923,
+          "case_count": 3,
+          "end_or_body_offset": 4785,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 4151
+            },
+            {
+              "value": 1,
+              "target_offset": 4610
+            },
+            {
+              "value": 3,
+              "target_offset": 4706
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "file_offset": 12139630,
+          "start_offset": 6664,
+          "duplicate_start_offset": 6664,
+          "case_count": 19,
+          "end_or_body_offset": 7813,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 109,
+              "target_offset": 6725
+            },
+            {
+              "value": 77,
+              "target_offset": 6744
+            },
+            {
+              "value": 44,
+              "target_offset": 6832
+            },
+            {
+              "value": 46,
+              "target_offset": 6916
+            },
+            {
+              "value": 47,
+              "target_offset": 7041
+            },
+            {
+              "value": 107,
+              "target_offset": 7118
+            },
+            {
+              "value": 75,
+              "target_offset": 7137
+            },
+            {
+              "value": 108,
+              "target_offset": 7214
+            },
+            {
+              "value": 76,
+              "target_offset": 7233
+            },
+            {
+              "value": 59,
+              "target_offset": 7312
+            },
+            {
+              "value": 39,
+              "target_offset": 7391
+            },
+            {
+              "value": 120,
+              "target_offset": 7470
+            },
+            {
+              "value": 88,
+              "target_offset": 7489
+            },
+            {
+              "value": 122,
+              "target_offset": 7571
+            },
+            {
+              "value": 90,
+              "target_offset": 7590
+            },
+            {
+              "value": 97,
+              "target_offset": 7661
+            },
+            {
+              "value": 65,
+              "target_offset": 7680
+            },
+            {
+              "value": 115,
+              "target_offset": 7753
+            },
+            {
+              "value": 83,
+              "target_offset": 7772
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "file_offset": 12139802,
+          "start_offset": 9040,
+          "duplicate_start_offset": 9040,
+          "case_count": 12,
+          "end_or_body_offset": 10947,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 9078
+            },
+            {
+              "value": 1,
+              "target_offset": 9093
+            },
+            {
+              "value": 2,
+              "target_offset": 9108
+            },
+            {
+              "value": 3,
+              "target_offset": 9123
+            },
+            {
+              "value": 4,
+              "target_offset": 9138
+            },
+            {
+              "value": 5,
+              "target_offset": 9153
+            },
+            {
+              "value": 6,
+              "target_offset": 9171
+            },
+            {
+              "value": 7,
+              "target_offset": 9420
+            },
+            {
+              "value": 8,
+              "target_offset": 9524
+            },
+            {
+              "value": 9,
+              "target_offset": 9861
+            },
+            {
+              "value": 10,
+              "target_offset": 10295
+            },
+            {
+              "value": 11,
+              "target_offset": 10687
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "file_offset": 12139918,
+          "start_offset": 11112,
+          "duplicate_start_offset": 11112,
+          "case_count": 6,
+          "end_or_body_offset": 11545,
+          "aux_offset": 11531,
+          "cases": [
+            {
+              "value": 8,
+              "target_offset": 11136
+            },
+            {
+              "value": 9,
+              "target_offset": 11151
+            },
+            {
+              "value": 10,
+              "target_offset": 11170
+            },
+            {
+              "value": 11,
+              "target_offset": 11250
+            },
+            {
+              "value": 12,
+              "target_offset": 11374
+            },
+            {
+              "value": 13,
+              "target_offset": 11448
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "file_offset": 12139986,
+          "start_offset": 13307,
+          "duplicate_start_offset": 13307,
+          "case_count": 10,
+          "end_or_body_offset": 15309,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 13334
+            },
+            {
+              "value": 1,
+              "target_offset": 14324
+            },
+            {
+              "value": 2,
+              "target_offset": 14339
+            },
+            {
+              "value": 3,
+              "target_offset": 14357
+            },
+            {
+              "value": 4,
+              "target_offset": 14546
+            },
+            {
+              "value": 5,
+              "target_offset": 14727
+            },
+            {
+              "value": 7,
+              "target_offset": 14909
+            },
+            {
+              "value": 8,
+              "target_offset": 15043
+            },
+            {
+              "value": 9,
+              "target_offset": 15174
+            },
+            {
+              "value": 10,
+              "target_offset": 15193
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "file_offset": 12140086,
+          "start_offset": 13862,
+          "duplicate_start_offset": 13862,
+          "case_count": 3,
+          "end_or_body_offset": 14293,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 1,
+              "target_offset": 13901
+            },
+            {
+              "value": 2,
+              "target_offset": 14036
+            },
+            {
+              "value": 3,
+              "target_offset": 14171
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "file_offset": 12140130,
+          "start_offset": 15400,
+          "duplicate_start_offset": 15400,
+          "case_count": 6,
+          "end_or_body_offset": 16259,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 4,
+              "target_offset": 15437
+            },
+            {
+              "value": 5,
+              "target_offset": 15537
+            },
+            {
+              "value": 7,
+              "target_offset": 15654
+            },
+            {
+              "value": 8,
+              "target_offset": 15669
+            },
+            {
+              "value": 9,
+              "target_offset": 15684
+            },
+            {
+              "value": 10,
+              "target_offset": 15703
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "file_offset": 12140198,
+          "start_offset": 16430,
+          "duplicate_start_offset": 16430,
+          "case_count": 4,
+          "end_or_body_offset": 16574,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 1,
+              "target_offset": 16454
+            },
+            {
+              "value": 2,
+              "target_offset": 16469
+            },
+            {
+              "value": 3,
+              "target_offset": 16487
+            },
+            {
+              "value": 6,
+              "target_offset": 16554
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "file_offset": 12140250,
+          "start_offset": 18482,
+          "duplicate_start_offset": 18482,
+          "case_count": 4,
+          "end_or_body_offset": 18906,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 9,
+              "target_offset": 18528
+            },
+            {
+              "value": 10,
+              "target_offset": 18623
+            },
+            {
+              "value": 7,
+              "target_offset": 18735
+            },
+            {
+              "value": 8,
+              "target_offset": 18840
+            }
+          ]
+        }
+      ],
+      "table_count": 2,
+      "table_a": [
+        3529,
+        8428
+      ],
+      "table_b": [
+        8,
+        8
+      ],
+      "versioned_tail": {
+        "field_44": 3244,
+        "field_48": 0,
+        "field_4c": 3041,
+        "field_50": 0
+      },
+      "end_offset": 12140338
+    }
+  }
+}

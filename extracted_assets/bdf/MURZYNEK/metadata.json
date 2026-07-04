@@ -1,0 +1,1228 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MURZYNEK.BDF",
+  "size": 4226392,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Thursday, November 13, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    8
+  ],
+  "background_flag": 1,
+  "background_color_index": 215,
+  "palette_size": 1024,
+  "dib_size": 0,
+  "component_list_offset": 1165,
+  "component_list_version": 1,
+  "component_count": 7,
+  "components": [
+    {
+      "index": 0,
+      "offset": 1173,
+      "clsid": "2F3C5846-5413-11D0-B447-008048EB5D40",
+      "display_name": "Transparent_Video_Holder",
+      "private_offset": 2347,
+      "private_size": 1605020,
+      "embedded": [
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\00_Transparent_Video_Holder_000_00000937_board_video_audio.wav",
+          "offset": 2359,
+          "size": 176444,
+          "pcm_size": 176400,
+          "duration_seconds": 4.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 4
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\animations\\00_Transparent_Video_Holder_000_00000937_board_video_60x100.gif",
+          "offset": 2359,
+          "size": 205761,
+          "frame_count": 30,
+          "width": 60,
+          "height": 100,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\00_Transparent_Video_Holder_002_00045364_board_video_audio.wav",
+          "offset": 283492,
+          "size": 176444,
+          "pcm_size": 176400,
+          "duration_seconds": 4.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 4
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\animations\\00_Transparent_Video_Holder_002_00045364_board_video_125x101.gif",
+          "offset": 283492,
+          "size": 302214,
+          "frame_count": 21,
+          "width": 125,
+          "height": 101,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\00_Transparent_Video_Holder_004_0009fe60_board_video_audio.wav",
+          "offset": 654944,
+          "size": 88244,
+          "pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 2
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\animations\\00_Transparent_Video_Holder_004_0009fe60_board_video_120x120.gif",
+          "offset": 654944,
+          "size": 115370,
+          "frame_count": 7,
+          "width": 120,
+          "height": 120,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\00_Transparent_Video_Holder_006_000c1534_board_video_audio.wav",
+          "offset": 791860,
+          "size": 88244,
+          "pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 2
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\animations\\00_Transparent_Video_Holder_006_000c1534_board_video_41x30.gif",
+          "offset": 791860,
+          "size": 10734,
+          "frame_count": 7,
+          "width": 41,
+          "height": 30,
+          "transparent_index": 205,
+          "header_transparent_index": 207,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\00_Transparent_Video_Holder_008_000d9b77_board_video_audio.wav",
+          "offset": 891767,
+          "size": 176444,
+          "pcm_size": 176400,
+          "duration_seconds": 4.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 4
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\animations\\00_Transparent_Video_Holder_008_000d9b77_board_video_50x40.gif",
+          "offset": 891767,
+          "size": 55809,
+          "frame_count": 24,
+          "width": 50,
+          "height": 40,
+          "transparent_index": 115,
+          "header_transparent_index": 115,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\00_Transparent_Video_Holder_010_00111cf0_board_video_audio.wav",
+          "offset": 1121520,
+          "size": 220544,
+          "pcm_size": 220500,
+          "duration_seconds": 5.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 5
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\animations\\00_Transparent_Video_Holder_010_00111cf0_board_video_113x113.gif",
+          "offset": 1121520,
+          "size": 276605,
+          "frame_count": 19,
+          "width": 113,
+          "height": 113,
+          "transparent_index": 101,
+          "header_transparent_index": 101,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\00_Transparent_Video_Holder_012_0015b39d_board_video_audio.wav",
+          "offset": 1422237,
+          "size": 132344,
+          "pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 3
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\animations\\00_Transparent_Video_Holder_012_0015b39d_board_video_67x70.gif",
+          "offset": 1422237,
+          "size": 80991,
+          "frame_count": 15,
+          "width": 67,
+          "height": 70,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        }
+      ],
+      "board_video_marker_offset": 2359,
+      "board_video_streams": [
+        {
+          "index": 0,
+          "offset": 2359,
+          "end_offset": 276104,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 60,
+          "video_height": 100,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 30,
+          "header_record_count": 33,
+          "record_count": 34,
+          "audio_record_count": 4,
+          "video_record_count": 30,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\00_Transparent_Video_Holder_000_00000937_board_video_audio.wav",
+          "audio_pcm_size": 176400,
+          "duration_seconds": 4.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\animations\\00_Transparent_Video_Holder_000_00000937_board_video_60x100.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 1,
+          "offset": 276104,
+          "end_offset": 277360,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 60,
+          "video_height": 100,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 30,
+          "header_record_count": 33,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 2,
+          "offset": 283492,
+          "end_offset": 640628,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 125,
+          "video_height": 101,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 21,
+          "header_record_count": 24,
+          "record_count": 25,
+          "audio_record_count": 4,
+          "video_record_count": 21,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\00_Transparent_Video_Holder_002_00045364_board_video_audio.wav",
+          "audio_pcm_size": 176400,
+          "duration_seconds": 4.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\animations\\00_Transparent_Video_Holder_002_00045364_board_video_125x101.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 3,
+          "offset": 640628,
+          "end_offset": 641884,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 125,
+          "video_height": 101,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 21,
+          "header_record_count": 24,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 4,
+          "offset": 654944,
+          "end_offset": 776072,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 120,
+          "video_height": 120,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 7,
+          "header_record_count": 8,
+          "record_count": 9,
+          "audio_record_count": 2,
+          "video_record_count": 7,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\00_Transparent_Video_Holder_004_0009fe60_board_video_audio.wav",
+          "audio_pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\animations\\00_Transparent_Video_Holder_004_0009fe60_board_video_120x120.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 5,
+          "offset": 776072,
+          "end_offset": 777328,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 120,
+          "video_height": 120,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 7,
+          "header_record_count": 8,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 6,
+          "offset": 791860,
+          "end_offset": 889059,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 41,
+          "video_height": 30,
+          "header_transparent_index": 207,
+          "frames_per_second": 10,
+          "frame_count": 7,
+          "header_record_count": 8,
+          "record_count": 9,
+          "audio_record_count": 2,
+          "video_record_count": 7,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\00_Transparent_Video_Holder_006_000c1534_board_video_audio.wav",
+          "audio_pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\animations\\00_Transparent_Video_Holder_006_000c1534_board_video_41x30.gif",
+          "transparent_index": 205
+        },
+        {
+          "index": 7,
+          "offset": 889059,
+          "end_offset": 890315,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 41,
+          "video_height": 30,
+          "header_transparent_index": 207,
+          "frames_per_second": 10,
+          "frame_count": 7,
+          "header_record_count": 8,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 8,
+          "offset": 891767,
+          "end_offset": 1118052,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 50,
+          "video_height": 40,
+          "header_transparent_index": 115,
+          "frames_per_second": 10,
+          "frame_count": 24,
+          "header_record_count": 27,
+          "record_count": 28,
+          "audio_record_count": 4,
+          "video_record_count": 24,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\00_Transparent_Video_Holder_008_000d9b77_board_video_audio.wav",
+          "audio_pcm_size": 176400,
+          "duration_seconds": 4.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\animations\\00_Transparent_Video_Holder_008_000d9b77_board_video_50x40.gif",
+          "transparent_index": 115
+        },
+        {
+          "index": 9,
+          "offset": 1118052,
+          "end_offset": 1119308,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 50,
+          "video_height": 40,
+          "header_transparent_index": 115,
+          "frames_per_second": 10,
+          "frame_count": 24,
+          "header_record_count": 27,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 10,
+          "offset": 1121520,
+          "end_offset": 1407741,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 113,
+          "video_height": 113,
+          "header_transparent_index": 101,
+          "frames_per_second": 10,
+          "frame_count": 19,
+          "header_record_count": 23,
+          "record_count": 24,
+          "audio_record_count": 5,
+          "video_record_count": 19,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\00_Transparent_Video_Holder_010_00111cf0_board_video_audio.wav",
+          "audio_pcm_size": 220500,
+          "duration_seconds": 5.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\animations\\00_Transparent_Video_Holder_010_00111cf0_board_video_113x113.gif",
+          "transparent_index": 101
+        },
+        {
+          "index": 11,
+          "offset": 1407741,
+          "end_offset": 1408997,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 113,
+          "video_height": 113,
+          "header_transparent_index": 101,
+          "frames_per_second": 10,
+          "frame_count": 19,
+          "header_record_count": 23,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 12,
+          "offset": 1422237,
+          "end_offset": 1601223,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 67,
+          "video_height": 70,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 15,
+          "header_record_count": 17,
+          "record_count": 18,
+          "audio_record_count": 3,
+          "video_record_count": 15,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\00_Transparent_Video_Holder_012_0015b39d_board_video_audio.wav",
+          "audio_pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\animations\\00_Transparent_Video_Holder_012_0015b39d_board_video_67x70.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 13,
+          "offset": 1601223,
+          "end_offset": 1602479,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 67,
+          "video_height": 70,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 15,
+          "header_record_count": 17,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "offset": 1607367,
+      "clsid": "B2CDC8D6-5359-11D0-B445-008048EB5D40",
+      "display_name": "Panorama_Holder",
+      "private_offset": 1609489,
+      "private_size": 252432,
+      "embedded": []
+    },
+    {
+      "index": 2,
+      "offset": 1861921,
+      "clsid": "0D8A5736-5337-11D0-B444-008048EB5D40",
+      "display_name": "Bitmap_Holder",
+      "private_offset": 1863053,
+      "private_size": 400336,
+      "embedded": []
+    },
+    {
+      "index": 3,
+      "offset": 2263389,
+      "clsid": "B64F3336-5368-11D0-B445-008048EB5D40",
+      "display_name": "Sprite_Holder",
+      "private_offset": 2264923,
+      "private_size": 77724,
+      "embedded": []
+    },
+    {
+      "index": 4,
+      "offset": 2342647,
+      "clsid": "1720D306-6932-11D0-B468-008048EB5D40",
+      "display_name": "Sound_Holder",
+      "private_offset": 2343543,
+      "private_size": 1844830,
+      "embedded": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_000_0023c283.wav",
+          "offset": 2343555,
+          "size": 81132,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_001_0024ffcf.wav",
+          "offset": 2424783,
+          "size": 102700,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_002_0026915b.wav",
+          "offset": 2527579,
+          "size": 350050,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_003_002be91d.wav",
+          "offset": 2877725,
+          "size": 26198,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_004_002c4fd3.wav",
+          "offset": 2904019,
+          "size": 13598,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_005_002c8551.wav",
+          "offset": 2917713,
+          "size": 14390,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_006_002cbde7.wav",
+          "offset": 2932199,
+          "size": 1716,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_007_002cc4fb.wav",
+          "offset": 2934011,
+          "size": 24558,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_008_002d2549.wav",
+          "offset": 2958665,
+          "size": 23194,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_009_002d8043.wav",
+          "offset": 2981955,
+          "size": 23264,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_010_002ddb83.wav",
+          "offset": 3005315,
+          "size": 33966,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_011_002e6091.wav",
+          "offset": 3039377,
+          "size": 17234,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_012_002ea443.wav",
+          "offset": 3056707,
+          "size": 29422,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_013_002f1791.wav",
+          "offset": 3086225,
+          "size": 45334,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_014_002fc907.wav",
+          "offset": 3131655,
+          "size": 64222,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_015_0030c445.wav",
+          "offset": 3195973,
+          "size": 68494,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_016_0031d033.wav",
+          "offset": 3264563,
+          "size": 101728,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_017_00335df3.wav",
+          "offset": 3366387,
+          "size": 83618,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_018_0034a4f5.wav",
+          "offset": 3450101,
+          "size": 55114,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_019_00357c9f.wav",
+          "offset": 3505311,
+          "size": 161518,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_020_0037f3ed.wav",
+          "offset": 3666925,
+          "size": 417900,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_021_003e54b9.wav",
+          "offset": 4084921,
+          "size": 22880,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_022_003eae79.wav",
+          "offset": 4107897,
+          "size": 28074,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_023_003f1c83.wav",
+          "offset": 4136067,
+          "size": 27508,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_024_003f8857.wav",
+          "offset": 4163671,
+          "size": 24610,
+          "extension": ".wav"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "offset": 4188373,
+      "clsid": "DA768116-5341-11D0-B444-008048EB5D40",
+      "display_name": "HotSpot_Holder",
+      "private_offset": 4189478,
+      "private_size": 1534,
+      "embedded": []
+    },
+    {
+      "index": 6,
+      "offset": 4191012,
+      "clsid": "AD45ADB6-5290-11D0-B442-008048EB5D40",
+      "display_name": "Text_Holder",
+      "private_offset": 4192638,
+      "private_size": 14407,
+      "embedded": []
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\script.txt",
+      "size": 18992
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\00_Transparent_Video_Holder_000_00000937_board_video_audio.wav",
+      "offset": 2359,
+      "size": 176444,
+      "pcm_size": 176400,
+      "duration_seconds": 4.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 4
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\animations\\00_Transparent_Video_Holder_000_00000937_board_video_60x100.gif",
+      "offset": 2359,
+      "size": 205761,
+      "frame_count": 30,
+      "width": 60,
+      "height": 100,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\00_Transparent_Video_Holder_002_00045364_board_video_audio.wav",
+      "offset": 283492,
+      "size": 176444,
+      "pcm_size": 176400,
+      "duration_seconds": 4.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 4
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\animations\\00_Transparent_Video_Holder_002_00045364_board_video_125x101.gif",
+      "offset": 283492,
+      "size": 302214,
+      "frame_count": 21,
+      "width": 125,
+      "height": 101,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\00_Transparent_Video_Holder_004_0009fe60_board_video_audio.wav",
+      "offset": 654944,
+      "size": 88244,
+      "pcm_size": 88200,
+      "duration_seconds": 2.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 2
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\animations\\00_Transparent_Video_Holder_004_0009fe60_board_video_120x120.gif",
+      "offset": 654944,
+      "size": 115370,
+      "frame_count": 7,
+      "width": 120,
+      "height": 120,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\00_Transparent_Video_Holder_006_000c1534_board_video_audio.wav",
+      "offset": 791860,
+      "size": 88244,
+      "pcm_size": 88200,
+      "duration_seconds": 2.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 2
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\animations\\00_Transparent_Video_Holder_006_000c1534_board_video_41x30.gif",
+      "offset": 791860,
+      "size": 10734,
+      "frame_count": 7,
+      "width": 41,
+      "height": 30,
+      "transparent_index": 205,
+      "header_transparent_index": 207,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\00_Transparent_Video_Holder_008_000d9b77_board_video_audio.wav",
+      "offset": 891767,
+      "size": 176444,
+      "pcm_size": 176400,
+      "duration_seconds": 4.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 4
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\animations\\00_Transparent_Video_Holder_008_000d9b77_board_video_50x40.gif",
+      "offset": 891767,
+      "size": 55809,
+      "frame_count": 24,
+      "width": 50,
+      "height": 40,
+      "transparent_index": 115,
+      "header_transparent_index": 115,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\00_Transparent_Video_Holder_010_00111cf0_board_video_audio.wav",
+      "offset": 1121520,
+      "size": 220544,
+      "pcm_size": 220500,
+      "duration_seconds": 5.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 5
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\animations\\00_Transparent_Video_Holder_010_00111cf0_board_video_113x113.gif",
+      "offset": 1121520,
+      "size": 276605,
+      "frame_count": 19,
+      "width": 113,
+      "height": 113,
+      "transparent_index": 101,
+      "header_transparent_index": 101,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\00_Transparent_Video_Holder_012_0015b39d_board_video_audio.wav",
+      "offset": 1422237,
+      "size": 132344,
+      "pcm_size": 132300,
+      "duration_seconds": 3.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 3
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\animations\\00_Transparent_Video_Holder_012_0015b39d_board_video_67x70.gif",
+      "offset": 1422237,
+      "size": 80991,
+      "frame_count": 15,
+      "width": 67,
+      "height": 70,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_000_0023c283.wav",
+      "size": 81132
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_001_0024ffcf.wav",
+      "size": 102700
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_002_0026915b.wav",
+      "size": 350050
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_003_002be91d.wav",
+      "size": 26198
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_004_002c4fd3.wav",
+      "size": 13598
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_005_002c8551.wav",
+      "size": 14390
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_006_002cbde7.wav",
+      "size": 1716
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_007_002cc4fb.wav",
+      "size": 24558
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_008_002d2549.wav",
+      "size": 23194
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_009_002d8043.wav",
+      "size": 23264
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_010_002ddb83.wav",
+      "size": 33966
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_011_002e6091.wav",
+      "size": 17234
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_012_002ea443.wav",
+      "size": 29422
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_013_002f1791.wav",
+      "size": 45334
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_014_002fc907.wav",
+      "size": 64222
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_015_0030c445.wav",
+      "size": 68494
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_016_0031d033.wav",
+      "size": 101728
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_017_00335df3.wav",
+      "size": 83618
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_018_0034a4f5.wav",
+      "size": 55114
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_019_00357c9f.wav",
+      "size": 161518
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_020_0037f3ed.wav",
+      "size": 417900
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_021_003e54b9.wav",
+      "size": 22880
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_022_003eae79.wav",
+      "size": 28074
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_023_003f1c83.wav",
+      "size": 27508
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_024_003f8857.wav",
+      "size": 24610
+    }
+  ],
+  "script": {
+    "version_offset": 4207045,
+    "version": 1,
+    "string_prefix_offset": 4207049,
+    "text_offset": 4207052,
+    "text_length": 18992,
+    "text_end": 4226044,
+    "engine_state": {
+      "offset": 4226044,
+      "version": 2,
+      "block_count": 5,
+      "handler_offsets": {
+        "field_38": 2516,
+        "field_3c": 0,
+        "field_30": 0,
+        "field_34": 384
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 4226068,
+          "start_offset": 2722,
+          "duplicate_start_offset": 2722,
+          "case_count": 2,
+          "end_or_body_offset": 3262,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 2749
+            },
+            {
+              "value": 1,
+              "target_offset": 3149
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 4226104,
+          "start_offset": 8008,
+          "duplicate_start_offset": 8008,
+          "case_count": 3,
+          "end_or_body_offset": 10199,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 8035
+            },
+            {
+              "value": 1,
+              "target_offset": 8650
+            },
+            {
+              "value": 2,
+              "target_offset": 10032
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "file_offset": 4226148,
+          "start_offset": 10293,
+          "duplicate_start_offset": 10293,
+          "case_count": 2,
+          "end_or_body_offset": 12669,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 10320
+            },
+            {
+              "value": 11,
+              "target_offset": 12504
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "file_offset": 4226184,
+          "start_offset": 10966,
+          "duplicate_start_offset": 10966,
+          "case_count": 8,
+          "end_or_body_offset": 12459,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 11017
+            },
+            {
+              "value": 3,
+              "target_offset": 11149
+            },
+            {
+              "value": 4,
+              "target_offset": 11281
+            },
+            {
+              "value": 5,
+              "target_offset": 11413
+            },
+            {
+              "value": 6,
+              "target_offset": 11544
+            },
+            {
+              "value": 7,
+              "target_offset": 12072
+            },
+            {
+              "value": 8,
+              "target_offset": 12210
+            },
+            {
+              "value": 9,
+              "target_offset": 12349
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "file_offset": 4226268,
+          "start_offset": 13379,
+          "duplicate_start_offset": 13379,
+          "case_count": 9,
+          "end_or_body_offset": 14222,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 13418
+            },
+            {
+              "value": 3,
+              "target_offset": 13450
+            },
+            {
+              "value": 4,
+              "target_offset": 13549
+            },
+            {
+              "value": 5,
+              "target_offset": 13646
+            },
+            {
+              "value": 6,
+              "target_offset": 13742
+            },
+            {
+              "value": 7,
+              "target_offset": 13846
+            },
+            {
+              "value": 8,
+              "target_offset": 13948
+            },
+            {
+              "value": 9,
+              "target_offset": 14051
+            },
+            {
+              "value": 10,
+              "target_offset": 14155
+            }
+          ]
+        }
+      ],
+      "table_count": 1,
+      "table_a": [
+        3525
+      ],
+      "table_b": [
+        8
+      ],
+      "versioned_tail": {
+        "field_44": 18742,
+        "field_48": 0,
+        "field_4c": 18874,
+        "field_50": 0
+      },
+      "end_offset": 4226388
+    }
+  }
+}

@@ -1,0 +1,688 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RYCERZ1.BDF",
+  "size": 3778441,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Thursday, November 13, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    8
+  ],
+  "background_flag": 1,
+  "background_color_index": 0,
+  "palette_size": 1024,
+  "dib_size": 0,
+  "component_list_offset": 1165,
+  "component_list_version": 1,
+  "component_count": 4,
+  "components": [
+    {
+      "index": 0,
+      "offset": 1173,
+      "clsid": "8B446B11-0746-11D1-9B09-008048EB5D40",
+      "display_name": "Panorama",
+      "private_offset": 2763,
+      "private_size": 1545460,
+      "embedded": []
+    },
+    {
+      "index": 1,
+      "offset": 1548223,
+      "clsid": "DA768116-5341-11D0-B444-008048EB5D40",
+      "display_name": "HotSpot_Holder",
+      "private_offset": 1549328,
+      "private_size": 120,
+      "embedded": []
+    },
+    {
+      "index": 2,
+      "offset": 1549448,
+      "clsid": "1720D306-6932-11D0-B468-008048EB5D40",
+      "display_name": "Sound_Holder",
+      "private_offset": 1550344,
+      "private_size": 1281580,
+      "embedded": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\embedded\\02_Sound_Holder_000_0017a814.wav",
+          "offset": 1550356,
+          "size": 32054,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\embedded\\02_Sound_Holder_001_001825aa.wav",
+          "offset": 1582506,
+          "size": 152650,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\embedded\\02_Sound_Holder_002_001a7a54.wav",
+          "offset": 1735252,
+          "size": 37478,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\embedded\\02_Sound_Holder_003_001b0d1a.wav",
+          "offset": 1772826,
+          "size": 284882,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\embedded\\02_Sound_Holder_004_001f664c.wav",
+          "offset": 2057804,
+          "size": 300916,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\embedded\\02_Sound_Holder_005_0023fe20.wav",
+          "offset": 2358816,
+          "size": 473016,
+          "extension": ".wav"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "offset": 2831924,
+      "clsid": "F7794041-1EB4-11D1-9B25-008048EB5D40",
+      "display_name": "MultiBitmap",
+      "private_offset": 2832929,
+      "private_size": 933960,
+      "embedded": [
+        {
+          "kind": "multibitmap_bmp",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_000_wizjer 1.bmp",
+          "offset": 2832941,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "wizjer 1"
+        },
+        {
+          "kind": "multibitmap_bmp",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_001_wizjer 2.bmp",
+          "offset": 3140337,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "wizjer 2"
+        },
+        {
+          "kind": "multibitmap_bmp",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_002_wizjer 3.bmp",
+          "offset": 3447733,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "wizjer 3"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_003_che_my 1.raw",
+          "offset": 3755129,
+          "size": 1908,
+          "pixel_size": 1908,
+          "width": 36,
+          "height": 483,
+          "name": "chełmy 1"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_004_che_my 2.raw",
+          "offset": 3757233,
+          "size": 1908,
+          "pixel_size": 1908,
+          "width": 35,
+          "height": 53,
+          "name": "chełmy 2"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_005_che_my 3.raw",
+          "offset": 3759337,
+          "size": 1908,
+          "pixel_size": 1908,
+          "width": 35,
+          "height": 53,
+          "name": "chełmy 3"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_006_klejnot 0.raw",
+          "offset": 3761441,
+          "size": 672,
+          "pixel_size": 672,
+          "width": 205,
+          "height": 474,
+          "name": "klejnot 0"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_007_klejnot 0.raw",
+          "offset": 3762309,
+          "size": 552,
+          "pixel_size": 552,
+          "width": 251,
+          "height": 472,
+          "name": "klejnot 0"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_008_klejnot 0.raw",
+          "offset": 3763057,
+          "size": 1080,
+          "pixel_size": 1080,
+          "width": 310,
+          "height": 475,
+          "name": "klejnot 0"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_009_klejnot 0.raw",
+          "offset": 3764333,
+          "size": 832,
+          "pixel_size": 832,
+          "width": 360,
+          "height": 475,
+          "name": "klejnot 0"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_010_klejnot 0.raw",
+          "offset": 3765361,
+          "size": 600,
+          "pixel_size": 600,
+          "width": 410,
+          "height": 474,
+          "name": "klejnot 0"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_011_klejnot 0.raw",
+          "offset": 3766157,
+          "size": 540,
+          "pixel_size": 540,
+          "width": 456,
+          "height": 475,
+          "name": "klejnot 0"
+        },
+        {
+          "kind": "multibitmap_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\animations\\03_MultiBitmap_wizjer 1_640x480.gif",
+          "size": 1046940,
+          "frame_count": 3,
+          "width": 640,
+          "height": 480,
+          "delay_centiseconds": 10
+        }
+      ],
+      "multibitmap": {
+        "version": 1,
+        "declared_count": 12,
+        "parsed_count": 12,
+        "frames": [
+          {
+            "index": 0,
+            "name": "wizjer 1",
+            "pixel_offset": 2832941,
+            "pixel_size": 307200,
+            "metadata_offset": 3140141,
+            "width": 640,
+            "height": 480,
+            "bmp_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_000_wizjer 1.bmp"
+          },
+          {
+            "index": 1,
+            "name": "wizjer 2",
+            "pixel_offset": 3140337,
+            "pixel_size": 307200,
+            "metadata_offset": 3447537,
+            "width": 640,
+            "height": 480,
+            "bmp_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_001_wizjer 2.bmp"
+          },
+          {
+            "index": 2,
+            "name": "wizjer 3",
+            "pixel_offset": 3447733,
+            "pixel_size": 307200,
+            "metadata_offset": 3754933,
+            "width": 640,
+            "height": 480,
+            "bmp_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_002_wizjer 3.bmp"
+          },
+          {
+            "index": 3,
+            "name": "chełmy 1",
+            "pixel_offset": 3755129,
+            "pixel_size": 1908,
+            "metadata_offset": 3757037,
+            "width": 36,
+            "height": 483,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_003_che_my 1.raw"
+          },
+          {
+            "index": 4,
+            "name": "chełmy 2",
+            "pixel_offset": 3757233,
+            "pixel_size": 1908,
+            "metadata_offset": 3759141,
+            "width": 35,
+            "height": 53,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_004_che_my 2.raw"
+          },
+          {
+            "index": 5,
+            "name": "chełmy 3",
+            "pixel_offset": 3759337,
+            "pixel_size": 1908,
+            "metadata_offset": 3761245,
+            "width": 35,
+            "height": 53,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_005_che_my 3.raw"
+          },
+          {
+            "index": 6,
+            "name": "klejnot 0",
+            "pixel_offset": 3761441,
+            "pixel_size": 672,
+            "metadata_offset": 3762113,
+            "width": 205,
+            "height": 474,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_006_klejnot 0.raw"
+          },
+          {
+            "index": 7,
+            "name": "klejnot 0",
+            "pixel_offset": 3762309,
+            "pixel_size": 552,
+            "metadata_offset": 3762861,
+            "width": 251,
+            "height": 472,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_007_klejnot 0.raw"
+          },
+          {
+            "index": 8,
+            "name": "klejnot 0",
+            "pixel_offset": 3763057,
+            "pixel_size": 1080,
+            "metadata_offset": 3764137,
+            "width": 310,
+            "height": 475,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_008_klejnot 0.raw"
+          },
+          {
+            "index": 9,
+            "name": "klejnot 0",
+            "pixel_offset": 3764333,
+            "pixel_size": 832,
+            "metadata_offset": 3765165,
+            "width": 360,
+            "height": 475,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_009_klejnot 0.raw"
+          },
+          {
+            "index": 10,
+            "name": "klejnot 0",
+            "pixel_offset": 3765361,
+            "pixel_size": 600,
+            "metadata_offset": 3765961,
+            "width": 410,
+            "height": 474,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_010_klejnot 0.raw"
+          },
+          {
+            "index": 11,
+            "name": "klejnot 0",
+            "pixel_offset": 3766157,
+            "pixel_size": 540,
+            "metadata_offset": 3766697,
+            "width": 456,
+            "height": 475,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_011_klejnot 0.raw"
+          }
+        ]
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\script.txt",
+      "size": 11253
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\embedded\\02_Sound_Holder_000_0017a814.wav",
+      "size": 32054
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\embedded\\02_Sound_Holder_001_001825aa.wav",
+      "size": 152650
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\embedded\\02_Sound_Holder_002_001a7a54.wav",
+      "size": 37478
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\embedded\\02_Sound_Holder_003_001b0d1a.wav",
+      "size": 284882
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\embedded\\02_Sound_Holder_004_001f664c.wav",
+      "size": 300916
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\embedded\\02_Sound_Holder_005_0023fe20.wav",
+      "size": 473016
+    },
+    {
+      "kind": "multibitmap_bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_000_wizjer 1.bmp",
+      "offset": 2832941,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "wizjer 1"
+    },
+    {
+      "kind": "multibitmap_bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_001_wizjer 2.bmp",
+      "offset": 3140337,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "wizjer 2"
+    },
+    {
+      "kind": "multibitmap_bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_002_wizjer 3.bmp",
+      "offset": 3447733,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "wizjer 3"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_003_che_my 1.raw",
+      "offset": 3755129,
+      "size": 1908,
+      "pixel_size": 1908,
+      "width": 36,
+      "height": 483,
+      "name": "chełmy 1"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_004_che_my 2.raw",
+      "offset": 3757233,
+      "size": 1908,
+      "pixel_size": 1908,
+      "width": 35,
+      "height": 53,
+      "name": "chełmy 2"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_005_che_my 3.raw",
+      "offset": 3759337,
+      "size": 1908,
+      "pixel_size": 1908,
+      "width": 35,
+      "height": 53,
+      "name": "chełmy 3"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_006_klejnot 0.raw",
+      "offset": 3761441,
+      "size": 672,
+      "pixel_size": 672,
+      "width": 205,
+      "height": 474,
+      "name": "klejnot 0"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_007_klejnot 0.raw",
+      "offset": 3762309,
+      "size": 552,
+      "pixel_size": 552,
+      "width": 251,
+      "height": 472,
+      "name": "klejnot 0"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_008_klejnot 0.raw",
+      "offset": 3763057,
+      "size": 1080,
+      "pixel_size": 1080,
+      "width": 310,
+      "height": 475,
+      "name": "klejnot 0"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_009_klejnot 0.raw",
+      "offset": 3764333,
+      "size": 832,
+      "pixel_size": 832,
+      "width": 360,
+      "height": 475,
+      "name": "klejnot 0"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_010_klejnot 0.raw",
+      "offset": 3765361,
+      "size": 600,
+      "pixel_size": 600,
+      "width": 410,
+      "height": 474,
+      "name": "klejnot 0"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_011_klejnot 0.raw",
+      "offset": 3766157,
+      "size": 540,
+      "pixel_size": 540,
+      "width": 456,
+      "height": 475,
+      "name": "klejnot 0"
+    },
+    {
+      "kind": "multibitmap_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\animations\\03_MultiBitmap_wizjer 1_640x480.gif",
+      "size": 1046940,
+      "frame_count": 3,
+      "width": 640,
+      "height": 480,
+      "delay_centiseconds": 10
+    }
+  ],
+  "script": {
+    "version_offset": 3766889,
+    "version": 1,
+    "string_prefix_offset": 3766893,
+    "text_offset": 3766896,
+    "text_length": 11253,
+    "text_end": 3778149,
+    "engine_state": {
+      "offset": 3778149,
+      "version": 2,
+      "block_count": 3,
+      "handler_offsets": {
+        "field_38": 2862,
+        "field_3c": 0,
+        "field_30": 0,
+        "field_34": 341
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 3778173,
+          "start_offset": 2058,
+          "duplicate_start_offset": 2058,
+          "case_count": 6,
+          "end_or_body_offset": 2606,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 2091
+            },
+            {
+              "value": 1,
+              "target_offset": 2179
+            },
+            {
+              "value": 2,
+              "target_offset": 2267
+            },
+            {
+              "value": 3,
+              "target_offset": 2355
+            },
+            {
+              "value": 4,
+              "target_offset": 2443
+            },
+            {
+              "value": 5,
+              "target_offset": 2532
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 3778241,
+          "start_offset": 5485,
+          "duplicate_start_offset": 5485,
+          "case_count": 8,
+          "end_or_body_offset": 6974,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 5536
+            },
+            {
+              "value": 3,
+              "target_offset": 5665
+            },
+            {
+              "value": 4,
+              "target_offset": 5800
+            },
+            {
+              "value": 5,
+              "target_offset": 5934
+            },
+            {
+              "value": 6,
+              "target_offset": 6067
+            },
+            {
+              "value": 7,
+              "target_offset": 6595
+            },
+            {
+              "value": 8,
+              "target_offset": 6733
+            },
+            {
+              "value": 9,
+              "target_offset": 6871
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "file_offset": 3778325,
+          "start_offset": 7330,
+          "duplicate_start_offset": 7330,
+          "case_count": 9,
+          "end_or_body_offset": 8092,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 7363
+            },
+            {
+              "value": 3,
+              "target_offset": 7392
+            },
+            {
+              "value": 4,
+              "target_offset": 7482
+            },
+            {
+              "value": 5,
+              "target_offset": 7570
+            },
+            {
+              "value": 6,
+              "target_offset": 7657
+            },
+            {
+              "value": 7,
+              "target_offset": 7752
+            },
+            {
+              "value": 8,
+              "target_offset": 7845
+            },
+            {
+              "value": 9,
+              "target_offset": 7939
+            },
+            {
+              "value": 10,
+              "target_offset": 8034
+            }
+          ]
+        }
+      ],
+      "table_count": 0,
+      "table_a": [],
+      "table_b": [],
+      "versioned_tail": {
+        "field_44": 11159,
+        "field_48": 0,
+        "field_4c": 10989,
+        "field_50": 0
+      },
+      "end_offset": 3778437
+    }
+  }
+}

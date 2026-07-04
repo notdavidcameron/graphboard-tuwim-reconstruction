@@ -1,0 +1,135 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ABECADP1.BDF",
+  "size": 261857,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Tuesday, November 04, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    8
+  ],
+  "background_flag": 1,
+  "background_color_index": 0,
+  "palette_size": 1024,
+  "dib_size": 0,
+  "component_list_offset": 1165,
+  "component_list_version": 1,
+  "component_count": 1,
+  "components": [
+    {
+      "index": 0,
+      "offset": 1173,
+      "clsid": "196E7596-AB2B-11D0-B2A5-008048EB5D40",
+      "display_name": "Puzzle",
+      "private_offset": 2257,
+      "private_size": 252520,
+      "embedded": []
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ABECADP1\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ABECADP1\\script.txt",
+      "size": 6913
+    }
+  ],
+  "script": {
+    "version_offset": 254777,
+    "version": 1,
+    "string_prefix_offset": 254781,
+    "text_offset": 254784,
+    "text_length": 6913,
+    "text_end": 261697,
+    "engine_state": {
+      "offset": 261697,
+      "version": 2,
+      "block_count": 2,
+      "handler_offsets": {
+        "field_38": 882,
+        "field_3c": 1095,
+        "field_30": 0,
+        "field_34": 341
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 261721,
+          "start_offset": 3399,
+          "duplicate_start_offset": 3399,
+          "case_count": 4,
+          "end_or_body_offset": 4074,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 1,
+              "target_offset": 3457
+            },
+            {
+              "value": 2,
+              "target_offset": 3595
+            },
+            {
+              "value": 3,
+              "target_offset": 3830
+            },
+            {
+              "value": 4,
+              "target_offset": 3970
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 261773,
+          "start_offset": 4462,
+          "duplicate_start_offset": 4462,
+          "case_count": 5,
+          "end_or_body_offset": 5201,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 1,
+              "target_offset": 4507
+            },
+            {
+              "value": 2,
+              "target_offset": 4601
+            },
+            {
+              "value": 3,
+              "target_offset": 4695
+            },
+            {
+              "value": 4,
+              "target_offset": 4788
+            },
+            {
+              "value": 5,
+              "target_offset": 4864
+            }
+          ]
+        }
+      ],
+      "table_count": 0,
+      "table_a": [],
+      "table_b": [],
+      "versioned_tail": {
+        "field_44": 751,
+        "field_48": 0,
+        "field_4c": 6806,
+        "field_50": 0
+      },
+      "end_offset": 261853
+    }
+  }
+}

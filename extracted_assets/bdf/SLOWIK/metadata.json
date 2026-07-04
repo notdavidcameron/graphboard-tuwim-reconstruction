@@ -1,0 +1,889 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLOWIK.BDF",
+  "size": 3315270,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Thursday, November 13, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    8
+  ],
+  "background_flag": 0,
+  "background_color_index": 0,
+  "palette_size": 1024,
+  "dib_size": 308184,
+  "component_list_offset": 309349,
+  "component_list_version": 1,
+  "component_count": 5,
+  "components": [
+    {
+      "index": 0,
+      "offset": 309357,
+      "clsid": "B64F3336-5368-11D0-B445-008048EB5D40",
+      "display_name": "Sprite_Holder",
+      "private_offset": 310891,
+      "private_size": 1070620,
+      "embedded": []
+    },
+    {
+      "index": 1,
+      "offset": 1381511,
+      "clsid": "2F3C5846-5413-11D0-B447-008048EB5D40",
+      "display_name": "Transparent_Video_Holder",
+      "private_offset": 1382685,
+      "private_size": 399586,
+      "embedded": [
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\01_Transparent_Video_Holder_000_00151929_board_video_audio.wav",
+          "offset": 1382697,
+          "size": 88244,
+          "pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 2
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\animations\\01_Transparent_Video_Holder_000_00151929_board_video_38x72.gif",
+          "offset": 1382697,
+          "size": 25825,
+          "frame_count": 8,
+          "width": 38,
+          "height": 72,
+          "transparent_index": 42,
+          "header_transparent_index": 6,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\01_Transparent_Video_Holder_002_0016d1dd_board_video_audio.wav",
+          "offset": 1495517,
+          "size": 132344,
+          "pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 3
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\animations\\01_Transparent_Video_Holder_002_0016d1dd_board_video_143x117.gif",
+          "offset": 1495517,
+          "size": 266983,
+          "frame_count": 14,
+          "width": 143,
+          "height": 117,
+          "transparent_index": 0,
+          "header_transparent_index": 72,
+          "delay_centiseconds": 10
+        }
+      ],
+      "board_video_marker_offset": 1382697,
+      "board_video_streams": [
+        {
+          "index": 0,
+          "offset": 1382697,
+          "end_offset": 1491249,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 38,
+          "video_height": 72,
+          "header_transparent_index": 6,
+          "frames_per_second": 10,
+          "frame_count": 8,
+          "header_record_count": 9,
+          "record_count": 10,
+          "audio_record_count": 2,
+          "video_record_count": 8,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\01_Transparent_Video_Holder_000_00151929_board_video_audio.wav",
+          "audio_pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\animations\\01_Transparent_Video_Holder_000_00151929_board_video_38x72.gif",
+          "transparent_index": 42
+        },
+        {
+          "index": 1,
+          "offset": 1491249,
+          "end_offset": 1492505,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 38,
+          "video_height": 72,
+          "header_transparent_index": 6,
+          "frames_per_second": 10,
+          "frame_count": 8,
+          "header_record_count": 9,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 2,
+          "offset": 1495517,
+          "end_offset": 1764039,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 143,
+          "video_height": 117,
+          "header_transparent_index": 72,
+          "frames_per_second": 10,
+          "frame_count": 14,
+          "header_record_count": 16,
+          "record_count": 17,
+          "audio_record_count": 3,
+          "video_record_count": 14,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\01_Transparent_Video_Holder_002_0016d1dd_board_video_audio.wav",
+          "audio_pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\animations\\01_Transparent_Video_Holder_002_0016d1dd_board_video_143x117.gif",
+          "transparent_index": 0
+        },
+        {
+          "index": 3,
+          "offset": 1764039,
+          "end_offset": 1765295,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 143,
+          "video_height": 117,
+          "header_transparent_index": 72,
+          "frames_per_second": 10,
+          "frame_count": 14,
+          "header_record_count": 16,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "offset": 1782271,
+      "clsid": "1720D306-6932-11D0-B468-008048EB5D40",
+      "display_name": "Sound_Holder",
+      "private_offset": 1783167,
+      "private_size": 1494572,
+      "embedded": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_000_001b358b.wav",
+          "offset": 1783179,
+          "size": 55598,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_001_001c0f19.wav",
+          "offset": 1838873,
+          "size": 57922,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_002_001cf1bb.wav",
+          "offset": 1896891,
+          "size": 50764,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_003_001db867.wav",
+          "offset": 1947751,
+          "size": 54660,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_004_001e8e4b.wav",
+          "offset": 2002507,
+          "size": 56038,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_005_001f6991.wav",
+          "offset": 2058641,
+          "size": 56138,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_006_0020453b.wav",
+          "offset": 2114875,
+          "size": 57130,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_007_002124c5.wav",
+          "offset": 2172101,
+          "size": 49202,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_008_0021e557.wav",
+          "offset": 2221399,
+          "size": 51760,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_009_0022afe7.wav",
+          "offset": 2273255,
+          "size": 46902,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_010_0023677d.wav",
+          "offset": 2320253,
+          "size": 49146,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_011_002427d7.wav",
+          "offset": 2369495,
+          "size": 55614,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_012_00250175.wav",
+          "offset": 2425205,
+          "size": 92690,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_013_00266be7.wav",
+          "offset": 2517991,
+          "size": 282670,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_014_002abc75.wav",
+          "offset": 2800757,
+          "size": 35046,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_015_002b45bb.wav",
+          "offset": 2835899,
+          "size": 31908,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_016_002bc2bf.wav",
+          "offset": 2867903,
+          "size": 42164,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_017_002c67d3.wav",
+          "offset": 2910163,
+          "size": 38646,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_018_002cff29.wav",
+          "offset": 2948905,
+          "size": 37180,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_019_002d90c5.wav",
+          "offset": 2986181,
+          "size": 47760,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_020_002e4bb5.wav",
+          "offset": 3034037,
+          "size": 5006,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_021_002e5fa3.wav",
+          "offset": 3039139,
+          "size": 238508,
+          "extension": ".wav"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "offset": 3277739,
+      "clsid": "AD45ADB6-5290-11D0-B442-008048EB5D40",
+      "display_name": "Text_Holder",
+      "private_offset": 3279365,
+      "private_size": 14448,
+      "embedded": []
+    },
+    {
+      "index": 4,
+      "offset": 3293813,
+      "clsid": "DA768116-5341-11D0-B444-008048EB5D40",
+      "display_name": "HotSpot_Holder",
+      "private_offset": 3294918,
+      "private_size": 120,
+      "embedded": []
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "dib",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\background.dib",
+      "size": 308184
+    },
+    {
+      "kind": "bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\background.bmp",
+      "size": 308198
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\script.txt",
+      "size": 19565
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\01_Transparent_Video_Holder_000_00151929_board_video_audio.wav",
+      "offset": 1382697,
+      "size": 88244,
+      "pcm_size": 88200,
+      "duration_seconds": 2.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 2
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\animations\\01_Transparent_Video_Holder_000_00151929_board_video_38x72.gif",
+      "offset": 1382697,
+      "size": 25825,
+      "frame_count": 8,
+      "width": 38,
+      "height": 72,
+      "transparent_index": 42,
+      "header_transparent_index": 6,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\01_Transparent_Video_Holder_002_0016d1dd_board_video_audio.wav",
+      "offset": 1495517,
+      "size": 132344,
+      "pcm_size": 132300,
+      "duration_seconds": 3.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 3
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\animations\\01_Transparent_Video_Holder_002_0016d1dd_board_video_143x117.gif",
+      "offset": 1495517,
+      "size": 266983,
+      "frame_count": 14,
+      "width": 143,
+      "height": 117,
+      "transparent_index": 0,
+      "header_transparent_index": 72,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_000_001b358b.wav",
+      "size": 55598
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_001_001c0f19.wav",
+      "size": 57922
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_002_001cf1bb.wav",
+      "size": 50764
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_003_001db867.wav",
+      "size": 54660
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_004_001e8e4b.wav",
+      "size": 56038
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_005_001f6991.wav",
+      "size": 56138
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_006_0020453b.wav",
+      "size": 57130
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_007_002124c5.wav",
+      "size": 49202
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_008_0021e557.wav",
+      "size": 51760
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_009_0022afe7.wav",
+      "size": 46902
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_010_0023677d.wav",
+      "size": 49146
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_011_002427d7.wav",
+      "size": 55614
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_012_00250175.wav",
+      "size": 92690
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_013_00266be7.wav",
+      "size": 282670
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_014_002abc75.wav",
+      "size": 35046
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_015_002b45bb.wav",
+      "size": 31908
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_016_002bc2bf.wav",
+      "size": 42164
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_017_002c67d3.wav",
+      "size": 38646
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_018_002cff29.wav",
+      "size": 37180
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_019_002d90c5.wav",
+      "size": 47760
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_020_002e4bb5.wav",
+      "size": 5006
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_021_002e5fa3.wav",
+      "size": 238508
+    }
+  ],
+  "script": {
+    "version_offset": 3295038,
+    "version": 1,
+    "string_prefix_offset": 3295042,
+    "text_offset": 3295045,
+    "text_length": 19565,
+    "text_end": 3314610,
+    "engine_state": {
+      "offset": 3314610,
+      "version": 2,
+      "block_count": 9,
+      "handler_offsets": {
+        "field_38": 19201,
+        "field_3c": 0,
+        "field_30": 0,
+        "field_34": 341
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 3314634,
+          "start_offset": 2135,
+          "duplicate_start_offset": 2135,
+          "case_count": 19,
+          "end_or_body_offset": 5012,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 2162
+            },
+            {
+              "value": 1,
+              "target_offset": 2411
+            },
+            {
+              "value": 2,
+              "target_offset": 2660
+            },
+            {
+              "value": 3,
+              "target_offset": 2909
+            },
+            {
+              "value": 4,
+              "target_offset": 3158
+            },
+            {
+              "value": 5,
+              "target_offset": 4532
+            },
+            {
+              "value": 6,
+              "target_offset": 4547
+            },
+            {
+              "value": 7,
+              "target_offset": 4562
+            },
+            {
+              "value": 8,
+              "target_offset": 4577
+            },
+            {
+              "value": 9,
+              "target_offset": 4592
+            },
+            {
+              "value": 10,
+              "target_offset": 4608
+            },
+            {
+              "value": 11,
+              "target_offset": 4624
+            },
+            {
+              "value": 12,
+              "target_offset": 4640
+            },
+            {
+              "value": 13,
+              "target_offset": 4656
+            },
+            {
+              "value": 14,
+              "target_offset": 4672
+            },
+            {
+              "value": 15,
+              "target_offset": 4688
+            },
+            {
+              "value": 16,
+              "target_offset": 4707
+            },
+            {
+              "value": 18,
+              "target_offset": 4885
+            },
+            {
+              "value": 19,
+              "target_offset": 4904
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 3314806,
+          "start_offset": 6933,
+          "duplicate_start_offset": 6933,
+          "case_count": 3,
+          "end_or_body_offset": 9373,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 6960
+            },
+            {
+              "value": 1,
+              "target_offset": 7575
+            },
+            {
+              "value": 2,
+              "target_offset": 9205
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "file_offset": 3314850,
+          "start_offset": 7846,
+          "duplicate_start_offset": 7846,
+          "case_count": 3,
+          "end_or_body_offset": 8533,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 7891
+            },
+            {
+              "value": 1,
+              "target_offset": 8228
+            },
+            {
+              "value": 2,
+              "target_offset": 8383
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "file_offset": 3314894,
+          "start_offset": 9467,
+          "duplicate_start_offset": 9467,
+          "case_count": 2,
+          "end_or_body_offset": 13423,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 9494
+            },
+            {
+              "value": 11,
+              "target_offset": 13258
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "file_offset": 3314930,
+          "start_offset": 10154,
+          "duplicate_start_offset": 10154,
+          "case_count": 10,
+          "end_or_body_offset": 13213,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 10211
+            },
+            {
+              "value": 3,
+              "target_offset": 10351
+            },
+            {
+              "value": 4,
+              "target_offset": 10497
+            },
+            {
+              "value": 5,
+              "target_offset": 10643
+            },
+            {
+              "value": 6,
+              "target_offset": 10788
+            },
+            {
+              "value": 7,
+              "target_offset": 11494
+            },
+            {
+              "value": 8,
+              "target_offset": 11644
+            },
+            {
+              "value": 9,
+              "target_offset": 12108
+            },
+            {
+              "value": 18,
+              "target_offset": 12553
+            },
+            {
+              "value": 19,
+              "target_offset": 12581
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "file_offset": 3315030,
+          "start_offset": 11773,
+          "duplicate_start_offset": 11773,
+          "case_count": 2,
+          "end_or_body_offset": 12041,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 18,
+              "target_offset": 11831
+            },
+            {
+              "value": 19,
+              "target_offset": 11944
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "file_offset": 3315066,
+          "start_offset": 12237,
+          "duplicate_start_offset": 12237,
+          "case_count": 2,
+          "end_or_body_offset": 12505,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 18,
+              "target_offset": 12295
+            },
+            {
+              "value": 19,
+              "target_offset": 12408
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "file_offset": 3315102,
+          "start_offset": 14135,
+          "duplicate_start_offset": 14135,
+          "case_count": 9,
+          "end_or_body_offset": 14978,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 14174
+            },
+            {
+              "value": 3,
+              "target_offset": 14206
+            },
+            {
+              "value": 4,
+              "target_offset": 14305
+            },
+            {
+              "value": 5,
+              "target_offset": 14402
+            },
+            {
+              "value": 6,
+              "target_offset": 14498
+            },
+            {
+              "value": 7,
+              "target_offset": 14602
+            },
+            {
+              "value": 8,
+              "target_offset": 14704
+            },
+            {
+              "value": 9,
+              "target_offset": 14807
+            },
+            {
+              "value": 10,
+              "target_offset": 14911
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "file_offset": 3315194,
+          "start_offset": 15344,
+          "duplicate_start_offset": 15344,
+          "case_count": 3,
+          "end_or_body_offset": 15904,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 15371
+            },
+            {
+              "value": 1,
+              "target_offset": 15645
+            },
+            {
+              "value": 2,
+              "target_offset": 15764
+            }
+          ]
+        }
+      ],
+      "table_count": 1,
+      "table_a": [
+        1573
+      ],
+      "table_b": [
+        8
+      ],
+      "versioned_tail": {
+        "field_44": 19332,
+        "field_48": 0,
+        "field_4c": 19464,
+        "field_50": 0
+      },
+      "end_offset": 3315266
+    }
+  }
+}

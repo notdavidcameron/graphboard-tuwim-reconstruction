@@ -1,0 +1,763 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RYCERZ.BDF",
+  "size": 8851884,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Monday, November 17, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    15
+  ],
+  "background_flag": 1,
+  "background_color_index": 0,
+  "palette_size": 1024,
+  "dib_size": 0,
+  "component_list_offset": 1165,
+  "component_list_version": 1,
+  "component_count": 6,
+  "components": [
+    {
+      "index": 0,
+      "offset": 1173,
+      "clsid": "0D8A5736-5337-11D0-B444-008048EB5D40",
+      "display_name": "Bitmap_Holder",
+      "private_offset": 2305,
+      "private_size": 463684,
+      "embedded": []
+    },
+    {
+      "index": 1,
+      "offset": 465989,
+      "clsid": "B64F3336-5368-11D0-B445-008048EB5D40",
+      "display_name": "Sprite_Holder",
+      "private_offset": 467523,
+      "private_size": 812856,
+      "embedded": []
+    },
+    {
+      "index": 2,
+      "offset": 1280379,
+      "clsid": "2F3C5846-5413-11D0-B447-008048EB5D40",
+      "display_name": "Transparent_Video_Holder",
+      "private_offset": 1281553,
+      "private_size": 2341937,
+      "embedded": [
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\02_Transparent_Video_Holder_000_00234ba3_board_video_audio.wav",
+          "offset": 2313123,
+          "size": 132344,
+          "pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 3
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\animations\\02_Transparent_Video_Holder_000_00234ba3_board_video_143x480.gif",
+          "offset": 2313123,
+          "size": 1091877,
+          "frame_count": 14,
+          "width": 143,
+          "height": 480,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\02_Transparent_Video_Holder_002_002d0dc6_board_video_audio.wav",
+          "offset": 2952646,
+          "size": 132344,
+          "pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 3
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\animations\\02_Transparent_Video_Holder_002_002d0dc6_board_video_144x480.gif",
+          "offset": 2952646,
+          "size": 1099493,
+          "frame_count": 14,
+          "width": 144,
+          "height": 480,
+          "transparent_index": 30,
+          "header_transparent_index": 0,
+          "delay_centiseconds": 10
+        }
+      ],
+      "board_video_marker_offset": 1281565,
+      "board_video_streams": [
+        {
+          "index": 0,
+          "offset": 2313123,
+          "end_offset": 2882138,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 143,
+          "video_height": 480,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 14,
+          "header_record_count": 16,
+          "record_count": 17,
+          "audio_record_count": 3,
+          "video_record_count": 14,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\02_Transparent_Video_Holder_000_00234ba3_board_video_audio.wav",
+          "audio_pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\animations\\02_Transparent_Video_Holder_000_00234ba3_board_video_143x480.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 1,
+          "offset": 2882138,
+          "end_offset": 2883394,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 143,
+          "video_height": 480,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 14,
+          "header_record_count": 16,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 2,
+          "offset": 2952646,
+          "end_offset": 3552986,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 144,
+          "video_height": 480,
+          "header_transparent_index": 0,
+          "frames_per_second": 10,
+          "frame_count": 14,
+          "header_record_count": 16,
+          "record_count": 17,
+          "audio_record_count": 3,
+          "video_record_count": 14,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\02_Transparent_Video_Holder_002_002d0dc6_board_video_audio.wav",
+          "audio_pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\animations\\02_Transparent_Video_Holder_002_002d0dc6_board_video_144x480.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 3,
+          "offset": 3552986,
+          "end_offset": 3554242,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 144,
+          "video_height": 480,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 14,
+          "header_record_count": 16,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "offset": 3623490,
+      "clsid": "DA768116-5341-11D0-B444-008048EB5D40",
+      "display_name": "HotSpot_Holder",
+      "private_offset": 3624595,
+      "private_size": 827,
+      "embedded": []
+    },
+    {
+      "index": 4,
+      "offset": 3625422,
+      "clsid": "1720D306-6932-11D0-B468-008048EB5D40",
+      "display_name": "Sound_Holder",
+      "private_offset": 3626318,
+      "private_size": 5158884,
+      "embedded": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_000_0037555a.wav",
+          "offset": 3626330,
+          "size": 92512,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_001_0038bf1a.wav",
+          "offset": 3718938,
+          "size": 228502,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_002_003c3c10.wav",
+          "offset": 3947536,
+          "size": 831652,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_003_0048ed14.wav",
+          "offset": 4779284,
+          "size": 1066794,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_004_0059349e.wav",
+          "offset": 5846174,
+          "size": 1511236,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_005_00704442.wav",
+          "offset": 7357506,
+          "size": 29250,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_006_0070b6e4.wav",
+          "offset": 7386852,
+          "size": 323594,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_007_0075a74e.wav",
+          "offset": 7710542,
+          "size": 262418,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_008_0079a8c0.wav",
+          "offset": 7973056,
+          "size": 54716,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_009_007a7edc.wav",
+          "offset": 8027868,
+          "size": 73450,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_010_007b9e26.wav",
+          "offset": 8101414,
+          "size": 173292,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_011_007e4372.wav",
+          "offset": 8274802,
+          "size": 37478,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_012_007ed638.wav",
+          "offset": 8312376,
+          "size": 472734,
+          "extension": ".wav"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "offset": 8785202,
+      "clsid": "AD45ADB6-5290-11D0-B442-008048EB5D40",
+      "display_name": "Text_Holder",
+      "private_offset": 8786828,
+      "private_size": 43814,
+      "embedded": []
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\script.txt",
+      "size": 20611
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\02_Transparent_Video_Holder_000_00234ba3_board_video_audio.wav",
+      "offset": 2313123,
+      "size": 132344,
+      "pcm_size": 132300,
+      "duration_seconds": 3.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 3
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\animations\\02_Transparent_Video_Holder_000_00234ba3_board_video_143x480.gif",
+      "offset": 2313123,
+      "size": 1091877,
+      "frame_count": 14,
+      "width": 143,
+      "height": 480,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\02_Transparent_Video_Holder_002_002d0dc6_board_video_audio.wav",
+      "offset": 2952646,
+      "size": 132344,
+      "pcm_size": 132300,
+      "duration_seconds": 3.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 3
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\animations\\02_Transparent_Video_Holder_002_002d0dc6_board_video_144x480.gif",
+      "offset": 2952646,
+      "size": 1099493,
+      "frame_count": 14,
+      "width": 144,
+      "height": 480,
+      "transparent_index": 30,
+      "header_transparent_index": 0,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_000_0037555a.wav",
+      "size": 92512
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_001_0038bf1a.wav",
+      "size": 228502
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_002_003c3c10.wav",
+      "size": 831652
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_003_0048ed14.wav",
+      "size": 1066794
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_004_0059349e.wav",
+      "size": 1511236
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_005_00704442.wav",
+      "size": 29250
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_006_0070b6e4.wav",
+      "size": 323594
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_007_0075a74e.wav",
+      "size": 262418
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_008_0079a8c0.wav",
+      "size": 54716
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_009_007a7edc.wav",
+      "size": 73450
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_010_007b9e26.wav",
+      "size": 173292
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_011_007e4372.wav",
+      "size": 37478
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_012_007ed638.wav",
+      "size": 472734
+    }
+  ],
+  "script": {
+    "version_offset": 8830642,
+    "version": 1,
+    "string_prefix_offset": 8830646,
+    "text_offset": 8830649,
+    "text_length": 20611,
+    "text_end": 8851260,
+    "engine_state": {
+      "offset": 8851260,
+      "version": 2,
+      "block_count": 10,
+      "handler_offsets": {
+        "field_38": 20247,
+        "field_3c": 0,
+        "field_30": 1856,
+        "field_34": 338
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 8851284,
+          "start_offset": 2622,
+          "duplicate_start_offset": 2622,
+          "case_count": 2,
+          "end_or_body_offset": 4508,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 1,
+              "target_offset": 2649
+            },
+            {
+              "value": 2,
+              "target_offset": 3733
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 8851320,
+          "start_offset": 2853,
+          "duplicate_start_offset": 2853,
+          "case_count": 4,
+          "end_or_body_offset": 3327,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 1,
+              "target_offset": 2892
+            },
+            {
+              "value": 2,
+              "target_offset": 2940
+            },
+            {
+              "value": 3,
+              "target_offset": 3074
+            },
+            {
+              "value": 4,
+              "target_offset": 3208
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "file_offset": 8851372,
+          "start_offset": 6928,
+          "duplicate_start_offset": 6928,
+          "case_count": 3,
+          "end_or_body_offset": 9468,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 6955
+            },
+            {
+              "value": 1,
+              "target_offset": 7570
+            },
+            {
+              "value": 2,
+              "target_offset": 9301
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "file_offset": 8851416,
+          "start_offset": 7841,
+          "duplicate_start_offset": 7841,
+          "case_count": 3,
+          "end_or_body_offset": 8629,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 7886
+            },
+            {
+              "value": 1,
+              "target_offset": 8223
+            },
+            {
+              "value": 2,
+              "target_offset": 8479
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "file_offset": 8851460,
+          "start_offset": 9562,
+          "duplicate_start_offset": 9562,
+          "case_count": 2,
+          "end_or_body_offset": 14105,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 9589
+            },
+            {
+              "value": 11,
+              "target_offset": 13940
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "file_offset": 8851496,
+          "start_offset": 10249,
+          "duplicate_start_offset": 10249,
+          "case_count": 12,
+          "end_or_body_offset": 13895,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 10306
+            },
+            {
+              "value": 3,
+              "target_offset": 10447
+            },
+            {
+              "value": 4,
+              "target_offset": 10594
+            },
+            {
+              "value": 5,
+              "target_offset": 10740
+            },
+            {
+              "value": 6,
+              "target_offset": 10885
+            },
+            {
+              "value": 7,
+              "target_offset": 11690
+            },
+            {
+              "value": 8,
+              "target_offset": 11840
+            },
+            {
+              "value": 9,
+              "target_offset": 12472
+            },
+            {
+              "value": 16,
+              "target_offset": 13085
+            },
+            {
+              "value": 17,
+              "target_offset": 13110
+            },
+            {
+              "value": 18,
+              "target_offset": 13135
+            },
+            {
+              "value": 19,
+              "target_offset": 13163
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "file_offset": 8851612,
+          "start_offset": 11915,
+          "duplicate_start_offset": 11915,
+          "case_count": 4,
+          "end_or_body_offset": 12405,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 6,
+              "target_offset": 11972
+            },
+            {
+              "value": 7,
+              "target_offset": 12084
+            },
+            {
+              "value": 8,
+              "target_offset": 12196
+            },
+            {
+              "value": 9,
+              "target_offset": 12308
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "file_offset": 8851664,
+          "start_offset": 12547,
+          "duplicate_start_offset": 12547,
+          "case_count": 4,
+          "end_or_body_offset": 13037,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 6,
+              "target_offset": 12604
+            },
+            {
+              "value": 7,
+              "target_offset": 12716
+            },
+            {
+              "value": 8,
+              "target_offset": 12828
+            },
+            {
+              "value": 9,
+              "target_offset": 12940
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "file_offset": 8851716,
+          "start_offset": 14817,
+          "duplicate_start_offset": 14817,
+          "case_count": 9,
+          "end_or_body_offset": 15660,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 14856
+            },
+            {
+              "value": 3,
+              "target_offset": 14888
+            },
+            {
+              "value": 4,
+              "target_offset": 14987
+            },
+            {
+              "value": 5,
+              "target_offset": 15084
+            },
+            {
+              "value": 6,
+              "target_offset": 15180
+            },
+            {
+              "value": 7,
+              "target_offset": 15284
+            },
+            {
+              "value": 8,
+              "target_offset": 15386
+            },
+            {
+              "value": 9,
+              "target_offset": 15489
+            },
+            {
+              "value": 10,
+              "target_offset": 15593
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "file_offset": 8851808,
+          "start_offset": 16026,
+          "duplicate_start_offset": 16026,
+          "case_count": 3,
+          "end_or_body_offset": 16669,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 16053
+            },
+            {
+              "value": 1,
+              "target_offset": 16327
+            },
+            {
+              "value": 2,
+              "target_offset": 16529
+            }
+          ]
+        }
+      ],
+      "table_count": 1,
+      "table_a": [
+        1937
+      ],
+      "table_b": [
+        8
+      ],
+      "versioned_tail": {
+        "field_44": 20378,
+        "field_48": 0,
+        "field_4c": 20510,
+        "field_50": 0
+      },
+      "end_offset": 8851880
+    }
+  }
+}

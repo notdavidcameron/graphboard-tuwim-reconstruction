@@ -1,0 +1,505 @@
+{
+  "id": "INTRO",
+  "title": "INTRO",
+  "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\INTRO.BDF",
+  "pageRect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "background": {
+    "colorIndex": 0,
+    "flag": 0,
+    "bmpPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\background.bmp",
+    "bmpUrl": "../extracted_assets/bdf/INTRO/background.bmp",
+    "palettePath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\background_palette.bin",
+    "paletteUrl": "../extracted_assets/bdf/INTRO/background_palette.bin"
+  },
+  "components": [
+    {
+      "id": "00_Sprite_Holder",
+      "type": "Sprite_Holder",
+      "index": 0,
+      "z": 0,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "sourceOffset": 309353,
+      "privateOffset": 310887,
+      "privateSize": 31920,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "01_Transparent_Video_Holder",
+      "type": "Transparent_Video_Holder",
+      "index": 1,
+      "z": 0,
+      "visible": true,
+      "rect": {
+        "x": 8,
+        "y": 0,
+        "width": 595,
+        "height": 478
+      },
+      "geometryConfidence": "serialized_entries",
+      "sourceOffset": 342807,
+      "privateOffset": 343981,
+      "privateSize": 3025342,
+      "primaryAssetUrl": "../extracted_assets/bdf/INTRO/animations/01_Transparent_Video_Holder_000_00053fb9_board_video_318x386.gif",
+      "assets": [
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_000_00053fb9_board_video_318x386.gif",
+          "url": "../extracted_assets/bdf/INTRO/animations/01_Transparent_Video_Holder_000_00053fb9_board_video_318x386.gif",
+          "width": 318,
+          "height": 386,
+          "frameCount": 10,
+          "offset": 343993,
+          "name": null,
+          "id": 0,
+          "rect": {
+            "x": 172,
+            "y": 27,
+            "width": 318,
+            "height": 386
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 1323785,
+          "streamOffset": 343993,
+          "originalRect": {
+            "x": 172,
+            "y": 27,
+            "width": 318,
+            "height": 386
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_002_00161af5_board_video_196x243.gif",
+          "url": "../extracted_assets/bdf/INTRO/animations/01_Transparent_Video_Holder_002_00161af5_board_video_196x243.gif",
+          "width": 196,
+          "height": 243,
+          "frameCount": 20,
+          "offset": 1448693,
+          "name": null,
+          "id": 2,
+          "rect": {
+            "x": 378,
+            "y": 74,
+            "width": 196,
+            "height": 243
+          },
+          "z": 1,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 1599684,
+          "streamOffset": 1448693,
+          "originalRect": {
+            "x": 378,
+            "y": 74,
+            "width": 196,
+            "height": 243
+          },
+          "originalZ": 1
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_004_0019283c_board_video_115x61.gif",
+          "url": "../extracted_assets/bdf/INTRO/animations/01_Transparent_Video_Holder_004_0019283c_board_video_115x61.gif",
+          "width": 115,
+          "height": 61,
+          "frameCount": 40,
+          "offset": 1648700,
+          "name": null,
+          "id": 4,
+          "rect": {
+            "x": 437,
+            "y": 331,
+            "width": 115,
+            "height": 61
+          },
+          "z": 1,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 1968733,
+          "streamOffset": 1648700,
+          "originalRect": {
+            "x": 437,
+            "y": 331,
+            "width": 115,
+            "height": 61
+          },
+          "originalZ": 1
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_006_001e2b6d_board_video_67x103.gif",
+          "url": "../extracted_assets/bdf/INTRO/animations/01_Transparent_Video_Holder_006_001e2b6d_board_video_67x103.gif",
+          "width": 67,
+          "height": 103,
+          "frameCount": 35,
+          "offset": 1977197,
+          "name": null,
+          "id": 6,
+          "rect": {
+            "x": 284,
+            "y": 20,
+            "width": 67,
+            "height": 103
+          },
+          "z": 1,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 2247018,
+          "streamOffset": 1977197,
+          "originalRect": {
+            "x": 284,
+            "y": 20,
+            "width": 67,
+            "height": 103
+          },
+          "originalZ": 1
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_008_00226a32_board_video_66x58.gif",
+          "url": "../extracted_assets/bdf/INTRO/animations/01_Transparent_Video_Holder_008_00226a32_board_video_66x58.gif",
+          "width": 66,
+          "height": 58,
+          "frameCount": 16,
+          "offset": 2255410,
+          "name": null,
+          "id": 8,
+          "rect": {
+            "x": 427,
+            "y": 0,
+            "width": 66,
+            "height": 58
+          },
+          "z": 1,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 2411730,
+          "streamOffset": 2255410,
+          "originalRect": {
+            "x": 427,
+            "y": 0,
+            "width": 66,
+            "height": 58
+          },
+          "originalZ": 1
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_010_0024e1a6_board_video_216x67.gif",
+          "url": "../extracted_assets/bdf/INTRO/animations/01_Transparent_Video_Holder_010_0024e1a6_board_video_216x67.gif",
+          "width": 216,
+          "height": 67,
+          "frameCount": 17,
+          "offset": 2417062,
+          "name": null,
+          "id": 10,
+          "rect": {
+            "x": 209,
+            "y": 411,
+            "width": 216,
+            "height": 67
+          },
+          "z": 1,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 2589110,
+          "streamOffset": 2417062,
+          "originalRect": {
+            "x": 209,
+            "y": 411,
+            "width": 216,
+            "height": 67
+          },
+          "originalZ": 1
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_012_0027bfaa_board_video_87x88.gif",
+          "url": "../extracted_assets/bdf/INTRO/animations/01_Transparent_Video_Holder_012_0027bfaa_board_video_87x88.gif",
+          "width": 87,
+          "height": 88,
+          "frameCount": 10,
+          "offset": 2604970,
+          "name": null,
+          "id": 12,
+          "rect": {
+            "x": 141,
+            "y": 224,
+            "width": 87,
+            "height": 88
+          },
+          "z": 1,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 2798776,
+          "streamOffset": 2604970,
+          "originalRect": {
+            "x": 141,
+            "y": 224,
+            "width": 87,
+            "height": 88
+          },
+          "originalZ": 1
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_014_002ad864_board_video_595x44.gif",
+          "url": "../extracted_assets/bdf/INTRO/animations/01_Transparent_Video_Holder_014_002ad864_board_video_595x44.gif",
+          "width": 595,
+          "height": 44,
+          "frameCount": 30,
+          "offset": 2807908,
+          "name": null,
+          "id": 14,
+          "rect": {
+            "x": 8,
+            "y": 237,
+            "width": 595,
+            "height": 44
+          },
+          "z": 1,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 3016853,
+          "streamOffset": 2807908,
+          "originalRect": {
+            "x": 8,
+            "y": 237,
+            "width": 595,
+            "height": 44
+          },
+          "originalZ": 1
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_016_002e7471_board_video_66x75.gif",
+          "url": "../extracted_assets/bdf/INTRO/animations/01_Transparent_Video_Holder_016_002e7471_board_video_66x75.gif",
+          "width": 66,
+          "height": 75,
+          "frameCount": 15,
+          "offset": 3044465,
+          "name": null,
+          "id": 16,
+          "rect": {
+            "x": 178,
+            "y": 11,
+            "width": 66,
+            "height": 75
+          },
+          "z": 1,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 3191695,
+          "streamOffset": 3044465,
+          "originalRect": {
+            "x": 178,
+            "y": 11,
+            "width": 66,
+            "height": 75
+          },
+          "originalZ": 1
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_018_0030cce7_board_video_36x32.gif",
+          "url": "../extracted_assets/bdf/INTRO/animations/01_Transparent_Video_Holder_018_0030cce7_board_video_36x32.gif",
+          "width": 36,
+          "height": 32,
+          "frameCount": 33,
+          "offset": 3198183,
+          "name": null,
+          "id": 18,
+          "rect": {
+            "x": 212,
+            "y": 114,
+            "width": 36,
+            "height": 32
+          },
+          "z": 1,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 3366787,
+          "streamOffset": 3198183,
+          "originalRect": {
+            "x": 212,
+            "y": 114,
+            "width": 36,
+            "height": 32
+          },
+          "originalZ": 1
+        }
+      ],
+      "audio": [
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_000_00053fb9_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/INTRO/embedded/01_Transparent_Video_Holder_000_00053fb9_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 343993,
+          "id": 0
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_002_00161af5_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/INTRO/embedded/01_Transparent_Video_Holder_002_00161af5_board_video_audio.wav",
+          "durationSeconds": 3.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 1448693,
+          "id": 2
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_004_0019283c_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/INTRO/embedded/01_Transparent_Video_Holder_004_0019283c_board_video_audio.wav",
+          "durationSeconds": 5.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 1648700,
+          "id": 4
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_006_001e2b6d_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/INTRO/embedded/01_Transparent_Video_Holder_006_001e2b6d_board_video_audio.wav",
+          "durationSeconds": 5.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 1977197,
+          "id": 6
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_008_00226a32_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/INTRO/embedded/01_Transparent_Video_Holder_008_00226a32_board_video_audio.wav",
+          "durationSeconds": 3.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 2255410,
+          "id": 8
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_010_0024e1a6_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/INTRO/embedded/01_Transparent_Video_Holder_010_0024e1a6_board_video_audio.wav",
+          "durationSeconds": 3.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 2417062,
+          "id": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_012_0027bfaa_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/INTRO/embedded/01_Transparent_Video_Holder_012_0027bfaa_board_video_audio.wav",
+          "durationSeconds": 4.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 2604970,
+          "id": 12
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_014_002ad864_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/INTRO/embedded/01_Transparent_Video_Holder_014_002ad864_board_video_audio.wav",
+          "durationSeconds": 4.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 2807908,
+          "id": 14
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_016_002e7471_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/INTRO/embedded/01_Transparent_Video_Holder_016_002e7471_board_video_audio.wav",
+          "durationSeconds": 3.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 3044465,
+          "id": 16
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_018_0030cce7_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/INTRO/embedded/01_Transparent_Video_Holder_018_0030cce7_board_video_audio.wav",
+          "durationSeconds": 3.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 3198183,
+          "id": 18
+        }
+      ]
+    },
+    {
+      "id": "02_Sound_Holder",
+      "type": "Sound_Holder",
+      "index": 2,
+      "z": 0,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "geometryConfidence": "not_visual",
+      "sourceOffset": 3369323,
+      "privateOffset": 3370219,
+      "privateSize": 1228832,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\embedded\\02_Sound_Holder_000_00336cf7.wav",
+          "url": "../extracted_assets/bdf/INTRO/embedded/02_Sound_Holder_000_00336cf7.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 3370231,
+          "id": 0
+        }
+      ]
+    }
+  ],
+  "script": {
+    "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\script.txt",
+    "url": "../extracted_assets/bdf/INTRO/script.txt",
+    "handlers": [
+      {
+        "name": "OnOpenPage",
+        "signature": "OnOpenPage()"
+      },
+      {
+        "name": "OnClosePage",
+        "signature": "OnClosePage(void)"
+      },
+      {
+        "name": "Transparent_Video_Holder.TheEnd",
+        "signature": "Transparent_Video_Holder.TheEnd(int videoID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(videoID==9)"
+      },
+      {
+        "name": "OnLButtonDown",
+        "signature": "OnLButtonDown(int x,int y)"
+      }
+    ],
+    "rawText": "//###########################################################################\n\n//Script code\n\n//###########################################################################\n\n\n\n\n\nOnOpenPage()\n\n{\n\n\t// Add your component and variables initialization code here\n\n\t// WARNING: All variables definied on this function are global for this page\n\n   LoadGroup(\"cursors.grp\");\n\n   SetCursor(1);\n\n\n\n   FadeScreen(1,1000);\n\n   Transparent_Video_Holder.Play(0,0);\n\n   Sound_Holder.PlayDSound(0);\n\n}\n\n\n\n\n\nvoid OnClosePage(void)\n\n{\n\n\t// Add your close page handler code here\n\n\n\n}\n\n\n\n\n\n \n\nvoid Transparent_Video_Holder.TheEnd(int videoID)\n\n{\n\n   if(videoID==9)\n\n   {\n\n      FadeScreen(0,1000);\n\n      LoadPage(\"wyborw.bdf\");\n\n      return;\n\n   }\n\n   Transparent_Video_Holder.Play(videoID+1,0);\n\n}\n\n\n\n \n\nvoid OnLButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   FadeScreen(0,1000);\n\n   LoadPage(\"wyborw.bdf\");\n\n}\n\n "
+  },
+  "warnings": [
+    "1 component(s) have unknown geometry and default to 0,0.",
+    "Recovered 10 TransparentVideoHolder asset rect(s) from serialized entries."
+  ]
+}

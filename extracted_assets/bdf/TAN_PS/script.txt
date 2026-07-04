@@ -1,0 +1,831 @@
+//###########################################################################
+//Script code
+//###########################################################################
+
+
+OnOpenPage()
+{
+	// Add your component and variables initialization code here
+	// WARNING: All variables definied on this function are global for this page
+
+
+   /*int index = 32;
+   while( index < 128 )
+   {
+      Debug( "%c, %d", index, index );
+      index++;
+   }
+   return;*/
+
+   int stalaSciszania = -450;
+
+
+   int keyDown = 0;
+
+      // 0 - stop - wszystko aktywne, widzoczny tekst piosenki
+      // 1 - piosenka
+      // 2 - melodia
+      // 3 - demo
+   int akcja = 0;
+
+      // Zmienna okreslajaca glosnosc odtwarzania dzwiekow.
+      // left  - wartosci od 0 do 2;      0 - najglosniej
+      // top   - kierunek sciszania 0 - cicho, 1 glosno
+   CRect glosnosc;
+   glosnosc.SetRect( 0, 0, 0, 0 );
+
+      // Aktualne polozenie reki na gryfie
+   int biezaceSkrzypce = 0;
+
+      // 0 - smyczek z lewej ( naszej )
+      // 1 - smyczek z prawej (naszej)
+   int smyczek = 0;
+
+
+
+
+
+
+   // DLA ROBERTA
+   // Do tej tablicy nalezy wpisac kolejne numery ruchow pingiwna
+   // 0 - skrzypce1  - sound 0 
+   // 1 - skrzypce2  - sound 1
+   // 2 - skrzypce3  - sound 2
+   // 3 - skrzypce4  - sound 3
+   // 4 - skrzypce1  - sound 4 
+   // 5 - skrzypce2  - sound 5
+   // 6 - skrzypce3  - sound 6
+   // 7 - skrzypce4  - sound 7
+   // 8 - but        - sound 8, 9, 10
+   // 9 - instrument - sound 11
+   // 10 - gwizd     - sound 12
+   // 11 - ryk       - sound 13
+
+   int maxRuchow =49;
+   int demo[ maxRuchow ];
+
+    demo[0]=0;
+    demo[1]=8;
+    demo[2]=8;
+    demo[3]=0;
+    demo[4]=8;
+    demo[5]=8;
+    demo[6]=0;
+    demo[7]=8;
+    demo[8]=8;
+    demo[9]=0;
+    demo[10]=11;
+    demo[11]=3;
+    demo[12]=0;
+    demo[13]=8;
+    demo[14]=8;
+    demo[15]=0;
+    demo[16]=8;
+    demo[17]=0;
+    demo[18]=4;
+    demo[19]=10;
+    demo[20]=10;
+    demo[21]=0;
+    demo[22]=8;
+    demo[23]=0;
+    demo[24]=0;
+    demo[25]=9;
+    demo[26]=9;
+    demo[27]=0;
+    demo[28]=9;
+    demo[29]=0;
+    demo[30]=0;
+    demo[31]=9;
+    demo[32]=9;
+    demo[33]=0;
+    demo[34]=9;
+    demo[35]=0;
+    demo[36]=0;
+    demo[37]=9;
+    demo[38]=9;
+    demo[39]=0;
+    demo[40]=9;
+    demo[41]=0;
+    demo[42]=0;
+    demo[43]=9;
+    demo[44]=0;
+    demo[45]=0;
+    demo[46]=0;
+    demo[47]=9;
+
+
+
+   LoadGroup("g_pios.grp");
+
+   int toolbar=0;
+   int toolbarCase=0;
+   Group.HotSpot_Holder.DisableHotSpot(1);
+
+   SetCursor(0);
+   //SetTimer( 5000 );
+   FadeScreen(1,1000);
+}
+
+
+void OnTimer(void)
+{
+	// Add your timer handler code here
+   SetTimer(0);
+   UstawAktywnoscStrony( 0 );
+   Group.Sound_Holder.PlayDSound(0);
+}
+
+
+void OnClosePage(void)
+{
+	// Add your close page handler code here
+   FadeScreen(0,1000);
+   SetCursor(0);
+   CloseGroup();
+}
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////
+//
+//
+void OnRButtonDown(int x,int y)
+{
+        //Add your command handler code here
+   //Uruchomienie pomocy
+   UstawAktywnoscStrony( 0 );
+   Group.Sound_Holder.PlayDSound(0);
+   SetTimer(0);
+}
+
+
+
+void OnLButtonDown(int x,int y)
+{
+        //Add your command handler code here
+   Group.Sound_Holder.Stop(0);
+   SetTimer(0);
+}
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////
+// W zaleznosci od stanu biezacego i nowego jest ustawiana aktywnosc strony
+//
+void UstawAktywnoscStrony( int nowaAkcja )
+{
+   int leftOffset;
+   int upOffset;
+
+   switch( nowaAkcja )
+   {
+      case 0:   // stop
+
+            // Nalezy uaktywnic wszystkie przyciski na panelu
+         Group.Sprite_Holder.ChangePhase( 1, 0 );
+         Group.Sprite_Holder.ChangePhase( 2, 0 );
+         Group.Sprite_Holder.ChangePhase( 3, 0 );
+
+
+         switch( akcja )
+         {
+            case 2:
+
+                  // Jesli poprzednio byla odgrywana melodia
+                  // nalezy ukryc tekst melodi i pokazac tekst
+                  // piosenki przesuniety o offset melodi
+
+               Text_Holder.StopSynchroText( 2 );
+
+               DisableScreen();
+
+               Text_Holder.HideText( 2 );   // melodia
+               Text_Holder.GetTextOffsets( 2, &leftOffset, &upOffset );
+
+               Text_Holder.ShowText( 0 );   // piosenka
+               Text_Holder.SetTextOffsets( 0, leftOffset, upOffset );
+   
+               EnableScreen();
+               ShowBuffer();
+               break;
+
+            case 1:
+               Text_Holder.StopSynchroText( 0 );
+               break;
+
+            case 3:
+               Text_Holder.StopSynchroText( 3 );
+               break;
+         }
+         break;
+
+      case 1:   // piosenka
+         Group.Sprite_Holder.ChangePhase( 1, 1 );   // mruganie
+         Group.Sprite_Holder.ChangePhase( 2, 2 );
+         Group.Sprite_Holder.ChangePhase( 3, 2 );
+
+            // piosenka
+         Text_Holder.PlaySynchroText( 0 );
+         Text_Holder.SetSoundParameters( 0, (glosnosc.left*(stalaSciszania)), 0, 0 );
+
+         break;
+
+      case 2:   // melodia
+         Group.Sprite_Holder.ChangePhase( 1, 2 );   
+         Group.Sprite_Holder.ChangePhase( 2, 1 );   // mruganie
+         Group.Sprite_Holder.ChangePhase( 3, 2 );
+
+         DisableScreen();
+
+         Text_Holder.GetTextOffsets( 0, &leftOffset, &upOffset );
+         Text_Holder.HideText( 0 );   // piosenka
+
+         Text_Holder.ShowText( 2 );   // melodia
+         Text_Holder.SetTextOffsets( 2, leftOffset, upOffset );
+   
+         EnableScreen();
+         ShowBuffer();
+
+            // piosenka
+         Text_Holder.PlaySynchroText( 2 );
+         Text_Holder.SetSoundParameters( 2, (glosnosc.left*(stalaSciszania)), 0, 0 );
+         break;
+
+      case 3:   // demo
+         Group.Sprite_Holder.ChangePhase( 1, 2 );   
+         Group.Sprite_Holder.ChangePhase( 2, 2 );
+         Group.Sprite_Holder.ChangePhase( 3, 1 );   // mruganie
+
+            // piosenka
+         Text_Holder.PlaySynchroText( 3 );
+         Text_Holder.SetSoundParameters( 3, (glosnosc.left*(stalaSciszania)), 0, 0 );
+         break;
+   }
+
+   akcja = nowaAkcja;
+}
+
+
+
+
+///////////////////////////////////////////////////////////////////////
+//
+//
+void OnKeyDown(UINT nChar)
+{
+	// Add your keyboard handler code here
+   Group.Sound_Holder.Stop(0);
+   SetTimer(0);
+
+      // Odgrywane jest demo - nic nie mozna robic na klawiaturze
+   if( akcja == 3 )
+      return;
+
+   if( nChar==keyDown ) return;
+   keyDown = nChar;
+
+   switch(nChar)
+   {                
+      case 109: // q - skrzypce 0 
+      case 77:
+         Muzyka( 0, 1 );
+         break;
+         
+      case 44: // w - skrzypce 1
+         Muzyka( 1, 1 );
+         break;    
+
+      case 46:  // e - skrzypce 2
+         Muzyka( 2, 1 );
+         break;                                              
+
+      case 47: // r - skrzypce 3
+         Muzyka( 3, 1 );
+         break;
+
+      case 107: // t - skrzypce 4
+      case 75:
+         Muzyka( 4, 1 );
+         break;
+
+      case 108: // y - skrzypce 5
+      case 76:
+         Muzyka( 5, 1 );
+         break;
+
+      case 59: // u - skrzypce 6
+         Muzyka( 6, 1 );
+         break;
+
+      case 39: // i - skrzypce 7
+         Muzyka( 7, 1 );
+         break;
+
+      case 120:  // tab - tupniecie
+      case 88:
+         Muzyka( 8, 1 );
+         break;
+
+      case 122: // spacja - instrument
+      case 90:
+         Muzyka( 9, 1 );
+         break;
+
+      case 97: // o - gwizd
+      case 65:
+         Muzyka( 10, 1 );
+         break;
+
+      case 115: // p - gwizd
+      case 83:
+         Muzyka( 11, 1 );
+         break;
+   }
+}
+
+
+
+void OnKeyUp(UINT nChar)
+{
+        //Add your command handler code here
+   keyDown = 0;
+}
+
+///////////////////////////////////////////////////////////////////////
+//   nrRuchu - wskazuje ktory ruch bedzie wykonany
+//      
+//
+// 0 - skrzypce1  - sound 0 
+// 1 - skrzypce2  - sound 1
+// 2 - skrzypce3  - sound 2
+// 3 - skrzypce4  - sound 3
+// 4 - skrzypce1  - sound 4 
+// 5 - skrzypce2  - sound 5
+// 6 - skrzypce3  - sound 6
+// 7 - skrzypce4  - sound 7
+// 8 - but        - sound 8, 9, 10
+// 9 - instrument - sound 11
+// 10 - gwizd     - sound 12
+// 11 - ryk       - sound 13
+// 
+void Muzyka( int nrRuchu, int dzwiek )
+{
+      // Jelis dzwiek dotyczy skrzypiec to 
+      // - nalezy ruszyc smyczkiem w przeciwym kierunku
+   if( nrRuchu < 8 )
+   {
+      Sound_Holder.PlayDSound( nrRuchu );
+      if( dzwiek == 0 )
+         Sound_Holder.SetPlayDSoundParameters( nrRuchu, -10000, 0, 0 );
+
+
+      Bitmap_Holder.HideBitmap(8);
+
+      if( smyczek )
+      {
+            // smyczek z prawej
+         Bitmap_Holder.HideBitmap(0);
+         smyczek = 0;
+      }
+      else
+      {
+         smyczek = 1;
+         Bitmap_Holder.ShowBitmap(0);
+      }
+   }
+
+
+   switch( nrRuchu )
+   {
+      case 0:   // skrzypce
+      case 1:
+      case 2:
+      case 3:
+      case 4:
+      case 5:
+      case 6:
+         Bitmap_Holder.ShowBitmap( nrRuchu+1 );
+
+         if( (biezaceSkrzypce>-1) && (biezaceSkrzypce!=nrRuchu) )
+            Bitmap_Holder.HideBitmap(biezaceSkrzypce+1);
+
+         biezaceSkrzypce = nrRuchu;
+         break;
+
+      case 7:
+         Bitmap_Holder.HideBitmap(biezaceSkrzypce+1);
+         break;
+
+      case 8:   // tupniecie
+         Bitmap_Holder.HideBitmap(0);
+         smyczek = 0;
+
+         Sprite_Holder.ChangePhase( 2, 1 );
+         int tupniecie = Random(8,10);
+         Sound_Holder.PlayDSound( tupniecie );
+         if( dzwiek == 0 )
+            Sound_Holder.SetPlayDSoundParameters( tupniecie, -10000, 0, 0 );
+         break;
+
+      case 9:
+         Bitmap_Holder.HideBitmap(8);
+         Bitmap_Holder.HideBitmap(0);
+         smyczek = 0;
+
+         Bitmap_Holder.HideBitmap(biezaceSkrzypce+1);
+         Sprite_Holder.ChangePhase( 0, 1 );
+         Sprite_Holder.ChangePhase( 1, 1 );
+         Sound_Holder.PlayDSound( 11 );
+         if( dzwiek == 0 )
+            Sound_Holder.SetPlayDSoundParameters( 11, -10000, 0, 0 );
+         break;
+
+      case 10:   // gwizd
+         Bitmap_Holder.HideBitmap(biezaceSkrzypce+1);
+         Bitmap_Holder.HideBitmap( 9 );   // jak gwizd to nie ryk
+         Sprite_Holder.ChangePhase( 0, 0 );
+         Bitmap_Holder.ShowBitmap( 8 );
+         Sound_Holder.PlayDSound( 12 );
+         if( dzwiek == 0 )
+            Sound_Holder.SetPlayDSoundParameters( 12, -10000, 0, 0 );
+         break;
+
+      case 11:   // ryk
+         Bitmap_Holder.HideBitmap( 8 ); // jak ryk to nie gwizd
+         Bitmap_Holder.ShowBitmap( 9 );
+         Sound_Holder.PlayDSound( 13 );
+         if( dzwiek == 0 )
+            Sound_Holder.SetPlayDSoundParameters( 13, -10000, 0, 0 );
+         break;
+   }
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////
+//
+//
+void Sound_Holder.EndPlaySound(int soundID)
+{
+   switch( soundID )
+   {
+      case 8:
+      case 9:
+      case 10:
+         Sprite_Holder.ChangePhase( 2, 0 );
+         break;
+
+      case 11:
+         Sprite_Holder.ChangePhase( 0, 0 );
+         Sprite_Holder.ChangePhase( 1, 0 );
+         break
+
+      case 12:
+         Bitmap_Holder.HideBitmap(8);
+         break;
+
+      case 13:
+         Bitmap_Holder.HideBitmap(9);
+         break;
+         
+      default:
+         break;
+   }
+}
+
+
+///////////////////////////////////////////////////////////////////////
+//
+//
+VOID HotSpot_Holder.LeftButtonClickOn(int rectID)
+{
+      // Jesli jest grane demo to nic nie rob.
+   if( akcja != 3 )
+      Muzyka( rectID, 1 );
+}
+
+
+///////////////////////////////////////////////////////////////////////
+//
+//
+void HotSpot_Holder.MouseMoveIn(int rectID)
+{
+      // Jesli jest grane demo to nic nie rob.
+   if( akcja != 3 )
+      SetCursor(1);
+}
+
+
+void HotSpot_Holder.MouseMoveOut(int rectID)
+{
+   SetCursor(0);
+}
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////
+//
+//
+void Text_Holder.EndOfSynchroText(int textID)
+{
+   UstawAktywnoscStrony( 0 );
+}
+
+
+/////////////////////////////////////////////////////////////////////
+//
+//
+void Text_Holder.ScrollTextUp(int textID)
+{
+   SetCursor (2);
+}
+
+void Text_Holder.ScrollTextDown(int textID)
+{
+   SetCursor(3);
+}
+
+
+
+///////////////////////////////////////////////////////////////////////
+//
+//
+void Text_Holder.EndScrollText(int textID)
+{
+   SetCursor(0);
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////
+//
+//
+void Text_Holder.MouseMoveIn(int textID)
+{
+      
+}
+
+void Text_Holder.MouseMoveOut(int textID)
+{
+   SetCursor(0);
+}
+
+
+
+
+/////////////////////////////////////////////////////////////////////////
+//
+//
+void Text_Holder.PlayMark(int textID,int markNo)
+{
+   if( textID == 3 )
+   {
+      if( maxRuchow > markNo )
+      {
+         Muzyka(demo[markNo], 0 );
+      }
+   }
+}
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////
+//
+//
+void Group.Sprite_Holder.MouseClickOnDown(int spriteID)
+{
+   switch( spriteID )
+   {
+      case 0:
+         Group.Sound_Holder.PlayDSound(1);
+         if( glosnosc.top )
+         {
+               // podglaszanie
+            glosnosc.left--;
+               
+            if( glosnosc.left <= 0 )
+               glosnosc.top = 0;
+         }
+         else
+         {
+               // sciszanie
+            glosnosc.left++;
+               
+            if( glosnosc.left >= 2 )
+               glosnosc.top = 1;
+         }
+
+         Group.Sprite_Holder.ChangePhase( 0, glosnosc.left );
+
+         switch( akcja )
+         {
+            case 1:
+               Text_Holder.SetSoundParameters( 0, glosnosc.left*(stalaSciszania), 0, 0 );
+               break;
+            case 2:
+               Text_Holder.SetSoundParameters( 2, glosnosc.left*(stalaSciszania), 0, 0 );
+               break;
+            case 3:
+               Text_Holder.SetSoundParameters( 3, glosnosc.left*(stalaSciszania), 0, 0 );
+               break;
+         }
+
+         break;
+
+      case 1:
+      case 2:
+      case 3:
+         if( akcja == 0 )
+         {
+            Group.Sound_Holder.PlayDSound(1);
+            UstawAktywnoscStrony( spriteID );
+         }
+         break;
+
+      case 4:   // stop
+         Group.Sound_Holder.PlayDSound(1);
+         Group.Sprite_Holder.ChangePhase( 4, 1 );
+         UstawAktywnoscStrony( 0 );
+         break;
+
+      case 5:   //klawiatura
+         Group.Sound_Holder.PlayDSound(1);
+         Group.Sprite_Holder.ChangePhase( 5, 1 );
+         MultiBitmap.ShowBitmap(0,0,0,0);
+         break;
+      case 7:   //toolbar
+         Group.Sound_Holder.PlayDSound(3);
+         Group.Sprite_Holder.ChangePhase(spriteID,1);   
+         break;
+      case 8:
+         Group.Sound_Holder.PlayDSound(4);
+         Group.Sprite_Holder.ChangePhase(spriteID,1);   
+         break;
+      case 9:
+      case 10:
+         Group.Sound_Holder.PlayDSound(5);
+         Group.Sprite_Holder.ChangePhase(spriteID,1);   
+         break;
+   }
+}
+
+
+void Group.Sprite_Holder.MouseClickOnUp(int spriteID)
+{
+   switch( spriteID )
+   {
+      case 4:   // stop
+         Group.Sprite_Holder.ChangePhase( 4, 0 );
+         break;
+
+      case 5:   //klawiatura
+         Group.Sprite_Holder.ChangePhase( 5, 0 );
+         MultiBitmap.HideBitmap(0);
+         break;
+      case 7:
+      case 8:
+      case 9:
+      case 10:
+         Group.Sprite_Holder.DisableTimers();
+
+         Group.Sprite_Holder.GotoXY(6,640,0);
+         Group.Sprite_Holder.GotoXY(7,721,329);
+         Group.Sprite_Holder.GotoXY(8,717,404);
+         Group.Sprite_Holder.GotoXY(9,704,14);
+         Group.Sprite_Holder.GotoXY(10,744,14);
+
+         Group.Sprite_Holder.SynchronizeTimers();
+         Group.Sprite_Holder.EnableTimers();
+         Group.Sound_Holder.PlayDSound(2);
+         toolbar=0;
+         Group.HotSpot_Holder.DisableHotSpot(1);
+         toolbarCase=spriteID;
+
+         return;
+   }
+
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+//
+//
+void Group.Sprite_Holder.MouseMoveIn(int spriteID)
+{
+   switch( spriteID )
+   {
+      case 1:
+      case 2:
+      case 3:
+         if( akcja != 0 ) return;
+         break;
+      case 6:
+         return;
+   }
+
+   SetCursor( 1 );
+}
+
+void Group.Sprite_Holder.MouseMoveOut(int spriteID)
+{
+   SetCursor( 0 );
+}
+
+ 
+
+
+//############################################################# T O O L B A R #######
+//#############################################################---------------#######
+void Group.HotSpot_Holder.MouseMoveIn(int rectID)
+{
+   if(rectID==0)
+   {
+      if(toolbar)   return;
+      Group.Sprite_Holder.DisableTimers();
+
+      Group.Sprite_Holder.GotoXY(6,480,0);
+      Group.Sprite_Holder.GotoXY(7,560,329);
+      Group.Sprite_Holder.GotoXY(8,557,404);
+      Group.Sprite_Holder.GotoXY(9,544,14);
+      Group.Sprite_Holder.GotoXY(10,584,14);
+
+      Group.Sprite_Holder.SynchronizeTimers();
+      Group.Sprite_Holder.EnableTimers();
+      Group.Sound_Holder.PlayDSound(2);
+      SetCursor(0);
+   }
+   else
+   {
+      if(toolbar)
+      {
+         Group.Sprite_Holder.DisableTimers();
+
+         Group.Sprite_Holder.GotoXY(6,640,0);
+         Group.Sprite_Holder.GotoXY(7,721,329);
+         Group.Sprite_Holder.GotoXY(8,717,404);
+         Group.Sprite_Holder.GotoXY(9,704,14);
+         Group.Sprite_Holder.GotoXY(10,744,14);
+
+         Group.Sprite_Holder.SynchronizeTimers();
+         Group.Sprite_Holder.EnableTimers();
+         Group.Sound_Holder.PlayDSound(2);
+         toolbar=0;
+      }
+      Group.HotSpot_Holder.DisableHotSpot(1);
+      toolbarCase=0;
+   }
+}
+
+void Group.Sprite_Holder.InPlace(int spriteID,int x,int y)
+{
+   if(spriteID==6)
+   {
+      if(x==480)
+      {
+         toolbar=1;
+         Group.HotSpot_Holder.EnableHotSpot(1);
+         SetCursor(0);
+      }
+      else
+      {
+         SetCursor(0);
+         Group.Sprite_Holder.ChangePhase(7,0);
+         Group.Sprite_Holder.ChangePhase(8,0);
+         Group.Sprite_Holder.ChangePhase(9,0);
+         Group.Sprite_Holder.ChangePhase(10,0);
+         switch(toolbarCase)
+         {
+            case 9:	//lewo
+               LoadPage("cuda_ps1.bdf");
+               break;
+            case 10:	//prawo
+               LoadPage("zosia_ps.bdf");
+               break;
+            case 7:   //do planszy glownej   
+               LoadPage( "taniec.bdf" );
+               break;
+            case 8:   //Plansza wyboru
+               LoadPage("Wyborw.bdf");
+               break;
+         }
+      }
+   }
+}
+//#############################################################
+//############################################################# 
+ 
+
+
+ 

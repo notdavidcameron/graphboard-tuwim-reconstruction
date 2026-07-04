@@ -1,0 +1,605 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\DYZIO.BDF",
+  "size": 2482195,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Wednesday, November 12, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    10
+  ],
+  "background_flag": 0,
+  "background_color_index": 0,
+  "palette_size": 1024,
+  "dib_size": 308184,
+  "component_list_offset": 309349,
+  "component_list_version": 1,
+  "component_count": 6,
+  "components": [
+    {
+      "index": 0,
+      "offset": 309357,
+      "clsid": "B64F3336-5368-11D0-B445-008048EB5D40",
+      "display_name": "Sprite_Holder",
+      "private_offset": 310891,
+      "private_size": 391664,
+      "embedded": []
+    },
+    {
+      "index": 1,
+      "offset": 702555,
+      "clsid": "DA768116-5341-11D0-B444-008048EB5D40",
+      "display_name": "HotSpot_Holder",
+      "private_offset": 703660,
+      "private_size": 524,
+      "embedded": []
+    },
+    {
+      "index": 2,
+      "offset": 704184,
+      "clsid": "2F3C5846-5413-11D0-B447-008048EB5D40",
+      "display_name": "Transparent_Video_Holder",
+      "private_offset": 705358,
+      "private_size": 471291,
+      "embedded": [
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\embedded\\02_Transparent_Video_Holder_000_000ac35a_board_video_audio.wav",
+          "offset": 705370,
+          "size": 132344,
+          "pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 3
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\animations\\02_Transparent_Video_Holder_000_000ac35a_board_video_90x75.gif",
+          "offset": 705370,
+          "size": 154481,
+          "frame_count": 20,
+          "width": 90,
+          "height": 75,
+          "transparent_index": 44,
+          "header_transparent_index": 84,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\embedded\\02_Transparent_Video_Holder_002_000eef2c_board_video_audio.wav",
+          "offset": 978732,
+          "size": 88244,
+          "pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 2
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\animations\\02_Transparent_Video_Holder_002_000eef2c_board_video_154x80.gif",
+          "offset": 978732,
+          "size": 112849,
+          "frame_count": 8,
+          "width": 154,
+          "height": 80,
+          "transparent_index": 85,
+          "header_transparent_index": 48,
+          "delay_centiseconds": 10
+        }
+      ],
+      "board_video_marker_offset": 705370,
+      "board_video_streams": [
+        {
+          "index": 0,
+          "offset": 705370,
+          "end_offset": 970444,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 90,
+          "video_height": 75,
+          "header_transparent_index": 84,
+          "frames_per_second": 10,
+          "frame_count": 20,
+          "header_record_count": 22,
+          "record_count": 23,
+          "audio_record_count": 3,
+          "video_record_count": 20,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\embedded\\02_Transparent_Video_Holder_000_000ac35a_board_video_audio.wav",
+          "audio_pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\animations\\02_Transparent_Video_Holder_000_000ac35a_board_video_90x75.gif",
+          "transparent_index": 44
+        },
+        {
+          "index": 1,
+          "offset": 970444,
+          "end_offset": 971700,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 90,
+          "video_height": 75,
+          "header_transparent_index": 84,
+          "frames_per_second": 10,
+          "frame_count": 20,
+          "header_record_count": 22,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 2,
+          "offset": 978732,
+          "end_offset": 1162785,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 154,
+          "video_height": 80,
+          "header_transparent_index": 48,
+          "frames_per_second": 10,
+          "frame_count": 8,
+          "header_record_count": 9,
+          "record_count": 10,
+          "audio_record_count": 2,
+          "video_record_count": 8,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\embedded\\02_Transparent_Video_Holder_002_000eef2c_board_video_audio.wav",
+          "audio_pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\animations\\02_Transparent_Video_Holder_002_000eef2c_board_video_154x80.gif",
+          "transparent_index": 85
+        },
+        {
+          "index": 3,
+          "offset": 1162785,
+          "end_offset": 1164041,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 154,
+          "video_height": 80,
+          "header_transparent_index": 48,
+          "frames_per_second": 10,
+          "frame_count": 8,
+          "header_record_count": 9,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "offset": 1176649,
+      "clsid": "0D8A5736-5337-11D0-B444-008048EB5D40",
+      "display_name": "Bitmap_Holder",
+      "private_offset": 1177781,
+      "private_size": 20648,
+      "embedded": []
+    },
+    {
+      "index": 4,
+      "offset": 1198429,
+      "clsid": "1720D306-6932-11D0-B468-008048EB5D40",
+      "display_name": "Sound_Holder",
+      "private_offset": 1199325,
+      "private_size": 1247554,
+      "embedded": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_000_00124ce9.wav",
+          "offset": 1199337,
+          "size": 11222,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_001_0012791f.wav",
+          "offset": 1210655,
+          "size": 469914,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_002_0019a519.wav",
+          "offset": 1680665,
+          "size": 50410,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_003_001a6a63.wav",
+          "offset": 1731171,
+          "size": 47988,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_004_001b2637.wav",
+          "offset": 1779255,
+          "size": 127068,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_005_001d16f3.wav",
+          "offset": 1906419,
+          "size": 164474,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_006_001f99cd.wav",
+          "offset": 2070989,
+          "size": 32914,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_007_00201abf.wav",
+          "offset": 2103999,
+          "size": 13586,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_008_00205031.wav",
+          "offset": 2117681,
+          "size": 329106,
+          "extension": ".wav"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "offset": 2446879,
+      "clsid": "AD45ADB6-5290-11D0-B442-008048EB5D40",
+      "display_name": "Text_Holder",
+      "private_offset": 2448505,
+      "private_size": 13173,
+      "embedded": []
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "dib",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\background.dib",
+      "size": 308184
+    },
+    {
+      "kind": "bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\background.bmp",
+      "size": 308198
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\script.txt",
+      "size": 20118
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\embedded\\02_Transparent_Video_Holder_000_000ac35a_board_video_audio.wav",
+      "offset": 705370,
+      "size": 132344,
+      "pcm_size": 132300,
+      "duration_seconds": 3.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 3
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\animations\\02_Transparent_Video_Holder_000_000ac35a_board_video_90x75.gif",
+      "offset": 705370,
+      "size": 154481,
+      "frame_count": 20,
+      "width": 90,
+      "height": 75,
+      "transparent_index": 44,
+      "header_transparent_index": 84,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\embedded\\02_Transparent_Video_Holder_002_000eef2c_board_video_audio.wav",
+      "offset": 978732,
+      "size": 88244,
+      "pcm_size": 88200,
+      "duration_seconds": 2.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 2
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\animations\\02_Transparent_Video_Holder_002_000eef2c_board_video_154x80.gif",
+      "offset": 978732,
+      "size": 112849,
+      "frame_count": 8,
+      "width": 154,
+      "height": 80,
+      "transparent_index": 85,
+      "header_transparent_index": 48,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_000_00124ce9.wav",
+      "size": 11222
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_001_0012791f.wav",
+      "size": 469914
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_002_0019a519.wav",
+      "size": 50410
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_003_001a6a63.wav",
+      "size": 47988
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_004_001b2637.wav",
+      "size": 127068
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_005_001d16f3.wav",
+      "size": 164474
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_006_001f99cd.wav",
+      "size": 32914
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_007_00201abf.wav",
+      "size": 13586
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_008_00205031.wav",
+      "size": 329106
+    }
+  ],
+  "script": {
+    "version_offset": 2461678,
+    "version": 1,
+    "string_prefix_offset": 2461682,
+    "text_offset": 2461685,
+    "text_length": 20118,
+    "text_end": 2481803,
+    "engine_state": {
+      "offset": 2481803,
+      "version": 2,
+      "block_count": 6,
+      "handler_offsets": {
+        "field_38": 2051,
+        "field_3c": 0,
+        "field_30": 0,
+        "field_34": 384
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 2481827,
+          "start_offset": 4840,
+          "duplicate_start_offset": 4840,
+          "case_count": 2,
+          "end_or_body_offset": 5052,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 4870
+            },
+            {
+              "value": 3,
+              "target_offset": 4951
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 2481863,
+          "start_offset": 6646,
+          "duplicate_start_offset": 6646,
+          "case_count": 3,
+          "end_or_body_offset": 8795,
+          "aux_offset": 7900,
+          "cases": [
+            {
+              "value": 12,
+              "target_offset": 6694
+            },
+            {
+              "value": 4,
+              "target_offset": 7620
+            },
+            {
+              "value": 13,
+              "target_offset": 7769
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "file_offset": 2481907,
+          "start_offset": 9844,
+          "duplicate_start_offset": 9844,
+          "case_count": 3,
+          "end_or_body_offset": 12035,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 9871
+            },
+            {
+              "value": 1,
+              "target_offset": 10486
+            },
+            {
+              "value": 2,
+              "target_offset": 11868
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "file_offset": 2481951,
+          "start_offset": 12129,
+          "duplicate_start_offset": 12129,
+          "case_count": 2,
+          "end_or_body_offset": 14506,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 12156
+            },
+            {
+              "value": 11,
+              "target_offset": 14341
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "file_offset": 2481987,
+          "start_offset": 12802,
+          "duplicate_start_offset": 12802,
+          "case_count": 8,
+          "end_or_body_offset": 14296,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 12853
+            },
+            {
+              "value": 3,
+              "target_offset": 12982
+            },
+            {
+              "value": 4,
+              "target_offset": 13118
+            },
+            {
+              "value": 5,
+              "target_offset": 13251
+            },
+            {
+              "value": 6,
+              "target_offset": 13383
+            },
+            {
+              "value": 7,
+              "target_offset": 13911
+            },
+            {
+              "value": 8,
+              "target_offset": 14049
+            },
+            {
+              "value": 9,
+              "target_offset": 14187
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "file_offset": 2482071,
+          "start_offset": 15217,
+          "duplicate_start_offset": 15217,
+          "case_count": 9,
+          "end_or_body_offset": 16060,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 15256
+            },
+            {
+              "value": 3,
+              "target_offset": 15288
+            },
+            {
+              "value": 4,
+              "target_offset": 15387
+            },
+            {
+              "value": 5,
+              "target_offset": 15484
+            },
+            {
+              "value": 6,
+              "target_offset": 15580
+            },
+            {
+              "value": 7,
+              "target_offset": 15684
+            },
+            {
+              "value": 8,
+              "target_offset": 15786
+            },
+            {
+              "value": 9,
+              "target_offset": 15889
+            },
+            {
+              "value": 10,
+              "target_offset": 15993
+            }
+          ]
+        }
+      ],
+      "table_count": 1,
+      "table_a": [
+        2534
+      ],
+      "table_b": [
+        8
+      ],
+      "versioned_tail": {
+        "field_44": 19885,
+        "field_48": 0,
+        "field_4c": 20016,
+        "field_50": 0
+      },
+      "end_offset": 2482191
+    }
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDAP1.BDF",
+  "size": 372308,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Tuesday, November 04, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    8
+  ],
+  "background_flag": 1,
+  "background_color_index": 0,
+  "palette_size": 1024,
+  "dib_size": 0,
+  "component_list_offset": 1165,
+  "component_list_version": 1,
+  "component_count": 2,
+  "components": [
+    {
+      "index": 0,
+      "offset": 1173,
+      "clsid": "196E7596-AB2B-11D0-B2A5-008048EB5D40",
+      "display_name": "Puzzle",
+      "private_offset": 2257,
+      "private_size": 252520,
+      "embedded": []
+    },
+    {
+      "index": 1,
+      "offset": 254777,
+      "clsid": "1720D306-6932-11D0-B468-008048EB5D40",
+      "display_name": "Sound_Holder",
+      "private_offset": 255673,
+      "private_size": 109562,
+      "embedded": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDAP1\\embedded\\01_Sound_Holder_000_0003e6c5.wav",
+          "offset": 255685,
+          "size": 6512,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDAP1\\embedded\\01_Sound_Holder_001_00040095.wav",
+          "offset": 262293,
+          "size": 5600,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDAP1\\embedded\\01_Sound_Holder_002_000416d5.wav",
+          "offset": 267989,
+          "size": 3668,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDAP1\\embedded\\01_Sound_Holder_003_00042589.wav",
+          "offset": 271753,
+          "size": 93390,
+          "extension": ".wav"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDAP1\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDAP1\\script.txt",
+      "size": 6906
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDAP1\\embedded\\01_Sound_Holder_000_0003e6c5.wav",
+      "size": 6512
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDAP1\\embedded\\01_Sound_Holder_001_00040095.wav",
+      "size": 5600
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDAP1\\embedded\\01_Sound_Holder_002_000416d5.wav",
+      "size": 3668
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDAP1\\embedded\\01_Sound_Holder_003_00042589.wav",
+      "size": 93390
+    }
+  ],
+  "script": {
+    "version_offset": 365235,
+    "version": 1,
+    "string_prefix_offset": 365239,
+    "text_offset": 365242,
+    "text_length": 6906,
+    "text_end": 372148,
+    "engine_state": {
+      "offset": 372148,
+      "version": 2,
+      "block_count": 2,
+      "handler_offsets": {
+        "field_38": 879,
+        "field_3c": 1098,
+        "field_30": 0,
+        "field_34": 341
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 372172,
+          "start_offset": 3402,
+          "duplicate_start_offset": 3402,
+          "case_count": 4,
+          "end_or_body_offset": 4071,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 1,
+              "target_offset": 3460
+            },
+            {
+              "value": 2,
+              "target_offset": 3598
+            },
+            {
+              "value": 3,
+              "target_offset": 3833
+            },
+            {
+              "value": 4,
+              "target_offset": 3971
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 372224,
+          "start_offset": 4461,
+          "duplicate_start_offset": 4461,
+          "case_count": 5,
+          "end_or_body_offset": 5200,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 1,
+              "target_offset": 4506
+            },
+            {
+              "value": 2,
+              "target_offset": 4600
+            },
+            {
+              "value": 3,
+              "target_offset": 4694
+            },
+            {
+              "value": 4,
+              "target_offset": 4787
+            },
+            {
+              "value": 5,
+              "target_offset": 4863
+            }
+          ]
+        }
+      ],
+      "table_count": 0,
+      "table_a": [],
+      "table_b": [],
+      "versioned_tail": {
+        "field_44": 748,
+        "field_48": 0,
+        "field_4c": 6799,
+        "field_50": 0
+      },
+      "end_offset": 372304
+    }
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDA_T.BDF",
+  "size": 459877,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Monday, November 17, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    9
+  ],
+  "background_flag": 1,
+  "background_color_index": 0,
+  "palette_size": 1024,
+  "dib_size": 0,
+  "component_list_offset": 1165,
+  "component_list_version": 1,
+  "component_count": 4,
+  "components": [
+    {
+      "index": 0,
+      "offset": 1173,
+      "clsid": "DA768116-5341-11D0-B444-008048EB5D40",
+      "display_name": "HotSpot_Holder",
+      "private_offset": 2278,
+      "private_size": 726,
+      "embedded": []
+    },
+    {
+      "index": 1,
+      "offset": 3004,
+      "clsid": "0D8A5736-5337-11D0-B444-008048EB5D40",
+      "display_name": "Bitmap_Holder",
+      "private_offset": 4136,
+      "private_size": 388144,
+      "embedded": []
+    },
+    {
+      "index": 2,
+      "offset": 392280,
+      "clsid": "B64F3336-5368-11D0-B445-008048EB5D40",
+      "display_name": "Sprite_Holder",
+      "private_offset": 393814,
+      "private_size": 55328,
+      "embedded": []
+    },
+    {
+      "index": 3,
+      "offset": 449142,
+      "clsid": "B2CDC8DE-5359-11D0-B445-008048EB5D40",
+      "display_name": "Video_Holder",
+      "private_offset": 450118,
+      "private_size": 844,
+      "embedded": []
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_T\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_T\\script.txt",
+      "size": 8592
+    }
+  ],
+  "script": {
+    "version_offset": 450962,
+    "version": 1,
+    "string_prefix_offset": 450966,
+    "text_offset": 450969,
+    "text_length": 8592,
+    "text_end": 459561,
+    "engine_state": {
+      "offset": 459561,
+      "version": 2,
+      "block_count": 5,
+      "handler_offsets": {
+        "field_38": 739,
+        "field_3c": 0,
+        "field_30": 1015,
+        "field_34": 341
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 459585,
+          "start_offset": 2292,
+          "duplicate_start_offset": 2292,
+          "case_count": 8,
+          "end_or_body_offset": 4156,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 2329
+            },
+            {
+              "value": 1,
+              "target_offset": 2497
+            },
+            {
+              "value": 2,
+              "target_offset": 2737
+            },
+            {
+              "value": 3,
+              "target_offset": 2993
+            },
+            {
+              "value": 4,
+              "target_offset": 3267
+            },
+            {
+              "value": 5,
+              "target_offset": 3530
+            },
+            {
+              "value": 6,
+              "target_offset": 3795
+            },
+            {
+              "value": 7,
+              "target_offset": 4056
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 459669,
+          "start_offset": 4316,
+          "duplicate_start_offset": 4316,
+          "case_count": 2,
+          "end_or_body_offset": 4578,
+          "aux_offset": 4512,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 4353
+            },
+            {
+              "value": 7,
+              "target_offset": 4477
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "file_offset": 459705,
+          "start_offset": 5084,
+          "duplicate_start_offset": 5084,
+          "case_count": 3,
+          "end_or_body_offset": 5324,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 5111
+            },
+            {
+              "value": 4,
+              "target_offset": 5250
+            },
+            {
+              "value": 5,
+              "target_offset": 5268
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "file_offset": 459749,
+          "start_offset": 7113,
+          "duplicate_start_offset": 7113,
+          "case_count": 4,
+          "end_or_body_offset": 7490,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 3,
+              "target_offset": 7153
+            },
+            {
+              "value": 4,
+              "target_offset": 7236
+            },
+            {
+              "value": 1,
+              "target_offset": 7339
+            },
+            {
+              "value": 2,
+              "target_offset": 7433
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "file_offset": 459801,
+          "start_offset": 7631,
+          "duplicate_start_offset": 7631,
+          "case_count": 4,
+          "end_or_body_offset": 7920,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 1,
+              "target_offset": 7676
+            },
+            {
+              "value": 2,
+              "target_offset": 7771
+            },
+            {
+              "value": 3,
+              "target_offset": 7844
+            },
+            {
+              "value": 4,
+              "target_offset": 7862
+            }
+          ]
+        }
+      ],
+      "table_count": 0,
+      "table_a": [],
+      "table_b": [],
+      "versioned_tail": {
+        "field_44": 1483,
+        "field_48": 0,
+        "field_4c": 1268,
+        "field_50": 0
+      },
+      "end_offset": 459873
+    }
+  }
+}

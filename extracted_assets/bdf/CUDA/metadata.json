@@ -1,0 +1,1170 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDA.BDF",
+  "size": 7945974,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Thursday, November 06, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    9
+  ],
+  "background_flag": 0,
+  "background_color_index": 0,
+  "palette_size": 1024,
+  "dib_size": 308180,
+  "component_list_offset": 309345,
+  "component_list_version": 1,
+  "component_count": 5,
+  "components": [
+    {
+      "index": 0,
+      "offset": 309353,
+      "clsid": "B64F3336-5368-11D0-B445-008048EB5D40",
+      "display_name": "Sprite_Holder",
+      "private_offset": 310887,
+      "private_size": 180596,
+      "embedded": []
+    },
+    {
+      "index": 1,
+      "offset": 491483,
+      "clsid": "DA768116-5341-11D0-B444-008048EB5D40",
+      "display_name": "HotSpot_Holder",
+      "private_offset": 492588,
+      "private_size": 553,
+      "embedded": []
+    },
+    {
+      "index": 2,
+      "offset": 493141,
+      "clsid": "1720D306-6932-11D0-B468-008048EB5D40",
+      "display_name": "Sound_Holder",
+      "private_offset": 494037,
+      "private_size": 687264,
+      "embedded": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_000_000789e1.wav",
+          "offset": 494049,
+          "size": 300916,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_001_000c21b5.wav",
+          "offset": 795061,
+          "size": 79330,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_002_000d57f7.wav",
+          "offset": 874487,
+          "size": 8632,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_003_000d7a0f.wav",
+          "offset": 883215,
+          "size": 14036,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_004_000db143.wav",
+          "offset": 897347,
+          "size": 22992,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_005_000e0b73.wav",
+          "offset": 920435,
+          "size": 93390,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_006_000f78a1.wav",
+          "offset": 1013921,
+          "size": 32616,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_007_000ff869.wav",
+          "offset": 1046633,
+          "size": 134576,
+          "extension": ".wav"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "offset": 1181301,
+      "clsid": "2F3C5846-5413-11D0-B447-008048EB5D40",
+      "display_name": "Transparent_Video_Holder",
+      "private_offset": 1182475,
+      "private_size": 6725478,
+      "embedded": [
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_000_00120b17_board_video_audio.wav",
+          "offset": 1182487,
+          "size": 705644,
+          "pcm_size": 705600,
+          "duration_seconds": 16.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 16
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_000_00120b17_board_video_640x480.gif",
+          "offset": 1182487,
+          "size": 49169334,
+          "frame_count": 141,
+          "width": 640,
+          "height": 480,
+          "transparent_index": 0,
+          "header_transparent_index": 0,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_002_003380c1_board_video_audio.wav",
+          "offset": 3375297,
+          "size": 176444,
+          "pcm_size": 176400,
+          "duration_seconds": 4.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 4
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_002_003380c1_board_video_64x87.gif",
+          "offset": 3375297,
+          "size": 133983,
+          "frame_count": 21,
+          "width": 64,
+          "height": 87,
+          "transparent_index": 143,
+          "header_transparent_index": 143,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_004_0037ec21_board_video_audio.wav",
+          "offset": 3664929,
+          "size": 220544,
+          "pcm_size": 220500,
+          "duration_seconds": 5.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 5
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_004_0037ec21_board_video_175x171.gif",
+          "offset": 3664929,
+          "size": 1360361,
+          "frame_count": 40,
+          "width": 175,
+          "height": 171,
+          "transparent_index": 180,
+          "header_transparent_index": 180,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_006_00482239_board_video_audio.wav",
+          "offset": 4727353,
+          "size": 176444,
+          "pcm_size": 176400,
+          "duration_seconds": 4.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 4
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_006_00482239_board_video_214x200.gif",
+          "offset": 4727353,
+          "size": 1313055,
+          "frame_count": 27,
+          "width": 214,
+          "height": 200,
+          "transparent_index": 180,
+          "header_transparent_index": 180,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_008_00545e36_board_video_audio.wav",
+          "offset": 5529142,
+          "size": 176444,
+          "pcm_size": 176400,
+          "duration_seconds": 4.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 4
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_008_00545e36_board_video_436x253.gif",
+          "offset": 5529142,
+          "size": 3131526,
+          "frame_count": 25,
+          "width": 436,
+          "height": 253,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_010_006363ab_board_video_audio.wav",
+          "offset": 6513579,
+          "size": 132344,
+          "pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 3
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_010_006363ab_board_video_56x49.gif",
+          "offset": 6513579,
+          "size": 44719,
+          "frame_count": 14,
+          "width": 56,
+          "height": 49,
+          "transparent_index": 128,
+          "header_transparent_index": 128,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_012_0065d2c1_board_video_audio.wav",
+          "offset": 6673089,
+          "size": 308744,
+          "pcm_size": 308700,
+          "duration_seconds": 7.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 7
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_012_0065d2c1_board_video_625x425.gif",
+          "offset": 6673089,
+          "size": 9348014,
+          "frame_count": 31,
+          "width": 625,
+          "height": 425,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        }
+      ],
+      "board_video_marker_offset": 1182487,
+      "board_video_streams": [
+        {
+          "index": 0,
+          "offset": 1182487,
+          "end_offset": 3066709,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 640,
+          "video_height": 480,
+          "header_transparent_index": 0,
+          "frames_per_second": 10,
+          "frame_count": 141,
+          "header_record_count": 156,
+          "record_count": 157,
+          "audio_record_count": 16,
+          "video_record_count": 141,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_000_00120b17_board_video_audio.wav",
+          "audio_pcm_size": 705600,
+          "duration_seconds": 16.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_000_00120b17_board_video_640x480.gif",
+          "transparent_index": 0
+        },
+        {
+          "index": 1,
+          "offset": 3066709,
+          "end_offset": 3067965,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 640,
+          "video_height": 480,
+          "header_transparent_index": 0,
+          "frames_per_second": 10,
+          "frame_count": 141,
+          "header_record_count": 156,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 2,
+          "offset": 3375297,
+          "end_offset": 3657973,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 64,
+          "video_height": 87,
+          "header_transparent_index": 143,
+          "frames_per_second": 10,
+          "frame_count": 21,
+          "header_record_count": 24,
+          "record_count": 25,
+          "audio_record_count": 4,
+          "video_record_count": 21,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_002_003380c1_board_video_audio.wav",
+          "audio_pcm_size": 176400,
+          "duration_seconds": 4.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_002_003380c1_board_video_64x87.gif",
+          "transparent_index": 143
+        },
+        {
+          "index": 3,
+          "offset": 3657973,
+          "end_offset": 3659229,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 64,
+          "video_height": 87,
+          "header_transparent_index": 143,
+          "frames_per_second": 10,
+          "frame_count": 21,
+          "header_record_count": 24,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 4,
+          "offset": 3664929,
+          "end_offset": 4695869,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 175,
+          "video_height": 171,
+          "header_transparent_index": 180,
+          "frames_per_second": 10,
+          "frame_count": 40,
+          "header_record_count": 44,
+          "record_count": 45,
+          "audio_record_count": 5,
+          "video_record_count": 40,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_004_0037ec21_board_video_audio.wav",
+          "audio_pcm_size": 220500,
+          "duration_seconds": 5.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_004_0037ec21_board_video_175x171.gif",
+          "transparent_index": 180
+        },
+        {
+          "index": 5,
+          "offset": 4695869,
+          "end_offset": 4697125,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 175,
+          "video_height": 171,
+          "header_transparent_index": 180,
+          "frames_per_second": 10,
+          "frame_count": 40,
+          "header_record_count": 44,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 6,
+          "offset": 4727353,
+          "end_offset": 5484554,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 214,
+          "video_height": 200,
+          "header_transparent_index": 180,
+          "frames_per_second": 10,
+          "frame_count": 27,
+          "header_record_count": 30,
+          "record_count": 31,
+          "audio_record_count": 4,
+          "video_record_count": 27,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_006_00482239_board_video_audio.wav",
+          "audio_pcm_size": 176400,
+          "duration_seconds": 4.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_006_00482239_board_video_214x200.gif",
+          "transparent_index": 180
+        },
+        {
+          "index": 7,
+          "offset": 5484554,
+          "end_offset": 5485810,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 214,
+          "video_height": 200,
+          "header_transparent_index": 180,
+          "frames_per_second": 10,
+          "frame_count": 27,
+          "header_record_count": 30,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 8,
+          "offset": 5529142,
+          "end_offset": 6401883,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 436,
+          "video_height": 253,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 25,
+          "header_record_count": 28,
+          "record_count": 29,
+          "audio_record_count": 4,
+          "video_record_count": 25,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_008_00545e36_board_video_audio.wav",
+          "audio_pcm_size": 176400,
+          "duration_seconds": 4.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_008_00545e36_board_video_436x253.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 9,
+          "offset": 6401883,
+          "end_offset": 6403139,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 436,
+          "video_height": 253,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 25,
+          "header_record_count": 28,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 10,
+          "offset": 6513579,
+          "end_offset": 6668957,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 56,
+          "video_height": 49,
+          "header_transparent_index": 128,
+          "frames_per_second": 10,
+          "frame_count": 14,
+          "header_record_count": 16,
+          "record_count": 17,
+          "audio_record_count": 3,
+          "video_record_count": 14,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_010_006363ab_board_video_audio.wav",
+          "audio_pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_010_006363ab_board_video_56x49.gif",
+          "transparent_index": 128
+        },
+        {
+          "index": 11,
+          "offset": 6668957,
+          "end_offset": 6670213,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 56,
+          "video_height": 49,
+          "header_transparent_index": 128,
+          "frames_per_second": 10,
+          "frame_count": 14,
+          "header_record_count": 16,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 12,
+          "offset": 6673089,
+          "end_offset": 7639669,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 625,
+          "video_height": 425,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 31,
+          "header_record_count": 37,
+          "record_count": 38,
+          "audio_record_count": 7,
+          "video_record_count": 31,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_012_0065d2c1_board_video_audio.wav",
+          "audio_pcm_size": 308700,
+          "duration_seconds": 7.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_012_0065d2c1_board_video_625x425.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 13,
+          "offset": 7639669,
+          "end_offset": 7640925,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 625,
+          "video_height": 425,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 31,
+          "header_record_count": 37,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "offset": 7907953,
+      "clsid": "AD45ADB6-5290-11D0-B442-008048EB5D40",
+      "display_name": "Text_Holder",
+      "private_offset": 7909579,
+      "private_size": 14512,
+      "embedded": []
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "dib",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\background.dib",
+      "size": 308180
+    },
+    {
+      "kind": "bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\background.bmp",
+      "size": 308194
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\script.txt",
+      "size": 21224
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_000_000789e1.wav",
+      "size": 300916
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_001_000c21b5.wav",
+      "size": 79330
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_002_000d57f7.wav",
+      "size": 8632
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_003_000d7a0f.wav",
+      "size": 14036
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_004_000db143.wav",
+      "size": 22992
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_005_000e0b73.wav",
+      "size": 93390
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_006_000f78a1.wav",
+      "size": 32616
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_007_000ff869.wav",
+      "size": 134576
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_000_00120b17_board_video_audio.wav",
+      "offset": 1182487,
+      "size": 705644,
+      "pcm_size": 705600,
+      "duration_seconds": 16.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 16
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_000_00120b17_board_video_640x480.gif",
+      "offset": 1182487,
+      "size": 49169334,
+      "frame_count": 141,
+      "width": 640,
+      "height": 480,
+      "transparent_index": 0,
+      "header_transparent_index": 0,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_002_003380c1_board_video_audio.wav",
+      "offset": 3375297,
+      "size": 176444,
+      "pcm_size": 176400,
+      "duration_seconds": 4.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 4
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_002_003380c1_board_video_64x87.gif",
+      "offset": 3375297,
+      "size": 133983,
+      "frame_count": 21,
+      "width": 64,
+      "height": 87,
+      "transparent_index": 143,
+      "header_transparent_index": 143,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_004_0037ec21_board_video_audio.wav",
+      "offset": 3664929,
+      "size": 220544,
+      "pcm_size": 220500,
+      "duration_seconds": 5.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 5
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_004_0037ec21_board_video_175x171.gif",
+      "offset": 3664929,
+      "size": 1360361,
+      "frame_count": 40,
+      "width": 175,
+      "height": 171,
+      "transparent_index": 180,
+      "header_transparent_index": 180,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_006_00482239_board_video_audio.wav",
+      "offset": 4727353,
+      "size": 176444,
+      "pcm_size": 176400,
+      "duration_seconds": 4.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 4
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_006_00482239_board_video_214x200.gif",
+      "offset": 4727353,
+      "size": 1313055,
+      "frame_count": 27,
+      "width": 214,
+      "height": 200,
+      "transparent_index": 180,
+      "header_transparent_index": 180,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_008_00545e36_board_video_audio.wav",
+      "offset": 5529142,
+      "size": 176444,
+      "pcm_size": 176400,
+      "duration_seconds": 4.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 4
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_008_00545e36_board_video_436x253.gif",
+      "offset": 5529142,
+      "size": 3131526,
+      "frame_count": 25,
+      "width": 436,
+      "height": 253,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_010_006363ab_board_video_audio.wav",
+      "offset": 6513579,
+      "size": 132344,
+      "pcm_size": 132300,
+      "duration_seconds": 3.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 3
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_010_006363ab_board_video_56x49.gif",
+      "offset": 6513579,
+      "size": 44719,
+      "frame_count": 14,
+      "width": 56,
+      "height": 49,
+      "transparent_index": 128,
+      "header_transparent_index": 128,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_012_0065d2c1_board_video_audio.wav",
+      "offset": 6673089,
+      "size": 308744,
+      "pcm_size": 308700,
+      "duration_seconds": 7.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 7
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_012_0065d2c1_board_video_625x425.gif",
+      "offset": 6673089,
+      "size": 9348014,
+      "frame_count": 31,
+      "width": 625,
+      "height": 425,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    }
+  ],
+  "script": {
+    "version_offset": 7924091,
+    "version": 1,
+    "string_prefix_offset": 7924095,
+    "text_offset": 7924098,
+    "text_length": 21224,
+    "text_end": 7945322,
+    "engine_state": {
+      "offset": 7945322,
+      "version": 2,
+      "block_count": 9,
+      "handler_offsets": {
+        "field_38": 6240,
+        "field_3c": 0,
+        "field_30": 0,
+        "field_34": 384
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 7945346,
+          "start_offset": 2648,
+          "duplicate_start_offset": 2648,
+          "case_count": 4,
+          "end_or_body_offset": 3286,
+          "aux_offset": 3268,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 2675
+            },
+            {
+              "value": 1,
+              "target_offset": 2773
+            },
+            {
+              "value": 3,
+              "target_offset": 3075
+            },
+            {
+              "value": 4,
+              "target_offset": 3173
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 7945398,
+          "start_offset": 3600,
+          "duplicate_start_offset": 3600,
+          "case_count": 5,
+          "end_or_body_offset": 4384,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 3627
+            },
+            {
+              "value": 1,
+              "target_offset": 3778
+            },
+            {
+              "value": 2,
+              "target_offset": 3927
+            },
+            {
+              "value": 3,
+              "target_offset": 4085
+            },
+            {
+              "value": 4,
+              "target_offset": 4244
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "file_offset": 7945458,
+          "start_offset": 6869,
+          "duplicate_start_offset": 6869,
+          "case_count": 5,
+          "end_or_body_offset": 7453,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 6914
+            },
+            {
+              "value": 1,
+              "target_offset": 7026
+            },
+            {
+              "value": 2,
+              "target_offset": 7138
+            },
+            {
+              "value": 3,
+              "target_offset": 7249
+            },
+            {
+              "value": 4,
+              "target_offset": 7360
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "file_offset": 7945518,
+          "start_offset": 7923,
+          "duplicate_start_offset": 7923,
+          "case_count": 5,
+          "end_or_body_offset": 8344,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 7966
+            },
+            {
+              "value": 1,
+              "target_offset": 8045
+            },
+            {
+              "value": 2,
+              "target_offset": 8125
+            },
+            {
+              "value": 3,
+              "target_offset": 8204
+            },
+            {
+              "value": 4,
+              "target_offset": 8284
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "file_offset": 7945578,
+          "start_offset": 9017,
+          "duplicate_start_offset": 9017,
+          "case_count": 5,
+          "end_or_body_offset": 9764,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 9050
+            },
+            {
+              "value": 1,
+              "target_offset": 9197
+            },
+            {
+              "value": 2,
+              "target_offset": 9344
+            },
+            {
+              "value": 3,
+              "target_offset": 9490
+            },
+            {
+              "value": 4,
+              "target_offset": 9636
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "file_offset": 7945638,
+          "start_offset": 10025,
+          "duplicate_start_offset": 10025,
+          "case_count": 3,
+          "end_or_body_offset": 12420,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 10052
+            },
+            {
+              "value": 1,
+              "target_offset": 10763
+            },
+            {
+              "value": 2,
+              "target_offset": 12254
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "file_offset": 7945682,
+          "start_offset": 12514,
+          "duplicate_start_offset": 12514,
+          "case_count": 2,
+          "end_or_body_offset": 15428,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 12541
+            },
+            {
+              "value": 4,
+              "target_offset": 15263
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "file_offset": 7945718,
+          "start_offset": 13292,
+          "duplicate_start_offset": 13292,
+          "case_count": 11,
+          "end_or_body_offset": 15219,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 1,
+              "target_offset": 13349
+            },
+            {
+              "value": 2,
+              "target_offset": 13493
+            },
+            {
+              "value": 3,
+              "target_offset": 13638
+            },
+            {
+              "value": 5,
+              "target_offset": 13782
+            },
+            {
+              "value": 7,
+              "target_offset": 13927
+            },
+            {
+              "value": 9,
+              "target_offset": 14072
+            },
+            {
+              "value": 6,
+              "target_offset": 14215
+            },
+            {
+              "value": 12,
+              "target_offset": 14777
+            },
+            {
+              "value": 8,
+              "target_offset": 14804
+            },
+            {
+              "value": 10,
+              "target_offset": 14955
+            },
+            {
+              "value": 11,
+              "target_offset": 15105
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "file_offset": 7945826,
+          "start_offset": 16136,
+          "duplicate_start_offset": 16136,
+          "case_count": 11,
+          "end_or_body_offset": 17094,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 1,
+              "target_offset": 16175
+            },
+            {
+              "value": 2,
+              "target_offset": 16207
+            },
+            {
+              "value": 3,
+              "target_offset": 16306
+            },
+            {
+              "value": 5,
+              "target_offset": 16403
+            },
+            {
+              "value": 6,
+              "target_offset": 16499
+            },
+            {
+              "value": 12,
+              "target_offset": 16601
+            },
+            {
+              "value": 8,
+              "target_offset": 16622
+            },
+            {
+              "value": 10,
+              "target_offset": 16725
+            },
+            {
+              "value": 11,
+              "target_offset": 16829
+            },
+            {
+              "value": 7,
+              "target_offset": 16929
+            },
+            {
+              "value": 9,
+              "target_offset": 17026
+            }
+          ]
+        }
+      ],
+      "table_count": 2,
+      "table_a": [
+        1130,
+        4394
+      ],
+      "table_b": [
+        8,
+        8
+      ],
+      "versioned_tail": {
+        "field_44": 20993,
+        "field_48": 0,
+        "field_4c": 21124,
+        "field_50": 0
+      },
+      "end_offset": 7945970
+    }
+  }
+}

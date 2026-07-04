@@ -1,0 +1,357 @@
+//###########################################################################
+//Script code
+//###########################################################################
+
+
+OnOpenPage()
+{
+	// Add your component and variables initialization code here
+	// WARNING: All variables definied on this function are global for this page
+   if(IsProject()==0)   
+   {
+      CString parentWnd;
+      parentWnd.SetString("mich0.bdf");
+      int global4;
+
+   }
+   global4=972;
+
+   // ID dzwiekow w grupie
+   // 0 - pomoc
+   // 1 - prawidlowo
+   // 2 - nieprawidlowo
+   // 3 - wszystkie prawidlowo
+   // 4 - wszystkie blednie
+
+
+   int roznice[10];
+   int blad = 0;
+   int poprawnie = 0;
+
+
+   Sprite_Holder.MoveTo( 1, 439, 315 );
+   Sprite_Holder.MoveTo( 2, 173, 282 );
+   Sprite_Holder.MoveTo( 3, 440, 243 );
+   Sprite_Holder.MoveTo( 4, 288, 194 );
+   Sprite_Holder.MoveTo( 5, 540, 67 );
+   Sprite_Holder.MoveTo( 6, 268, 0 );
+   Sprite_Holder.MoveTo( 7, 107, 244 );
+   Sprite_Holder.MoveTo( 8, 207, 222 );
+   Sprite_Holder.MoveTo( 9, 316, 372 );
+   Sprite_Holder.MoveTo( 10, 308, 280 );
+   Sprite_Holder.MoveTo( 11, 439, 315 );
+   Sprite_Holder.MoveTo( 12, 173, 282 );
+   Sprite_Holder.MoveTo( 13, 440, 243 );
+   Sprite_Holder.MoveTo( 14, 288, 194 );
+   Sprite_Holder.MoveTo( 15, 540, 67 );
+   Sprite_Holder.MoveTo( 16, 268, 0 );
+   Sprite_Holder.MoveTo( 17, 107, 244 );
+   Sprite_Holder.MoveTo( 18, 207, 222 );
+   Sprite_Holder.MoveTo( 19, 316, 372 );
+   Sprite_Holder.MoveTo( 20, 308, 280 );
+
+
+   LoadGroup("gr_czym.grp");
+
+   Group.Sound_Holder.PlayDSound(10);
+
+   int toolbar=0;
+   int toolbarCase=0;
+   Group.HotSpot_Holder.DisableHotSpot(12);
+
+   SetCursor(1);
+   //SetTimer( 5000 );
+   FadeScreen( 1, 1000 );
+}
+
+
+void OnClosePage(void)
+{
+	// Add your close page handler code here
+   FadeScreen(0,1000);
+}
+
+
+ 
+/////////////////////////////////////////////////////////////////////
+//
+// 
+void OnTimer(void)
+{
+        //Add your command handler code here
+   SetTimer(0);
+   Group.Sound_Holder.PlayDSound(0);
+}
+ 
+
+
+///////////////////////////////////////////////////////////////////
+//
+//
+void OnLButtonDown(int x,int y)
+{
+        //Add your command handler code here
+   SetTimer(0);
+   Group.Sound_Holder.Stop(0);
+}
+ 
+
+
+/////////////////////////////////////////////////////////////////
+//
+//
+void OnRButtonDown(int x,int y)
+{
+        //Add your command handler code here
+   SetTimer(0);
+   Group.Sound_Holder.PlayDSound(0);
+}
+ 
+
+
+
+
+
+void Group.HotSpot_Holder.MouseMoveIn(int rectID)
+{
+   switch( rectID )
+   {
+      case 0:   // wysuniecie poprawnej strony
+         SetCursor(0);
+         SetTimer(0);
+         Group.Sound_Holder.Stop(0);
+
+         Sprite_Holder.GotoXY( 0, 40, 0 );
+         Group.Sound_Holder.Stop(9);
+         Group.Sound_Holder.PlayDSound(8);
+
+         break;
+      case 11:   //wysun toolbar
+         Group.Sprite_Holder.DisableTimers();
+
+         Group.Sprite_Holder.GotoXY(15,480,0);
+         Group.Sprite_Holder.GotoXY(16,560,329);
+         Group.Sprite_Holder.GotoXY(17,557,404);
+         Group.Sprite_Holder.GotoXY(18,544,14);
+         Group.Sprite_Holder.GotoXY(19,584,14);
+
+         Group.Sprite_Holder.SynchronizeTimers();
+         Group.Sprite_Holder.EnableTimers();
+         Group.Sound_Holder.PlayDSound(5);
+         SetCursor(0);
+         break;
+      case 12:
+         SetCursor(1);
+         if(toolbar)
+         {
+            Group.Sprite_Holder.DisableTimers();
+
+            Group.Sprite_Holder.GotoXY(15,640,0);
+            Group.Sprite_Holder.GotoXY(16,721,329);
+            Group.Sprite_Holder.GotoXY(17,717,404);
+            Group.Sprite_Holder.GotoXY(18,704,14);
+            Group.Sprite_Holder.GotoXY(19,744,14);
+
+            Group.Sprite_Holder.SynchronizeTimers();
+            Group.Sprite_Holder.EnableTimers();
+            Group.Sound_Holder.PlayDSound(5);
+            toolbar=0;
+         }
+         Group.HotSpot_Holder.DisableHotSpot(12);
+         break;
+   }
+}
+
+ 
+void Group.HotSpot_Holder.MouseMoveOut(int rectID)
+{
+   switch( rectID )
+   {
+      case 0:   // wsuniecie poprawnej strony
+         Sprite_Holder.GotoXY( 0, 40, -420 );
+         Group.Sound_Holder.PlayDSound(8);
+         break;
+   }
+}
+
+ 
+
+/////////////////////////////////////////////////////////////////
+//
+//
+void Sprite_Holder.MouseClickOnDown(int spriteID)
+{
+   if( (spriteID >= 1) && (spriteID <= 10) )
+   {
+      int sprite = spriteID-1;
+      if( roznice[sprite] == 0 )
+      {
+         roznice[sprite]=1;
+         Group.Sound_Holder.PlayDSound(1);
+         Sprite_Holder.ShowSprite(spriteID+10);
+         Sprite_Holder.HideSprite(spriteID);
+
+         //Sprite_Holder.ChangePhase( spriteID, 1 );
+
+         Group.Sprite_Holder.ChangePhase( poprawnie, 1 );
+         poprawnie++;
+
+         if( poprawnie >= 10 )
+         {
+            Group.Sound_Holder.PlayDSound(3);
+         }
+      }
+      
+   }
+}
+
+ 
+
+///////////////////////////////////////////////////////////////
+//
+//
+void Bitmap_Holder.MouseMoveIn(int bitmapID)
+{
+   SetCursor(1);
+}
+
+ 
+void Bitmap_Holder.MouseMoveOut(int bitmapID)
+{
+   SetCursor(0);
+}
+
+ 
+
+///////////////////////////////////////////////////////////////
+//
+//
+void Bitmap_Holder.MouseClickOnDown(int bitmapID)
+{
+   switch( bitmapID )
+   {
+      case 0: // blad
+         if( poprawnie >= 10 ) return;
+
+         Group.Sound_Holder.PlayDSound(2);
+         Group.Sprite_Holder.ChangePhase( blad+10, 1 );
+         blad++;
+
+         if( blad >= 5 )
+         {
+            // Popelniono 5 bledow - reset
+            Group.Sound_Holder.PlayDSound(4);
+
+            blad = 0;
+            poprawnie = 0;
+
+            int index = 0;
+            while( index < 10 )
+            {
+               roznice[index]=0;
+               Group.Sprite_Holder.ChangePhase( index, 0 );
+               if( index < 5 )
+                  Group.Sprite_Holder.ChangePhase( index+10, 0 );
+               //Sprite_Holder.ChangePhase( index+1, 0 );
+               Sprite_Holder.HideSprite( index+11 );
+               Sprite_Holder.ShowSprite( index+1 );
+               index++;
+            }
+         }
+   }
+}
+
+
+
+//############################################################# T O O L B A R #######
+//#############################################################---------------#######
+
+void Group.Sprite_Holder.MouseClickOnDown(int spriteID)
+{
+   if(spriteID>15)
+   {
+      Group.Sprite_Holder.ChangePhase(spriteID,1);
+      switch(spriteID)
+      {
+         case 16:
+            Group.Sound_Holder.PlayDSound(6);
+            break;
+         case 17:
+            Group.Sound_Holder.PlayDSound(7);
+            break;
+         case 18:   //parent window
+            Group.Sound_Holder.PlayDSound(11);
+            break;
+         case 19:   //plansza glowna
+            Group.Sound_Holder.PlayDSound(12);
+            break;
+      }
+      Group.Sprite_Holder.DisableTimers();
+
+      Group.Sprite_Holder.GotoXY(15,640,0);
+      Group.Sprite_Holder.GotoXY(16,721,329);
+      Group.Sprite_Holder.GotoXY(17,717,404);
+      Group.Sprite_Holder.GotoXY(18,704,14);
+      Group.Sprite_Holder.GotoXY(19,744,14);
+
+      Group.Sprite_Holder.SynchronizeTimers();
+      Group.Sprite_Holder.EnableTimers();
+      Group.Sound_Holder.PlayDSound(5);
+      toolbar=0;
+      Group.HotSpot_Holder.DisableHotSpot(11);
+      toolbarCase=spriteID;
+   }
+}
+
+
+void Group.Sprite_Holder.InPlace(int spriteID,int x,int y)
+{
+   if(spriteID==15)
+   {
+      if(x==480)
+      {
+         toolbar=1;
+         Group.HotSpot_Holder.EnableHotSpot(12);
+         SetCursor(0);
+      }
+      else
+      {
+         Group.Sprite_Holder.ChangePhase(16,0);
+         Group.Sprite_Holder.ChangePhase(17,0);
+         Group.Sprite_Holder.ChangePhase(18,0);
+         Group.Sprite_Holder.ChangePhase(19,0);
+         switch(toolbarCase)
+         {
+            case 18:	//lewo
+               LoadPage("cuda_c.bdf");
+               break;
+            case 19:	//prawo
+               LoadPage("dyzio_c.bdf");
+               break;
+            case 16:   //do planszy glownej   
+               LoadPage(parentWnd);
+               break;
+            case 17:   //Plansza wyboru
+               LoadPage("Wyborw.bdf");
+               break;
+         }
+      }
+   }
+}
+
+void Group.Sprite_Holder.MouseMoveIn(int spriteID)
+{
+   if(spriteID>15)   SetCursor(1);
+
+}
+
+ 
+void Group.Sprite_Holder.MouseMoveOut(int spriteID)
+{
+   if(spriteID>15)   SetCursor(0);
+}
+
+//#############################################################
+//############################################################# 
+ 
+  

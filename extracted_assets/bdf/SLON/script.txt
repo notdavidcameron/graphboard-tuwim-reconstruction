@@ -1,0 +1,617 @@
+//###########################################################################
+//Script code
+//###########################################################################
+
+
+OnOpenPage()
+{
+	// Add your component and variables initialization code here
+	// WARNING: All variables definied on this function are global for this page
+//   if(IsProject()==0)   int textMode=0;
+   int textMode=0;
+
+   int curColor=5;   
+
+   MultiBitmap.ShowBitmap(0,0,0,0);         //niebo
+   MultiBitmap.ShowBitmap(6,0,112,2);       //tlo  
+   MultiBitmap.ShowBitmap(12,263,132,3);    //slon
+   MultiBitmap.ShowBitmap(18,357,47,3);     //pien1
+   MultiBitmap.ShowBitmap(24,427,64,3);     //pien2
+   MultiBitmap.ShowBitmap(30,515,75,3);     //pien3
+   MultiBitmap.ShowBitmap(36,336,8,4);      //korona1
+   MultiBitmap.ShowBitmap(42,420,38,4);     //korona2
+   MultiBitmap.ShowBitmap(48,498,49,4);     //korona3
+   MultiBitmap.ShowBitmap(54,310,376,4);    //kamienie
+   MultiBitmap.ShowBitmap(60,460,420,4);    //kamien
+   MultiBitmap.ShowBitmap(66,0,319,5);      //kwiat1
+   MultiBitmap.ShowBitmap(72,44,296,4);     //2
+   MultiBitmap.ShowBitmap(78,0,254,3);      //3
+   MultiBitmap.ShowBitmap(84,26,119,4);     //4
+   MultiBitmap.ShowBitmap(90,114,194,4);    //5
+   MultiBitmap.ShowBitmap(96,32,163,3);     //6
+   MultiBitmap.ShowBitmap(102,555,135,3);   //7
+   MultiBitmap.ShowBitmap(108,124,417,3);   //8
+   MultiBitmap.ShowBitmap(114,22,354,6);    //srodek1
+   MultiBitmap.ShowBitmap(120,85,337,5);    //2
+   MultiBitmap.ShowBitmap(126,40,289,4);    //3
+   MultiBitmap.ShowBitmap(132,49,144,5);    //4
+   MultiBitmap.ShowBitmap(138,140,217,5);   //5
+   MultiBitmap.ShowBitmap(144,74,202,4);    //6
+   MultiBitmap.ShowBitmap(150,579,155,4);   //7
+   MultiBitmap.ShowBitmap(156,140,435,4);   //8
+   MultiBitmap.ShowBitmap(162,35,322,3);    //puszki
+
+   LoadGroup("Cursors.grp");
+
+//#############################################################################
+   int toolbar=0;
+   int toolbarCase=0;
+   int toolbarPhase=0;
+   int txtHotSpotOn=0;
+   int playStatus=0;
+   int puzzleNo=0;
+   Group.HotSpot_Holder.DisableHotSpot(1);
+//############################################################################
+   Sound_Holder.PlayDSound(3);
+   SetTextMode();
+   FadeScreen(1,1000);
+//   SetTimer(5000);
+}
+
+
+void OnClosePage(void)
+{
+	// Add your close page handler code here
+
+}
+ 
+void SetTextMode(void)
+{
+   if(textMode)
+   {
+      playStatus = 1;
+      Sound_Holder.SetPlayDSoundParameters(3,-1000,0,0);
+      Sound_Holder.PlayDSound(0);
+      Text_Holder.SetTextOffsets(0,0,0);
+      Text_Holder.DisableMouse(0);
+      Text_Holder.ShowText(0);
+   }
+   else
+   {
+      playStatus = 0;
+      Text_Holder.HideText(0);
+      Text_Holder.StopSynchroText(0);
+      Sound_Holder.SetPlayDSoundParameters(3,0,0,0);
+      SetCursor(13-curColor);
+   }
+}
+
+void MultiBitmap.MouseClickOnDown(int bitmapID,int x,int y,int deep)
+{
+   if(textMode)   return;
+   int oldId=bitmapID;
+   bitmapID=((oldId/6)*6)+curColor;
+   if(bitmapID!=oldId)
+   {
+      Sound_Holder.PlayDSound(1);
+      MultiBitmap.ShowBitmap(bitmapID,x,y,deep);
+      MultiBitmap.HideBitmap(oldId);
+   }
+}
+
+
+void HotSpot_Holder.LeftButtonClickOn(int rectID)
+{
+   if(textMode)   return;
+   curColor=rectID;
+   SetCursor(13-curColor);
+   Sound_Holder.PlayDSound(2);
+}
+
+
+//############################################################# T O O L B A R #######
+//#############################################################---------------#######
+void Group.HotSpot_Holder.MouseMoveIn(int rectID)
+{
+   switch(rectID)
+   {
+      case 0:
+         Group.HotSpot_Holder.DisableHotSpot(0);
+         Group.Sprite_Holder.DisableTimers();
+
+         Group.Sprite_Holder.GotoXY(0,480,0);
+         Group.Sprite_Holder.GotoXY(2,544,14);
+         Group.Sprite_Holder.GotoXY(3,584,14);
+         Group.Sprite_Holder.GotoXY(4,515,84);
+         Group.Sprite_Holder.GotoXY(5,559,210);
+         Group.Sprite_Holder.GotoXY(6,558,282);
+         Group.Sprite_Holder.GotoXY(7,557,404);
+   
+         Group.Sprite_Holder.SynchronizeTimers();
+         Group.Sprite_Holder.EnableTimers();
+         Group.Sound_Holder.PlayDSound(0);
+         break;
+      case 1:
+         if(toolbar)
+         {
+            Group.Sprite_Holder.DisableTimers();
+            Sprite_Holder.DisableTimers();
+            Group.Sprite_Holder.GotoXY(0,640,0);
+            Group.Sprite_Holder.GotoXY(7,717,404);
+  
+            switch(toolbarPhase)
+            {
+               case 0:
+                  Group.Sprite_Holder.GotoXY(2,704,14);
+                  Group.Sprite_Holder.GotoXY(3,744,14);
+                  Group.Sprite_Holder.GotoXY(4,675,84);
+                  Group.Sprite_Holder.GotoXY(5,719,210);
+                  Group.Sprite_Holder.GotoXY(6,718,282);
+                  break;
+               case 1:
+                  Sprite_Holder.GotoXY(0,706,16);
+                  Sprite_Holder.GotoXY(1,708,97);
+                  Sprite_Holder.GotoXY(2,709,178);
+                  Sprite_Holder.GotoXY(3,712,259);
+                  break;
+               case 2:
+                  Group.Sprite_Holder.GotoXY(8,693,22);
+                  Group.Sprite_Holder.GotoXY(9,708,156);
+                  break;
+            }
+            Group.Sprite_Holder.SynchronizeTimers();
+            Sprite_Holder.SynchronizeTimers();
+            Sprite_Holder.EnableTimers();
+            Group.Sprite_Holder.EnableTimers();
+            Group.Sound_Holder.PlayDSound(0);
+            toolbar=0;
+            toolbarPhase=0;
+         }
+         else
+         {
+            Group.Sprite_Holder.GotoXY(11,-56,-70);
+            if(toolbarCase!=11)  Group.Sound_Holder.PlayDSound(2);
+            if(textMode==0)
+               SetCursor(13-curColor);
+            else
+               SetCursor(1);
+         }
+         txtHotSpotOn=0;
+         Group.HotSpot_Holder.DisableHotSpot(1);
+         Group.HotSpot_Holder.EnableHotSpot(0);
+         toolbarCase=0;
+         break;
+      case 2:
+         if(txtHotSpotOn==0)   
+         {
+            Group.Sprite_Holder.GotoXY(11,0,0);
+            Group.Sound_Holder.PlayDSound(3);	
+         }
+         break;
+   }
+}
+
+
+void Group.Sprite_Holder.InPlace(int spriteID,int x,int y)
+{
+   switch(spriteID)
+   {
+      case 0:
+         if(x==480)
+         {
+            toolbar=1;
+            Group.HotSpot_Holder.EnableHotSpot(1);
+            SetCursor(1);
+         }
+         else
+         {
+            if(textMode==0)   SetCursor(13-curColor);
+            else              SetCursor(1);
+            Group.Sprite_Holder.ChangePhase(2,0);
+            Group.Sprite_Holder.ChangePhase(3,0);
+            Group.Sprite_Holder.ChangePhase(4,0);
+            Group.Sprite_Holder.ChangePhase(5,0);
+            Group.Sprite_Holder.ChangePhase(6,0);
+            Group.Sprite_Holder.ChangePhase(7,0);
+            Group.Sprite_Holder.ChangePhase(8,0);
+            Group.Sprite_Holder.ChangePhase(9,0);
+            
+            switch(toolbarCase)
+            {
+               case 2:   //lewo   
+                  FadeScreen(0,1000);
+                  LoadPage("rzeczka.bdf");
+                  break;
+               case 3:   //prawo
+                  FadeScreen(0,1000);
+                  LoadPage("slowik.bdf");
+                  break;
+               case 4:   //recytacja
+                  FadeScreen(0,1000);
+                  LoadPage("slon_r.bdf");
+                  break;
+               case 5:   //roznice
+                  FadeScreen(0,1000);
+                  LoadPage("slon_c.bdf");
+                  break;
+               case 6:   //puzzle
+                  Group.Sprite_Holder.DisableTimers();
+                  Sprite_Holder.DisableTimers();
+
+                  Group.Sprite_Holder.GotoXY(0,480,0);
+                  Sprite_Holder.GotoXY(0,546,16);
+                  Sprite_Holder.GotoXY(1,548,97);
+                  Sprite_Holder.GotoXY(2,549,178);
+                  Sprite_Holder.GotoXY(3,552,259);
+                  Group.Sprite_Holder.GotoXY(7,557,404);
+
+                  Group.Sprite_Holder.SynchronizeTimers();
+                  Sprite_Holder.SynchronizeTimers();
+                  Sprite_Holder.EnableTimers();
+                  Group.Sprite_Holder.EnableTimers();
+                  Group.Sound_Holder.PlayDSound(0);
+                  toolbarPhase=1;
+                  break;
+               case 7:   //Plansza wyboru
+                  FadeScreen(0,1000);
+                  LoadPage("Wyborw.bdf");
+                  break;
+               case 8:   //puzzle trudne
+                  FadeScreen(0,1000);
+                  switch(puzzleNo)
+                  {
+                     case 0:
+                        LoadPage("slon1p1.bdf");
+                        break;
+                     case 1:
+                        LoadPage("slon2p1.bdf");
+                        break;
+                     case 2:
+                        LoadPage("slon3p1.bdf");
+                        break;
+                     case 3:
+                        LoadPage("slon4p1.bdf");
+                        break;
+                  }
+                  break;
+               case 9:   //puzzle latwe
+                  FadeScreen(0,1000);
+                  switch(puzzleNo)
+                  {
+                     case 0:
+                        LoadPage("slon1p2.bdf");
+                        break;
+                     case 1:
+                        LoadPage("slon2p2.bdf");
+                        break;
+                     case 2:
+                        LoadPage("slon3p2.bdf");
+                        break;
+                     case 3:
+                        LoadPage("slon4p2.bdf");
+                        break;
+                  }
+                  break;
+               case 12:
+               case 13:
+               case 14:
+               case 15:
+               case 16:
+                  Sprite_Holder.ChangePhase(0,0);
+                  Sprite_Holder.ChangePhase(1,0);
+                  Sprite_Holder.ChangePhase(2,0);
+                  Sprite_Holder.ChangePhase(3,0);
+
+                  Group.Sprite_Holder.DisableTimers();
+
+                  Group.Sprite_Holder.GotoXY(0,480,0);
+
+                  Group.Sprite_Holder.GotoXY(8,533,22);
+                  Group.Sprite_Holder.GotoXY(9,548,156);
+                  Group.Sprite_Holder.GotoXY(7,557,404);
+
+                  Group.Sprite_Holder.SynchronizeTimers();
+                  Group.Sprite_Holder.EnableTimers();
+                  Group.Sound_Holder.PlayDSound(0);
+                  toolbarPhase=2;
+                  break;
+            }
+         }
+         break;
+      case 11:
+         if(x==0)
+         {
+            Group.HotSpot_Holder.EnableHotSpot(1);
+            txtHotSpotOn=1;
+            SetCursor(1);
+         }
+         break;
+   }
+}
+
+void Group.Sprite_Holder.MouseMoveIn(int spriteID)
+{
+   if(spriteID && toolbar)
+      SetCursor(1);
+}
+
+void Group.Sprite_Holder.MouseMoveOut(int spriteID)
+{
+   if(spriteID)
+      SetCursor(0);
+}
+
+void Group.Sprite_Holder.MouseClickOnDown(int spriteID)
+{
+   if(spriteID==0)   return;
+   if(spriteID==11)
+   {
+      Group.Sprite_Holder.GotoXY(11,-56,-70);
+      Group.Sound_Holder.PlayDSound(2);	
+      toolbarCase=spriteID;
+      if(textMode)    textMode=0;
+      else            textMode=1;
+      if(textMode==0)   SetCursor(13-curColor);
+      else              SetCursor(1);
+      SetTextMode();
+   }
+   else
+   {
+      Group.HotSpot_Holder.DisableHotSpot(1);
+      Group.Sprite_Holder.ChangePhase(spriteID,1);
+      switch(spriteID)	
+      {
+         case 2:   //lewo
+         case 3:   //prawo 
+            Group.Sound_Holder.PlayDSound(4);
+            break;
+         case 4:   //recytacja
+            Group.Sound_Holder.PlayDSound(5);
+            break;
+         case 5:   //roznice
+            Group.Sound_Holder.PlayDSound(6);
+            break;
+         case 6:   //puzzle
+            Group.Sound_Holder.PlayDSound(7);
+            break;
+         case 7:   //plansza glowna
+            Group.Sound_Holder.PlayDSound(8);
+            break;
+         case 8:   //puzzle latwe
+            Group.Sound_Holder.PlayDSound(9);
+            break;
+         case 9:   //puzzle trudne
+            Group.Sound_Holder.PlayDSound(10);
+            break;
+         case 10:  //parent window
+            Group.Sound_Holder.PlayDSound(4);
+            break;
+      }
+   }
+}
+
+void Group.Sprite_Holder.MouseClickOnUp(int spriteID)
+{
+   if(spriteID==0 || spriteID==5 || spriteID==6 || spriteID==8 || spriteID==9 || spriteID==11)   return;
+   Group.Sprite_Holder.DisableTimers();
+   Sprite_Holder.DisableTimers();
+
+   Group.Sprite_Holder.GotoXY(0,640,0);
+   Group.Sprite_Holder.GotoXY(7,717,404);
+
+   switch(toolbarPhase)
+   {
+      case 0:
+         Group.Sprite_Holder.GotoXY(2,704,14);
+         Group.Sprite_Holder.GotoXY(3,744,14);
+         Group.Sprite_Holder.GotoXY(4,675,84);
+         Group.Sprite_Holder.GotoXY(5,719,210);
+         Group.Sprite_Holder.GotoXY(6,718,282);
+         break;
+      case 1:
+         Sprite_Holder.GotoXY(0,706,16);
+         Sprite_Holder.GotoXY(1,708,97);
+         Sprite_Holder.GotoXY(2,709,178);
+         Sprite_Holder.GotoXY(3,712,259);
+         break;
+      case 2:
+         Group.Sprite_Holder.GotoXY(8,693,22);
+         Group.Sprite_Holder.GotoXY(9,708,156);
+         toolbarPhase=0;
+         break;
+   }
+   Group.Sprite_Holder.SynchronizeTimers();
+   Sprite_Holder.SynchronizeTimers();
+   Sprite_Holder.EnableTimers();
+   Group.Sprite_Holder.EnableTimers();
+
+   Group.Sound_Holder.PlayDSound(0);
+   toolbar=0;
+   Group.HotSpot_Holder.DisableHotSpot(1);
+   toolbarCase=spriteID;
+}
+
+void Group.Sprite_Holder.EndAnimation(int spriteID)
+{
+   if(spriteID!=5 && spriteID!=6 && spriteID!=8 && spriteID!=9)   return;
+
+   Group.Sprite_Holder.ChangePhase(spriteID,2);
+
+   Group.Sprite_Holder.DisableTimers();
+
+   if(toolbarPhase==0)
+   {
+      Group.Sprite_Holder.GotoXY(0,640,0);
+      Group.Sprite_Holder.GotoXY(2,704,14);
+      Group.Sprite_Holder.GotoXY(3,744,14);
+      Group.Sprite_Holder.GotoXY(4,675,84);
+      Group.Sprite_Holder.GotoXY(5,719,210);
+      Group.Sprite_Holder.GotoXY(6,718,282);
+      Group.Sprite_Holder.GotoXY(7,717,404);
+   }
+   else
+   {
+      Group.Sprite_Holder.GotoXY(0,640,0);
+      Group.Sprite_Holder.GotoXY(8,693,22);
+      Group.Sprite_Holder.GotoXY(9,708,156);
+      Group.Sprite_Holder.GotoXY(7,717,404);
+      toolbarPhase=0;
+   }
+   Group.Sprite_Holder.SynchronizeTimers();
+   Group.Sprite_Holder.EnableTimers();
+   Group.Sound_Holder.PlayDSound(0);
+   toolbar=0;
+   Group.HotSpot_Holder.DisableHotSpot(1);
+   toolbarCase=spriteID;
+}
+//#############################################################
+//############################################################# 
+
+
+
+
+
+ 
+void Text_Holder.ScrollTextUp(int textID)
+{
+   SetCursor(3);
+}
+
+ 
+void Text_Holder.ScrollTextDown(int textID)
+{
+   SetCursor(4);
+}
+
+ 
+void Text_Holder.EndScrollText(int textID)
+{
+   if(playStatus)  SetCursor(2);
+   else            SetCursor(5);
+}
+
+ 
+void Text_Holder.MouseMoveIn(int textID)
+{
+   if(playStatus)
+      SetCursor(2);
+   else
+      SetCursor(5);
+}
+
+ 
+void Text_Holder.MouseMoveOut(int textID)
+{
+   SetCursor(0);
+}
+
+ 
+void Text_Holder.ClickOnText(int textID)
+{
+   if(playStatus)
+   {
+      playStatus=0;
+      Sound_Holder.Stop(0);
+      Text_Holder.StopSynchroText(0);
+      Sound_Holder.SetPlayDSoundParameters(3,0,0,0);
+      SetCursor(5);
+   }
+   else
+   {
+      playStatus=1;
+      Sound_Holder.SetPlayDSoundParameters(3,-1000,0,0);
+      Text_Holder.PlaySynchroText(0);
+      SetCursor(2);
+   }
+}
+
+ 
+void Text_Holder.EndOfSynchroText(int textID)
+{
+   if(playStatus)
+      SetCursor(5);
+   else
+      SetCursor(0);
+   playStatus=0;
+   Sound_Holder.SetPlayDSoundParameters(3,0,0,0);
+}
+
+ 
+void Sound_Holder.EndPlaySound(int soundID)
+{
+   if(soundID==0 && textMode)
+   { 
+      playStatus=1;
+      Text_Holder.EnableMouse(0);
+      Text_Holder.PlaySynchroText(0);
+   }
+}
+
+
+//######################################################## 
+void Sprite_Holder.MouseMoveIn(int spriteID)
+{
+   SetCursor(1);
+}
+
+void Sprite_Holder.MouseMoveOut(int spriteID)
+{
+   SetCursor(0);
+}
+
+void Sprite_Holder.MouseClickOnDown(int spriteID)
+{
+   Sprite_Holder.ChangePhase(spriteID,1);
+   Group.Sound_Holder.PlayDSound(12);
+
+}
+
+void Sprite_Holder.MouseClickOnUp(int spriteID)
+{
+   Group.Sprite_Holder.DisableTimers();
+   Sprite_Holder.DisableTimers();
+
+   Group.Sprite_Holder.GotoXY(0,640,0);
+
+   Sprite_Holder.GotoXY(0,706,16);
+   Sprite_Holder.GotoXY(1,708,97);
+   Sprite_Holder.GotoXY(2,709,178);
+   Sprite_Holder.GotoXY(3,712,259);
+
+   Group.Sprite_Holder.GotoXY(7,717,404);
+
+   Group.Sprite_Holder.SynchronizeTimers();
+   Sprite_Holder.SynchronizeTimers();
+   Sprite_Holder.EnableTimers();
+   Group.Sprite_Holder.EnableTimers();
+
+   Group.Sound_Holder.PlayDSound(0);
+   toolbar=0;
+   Group.HotSpot_Holder.DisableHotSpot(1);
+   toolbarCase=spriteID+12;
+   puzzleNo=spriteID;
+}
+//########################################################
+
+ 
+ 
+void OnTimer(void)
+{
+        //Add your command handler code here
+   SetTimer(0);
+   Sound_Holder.PlayDSound(4);
+}
+ 
+void OnLButtonDown(int x,int y)
+{
+        //Add your command handler code here
+   SetTimer(0);
+   Sound_Holder.Stop(4);
+}
+ 
+void OnRButtonDown(int x,int y)
+{
+        //Add your command handler code here
+   Sound_Holder.PlayDSound(4);
+}
+ 

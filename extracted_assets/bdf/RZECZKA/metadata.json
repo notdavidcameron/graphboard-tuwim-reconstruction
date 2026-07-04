@@ -1,0 +1,1986 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RZECZKA.BDF",
+  "size": 14661455,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Wednesday, November 12, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    8
+  ],
+  "background_flag": 1,
+  "background_color_index": 132,
+  "palette_size": 1024,
+  "dib_size": 0,
+  "component_list_offset": 1165,
+  "component_list_version": 1,
+  "component_count": 6,
+  "components": [
+    {
+      "index": 0,
+      "offset": 1173,
+      "clsid": "DA768116-5341-11D0-B444-008048EB5D40",
+      "display_name": "HotSpot_Holder",
+      "private_offset": 2278,
+      "private_size": 827,
+      "embedded": []
+    },
+    {
+      "index": 1,
+      "offset": 3105,
+      "clsid": "2F3C5846-5413-11D0-B447-008048EB5D40",
+      "display_name": "Transparent_Video_Holder",
+      "private_offset": 4279,
+      "private_size": 5861053,
+      "embedded": [
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_000_000010c3_board_video_audio.wav",
+          "offset": 4291,
+          "size": 176444,
+          "pcm_size": 176400,
+          "duration_seconds": 4.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 4
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_000_000010c3_board_video_197x190.gif",
+          "offset": 4291,
+          "size": 1020993,
+          "frame_count": 24,
+          "width": 197,
+          "height": 190,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_002_0003fdd0_board_video_audio.wav",
+          "offset": 261584,
+          "size": 264644,
+          "pcm_size": 264600,
+          "duration_seconds": 6.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 6
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_002_0003fdd0_board_video_408x150.gif",
+          "offset": 261584,
+          "size": 3475201,
+          "frame_count": 50,
+          "width": 408,
+          "height": 150,
+          "transparent_index": 59,
+          "header_transparent_index": 59,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_004_000a8ae2_board_video_audio.wav",
+          "offset": 690914,
+          "size": 176444,
+          "pcm_size": 176400,
+          "duration_seconds": 4.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 4
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_004_000a8ae2_board_video_248x85.gif",
+          "offset": 690914,
+          "size": 551651,
+          "frame_count": 23,
+          "width": 248,
+          "height": 85,
+          "transparent_index": 59,
+          "header_transparent_index": 59,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_006_000de9c9_board_video_audio.wav",
+          "offset": 911817,
+          "size": 132344,
+          "pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 3
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_006_000de9c9_board_video_178x188.gif",
+          "offset": 911817,
+          "size": 418878,
+          "frame_count": 11,
+          "width": 178,
+          "height": 188,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_008_00147dac_board_video_audio.wav",
+          "offset": 1342892,
+          "size": 396944,
+          "pcm_size": 396900,
+          "duration_seconds": 9.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 9
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_008_00147dac_board_video_211x88.gif",
+          "offset": 1342892,
+          "size": 1688641,
+          "frame_count": 80,
+          "width": 211,
+          "height": 88,
+          "transparent_index": 30,
+          "header_transparent_index": 49,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_010_0022e5eb_board_video_audio.wav",
+          "offset": 2287083,
+          "size": 396944,
+          "pcm_size": 396900,
+          "duration_seconds": 9.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 9
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_010_0022e5eb_board_video_87x335.gif",
+          "offset": 2287083,
+          "size": 2549809,
+          "frame_count": 77,
+          "width": 87,
+          "height": 335,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_012_0032f446_board_video_audio.wav",
+          "offset": 3339334,
+          "size": 441044,
+          "pcm_size": 441000,
+          "duration_seconds": 10.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 10
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_012_0032f446_board_video_180x394.gif",
+          "offset": 3339334,
+          "size": 6925607,
+          "frame_count": 86,
+          "width": 180,
+          "height": 394,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_014_004b8fe0_board_video_audio.wav",
+          "offset": 4952032,
+          "size": 396944,
+          "pcm_size": 396900,
+          "duration_seconds": 9.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 9
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_014_004b8fe0_board_video_70x372.gif",
+          "offset": 4952032,
+          "size": 2160141,
+          "frame_count": 73,
+          "width": 70,
+          "height": 372,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        }
+      ],
+      "board_video_marker_offset": 4291,
+      "board_video_streams": [
+        {
+          "index": 0,
+          "offset": 4291,
+          "end_offset": 222196,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 197,
+          "video_height": 190,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 24,
+          "header_record_count": 27,
+          "record_count": 28,
+          "audio_record_count": 4,
+          "video_record_count": 24,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_000_000010c3_board_video_audio.wav",
+          "audio_pcm_size": 176400,
+          "duration_seconds": 4.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_000_000010c3_board_video_197x190.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 1,
+          "offset": 222196,
+          "end_offset": 223452,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 197,
+          "video_height": 190,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 24,
+          "header_record_count": 27,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 2,
+          "offset": 261584,
+          "end_offset": 628326,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 408,
+          "video_height": 150,
+          "header_transparent_index": 59,
+          "frames_per_second": 10,
+          "frame_count": 50,
+          "header_record_count": 55,
+          "record_count": 56,
+          "audio_record_count": 6,
+          "video_record_count": 50,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_002_0003fdd0_board_video_audio.wav",
+          "audio_pcm_size": 264600,
+          "duration_seconds": 6.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_002_0003fdd0_board_video_408x150.gif",
+          "transparent_index": 59
+        },
+        {
+          "index": 3,
+          "offset": 628326,
+          "end_offset": 629582,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 408,
+          "video_height": 150,
+          "header_transparent_index": 59,
+          "frames_per_second": 10,
+          "frame_count": 50,
+          "header_record_count": 55,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 4,
+          "offset": 690914,
+          "end_offset": 889349,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 248,
+          "video_height": 85,
+          "header_transparent_index": 59,
+          "frames_per_second": 10,
+          "frame_count": 23,
+          "header_record_count": 26,
+          "record_count": 27,
+          "audio_record_count": 4,
+          "video_record_count": 23,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_004_000a8ae2_board_video_audio.wav",
+          "audio_pcm_size": 176400,
+          "duration_seconds": 4.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_004_000a8ae2_board_video_248x85.gif",
+          "transparent_index": 59
+        },
+        {
+          "index": 5,
+          "offset": 889349,
+          "end_offset": 890605,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 248,
+          "video_height": 85,
+          "header_transparent_index": 59,
+          "frames_per_second": 10,
+          "frame_count": 23,
+          "header_record_count": 26,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 6,
+          "offset": 911817,
+          "end_offset": 1307664,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 178,
+          "video_height": 188,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 11,
+          "header_record_count": 13,
+          "record_count": 14,
+          "audio_record_count": 3,
+          "video_record_count": 11,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_006_000de9c9_board_video_audio.wav",
+          "audio_pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_006_000de9c9_board_video_178x188.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 7,
+          "offset": 1307664,
+          "end_offset": 1308920,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 178,
+          "video_height": 188,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 11,
+          "header_record_count": 13,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 8,
+          "offset": 1342892,
+          "end_offset": 2267039,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 211,
+          "video_height": 88,
+          "header_transparent_index": 49,
+          "frames_per_second": 10,
+          "frame_count": 80,
+          "header_record_count": 88,
+          "record_count": 89,
+          "audio_record_count": 9,
+          "video_record_count": 80,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_008_00147dac_board_video_audio.wav",
+          "audio_pcm_size": 396900,
+          "duration_seconds": 9.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_008_00147dac_board_video_211x88.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 9,
+          "offset": 2267039,
+          "end_offset": 2268295,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 211,
+          "video_height": 88,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 80,
+          "header_record_count": 88,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 10,
+          "offset": 2287083,
+          "end_offset": 3308466,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 87,
+          "video_height": 335,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 77,
+          "header_record_count": 85,
+          "record_count": 86,
+          "audio_record_count": 9,
+          "video_record_count": 77,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_010_0022e5eb_board_video_audio.wav",
+          "audio_pcm_size": 396900,
+          "duration_seconds": 9.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_010_0022e5eb_board_video_87x335.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 11,
+          "offset": 3308466,
+          "end_offset": 3309722,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 87,
+          "video_height": 335,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 77,
+          "header_record_count": 85,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 12,
+          "offset": 3339334,
+          "end_offset": 4879724,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 180,
+          "video_height": 394,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 86,
+          "header_record_count": 95,
+          "record_count": 96,
+          "audio_record_count": 10,
+          "video_record_count": 86,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_012_0032f446_board_video_audio.wav",
+          "audio_pcm_size": 441000,
+          "duration_seconds": 10.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_012_0032f446_board_video_180x394.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 13,
+          "offset": 4879724,
+          "end_offset": 4880980,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 180,
+          "video_height": 394,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 86,
+          "header_record_count": 95,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 14,
+          "offset": 4952032,
+          "end_offset": 5837164,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 70,
+          "video_height": 372,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 73,
+          "header_record_count": 81,
+          "record_count": 82,
+          "audio_record_count": 9,
+          "video_record_count": 73,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_014_004b8fe0_board_video_audio.wav",
+          "audio_pcm_size": 396900,
+          "duration_seconds": 9.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_014_004b8fe0_board_video_70x372.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 15,
+          "offset": 5837164,
+          "end_offset": 5838420,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 70,
+          "video_height": 372,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 73,
+          "header_record_count": 81,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "offset": 5865332,
+      "clsid": "B64F3336-5368-11D0-B445-008048EB5D40",
+      "display_name": "Sprite_Holder",
+      "private_offset": 5866866,
+      "private_size": 693880,
+      "embedded": []
+    },
+    {
+      "index": 3,
+      "offset": 6560746,
+      "clsid": "AD45ADB6-5290-11D0-B442-008048EB5D40",
+      "display_name": "Text_Holder",
+      "private_offset": 6562372,
+      "private_size": 26328,
+      "embedded": []
+    },
+    {
+      "index": 4,
+      "offset": 6588700,
+      "clsid": "1720D306-6932-11D0-B468-008048EB5D40",
+      "display_name": "Sound_Holder",
+      "private_offset": 6589596,
+      "private_size": 4962508,
+      "embedded": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_000_00648ca8.wav",
+          "offset": 6589608,
+          "size": 33874,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_001_0065115a.wav",
+          "offset": 6623578,
+          "size": 16558,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_002_00655268.wav",
+          "offset": 6640232,
+          "size": 32738,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_003_0065d2aa.wav",
+          "offset": 6673066,
+          "size": 358728,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_004_006b4c52.wav",
+          "offset": 7031890,
+          "size": 603270,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_005_00748138.wav",
+          "offset": 7635256,
+          "size": 184204,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_006_00775124.wav",
+          "offset": 7819556,
+          "size": 289840,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_007_007bbdb4.wav",
+          "offset": 8109492,
+          "size": 290928,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_008_00802e84.wav",
+          "offset": 8400516,
+          "size": 363566,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_009_0085bb12.wav",
+          "offset": 8764178,
+          "size": 543940,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_010_008e0836.wav",
+          "offset": 9308214,
+          "size": 950318,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_011_009c88c4.wav",
+          "offset": 10258628,
+          "size": 287906,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_012_00a0edc6.wav",
+          "offset": 10546630,
+          "size": 435172,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_013_00a7920a.wav",
+          "offset": 10981898,
+          "size": 570114,
+          "extension": ".wav"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "offset": 11552104,
+      "clsid": "F7794041-1EB4-11D1-9B25-008048EB5D40",
+      "display_name": "MultiBitmap",
+      "private_offset": 11553109,
+      "private_size": 3087808,
+      "embedded": [
+        {
+          "kind": "multibitmap_bmp",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_000_niespodzi.bmp",
+          "offset": 11553121,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "niespodzi"
+        },
+        {
+          "kind": "multibitmap_bmp",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_001_niespodzi.bmp",
+          "offset": 11860517,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "niespodzi"
+        },
+        {
+          "kind": "multibitmap_bmp",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_002_niespodzi.bmp",
+          "offset": 12167913,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "niespodzi"
+        },
+        {
+          "kind": "multibitmap_bmp",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_003_niespodzi.bmp",
+          "offset": 12475309,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "niespodzi"
+        },
+        {
+          "kind": "multibitmap_bmp",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_004_niespodzi.bmp",
+          "offset": 12782705,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "niespodzi"
+        },
+        {
+          "kind": "multibitmap_bmp",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_005_niespodzi.bmp",
+          "offset": 13090101,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "niespodzi"
+        },
+        {
+          "kind": "multibitmap_bmp",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_006_niespodzi.bmp",
+          "offset": 13397497,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "niespodzi"
+        },
+        {
+          "kind": "multibitmap_bmp",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_007_niespodzi.bmp",
+          "offset": 13704893,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "niespodzi"
+        },
+        {
+          "kind": "multibitmap_bmp",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_008_niespodzi.bmp",
+          "offset": 14012289,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "niespodzi"
+        },
+        {
+          "kind": "multibitmap_bmp",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_009_niespodzi.bmp",
+          "offset": 14319685,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "niespodzi"
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_010_przycisk.raw",
+          "offset": 14627081,
+          "size": 1188,
+          "pixel_size": 1188,
+          "width": 397,
+          "height": 449,
+          "name": "przycisk "
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_011_przycisk.raw",
+          "offset": 14628465,
+          "size": 1188,
+          "pixel_size": 1188,
+          "width": 397,
+          "height": 449,
+          "name": "przycisk "
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_012_przycisk.raw",
+          "offset": 14629849,
+          "size": 1188,
+          "pixel_size": 1188,
+          "width": 397,
+          "height": 449,
+          "name": "przycisk "
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_013_przycisk.raw",
+          "offset": 14631233,
+          "size": 1188,
+          "pixel_size": 1188,
+          "width": 397,
+          "height": 449,
+          "name": "przycisk "
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_014_przycisk.raw",
+          "offset": 14632617,
+          "size": 1188,
+          "pixel_size": 1188,
+          "width": 397,
+          "height": 449,
+          "name": "przycisk "
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_015_przycisk.raw",
+          "offset": 14634001,
+          "size": 1188,
+          "pixel_size": 1188,
+          "width": 397,
+          "height": 449,
+          "name": "przycisk "
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_016_przycisk.raw",
+          "offset": 14635385,
+          "size": 1188,
+          "pixel_size": 1188,
+          "width": 397,
+          "height": 449,
+          "name": "przycisk "
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_017_przycisk.raw",
+          "offset": 14636769,
+          "size": 1188,
+          "pixel_size": 1188,
+          "width": 397,
+          "height": 449,
+          "name": "przycisk "
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_018_przycisk.raw",
+          "offset": 14638153,
+          "size": 1188,
+          "pixel_size": 1188,
+          "width": 397,
+          "height": 449,
+          "name": "przycisk "
+        },
+        {
+          "kind": "multibitmap_raw",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_019_przycisk.raw",
+          "offset": 14639537,
+          "size": 1188,
+          "pixel_size": 1188,
+          "width": 397,
+          "height": 449,
+          "name": "przycisk "
+        },
+        {
+          "kind": "multibitmap_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\05_MultiBitmap_niespodzi_640x480.gif",
+          "size": 3487931,
+          "frame_count": 10,
+          "width": 640,
+          "height": 480,
+          "delay_centiseconds": 10
+        }
+      ],
+      "multibitmap": {
+        "version": 1,
+        "declared_count": 20,
+        "parsed_count": 20,
+        "frames": [
+          {
+            "index": 0,
+            "name": "niespodzi",
+            "pixel_offset": 11553121,
+            "pixel_size": 307200,
+            "metadata_offset": 11860321,
+            "width": 640,
+            "height": 480,
+            "bmp_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_000_niespodzi.bmp"
+          },
+          {
+            "index": 1,
+            "name": "niespodzi",
+            "pixel_offset": 11860517,
+            "pixel_size": 307200,
+            "metadata_offset": 12167717,
+            "width": 640,
+            "height": 480,
+            "bmp_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_001_niespodzi.bmp"
+          },
+          {
+            "index": 2,
+            "name": "niespodzi",
+            "pixel_offset": 12167913,
+            "pixel_size": 307200,
+            "metadata_offset": 12475113,
+            "width": 640,
+            "height": 480,
+            "bmp_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_002_niespodzi.bmp"
+          },
+          {
+            "index": 3,
+            "name": "niespodzi",
+            "pixel_offset": 12475309,
+            "pixel_size": 307200,
+            "metadata_offset": 12782509,
+            "width": 640,
+            "height": 480,
+            "bmp_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_003_niespodzi.bmp"
+          },
+          {
+            "index": 4,
+            "name": "niespodzi",
+            "pixel_offset": 12782705,
+            "pixel_size": 307200,
+            "metadata_offset": 13089905,
+            "width": 640,
+            "height": 480,
+            "bmp_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_004_niespodzi.bmp"
+          },
+          {
+            "index": 5,
+            "name": "niespodzi",
+            "pixel_offset": 13090101,
+            "pixel_size": 307200,
+            "metadata_offset": 13397301,
+            "width": 640,
+            "height": 480,
+            "bmp_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_005_niespodzi.bmp"
+          },
+          {
+            "index": 6,
+            "name": "niespodzi",
+            "pixel_offset": 13397497,
+            "pixel_size": 307200,
+            "metadata_offset": 13704697,
+            "width": 640,
+            "height": 480,
+            "bmp_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_006_niespodzi.bmp"
+          },
+          {
+            "index": 7,
+            "name": "niespodzi",
+            "pixel_offset": 13704893,
+            "pixel_size": 307200,
+            "metadata_offset": 14012093,
+            "width": 640,
+            "height": 480,
+            "bmp_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_007_niespodzi.bmp"
+          },
+          {
+            "index": 8,
+            "name": "niespodzi",
+            "pixel_offset": 14012289,
+            "pixel_size": 307200,
+            "metadata_offset": 14319489,
+            "width": 640,
+            "height": 480,
+            "bmp_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_008_niespodzi.bmp"
+          },
+          {
+            "index": 9,
+            "name": "niespodzi",
+            "pixel_offset": 14319685,
+            "pixel_size": 307200,
+            "metadata_offset": 14626885,
+            "width": 640,
+            "height": 480,
+            "bmp_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_009_niespodzi.bmp"
+          },
+          {
+            "index": 10,
+            "name": "przycisk ",
+            "pixel_offset": 14627081,
+            "pixel_size": 1188,
+            "metadata_offset": 14628269,
+            "width": 397,
+            "height": 449,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_010_przycisk.raw"
+          },
+          {
+            "index": 11,
+            "name": "przycisk ",
+            "pixel_offset": 14628465,
+            "pixel_size": 1188,
+            "metadata_offset": 14629653,
+            "width": 397,
+            "height": 449,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_011_przycisk.raw"
+          },
+          {
+            "index": 12,
+            "name": "przycisk ",
+            "pixel_offset": 14629849,
+            "pixel_size": 1188,
+            "metadata_offset": 14631037,
+            "width": 397,
+            "height": 449,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_012_przycisk.raw"
+          },
+          {
+            "index": 13,
+            "name": "przycisk ",
+            "pixel_offset": 14631233,
+            "pixel_size": 1188,
+            "metadata_offset": 14632421,
+            "width": 397,
+            "height": 449,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_013_przycisk.raw"
+          },
+          {
+            "index": 14,
+            "name": "przycisk ",
+            "pixel_offset": 14632617,
+            "pixel_size": 1188,
+            "metadata_offset": 14633805,
+            "width": 397,
+            "height": 449,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_014_przycisk.raw"
+          },
+          {
+            "index": 15,
+            "name": "przycisk ",
+            "pixel_offset": 14634001,
+            "pixel_size": 1188,
+            "metadata_offset": 14635189,
+            "width": 397,
+            "height": 449,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_015_przycisk.raw"
+          },
+          {
+            "index": 16,
+            "name": "przycisk ",
+            "pixel_offset": 14635385,
+            "pixel_size": 1188,
+            "metadata_offset": 14636573,
+            "width": 397,
+            "height": 449,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_016_przycisk.raw"
+          },
+          {
+            "index": 17,
+            "name": "przycisk ",
+            "pixel_offset": 14636769,
+            "pixel_size": 1188,
+            "metadata_offset": 14637957,
+            "width": 397,
+            "height": 449,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_017_przycisk.raw"
+          },
+          {
+            "index": 18,
+            "name": "przycisk ",
+            "pixel_offset": 14638153,
+            "pixel_size": 1188,
+            "metadata_offset": 14639341,
+            "width": 397,
+            "height": 449,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_018_przycisk.raw"
+          },
+          {
+            "index": 19,
+            "name": "przycisk ",
+            "pixel_offset": 14639537,
+            "pixel_size": 1188,
+            "metadata_offset": 14640725,
+            "width": 397,
+            "height": 449,
+            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_019_przycisk.raw"
+          }
+        ]
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\script.txt",
+      "size": 19831
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_000_000010c3_board_video_audio.wav",
+      "offset": 4291,
+      "size": 176444,
+      "pcm_size": 176400,
+      "duration_seconds": 4.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 4
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_000_000010c3_board_video_197x190.gif",
+      "offset": 4291,
+      "size": 1020993,
+      "frame_count": 24,
+      "width": 197,
+      "height": 190,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_002_0003fdd0_board_video_audio.wav",
+      "offset": 261584,
+      "size": 264644,
+      "pcm_size": 264600,
+      "duration_seconds": 6.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 6
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_002_0003fdd0_board_video_408x150.gif",
+      "offset": 261584,
+      "size": 3475201,
+      "frame_count": 50,
+      "width": 408,
+      "height": 150,
+      "transparent_index": 59,
+      "header_transparent_index": 59,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_004_000a8ae2_board_video_audio.wav",
+      "offset": 690914,
+      "size": 176444,
+      "pcm_size": 176400,
+      "duration_seconds": 4.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 4
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_004_000a8ae2_board_video_248x85.gif",
+      "offset": 690914,
+      "size": 551651,
+      "frame_count": 23,
+      "width": 248,
+      "height": 85,
+      "transparent_index": 59,
+      "header_transparent_index": 59,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_006_000de9c9_board_video_audio.wav",
+      "offset": 911817,
+      "size": 132344,
+      "pcm_size": 132300,
+      "duration_seconds": 3.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 3
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_006_000de9c9_board_video_178x188.gif",
+      "offset": 911817,
+      "size": 418878,
+      "frame_count": 11,
+      "width": 178,
+      "height": 188,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_008_00147dac_board_video_audio.wav",
+      "offset": 1342892,
+      "size": 396944,
+      "pcm_size": 396900,
+      "duration_seconds": 9.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 9
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_008_00147dac_board_video_211x88.gif",
+      "offset": 1342892,
+      "size": 1688641,
+      "frame_count": 80,
+      "width": 211,
+      "height": 88,
+      "transparent_index": 30,
+      "header_transparent_index": 49,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_010_0022e5eb_board_video_audio.wav",
+      "offset": 2287083,
+      "size": 396944,
+      "pcm_size": 396900,
+      "duration_seconds": 9.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 9
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_010_0022e5eb_board_video_87x335.gif",
+      "offset": 2287083,
+      "size": 2549809,
+      "frame_count": 77,
+      "width": 87,
+      "height": 335,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_012_0032f446_board_video_audio.wav",
+      "offset": 3339334,
+      "size": 441044,
+      "pcm_size": 441000,
+      "duration_seconds": 10.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 10
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_012_0032f446_board_video_180x394.gif",
+      "offset": 3339334,
+      "size": 6925607,
+      "frame_count": 86,
+      "width": 180,
+      "height": 394,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_014_004b8fe0_board_video_audio.wav",
+      "offset": 4952032,
+      "size": 396944,
+      "pcm_size": 396900,
+      "duration_seconds": 9.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 9
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_014_004b8fe0_board_video_70x372.gif",
+      "offset": 4952032,
+      "size": 2160141,
+      "frame_count": 73,
+      "width": 70,
+      "height": 372,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_000_00648ca8.wav",
+      "size": 33874
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_001_0065115a.wav",
+      "size": 16558
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_002_00655268.wav",
+      "size": 32738
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_003_0065d2aa.wav",
+      "size": 358728
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_004_006b4c52.wav",
+      "size": 603270
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_005_00748138.wav",
+      "size": 184204
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_006_00775124.wav",
+      "size": 289840
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_007_007bbdb4.wav",
+      "size": 290928
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_008_00802e84.wav",
+      "size": 363566
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_009_0085bb12.wav",
+      "size": 543940
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_010_008e0836.wav",
+      "size": 950318
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_011_009c88c4.wav",
+      "size": 287906
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_012_00a0edc6.wav",
+      "size": 435172
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_013_00a7920a.wav",
+      "size": 570114
+    },
+    {
+      "kind": "multibitmap_bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_000_niespodzi.bmp",
+      "offset": 11553121,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "niespodzi"
+    },
+    {
+      "kind": "multibitmap_bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_001_niespodzi.bmp",
+      "offset": 11860517,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "niespodzi"
+    },
+    {
+      "kind": "multibitmap_bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_002_niespodzi.bmp",
+      "offset": 12167913,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "niespodzi"
+    },
+    {
+      "kind": "multibitmap_bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_003_niespodzi.bmp",
+      "offset": 12475309,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "niespodzi"
+    },
+    {
+      "kind": "multibitmap_bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_004_niespodzi.bmp",
+      "offset": 12782705,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "niespodzi"
+    },
+    {
+      "kind": "multibitmap_bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_005_niespodzi.bmp",
+      "offset": 13090101,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "niespodzi"
+    },
+    {
+      "kind": "multibitmap_bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_006_niespodzi.bmp",
+      "offset": 13397497,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "niespodzi"
+    },
+    {
+      "kind": "multibitmap_bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_007_niespodzi.bmp",
+      "offset": 13704893,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "niespodzi"
+    },
+    {
+      "kind": "multibitmap_bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_008_niespodzi.bmp",
+      "offset": 14012289,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "niespodzi"
+    },
+    {
+      "kind": "multibitmap_bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_009_niespodzi.bmp",
+      "offset": 14319685,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "niespodzi"
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_010_przycisk.raw",
+      "offset": 14627081,
+      "size": 1188,
+      "pixel_size": 1188,
+      "width": 397,
+      "height": 449,
+      "name": "przycisk "
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_011_przycisk.raw",
+      "offset": 14628465,
+      "size": 1188,
+      "pixel_size": 1188,
+      "width": 397,
+      "height": 449,
+      "name": "przycisk "
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_012_przycisk.raw",
+      "offset": 14629849,
+      "size": 1188,
+      "pixel_size": 1188,
+      "width": 397,
+      "height": 449,
+      "name": "przycisk "
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_013_przycisk.raw",
+      "offset": 14631233,
+      "size": 1188,
+      "pixel_size": 1188,
+      "width": 397,
+      "height": 449,
+      "name": "przycisk "
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_014_przycisk.raw",
+      "offset": 14632617,
+      "size": 1188,
+      "pixel_size": 1188,
+      "width": 397,
+      "height": 449,
+      "name": "przycisk "
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_015_przycisk.raw",
+      "offset": 14634001,
+      "size": 1188,
+      "pixel_size": 1188,
+      "width": 397,
+      "height": 449,
+      "name": "przycisk "
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_016_przycisk.raw",
+      "offset": 14635385,
+      "size": 1188,
+      "pixel_size": 1188,
+      "width": 397,
+      "height": 449,
+      "name": "przycisk "
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_017_przycisk.raw",
+      "offset": 14636769,
+      "size": 1188,
+      "pixel_size": 1188,
+      "width": 397,
+      "height": 449,
+      "name": "przycisk "
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_018_przycisk.raw",
+      "offset": 14638153,
+      "size": 1188,
+      "pixel_size": 1188,
+      "width": 397,
+      "height": 449,
+      "name": "przycisk "
+    },
+    {
+      "kind": "multibitmap_raw",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_019_przycisk.raw",
+      "offset": 14639537,
+      "size": 1188,
+      "pixel_size": 1188,
+      "width": 397,
+      "height": 449,
+      "name": "przycisk "
+    },
+    {
+      "kind": "multibitmap_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\05_MultiBitmap_niespodzi_640x480.gif",
+      "size": 3487931,
+      "frame_count": 10,
+      "width": 640,
+      "height": 480,
+      "delay_centiseconds": 10
+    }
+  ],
+  "script": {
+    "version_offset": 14640917,
+    "version": 1,
+    "string_prefix_offset": 14640921,
+    "text_offset": 14640924,
+    "text_length": 19831,
+    "text_end": 14660755,
+    "engine_state": {
+      "offset": 14660755,
+      "version": 2,
+      "block_count": 11,
+      "handler_offsets": {
+        "field_38": 19467,
+        "field_3c": 0,
+        "field_30": 0,
+        "field_34": 382
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 14660779,
+          "start_offset": 2800,
+          "duplicate_start_offset": 2800,
+          "case_count": 8,
+          "end_or_body_offset": 3434,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 2827
+            },
+            {
+              "value": 1,
+              "target_offset": 2993
+            },
+            {
+              "value": 3,
+              "target_offset": 3192
+            },
+            {
+              "value": 4,
+              "target_offset": 3207
+            },
+            {
+              "value": 5,
+              "target_offset": 3225
+            },
+            {
+              "value": 6,
+              "target_offset": 3300
+            },
+            {
+              "value": 7,
+              "target_offset": 3318
+            },
+            {
+              "value": 8,
+              "target_offset": 3396
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 14660863,
+          "start_offset": 4218,
+          "duplicate_start_offset": 4218,
+          "case_count": 6,
+          "end_or_body_offset": 6112,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 3,
+              "target_offset": 4242
+            },
+            {
+              "value": 4,
+              "target_offset": 4260
+            },
+            {
+              "value": 5,
+              "target_offset": 4418
+            },
+            {
+              "value": 6,
+              "target_offset": 4433
+            },
+            {
+              "value": 7,
+              "target_offset": 4451
+            },
+            {
+              "value": 8,
+              "target_offset": 4994
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "file_offset": 14660931,
+          "start_offset": 6442,
+          "duplicate_start_offset": 6442,
+          "case_count": 3,
+          "end_or_body_offset": 9024,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 6469
+            },
+            {
+              "value": 1,
+              "target_offset": 7155
+            },
+            {
+              "value": 2,
+              "target_offset": 8785
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "file_offset": 14660975,
+          "start_offset": 7426,
+          "duplicate_start_offset": 7426,
+          "case_count": 3,
+          "end_or_body_offset": 8111,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 7471
+            },
+            {
+              "value": 1,
+              "target_offset": 7808
+            },
+            {
+              "value": 2,
+              "target_offset": 7961
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "file_offset": 14661019,
+          "start_offset": 9118,
+          "duplicate_start_offset": 9118,
+          "case_count": 2,
+          "end_or_body_offset": 13086,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 9145
+            },
+            {
+              "value": 11,
+              "target_offset": 12921
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "file_offset": 14661055,
+          "start_offset": 9805,
+          "duplicate_start_offset": 9805,
+          "case_count": 13,
+          "end_or_body_offset": 12876,
+          "aux_offset": 12844,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 9862
+            },
+            {
+              "value": 3,
+              "target_offset": 10004
+            },
+            {
+              "value": 4,
+              "target_offset": 10148
+            },
+            {
+              "value": 5,
+              "target_offset": 10293
+            },
+            {
+              "value": 6,
+              "target_offset": 10438
+            },
+            {
+              "value": 7,
+              "target_offset": 11142
+            },
+            {
+              "value": 8,
+              "target_offset": 11292
+            },
+            {
+              "value": 9,
+              "target_offset": 11701
+            },
+            {
+              "value": 12,
+              "target_offset": 12092
+            },
+            {
+              "value": 13,
+              "target_offset": 12117
+            },
+            {
+              "value": 14,
+              "target_offset": 12142
+            },
+            {
+              "value": 15,
+              "target_offset": 12167
+            },
+            {
+              "value": 16,
+              "target_offset": 12195
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "file_offset": 14661179,
+          "start_offset": 11367,
+          "duplicate_start_offset": 11367,
+          "case_count": 2,
+          "end_or_body_offset": 11634,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 1,
+              "target_offset": 11424
+            },
+            {
+              "value": 2,
+              "target_offset": 11537
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "file_offset": 14661215,
+          "start_offset": 11776,
+          "duplicate_start_offset": 11776,
+          "case_count": 2,
+          "end_or_body_offset": 12044,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 1,
+              "target_offset": 11833
+            },
+            {
+              "value": 2,
+              "target_offset": 11946
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "file_offset": 14661251,
+          "start_offset": 13798,
+          "duplicate_start_offset": 13798,
+          "case_count": 9,
+          "end_or_body_offset": 14641,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 13837
+            },
+            {
+              "value": 3,
+              "target_offset": 13869
+            },
+            {
+              "value": 4,
+              "target_offset": 13968
+            },
+            {
+              "value": 5,
+              "target_offset": 14065
+            },
+            {
+              "value": 6,
+              "target_offset": 14161
+            },
+            {
+              "value": 7,
+              "target_offset": 14265
+            },
+            {
+              "value": 8,
+              "target_offset": 14367
+            },
+            {
+              "value": 9,
+              "target_offset": 14470
+            },
+            {
+              "value": 10,
+              "target_offset": 14574
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "file_offset": 14661343,
+          "start_offset": 15005,
+          "duplicate_start_offset": 15005,
+          "case_count": 3,
+          "end_or_body_offset": 15563,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 15032
+            },
+            {
+              "value": 1,
+              "target_offset": 15306
+            },
+            {
+              "value": 2,
+              "target_offset": 15423
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "file_offset": 14661387,
+          "start_offset": 18576,
+          "duplicate_start_offset": 18576,
+          "case_count": 2,
+          "end_or_body_offset": 18735,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 1,
+              "target_offset": 18600
+            },
+            {
+              "value": 2,
+              "target_offset": 18618
+            }
+          ]
+        }
+      ],
+      "table_count": 1,
+      "table_a": [
+        1154
+      ],
+      "table_b": [
+        8
+      ],
+      "versioned_tail": {
+        "field_44": 19598,
+        "field_48": 0,
+        "field_4c": 19730,
+        "field_50": 0
+      },
+      "end_offset": 14661451
+    }
+  }
+}

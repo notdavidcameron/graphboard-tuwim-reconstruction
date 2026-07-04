@@ -1,0 +1,550 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\KOTEK.BDF",
+  "size": 7410949,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Thursday, November 13, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    8
+  ],
+  "background_flag": 1,
+  "background_color_index": 0,
+  "palette_size": 1024,
+  "dib_size": 0,
+  "component_list_offset": 1165,
+  "component_list_version": 1,
+  "component_count": 3,
+  "components": [
+    {
+      "index": 0,
+      "offset": 1173,
+      "clsid": "B64F3336-5368-11D0-B445-008048EB5D40",
+      "display_name": "Sprite_Holder",
+      "private_offset": 2707,
+      "private_size": 2174104,
+      "embedded": []
+    },
+    {
+      "index": 1,
+      "offset": 2176811,
+      "clsid": "1720D306-6932-11D0-B468-008048EB5D40",
+      "display_name": "Sound_Holder",
+      "private_offset": 2177707,
+      "private_size": 5194380,
+      "embedded": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_000_00213ab7.wav",
+          "offset": 2177719,
+          "size": 737764,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_001_002c7cfb.wav",
+          "offset": 2915579,
+          "size": 708380,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_002_00374c77.wav",
+          "offset": 3624055,
+          "size": 1007524,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_003_0046ac7b.wav",
+          "offset": 4631675,
+          "size": 1302124,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_004_005a8b47.wav",
+          "offset": 5933895,
+          "size": 139276,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_005_005cabb3.wav",
+          "offset": 6073267,
+          "size": 792110,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_006_0068c241.wav",
+          "offset": 6865473,
+          "size": 154394,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_007_006b1dbb.wav",
+          "offset": 7019963,
+          "size": 8108,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_008_006b3dc7.wav",
+          "offset": 7028167,
+          "size": 38994,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_009_006bd679.wav",
+          "offset": 7067257,
+          "size": 304738,
+          "extension": ".wav"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "offset": 7372087,
+      "clsid": "AD45ADB6-5290-11D0-B442-008048EB5D40",
+      "display_name": "Text_Holder",
+      "private_offset": 7373713,
+      "private_size": 13304,
+      "embedded": []
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\script.txt",
+      "size": 23229
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_000_00213ab7.wav",
+      "size": 737764
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_001_002c7cfb.wav",
+      "size": 708380
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_002_00374c77.wav",
+      "size": 1007524
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_003_0046ac7b.wav",
+      "size": 1302124
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_004_005a8b47.wav",
+      "size": 139276
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_005_005cabb3.wav",
+      "size": 792110
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_006_0068c241.wav",
+      "size": 154394
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_007_006b1dbb.wav",
+      "size": 8108
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_008_006b3dc7.wav",
+      "size": 38994
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_009_006bd679.wav",
+      "size": 304738
+    }
+  ],
+  "script": {
+    "version_offset": 7387017,
+    "version": 1,
+    "string_prefix_offset": 7387021,
+    "text_offset": 7387024,
+    "text_length": 23229,
+    "text_end": 7410253,
+    "engine_state": {
+      "offset": 7410253,
+      "version": 2,
+      "block_count": 10,
+      "handler_offsets": {
+        "field_38": 1376,
+        "field_3c": 0,
+        "field_30": 0,
+        "field_34": 341
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 7410277,
+          "start_offset": 2488,
+          "duplicate_start_offset": 2488,
+          "case_count": 6,
+          "end_or_body_offset": 3130,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 2521
+            },
+            {
+              "value": 1,
+              "target_offset": 2645
+            },
+            {
+              "value": 2,
+              "target_offset": 2726
+            },
+            {
+              "value": 3,
+              "target_offset": 2807
+            },
+            {
+              "value": 4,
+              "target_offset": 2888
+            },
+            {
+              "value": 5,
+              "target_offset": 2969
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 7410345,
+          "start_offset": 4963,
+          "duplicate_start_offset": 4963,
+          "case_count": 6,
+          "end_or_body_offset": 5586,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 4985
+            },
+            {
+              "value": 1,
+              "target_offset": 5123
+            },
+            {
+              "value": 2,
+              "target_offset": 5206
+            },
+            {
+              "value": 3,
+              "target_offset": 5290
+            },
+            {
+              "value": 4,
+              "target_offset": 5375
+            },
+            {
+              "value": 5,
+              "target_offset": 5460
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "file_offset": 7410413,
+          "start_offset": 9011,
+          "duplicate_start_offset": 9011,
+          "case_count": 3,
+          "end_or_body_offset": 11761,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 9038
+            },
+            {
+              "value": 1,
+              "target_offset": 9653
+            },
+            {
+              "value": 2,
+              "target_offset": 11594
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "file_offset": 7410457,
+          "start_offset": 9924,
+          "duplicate_start_offset": 9924,
+          "case_count": 3,
+          "end_or_body_offset": 10768,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 9969
+            },
+            {
+              "value": 1,
+              "target_offset": 10306
+            },
+            {
+              "value": 2,
+              "target_offset": 10618
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "file_offset": 7410501,
+          "start_offset": 11855,
+          "duplicate_start_offset": 11855,
+          "case_count": 2,
+          "end_or_body_offset": 16758,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 11882
+            },
+            {
+              "value": 11,
+              "target_offset": 16593
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "file_offset": 7410537,
+          "start_offset": 12542,
+          "duplicate_start_offset": 12542,
+          "case_count": 13,
+          "end_or_body_offset": 16548,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 12599
+            },
+            {
+              "value": 3,
+              "target_offset": 12739
+            },
+            {
+              "value": 4,
+              "target_offset": 12886
+            },
+            {
+              "value": 5,
+              "target_offset": 13031
+            },
+            {
+              "value": 6,
+              "target_offset": 13175
+            },
+            {
+              "value": 7,
+              "target_offset": 14038
+            },
+            {
+              "value": 8,
+              "target_offset": 14188
+            },
+            {
+              "value": 9,
+              "target_offset": 14932
+            },
+            {
+              "value": 19,
+              "target_offset": 15657
+            },
+            {
+              "value": 20,
+              "target_offset": 15682
+            },
+            {
+              "value": 21,
+              "target_offset": 15707
+            },
+            {
+              "value": 22,
+              "target_offset": 15732
+            },
+            {
+              "value": 23,
+              "target_offset": 15760
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "file_offset": 7410661,
+          "start_offset": 14263,
+          "duplicate_start_offset": 14263,
+          "case_count": 5,
+          "end_or_body_offset": 14865,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 19,
+              "target_offset": 14321
+            },
+            {
+              "value": 20,
+              "target_offset": 14433
+            },
+            {
+              "value": 21,
+              "target_offset": 14545
+            },
+            {
+              "value": 22,
+              "target_offset": 14657
+            },
+            {
+              "value": 23,
+              "target_offset": 14769
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "file_offset": 7410721,
+          "start_offset": 15007,
+          "duplicate_start_offset": 15007,
+          "case_count": 5,
+          "end_or_body_offset": 15609,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 19,
+              "target_offset": 15065
+            },
+            {
+              "value": 20,
+              "target_offset": 15177
+            },
+            {
+              "value": 21,
+              "target_offset": 15289
+            },
+            {
+              "value": 22,
+              "target_offset": 15401
+            },
+            {
+              "value": 23,
+              "target_offset": 15513
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "file_offset": 7410781,
+          "start_offset": 17416,
+          "duplicate_start_offset": 17416,
+          "case_count": 9,
+          "end_or_body_offset": 18262,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 17455
+            },
+            {
+              "value": 3,
+              "target_offset": 17487
+            },
+            {
+              "value": 4,
+              "target_offset": 17586
+            },
+            {
+              "value": 5,
+              "target_offset": 17683
+            },
+            {
+              "value": 6,
+              "target_offset": 17779
+            },
+            {
+              "value": 7,
+              "target_offset": 17883
+            },
+            {
+              "value": 8,
+              "target_offset": 17985
+            },
+            {
+              "value": 9,
+              "target_offset": 18088
+            },
+            {
+              "value": 10,
+              "target_offset": 18192
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "file_offset": 7410873,
+          "start_offset": 18675,
+          "duplicate_start_offset": 18675,
+          "case_count": 3,
+          "end_or_body_offset": 19365,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 18702
+            },
+            {
+              "value": 1,
+              "target_offset": 18976
+            },
+            {
+              "value": 2,
+              "target_offset": 19225
+            }
+          ]
+        }
+      ],
+      "table_count": 1,
+      "table_a": [
+        1634
+      ],
+      "table_b": [
+        8
+      ],
+      "versioned_tail": {
+        "field_44": 22952,
+        "field_48": 0,
+        "field_4c": 23129,
+        "field_50": 0
+      },
+      "end_offset": 7410945
+    }
+  }
+}

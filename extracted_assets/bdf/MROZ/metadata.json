@@ -1,0 +1,719 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MROZ.BDF",
+  "size": 3543068,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Tuesday, November 04, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    8
+  ],
+  "background_flag": 1,
+  "background_color_index": 215,
+  "palette_size": 1024,
+  "dib_size": 0,
+  "component_list_offset": 1165,
+  "component_list_version": 1,
+  "component_count": 7,
+  "components": [
+    {
+      "index": 0,
+      "offset": 1173,
+      "clsid": "B2CDC8D6-5359-11D0-B445-008048EB5D40",
+      "display_name": "Panorama_Holder",
+      "private_offset": 3295,
+      "private_size": 708112,
+      "embedded": []
+    },
+    {
+      "index": 1,
+      "offset": 711407,
+      "clsid": "0D8A5736-5337-11D0-B444-008048EB5D40",
+      "display_name": "Bitmap_Holder",
+      "private_offset": 712539,
+      "private_size": 340472,
+      "embedded": []
+    },
+    {
+      "index": 2,
+      "offset": 1053011,
+      "clsid": "B64F3336-5368-11D0-B445-008048EB5D40",
+      "display_name": "Sprite_Holder",
+      "private_offset": 1054545,
+      "private_size": 834644,
+      "embedded": []
+    },
+    {
+      "index": 3,
+      "offset": 1889189,
+      "clsid": "2F3C5846-5413-11D0-B447-008048EB5D40",
+      "display_name": "Transparent_Video_Holder",
+      "private_offset": 1890363,
+      "private_size": 526907,
+      "embedded": [
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_000_001cd847_board_video_audio.wav",
+          "offset": 1890375,
+          "size": 132344,
+          "pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 3
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_000_001cd847_board_video_129x142.gif",
+          "offset": 1890375,
+          "size": 271396,
+          "frame_count": 13,
+          "width": 129,
+          "height": 142,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_002_002188c2_board_video_audio.wav",
+          "offset": 2197698,
+          "size": 88244,
+          "pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 2
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_002_002188c2_board_video_69x64.gif",
+          "offset": 2197698,
+          "size": 46116,
+          "frame_count": 9,
+          "width": 69,
+          "height": 64,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_004_00234f2e_board_video_audio.wav",
+          "offset": 2314030,
+          "size": 88244,
+          "pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 2
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_004_00234f2e_board_video_51x40.gif",
+          "offset": 2314030,
+          "size": 21852,
+          "frame_count": 9,
+          "width": 51,
+          "height": 40,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        }
+      ],
+      "board_video_marker_offset": 1890375,
+      "board_video_streams": [
+        {
+          "index": 0,
+          "offset": 1890375,
+          "end_offset": 2177566,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 129,
+          "video_height": 142,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 13,
+          "header_record_count": 15,
+          "record_count": 16,
+          "audio_record_count": 3,
+          "video_record_count": 13,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_000_001cd847_board_video_audio.wav",
+          "audio_pcm_size": 132300,
+          "duration_seconds": 3.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_000_001cd847_board_video_129x142.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 1,
+          "offset": 2177566,
+          "end_offset": 2178822,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 129,
+          "video_height": 142,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 13,
+          "header_record_count": 15,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 2,
+          "offset": 2197698,
+          "end_offset": 2308034,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 69,
+          "video_height": 64,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 9,
+          "header_record_count": 10,
+          "record_count": 11,
+          "audio_record_count": 2,
+          "video_record_count": 9,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_002_002188c2_board_video_audio.wav",
+          "audio_pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_002_002188c2_board_video_69x64.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 3,
+          "offset": 2308034,
+          "end_offset": 2309290,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 69,
+          "video_height": 64,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 9,
+          "header_record_count": 10,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 4,
+          "offset": 2314030,
+          "end_offset": 2413806,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 51,
+          "video_height": 40,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 9,
+          "header_record_count": 10,
+          "record_count": 11,
+          "audio_record_count": 2,
+          "video_record_count": 9,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_004_00234f2e_board_video_audio.wav",
+          "audio_pcm_size": 88200,
+          "duration_seconds": 2.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_004_00234f2e_board_video_51x40.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 5,
+          "offset": 2413806,
+          "end_offset": 2415062,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 51,
+          "video_height": 40,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 9,
+          "header_record_count": 10,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "offset": 2417270,
+      "clsid": "DA768116-5341-11D0-B444-008048EB5D40",
+      "display_name": "HotSpot_Holder",
+      "private_offset": 2418375,
+      "private_size": 1029,
+      "embedded": []
+    },
+    {
+      "index": 5,
+      "offset": 2419404,
+      "clsid": "1720D306-6932-11D0-B468-008048EB5D40",
+      "display_name": "Sound_Holder",
+      "private_offset": 2420300,
+      "private_size": 1090128,
+      "embedded": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_000_0024ee58.wav",
+          "offset": 2420312,
+          "size": 349442,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_001_002a43ba.wav",
+          "offset": 2769850,
+          "size": 10920,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_002_002a6ec2.wav",
+          "offset": 2780866,
+          "size": 52436,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_003_002b3bf6.wav",
+          "offset": 2833398,
+          "size": 16852,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_004_002b7e2a.wav",
+          "offset": 2850346,
+          "size": 241476,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_005_002f2dce.wav",
+          "offset": 3091918,
+          "size": 32504,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_006_002fad26.wav",
+          "offset": 3124518,
+          "size": 385818,
+          "extension": ".wav"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "offset": 3510428,
+      "clsid": "AD45ADB6-5290-11D0-B442-008048EB5D40",
+      "display_name": "Text_Holder",
+      "private_offset": 3512054,
+      "private_size": 13275,
+      "embedded": []
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\script.txt",
+      "size": 17244
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_000_001cd847_board_video_audio.wav",
+      "offset": 1890375,
+      "size": 132344,
+      "pcm_size": 132300,
+      "duration_seconds": 3.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 3
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_000_001cd847_board_video_129x142.gif",
+      "offset": 1890375,
+      "size": 271396,
+      "frame_count": 13,
+      "width": 129,
+      "height": 142,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_002_002188c2_board_video_audio.wav",
+      "offset": 2197698,
+      "size": 88244,
+      "pcm_size": 88200,
+      "duration_seconds": 2.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 2
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_002_002188c2_board_video_69x64.gif",
+      "offset": 2197698,
+      "size": 46116,
+      "frame_count": 9,
+      "width": 69,
+      "height": 64,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_004_00234f2e_board_video_audio.wav",
+      "offset": 2314030,
+      "size": 88244,
+      "pcm_size": 88200,
+      "duration_seconds": 2.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 2
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_004_00234f2e_board_video_51x40.gif",
+      "offset": 2314030,
+      "size": 21852,
+      "frame_count": 9,
+      "width": 51,
+      "height": 40,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_000_0024ee58.wav",
+      "size": 349442
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_001_002a43ba.wav",
+      "size": 10920
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_002_002a6ec2.wav",
+      "size": 52436
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_003_002b3bf6.wav",
+      "size": 16852
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_004_002b7e2a.wav",
+      "size": 241476
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_005_002f2dce.wav",
+      "size": 32504
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_006_002fad26.wav",
+      "size": 385818
+    }
+  ],
+  "script": {
+    "version_offset": 3525329,
+    "version": 1,
+    "string_prefix_offset": 3525333,
+    "text_offset": 3525336,
+    "text_length": 17244,
+    "text_end": 3542580,
+    "engine_state": {
+      "offset": 3542580,
+      "version": 2,
+      "block_count": 6,
+      "handler_offsets": {
+        "field_38": 16881,
+        "field_3c": 7068,
+        "field_30": 0,
+        "field_34": 397
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 3542604,
+          "start_offset": 2821,
+          "duplicate_start_offset": 2821,
+          "case_count": 10,
+          "end_or_body_offset": 6021,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 2850
+            },
+            {
+              "value": 1,
+              "target_offset": 3146
+            },
+            {
+              "value": 2,
+              "target_offset": 3465
+            },
+            {
+              "value": 3,
+              "target_offset": 3544
+            },
+            {
+              "value": 4,
+              "target_offset": 4170
+            },
+            {
+              "value": 5,
+              "target_offset": 4791
+            },
+            {
+              "value": 6,
+              "target_offset": 4870
+            },
+            {
+              "value": 9,
+              "target_offset": 4965
+            },
+            {
+              "value": 8,
+              "target_offset": 5287
+            },
+            {
+              "value": 7,
+              "target_offset": 5600
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 3542704,
+          "start_offset": 6449,
+          "duplicate_start_offset": 6449,
+          "case_count": 7,
+          "end_or_body_offset": 6971,
+          "aux_offset": 6933,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 6473
+            },
+            {
+              "value": 1,
+              "target_offset": 6491
+            },
+            {
+              "value": 3,
+              "target_offset": 6584
+            },
+            {
+              "value": 4,
+              "target_offset": 6602
+            },
+            {
+              "value": 7,
+              "target_offset": 6698
+            },
+            {
+              "value": 8,
+              "target_offset": 6776
+            },
+            {
+              "value": 9,
+              "target_offset": 6854
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "file_offset": 3542780,
+          "start_offset": 7415,
+          "duplicate_start_offset": 7415,
+          "case_count": 3,
+          "end_or_body_offset": 9605,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 7442
+            },
+            {
+              "value": 1,
+              "target_offset": 8057
+            },
+            {
+              "value": 2,
+              "target_offset": 9438
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "file_offset": 3542824,
+          "start_offset": 9699,
+          "duplicate_start_offset": 9699,
+          "case_count": 2,
+          "end_or_body_offset": 12073,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 9726
+            },
+            {
+              "value": 11,
+              "target_offset": 11908
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "file_offset": 3542860,
+          "start_offset": 10372,
+          "duplicate_start_offset": 10372,
+          "case_count": 8,
+          "end_or_body_offset": 11863,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 10423
+            },
+            {
+              "value": 3,
+              "target_offset": 10554
+            },
+            {
+              "value": 4,
+              "target_offset": 10689
+            },
+            {
+              "value": 5,
+              "target_offset": 10821
+            },
+            {
+              "value": 6,
+              "target_offset": 10952
+            },
+            {
+              "value": 7,
+              "target_offset": 11480
+            },
+            {
+              "value": 8,
+              "target_offset": 11618
+            },
+            {
+              "value": 9,
+              "target_offset": 11755
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "file_offset": 3542944,
+          "start_offset": 12783,
+          "duplicate_start_offset": 12783,
+          "case_count": 9,
+          "end_or_body_offset": 13626,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 12822
+            },
+            {
+              "value": 3,
+              "target_offset": 12854
+            },
+            {
+              "value": 4,
+              "target_offset": 12953
+            },
+            {
+              "value": 5,
+              "target_offset": 13050
+            },
+            {
+              "value": 6,
+              "target_offset": 13146
+            },
+            {
+              "value": 7,
+              "target_offset": 13250
+            },
+            {
+              "value": 8,
+              "target_offset": 13352
+            },
+            {
+              "value": 9,
+              "target_offset": 13455
+            },
+            {
+              "value": 10,
+              "target_offset": 13559
+            }
+          ]
+        }
+      ],
+      "table_count": 1,
+      "table_a": [
+        1627
+      ],
+      "table_b": [
+        8
+      ],
+      "versioned_tail": {
+        "field_44": 17011,
+        "field_48": 0,
+        "field_4c": 17144,
+        "field_50": 0
+      },
+      "end_offset": 3543064
+    }
+  }
+}

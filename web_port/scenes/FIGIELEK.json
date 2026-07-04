@@ -1,0 +1,827 @@
+{
+  "id": "FIGIELEK",
+  "title": "FIGIELEK",
+  "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\FIGIELEK.BDF",
+  "pageRect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "background": {
+    "colorIndex": 0,
+    "flag": 0,
+    "bmpPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\background.bmp",
+    "bmpUrl": "../extracted_assets/bdf/FIGIELEK/background.bmp",
+    "palettePath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\background_palette.bin",
+    "paletteUrl": "../extracted_assets/bdf/FIGIELEK/background_palette.bin"
+  },
+  "components": [
+    {
+      "id": "00_Transparent_Video_Holder",
+      "type": "Transparent_Video_Holder",
+      "index": 0,
+      "z": 0,
+      "visible": true,
+      "rect": {
+        "x": 46,
+        "y": 48,
+        "width": 546,
+        "height": 432
+      },
+      "geometryConfidence": "serialized_entries",
+      "sourceOffset": 309353,
+      "privateOffset": 310527,
+      "privateSize": 9580037,
+      "primaryAssetUrl": "../extracted_assets/bdf/FIGIELEK/animations/00_Transparent_Video_Holder_000_0004bd0b_board_video_196x62.gif",
+      "assets": [
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\animations\\00_Transparent_Video_Holder_000_0004bd0b_board_video_196x62.gif",
+          "url": "../extracted_assets/bdf/FIGIELEK/animations/00_Transparent_Video_Holder_000_0004bd0b_board_video_196x62.gif",
+          "width": 196,
+          "height": 62,
+          "frameCount": 14,
+          "offset": 310539,
+          "name": null,
+          "id": 0,
+          "rect": {
+            "x": 229,
+            "y": 126,
+            "width": 196,
+            "height": 62
+          },
+          "z": 1,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 548149,
+          "streamOffset": 310539,
+          "originalRect": {
+            "x": 229,
+            "y": 126,
+            "width": 196,
+            "height": 62
+          },
+          "originalZ": 1
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\animations\\00_Transparent_Video_Holder_002_00089219_board_video_546x432.gif",
+          "url": "../extracted_assets/bdf/FIGIELEK/animations/00_Transparent_Video_Holder_002_00089219_board_video_546x432.gif",
+          "width": 546,
+          "height": 432,
+          "frameCount": 8,
+          "offset": 561689,
+          "name": null,
+          "id": 2,
+          "rect": {
+            "x": 46,
+            "y": 48,
+            "width": 546,
+            "height": 432
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 1589734,
+          "streamOffset": 561689,
+          "originalRect": {
+            "x": 46,
+            "y": 48,
+            "width": 546,
+            "height": 432
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\animations\\00_Transparent_Video_Holder_004_001be412_board_video_417x202.gif",
+          "url": "../extracted_assets/bdf/FIGIELEK/animations/00_Transparent_Video_Holder_004_001be412_board_video_417x202.gif",
+          "width": 417,
+          "height": 202,
+          "frameCount": 30,
+          "offset": 1827858,
+          "name": null,
+          "id": 4,
+          "rect": {
+            "x": 117,
+            "y": 83,
+            "width": 417,
+            "height": 202
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 2645404,
+          "streamOffset": 1827858,
+          "originalRect": {
+            "x": 117,
+            "y": 83,
+            "width": 417,
+            "height": 202
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\animations\\00_Transparent_Video_Holder_006_0029ae70_board_video_308x198.gif",
+          "url": "../extracted_assets/bdf/FIGIELEK/animations/00_Transparent_Video_Holder_006_0029ae70_board_video_308x198.gif",
+          "width": 308,
+          "height": 198,
+          "frameCount": 35,
+          "offset": 2731632,
+          "name": null,
+          "id": 6,
+          "rect": {
+            "x": 160,
+            "y": 181,
+            "width": 308,
+            "height": 198
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 3625723,
+          "streamOffset": 2731632,
+          "originalRect": {
+            "x": 160,
+            "y": 181,
+            "width": 308,
+            "height": 198
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\animations\\00_Transparent_Video_Holder_008_0038469f_board_video_211x193.gif",
+          "url": "../extracted_assets/bdf/FIGIELEK/animations/00_Transparent_Video_Holder_008_0038469f_board_video_211x193.gif",
+          "width": 211,
+          "height": 193,
+          "frameCount": 29,
+          "offset": 3688095,
+          "name": null,
+          "id": 8,
+          "rect": {
+            "x": 223,
+            "y": 179,
+            "width": 211,
+            "height": 193
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 4169057,
+          "streamOffset": 3688095,
+          "originalRect": {
+            "x": 223,
+            "y": 179,
+            "width": 211,
+            "height": 193
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\animations\\00_Transparent_Video_Holder_010_004042a1_board_video_182x162.gif",
+          "url": "../extracted_assets/bdf/FIGIELEK/animations/00_Transparent_Video_Holder_010_004042a1_board_video_182x162.gif",
+          "width": 182,
+          "height": 162,
+          "frameCount": 18,
+          "offset": 4211361,
+          "name": null,
+          "id": 10,
+          "rect": {
+            "x": 356,
+            "y": 212,
+            "width": 182,
+            "height": 162
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 4488617,
+          "streamOffset": 4211361,
+          "originalRect": {
+            "x": 356,
+            "y": 212,
+            "width": 182,
+            "height": 162
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\animations\\00_Transparent_Video_Holder_012_0044f785_board_video_278x177.gif",
+          "url": "../extracted_assets/bdf/FIGIELEK/animations/00_Transparent_Video_Holder_012_0044f785_board_video_278x177.gif",
+          "width": 278,
+          "height": 177,
+          "frameCount": 30,
+          "offset": 4519813,
+          "name": null,
+          "id": 12,
+          "rect": {
+            "x": 81,
+            "y": 223,
+            "width": 278,
+            "height": 177
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 5003305,
+          "streamOffset": 4519813,
+          "originalRect": {
+            "x": 81,
+            "y": 223,
+            "width": 278,
+            "height": 177
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\animations\\00_Transparent_Video_Holder_014_004d1f2d_board_video_455x201.gif",
+          "url": "../extracted_assets/bdf/FIGIELEK/animations/00_Transparent_Video_Holder_014_004d1f2d_board_video_455x201.gif",
+          "width": 455,
+          "height": 201,
+          "frameCount": 21,
+          "offset": 5054253,
+          "name": null,
+          "id": 14,
+          "rect": {
+            "x": 82,
+            "y": 173,
+            "width": 455,
+            "height": 201
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 5431260,
+          "streamOffset": 5054253,
+          "originalRect": {
+            "x": 82,
+            "y": 173,
+            "width": 455,
+            "height": 201
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\animations\\00_Transparent_Video_Holder_016_00544b50_board_video_114x168.gif",
+          "url": "../extracted_assets/bdf/FIGIELEK/animations/00_Transparent_Video_Holder_016_00544b50_board_video_114x168.gif",
+          "width": 114,
+          "height": 168,
+          "frameCount": 19,
+          "offset": 5524304,
+          "name": null,
+          "id": 16,
+          "rect": {
+            "x": 155,
+            "y": 200,
+            "width": 114,
+            "height": 168
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 5787271,
+          "streamOffset": 5524304,
+          "originalRect": {
+            "x": 155,
+            "y": 200,
+            "width": 114,
+            "height": 168
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\animations\\00_Transparent_Video_Holder_018_0058a013_board_video_105x138.gif",
+          "url": "../extracted_assets/bdf/FIGIELEK/animations/00_Transparent_Video_Holder_018_0058a013_board_video_105x138.gif",
+          "width": 105,
+          "height": 138,
+          "frameCount": 20,
+          "offset": 5808147,
+          "name": null,
+          "id": 18,
+          "rect": {
+            "x": 356,
+            "y": 234,
+            "width": 105,
+            "height": 138
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 5999756,
+          "streamOffset": 5808147,
+          "originalRect": {
+            "x": 356,
+            "y": 234,
+            "width": 105,
+            "height": 138
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\animations\\00_Transparent_Video_Holder_020_005bcc30_board_video_252x238.gif",
+          "url": "../extracted_assets/bdf/FIGIELEK/animations/00_Transparent_Video_Holder_020_005bcc30_board_video_252x238.gif",
+          "width": 252,
+          "height": 238,
+          "frameCount": 30,
+          "offset": 6016048,
+          "name": null,
+          "id": 20,
+          "rect": {
+            "x": 207,
+            "y": 158,
+            "width": 252,
+            "height": 238
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 6546654,
+          "streamOffset": 6016048,
+          "originalRect": {
+            "x": 207,
+            "y": 158,
+            "width": 252,
+            "height": 238
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\animations\\00_Transparent_Video_Holder_022_0064d492_board_video_254x174.gif",
+          "url": "../extracted_assets/bdf/FIGIELEK/animations/00_Transparent_Video_Holder_022_0064d492_board_video_254x174.gif",
+          "width": 254,
+          "height": 174,
+          "frameCount": 30,
+          "offset": 6608018,
+          "name": null,
+          "id": 22,
+          "rect": {
+            "x": 256,
+            "y": 198,
+            "width": 254,
+            "height": 174
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 7390285,
+          "streamOffset": 6608018,
+          "originalRect": {
+            "x": 256,
+            "y": 198,
+            "width": 254,
+            "height": 174
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\animations\\00_Transparent_Video_Holder_024_007177b9_board_video_347x227.gif",
+          "url": "../extracted_assets/bdf/FIGIELEK/animations/00_Transparent_Video_Holder_024_007177b9_board_video_347x227.gif",
+          "width": 347,
+          "height": 227,
+          "frameCount": 44,
+          "offset": 7436217,
+          "name": null,
+          "id": 24,
+          "rect": {
+            "x": 139,
+            "y": 148,
+            "width": 347,
+            "height": 227
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 8544021,
+          "streamOffset": 7436217,
+          "originalRect": {
+            "x": 139,
+            "y": 148,
+            "width": 347,
+            "height": 227
+          },
+          "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\animations\\00_Transparent_Video_Holder_026_00839915_board_video_546x432.gif",
+          "url": "../extracted_assets/bdf/FIGIELEK/animations/00_Transparent_Video_Holder_026_00839915_board_video_546x432.gif",
+          "width": 546,
+          "height": 432,
+          "frameCount": 8,
+          "offset": 8624405,
+          "name": null,
+          "id": 26,
+          "rect": {
+            "x": 46,
+            "y": 48,
+            "width": 546,
+            "height": 432
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 9652444,
+          "streamOffset": 8624405,
+          "originalRect": {
+            "x": 46,
+            "y": 48,
+            "width": 546,
+            "height": 432
+          },
+          "originalZ": 0
+        }
+      ],
+      "audio": [
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\embedded\\00_Transparent_Video_Holder_000_0004bd0b_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/FIGIELEK/embedded/00_Transparent_Video_Holder_000_0004bd0b_board_video_audio.wav",
+          "durationSeconds": 3.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 310539,
+          "id": 0
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\embedded\\00_Transparent_Video_Holder_002_00089219_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/FIGIELEK/embedded/00_Transparent_Video_Holder_002_00089219_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 561689,
+          "id": 2
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\embedded\\00_Transparent_Video_Holder_004_001be412_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/FIGIELEK/embedded/00_Transparent_Video_Holder_004_001be412_board_video_audio.wav",
+          "durationSeconds": 4.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 1827858,
+          "id": 4
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\embedded\\00_Transparent_Video_Holder_006_0029ae70_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/FIGIELEK/embedded/00_Transparent_Video_Holder_006_0029ae70_board_video_audio.wav",
+          "durationSeconds": 5.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 2731632,
+          "id": 6
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\embedded\\00_Transparent_Video_Holder_008_0038469f_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/FIGIELEK/embedded/00_Transparent_Video_Holder_008_0038469f_board_video_audio.wav",
+          "durationSeconds": 4.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 3688095,
+          "id": 8
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\embedded\\00_Transparent_Video_Holder_010_004042a1_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/FIGIELEK/embedded/00_Transparent_Video_Holder_010_004042a1_board_video_audio.wav",
+          "durationSeconds": 3.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 4211361,
+          "id": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\embedded\\00_Transparent_Video_Holder_012_0044f785_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/FIGIELEK/embedded/00_Transparent_Video_Holder_012_0044f785_board_video_audio.wav",
+          "durationSeconds": 4.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 4519813,
+          "id": 12
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\embedded\\00_Transparent_Video_Holder_014_004d1f2d_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/FIGIELEK/embedded/00_Transparent_Video_Holder_014_004d1f2d_board_video_audio.wav",
+          "durationSeconds": 4.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 5054253,
+          "id": 14
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\embedded\\00_Transparent_Video_Holder_016_00544b50_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/FIGIELEK/embedded/00_Transparent_Video_Holder_016_00544b50_board_video_audio.wav",
+          "durationSeconds": 3.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 5524304,
+          "id": 16
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\embedded\\00_Transparent_Video_Holder_018_0058a013_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/FIGIELEK/embedded/00_Transparent_Video_Holder_018_0058a013_board_video_audio.wav",
+          "durationSeconds": 3.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 5808147,
+          "id": 18
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\embedded\\00_Transparent_Video_Holder_020_005bcc30_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/FIGIELEK/embedded/00_Transparent_Video_Holder_020_005bcc30_board_video_audio.wav",
+          "durationSeconds": 4.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 6016048,
+          "id": 20
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\embedded\\00_Transparent_Video_Holder_022_0064d492_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/FIGIELEK/embedded/00_Transparent_Video_Holder_022_0064d492_board_video_audio.wav",
+          "durationSeconds": 4.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 6608018,
+          "id": 22
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\embedded\\00_Transparent_Video_Holder_024_007177b9_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/FIGIELEK/embedded/00_Transparent_Video_Holder_024_007177b9_board_video_audio.wav",
+          "durationSeconds": 6.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 7436217,
+          "id": 24
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\embedded\\00_Transparent_Video_Holder_026_00839915_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/FIGIELEK/embedded/00_Transparent_Video_Holder_026_00839915_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 8624405,
+          "id": 26
+        }
+      ]
+    },
+    {
+      "id": "01_Text_Holder",
+      "type": "Text_Holder",
+      "index": 1,
+      "z": 1,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "sourceOffset": 9890564,
+      "privateOffset": 9892190,
+      "privateSize": 12276,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "02_Sound_Holder",
+      "type": "Sound_Holder",
+      "index": 2,
+      "z": 0,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "geometryConfidence": "not_visual",
+      "sourceOffset": 9904466,
+      "privateOffset": 9905362,
+      "privateSize": 104260,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\embedded\\02_Sound_Holder_000_009724de.wav",
+          "url": "../extracted_assets/bdf/FIGIELEK/embedded/02_Sound_Holder_000_009724de.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 9905374,
+          "id": 0
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\embedded\\02_Sound_Holder_001_00979bbe.wav",
+          "url": "../extracted_assets/bdf/FIGIELEK/embedded/02_Sound_Holder_001_00979bbe.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 9935806,
+          "id": 1
+        }
+      ]
+    }
+  ],
+  "script": {
+    "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK\\script.txt",
+    "url": "../extracted_assets/bdf/FIGIELEK/script.txt",
+    "handlers": [
+      {
+        "name": "OnOpenPage",
+        "signature": "OnOpenPage()"
+      },
+      {
+        "name": "OnClosePage",
+        "signature": "OnClosePage(void)"
+      },
+      {
+        "name": "SetTextMode",
+        "signature": "SetTextMode()"
+      },
+      {
+        "name": "if",
+        "signature": "if(kurtyna)"
+      },
+      {
+        "name": "if",
+        "signature": "if(textMode)"
+      },
+      {
+        "name": "Transparent_Video_Holder.TheEnd",
+        "signature": "Transparent_Video_Holder.TheEnd(int videoID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(textMode && (videoID!=13))"
+      },
+      {
+        "name": "if",
+        "signature": "if(videoID==1)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(videoID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(videoID==1)"
+      },
+      {
+        "name": "if",
+        "signature": "if(theEnd)"
+      },
+      {
+        "name": "Text_Holder.PlayMark",
+        "signature": "Text_Holder.PlayMark(int textID,int markNo)"
+      },
+      {
+        "name": "if",
+        "signature": "if(markNo<7)"
+      },
+      {
+        "name": "Group.HotSpot_Holder.MouseMoveIn",
+        "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(rectID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(toolbar)"
+      },
+      {
+        "name": "if",
+        "signature": "if(toolbarPhase==0)"
+      },
+      {
+        "name": "if",
+        "signature": "if(txtHotSpotOn==0)"
+      },
+      {
+        "name": "Group.Sprite_Holder.InPlace",
+        "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(spriteID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(x==480)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(toolbarCase)"
+      },
+      {
+        "name": "if",
+        "signature": "if(x==0)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseMoveIn",
+        "signature": "Group.Sprite_Holder.MouseMoveIn(int spriteID)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseMoveOut",
+        "signature": "Group.Sprite_Holder.MouseMoveOut(int spriteID)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseClickOnDown",
+        "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(spriteID==11)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(spriteID)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseClickOnUp",
+        "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(toolbarPhase==0)"
+      },
+      {
+        "name": "Group.Sprite_Holder.EndAnimation",
+        "signature": "Group.Sprite_Holder.EndAnimation(int spriteID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(toolbarPhase==0)"
+      },
+      {
+        "name": "Text_Holder.ScrollTextUp",
+        "signature": "Text_Holder.ScrollTextUp(int textID)"
+      },
+      {
+        "name": "Text_Holder.ScrollTextDown",
+        "signature": "Text_Holder.ScrollTextDown(int textID)"
+      },
+      {
+        "name": "Text_Holder.EndScrollText",
+        "signature": "Text_Holder.EndScrollText(int textID)"
+      },
+      {
+        "name": "Text_Holder.MouseMoveIn",
+        "signature": "Text_Holder.MouseMoveIn(int textID)"
+      },
+      {
+        "name": "Text_Holder.MouseMoveOut",
+        "signature": "Text_Holder.MouseMoveOut(int textID)"
+      },
+      {
+        "name": "Text_Holder.ClickOnText",
+        "signature": "Text_Holder.ClickOnText(int textID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(playStatus)"
+      },
+      {
+        "name": "Text_Holder.EndOfSynchroText",
+        "signature": "Text_Holder.EndOfSynchroText(int textID)"
+      },
+      {
+        "name": "Sound_Holder.EndPlaySound",
+        "signature": "Sound_Holder.EndPlaySound(int soundID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(soundID==0 && textMode)"
+      },
+      {
+        "name": "OnTimer",
+        "signature": "OnTimer(void)"
+      },
+      {
+        "name": "OnLButtonUp",
+        "signature": "OnLButtonUp(int x,int y)"
+      },
+      {
+        "name": "OnRButtonDown",
+        "signature": "OnRButtonDown(int x,int y)"
+      }
+    ],
+    "rawText": "//###########################################################################\n\n//Script code\n\n//###########################################################################\n\n\n\n\n\nOnOpenPage()\n\n{\n\n\t// Add your component and variables initialization code here\n\n\t// WARNING: All variables definied on this function are global for this page\n\n//   if(IsProject()==0)    int textMode = 0;\n\n   int textMode = 0;\n\n\n\n\n\n   int theEnd=0;\n\n   int playNo=0;\n\n\n\n   // 0 - kurtyna na dole, 1 - kurtyna na gorze\n\n   int kurtyna = 0;\n\n\n\n   LoadGroup(\"Cursors.grp\");\n\n   SetCursor(0);\n\n\n\n//#############################################################################\n\n   int toolbar=0;\n\n   int toolbarCase=0;\n\n   int toolbarPhase=0;\n\n   int txtHotSpotOn=0;\n\n   int playStatus=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   SetTextMode();\n\n//############################################################################\n\n//   SetTimer(5000);\n\n   FadeScreen(1,1000);\n\n}\n\n\n\n\n\nvoid OnClosePage(void)\n\n{\n\n\t// Add your close page handler code here\n\n\n\n}\n\n\n\n\n\n\n\nvoid SetTextMode()\n\n{\n\n   Transparent_Video_Holder.Stop();\n\n   Text_Holder.HideText(0);\n\n   Text_Holder.StopSynchroText(0);\n\n   theEnd=0;\n\n   playNo=0;\n\n\n\n   Transparent_Video_Holder.HideFirsLastVideoFrame(0);\n\n\n\n\n\n   if( kurtyna )\n\n   {\n\n      Transparent_Video_Holder.Play(13,0);\n\n      Transparent_Video_Holder.HideFirsLastVideoFrame(1);\n\n      return;\n\n   }\n\n\n\n   if( textMode )\n\n   {\n\n      Transparent_Video_Holder.Play(1,0);\n\n      Transparent_Video_Holder.HideFirsLastVideoFrame(13);\n\n   }\n\n   else\n\n   {\n\n      Transparent_Video_Holder.Play(0,0);\n\n   }\n\n}\n\n\n\n\n\n \n\nvoid Transparent_Video_Holder.TheEnd(int videoID)\n\n{\n\n   if( textMode && (videoID!=13) )\n\n   {\n\n      if( videoID==1 )\n\n      {\n\n            playStatus=1;\n\n            kurtyna = 1;\n\n            Sound_Holder.PlayDSound(0);\n\n            Text_Holder.SetTextOffsets(0,0,0);\n\n            Text_Holder.DisableMouse(0);\n\n            Text_Holder.ShowText(0);\n\n      }\n\n      return;\n\n   }\n\n\n\n   switch(videoID)\n\n   {\n\n      case 0:\n\n      case 1:\n\n         if( videoID == 1 ) \n\n            kurtyna = 1;\n\n\n\n         playNo++;\n\n         Transparent_Video_Holder.Play(playNo,0);\n\n         Transparent_Video_Holder.HideFirsLastVideoFrame(playNo-1);\n\n         if(videoID==1)\n\n         {\n\n            if(textMode)\n\n               Text_Holder.ShowText(0);\n\n            else\n\n               Text_Holder.HideText(0);\n\n            Text_Holder.SetTextOffsets(0,0,0);\n\n            Text_Holder.PlaySynchroText(0);\n\n         }\n\n         break;\n\n      case 5:\n\n      case 8:\n\n      case 10:\n\n      case 11:\n\n         Transparent_Video_Holder.Play(playNo,0);\n\n         Transparent_Video_Holder.HideFirsLastVideoFrame(playNo-1);\n\n         playNo++;\n\n         break;\n\n\n\n      case 13:\n\n         kurtyna = 0;\n\n         Transparent_Video_Holder.ResetVideo(1);\n\n         Transparent_Video_Holder.HideFirsLastVideoFrame(13);\n\n         SetTextMode();\n\n\n\n         /*\n\n         if(theEnd)\n\n         {\n\n            FadeScreen(0,1000);\n\n            LoadPage(\"wyborw.bdf\");\n\n         }\n\n         */\n\n         break;\n\n   }\n\n}\n\n\n\nvoid Text_Holder.PlayMark(int textID,int markNo)\n\n{\n\n   if( textMode ) return;\n\n\n\n   if(markNo<7)\n\n   {\n\n        Transparent_Video_Holder.Play(playNo,0);\n\n        Transparent_Video_Holder.HideFirsLastVideoFrame(playNo-1);\n\n        playNo++;\n\n   }\n\n}\n\n\n\n//############################################################# T O O L B A R #######\n\n//#############################################################---------------#######\n\nvoid Group.HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n   switch(rectID)\n\n   {\n\n      case 0:\n\n         Group.HotSpot_Holder.DisableHotSpot(0);\n\n         Group.Sprite_Holder.DisableTimers();\n\n\n\n         Group.Sprite_Holder.GotoXY(0,480,0);\n\n         Group.Sprite_Holder.GotoXY(2,544,14);\n\n         Group.Sprite_Holder.GotoXY(3,584,14);\n\n         Group.Sprite_Holder.GotoXY(4,515,84);\n\n         Group.Sprite_Holder.GotoXY(5,559,210);\n\n         Group.Sprite_Holder.GotoXY(6,558,282);\n\n         Group.Sprite_Holder.GotoXY(7,557,404);\n\n   \n\n         Group.Sprite_Holder.SynchronizeTimers();\n\n         Group.Sprite_Holder.EnableTimers();\n\n         Group.Sound_Holder.PlayDSound(0);\n\n         break;\n\n      case 1:\n\n         if(toolbar)\n\n         {\n\n            Group.Sprite_Holder.DisableTimers();\n\n   \n\n            if(toolbarPhase==0)\n\n            {\n\n               Group.Sprite_Holder.GotoXY(0,640,0);\n\n               Group.Sprite_Holder.GotoXY(2,704,14);\n\n               Group.Sprite_Holder.GotoXY(3,744,14);\n\n               Group.Sprite_Holder.GotoXY(4,675,84);\n\n               Group.Sprite_Holder.GotoXY(5,719,210);\n\n               Group.Sprite_Holder.GotoXY(6,718,282);\n\n               Group.Sprite_Holder.GotoXY(7,717,404);\n\n            }\n\n            else\n\n            {\n\n               Group.Sprite_Holder.GotoXY(0,640,0);\n\n               Group.Sprite_Holder.GotoXY(8,693,22);\n\n               Group.Sprite_Holder.GotoXY(9,708,156);\n\n               Group.Sprite_Holder.GotoXY(7,717,404);\n\n            }\n\n            Group.Sprite_Holder.SynchronizeTimers();\n\n            Group.Sprite_Holder.EnableTimers();\n\n            Group.Sound_Holder.PlayDSound(0);\n\n            toolbar=0;\n\n            toolbarPhase=0;\n\n         }\n\n         else\n\n         {\n\n            Group.Sprite_Holder.GotoXY(11,-56,-70);\n\n            if(toolbarCase!=11)   Group.Sound_Holder.PlayDSound(2);\n\n            SetCursor(0);\n\n         }\n\n         txtHotSpotOn=0;\n\n         Group.HotSpot_Holder.DisableHotSpot(1);\n\n         Group.HotSpot_Holder.EnableHotSpot(0);\n\n         toolbarCase=0;\n\n         break;\n\n      case 2:\n\n         if(txtHotSpotOn==0)   \n\n         {\n\n            Group.Sound_Holder.PlayDSound(3);\t//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n\n            Group.Sprite_Holder.GotoXY(11,0,0);\n\n         }\n\n         break;\n\n   }\n\n}\n\n\n\n\n\nvoid Group.Sprite_Holder.InPlace(int spriteID,int x,int y)\n\n{\n\n   switch(spriteID)\n\n   {\n\n      case 0:\n\n         if(x==480)\n\n         {\n\n            toolbar=1;\n\n            Group.HotSpot_Holder.EnableHotSpot(1);\n\n            SetCursor(1);\n\n         }\n\n         else\n\n         {\n\n            SetCursor(0);\n\n            Group.Sprite_Holder.ChangePhase(2,0);\n\n            Group.Sprite_Holder.ChangePhase(3,0);\n\n            Group.Sprite_Holder.ChangePhase(4,0);\n\n            Group.Sprite_Holder.ChangePhase(5,0);\n\n            Group.Sprite_Holder.ChangePhase(6,0);\n\n            Group.Sprite_Holder.ChangePhase(7,0);\n\n            Group.Sprite_Holder.ChangePhase(8,0);\n\n            Group.Sprite_Holder.ChangePhase(9,0);\n\n            switch(toolbarCase)\n\n            {\n\n            case 2:   //lewo   \n\n               FadeScreen(0,1000);\n\n               LoadPage(\"dyzio.bdf\");\n\n               break;\n\n            case 3:   //prawo\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"wies.bdf\");\n\n               break;\n\n            case 4:   //recytacja   \n\n               FadeScreen(0,1000);\n\n               LoadPage(\"fig_r.bdf\");\n\n               break;\n\n            case 5:   //roznice\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"figiel_c.bdf\");\n\n               break;\n\n            case 6:   //puzzle\n\n               Group.Sprite_Holder.DisableTimers();\n\n\n\n               Group.Sprite_Holder.GotoXY(0,480,0);\n\n               Group.Sprite_Holder.GotoXY(8,533,22);\n\n               Group.Sprite_Holder.GotoXY(9,548,156);\n\n               Group.Sprite_Holder.GotoXY(7,557,404);\n\n\n\n               Group.Sprite_Holder.SynchronizeTimers();\n\n               Group.Sprite_Holder.EnableTimers();\n\n               Group.Sound_Holder.PlayDSound(0);\n\n               toolbarPhase=1;\n\n               break;\n\n            case 7:   //Plansza wyboru\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"Wyborw.bdf\");\n\n               break;\n\n            case 8:   //puzzle trudne\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"figielp1.bdf\");\n\n               break;\n\n            case 9:   //puzzle latwe\n\n                FadeScreen(0,1000);\n\n               LoadPage(\"figielp2.bdf\");\n\n               break;\n\n            }\n\n         }\n\n         break;\n\n      case 11:\n\n         if(x==0)\n\n         {\n\n            Group.HotSpot_Holder.EnableHotSpot(1);\n\n            txtHotSpotOn=1;\n\n            SetCursor(1);\n\n         }\n\n         break;\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseMoveIn(int spriteID)\n\n{\n\n   if(spriteID && toolbar)\n\n      SetCursor(1);\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseMoveOut(int spriteID)\n\n{\n\n   if(spriteID)\n\n      SetCursor(0);\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnDown(int spriteID)\n\n{\n\n   if(spriteID==0)   return;\n\n   if(spriteID==11)\n\n   {\n\n      Group.Sound_Holder.PlayDSound(2);\t\n\n      Group.Sprite_Holder.GotoXY(11,-56,-70);\n\n      toolbarCase=spriteID;\n\n      SetCursor(0);\n\n      if(textMode)    textMode=0;\n\n      else            textMode=1;\n\n      SetTextMode();\n\n   }\n\n   else\n\n   {\n\n      Group.HotSpot_Holder.DisableHotSpot(1);\n\n      Group.Sprite_Holder.ChangePhase(spriteID,1);\n\n      switch(spriteID)\t\n\n      {\n\n         case 2:   //lewo\n\n         case 3:   //prawo \n\n            Group.Sound_Holder.PlayDSound(4);\n\n            break;\n\n         case 4:   //recytacja\n\n            Group.Sound_Holder.PlayDSound(5);\n\n            break;\n\n         case 5:   //roznice\n\n            Group.Sound_Holder.PlayDSound(6);\n\n            break;\n\n         case 6:   //puzzle\n\n            Group.Sound_Holder.PlayDSound(7);\n\n            break;\n\n         case 7:   //plansza glowna\n\n            Group.Sound_Holder.PlayDSound(8);\n\n            break;\n\n         case 8:   //puzzle latwe\n\n            Group.Sound_Holder.PlayDSound(9);\n\n            break;\n\n         case 9:   //puzzle trudne\n\n            Group.Sound_Holder.PlayDSound(10);\n\n            break;\n\n         case 10:  //parent window\n\n            Group.Sound_Holder.PlayDSound(4);\n\n            break;\n\n      }\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnUp(int spriteID)\n\n{\n\n   if(spriteID==0 || spriteID==5 || spriteID==6 || spriteID==8 || spriteID==9 || spriteID==11)   return;\n\n   Group.Sprite_Holder.DisableTimers();\n\n\n\n   if(toolbarPhase==0)\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(2,704,14);\n\n      Group.Sprite_Holder.GotoXY(3,744,14);\n\n      Group.Sprite_Holder.GotoXY(4,675,84);\n\n      Group.Sprite_Holder.GotoXY(5,719,210);\n\n      Group.Sprite_Holder.GotoXY(6,718,282);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n   }\n\n   else\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(8,693,22);\n\n      Group.Sprite_Holder.GotoXY(9,708,156);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n      toolbarPhase=0;\n\n   }\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID;\n\n}\n\n\n\nvoid Group.Sprite_Holder.EndAnimation(int spriteID)\n\n{\n\n   if(spriteID!=5 && spriteID!=6 && spriteID!=8 && spriteID!=9)   return;\n\n\n\n   Group.Sprite_Holder.ChangePhase(spriteID,2);\n\n\n\n   Group.Sprite_Holder.DisableTimers();\n\n\n\n   if(toolbarPhase==0)\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(2,704,14);\n\n      Group.Sprite_Holder.GotoXY(3,744,14);\n\n      Group.Sprite_Holder.GotoXY(4,675,84);\n\n      Group.Sprite_Holder.GotoXY(5,719,210);\n\n      Group.Sprite_Holder.GotoXY(6,718,282);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n   }\n\n   else\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(8,693,22);\n\n      Group.Sprite_Holder.GotoXY(9,708,156);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n      toolbarPhase=0;\n\n   }\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID;\n\n}\n\n//#############################################################\n\n//############################################################# \n\n\n\n\n\n\n\n\n\n\n\n \n\nvoid Text_Holder.ScrollTextUp(int textID)\n\n{\n\n   SetCursor(3);\n\n}\n\n\n\n \n\nvoid Text_Holder.ScrollTextDown(int textID)\n\n{\n\n   SetCursor(4);\n\n}\n\n\n\n \n\nvoid Text_Holder.EndScrollText(int textID)\n\n{\n\n   if(playStatus)  SetCursor(2);\n\n   else            SetCursor(5);\n\n}\n\n\n\n \n\nvoid Text_Holder.MouseMoveIn(int textID)\n\n{\n\n   if(playStatus)\n\n      SetCursor(2);\n\n   else\n\n      SetCursor(5);\n\n}\n\n\n\n \n\nvoid Text_Holder.MouseMoveOut(int textID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\n \n\nvoid Text_Holder.ClickOnText(int textID)\n\n{\n\n   if(playStatus)\n\n   {\n\n      playStatus=0;\n\n      Sound_Holder.Stop(0);\n\n      Text_Holder.StopSynchroText(0);\n\n      SetCursor(5);\n\n   }\n\n   else\n\n   {\n\n      playStatus=1;\n\n      Text_Holder.PlaySynchroText(0);\n\n      SetCursor(2);\n\n   }\n\n}\n\n\n\n \n\nvoid Text_Holder.EndOfSynchroText(int textID)\n\n{\n\n   playStatus=0;\n\n   if(textMode)   SetCursor(5);\n\n   else           SetCursor(0);\n\n}\n\n\n\n \n\nvoid Sound_Holder.EndPlaySound(int soundID)\n\n{\n\n   if(soundID==0 && textMode)\n\n   { \n\n      playStatus=1;\n\n      Text_Holder.EnableMouse(0);\n\n      Text_Holder.PlaySynchroText(0);\n\n   }\n\n}\n\n \n\nvoid OnTimer(void)\n\n{\n\n        //Add your command handler code here\n\n   SetTimer(0);\n\n   Sound_Holder.PlayDSound(1);\n\n\n\n}\n\n \n\nvoid OnLButtonUp(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   SetTimer(0);\n\n   Sound_Holder.Stop(1);\n\n}\n\n \n\nvoid OnRButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   Sound_Holder.PlayDSound(1);\n\n}\n\n "
+  },
+  "warnings": [
+    "1 component(s) have unknown geometry and default to 0,0.",
+    "Recovered 14 TransparentVideoHolder asset rect(s) from serialized entries."
+  ]
+}

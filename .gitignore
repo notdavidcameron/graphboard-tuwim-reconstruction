@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local editor/OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local agent scratch space
+.agents/
+
+# Duplicate collected/conversion outputs. Canonical assets remain under
+# extracted_assets/bdf, extracted_assets/direct, and extracted_assets/grp.
+extracted_assets/all_images/
+extracted_assets/all_images_jpeg/

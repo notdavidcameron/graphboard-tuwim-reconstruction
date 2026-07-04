@@ -1,0 +1,199 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\THEEND.BDF",
+  "size": 1722936,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Friday, November 14, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    8
+  ],
+  "background_flag": 0,
+  "background_color_index": 0,
+  "palette_size": 1024,
+  "dib_size": 308264,
+  "component_list_offset": 309429,
+  "component_list_version": 1,
+  "component_count": 3,
+  "components": [
+    {
+      "index": 0,
+      "offset": 309437,
+      "clsid": "DA768116-5341-11D0-B444-008048EB5D40",
+      "display_name": "HotSpot_Holder",
+      "private_offset": 310542,
+      "private_size": 221,
+      "embedded": []
+    },
+    {
+      "index": 1,
+      "offset": 310763,
+      "clsid": "2F3C5846-5413-11D0-B447-008048EB5D40",
+      "display_name": "Transparent_Video_Holder",
+      "private_offset": 311937,
+      "private_size": 1101007,
+      "embedded": [
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\embedded\\01_Transparent_Video_Holder_000_0004c28d_board_video_audio.wav",
+          "offset": 311949,
+          "size": 837944,
+          "pcm_size": 837900,
+          "duration_seconds": 19.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 19
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\animations\\01_Transparent_Video_Holder_000_0004c28d_board_video_300x125.gif",
+          "offset": 311949,
+          "size": 14693661,
+          "frame_count": 345,
+          "width": 300,
+          "height": 125,
+          "transparent_index": 0,
+          "header_transparent_index": 0,
+          "delay_centiseconds": 10
+        }
+      ],
+      "board_video_marker_offset": 311949,
+      "board_video_streams": [
+        {
+          "index": 0,
+          "offset": 311949,
+          "end_offset": 1374060,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 300,
+          "video_height": 125,
+          "header_transparent_index": 0,
+          "frames_per_second": 10,
+          "frame_count": 345,
+          "header_record_count": 363,
+          "record_count": 364,
+          "audio_record_count": 19,
+          "video_record_count": 345,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\embedded\\01_Transparent_Video_Holder_000_0004c28d_board_video_audio.wav",
+          "audio_pcm_size": 837900,
+          "duration_seconds": 19.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\animations\\01_Transparent_Video_Holder_000_0004c28d_board_video_300x125.gif",
+          "transparent_index": 0
+        },
+        {
+          "index": 1,
+          "offset": 1374060,
+          "end_offset": 1375316,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 300,
+          "video_height": 125,
+          "header_transparent_index": 0,
+          "frames_per_second": 10,
+          "frame_count": 345,
+          "header_record_count": 363,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "offset": 1412944,
+      "clsid": "0D8A5736-5337-11D0-B444-008048EB5D40",
+      "display_name": "Bitmap_Holder",
+      "private_offset": 1414076,
+      "private_size": 307356,
+      "embedded": []
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "dib",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\background.dib",
+      "size": 308264
+    },
+    {
+      "kind": "bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\background.bmp",
+      "size": 308278
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\script.txt",
+      "size": 1449
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\embedded\\01_Transparent_Video_Holder_000_0004c28d_board_video_audio.wav",
+      "offset": 311949,
+      "size": 837944,
+      "pcm_size": 837900,
+      "duration_seconds": 19.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 19
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\animations\\01_Transparent_Video_Holder_000_0004c28d_board_video_300x125.gif",
+      "offset": 311949,
+      "size": 14693661,
+      "frame_count": 345,
+      "width": 300,
+      "height": 125,
+      "transparent_index": 0,
+      "header_transparent_index": 0,
+      "delay_centiseconds": 10
+    }
+  ],
+  "script": {
+    "version_offset": 1721432,
+    "version": 1,
+    "string_prefix_offset": 1721436,
+    "text_offset": 1721439,
+    "text_length": 1449,
+    "text_end": 1722888,
+    "engine_state": {
+      "offset": 1722888,
+      "version": 2,
+      "block_count": 0,
+      "handler_offsets": {
+        "field_38": 546,
+        "field_3c": 0,
+        "field_30": 0,
+        "field_34": 339
+      },
+      "blocks": [],
+      "table_count": 0,
+      "table_a": [],
+      "table_b": [],
+      "versioned_tail": {
+        "field_44": 0,
+        "field_48": 0,
+        "field_4c": 0,
+        "field_50": 0
+      },
+      "end_offset": 1722932
+    }
+  }
+}

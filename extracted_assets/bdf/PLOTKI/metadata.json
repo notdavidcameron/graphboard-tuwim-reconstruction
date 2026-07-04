@@ -1,0 +1,806 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\PLOTKI.BDF",
+  "size": 11726846,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Thursday, November 06, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    8
+  ],
+  "background_flag": 0,
+  "background_color_index": 0,
+  "palette_size": 1024,
+  "dib_size": 308184,
+  "component_list_offset": 309349,
+  "component_list_version": 1,
+  "component_count": 4,
+  "components": [
+    {
+      "index": 0,
+      "offset": 309357,
+      "clsid": "B64F3336-5368-11D0-B445-008048EB5D40",
+      "display_name": "Sprite_Holder",
+      "private_offset": 310891,
+      "private_size": 203696,
+      "embedded": []
+    },
+    {
+      "index": 1,
+      "offset": 514587,
+      "clsid": "2F3C5846-5413-11D0-B447-008048EB5D40",
+      "display_name": "Transparent_Video_Holder",
+      "private_offset": 515761,
+      "private_size": 10289013,
+      "embedded": [
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\01_Transparent_Video_Holder_000_0007debd_board_video_audio.wav",
+          "offset": 515773,
+          "size": 264644,
+          "pcm_size": 264600,
+          "duration_seconds": 6.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 6
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\animations\\01_Transparent_Video_Holder_000_0007debd_board_video_505x364.gif",
+          "offset": 515773,
+          "size": 3756861,
+          "frame_count": 18,
+          "width": 505,
+          "height": 364,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\01_Transparent_Video_Holder_002_0027260c_board_video_audio.wav",
+          "offset": 2565644,
+          "size": 264644,
+          "pcm_size": 264600,
+          "duration_seconds": 6.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 6
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\animations\\01_Transparent_Video_Holder_002_0027260c_board_video_505x364.gif",
+          "offset": 2565644,
+          "size": 3756861,
+          "frame_count": 18,
+          "width": 505,
+          "height": 364,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\01_Transparent_Video_Holder_004_004690ee_board_video_audio.wav",
+          "offset": 4624622,
+          "size": 264644,
+          "pcm_size": 264600,
+          "duration_seconds": 6.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 6
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\animations\\01_Transparent_Video_Holder_004_004690ee_board_video_505x364.gif",
+          "offset": 4624622,
+          "size": 3756861,
+          "frame_count": 18,
+          "width": 505,
+          "height": 364,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\01_Transparent_Video_Holder_006_006626a1_board_video_audio.wav",
+          "offset": 6694561,
+          "size": 264644,
+          "pcm_size": 264600,
+          "duration_seconds": 6.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 6
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\animations\\01_Transparent_Video_Holder_006_006626a1_board_video_505x364.gif",
+          "offset": 6694561,
+          "size": 3756861,
+          "frame_count": 18,
+          "width": 505,
+          "height": 364,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\01_Transparent_Video_Holder_008_0085a84c_board_video_audio.wav",
+          "offset": 8759372,
+          "size": 264644,
+          "pcm_size": 264600,
+          "duration_seconds": 6.0,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "audio_record_count": 6
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\animations\\01_Transparent_Video_Holder_008_0085a84c_board_video_505x364.gif",
+          "offset": 8759372,
+          "size": 3756861,
+          "frame_count": 18,
+          "width": 505,
+          "height": 364,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        }
+      ],
+      "board_video_marker_offset": 515773,
+      "board_video_streams": [
+        {
+          "index": 0,
+          "offset": 515773,
+          "end_offset": 2379344,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 505,
+          "video_height": 364,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 18,
+          "header_record_count": 23,
+          "record_count": 24,
+          "audio_record_count": 6,
+          "video_record_count": 18,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\01_Transparent_Video_Holder_000_0007debd_board_video_audio.wav",
+          "audio_pcm_size": 264600,
+          "duration_seconds": 6.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\animations\\01_Transparent_Video_Holder_000_0007debd_board_video_505x364.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 1,
+          "offset": 2379344,
+          "end_offset": 2380600,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 505,
+          "video_height": 364,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 18,
+          "header_record_count": 23,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 2,
+          "offset": 2565644,
+          "end_offset": 4438322,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 505,
+          "video_height": 364,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 18,
+          "header_record_count": 23,
+          "record_count": 24,
+          "audio_record_count": 6,
+          "video_record_count": 18,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\01_Transparent_Video_Holder_002_0027260c_board_video_audio.wav",
+          "audio_pcm_size": 264600,
+          "duration_seconds": 6.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\animations\\01_Transparent_Video_Holder_002_0027260c_board_video_505x364.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 3,
+          "offset": 4438322,
+          "end_offset": 4439578,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 505,
+          "video_height": 364,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 18,
+          "header_record_count": 23,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 4,
+          "offset": 4624622,
+          "end_offset": 6508261,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 505,
+          "video_height": 364,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 18,
+          "header_record_count": 23,
+          "record_count": 24,
+          "audio_record_count": 6,
+          "video_record_count": 18,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\01_Transparent_Video_Holder_004_004690ee_board_video_audio.wav",
+          "audio_pcm_size": 264600,
+          "duration_seconds": 6.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\animations\\01_Transparent_Video_Holder_004_004690ee_board_video_505x364.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 5,
+          "offset": 6508261,
+          "end_offset": 6509517,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 505,
+          "video_height": 364,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 18,
+          "header_record_count": 23,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 6,
+          "offset": 6694561,
+          "end_offset": 8573072,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 505,
+          "video_height": 364,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 18,
+          "header_record_count": 23,
+          "record_count": 24,
+          "audio_record_count": 6,
+          "video_record_count": 18,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\01_Transparent_Video_Holder_006_006626a1_board_video_audio.wav",
+          "audio_pcm_size": 264600,
+          "duration_seconds": 6.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\animations\\01_Transparent_Video_Holder_006_006626a1_board_video_505x364.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 7,
+          "offset": 8573072,
+          "end_offset": 8574328,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 505,
+          "video_height": 364,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 18,
+          "header_record_count": 23,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 8,
+          "offset": 8759372,
+          "end_offset": 10618478,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 505,
+          "video_height": 364,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 18,
+          "header_record_count": 23,
+          "record_count": 24,
+          "audio_record_count": 6,
+          "video_record_count": 18,
+          "stop_reason": "next_stream",
+          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\01_Transparent_Video_Holder_008_0085a84c_board_video_audio.wav",
+          "audio_pcm_size": 264600,
+          "duration_seconds": 6.0,
+          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\animations\\01_Transparent_Video_Holder_008_0085a84c_board_video_505x364.gif",
+          "transparent_index": 30
+        },
+        {
+          "index": 9,
+          "offset": 10618478,
+          "end_offset": 10619734,
+          "sample_rate": 22050,
+          "bits_per_sample": 16,
+          "channels": 1,
+          "byte_rate": 44100,
+          "video_width": 505,
+          "video_height": 364,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 18,
+          "header_record_count": 23,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "offset": 10804774,
+      "clsid": "AD45ADB6-5290-11D0-B442-008048EB5D40",
+      "display_name": "Text_Holder",
+      "private_offset": 10806400,
+      "private_size": 11809,
+      "embedded": []
+    },
+    {
+      "index": 3,
+      "offset": 10818209,
+      "clsid": "1720D306-6932-11D0-B468-008048EB5D40",
+      "display_name": "Sound_Holder",
+      "private_offset": 10819105,
+      "private_size": 892640,
+      "embedded": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_000_00a5162d.wav",
+          "offset": 10819117,
+          "size": 94380,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_001_00a68739.wav",
+          "offset": 10913593,
+          "size": 313268,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_002_00ab4f4d.wav",
+          "offset": 11226957,
+          "size": 68322,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_003_00ac5a8f.wav",
+          "offset": 11295375,
+          "size": 40294,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_004_00acf855.wav",
+          "offset": 11335765,
+          "size": 89326,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_005_00ae55a3.wav",
+          "offset": 11425187,
+          "size": 35556,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_006_00aee0e7.wav",
+          "offset": 11460839,
+          "size": 38244,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_007_00af76ab.wav",
+          "offset": 11499179,
+          "size": 212474,
+          "extension": ".wav"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "dib",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\background.dib",
+      "size": 308184
+    },
+    {
+      "kind": "bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\background.bmp",
+      "size": 308198
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\script.txt",
+      "size": 14782
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\01_Transparent_Video_Holder_000_0007debd_board_video_audio.wav",
+      "offset": 515773,
+      "size": 264644,
+      "pcm_size": 264600,
+      "duration_seconds": 6.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 6
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\animations\\01_Transparent_Video_Holder_000_0007debd_board_video_505x364.gif",
+      "offset": 515773,
+      "size": 3756861,
+      "frame_count": 18,
+      "width": 505,
+      "height": 364,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\01_Transparent_Video_Holder_002_0027260c_board_video_audio.wav",
+      "offset": 2565644,
+      "size": 264644,
+      "pcm_size": 264600,
+      "duration_seconds": 6.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 6
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\animations\\01_Transparent_Video_Holder_002_0027260c_board_video_505x364.gif",
+      "offset": 2565644,
+      "size": 3756861,
+      "frame_count": 18,
+      "width": 505,
+      "height": 364,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\01_Transparent_Video_Holder_004_004690ee_board_video_audio.wav",
+      "offset": 4624622,
+      "size": 264644,
+      "pcm_size": 264600,
+      "duration_seconds": 6.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 6
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\animations\\01_Transparent_Video_Holder_004_004690ee_board_video_505x364.gif",
+      "offset": 4624622,
+      "size": 3756861,
+      "frame_count": 18,
+      "width": 505,
+      "height": 364,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\01_Transparent_Video_Holder_006_006626a1_board_video_audio.wav",
+      "offset": 6694561,
+      "size": 264644,
+      "pcm_size": 264600,
+      "duration_seconds": 6.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 6
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\animations\\01_Transparent_Video_Holder_006_006626a1_board_video_505x364.gif",
+      "offset": 6694561,
+      "size": 3756861,
+      "frame_count": 18,
+      "width": 505,
+      "height": 364,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_pcm_wave",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\01_Transparent_Video_Holder_008_0085a84c_board_video_audio.wav",
+      "offset": 8759372,
+      "size": 264644,
+      "pcm_size": 264600,
+      "duration_seconds": 6.0,
+      "sample_rate": 22050,
+      "bits_per_sample": 16,
+      "channels": 1,
+      "audio_record_count": 6
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\animations\\01_Transparent_Video_Holder_008_0085a84c_board_video_505x364.gif",
+      "offset": 8759372,
+      "size": 3756861,
+      "frame_count": 18,
+      "width": 505,
+      "height": 364,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_000_00a5162d.wav",
+      "size": 94380
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_001_00a68739.wav",
+      "size": 313268
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_002_00ab4f4d.wav",
+      "size": 68322
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_003_00ac5a8f.wav",
+      "size": 40294
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_004_00acf855.wav",
+      "size": 89326
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_005_00ae55a3.wav",
+      "size": 35556
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_006_00aee0e7.wav",
+      "size": 38244
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_007_00af76ab.wav",
+      "size": 212474
+    }
+  ],
+  "script": {
+    "version_offset": 11711745,
+    "version": 1,
+    "string_prefix_offset": 11711749,
+    "text_offset": 11711752,
+    "text_length": 14782,
+    "text_end": 11726534,
+    "engine_state": {
+      "offset": 11726534,
+      "version": 2,
+      "block_count": 4,
+      "handler_offsets": {
+        "field_38": 14068,
+        "field_3c": 0,
+        "field_30": 0,
+        "field_34": 387
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 11726558,
+          "start_offset": 4200,
+          "duplicate_start_offset": 4200,
+          "case_count": 3,
+          "end_or_body_offset": 6390,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 4227
+            },
+            {
+              "value": 1,
+              "target_offset": 4842
+            },
+            {
+              "value": 2,
+              "target_offset": 6223
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 11726602,
+          "start_offset": 6484,
+          "duplicate_start_offset": 6484,
+          "case_count": 2,
+          "end_or_body_offset": 8863,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 6511
+            },
+            {
+              "value": 11,
+              "target_offset": 8698
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "file_offset": 11726638,
+          "start_offset": 7157,
+          "duplicate_start_offset": 7157,
+          "case_count": 8,
+          "end_or_body_offset": 8653,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 7208
+            },
+            {
+              "value": 3,
+              "target_offset": 7338
+            },
+            {
+              "value": 4,
+              "target_offset": 7471
+            },
+            {
+              "value": 5,
+              "target_offset": 7605
+            },
+            {
+              "value": 6,
+              "target_offset": 7738
+            },
+            {
+              "value": 7,
+              "target_offset": 8266
+            },
+            {
+              "value": 8,
+              "target_offset": 8404
+            },
+            {
+              "value": 9,
+              "target_offset": 8543
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "file_offset": 11726722,
+          "start_offset": 9574,
+          "duplicate_start_offset": 9574,
+          "case_count": 9,
+          "end_or_body_offset": 10417,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 9613
+            },
+            {
+              "value": 3,
+              "target_offset": 9645
+            },
+            {
+              "value": 4,
+              "target_offset": 9744
+            },
+            {
+              "value": 5,
+              "target_offset": 9841
+            },
+            {
+              "value": 6,
+              "target_offset": 9937
+            },
+            {
+              "value": 7,
+              "target_offset": 10041
+            },
+            {
+              "value": 8,
+              "target_offset": 10143
+            },
+            {
+              "value": 9,
+              "target_offset": 10246
+            },
+            {
+              "value": 10,
+              "target_offset": 10350
+            }
+          ]
+        }
+      ],
+      "table_count": 1,
+      "table_a": [
+        1204
+      ],
+      "table_b": [
+        8
+      ],
+      "versioned_tail": {
+        "field_44": 14551,
+        "field_48": 0,
+        "field_4c": 14682,
+        "field_50": 0
+      },
+      "end_offset": 11726842
+    }
+  }
+}

@@ -1,0 +1,551 @@
+//###########################################################################
+//Script code
+//###########################################################################
+
+
+OnOpenPage()
+{
+	// Add your component and variables initialization code here
+	// WARNING: All variables definied on this function are global for this page
+   
+   LoadGroup("cursors.grp");
+   SetCursor(0);
+
+   int curPlay=-1;
+   int toolbar=0;
+   int exit=0;
+   int menu=0;
+   Group.HotSpot_Holder.DisableHotSpot(1);
+   int tmp=26;
+   int load=0;
+   int rozwija=0;
+   while(tmp<51)
+   {
+      HotSpot_Holder.DisableHotSpot(tmp);
+      tmp++;
+   }
+
+   Sound_Holder.PlayDSound(25);
+
+   int hots=0;
+   int deep;
+//   int play=Random(0,24);
+//   Transparent_Video_Holder.GetDeep(play,&deep);
+//   Transparent_Video_Holder.SetDeep(play,deep+2);
+//   Transparent_Video_Holder.Play(play,0);
+//   curPlay=play;
+   FadeScreen(1,1000);
+}
+
+
+void OnClosePage(void)
+{
+	// Add your close page handler code here
+   FadeScreen(0,1000);
+}
+
+
+void Transparent_Video_Holder.TheEnd(int videoID)
+{
+   if(videoID<25)
+   {
+//      Transparent_Video_Holder.GetDeep(videoID,&deep);
+//      Transparent_Video_Holder.SetDeep(videoID,deep-2);
+      if(hots==0)
+      {
+//         int play=videoID;
+//         while(play==videoID)   play=Random(0,24);
+//         Transparent_Video_Holder.GetDeep(play,&deep);
+//         Transparent_Video_Holder.SetDeep(play,deep+2);
+//         Transparent_Video_Holder.Play(play,0);
+         return;
+      }
+      return;
+   }
+   if(videoID==25)
+   {
+      Group.HotSpot_Holder.EnableHotSpot(1);
+      tmp=26;
+      rozwija=0;
+      while(tmp<51)
+      {
+         HotSpot_Holder.EnableHotSpot(tmp);
+         tmp++;
+      }
+   }
+   else
+   {
+      if(videoID==26)
+      {
+         rozwija=0;
+         if(toolbar==0)     Group.HotSpot_Holder.DisableHotSpot(1);
+//         if(hots==0)
+//         {
+//            int play=videoID;
+//            while(play==videoID)   play=Random(0,24);
+//            Transparent_Video_Holder.SetDeep(play,2);
+//            Transparent_Video_Holder.Play(play,0);
+//         }
+      }
+   }
+}
+
+
+void Group.HotSpot_Holder.LeftButtonClickOn(int rectID)
+{
+   if(menu && rectID==1)
+   {
+      tmp=26;
+      while(tmp<51)
+      {
+         HotSpot_Holder.DisableHotSpot(tmp);
+         tmp++;
+      }
+      Transparent_Video_Holder.Play(26,0);
+      Transparent_Video_Holder.HideFirsLastVideoFrame(25);
+      menu=0;
+   }
+}
+
+
+void Transparent_Video_Holder.MouseMoveIn(int videoID)
+{
+   if(load)   return;
+   if(menu)   SetCursor(0);
+}
+
+
+void HotSpot_Holder.LeftButtonClickOn(int rectID)
+{
+   if(load || rozwija)   return;
+   if(rectID<26)
+   {
+      if(rectID!=25)  
+      {
+         load=1;   
+         hots=1;
+      }
+      else            
+      {
+         rozwija=1;
+         menu=1;
+         SetCursor(0);
+      }
+      if(rectID==25)  
+         Transparent_Video_Holder.Play(rectID,0);
+      else
+      {
+         if(curPlay>=0)
+         {
+            Transparent_Video_Holder.GetDeep(curPlay,&deep);
+            Transparent_Video_Holder.SetDeep(curPlay,deep-2);
+         }
+         Sound_Holder.SetPlayDSoundParameters(25,-1000,0,0);
+         switch(rectID)
+         {
+            case 0:
+               Sound_Holder.PlayDSound(0);
+               break;
+            case 11:
+               Sound_Holder.PlayDSound(1);
+               break;
+            case 20:
+               Sound_Holder.PlayDSound(2);
+               break;
+            case 9:
+               Sound_Holder.PlayDSound(3);
+               break;
+            case 3:
+               Sound_Holder.PlayDSound(4);
+               break;
+            case 7:
+               Sound_Holder.PlayDSound(5);
+               break;
+            case 13:
+               Sound_Holder.PlayDSound(6);
+               break;
+            case 6:
+               Sound_Holder.PlayDSound(7);
+               break;
+            case 5:
+               Sound_Holder.PlayDSound(8);
+               break;
+            case 1:
+               Sound_Holder.PlayDSound(9);
+               break;
+            case 18:
+               Sound_Holder.PlayDSound(10);
+               break;
+            case 22:
+               Sound_Holder.PlayDSound(11);
+               break;
+            case 12:
+               Sound_Holder.PlayDSound(12);
+               break;
+            case 8:
+               Sound_Holder.PlayDSound(13);
+               break;
+            case 24:
+               Sound_Holder.PlayDSound(14);
+               break;
+            case 14:
+               Sound_Holder.PlayDSound(15);
+               break;
+            case 15:
+               Sound_Holder.PlayDSound(16);
+               break;
+            case 17:
+               Sound_Holder.PlayDSound(17);
+               break;
+            case 16:
+               Sound_Holder.PlayDSound(18);
+               break;
+            case 19:
+               Sound_Holder.PlayDSound(19);
+               break;
+            case 21:
+               Sound_Holder.PlayDSound(20);
+               break;
+            case 10:
+               Sound_Holder.PlayDSound(21);
+               break;
+            case 4:
+               Sound_Holder.PlayDSound(22);
+               break;
+            case 2:
+               Sound_Holder.PlayDSound(23);
+               break;
+            case 23:
+               Sound_Holder.PlayDSound(24);
+               break;
+         }
+      }
+   }
+   else
+   {
+      load=1;
+      Sound_Holder.SetPlayDSoundParameters(25,-1000,0,0);
+      Sound_Holder.PlayDSound(rectID-26);
+   }
+}
+
+
+void Sound_Holder.EndPlaySound(int soundID)
+{
+   switch(soundID)
+   {
+      case 0:
+         LoadPage("Abecadlo.bdf");
+         break;
+      case 1:
+         LoadPage("murzynek.bdf");
+         break;
+      case 2:
+         LoadPage("cuda.bdf");
+         break;
+      case 3:
+         LoadPage("mich0.bdf");
+         break;
+      case 4:
+         LoadPage("dyzio.bdf");
+         break;
+      case 5:
+         LoadPage("figielek.bdf");
+         break;
+      case 6:
+         LoadPage("wies.bdf");   
+         break;
+      case 7:
+         LoadPage("kotek.bdf");
+         break;
+      case 8:
+         LoadPage("lokomot.bdf");
+         break;
+      case 9:
+         LoadPage("mroz.bdf");
+         break;
+      case 10:
+         LoadPage("grzesiu.bdf");
+         break;
+      case 11:
+         LoadPage("tralala.bdf");
+         break;
+      case 12:
+         LoadPage("okulary.bdf");
+         break;
+      case 13:
+         LoadPage("maluskie.bdf");
+         break;
+      case 14:
+         LoadPage("pstryk.bdf");
+         break;
+      case 15:
+         LoadPage("plotki.bdf");
+         break;
+      case 16:
+         LoadPage("radio.bdf");
+         break;
+      case 17:
+         LoadPage("rycerz.bdf");
+         break;
+      case 18:
+         LoadPage("rzeczka.bdf");
+         break;
+      case 19:
+         LoadPage("slon.bdf");
+         break;
+      case 20:
+         LoadPage("slowik.bdf");
+         break;
+      case 21:
+         LoadPage("taniec.bdf");
+         break;
+      case 22:
+         LoadPage("rachunek.bdf");
+         break;
+      case 23:
+         LoadPage("wszyscy.bdf");
+         break;
+      case 24:
+         LoadPage("zosia.bdf");
+         break;
+   }
+}
+
+ 
+void HotSpot_Holder.MouseMoveIn(int rectID)
+{
+   if(load)   return;
+   SetCursor(1);
+   if(rectID>25 && rectID<51)
+   {
+      Bitmap_Holder.ShowBitmap(rectID-26);
+      return;      
+   }
+   if(menu)   return;
+
+   switch(rectID)
+   {
+      case 0:
+         Text_Holder.SetText(0,"Q Abecadło");
+         break;
+      case 1:
+         Text_Holder.SetText(0,"Mróz");
+         break;
+      case 2:
+         Text_Holder.SetText(0,"Wszyscy dla wszystkich");
+         break;
+      case 3:
+         Text_Holder.SetText(0,"Dyzio marzyciel");
+         break;
+      case 4:
+         Text_Holder.SetText(0,"Trudny rachunek");
+         break;
+      case 5:
+         Text_Holder.SetText(0,"Lokomotywa");
+         break;
+      case 6:
+         Text_Holder.SetText(0,"Kotek");
+         break;
+      case 7:
+         Text_Holder.SetText(0,"Figielek");
+         break;
+      case 8:
+         Text_Holder.SetText(0,"Pan Maluśkiewicz i wieloryb");
+         break;
+      case 9:
+         Text_Holder.SetText(0,"Dwa Michały");
+         break;
+      case 10:
+         Text_Holder.SetText(0,"Q Taniec");
+         break;
+      case 11:
+         Text_Holder.SetText(0,"Bambo");
+         break;
+      case 12:
+         Text_Holder.SetText(0,"Okulary");
+         break;
+      case 13:
+         Text_Holder.SetText(0,"Idzie Grześ");
+         break;
+      case 14:
+         Text_Holder.SetText(0,"Ptasie plotki");
+         break;
+      case 15:
+         Text_Holder.SetText(0,"Ptasie radio");
+         break;
+      case 16:
+         Text_Holder.SetText(0,"Rzeczka");
+         break;
+      case 17:
+         Text_Holder.SetText(0,"Rycerz Krzykalski");
+         break;
+      case 18:
+         Text_Holder.SetText(0,"O Grzesiu kłamczuchu i jego cioci");
+         break;
+      case 19:
+         Text_Holder.SetText(0,"Słoń Trąbalski");
+         break;
+      case 20:
+         Text_Holder.SetText(0,"Q Cuda i dziwy");
+         break;
+      case 21:
+         Text_Holder.SetText(0,"Spóźniony słowik");
+         break;
+      case 22:
+         Text_Holder.SetText(0,"O panu Tralalińskim");
+         break;
+      case 23:
+         Text_Holder.SetText(0,"Q Zosia Samosia");
+         break;
+      case 24:
+         Text_Holder.SetText(0,"Pstryk");
+         break;
+   }
+   if(rectID<25)
+   {
+      if(curPlay>=0)
+      {
+         Transparent_Video_Holder.GetDeep(curPlay,&deep);
+         Transparent_Video_Holder.SetDeep(curPlay,deep-2);
+      }
+      Transparent_Video_Holder.GetDeep(rectID,&deep);
+      Transparent_Video_Holder.SetDeep(rectID,deep+2);
+      Transparent_Video_Holder.Play(rectID,0);
+      curPlay=rectID;
+   }
+}
+
+ 
+void HotSpot_Holder.MouseMoveOut(int rectID)
+{
+   if(load)   return;
+   SetCursor(0);
+   if(rectID>25 && rectID<51)
+   {
+      Bitmap_Holder.HideBitmap(rectID-26);
+      return;      
+   }
+   Text_Holder.SetText(0," ");
+}
+
+//#############################################################
+//#############################################################
+void Group.HotSpot_Holder.MouseMoveIn(int rectID)
+{
+   if(rectID==0)
+   {
+      Group.Sprite_Holder.DisableTimers();
+      Group.Sprite_Holder.GotoXY(0,480,0);
+      Group.Sprite_Holder.GotoXY(1,560,404);
+      Group.Sprite_Holder.SynchronizeTimers();
+      Group.Sprite_Holder.EnableTimers();
+      Group.Sound_Holder.PlayDSound(0);
+   }
+   else
+   {
+      if(menu)   
+         SetCursor(1);
+      if(toolbar)
+      {
+         Group.Sprite_Holder.DisableTimers();
+         Group.Sprite_Holder.GotoXY(0,640,0);
+         Group.Sprite_Holder.GotoXY(1,720,404);
+         Group.Sprite_Holder.SynchronizeTimers();
+         Group.Sprite_Holder.EnableTimers();
+         Group.Sound_Holder.PlayDSound(0);
+         toolbar=0;
+         if(menu==0)   
+            Group.HotSpot_Holder.DisableHotSpot(1);
+      }
+   }
+}
+
+ 
+void Group.Sprite_Holder.InPlace(int spriteID,int x,int y)
+{
+   if(spriteID==0)
+   {
+      if(x==480)
+      {
+         toolbar=1;
+         Group.HotSpot_Holder.EnableHotSpot(1);
+      }
+      else
+      {
+         if(exit)
+         {
+            Group.Sprite_Holder.ChangePhase(spriteID,1);
+//            FadeScreen(0,1000);
+            LoadPage("TheEnd.bdf");
+         }
+      }
+   }
+}
+
+
+void Group.Sprite_Holder.MouseMoveIn(int spriteID)
+{
+   if(spriteID && toolbar)
+      SetCursor(1);
+}
+
+
+void Group.Sprite_Holder.MouseMoveOut(int spriteID)
+{
+   if(spriteID)
+      SetCursor(0);
+}
+
+
+void Group.Sprite_Holder.MouseClickOnDown(int spriteID)
+{
+   if(spriteID==1)   //Wyjscie z programu
+   {
+      Sound_Holder.PlayDSound(26);
+      Group.Sprite_Holder.ChangePhase(spriteID,1);
+      Group.Sprite_Holder.DisableTimers();
+      Group.Sprite_Holder.GotoXY(0,640,0);
+      Group.Sprite_Holder.GotoXY(1,720,404);
+      Group.Sprite_Holder.SynchronizeTimers();
+      Group.Sprite_Holder.EnableTimers();
+      toolbar=0;
+      Group.HotSpot_Holder.DisableHotSpot(1);
+      Group.Sound_Holder.PlayDSound(0);
+      exit=1;
+   }
+}
+
+
+void Group.Sprite_Holder.MouseClickOnUp(int spriteID)
+{
+   if(spriteID)
+   {
+      Group.Sprite_Holder.ChangePhase(spriteID,0);
+   }
+}
+
+//#############################################################
+//############################################################# 
+ 
+ 
+void OnTimer(void)
+{
+        //Add your command handler code here
+   SetTimer(0);
+   Sound_Holder.PlayDSound(27);
+}
+ 
+void OnLButtonDown(int x,int y)
+{
+        //Add your command handler code here
+   SetTimer(0);
+   Sound_Holder.Stop(27);
+}
+ 
+void OnRButtonDown(int x,int y)
+{
+        //Add your command handler code here
+   Sound_Holder.PlayDSound(27);
+}
+ 

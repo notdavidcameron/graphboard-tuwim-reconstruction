@@ -1,0 +1,193 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ABEC_C.BDF",
+  "size": 680027,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Tuesday, November 18, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    8
+  ],
+  "background_flag": 1,
+  "background_color_index": 0,
+  "palette_size": 1024,
+  "dib_size": 0,
+  "component_list_offset": 1165,
+  "component_list_version": 1,
+  "component_count": 2,
+  "components": [
+    {
+      "index": 0,
+      "offset": 1173,
+      "clsid": "B64F3336-5368-11D0-B445-008048EB5D40",
+      "display_name": "Sprite_Holder",
+      "private_offset": 2707,
+      "private_size": 359816,
+      "embedded": []
+    },
+    {
+      "index": 1,
+      "offset": 362523,
+      "clsid": "0D8A5736-5337-11D0-B444-008048EB5D40",
+      "display_name": "Bitmap_Holder",
+      "private_offset": 363655,
+      "private_size": 307356,
+      "embedded": []
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ABEC_C\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ABEC_C\\script.txt",
+      "size": 8757
+    }
+  ],
+  "script": {
+    "version_offset": 671011,
+    "version": 1,
+    "string_prefix_offset": 671015,
+    "text_offset": 671018,
+    "text_length": 8757,
+    "text_end": 679775,
+    "engine_state": {
+      "offset": 679775,
+      "version": 2,
+      "block_count": 5,
+      "handler_offsets": {
+        "field_38": 1824,
+        "field_3c": 0,
+        "field_30": 1644,
+        "field_34": 496
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 679799,
+          "start_offset": 2547,
+          "duplicate_start_offset": 2547,
+          "case_count": 3,
+          "end_or_body_offset": 3992,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 2607
+            },
+            {
+              "value": 11,
+              "target_offset": 2873
+            },
+            {
+              "value": 12,
+              "target_offset": 3368
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 679843,
+          "start_offset": 4079,
+          "duplicate_start_offset": 4079,
+          "case_count": 1,
+          "end_or_body_offset": 4281,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 4138
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "file_offset": 679871,
+          "start_offset": 5372,
+          "duplicate_start_offset": 5372,
+          "case_count": 1,
+          "end_or_body_offset": 6239,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 5407
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "file_offset": 679899,
+          "start_offset": 6592,
+          "duplicate_start_offset": 6592,
+          "case_count": 4,
+          "end_or_body_offset": 6993,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 16,
+              "target_offset": 6626
+            },
+            {
+              "value": 17,
+              "target_offset": 6712
+            },
+            {
+              "value": 18,
+              "target_offset": 6816
+            },
+            {
+              "value": 19,
+              "target_offset": 6922
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "file_offset": 679951,
+          "start_offset": 7983,
+          "duplicate_start_offset": 7983,
+          "case_count": 4,
+          "end_or_body_offset": 8409,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 18,
+              "target_offset": 8030
+            },
+            {
+              "value": 19,
+              "target_offset": 8124
+            },
+            {
+              "value": 16,
+              "target_offset": 8235
+            },
+            {
+              "value": 17,
+              "target_offset": 8343
+            }
+          ]
+        }
+      ],
+      "table_count": 0,
+      "table_a": [],
+      "table_b": [],
+      "versioned_tail": {
+        "field_44": 2043,
+        "field_48": 0,
+        "field_4c": 2259,
+        "field_50": 0
+      },
+      "end_offset": 680023
+    }
+  }
+}

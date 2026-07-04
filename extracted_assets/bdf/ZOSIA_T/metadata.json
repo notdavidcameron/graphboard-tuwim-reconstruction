@@ -1,0 +1,235 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ZOSIA_T.BDF",
+  "size": 444359,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Monday, November 17, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    9
+  ],
+  "background_flag": 1,
+  "background_color_index": 0,
+  "palette_size": 1024,
+  "dib_size": 0,
+  "component_list_offset": 1165,
+  "component_list_version": 1,
+  "component_count": 4,
+  "components": [
+    {
+      "index": 0,
+      "offset": 1173,
+      "clsid": "DA768116-5341-11D0-B444-008048EB5D40",
+      "display_name": "HotSpot_Holder",
+      "private_offset": 2278,
+      "private_size": 625,
+      "embedded": []
+    },
+    {
+      "index": 1,
+      "offset": 2903,
+      "clsid": "0D8A5736-5337-11D0-B444-008048EB5D40",
+      "display_name": "Bitmap_Holder",
+      "private_offset": 4035,
+      "private_size": 307356,
+      "embedded": []
+    },
+    {
+      "index": 2,
+      "offset": 311391,
+      "clsid": "B64F3336-5368-11D0-B445-008048EB5D40",
+      "display_name": "Sprite_Holder",
+      "private_offset": 312925,
+      "private_size": 120976,
+      "embedded": []
+    },
+    {
+      "index": 3,
+      "offset": 433901,
+      "clsid": "B2CDC8DE-5359-11D0-B445-008048EB5D40",
+      "display_name": "Video_Holder",
+      "private_offset": 434877,
+      "private_size": 715,
+      "embedded": []
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_T\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_T\\script.txt",
+      "size": 8460
+    }
+  ],
+  "script": {
+    "version_offset": 435592,
+    "version": 1,
+    "string_prefix_offset": 435596,
+    "text_offset": 435599,
+    "text_length": 8460,
+    "text_end": 444059,
+    "engine_state": {
+      "offset": 444059,
+      "version": 2,
+      "block_count": 5,
+      "handler_offsets": {
+        "field_38": 743,
+        "field_3c": 0,
+        "field_30": 1019,
+        "field_34": 341
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 444083,
+          "start_offset": 2292,
+          "duplicate_start_offset": 2292,
+          "case_count": 8,
+          "end_or_body_offset": 4159,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 2329
+            },
+            {
+              "value": 1,
+              "target_offset": 2497
+            },
+            {
+              "value": 2,
+              "target_offset": 2737
+            },
+            {
+              "value": 3,
+              "target_offset": 2993
+            },
+            {
+              "value": 4,
+              "target_offset": 3267
+            },
+            {
+              "value": 5,
+              "target_offset": 3527
+            },
+            {
+              "value": 6,
+              "target_offset": 3789
+            },
+            {
+              "value": 7,
+              "target_offset": 4050
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 444167,
+          "start_offset": 4319,
+          "duplicate_start_offset": 4319,
+          "case_count": 2,
+          "end_or_body_offset": 4581,
+          "aux_offset": 4515,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 4356
+            },
+            {
+              "value": 7,
+              "target_offset": 4480
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "file_offset": 444203,
+          "start_offset": 5087,
+          "duplicate_start_offset": 5087,
+          "case_count": 1,
+          "end_or_body_offset": 5200,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 5114
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "file_offset": 444231,
+          "start_offset": 6985,
+          "duplicate_start_offset": 6985,
+          "case_count": 4,
+          "end_or_body_offset": 7363,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 3,
+              "target_offset": 7025
+            },
+            {
+              "value": 4,
+              "target_offset": 7110
+            },
+            {
+              "value": 1,
+              "target_offset": 7211
+            },
+            {
+              "value": 2,
+              "target_offset": 7306
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "file_offset": 444283,
+          "start_offset": 7504,
+          "duplicate_start_offset": 7504,
+          "case_count": 4,
+          "end_or_body_offset": 7793,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 1,
+              "target_offset": 7549
+            },
+            {
+              "value": 2,
+              "target_offset": 7644
+            },
+            {
+              "value": 3,
+              "target_offset": 7717
+            },
+            {
+              "value": 4,
+              "target_offset": 7735
+            }
+          ]
+        }
+      ],
+      "table_count": 0,
+      "table_a": [],
+      "table_b": [],
+      "versioned_tail": {
+        "field_44": 1487,
+        "field_48": 0,
+        "field_4c": 1272,
+        "field_50": 0
+      },
+      "end_offset": 444355
+    }
+  }
+}

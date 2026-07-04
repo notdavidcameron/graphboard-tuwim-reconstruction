@@ -1,0 +1,439 @@
+{
+  "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WSZYSC_R.BDF",
+  "size": 444125,
+  "banner": "YDP Board data file. Ver:1 1996.07.    File modification: Wednesday, November 12, 1997",
+  "version": 1,
+  "page_rect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "layer_range": [
+    -1,
+    8
+  ],
+  "background_flag": 0,
+  "background_color_index": 0,
+  "palette_size": 1024,
+  "dib_size": 308180,
+  "component_list_offset": 309345,
+  "component_list_version": 1,
+  "component_count": 4,
+  "components": [
+    {
+      "index": 0,
+      "offset": 309353,
+      "clsid": "AD45ADB6-5290-11D0-B442-008048EB5D40",
+      "display_name": "Text_Holder",
+      "private_offset": 310979,
+      "private_size": 39357,
+      "embedded": []
+    },
+    {
+      "index": 1,
+      "offset": 350336,
+      "clsid": "1720D306-6932-11D0-B468-008048EB5D40",
+      "display_name": "Sound_Holder",
+      "private_offset": 351232,
+      "private_size": 66350,
+      "embedded": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSC_R\\embedded\\01_Sound_Holder_000_00055c0c.wav",
+          "offset": 351244,
+          "size": 66246,
+          "extension": ".wav"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "offset": 417582,
+      "clsid": "2B61D676-9627-11D0-B280-008048EB5D40",
+      "display_name": "Recorder",
+      "private_offset": 418576,
+      "private_size": 108,
+      "embedded": []
+    },
+    {
+      "index": 3,
+      "offset": 418684,
+      "clsid": "0D8A5736-5337-11D0-B444-008048EB5D40",
+      "display_name": "Bitmap_Holder",
+      "private_offset": 419816,
+      "private_size": 1236,
+      "embedded": []
+    }
+  ],
+  "outputs": [
+    {
+      "kind": "palette",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSC_R\\background_palette.bin",
+      "size": 1024
+    },
+    {
+      "kind": "dib",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSC_R\\background.dib",
+      "size": 308180
+    },
+    {
+      "kind": "bmp",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSC_R\\background.bmp",
+      "size": 308194
+    },
+    {
+      "kind": "script",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSC_R\\script.txt",
+      "size": 22410
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSC_R\\embedded\\01_Sound_Holder_000_00055c0c.wav",
+      "size": 66246
+    }
+  ],
+  "script": {
+    "version_offset": 421052,
+    "version": 1,
+    "string_prefix_offset": 421056,
+    "text_offset": 421059,
+    "text_length": 22410,
+    "text_end": 443469,
+    "engine_state": {
+      "offset": 443469,
+      "version": 2,
+      "block_count": 12,
+      "handler_offsets": {
+        "field_38": 2254,
+        "field_3c": 0,
+        "field_30": 2490,
+        "field_34": 339
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "file_offset": 443493,
+          "start_offset": 2973,
+          "duplicate_start_offset": 2973,
+          "case_count": 3,
+          "end_or_body_offset": 4017,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 3000
+            },
+            {
+              "value": 1,
+              "target_offset": 3397
+            },
+            {
+              "value": 2,
+              "target_offset": 3792
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "file_offset": 443537,
+          "start_offset": 3029,
+          "duplicate_start_offset": 3029,
+          "case_count": 2,
+          "end_or_body_offset": 3363,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 3068
+            },
+            {
+              "value": 1,
+              "target_offset": 3225
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "file_offset": 443573,
+          "start_offset": 4407,
+          "duplicate_start_offset": 4407,
+          "case_count": 3,
+          "end_or_body_offset": 4548,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 4432
+            },
+            {
+              "value": 2,
+              "target_offset": 4450
+            },
+            {
+              "value": 1,
+              "target_offset": 4510
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "file_offset": 443617,
+          "start_offset": 4781,
+          "duplicate_start_offset": 4781,
+          "case_count": 3,
+          "end_or_body_offset": 5383,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 1,
+              "target_offset": 4809
+            },
+            {
+              "value": 0,
+              "target_offset": 5083
+            },
+            {
+              "value": 2,
+              "target_offset": 5345
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "file_offset": 443661,
+          "start_offset": 4839,
+          "duplicate_start_offset": 4839,
+          "case_count": 3,
+          "end_or_body_offset": 5049,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 4880
+            },
+            {
+              "value": 1,
+              "target_offset": 4953
+            },
+            {
+              "value": 2,
+              "target_offset": 4980
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "file_offset": 443705,
+          "start_offset": 5113,
+          "duplicate_start_offset": 5113,
+          "case_count": 3,
+          "end_or_body_offset": 5311,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 5150
+            },
+            {
+              "value": 2,
+              "target_offset": 5174
+            },
+            {
+              "value": 1,
+              "target_offset": 5252
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "file_offset": 443749,
+          "start_offset": 10620,
+          "duplicate_start_offset": 10620,
+          "case_count": 5,
+          "end_or_body_offset": 11690,
+          "aux_offset": 11542,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 10662
+            },
+            {
+              "value": 1,
+              "target_offset": 10818
+            },
+            {
+              "value": 2,
+              "target_offset": 10936
+            },
+            {
+              "value": 4,
+              "target_offset": 11173
+            },
+            {
+              "value": 5,
+              "target_offset": 11358
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "file_offset": 443809,
+          "start_offset": 11960,
+          "duplicate_start_offset": 11960,
+          "case_count": 4,
+          "end_or_body_offset": 12396,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 33,
+              "target_offset": 12012
+            },
+            {
+              "value": 34,
+              "target_offset": 12117
+            },
+            {
+              "value": 35,
+              "target_offset": 12221
+            },
+            {
+              "value": 36,
+              "target_offset": 12326
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "file_offset": 443861,
+          "start_offset": 12510,
+          "duplicate_start_offset": 12510,
+          "case_count": 6,
+          "end_or_body_offset": 15958,
+          "aux_offset": 15557,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 12690
+            },
+            {
+              "value": 1,
+              "target_offset": 13332
+            },
+            {
+              "value": 2,
+              "target_offset": 13560
+            },
+            {
+              "value": 3,
+              "target_offset": 14009
+            },
+            {
+              "value": 4,
+              "target_offset": 14108
+            },
+            {
+              "value": 5,
+              "target_offset": 14879
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "file_offset": 443929,
+          "start_offset": 16761,
+          "duplicate_start_offset": 16761,
+          "case_count": 6,
+          "end_or_body_offset": 17113,
+          "aux_offset": 17039,
+          "cases": [
+            {
+              "value": 0,
+              "target_offset": 16786
+            },
+            {
+              "value": 2,
+              "target_offset": 16801
+            },
+            {
+              "value": 3,
+              "target_offset": 16816
+            },
+            {
+              "value": 4,
+              "target_offset": 16834
+            },
+            {
+              "value": 1,
+              "target_offset": 16868
+            },
+            {
+              "value": 5,
+              "target_offset": 16953
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "file_offset": 443997,
+          "start_offset": 17443,
+          "duplicate_start_offset": 17443,
+          "case_count": 1,
+          "end_or_body_offset": 17582,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 2,
+              "target_offset": 17493
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "file_offset": 444025,
+          "start_offset": 21845,
+          "duplicate_start_offset": 21845,
+          "case_count": 4,
+          "end_or_body_offset": 22266,
+          "aux_offset": 0,
+          "cases": [
+            {
+              "value": 35,
+              "target_offset": 21892
+            },
+            {
+              "value": 36,
+              "target_offset": 21987
+            },
+            {
+              "value": 33,
+              "target_offset": 22099
+            },
+            {
+              "value": 34,
+              "target_offset": 22200
+            }
+          ]
+        }
+      ],
+      "table_count": 3,
+      "table_a": [
+        5799,
+        6844,
+        10548
+      ],
+      "table_b": [
+        8,
+        8,
+        1
+      ],
+      "versioned_tail": {
+        "field_44": 19920,
+        "field_48": 0,
+        "field_4c": 19527,
+        "field_50": 0
+      },
+      "end_offset": 444121
+    }
+  }
+}

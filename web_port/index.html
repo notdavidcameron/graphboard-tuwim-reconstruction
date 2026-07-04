@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GraphBoard Scene Viewer</title>
+    <link rel="stylesheet" href="styles.css?v=11">
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <header class="topbar">
+          <h1>GraphBoard</h1>
+          <div class="subtle" id="summary">Loading scenes...</div>
+        </header>
+
+        <label class="field">
+          <span>Page</span>
+          <select id="sceneSelect"></select>
+        </label>
+
+        <div class="toolbar">
+          <button id="prevBtn" type="button" title="Previous page">Prev</button>
+          <button id="nextBtn" type="button" title="Next page">Next</button>
+        </div>
+
+        <fieldset class="switches">
+          <label><input id="debugToggle" type="checkbox"> Bounds</label>
+          <label><input id="unknownToggle" type="checkbox"> Unknown layers</label>
+          <label><input id="backgroundToggle" type="checkbox" checked> Background</label>
+        </fieldset>
+
+        <section>
+          <h2>Runtime</h2>
+          <div class="toolbar">
+            <button id="openPageBtn" type="button" title="Run OnOpenPage">OpenPage</button>
+            <button id="resetRuntimeBtn" type="button" title="Reset runtime state">Reset</button>
+          </div>
+          <div id="runtimeLog" class="runtime-log"></div>
+        </section>
+
+        <section>
+          <h2>Components</h2>
+          <div id="componentList" class="list"></div>
+        </section>
+
+        <section>
+          <h2>Audio</h2>
+          <div id="audioList" class="list"></div>
+        </section>
+
+        <section>
+          <h2>Script</h2>
+          <div class="handler-runner">
+            <select id="handlerSelect"></select>
+            <input id="handlerArgs" type="text" placeholder="args, e.g. 1,0,0">
+            <button id="runHandlerBtn" type="button">Run</button>
+          </div>
+          <div id="scriptInfo" class="script-box"></div>
+        </section>
+      </aside>
+
+      <main class="viewer">
+        <div class="stage-wrap">
+          <div id="stage" class="stage" aria-label="GraphBoard page stage"></div>
+        </div>
+        <div id="warnings" class="warnings"></div>
+      </main>
+    </div>
+
+    <script src="runtime.js?v=11"></script>
+    <script src="app.js?v=11"></script>
+  </body>
+</html>

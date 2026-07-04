@@ -1,0 +1,111 @@
+{
+  "id": "LOK5P1",
+  "title": "LOK5P1",
+  "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\LOK5P1.BDF",
+  "pageRect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "background": {
+    "colorIndex": 225,
+    "flag": 1,
+    "bmpPath": null,
+    "bmpUrl": null,
+    "palettePath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOK5P1\\background_palette.bin",
+    "paletteUrl": "../extracted_assets/bdf/LOK5P1/background_palette.bin"
+  },
+  "components": [
+    {
+      "id": "00_Puzzle",
+      "type": "Puzzle",
+      "index": 0,
+      "z": 0,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "sourceOffset": 1173,
+      "privateOffset": 2257,
+      "privateSize": 252520,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "01_Sound_Holder",
+      "type": "Sound_Holder",
+      "index": 1,
+      "z": 0,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "geometryConfidence": "not_visual",
+      "sourceOffset": 254777,
+      "privateOffset": 255673,
+      "privateSize": 116637,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOK5P1\\embedded\\01_Sound_Holder_000_0003e6c5.wav",
+          "url": "../extracted_assets/bdf/LOK5P1/embedded/01_Sound_Holder_000_0003e6c5.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 255685,
+          "id": 0
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOK5P1\\embedded\\01_Sound_Holder_001_00040095.wav",
+          "url": "../extracted_assets/bdf/LOK5P1/embedded/01_Sound_Holder_001_00040095.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 262293,
+          "id": 1
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOK5P1\\embedded\\01_Sound_Holder_002_000416d5.wav",
+          "url": "../extracted_assets/bdf/LOK5P1/embedded/01_Sound_Holder_002_000416d5.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 267989,
+          "id": 2
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOK5P1\\embedded\\01_Sound_Holder_003_00042589.wav",
+          "url": "../extracted_assets/bdf/LOK5P1/embedded/01_Sound_Holder_003_00042589.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 271753,
+          "id": 3
+        }
+      ]
+    }
+  ],
+  "script": {
+    "path": null,
+    "url": null,
+    "handlers": [],
+    "rawText": ""
+  },
+  "warnings": [
+    "1 component(s) have unknown geometry and default to 0,0."
+  ]
+}

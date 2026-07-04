@@ -1,0 +1,587 @@
+{
+  "id": "MROZ",
+  "title": "MROZ",
+  "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MROZ.BDF",
+  "pageRect": [
+    0,
+    0,
+    640,
+    480
+  ],
+  "background": {
+    "colorIndex": 215,
+    "flag": 1,
+    "bmpPath": null,
+    "bmpUrl": null,
+    "palettePath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\background_palette.bin",
+    "paletteUrl": "../extracted_assets/bdf/MROZ/background_palette.bin"
+  },
+  "components": [
+    {
+      "id": "00_Panorama_Holder",
+      "type": "Panorama_Holder",
+      "index": 0,
+      "z": 0,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "sourceOffset": 1173,
+      "privateOffset": 3295,
+      "privateSize": 708112,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "01_Bitmap_Holder",
+      "type": "Bitmap_Holder",
+      "index": 1,
+      "z": 1,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "sourceOffset": 711407,
+      "privateOffset": 712539,
+      "privateSize": 340472,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "02_Sprite_Holder",
+      "type": "Sprite_Holder",
+      "index": 2,
+      "z": 2,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "sourceOffset": 1053011,
+      "privateOffset": 1054545,
+      "privateSize": 834644,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "03_Transparent_Video_Holder",
+      "type": "Transparent_Video_Holder",
+      "index": 3,
+      "z": 1,
+      "visible": true,
+      "rect": {
+        "x": 501,
+        "y": 167,
+        "width": 139,
+        "height": 172
+      },
+      "geometryConfidence": "serialized_entries",
+      "sourceOffset": 1889189,
+      "privateOffset": 1890363,
+      "privateSize": 526907,
+      "primaryAssetUrl": "../extracted_assets/bdf/MROZ/animations/03_Transparent_Video_Holder_000_001cd847_board_video_129x142.gif",
+      "assets": [
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_000_001cd847_board_video_129x142.gif",
+          "url": "../extracted_assets/bdf/MROZ/animations/03_Transparent_Video_Holder_000_001cd847_board_video_129x142.gif",
+          "width": 129,
+          "height": 142,
+          "frameCount": 13,
+          "offset": 1890375,
+          "name": null,
+          "id": 0,
+          "rect": {
+            "x": 501,
+            "y": 197,
+            "width": 129,
+            "height": 142
+          },
+          "z": 2,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 2177566,
+          "streamOffset": 1890375,
+          "originalRect": {
+            "x": 501,
+            "y": 197,
+            "width": 129,
+            "height": 142
+          },
+          "originalZ": 2
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_002_002188c2_board_video_69x64.gif",
+          "url": "../extracted_assets/bdf/MROZ/animations/03_Transparent_Video_Holder_002_002188c2_board_video_69x64.gif",
+          "width": 69,
+          "height": 64,
+          "frameCount": 9,
+          "offset": 2197698,
+          "name": null,
+          "id": 2,
+          "rect": {
+            "x": 551,
+            "y": 167,
+            "width": 69,
+            "height": 64
+          },
+          "z": 1,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 2308034,
+          "streamOffset": 2197698,
+          "originalRect": {
+            "x": 551,
+            "y": 167,
+            "width": 69,
+            "height": 64
+          },
+          "originalZ": 1
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_004_00234f2e_board_video_51x40.gif",
+          "url": "../extracted_assets/bdf/MROZ/animations/03_Transparent_Video_Holder_004_00234f2e_board_video_51x40.gif",
+          "width": 51,
+          "height": 40,
+          "frameCount": 9,
+          "offset": 2314030,
+          "name": null,
+          "id": 4,
+          "rect": {
+            "x": 589,
+            "y": 234,
+            "width": 51,
+            "height": 40
+          },
+          "z": 1,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 2413806,
+          "streamOffset": 2314030,
+          "originalRect": {
+            "x": 589,
+            "y": 234,
+            "width": 51,
+            "height": 40
+          },
+          "originalZ": 1
+        }
+      ],
+      "audio": [
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_000_001cd847_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/MROZ/embedded/03_Transparent_Video_Holder_000_001cd847_board_video_audio.wav",
+          "durationSeconds": 3.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 1890375,
+          "id": 0
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_002_002188c2_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/MROZ/embedded/03_Transparent_Video_Holder_002_002188c2_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 2197698,
+          "id": 2
+        },
+        {
+          "kind": "board_video_pcm_wave",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_004_00234f2e_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/MROZ/embedded/03_Transparent_Video_Holder_004_00234f2e_board_video_audio.wav",
+          "durationSeconds": 2.0,
+          "sampleRate": 22050,
+          "channels": 1,
+          "offset": 2314030,
+          "id": 4
+        }
+      ]
+    },
+    {
+      "id": "04_HotSpot_Holder",
+      "type": "HotSpot_Holder",
+      "index": 4,
+      "z": 4,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "sourceOffset": 2417270,
+      "privateOffset": 2418375,
+      "privateSize": 1029,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "05_Sound_Holder",
+      "type": "Sound_Holder",
+      "index": 5,
+      "z": 0,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "geometryConfidence": "not_visual",
+      "sourceOffset": 2419404,
+      "privateOffset": 2420300,
+      "privateSize": 1090128,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_000_0024ee58.wav",
+          "url": "../extracted_assets/bdf/MROZ/embedded/05_Sound_Holder_000_0024ee58.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 2420312,
+          "id": 0
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_001_002a43ba.wav",
+          "url": "../extracted_assets/bdf/MROZ/embedded/05_Sound_Holder_001_002a43ba.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 2769850,
+          "id": 1
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_002_002a6ec2.wav",
+          "url": "../extracted_assets/bdf/MROZ/embedded/05_Sound_Holder_002_002a6ec2.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 2780866,
+          "id": 2
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_003_002b3bf6.wav",
+          "url": "../extracted_assets/bdf/MROZ/embedded/05_Sound_Holder_003_002b3bf6.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 2833398,
+          "id": 3
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_004_002b7e2a.wav",
+          "url": "../extracted_assets/bdf/MROZ/embedded/05_Sound_Holder_004_002b7e2a.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 2850346,
+          "id": 4
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_005_002f2dce.wav",
+          "url": "../extracted_assets/bdf/MROZ/embedded/05_Sound_Holder_005_002f2dce.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 3091918,
+          "id": 5
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_006_002fad26.wav",
+          "url": "../extracted_assets/bdf/MROZ/embedded/05_Sound_Holder_006_002fad26.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 3124518,
+          "id": 6
+        }
+      ]
+    },
+    {
+      "id": "06_Text_Holder",
+      "type": "Text_Holder",
+      "index": 6,
+      "z": 6,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "sourceOffset": 3510428,
+      "privateOffset": 3512054,
+      "privateSize": 13275,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    }
+  ],
+  "script": {
+    "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\script.txt",
+    "url": "../extracted_assets/bdf/MROZ/script.txt",
+    "handlers": [
+      {
+        "name": "OnOpenPage",
+        "signature": "OnOpenPage()"
+      },
+      {
+        "name": "if",
+        "signature": "if(textMode==0)"
+      },
+      {
+        "name": "OnKeyDown",
+        "signature": "OnKeyDown(UINT nChar)"
+      },
+      {
+        "name": "OnClosePage",
+        "signature": "OnClosePage(void)"
+      },
+      {
+        "name": "SetTextMode",
+        "signature": "SetTextMode()"
+      },
+      {
+        "name": "if",
+        "signature": "if(textMode==0)"
+      },
+      {
+        "name": "while",
+        "signature": "while(index < 10)"
+      },
+      {
+        "name": "if",
+        "signature": "if(chrust==0 && woz)"
+      },
+      {
+        "name": "while",
+        "signature": "while(index < 10)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(rectID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(chrust==0 && woz)"
+      },
+      {
+        "name": "if",
+        "signature": "if(chrust==0 && woz)"
+      },
+      {
+        "name": "if",
+        "signature": "if(woz)"
+      },
+      {
+        "name": "if",
+        "signature": "if(patyk1)"
+      },
+      {
+        "name": "if",
+        "signature": "if((patyk1==0)&&(patyk2==0)&&(chrust==0))"
+      },
+      {
+        "name": "if",
+        "signature": "if(woz)"
+      },
+      {
+        "name": "if",
+        "signature": "if(patyk2)"
+      },
+      {
+        "name": "if",
+        "signature": "if((patyk1==0)&&(patyk2==0)&&(chrust==0))"
+      },
+      {
+        "name": "if",
+        "signature": "if(chrust==3)"
+      },
+      {
+        "name": "if",
+        "signature": "if(chrust==2)"
+      },
+      {
+        "name": "if",
+        "signature": "if(chrust==1)"
+      },
+      {
+        "name": "if",
+        "signature": "if(soundID==0)"
+      },
+      {
+        "name": "if",
+        "signature": "if(soundID==5 && textMode)"
+      },
+      {
+        "name": "HotSpot_Holder.MouseMoveIn",
+        "signature": "HotSpot_Holder.MouseMoveIn(int rectID)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(rectID)"
+      },
+      {
+        "name": "HotSpot_Holder.MouseMoveOut",
+        "signature": "HotSpot_Holder.MouseMoveOut(int rectID)"
+      },
+      {
+        "name": "OnKeyDown",
+        "signature": "OnKeyDown(UINT nChar)"
+      },
+      {
+        "name": "Group.HotSpot_Holder.MouseMoveIn",
+        "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(rectID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(toolbar)"
+      },
+      {
+        "name": "if",
+        "signature": "if(toolbarPhase==0)"
+      },
+      {
+        "name": "if",
+        "signature": "if(txtHotSpotOn==0)"
+      },
+      {
+        "name": "Group.Sprite_Holder.InPlace",
+        "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(spriteID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(x==480)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(toolbarCase)"
+      },
+      {
+        "name": "if",
+        "signature": "if(x==0)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseMoveIn",
+        "signature": "Group.Sprite_Holder.MouseMoveIn(int spriteID)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseMoveOut",
+        "signature": "Group.Sprite_Holder.MouseMoveOut(int spriteID)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseClickOnDown",
+        "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(spriteID==11)"
+      },
+      {
+        "name": "switch",
+        "signature": "switch(spriteID)"
+      },
+      {
+        "name": "Group.Sprite_Holder.MouseClickOnUp",
+        "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(toolbarPhase==0)"
+      },
+      {
+        "name": "Group.Sprite_Holder.EndAnimation",
+        "signature": "Group.Sprite_Holder.EndAnimation(int spriteID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(toolbarPhase==0)"
+      },
+      {
+        "name": "Text_Holder.ScrollTextUp",
+        "signature": "Text_Holder.ScrollTextUp(int textID)"
+      },
+      {
+        "name": "Text_Holder.ScrollTextDown",
+        "signature": "Text_Holder.ScrollTextDown(int textID)"
+      },
+      {
+        "name": "Text_Holder.EndScrollText",
+        "signature": "Text_Holder.EndScrollText(int textID)"
+      },
+      {
+        "name": "Text_Holder.MouseMoveIn",
+        "signature": "Text_Holder.MouseMoveIn(int textID)"
+      },
+      {
+        "name": "Text_Holder.MouseMoveOut",
+        "signature": "Text_Holder.MouseMoveOut(int textID)"
+      },
+      {
+        "name": "Text_Holder.ClickOnText",
+        "signature": "Text_Holder.ClickOnText(int textID)"
+      },
+      {
+        "name": "if",
+        "signature": "if(playStatus)"
+      },
+      {
+        "name": "Text_Holder.EndOfSynchroText",
+        "signature": "Text_Holder.EndOfSynchroText(int textID)"
+      },
+      {
+        "name": "OnTimer",
+        "signature": "OnTimer(void)"
+      },
+      {
+        "name": "OnLButtonDown",
+        "signature": "OnLButtonDown(int x,int y)"
+      },
+      {
+        "name": "OnRButtonDown",
+        "signature": "OnRButtonDown(int x,int y)"
+      }
+    ],
+    "rawText": "//###########################################################################\n\n//Script code\n\n//###########################################################################\n\n\n\n\n\n\n\n\n\n\n\nOnOpenPage()\n\n{\n\n\t// Add your component and variables initialization code here\n\n\t// WARNING: All variables definied on this function are global for this page\n\n\n\n//   if( IsProject() == 0 )    int textMode = 0;\n\n   int textMode = 0;\n\n\n\n   char patyk1=255;\n\n   char patyk2=255;\n\n   char chrust=0;                  //liczba czesci na drodze\n\n   char woz=0;                     //0-woz jedzie, 255-woz stoi\n\n   Panorama_Holder.OpenPanorama(0);\n\n   Panorama_Holder.SetHorizontalAngle(90);\n\n   Sound_Holder.PlayDSound(4);\n\n\n\n   LoadGroup(\"Cursors.grp\");\n\n   SetCursor(0);\n\n\n\n//#############################################################################\n\n   int toolbar=0;\n\n   int toolbarCase=0;\n\n   int toolbarPhase=0;\n\n   int txtHotSpotOn=0;\n\n   int playStatus=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   SetTextMode();\n\n//############################################################################\n\n\n\n\n\n   FadeScreen(1,1000);\n\n   if(textMode==0)\n\n   {\n\n      Panorama_Holder.GoRight(2);\n\n      Sound_Holder.PlayDSound(0);\n\n   }\n\n   else\n\n   {   \n\n      Sprite_Holder.StopAnimation(0);\n\n      Sprite_Holder.StopAnimation(1);\n\n   }\n\n   Sprite_Holder.SynchronizeTimers();\n\n//   SetTimer(5000);\n\n}\n\n\n\n\n\nvoid OnKeyDown(UINT nChar)\n\n{\n\n\t// Add your keyboard handler code here\n\n\n\n}\n\n\n\nvoid OnClosePage(void)\n\n{\n\n\t// Add your close page handler code here\n\n\n\n}\n\n\n\n\n\n\n\n////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid SetTextMode()\n\n{\n\n   if(textMode==0)\n\n   {\n\n      int index = 0;\n\n      while( index < 10 )\n\n      {\n\n         HotSpot_Holder.EnableHotSpot(index);\n\n         index++;\n\n      }\n\n\n\n      if(chrust==0 && woz)\n\n      {\n\n             Panorama_Holder.GoRight(2);   \n\n             Sound_Holder.PlayDSound(0);\n\n             Sprite_Holder.ContinueAnimation(0);\n\n             Sprite_Holder.ContinueAnimation(1);\n\n             woz=0;\n\n      }\n\n\n\n      playStatus = 0;\n\n      Sound_Holder.Stop(5);\n\n      Text_Holder.HideText(0);\n\n      Text_Holder.StopSynchroText(0);\n\n      Sound_Holder.SetPlayDSoundParameters(0,0,0,0);\n\n   }\n\n   else\n\n   {\n\n      Sound_Holder.Stop(0);\n\n\n\n      int index = 0;\n\n      while( index < 10 )\n\n      {\n\n         HotSpot_Holder.DisableHotSpot(index);\n\n         index++;\n\n      }\n\n\n\n      playStatus = 1;   \n\n      Sound_Holder.SetPlayDSoundParameters(0,-1000,0,0);\n\n      Sound_Holder.PlayDSound(5);\n\n      Text_Holder.SetTextOffsets(0,0,0);\n\n      Text_Holder.DisableMouse(0);\n\n      Text_Holder.ShowText(0);\n\n   }\n\n}\n\n\n\n\n\n\n\n////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nVOID HotSpot_Holder.LeftButtonClickOn(int rectID)\n\n{\n\n   switch(rectID)\n\n   {\n\n       case 0: \n\n         if(chrust==0 && woz)\n\n         {\n\n             Panorama_Holder.GoRight(2);   \n\n             Sound_Holder.PlayDSound(0);\n\n             Sprite_Holder.ContinueAnimation(0);\n\n             Sprite_Holder.ContinueAnimation(1);\n\n             woz=0;\n\n         }\n\n         break;\n\n      case 1: \n\n         if(chrust==0 && woz)\n\n         {\n\n             Panorama_Holder.GoRight(2);   \n\n             Sound_Holder.PlayDSound(0);\n\n             Sprite_Holder.ContinueAnimation(0);\n\n             Sprite_Holder.ContinueAnimation(1);\n\n             woz=0;\n\n         }                        \n\n         break;\n\n      case 2:\n\n         Transparent_Video_Holder.Play(0,0);\n\n         break; \n\n      case 3:\n\n         if(woz)\n\n         {\n\n            if (patyk1)\n\n            {\n\n                Bitmap_Holder.HideBitmap(1);\n\n                patyk1=0;\n\n            }\n\n            if (patyk2)\n\n                Sound_Holder.PlayDSound(1);\n\n            if ((patyk1==0)&&(patyk2==0)&&(chrust==0))\n\n            {\n\n                Sound_Holder.PlayDSound(2);\n\n                Sprite_Holder.HideSprite(2);\n\n                Bitmap_Holder.ShowBitmap(4);\n\n                Bitmap_Holder.ShowBitmap(5);\n\n                Bitmap_Holder.ShowBitmap(6);\n\n                chrust=3;\n\n            }             \n\n         }\n\n         break;\n\n     case 4:\n\n         if(woz)\n\n         {\n\n            if (patyk2)\n\n            {\n\n               Bitmap_Holder.HideBitmap(2);\n\n               patyk2=0;\n\n            }\n\n            if (patyk1)\n\n               Sound_Holder.PlayDSound(1);\n\n            if ((patyk1==0)&&(patyk2==0)&&(chrust==0))\n\n            {\n\n               Sound_Holder.PlayDSound(2);\n\n               Sprite_Holder.HideSprite(2);\n\n               Bitmap_Holder.ShowBitmap(4);\n\n               Bitmap_Holder.ShowBitmap(5);\n\n               Bitmap_Holder.ShowBitmap(6);\n\n               chrust=3;\n\n            }             \n\n            break;\n\n         }\n\n      case 5:\n\n         Transparent_Video_Holder.Play(1,0);\n\n         break; \n\n      case 6:\n\n         Transparent_Video_Holder.Play(2,0);\n\n         break; \n\n      case 9:      //chrust 1\n\n         if(chrust==3)\n\n         {\n\n             Sound_Holder.PlayDSound(3);\n\n             Sprite_Holder.ChangePhase(2,2);\n\n             Sprite_Holder.ShowSprite(2);\n\n             Bitmap_Holder.HideBitmap(5);\n\n             chrust=2;\n\n             SetCursor(0);\n\n         }\n\n         break;   \n\n      case 8:   //chrust 2\n\n         if(chrust==2)\n\n         {\n\n             Sound_Holder.PlayDSound(3);\n\n             Sprite_Holder.ChangePhase(2,1);\n\n             Bitmap_Holder.HideBitmap(6);\n\n             chrust=1;\n\n             SetCursor(0);\n\n         }\n\n         break;                                     \n\n      case 7:   //chrust 3\n\n         if(chrust==1)\n\n         {\n\n             Sound_Holder.PlayDSound(3);\n\n             Sprite_Holder.ChangePhase(2,0);\n\n             Bitmap_Holder.HideBitmap(4);\n\n             chrust=0;\n\n             Bitmap_Holder.ShowBitmap(1);\n\n             Bitmap_Holder.ShowBitmap(2);\n\n             patyk1=255;\n\n             patyk2=255;                                    \n\n             SetCursor(0);\n\n         }\n\n         break;  \n\n   }\n\n}\n\n\n\nVOID Sound_Holder.EndPlaySound(int soundID)\n\n{\n\n   if(soundID==0)\n\n   {\n\n      Panorama_Holder.Stop();\n\n      Sprite_Holder.StopAnimation(0);\n\n      Sprite_Holder.StopAnimation(1);\n\n      woz=255;\n\n   }\n\n\n\n   if(soundID==5 && textMode)\n\n   { \n\n      playStatus=1;\n\n      Text_Holder.EnableMouse(0);\n\n      Text_Holder.PlaySynchroText(0);\n\n   }\n\n}\n\n\n\n \n\nvoid HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n   switch(rectID)\n\n   {\n\n      case 0:\n\n      case 1:\n\n         if(woz==0 || chrust)   break;\n\n         SetCursor(1);\n\n         break;\n\n      case 3:\n\n      case 4:\n\n         if(woz==0 || chrust)   break;\n\n         SetCursor(1);\n\n         break;\n\n      case 7:\n\n         if(woz && chrust>0)   SetCursor(1);\n\n         break;\n\n      case 8:\n\n         if(woz && chrust>1)   SetCursor(1);\n\n         break;\n\n      case 9:\n\n         if(woz && chrust>2)   SetCursor(1);\n\n         break;\n\n      default:\n\n         SetCursor(1);\n\n         break;\n\n   }\n\n}\n\n\n\n \n\nvoid HotSpot_Holder.MouseMoveOut(int rectID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\n \n\nvoid OnKeyDown(UINT nChar)\n\n{\n\n        //Add your command handler code here\n\n   LoadPage(\"wyborw.bdf\");\n\n}\n\n \n\n//############################################################# T O O L B A R #######\n\n//#############################################################---------------#######\n\nvoid Group.HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n   switch(rectID)\n\n   {\n\n      case 0:\n\n         Group.HotSpot_Holder.DisableHotSpot(0);\n\n         Group.Sprite_Holder.DisableTimers();\n\n\n\n         Group.Sprite_Holder.GotoXY(0,480,0);\n\n         Group.Sprite_Holder.GotoXY(2,544,14);\n\n         Group.Sprite_Holder.GotoXY(3,584,14);\n\n         Group.Sprite_Holder.GotoXY(4,515,84);\n\n         Group.Sprite_Holder.GotoXY(5,559,210);\n\n         Group.Sprite_Holder.GotoXY(6,558,282);\n\n         Group.Sprite_Holder.GotoXY(7,557,404);\n\n   \n\n         Group.Sprite_Holder.SynchronizeTimers();\n\n         Group.Sprite_Holder.EnableTimers();\n\n         Group.Sound_Holder.PlayDSound(0);\n\n         break;\n\n      case 1:\n\n         if(toolbar)\n\n         {\n\n            Group.Sprite_Holder.DisableTimers();\n\n   \n\n            if(toolbarPhase==0)\n\n            {\n\n               Group.Sprite_Holder.GotoXY(0,640,0);\n\n               Group.Sprite_Holder.GotoXY(2,704,14);\n\n               Group.Sprite_Holder.GotoXY(3,744,14);\n\n               Group.Sprite_Holder.GotoXY(4,675,84);\n\n               Group.Sprite_Holder.GotoXY(5,719,210);\n\n               Group.Sprite_Holder.GotoXY(6,718,282);\n\n               Group.Sprite_Holder.GotoXY(7,717,404);\n\n            }\n\n            else\n\n            {\n\n               Group.Sprite_Holder.GotoXY(0,640,0);\n\n               Group.Sprite_Holder.GotoXY(8,693,22);\n\n               Group.Sprite_Holder.GotoXY(9,708,156);\n\n               Group.Sprite_Holder.GotoXY(7,717,404);\n\n            }\n\n            Group.Sprite_Holder.SynchronizeTimers();\n\n            Group.Sprite_Holder.EnableTimers();\n\n            Group.Sound_Holder.PlayDSound(0);\n\n            toolbar=0;\n\n            toolbarPhase=0;\n\n         }\n\n         else\n\n         {\n\n            Group.Sprite_Holder.GotoXY(11,-56,-70);\n\n            if(toolbarCase!=11)  Group.Sound_Holder.PlayDSound(2);\n\n            SetCursor(0);\n\n         }\n\n         txtHotSpotOn=0;\n\n         Group.HotSpot_Holder.DisableHotSpot(1);\n\n         Group.HotSpot_Holder.EnableHotSpot(0);\n\n         toolbarCase=0;\n\n         break;\n\n      case 2:\n\n         if(txtHotSpotOn==0)   \n\n         {\n\n            Group.Sprite_Holder.GotoXY(11,0,0);\n\n            Group.Sound_Holder.PlayDSound(3);\n\n         }\n\n         break;\n\n   }\n\n}\n\n\n\n\n\nvoid Group.Sprite_Holder.InPlace(int spriteID,int x,int y)\n\n{\n\n   switch(spriteID)\n\n   {\n\n      case 0:\n\n         if(x==480)\n\n         {\n\n            toolbar=1;\n\n            Group.HotSpot_Holder.EnableHotSpot(1);\n\n            SetCursor(1);\n\n         }\n\n         else\n\n         {\n\n            SetCursor(0);\n\n            Group.Sprite_Holder.ChangePhase(2,0);\n\n            Group.Sprite_Holder.ChangePhase(3,0);\n\n            Group.Sprite_Holder.ChangePhase(4,0);\n\n            Group.Sprite_Holder.ChangePhase(5,0);\n\n            Group.Sprite_Holder.ChangePhase(6,0);\n\n            Group.Sprite_Holder.ChangePhase(7,0);\n\n            Group.Sprite_Holder.ChangePhase(8,0);\n\n            Group.Sprite_Holder.ChangePhase(9,0);\n\n            switch(toolbarCase)\n\n            {\n\n            case 2:   //lewo   \n\n               FadeScreen(0,1000);\n\n               LoadPage(\"lokomot.bdf\");\n\n               break;\n\n            case 3:   //prawo\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"grzesiu.bdf\");\n\n               break;\n\n            case 4:   //recytacja\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"mroz_r.bdf\");\n\n               break;\n\n            case 5:   //roznice\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"mroz_c.bdf\");\n\n               break;\n\n            case 6:   //puzzle\n\n               Group.Sprite_Holder.DisableTimers();\n\n\n\n               Group.Sprite_Holder.GotoXY(0,480,0);\n\n               Group.Sprite_Holder.GotoXY(8,533,22);\n\n               Group.Sprite_Holder.GotoXY(9,548,156);\n\n               Group.Sprite_Holder.GotoXY(7,557,404);\n\n\n\n               Group.Sprite_Holder.SynchronizeTimers();\n\n               Group.Sprite_Holder.EnableTimers();\n\n               Group.Sound_Holder.PlayDSound(0);\n\n               toolbarPhase=1;\n\n               break;\n\n            case 7:   //Plansza wyboru\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"Wyborw.bdf\");\n\n               break;\n\n            case 8:   //puzzle trudne\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"mrozp1.bdf\");\n\n               break;\n\n            case 9:   //puzzle latwe\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"mrozp2.bdf\");\n\n               break;\n\n            }\n\n         }\n\n         break;\n\n      case 11:\n\n         if(x==0)\n\n         {\n\n            Group.HotSpot_Holder.EnableHotSpot(1);\n\n            txtHotSpotOn=1;\n\n            SetCursor(1);\n\n         }\n\n         break;\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseMoveIn(int spriteID)\n\n{\n\n   if(spriteID && toolbar)\n\n      SetCursor(1);\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseMoveOut(int spriteID)\n\n{\n\n   if(spriteID)\n\n      SetCursor(0);\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnDown(int spriteID)\n\n{\n\n   if(spriteID==0)   return;\n\n   if(spriteID==11)\n\n   {\n\n      Group.Sprite_Holder.GotoXY(11,-56,-70);\n\n      Group.Sound_Holder.PlayDSound(2);\n\n      toolbarCase=spriteID;\n\n      SetCursor(0);\n\n      if(textMode)    textMode=0;\n\n      else            textMode=1;\n\n      SetTextMode();\n\n   }\n\n   else\n\n   {\n\n      Group.HotSpot_Holder.DisableHotSpot(1);\n\n      Group.Sprite_Holder.ChangePhase(spriteID,1);\n\n      switch(spriteID)\n\n      {\n\n         case 2:   //lewo\n\n         case 3:   //prawo \n\n            Group.Sound_Holder.PlayDSound(4);\n\n            break;\n\n         case 4:   //recytacja\n\n            Group.Sound_Holder.PlayDSound(5);\n\n            break;\n\n         case 5:   //roznice\n\n            Group.Sound_Holder.PlayDSound(6);\n\n            break;\n\n         case 6:   //puzzle\n\n            Group.Sound_Holder.PlayDSound(7);\n\n            break;\n\n         case 7:   //plansza glowna\n\n            Group.Sound_Holder.PlayDSound(8);\n\n            break;\n\n         case 8:   //puzzle latwe\n\n            Group.Sound_Holder.PlayDSound(9);\n\n            break;\n\n         case 9:   //puzzle trudne\n\n            Group.Sound_Holder.PlayDSound(10);\n\n            break;\n\n         case 10:  //parent window\n\n            Group.Sound_Holder.PlayDSound(4);\n\n            break;\n\n      }\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnUp(int spriteID)\n\n{\n\n   if(spriteID==0 || spriteID==5 || spriteID==6 || spriteID==8 || spriteID==9 || spriteID==11)   return;\n\n   Group.Sprite_Holder.DisableTimers();\n\n\n\n   if(toolbarPhase==0)\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(2,704,14);\n\n      Group.Sprite_Holder.GotoXY(3,744,14);\n\n      Group.Sprite_Holder.GotoXY(4,675,84);\n\n      Group.Sprite_Holder.GotoXY(5,719,210);\n\n      Group.Sprite_Holder.GotoXY(6,718,282);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n   }\n\n   else\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(8,693,22);\n\n      Group.Sprite_Holder.GotoXY(9,708,156);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n      toolbarPhase=0;\n\n   }\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID;\n\n}\n\n\n\nvoid Group.Sprite_Holder.EndAnimation(int spriteID)\n\n{\n\n   if(spriteID!=5 && spriteID!=6 && spriteID!=8 && spriteID!=9)   return;\n\n\n\n   Group.Sprite_Holder.ChangePhase(spriteID,2);\n\n\n\n   Group.Sprite_Holder.DisableTimers();\n\n\n\n   if(toolbarPhase==0)\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(2,704,14);\n\n      Group.Sprite_Holder.GotoXY(3,744,14);\n\n      Group.Sprite_Holder.GotoXY(4,675,84);\n\n      Group.Sprite_Holder.GotoXY(5,719,210);\n\n      Group.Sprite_Holder.GotoXY(6,718,282);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n   }\n\n   else\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(8,693,22);\n\n      Group.Sprite_Holder.GotoXY(9,708,156);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n      toolbarPhase=0;\n\n   }\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID;\n\n}\n\n//#############################################################\n\n//############################################################# \n\n\n\n\n\n\n\n\n\n\n\n \n\nvoid Text_Holder.ScrollTextUp(int textID)\n\n{\n\n   if( textMode == 0 ) return;\n\n\n\n   SetCursor(3);\n\n}\n\n\n\n \n\nvoid Text_Holder.ScrollTextDown(int textID)\n\n{\n\n   if( textMode == 0 ) return;\n\n   if(playStatus)  SetCursor(2);\n\n   else            SetCursor(4);\n\n}\n\n\n\n \n\nvoid Text_Holder.EndScrollText(int textID)\n\n{\n\n   if( textMode == 0 ) return;\n\n\n\n   SetCursor(5);\n\n}\n\n\n\n \n\nvoid Text_Holder.MouseMoveIn(int textID)\n\n{\n\n   if( textMode == 0 ) return;\n\n\n\n   if(playStatus)\n\n      SetCursor(2);\n\n   else\n\n      SetCursor(5);\n\n}\n\n\n\n \n\nvoid Text_Holder.MouseMoveOut(int textID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\n \n\nvoid Text_Holder.ClickOnText(int textID)\n\n{\n\n   if( textMode == 0 ) return;\n\n\n\n   if(playStatus)\n\n   {\n\n      playStatus=0;\n\n      Sound_Holder.Stop(5);\n\n      Text_Holder.StopSynchroText(0);\n\n      SetCursor(5);\n\n   }\n\n   else\n\n   {\n\n      playStatus=1;\n\n      Text_Holder.PlaySynchroText(0);\n\n      SetCursor(2);\n\n   }\n\n}\n\n\n\n \n\nvoid Text_Holder.EndOfSynchroText(int textID)\n\n{\n\n   if(playStatus)\n\n      SetCursor(5);\n\n   else\n\n      SetCursor(0);\n\n   playStatus=0;\n\n}\n\n\n\n \n\n \n\nvoid OnTimer(void)\n\n{\n\n        //Add your command handler code here\n\n   SetTimer(0);\n\n   Sound_Holder.PlayDSound(6);\n\n}\n\n \n\nvoid OnLButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   SetTimer(0);\n\n   Sound_Holder.Stop(6);\n\n\n\n}\n\n \n\nvoid OnRButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   Sound_Holder.PlayDSound(6);\n\n}\n\n "
+  },
+  "warnings": [
+    "5 component(s) have unknown geometry and default to 0,0.",
+    "Recovered 3 TransparentVideoHolder asset rect(s) from serialized entries."
+  ]
+}
