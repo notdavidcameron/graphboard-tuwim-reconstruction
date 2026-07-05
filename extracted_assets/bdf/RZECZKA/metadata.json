@@ -60,7 +60,8 @@
           "height": 190,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -84,7 +85,8 @@
           "height": 150,
           "transparent_index": 59,
           "header_transparent_index": 59,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -108,7 +110,8 @@
           "height": 85,
           "transparent_index": 59,
           "header_transparent_index": 59,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -132,7 +135,8 @@
           "height": 188,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -156,7 +160,8 @@
           "height": 88,
           "transparent_index": 30,
           "header_transparent_index": 49,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -180,7 +185,8 @@
           "height": 335,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -204,7 +210,8 @@
           "height": 394,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -228,7 +235,8 @@
           "height": 372,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         }
       ],
       "board_video_marker_offset": 4291,
@@ -610,98 +618,196 @@
           "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_000_00648ca8.wav",
           "offset": 6589608,
           "size": 33874,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.7671201814058957,
+          "data_size": 33830
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_001_0065115a.wav",
           "offset": 6623578,
           "size": 16558,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.3744671201814059,
+          "data_size": 16514
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_002_00655268.wav",
           "offset": 6640232,
           "size": 32738,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.741360544217687,
+          "data_size": 32694
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_003_0065d2aa.wav",
           "offset": 6673066,
           "size": 358728,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 8.133424036281179,
+          "data_size": 358684
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_004_006b4c52.wav",
           "offset": 7031890,
           "size": 603270,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 13.67859410430839,
+          "data_size": 603226
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_005_00748138.wav",
           "offset": 7635256,
           "size": 184204,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 4.175963718820862,
+          "data_size": 184160
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_006_00775124.wav",
           "offset": 7819556,
           "size": 289840,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 6.571337868480725,
+          "data_size": 289796
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_007_007bbdb4.wav",
           "offset": 8109492,
           "size": 290928,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 6.596009070294785,
+          "data_size": 290884
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_008_00802e84.wav",
           "offset": 8400516,
           "size": 363566,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 8.24312925170068,
+          "data_size": 363522
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_009_0085bb12.wav",
           "offset": 8764178,
           "size": 543940,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 12.333242630385488,
+          "data_size": 543896
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_010_008e0836.wav",
           "offset": 9308214,
           "size": 950318,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 21.548163265306123,
+          "data_size": 950274
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_011_009c88c4.wav",
           "offset": 10258628,
           "size": 287906,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 6.527482993197279,
+          "data_size": 287862
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_012_00a0edc6.wav",
           "offset": 10546630,
           "size": 435172,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 9.866848072562359,
+          "data_size": 435128
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_013_00a7920a.wav",
           "offset": 10981898,
           "size": 570114,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 12.926757369614512,
+          "data_size": 570070
         }
       ]
     },
@@ -1165,7 +1271,8 @@
       "height": 190,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -1189,7 +1296,8 @@
       "height": 150,
       "transparent_index": 59,
       "header_transparent_index": 59,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -1213,7 +1321,8 @@
       "height": 85,
       "transparent_index": 59,
       "header_transparent_index": 59,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -1237,7 +1346,8 @@
       "height": 188,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -1261,7 +1371,8 @@
       "height": 88,
       "transparent_index": 30,
       "header_transparent_index": 49,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -1285,7 +1396,8 @@
       "height": 335,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -1309,7 +1421,8 @@
       "height": 394,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -1333,7 +1446,8 @@
       "height": 372,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "WAVE",

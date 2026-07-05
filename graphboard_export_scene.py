@@ -330,6 +330,8 @@ def image_asset(item: dict[str, Any], web_root: Path, workspace_root: Path) -> d
         "width": item.get("width") or item.get("video_width"),
         "height": item.get("height") or item.get("video_height"),
         "frameCount": item.get("frame_count"),
+        "delayCentiseconds": item.get("delay_centiseconds"),
+        "framesPerSecond": item.get("frames_per_second"),
         "offset": item.get("offset"),
         "name": item.get("name"),
         "id": asset_id_from_path(path or ""),
@@ -345,6 +347,7 @@ def audio_asset(item: dict[str, Any], web_root: Path, workspace_root: Path) -> d
         "durationSeconds": item.get("duration_seconds"),
         "sampleRate": item.get("sample_rate"),
         "channels": item.get("channels"),
+        "bitsPerSample": item.get("bits_per_sample"),
         "offset": item.get("offset"),
         "id": asset_id_from_path(path or ""),
     }

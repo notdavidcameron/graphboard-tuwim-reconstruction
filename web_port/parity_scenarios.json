@@ -1,0 +1,54 @@
+{
+  "scenarios": [
+    {
+      "id": "wyborw-open",
+      "scene": "WYBORW",
+      "steps": [
+        {"action": "handler", "name": "OnOpenPage"}
+      ],
+      "expectEvents": [
+        "runtime.ready",
+        "handler.start",
+        "hotspot.enabled",
+        "sound.skipped"
+      ]
+    },
+    {
+      "id": "wyborw-menu-hotspot-25",
+      "scene": "WYBORW",
+      "steps": [
+        {"action": "activate"},
+        {"action": "event", "component": "HotSpot_Holder", "event": "LeftButtonClickOn", "id": 25}
+      ],
+      "expectEvents": [
+        "handler.start",
+        "video.start",
+        "sound.start"
+      ]
+    },
+    {
+      "id": "wyborw-page-select-hotspot-0",
+      "scene": "WYBORW",
+      "steps": [
+        {"action": "activate"},
+        {"action": "event", "component": "HotSpot_Holder", "event": "LeftButtonClickOn", "id": 0}
+      ],
+      "expectEvents": [
+        "handler.start",
+        "sound.start"
+      ]
+    },
+    {
+      "id": "rzeczka-open-regression",
+      "scene": "RZECZKA",
+      "steps": [
+        {"action": "handler", "name": "OnOpenPage"}
+      ],
+      "expectEvents": [
+        "runtime.ready",
+        "handler.start",
+        "video.start"
+      ]
+    }
+  ]
+}

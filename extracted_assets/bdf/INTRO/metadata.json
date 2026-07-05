@@ -60,7 +60,8 @@
           "height": 386,
           "transparent_index": 204,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -84,7 +85,8 @@
           "height": 243,
           "transparent_index": 30,
           "header_transparent_index": 156,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -108,7 +110,8 @@
           "height": 61,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -132,7 +135,8 @@
           "height": 103,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -156,7 +160,8 @@
           "height": 58,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -180,7 +185,8 @@
           "height": 67,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -204,7 +210,8 @@
           "height": 88,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -228,7 +235,8 @@
           "height": 44,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -252,7 +260,8 @@
           "height": 75,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -276,7 +285,8 @@
           "height": 32,
           "transparent_index": 15,
           "header_transparent_index": 215,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         }
       ],
       "board_video_marker_offset": 343993,
@@ -726,7 +736,14 @@
           "path": "extracted_assets\\bdf\\INTRO\\embedded\\02_Sound_Holder_000_00336cf7.wav",
           "offset": 3370231,
           "size": 1228728,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 27.861315192743763,
+          "data_size": 1228684
         }
       ]
     }
@@ -774,7 +791,8 @@
       "height": 386,
       "transparent_index": 204,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -798,7 +816,8 @@
       "height": 243,
       "transparent_index": 30,
       "header_transparent_index": 156,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -822,7 +841,8 @@
       "height": 61,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -846,7 +866,8 @@
       "height": 103,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -870,7 +891,8 @@
       "height": 58,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -894,7 +916,8 @@
       "height": 67,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -918,7 +941,8 @@
       "height": 88,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -942,7 +966,8 @@
       "height": 44,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -966,7 +991,8 @@
       "height": 75,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -990,7 +1016,8 @@
       "height": 32,
       "transparent_index": 15,
       "header_transparent_index": 215,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "WAVE",

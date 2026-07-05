@@ -383,6 +383,12 @@
       "output_count": 6
     },
     {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDA.BDF",
+      "output": "extracted_assets\\bdf\\CUDA",
+      "component_count": 5,
+      "output_count": 26
+    },
+    {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDA_C.BDF",
       "output": "extracted_assets\\bdf\\CUDA_C",
       "component_count": 2,
@@ -1591,10 +1597,5 @@
       "reason": "not a YDP Board data file"
     }
   ],
-  "errors": [
-    {
-      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDA.BDF",
-      "error": "OSError(22, 'Invalid argument')"
-    }
-  ]
+  "errors": []
 }

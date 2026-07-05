@@ -60,7 +60,8 @@
           "height": 125,
           "transparent_index": 0,
           "header_transparent_index": 0,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         }
       ],
       "board_video_marker_offset": 311949,
@@ -163,7 +164,8 @@
       "height": 125,
       "transparent_index": 0,
       "header_transparent_index": 0,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     }
   ],
   "script": {

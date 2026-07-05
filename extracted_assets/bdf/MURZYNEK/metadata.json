@@ -51,7 +51,8 @@
           "height": 100,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -75,7 +76,8 @@
           "height": 101,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -99,7 +101,8 @@
           "height": 120,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -123,7 +126,8 @@
           "height": 30,
           "transparent_index": 205,
           "header_transparent_index": 207,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -147,7 +151,8 @@
           "height": 40,
           "transparent_index": 115,
           "header_transparent_index": 115,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -171,7 +176,8 @@
           "height": 113,
           "transparent_index": 101,
           "header_transparent_index": 101,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -195,7 +201,8 @@
           "height": 70,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         }
       ],
       "board_video_marker_offset": 2359,
@@ -543,175 +550,350 @@
           "path": "extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_000_0023c283.wav",
           "offset": 2343555,
           "size": 81132,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.8387301587301588,
+          "data_size": 81088
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_001_0024ffcf.wav",
           "offset": 2424783,
           "size": 102700,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 2.3278004535147394,
+          "data_size": 102656
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_002_0026915b.wav",
           "offset": 2527579,
           "size": 350050,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 7.9366439909297055,
+          "data_size": 350006
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_003_002be91d.wav",
           "offset": 2877725,
           "size": 26198,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.5930612244897959,
+          "data_size": 26154
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_004_002c4fd3.wav",
           "offset": 2904019,
           "size": 13598,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.3073469387755102,
+          "data_size": 13554
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_005_002c8551.wav",
           "offset": 2917713,
           "size": 14390,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.3253061224489796,
+          "data_size": 14346
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_006_002cbde7.wav",
           "offset": 2932199,
           "size": 1716,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.037913832199546485,
+          "data_size": 1672
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_007_002cc4fb.wav",
           "offset": 2934011,
           "size": 24558,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.5558730158730159,
+          "data_size": 24514
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_008_002d2549.wav",
           "offset": 2958665,
           "size": 23194,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.5249433106575964,
+          "data_size": 23150
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_009_002d8043.wav",
           "offset": 2981955,
           "size": 23264,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.5265306122448979,
+          "data_size": 23220
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_010_002ddb83.wav",
           "offset": 3005315,
           "size": 33966,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.7692063492063492,
+          "data_size": 33922
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_011_002e6091.wav",
           "offset": 3039377,
           "size": 17234,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.38979591836734695,
+          "data_size": 17190
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_012_002ea443.wav",
           "offset": 3056707,
           "size": 29422,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.6661678004535148,
+          "data_size": 29378
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_013_002f1791.wav",
           "offset": 3086225,
           "size": 45334,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.0269841269841269,
+          "data_size": 45290
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_014_002fc907.wav",
           "offset": 3131655,
           "size": 64222,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.4552834467120181,
+          "data_size": 64178
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_015_0030c445.wav",
           "offset": 3195973,
           "size": 68494,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.5521541950113378,
+          "data_size": 68450
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_016_0031d033.wav",
           "offset": 3264563,
           "size": 101728,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 2.3057596371882085,
+          "data_size": 101684
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_017_00335df3.wav",
           "offset": 3366387,
           "size": 83618,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.8951020408163266,
+          "data_size": 83574
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_018_0034a4f5.wav",
           "offset": 3450101,
           "size": 55114,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.2487528344671202,
+          "data_size": 55070
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_019_00357c9f.wav",
           "offset": 3505311,
           "size": 161518,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 3.661541950113379,
+          "data_size": 161474
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_020_0037f3ed.wav",
           "offset": 3666925,
           "size": 417900,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 9.475192743764172,
+          "data_size": 417856
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_021_003e54b9.wav",
           "offset": 4084921,
           "size": 22880,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.5178231292517007,
+          "data_size": 22836
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_022_003eae79.wav",
           "offset": 4107897,
           "size": 28074,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.6356009070294785,
+          "data_size": 28030
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_023_003f1c83.wav",
           "offset": 4136067,
           "size": 27508,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.622766439909297,
+          "data_size": 27464
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MURZYNEK\\embedded\\04_Sound_Holder_024_003f8857.wav",
           "offset": 4163671,
           "size": 24610,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.5570521541950113,
+          "data_size": 24566
         }
       ]
     },
@@ -767,7 +949,8 @@
       "height": 100,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -791,7 +974,8 @@
       "height": 101,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -815,7 +999,8 @@
       "height": 120,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -839,7 +1024,8 @@
       "height": 30,
       "transparent_index": 205,
       "header_transparent_index": 207,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -863,7 +1049,8 @@
       "height": 40,
       "transparent_index": 115,
       "header_transparent_index": 115,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -887,7 +1074,8 @@
       "height": 113,
       "transparent_index": 101,
       "header_transparent_index": 101,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -911,7 +1099,8 @@
       "height": 70,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "WAVE",

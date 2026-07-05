@@ -61,7 +61,14 @@
           "path": "extracted_assets\\bdf\\CUDA_R\\embedded\\03_Sound_Holder_000_00056b23.wav",
           "offset": 355107,
           "size": 79330,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.7978684807256236,
+          "data_size": 79286
         }
       ]
     }

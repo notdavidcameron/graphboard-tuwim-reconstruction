@@ -3,7 +3,8 @@ const state = {
   scene: null,
   selected: 0,
 };
-const CACHE_VERSION = "23";
+const CACHE_VERSION = "24";
+window.GRAPHBOARD_CACHE_VERSION = CACHE_VERSION;
 
 const els = {
   summary: document.getElementById("summary"),
@@ -27,6 +28,7 @@ const els = {
 };
 
 const runtime = new GraphBoardRuntime(els.stage, els.runtimeLog);
+window.graphBoardRuntime = runtime;
 runtime.onLoadPage = (bdfName) => {
   const clean = String(bdfName || "").replace(/^.*[\\/]/, "").replace(/\.bdf$/i, "").toLowerCase();
   const index = state.index.scenes.findIndex((scene) => (

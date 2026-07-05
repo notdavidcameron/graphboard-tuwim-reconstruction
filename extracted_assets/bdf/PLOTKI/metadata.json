@@ -60,7 +60,8 @@
           "height": 364,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -84,7 +85,8 @@
           "height": 364,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -108,7 +110,8 @@
           "height": 364,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -132,7 +135,8 @@
           "height": 364,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -156,7 +160,8 @@
           "height": 364,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         }
       ],
       "board_video_marker_offset": 515773,
@@ -400,56 +405,112 @@
           "path": "extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_000_00a5162d.wav",
           "offset": 10819117,
           "size": 94380,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 2.139138321995465,
+          "data_size": 94336
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_001_00a68739.wav",
           "offset": 10913593,
           "size": 313268,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 7.102585034013606,
+          "data_size": 313224
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_002_00ab4f4d.wav",
           "offset": 11226957,
           "size": 68322,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.5482539682539682,
+          "data_size": 68278
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_003_00ac5a8f.wav",
           "offset": 11295375,
           "size": 40294,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.9126984126984127,
+          "data_size": 40250
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_004_00acf855.wav",
           "offset": 11335765,
           "size": 89326,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 2.02453514739229,
+          "data_size": 89282
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_005_00ae55a3.wav",
           "offset": 11425187,
           "size": 35556,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.8052607709750567,
+          "data_size": 35512
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_006_00aee0e7.wav",
           "offset": 11460839,
           "size": 38244,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.8662131519274376,
+          "data_size": 38200
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_007_00af76ab.wav",
           "offset": 11499179,
           "size": 212474,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 4.817006802721089,
+          "data_size": 212430
         }
       ]
     }
@@ -497,7 +558,8 @@
       "height": 364,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -521,7 +583,8 @@
       "height": 364,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -545,7 +608,8 @@
       "height": 364,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -569,7 +633,8 @@
       "height": 364,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -593,7 +658,8 @@
       "height": 364,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "WAVE",

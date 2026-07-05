@@ -52,77 +52,154 @@
           "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_000_0009a3a8.wav",
           "offset": 631720,
           "size": 76640,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.7368707482993198,
+          "data_size": 76596
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_001_000acf68.wav",
           "offset": 708456,
           "size": 378926,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 8.59142857142857,
+          "data_size": 378882
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_002_001097f6.wav",
           "offset": 1087478,
           "size": 14468,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.3270748299319728,
+          "data_size": 14424
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_003_0010d0da.wav",
           "offset": 1102042,
           "size": 14940,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.3377777777777778,
+          "data_size": 14896
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_004_00110b96.wav",
           "offset": 1117078,
           "size": 14730,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.33301587301587304,
+          "data_size": 14686
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_005_00114580.wav",
           "offset": 1131904,
           "size": 14582,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.3296598639455782,
+          "data_size": 14538
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_006_00117ed6.wav",
           "offset": 1146582,
           "size": 73198,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.6588208616780045,
+          "data_size": 73154
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_007_00129d24.wav",
           "offset": 1219876,
           "size": 65546,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.4853061224489796,
+          "data_size": 65502
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_008_00139d8e.wav",
           "offset": 1285518,
           "size": 247340,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 5.607619047619048,
+          "data_size": 247296
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_009_0017641a.wav",
           "offset": 1532954,
           "size": 118316,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 2.681904761904762,
+          "data_size": 118272
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_010_001932a6.wav",
           "offset": 1651366,
           "size": 512292,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 11.615600907029478,
+          "data_size": 512248
         }
       ]
     },
@@ -156,7 +233,8 @@
           "height": 72,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -180,7 +258,8 @@
           "height": 103,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -204,7 +283,8 @@
           "height": 125,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -228,7 +308,8 @@
           "height": 52,
           "transparent_index": 42,
           "header_transparent_index": 85,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -252,7 +333,8 @@
           "height": 73,
           "transparent_index": 85,
           "header_transparent_index": 48,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         }
       ],
       "board_video_marker_offset": 2164936,
@@ -573,7 +655,8 @@
       "height": 72,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -597,7 +680,8 @@
       "height": 103,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -621,7 +705,8 @@
       "height": 125,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -645,7 +730,8 @@
       "height": 52,
       "transparent_index": 42,
       "header_transparent_index": 85,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -669,7 +755,8 @@
       "height": 73,
       "transparent_index": 85,
       "header_transparent_index": 48,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     }
   ],
   "script": {

@@ -60,7 +60,8 @@
           "height": 72,
           "transparent_index": 42,
           "header_transparent_index": 6,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -84,7 +85,8 @@
           "height": 117,
           "transparent_index": 0,
           "header_transparent_index": 72,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         }
       ],
       "board_video_marker_offset": 1382697,
@@ -190,154 +192,308 @@
           "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_000_001b358b.wav",
           "offset": 1783179,
           "size": 55598,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.2597278911564627,
+          "data_size": 55554
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_001_001c0f19.wav",
           "offset": 1838873,
           "size": 57922,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.3124263038548754,
+          "data_size": 57878
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_002_001cf1bb.wav",
           "offset": 1896891,
           "size": 50764,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.1501133786848072,
+          "data_size": 50720
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_003_001db867.wav",
           "offset": 1947751,
           "size": 54660,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.2384580498866213,
+          "data_size": 54616
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_004_001e8e4b.wav",
           "offset": 2002507,
           "size": 56038,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.2697052154195012,
+          "data_size": 55994
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_005_001f6991.wav",
           "offset": 2058641,
           "size": 56138,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.2719727891156463,
+          "data_size": 56094
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_006_0020453b.wav",
           "offset": 2114875,
           "size": 57130,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.294467120181406,
+          "data_size": 57086
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_007_002124c5.wav",
           "offset": 2172101,
           "size": 49202,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.1146938775510205,
+          "data_size": 49158
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_008_0021e557.wav",
           "offset": 2221399,
           "size": 51760,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.1726984126984128,
+          "data_size": 51716
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_009_0022afe7.wav",
           "offset": 2273255,
           "size": 46902,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.0625396825396825,
+          "data_size": 46858
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_010_0023677d.wav",
           "offset": 2320253,
           "size": 49146,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.1134240362811791,
+          "data_size": 49102
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_011_002427d7.wav",
           "offset": 2369495,
           "size": 55614,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.2600907029478459,
+          "data_size": 55570
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_012_00250175.wav",
           "offset": 2425205,
           "size": 92690,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 2.1008163265306123,
+          "data_size": 92646
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_013_00266be7.wav",
           "offset": 2517991,
           "size": 282670,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 6.40875283446712,
+          "data_size": 282626
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_014_002abc75.wav",
           "offset": 2800757,
           "size": 35046,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.7936961451247165,
+          "data_size": 35002
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_015_002b45bb.wav",
           "offset": 2835899,
           "size": 31908,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.7225396825396826,
+          "data_size": 31864
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_016_002bc2bf.wav",
           "offset": 2867903,
           "size": 42164,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.9551020408163265,
+          "data_size": 42120
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_017_002c67d3.wav",
           "offset": 2910163,
           "size": 38646,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.875328798185941,
+          "data_size": 38602
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_018_002cff29.wav",
           "offset": 2948905,
           "size": 37180,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.8420861678004535,
+          "data_size": 37136
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_019_002d90c5.wav",
           "offset": 2986181,
           "size": 47760,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.0819954648526078,
+          "data_size": 47716
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_020_002e4bb5.wav",
           "offset": 3034037,
           "size": 5006,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.11251700680272109,
+          "data_size": 4962
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_021_002e5fa3.wav",
           "offset": 3039139,
           "size": 238508,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 5.40734693877551,
+          "data_size": 238464
         }
       ]
     },
@@ -403,7 +559,8 @@
       "height": 72,
       "transparent_index": 42,
       "header_transparent_index": 6,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -427,7 +584,8 @@
       "height": 117,
       "transparent_index": 0,
       "header_transparent_index": 72,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "WAVE",

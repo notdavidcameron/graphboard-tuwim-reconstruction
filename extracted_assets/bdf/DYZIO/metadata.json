@@ -69,7 +69,8 @@
           "height": 75,
           "transparent_index": 44,
           "header_transparent_index": 84,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -93,7 +94,8 @@
           "height": 80,
           "transparent_index": 85,
           "header_transparent_index": 48,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         }
       ],
       "board_video_marker_offset": 705370,
@@ -208,63 +210,126 @@
           "path": "extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_000_00124ce9.wav",
           "offset": 1199337,
           "size": 11222,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.253469387755102,
+          "data_size": 11178
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_001_0012791f.wav",
           "offset": 1210655,
           "size": 469914,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 10.654648526077098,
+          "data_size": 469870
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_002_0019a519.wav",
           "offset": 1680665,
           "size": 50410,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.1420861678004535,
+          "data_size": 50366
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_003_001a6a63.wav",
           "offset": 1731171,
           "size": 47988,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.0871655328798187,
+          "data_size": 47944
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_004_001b2637.wav",
           "offset": 1779255,
           "size": 127068,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 2.8803628117913833,
+          "data_size": 127024
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_005_001d16f3.wav",
           "offset": 1906419,
           "size": 164474,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 3.7285714285714286,
+          "data_size": 164430
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_006_001f99cd.wav",
           "offset": 2070989,
           "size": 32914,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.7453514739229025,
+          "data_size": 32870
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_007_00201abf.wav",
           "offset": 2103999,
           "size": 13586,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.30707482993197277,
+          "data_size": 13542
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\DYZIO\\embedded\\04_Sound_Holder_008_00205031.wav",
           "offset": 2117681,
           "size": 329106,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 7.46172335600907,
+          "data_size": 329062
         }
       ]
     },
@@ -321,7 +386,8 @@
       "height": 75,
       "transparent_index": 44,
       "header_transparent_index": 84,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -345,7 +411,8 @@
       "height": 80,
       "transparent_index": 85,
       "header_transparent_index": 48,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "WAVE",

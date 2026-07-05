@@ -51,7 +51,8 @@
           "height": 163,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -75,7 +76,8 @@
           "height": 226,
           "transparent_index": 30,
           "header_transparent_index": 129,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -99,7 +101,8 @@
           "height": 407,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -123,7 +126,8 @@
           "height": 109,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -147,7 +151,8 @@
           "height": 408,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -171,7 +176,8 @@
           "height": 146,
           "transparent_index": 36,
           "header_transparent_index": 36,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -195,7 +201,8 @@
           "height": 91,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         }
       ],
       "board_video_marker_offset": 2359,
@@ -552,42 +559,84 @@
           "path": "extracted_assets\\bdf\\TANIEC\\embedded\\05_Sound_Holder_000_004315a4.wav",
           "offset": 4396452,
           "size": 25156,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.5694331065759637,
+          "data_size": 25112
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\TANIEC\\embedded\\05_Sound_Holder_001_00437848.wav",
           "offset": 4421704,
           "size": 300916,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 6.8224943310657595,
+          "data_size": 300872
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\TANIEC\\embedded\\05_Sound_Holder_002_0048101c.wav",
           "offset": 4722716,
           "size": 180340,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 4.088344671201814,
+          "data_size": 180296
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\TANIEC\\embedded\\05_Sound_Holder_003_004ad0f0.wav",
           "offset": 4903152,
           "size": 150018,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 3.4007709750566892,
+          "data_size": 149974
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\TANIEC\\embedded\\05_Sound_Holder_004_004d1b52.wav",
           "offset": 5053266,
           "size": 249964,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 5.667120181405895,
+          "data_size": 249920
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\TANIEC\\embedded\\05_Sound_Holder_005_0050ec1e.wav",
           "offset": 5303326,
           "size": 195326,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 4.4281632653061225,
+          "data_size": 195282
         }
       ]
     }
@@ -625,7 +674,8 @@
       "height": 163,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -649,7 +699,8 @@
       "height": 226,
       "transparent_index": 30,
       "header_transparent_index": 129,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -673,7 +724,8 @@
       "height": 407,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -697,7 +749,8 @@
       "height": 109,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -721,7 +774,8 @@
       "height": 408,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -745,7 +799,8 @@
       "height": 146,
       "transparent_index": 36,
       "header_transparent_index": 36,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -769,7 +824,8 @@
       "height": 91,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "WAVE",

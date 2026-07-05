@@ -7,7 +7,10 @@ class GraphBoardRuntime {
     this.audio = new Map();
     this.assets = new Map();
     this.hotspots = new Map();
+    this.layerDepths = new Map();
+    this.soundParams = new Map();
     this.variables = new Map();
+    this.traces = [];
     this.loadedGroup = null;
     this.screenEnabled = true;
     this.callDepth = 0;
@@ -28,7 +31,10 @@ class GraphBoardRuntime {
     this.audio.clear();
     this.assets.clear();
     this.hotspots.clear();
+    this.layerDepths.clear();
+    this.soundParams.clear();
     this.variables.clear();
+    this.traces = [];
     this.loadedGroup = null;
     this.screenEnabled = true;
     this.userActivated = false;
@@ -36,6 +42,7 @@ class GraphBoardRuntime {
     this.indexSceneAssets();
     this.indexExistingDom();
     this.freezeInitialVideoLayers();
+    this.trace("runtime.ready", { scene: scene?.id || null });
     this.log(`runtime ready: ${scene?.id || "no scene"}`);
   }
 
@@ -48,6 +55,10 @@ class GraphBoardRuntime {
           ? id / 2
           : id;
         this.assets.set(`${component.type}:${runtimeId}`, asset);
+        if (Number.isFinite(Number(asset.z))) this.layerDepths.set(`${component.type}:${runtimeId}`, Number(asset.z));
+      }
+      for (const hotspot of component.hotspots || []) {
+        this.hotspots.set(`page:${Number(hotspot.id ?? hotspot.index ?? 0)}`, hotspot.enabled !== false);
       }
     }
   }
@@ -114,6 +125,15 @@ class GraphBoardRuntime {
     this.logTarget.textContent = `${line}\n${this.logTarget.textContent}`.slice(0, 7000);
   }
 
+  trace(event, payload = {}) {
+    this.traces.push({
+      event,
+      payload,
+      at: Math.round((typeof performance !== "undefined" ? performance.now() : Date.now())),
+    });
+    if (this.traces.length > 2000) this.traces.splice(0, this.traces.length - 2000);
+  }
+
   markUserActivated() {
     this.userActivated = true;
   }
@@ -143,9 +163,11 @@ class GraphBoardRuntime {
     const layer = this.findLayer(type, id);
     if (!layer) {
       this.log(`${type}.${visible ? "show" : "hide"}(${id}) missing layer`);
+      this.trace("layer.missing", { type, id, visible });
       return;
     }
     layer.classList.toggle("runtime-hidden", !visible);
+    this.trace("layer.visible", { type, id, visible });
     this.log(`${type}.${visible ? "show" : "hide"}(${id})`);
   }
 
@@ -155,6 +177,7 @@ class GraphBoardRuntime {
     layer.dataset.videoState = first ? "first" : "last";
     layer.classList.remove("runtime-playing");
     layer.classList.toggle("runtime-hidden", false);
+    this.trace("video.still", { type, id, frame: first ? "first" : "last" });
     if (first && layer.dataset.originalSrc) {
       layer.src = layer.dataset.originalSrc;
       setTimeout(() => {
@@ -203,6 +226,7 @@ class GraphBoardRuntime {
     const layer = this.findLayer(type, id);
     if (!layer) {
       this.log(`${type}.move(${id},${x},${y}) missing layer`);
+      this.trace("layer.move.missing", { type, id, x, y, z });
       return;
     }
     layer.style.left = `${x}px`;
@@ -210,17 +234,36 @@ class GraphBoardRuntime {
     layer.style.transition = "left 180ms linear, top 180ms linear";
     if (Number.isFinite(z)) layer.style.zIndex = this.layerZIndex(type, id, z);
     layer.classList.remove("runtime-hidden");
+    this.trace("layer.move", { type, id, x, y, z: Number.isFinite(z) ? z : null });
     this.log(`${type}.move(${id},${x},${y}${Number.isFinite(z) ? `,${z}` : ""})`);
+  }
+
+  setLayerDepth(type, id, z) {
+    const depth = Number(z);
+    if (!Number.isFinite(depth)) return;
+    this.layerDepths.set(`${type}:${id}`, depth);
+    const layer = this.findLayer(type, id);
+    if (layer) layer.style.zIndex = this.layerZIndex(type, id, depth);
+    this.trace("layer.depth", { type, id, z: depth });
+    this.log(`${type}.SetDeep(${id},${depth})`);
+  }
+
+  getLayerDepth(type, id) {
+    if (this.layerDepths.has(`${type}:${id}`)) return this.layerDepths.get(`${type}:${id}`);
+    const asset = this.findAsset(type, id);
+    return Number(asset?.z ?? 0);
   }
 
   playAudio(type, id) {
     const audio = this.findAudio(type, id);
     if (!audio) {
       this.log(`${type}.PlayDSound(${id}) missing audio`);
+      this.trace("sound.missing", { type, id });
       return;
     }
     if (!this.userActivated) {
       this.log(`${type}.PlayDSound(${id}) skipped until click`);
+      this.trace("sound.skipped", { type, id, reason: "user-activation" });
       return;
     }
     const key = `${type}:${id}:${Date.now()}:${Math.random()}`;
@@ -229,6 +272,7 @@ class GraphBoardRuntime {
     instance.addEventListener("ended", () => {
       this.activeAudio.delete(key);
       const soundId = Number(audio.dataset.runtimeId ?? audio.dataset.assetId ?? id);
+      this.trace("sound.end", { type, id: soundId });
       this.executeHandler(`${type}.EndPlaySound`, [soundId]);
       if (type === "Sound_Holder") this.executeHandler("Sound_Holder.EndPlaySound", [soundId]);
     }, { once: true });
@@ -237,7 +281,9 @@ class GraphBoardRuntime {
     instance.play().catch((error) => {
       this.activeAudio.delete(key);
       this.log(`audio blocked: ${error.message}`);
+      this.trace("sound.blocked", { type, id, message: error.message });
     });
+    this.trace("sound.start", { type, id, params: this.soundParams.get(`${type}:${id}`) || null });
     this.log(`${type}.PlayDSound(${id})`);
   }
 
@@ -249,13 +295,15 @@ class GraphBoardRuntime {
       item.pause();
       item.currentTime = 0;
       this.activeAudio.delete(key);
+      this.trace("sound.stop", { type, id: Number(itemId) });
     }
     this.log(`${type}.Stop(${Number.isFinite(id) ? id : "all"})`);
   }
 
   videoDurationMs(type, id) {
     const asset = this.findAsset(type, id);
-    const frameDuration = Number(asset?.frameCount || 1) * 100;
+    const delayMs = Math.max(10, Number(asset?.delayCentiseconds || 10) * 10);
+    const frameDuration = Number(asset?.frameCount || 1) * delayMs;
     const matchingAudio = this.findAudio(type, id);
     const audioDuration = Number(matchingAudio?.dataset.durationSeconds || 0) * 1000;
     return Math.max(250, audioDuration || frameDuration);
@@ -277,8 +325,10 @@ class GraphBoardRuntime {
       this.videoTimers.delete(key);
       layer.classList.remove("runtime-playing");
       this.freezeLayer(layer, "last");
+      this.trace("video.end", { type, id });
       this.executeHandler(`${type}.TheEnd`, [id]);
     }, delay));
+    this.trace("video.start", { type, id, delayMs: Math.round(delay) });
     this.log(`${type}.Play(${id}) for ${Math.round(delay)}ms`);
   }
 
@@ -297,17 +347,22 @@ class GraphBoardRuntime {
     }
   }
 
-  enableHotspot(id, enabled) {
-    this.hotspots.set(id, enabled);
-    for (const target of this.stage.querySelectorAll(`[data-component-type="HotSpot_Holder"][data-runtime-id="${id}"]`)) {
-      target.classList.toggle("runtime-disabled", !enabled);
+  enableHotspot(id, enabled, scope = "page") {
+    const key = `${scope}:${id}`;
+    this.hotspots.set(key, enabled);
+    if (scope === "page") {
+      for (const target of this.stage.querySelectorAll(`[data-component-type="HotSpot_Holder"][data-runtime-id="${id}"]`)) {
+        target.classList.toggle("runtime-disabled", !enabled);
+      }
     }
-    this.log(`HotSpot ${id} ${enabled ? "enabled" : "disabled"}`);
+    this.trace("hotspot.enabled", { scope, id, enabled });
+    this.log(`${scope === "group" ? "Group." : ""}HotSpot ${id} ${enabled ? "enabled" : "disabled"}`);
   }
 
   dispatchComponentEvent(type, eventName, id, extra = []) {
-    if (type === "HotSpot_Holder" && this.hotspots.has(id) && !this.hotspots.get(id)) {
+    if (type === "HotSpot_Holder" && this.hotspots.has(`page:${id}`) && !this.hotspots.get(`page:${id}`)) {
       this.log(`HotSpot ${id} ignored (${eventName})`);
+      this.trace("hotspot.ignored", { id, eventName });
       return;
     }
     if (/Click|Button/i.test(eventName)) {
@@ -337,6 +392,7 @@ class GraphBoardRuntime {
       this.log(`handler recursion limit: ${name}`);
       return;
     }
+    this.trace("handler.start", { name, args });
     this.log(`run ${name}(${args.join(",")})`);
     for (const [key, index] of Object.entries({ rectID: 0, videoID: 0, spriteID: 0, soundID: 0, textID: 0, x: 1, y: 2 })) {
       if (args[index] !== undefined) this.variables.set(key, args[index]);
@@ -349,6 +405,7 @@ class GraphBoardRuntime {
     } finally {
       this.returning = outerReturning;
       this.callDepth -= 1;
+      this.trace("handler.end", { name });
     }
   }
 
@@ -463,6 +520,7 @@ class GraphBoardRuntime {
       const token = part.trim();
       if (/^-?\d+$/.test(token)) return Number(token);
       if (/^".*"$/.test(token)) return token.slice(1, -1);
+      if (/^&\s*[A-Za-z_][A-Za-z0-9_]*(?:\[[^\]]+\])?$/.test(token)) return { ref: this.variableKey(token.replace(/^&\s*/, "")) };
       if (token === "rectID") return handlerArgs[0] ?? 0;
       if (token === "videoID") return handlerArgs[0] ?? 0;
       if (token === "spriteID") return handlerArgs[0] ?? 0;
@@ -475,6 +533,13 @@ class GraphBoardRuntime {
       }
       return token;
     });
+  }
+
+  setReference(target, value) {
+    if (target && typeof target === "object" && target.ref) {
+      this.variables.set(target.ref, value);
+      this.trace("variable.set", { name: target.ref, value });
+    }
   }
 
   skipSpace(code, cursor) {
@@ -593,7 +658,10 @@ class GraphBoardRuntime {
   }
 
   dispatch(method, args) {
-    const local = method.replace(/^Group\./, "");
+    this.trace("dispatch", { method, args });
+    const isGroup = method.startsWith("Group.");
+    const local = isGroup ? method.slice("Group.".length) : method;
+    const scope = isGroup ? "group" : "page";
     switch (local) {
       case "LoadGroup":
         this.loadedGroup = String(args[0] || "");
@@ -601,6 +669,7 @@ class GraphBoardRuntime {
         break;
       case "LoadPage":
         this.log(`LoadPage(${args[0] || ""})`);
+        this.trace("page.load", { target: String(args[0] || "") });
         if (this.onLoadPage) this.onLoadPage(String(args[0] || ""));
         break;
       case "SetCursor":
@@ -634,6 +703,11 @@ class GraphBoardRuntime {
         this.stopAudio("Sound_Holder");
         break;
       case "Sound_Holder.SetPlayDSoundParameters":
+        this.soundParams.set(`Sound_Holder:${Number(args[0])}`, {
+          volume: Number(args[1] || 0),
+          pan: Number(args[2] || 0),
+          frequency: Number(args[3] || 0),
+        });
         this.log(`${local}(${args.join(",")})`);
         break;
       case "Transparent_Video_Holder.Play":
@@ -642,6 +716,11 @@ class GraphBoardRuntime {
       case "Transparent_Video_Holder.Stop":
         this.stopAudio("Transparent_Video_Holder");
         this.clearVideoTimers();
+        for (const layer of this.stage.querySelectorAll('.layer[data-component-type="Transparent_Video_Holder"]')) {
+          layer.classList.remove("runtime-playing");
+          layer.classList.add("runtime-hidden");
+        }
+        this.trace("video.stopAll", { type: "Transparent_Video_Holder" });
         this.log("Transparent_Video_Holder.Stop()");
         break;
       case "Transparent_Video_Holder.ResetVideo":
@@ -653,8 +732,17 @@ class GraphBoardRuntime {
       case "Transparent_Video_Holder.HideFirsLastVideoFrame":
         this.setLayerVisible("Transparent_Video_Holder", Number(args[0]), false);
         break;
-      case "Transparent_Video_Holder.SetDeep":
       case "Transparent_Video_Holder.GetDeep":
+        this.setReference(args[1], this.getLayerDepth("Transparent_Video_Holder", Number(args[0])));
+        this.log(`${local}(${args.join(",")})`);
+        break;
+      case "Transparent_Video_Holder.SetDeep":
+        this.setLayerDepth("Transparent_Video_Holder", Number(args[0]), Number(args[1]));
+        break;
+      case "Transparent_Video_Holder.TheEnd":
+        this.executeHandler("Transparent_Video_Holder.TheEnd", [Number(args[0])]);
+        break;
+      case "Transparent_Video_Holder.MouseMoveIn":
         this.log(`${local}(${args.join(",")})`);
         break;
       case "MultiBitmap.ShowBitmap":
@@ -667,16 +755,21 @@ class GraphBoardRuntime {
         break;
       case "Sprite_Holder.GotoXY":
       case "Sprite_Holder.MoveTo":
-        this.moveLayer("Sprite_Holder", Number(args[0]), Number(args[1] || 0), Number(args[2] || 0));
+        this.moveLayer(isGroup ? "Group.Sprite_Holder" : "Sprite_Holder", Number(args[0]), Number(args[1] || 0), Number(args[2] || 0));
         break;
       case "Sprite_Holder.ShowSprite":
-        this.setLayerVisible("Sprite_Holder", Number(args[0]), true);
+        this.setLayerVisible(isGroup ? "Group.Sprite_Holder" : "Sprite_Holder", Number(args[0]), true);
         break;
       case "Sprite_Holder.HideSprite":
-        this.setLayerVisible("Sprite_Holder", Number(args[0]), false);
+        this.setLayerVisible(isGroup ? "Group.Sprite_Holder" : "Sprite_Holder", Number(args[0]), false);
         break;
       case "Sprite_Holder.ChangePhase":
+        this.trace("sprite.phase", { scope, id: Number(args[0]), phase: Number(args[1] || 0) });
+        this.log(`${local}(${args.join(",")})`);
+        break;
       case "Sprite_Holder.SetDeep":
+        this.setLayerDepth(isGroup ? "Group.Sprite_Holder" : "Sprite_Holder", Number(args[0]), Number(args[1]));
+        break;
       case "Sprite_Holder.EnableTimers":
       case "Sprite_Holder.DisableTimers":
       case "Sprite_Holder.SynchronizeTimers":
@@ -685,10 +778,10 @@ class GraphBoardRuntime {
         this.log(`${local}(${args.join(",")})`);
         break;
       case "HotSpot_Holder.EnableHotSpot":
-        this.enableHotspot(Number(args[0]), true);
+        this.enableHotspot(Number(args[0]), true, scope);
         break;
       case "HotSpot_Holder.DisableHotSpot":
-        this.enableHotspot(Number(args[0]), false);
+        this.enableHotspot(Number(args[0]), false, scope);
         break;
       case "HotSpot_Holder.LeftButtonClickOn":
       case "HotSpot_Holder.LeftButtonClickOnUp":
@@ -699,6 +792,10 @@ class GraphBoardRuntime {
         );
         break;
       case "HotSpot_Holder.MoveTo":
+        this.log(`${local}(${args.join(",")})`);
+        break;
+      case "Text_Holder.SetText":
+        this.trace("text.set", { id: Number(args[0]), text: String(args[1] ?? "") });
         this.log(`${local}(${args.join(",")})`);
         break;
       case "Text_Holder.ShowText":

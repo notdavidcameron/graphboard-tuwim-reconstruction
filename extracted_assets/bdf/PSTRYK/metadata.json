@@ -60,7 +60,8 @@
           "height": 252,
           "transparent_index": 30,
           "header_transparent_index": 202,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -84,7 +85,8 @@
           "height": 140,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -108,7 +110,8 @@
           "height": 125,
           "transparent_index": 35,
           "header_transparent_index": 35,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -132,7 +135,8 @@
           "height": 252,
           "transparent_index": 30,
           "header_transparent_index": 202,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -156,7 +160,8 @@
           "height": 150,
           "transparent_index": 202,
           "header_transparent_index": 202,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -180,7 +185,8 @@
           "height": 145,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -204,7 +210,8 @@
           "height": 22,
           "transparent_index": 198,
           "header_transparent_index": 198,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         }
       ],
       "board_video_marker_offset": 618195,
@@ -543,84 +550,168 @@
           "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_000_005d33a0.wav",
           "offset": 6108064,
           "size": 20186,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.456734693877551,
+          "data_size": 20142
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_001_005d82da.wav",
           "offset": 6128346,
           "size": 552010,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 12.5162358276644,
+          "data_size": 551966
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_002_0065ef84.wav",
           "offset": 6680452,
           "size": 127646,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 2.893469387755102,
+          "data_size": 127602
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_003_0067e282.wav",
           "offset": 6808194,
           "size": 186414,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 4.2260770975056685,
+          "data_size": 186370
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_004_006abb10.wav",
           "offset": 6994704,
           "size": 399476,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 9.057414965986395,
+          "data_size": 399432
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_005_0070d3e4.wav",
           "offset": 7394276,
           "size": 202798,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 4.597596371882086,
+          "data_size": 202754
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_006_0073ec72.wav",
           "offset": 7597170,
           "size": 158766,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 3.599138321995465,
+          "data_size": 158722
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_007_00765900.wav",
           "offset": 7756032,
           "size": 240686,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 5.456734693877551,
+          "data_size": 240642
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_008_007a058e.wav",
           "offset": 7996814,
           "size": 372808,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 8.452698412698412,
+          "data_size": 372764
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_009_007fb636.wav",
           "offset": 8369718,
           "size": 341850,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 7.750702947845805,
+          "data_size": 341806
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_010_0084edf0.wav",
           "offset": 8711664,
           "size": 704610,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 15.97655328798186,
+          "data_size": 704566
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_011_008faeb2.wav",
           "offset": 9416370,
           "size": 465094,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 10.545351473922903,
+          "data_size": 465050
         }
       ]
     },
@@ -667,7 +758,8 @@
       "height": 252,
       "transparent_index": 30,
       "header_transparent_index": 202,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -691,7 +783,8 @@
       "height": 140,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -715,7 +808,8 @@
       "height": 125,
       "transparent_index": 35,
       "header_transparent_index": 35,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -739,7 +833,8 @@
       "height": 252,
       "transparent_index": 30,
       "header_transparent_index": 202,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -763,7 +858,8 @@
       "height": 150,
       "transparent_index": 202,
       "header_transparent_index": 202,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -787,7 +883,8 @@
       "height": 145,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -811,7 +908,8 @@
       "height": 22,
       "transparent_index": 198,
       "header_transparent_index": 198,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "WAVE",

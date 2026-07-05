@@ -69,7 +69,8 @@
           "height": 480,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -93,7 +94,8 @@
           "height": 480,
           "transparent_index": 30,
           "header_transparent_index": 0,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         }
       ],
       "board_video_marker_offset": 1281565,
@@ -208,91 +210,182 @@
           "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_000_0037555a.wav",
           "offset": 3626330,
           "size": 92512,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 2.096780045351474,
+          "data_size": 92468
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_001_0038bf1a.wav",
           "offset": 3718938,
           "size": 228502,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 5.180453514739229,
+          "data_size": 228458
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_002_003c3c10.wav",
           "offset": 3947536,
           "size": 831652,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 18.85732426303855,
+          "data_size": 831608
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_003_0048ed14.wav",
           "offset": 4779284,
           "size": 1066794,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 24.189342403628117,
+          "data_size": 1066750
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_004_0059349e.wav",
           "offset": 5846174,
           "size": 1511236,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 34.26739229024943,
+          "data_size": 1511192
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_005_00704442.wav",
           "offset": 7357506,
           "size": 29250,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.6622675736961451,
+          "data_size": 29206
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_006_0070b6e4.wav",
           "offset": 7386852,
           "size": 323594,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 7.336734693877551,
+          "data_size": 323550
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_007_0075a74e.wav",
           "offset": 7710542,
           "size": 262418,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 5.94952380952381,
+          "data_size": 262374
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_008_0079a8c0.wav",
           "offset": 7973056,
           "size": 54716,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.2397278911564626,
+          "data_size": 54672
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_009_007a7edc.wav",
           "offset": 8027868,
           "size": 73450,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.6645351473922902,
+          "data_size": 73406
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_010_007b9e26.wav",
           "offset": 8101414,
           "size": 173292,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 3.9285260770975055,
+          "data_size": 173248
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_011_007e4372.wav",
           "offset": 8274802,
           "size": 37478,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.848843537414966,
+          "data_size": 37434
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_012_007ed638.wav",
           "offset": 8312376,
           "size": 472734,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 10.71859410430839,
+          "data_size": 472690
         }
       ]
     },
@@ -339,7 +432,8 @@
       "height": 480,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -363,7 +457,8 @@
       "height": 480,
       "transparent_index": 30,
       "header_transparent_index": 0,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "WAVE",

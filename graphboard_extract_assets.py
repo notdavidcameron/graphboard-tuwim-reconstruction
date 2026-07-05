@@ -61,6 +61,42 @@ def riff_extension(data: bytes, offset: int) -> str:
     return ".riff"
 
 
+def riff_wave_info(data: bytes, offset: int, size: int) -> dict:
+    if data[offset + 8 : offset + 12] != b"WAVE":
+        return {}
+    cursor = offset + 12
+    end = min(len(data), offset + size)
+    info = {}
+    data_size = 0
+    while cursor + 8 <= end:
+        chunk_id = data[cursor : cursor + 4]
+        chunk_size = struct.unpack_from("<I", data, cursor + 4)[0]
+        payload = cursor + 8
+        if payload + chunk_size > end:
+            break
+        if chunk_id == b"fmt " and chunk_size >= 16:
+            audio_format, channels, sample_rate, byte_rate, _block_align, bits_per_sample = struct.unpack_from(
+                "<HHIIHH", data, payload
+            )
+            info.update(
+                {
+                    "audio_format": audio_format,
+                    "channels": channels,
+                    "sample_rate": sample_rate,
+                    "byte_rate": byte_rate,
+                    "bits_per_sample": bits_per_sample,
+                }
+            )
+        elif chunk_id == b"data":
+            data_size += chunk_size
+        cursor = payload + chunk_size + (chunk_size & 1)
+    byte_rate = info.get("byte_rate") or 0
+    if byte_rate and data_size:
+        info["duration_seconds"] = data_size / byte_rate
+        info["data_size"] = data_size
+    return info
+
+
 def write_pcm_wave(path: Path, pcm: bytes, sample_rate: int, bits_per_sample: int, channels: int) -> None:
     if bits_per_sample % 8 != 0:
         raise ValueError(f"unsupported PCM width: {bits_per_sample} bits")
@@ -302,6 +338,7 @@ def extract_board_video_streams(
                 "transparent_index": transparent_index,
                 "header_transparent_index": header_transparent_index,
                 "delay_centiseconds": delay_cs,
+                "frames_per_second": frames_per_second,
             }
             item["video_output"] = str(asset_path)
             item["transparent_index"] = transparent_index
@@ -319,12 +356,14 @@ def find_riff_chunks(data: bytes, start: int = 0, end: int | None = None) -> lis
     while offset != -1:
         size = riff_chunk_size(data, offset)
         if size is not None and offset + size <= end:
+            info = riff_wave_info(data, offset, size)
             chunks.append(
                 {
                     "offset": offset,
                     "size": size,
                     "kind": data[offset + 8 : offset + 12].decode("ascii", "replace").rstrip(),
                     "extension": riff_extension(data, offset),
+                    **info,
                 }
             )
             offset = data.find(b"RIFF", offset + size, end)

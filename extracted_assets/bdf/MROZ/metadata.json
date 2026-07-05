@@ -78,7 +78,8 @@
           "height": 142,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -102,7 +103,8 @@
           "height": 64,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -126,7 +128,8 @@
           "height": 40,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         }
       ],
       "board_video_marker_offset": 1890375,
@@ -284,49 +287,98 @@
           "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_000_0024ee58.wav",
           "offset": 2420312,
           "size": 349442,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 7.922857142857143,
+          "data_size": 349398
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_001_002a43ba.wav",
           "offset": 2769850,
           "size": 10920,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.24662131519274377,
+          "data_size": 10876
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_002_002a6ec2.wav",
           "offset": 2780866,
           "size": 52436,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 1.1880272108843537,
+          "data_size": 52392
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_003_002b3bf6.wav",
           "offset": 2833398,
           "size": 16852,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.3811337868480726,
+          "data_size": 16808
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_004_002b7e2a.wav",
           "offset": 2850346,
           "size": 241476,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 5.474648526077098,
+          "data_size": 241432
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_005_002f2dce.wav",
           "offset": 3091918,
           "size": 32504,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.7360544217687075,
+          "data_size": 32460
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_006_002fad26.wav",
           "offset": 3124518,
           "size": 385818,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 8.747709750566893,
+          "data_size": 385774
         }
       ]
     },
@@ -373,7 +425,8 @@
       "height": 142,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -397,7 +450,8 @@
       "height": 64,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -421,7 +475,8 @@
       "height": 40,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "WAVE",

@@ -51,7 +51,8 @@
           "height": 217,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -75,7 +76,8 @@
           "height": 283,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -99,7 +101,8 @@
           "height": 347,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -123,7 +126,8 @@
           "height": 294,
           "transparent_index": 233,
           "header_transparent_index": 165,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -147,7 +151,8 @@
           "height": 142,
           "transparent_index": 172,
           "header_transparent_index": 229,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -171,7 +176,8 @@
           "height": 138,
           "transparent_index": 230,
           "header_transparent_index": 229,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -195,7 +201,8 @@
           "height": 74,
           "transparent_index": 172,
           "header_transparent_index": 172,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -219,7 +226,8 @@
           "height": 462,
           "transparent_index": 30,
           "header_transparent_index": 30,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         },
         {
           "kind": "board_video_pcm_wave",
@@ -243,7 +251,8 @@
           "height": 57,
           "transparent_index": 16,
           "header_transparent_index": 23,
-          "delay_centiseconds": 10
+          "delay_centiseconds": 10,
+          "frames_per_second": 10
         }
       ],
       "board_video_marker_offset": 310539,
@@ -668,84 +677,168 @@
           "path": "extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_000_00da0183.wav",
           "offset": 14287235,
           "size": 14620,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.33052154195011335,
+          "data_size": 14576
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_001_00da3aff.wav",
           "offset": 14301951,
           "size": 12986,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.29346938775510206,
+          "data_size": 12942
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_002_00da6e19.wav",
           "offset": 14315033,
           "size": 15070,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.3407256235827664,
+          "data_size": 15026
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_003_00daa957.wav",
           "offset": 14330199,
           "size": 13120,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.2965079365079365,
+          "data_size": 13076
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_004_00dadcf7.wav",
           "offset": 14343415,
           "size": 9604,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.2167800453514739,
+          "data_size": 9560
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_005_00db02db.wav",
           "offset": 14353115,
           "size": 11590,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.2618140589569161,
+          "data_size": 11546
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_006_00db3081.wav",
           "offset": 14364801,
           "size": 9552,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.21560090702947846,
+          "data_size": 9508
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_007_00db5631.wav",
           "offset": 14374449,
           "size": 11584,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.2616780045351474,
+          "data_size": 11540
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_008_00db83d1.wav",
           "offset": 14386129,
           "size": 10834,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 0.24467120181405896,
+          "data_size": 10790
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_009_00dbae83.wav",
           "offset": 14397059,
           "size": 165364,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 3.7487528344671204,
+          "data_size": 165320
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_010_00de34d7.wav",
           "offset": 14562519,
           "size": 1383632,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 31.373877551020406,
+          "data_size": 1383588
         },
         {
           "kind": "WAVE",
           "path": "extracted_assets\\bdf\\MALUSKIE\\embedded\\03_Sound_Holder_011_00f35207.wav",
           "offset": 15946247,
           "size": 416108,
-          "extension": ".wav"
+          "extension": ".wav",
+          "audio_format": 1,
+          "channels": 1,
+          "sample_rate": 22050,
+          "byte_rate": 44100,
+          "bits_per_sample": 16,
+          "duration_seconds": 9.434557823129252,
+          "data_size": 416064
         }
       ]
     },
@@ -802,7 +895,8 @@
       "height": 217,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -826,7 +920,8 @@
       "height": 283,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -850,7 +945,8 @@
       "height": 347,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -874,7 +970,8 @@
       "height": 294,
       "transparent_index": 233,
       "header_transparent_index": 165,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -898,7 +995,8 @@
       "height": 142,
       "transparent_index": 172,
       "header_transparent_index": 229,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -922,7 +1020,8 @@
       "height": 138,
       "transparent_index": 230,
       "header_transparent_index": 229,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -946,7 +1045,8 @@
       "height": 74,
       "transparent_index": 172,
       "header_transparent_index": 172,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -970,7 +1070,8 @@
       "height": 462,
       "transparent_index": 30,
       "header_transparent_index": 30,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "board_video_pcm_wave",
@@ -994,7 +1095,8 @@
       "height": 57,
       "transparent_index": 16,
       "header_transparent_index": 23,
-      "delay_centiseconds": 10
+      "delay_centiseconds": 10,
+      "frames_per_second": 10
     },
     {
       "kind": "WAVE",
