@@ -10,10 +10,11 @@
   ],
   "background": {
     "colorIndex": 0,
+    "color": "rgb(0, 0, 0)",
     "flag": 0,
-    "bmpPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSCY\\background.bmp",
+    "bmpPath": "extracted_assets\\bdf\\WSZYSCY\\background.bmp",
     "bmpUrl": "../extracted_assets/bdf/WSZYSCY/background.bmp",
-    "palettePath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSCY\\background_palette.bin",
+    "palettePath": "extracted_assets\\bdf\\WSZYSCY\\background_palette.bin",
     "paletteUrl": "../extracted_assets/bdf/WSZYSCY/background_palette.bin"
   },
   "components": [
@@ -37,7 +38,7 @@
       "assets": [
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSCY\\animations\\00_Transparent_Video_Holder_000_0004bd0f_board_video_35x104.gif",
+          "path": "extracted_assets\\bdf\\WSZYSCY\\animations\\00_Transparent_Video_Holder_000_0004bd0f_board_video_35x104.gif",
           "url": "../extracted_assets/bdf/WSZYSCY/animations/00_Transparent_Video_Holder_000_0004bd0f_board_video_35x104.gif",
           "width": 35,
           "height": 104,
@@ -65,7 +66,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSCY\\animations\\00_Transparent_Video_Holder_002_00067017_board_video_64x109.gif",
+          "path": "extracted_assets\\bdf\\WSZYSCY\\animations\\00_Transparent_Video_Holder_002_00067017_board_video_64x109.gif",
           "url": "../extracted_assets/bdf/WSZYSCY/animations/00_Transparent_Video_Holder_002_00067017_board_video_64x109.gif",
           "width": 64,
           "height": 109,
@@ -93,7 +94,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSCY\\animations\\00_Transparent_Video_Holder_004_000a1d31_board_video_92x130.gif",
+          "path": "extracted_assets\\bdf\\WSZYSCY\\animations\\00_Transparent_Video_Holder_004_000a1d31_board_video_92x130.gif",
           "url": "../extracted_assets/bdf/WSZYSCY/animations/00_Transparent_Video_Holder_004_000a1d31_board_video_92x130.gif",
           "width": 92,
           "height": 130,
@@ -121,7 +122,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSCY\\animations\\00_Transparent_Video_Holder_006_000c31e6_board_video_55x35.gif",
+          "path": "extracted_assets\\bdf\\WSZYSCY\\animations\\00_Transparent_Video_Holder_006_000c31e6_board_video_55x35.gif",
           "url": "../extracted_assets/bdf/WSZYSCY/animations/00_Transparent_Video_Holder_006_000c31e6_board_video_55x35.gif",
           "width": 55,
           "height": 35,
@@ -149,7 +150,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSCY\\animations\\00_Transparent_Video_Holder_008_00117968_board_video_41x57.gif",
+          "path": "extracted_assets\\bdf\\WSZYSCY\\animations\\00_Transparent_Video_Holder_008_00117968_board_video_41x57.gif",
           "url": "../extracted_assets/bdf/WSZYSCY/animations/00_Transparent_Video_Holder_008_00117968_board_video_41x57.gif",
           "width": 41,
           "height": 57,
@@ -177,7 +178,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSCY\\animations\\00_Transparent_Video_Holder_010_0014f2a7_board_video_66x35.gif",
+          "path": "extracted_assets\\bdf\\WSZYSCY\\animations\\00_Transparent_Video_Holder_010_0014f2a7_board_video_66x35.gif",
           "url": "../extracted_assets/bdf/WSZYSCY/animations/00_Transparent_Video_Holder_010_0014f2a7_board_video_66x35.gif",
           "width": 66,
           "height": 35,
@@ -205,7 +206,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSCY\\animations\\00_Transparent_Video_Holder_012_00182687_board_video_92x79.gif",
+          "path": "extracted_assets\\bdf\\WSZYSCY\\animations\\00_Transparent_Video_Holder_012_00182687_board_video_92x79.gif",
           "url": "../extracted_assets/bdf/WSZYSCY/animations/00_Transparent_Video_Holder_012_00182687_board_video_92x79.gif",
           "width": 92,
           "height": 79,
@@ -233,7 +234,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSCY\\animations\\00_Transparent_Video_Holder_014_001b420d_board_video_100x85.gif",
+          "path": "extracted_assets\\bdf\\WSZYSCY\\animations\\00_Transparent_Video_Holder_014_001b420d_board_video_100x85.gif",
           "url": "../extracted_assets/bdf/WSZYSCY/animations/00_Transparent_Video_Holder_014_001b420d_board_video_100x85.gif",
           "width": 100,
           "height": 85,
@@ -263,7 +264,7 @@
       "audio": [
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSCY\\embedded\\00_Transparent_Video_Holder_000_0004bd0f_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\WSZYSCY\\embedded\\00_Transparent_Video_Holder_000_0004bd0f_board_video_audio.wav",
           "url": "../extracted_assets/bdf/WSZYSCY/embedded/00_Transparent_Video_Holder_000_0004bd0f_board_video_audio.wav",
           "durationSeconds": 2.0,
           "sampleRate": 22050,
@@ -273,7 +274,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSCY\\embedded\\00_Transparent_Video_Holder_002_00067017_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\WSZYSCY\\embedded\\00_Transparent_Video_Holder_002_00067017_board_video_audio.wav",
           "url": "../extracted_assets/bdf/WSZYSCY/embedded/00_Transparent_Video_Holder_002_00067017_board_video_audio.wav",
           "durationSeconds": 3.0,
           "sampleRate": 22050,
@@ -283,7 +284,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSCY\\embedded\\00_Transparent_Video_Holder_004_000a1d31_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\WSZYSCY\\embedded\\00_Transparent_Video_Holder_004_000a1d31_board_video_audio.wav",
           "url": "../extracted_assets/bdf/WSZYSCY/embedded/00_Transparent_Video_Holder_004_000a1d31_board_video_audio.wav",
           "durationSeconds": 2.0,
           "sampleRate": 22050,
@@ -293,7 +294,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSCY\\embedded\\00_Transparent_Video_Holder_006_000c31e6_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\WSZYSCY\\embedded\\00_Transparent_Video_Holder_006_000c31e6_board_video_audio.wav",
           "url": "../extracted_assets/bdf/WSZYSCY/embedded/00_Transparent_Video_Holder_006_000c31e6_board_video_audio.wav",
           "durationSeconds": 6.0,
           "sampleRate": 22050,
@@ -303,7 +304,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSCY\\embedded\\00_Transparent_Video_Holder_008_00117968_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\WSZYSCY\\embedded\\00_Transparent_Video_Holder_008_00117968_board_video_audio.wav",
           "url": "../extracted_assets/bdf/WSZYSCY/embedded/00_Transparent_Video_Holder_008_00117968_board_video_audio.wav",
           "durationSeconds": 4.0,
           "sampleRate": 22050,
@@ -313,7 +314,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSCY\\embedded\\00_Transparent_Video_Holder_010_0014f2a7_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\WSZYSCY\\embedded\\00_Transparent_Video_Holder_010_0014f2a7_board_video_audio.wav",
           "url": "../extracted_assets/bdf/WSZYSCY/embedded/00_Transparent_Video_Holder_010_0014f2a7_board_video_audio.wav",
           "durationSeconds": 4.0,
           "sampleRate": 22050,
@@ -323,7 +324,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSCY\\embedded\\00_Transparent_Video_Holder_012_00182687_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\WSZYSCY\\embedded\\00_Transparent_Video_Holder_012_00182687_board_video_audio.wav",
           "url": "../extracted_assets/bdf/WSZYSCY/embedded/00_Transparent_Video_Holder_012_00182687_board_video_audio.wav",
           "durationSeconds": 3.0,
           "sampleRate": 22050,
@@ -333,7 +334,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSCY\\embedded\\00_Transparent_Video_Holder_014_001b420d_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\WSZYSCY\\embedded\\00_Transparent_Video_Holder_014_001b420d_board_video_audio.wav",
           "url": "../extracted_assets/bdf/WSZYSCY/embedded/00_Transparent_Video_Holder_014_001b420d_board_video_audio.wav",
           "durationSeconds": 2.0,
           "sampleRate": 22050,
@@ -350,18 +351,219 @@
       "z": 1,
       "visible": false,
       "rect": {
-        "x": 0,
-        "y": 0,
-        "width": 120,
-        "height": 80
+        "x": 38,
+        "y": 171,
+        "width": 573,
+        "height": 264
       },
-      "geometryConfidence": "unknown",
+      "geometryConfidence": "serialized_hotspots",
       "sourceOffset": 1940569,
       "privateOffset": 1941674,
       "privateSize": 928,
       "primaryAssetUrl": null,
       "assets": [],
-      "audio": []
+      "audio": [],
+      "hotspots": [
+        {
+          "index": 0,
+          "id": 0,
+          "name": "",
+          "rect": {
+            "x": 246,
+            "y": 319,
+            "width": 54,
+            "height": 100
+          },
+          "rawRect": {
+            "left": 246,
+            "top": 319,
+            "right": 300,
+            "bottom": 419
+          },
+          "z": 1,
+          "enabled": true,
+          "recordOffset": 1941685,
+          "geometryConfidence": "serialized_hotspot"
+        },
+        {
+          "index": 1,
+          "id": 1,
+          "name": "",
+          "rect": {
+            "x": 38,
+            "y": 205,
+            "width": 54,
+            "height": 101
+          },
+          "rawRect": {
+            "left": 38,
+            "top": 205,
+            "right": 92,
+            "bottom": 306
+          },
+          "z": 1,
+          "enabled": true,
+          "recordOffset": 1941786,
+          "geometryConfidence": "serialized_hotspot"
+        },
+        {
+          "index": 2,
+          "id": 3,
+          "name": "",
+          "rect": {
+            "x": 345,
+            "y": 285,
+            "width": 63,
+            "height": 43
+          },
+          "rawRect": {
+            "left": 345,
+            "top": 285,
+            "right": 408,
+            "bottom": 328
+          },
+          "z": 1,
+          "enabled": true,
+          "recordOffset": 1941887,
+          "geometryConfidence": "serialized_hotspot"
+        },
+        {
+          "index": 3,
+          "id": 4,
+          "name": "",
+          "rect": {
+            "x": 357,
+            "y": 171,
+            "width": 43,
+            "height": 58
+          },
+          "rawRect": {
+            "left": 357,
+            "top": 171,
+            "right": 400,
+            "bottom": 229
+          },
+          "z": 1,
+          "enabled": true,
+          "recordOffset": 1941988,
+          "geometryConfidence": "serialized_hotspot"
+        },
+        {
+          "index": 4,
+          "id": 5,
+          "name": "",
+          "rect": {
+            "x": 238,
+            "y": 270,
+            "width": 70,
+            "height": 41
+          },
+          "rawRect": {
+            "left": 238,
+            "top": 270,
+            "right": 308,
+            "bottom": 311
+          },
+          "z": 1,
+          "enabled": true,
+          "recordOffset": 1942089,
+          "geometryConfidence": "serialized_hotspot"
+        },
+        {
+          "index": 5,
+          "id": 6,
+          "name": "",
+          "rect": {
+            "x": 523,
+            "y": 188,
+            "width": 88,
+            "height": 69
+          },
+          "rawRect": {
+            "left": 523,
+            "top": 188,
+            "right": 611,
+            "bottom": 257
+          },
+          "z": 1,
+          "enabled": true,
+          "recordOffset": 1942190,
+          "geometryConfidence": "serialized_hotspot"
+        },
+        {
+          "index": 6,
+          "id": 10,
+          "name": "",
+          "rect": {
+            "x": 146,
+            "y": 314,
+            "width": 75,
+            "height": 121
+          },
+          "rawRect": {
+            "left": 146,
+            "top": 314,
+            "right": 221,
+            "bottom": 435
+          },
+          "z": 1,
+          "enabled": true,
+          "recordOffset": 1942291,
+          "geometryConfidence": "serialized_hotspot"
+        },
+        {
+          "index": 7,
+          "id": 11,
+          "name": "",
+          "rect": {
+            "x": 338,
+            "y": 333,
+            "width": 56,
+            "height": 88
+          },
+          "rawRect": {
+            "left": 338,
+            "top": 333,
+            "right": 394,
+            "bottom": 421
+          },
+          "z": 1,
+          "enabled": true,
+          "recordOffset": 1942392,
+          "geometryConfidence": "serialized_hotspot"
+        },
+        {
+          "index": 8,
+          "id": 12,
+          "name": "",
+          "rect": {
+            "x": 504,
+            "y": 314,
+            "width": 54,
+            "height": 112
+          },
+          "rawRect": {
+            "left": 504,
+            "top": 314,
+            "right": 558,
+            "bottom": 426
+          },
+          "z": 1,
+          "enabled": true,
+          "recordOffset": 1942493,
+          "geometryConfidence": "serialized_hotspot"
+        }
+      ],
+      "hotspotSettings": {
+        "version": 0,
+        "colorA": 214,
+        "colorB": 0,
+        "colorC": 255
+      },
+      "hotspotTrailing": {
+        "nextOrSelectedId": 9,
+        "activeOrSelectedIndex": 0
+      }
     },
     {
       "id": "02_Text_Holder",
@@ -404,7 +606,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSCY\\embedded\\03_Sound_Holder_000_001de1c7.wav",
+          "path": "extracted_assets\\bdf\\WSZYSCY\\embedded\\03_Sound_Holder_000_001de1c7.wav",
           "url": "../extracted_assets/bdf/WSZYSCY/embedded/03_Sound_Holder_000_001de1c7.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -414,7 +616,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSCY\\embedded\\03_Sound_Holder_001_001ee4ed.wav",
+          "path": "extracted_assets\\bdf\\WSZYSCY\\embedded\\03_Sound_Holder_001_001ee4ed.wav",
           "url": "../extracted_assets/bdf/WSZYSCY/embedded/03_Sound_Holder_001_001ee4ed.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -424,7 +626,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSCY\\embedded\\03_Sound_Holder_002_0029a913.wav",
+          "path": "extracted_assets\\bdf\\WSZYSCY\\embedded\\03_Sound_Holder_002_0029a913.wav",
           "url": "../extracted_assets/bdf/WSZYSCY/embedded/03_Sound_Holder_002_0029a913.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -456,7 +658,7 @@
     }
   ],
   "script": {
-    "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSCY\\script.txt",
+    "path": "extracted_assets\\bdf\\WSZYSCY\\script.txt",
     "url": "../extracted_assets/bdf/WSZYSCY/script.txt",
     "handlers": [
       {
@@ -667,7 +869,8 @@
     "rawText": "//###########################################################################\n\n//Script code\n\n//###########################################################################\n\n\n\n\n\nOnOpenPage()\n\n{\n\n\t// Add your component and variables initialization code here\n\n\t// WARNING: All variables definied on this function are global for this page\n\n   if(IsProject()==0)   \n\n   {\n\n//      int textMode=0;\n\n      CString parentWnd;\n\n   }\n\n   int textMode=0;\n\n   parentWnd.SetString(\"wszyscy.bdf\");\n\n\n\n   int left=0;\n\n   int right=0;\n\n\n\n   LoadGroup(\"Cursors.grp\");\n\n   SetCursor(0);\n\n\n\n//#############################################################################\n\n   int toolbar=0;\n\n   int toolbarCase=0;\n\n   int toolbarPhase=0;\n\n   int txtHotSpotOn=0;\n\n   int playStatus=0;\n\n   int puzzleNo=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n//############################################################################\n\n\n\n   Sound_Holder.PlayDSound(1);\n\n   SetTextMode();\n\n   FadeScreen(1,1000);\n\n//   SetTimer(5000);\n\n}\n\n\n\n\n\nvoid OnClosePage(void)\n\n{\n\n\t// Add your close page handler code here\n\n\n\n}\n\n\n\nvoid SetTextMode(void)\n\n{\n\n   if(textMode)\n\n   {\n\n      playStatus = 1;\n\n      Sound_Holder.SetPlayDSoundParameters(1,-1000,0,0);\n\n      Sound_Holder.PlayDSound(0);\n\n      Text_Holder.SetTextOffsets(0,0,0);\n\n      Text_Holder.DisableMouse(0);\n\n      Text_Holder.ShowText(0);\n\n   }\n\n   else\n\n   {\n\n      playStatus = 0;\n\n      Text_Holder.HideText(0);\n\n      Text_Holder.StopSynchroText(0);\n\n      Sound_Holder.SetPlayDSoundParameters(1,0,0,0);\n\n   }\n\n}\n\n \n\nvoid HotSpot_Holder.LeftButtonClickOn(int rectID)\n\n{\n\n   if(textMode)   return;\n\n   switch(rectID)\n\n   {\n\n      case 0:\n\n      case 3:\n\n      case 4:\n\n      case 5:\n\n         Transparent_Video_Holder.Play(rectID,0);\n\n         break;\n\n      case 1:\n\n         if(left)\n\n         {\n\n            Transparent_Video_Holder.Play(2,0);\n\n            left=0;\n\n         }\n\n         else\n\n         {\n\n            Transparent_Video_Holder.Play(1,0);\n\n            left=1;\n\n         }\n\n         break;\n\n      case 6:\n\n         if(right)\n\n         {\n\n            Transparent_Video_Holder.Play(6,0);\n\n            right=0;\n\n         }\n\n         else\n\n         {\n\n            Transparent_Video_Holder.Play(7,0);\n\n            right=1;\n\n         }\n\n         break;\n\n      case 10:\n\n         FadeScreen(0,1000);\n\n         LoadPage(\"krawiec.bdf\");\n\n         break;\n\n      case 11:\n\n         FadeScreen(0,1000);\n\n         LoadPage(\"murarz.bdf\");\n\n         break;\n\n      case 12:\n\n         FadeScreen(0,1000);\n\n         LoadPage(\"szewc.bdf\");\n\n         break;\n\n   }\n\n}\n\n\n\n \n\nvoid HotSpot_Holder.MouseMoveIn(int videoID)\n\n{\n\n   if(textMode==0)   SetCursor(1);\n\n}\n\n\n\n \n\nvoid HotSpot_Holder.MouseMoveOut(int videoID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\n \n\nvoid Transparent_Video_Holder.TheEnd(int videoID)\n\n{\n\n   if(videoID==0)\n\n   {\n\n      FadeScreen(0,1000);\n\n      LoadPage(\"Piekarz.bdf\");\n\n   }\n\n}\n\n\n\n\n\n//############################################################# T O O L B A R #######\n\n//#############################################################---------------#######\n\nvoid Group.HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n   switch(rectID)\n\n   {\n\n      case 0:\n\n         Group.HotSpot_Holder.DisableHotSpot(0);\n\n         Group.Sprite_Holder.DisableTimers();\n\n\n\n         Group.Sprite_Holder.GotoXY(0,480,0);\n\n         Group.Sprite_Holder.GotoXY(2,544,14);\n\n         Group.Sprite_Holder.GotoXY(3,584,14);\n\n         Group.Sprite_Holder.GotoXY(4,515,84);\n\n         Group.Sprite_Holder.GotoXY(5,559,210);\n\n         Group.Sprite_Holder.GotoXY(6,558,282);\n\n         Group.Sprite_Holder.GotoXY(7,557,404);\n\n   \n\n         Group.Sprite_Holder.SynchronizeTimers();\n\n         Group.Sprite_Holder.EnableTimers();\n\n         Group.Sound_Holder.PlayDSound(0);\n\n         break;\n\n      case 1:\n\n         if(toolbar)\n\n         {\n\n            Group.Sprite_Holder.DisableTimers();\n\n            Group.Sprite_Holder.GotoXY(0,640,0);\n\n            Group.Sprite_Holder.GotoXY(7,717,404);\n\n  \n\n            switch(toolbarPhase)\n\n            {\n\n               case 0:\n\n                  Group.Sprite_Holder.GotoXY(2,704,14);\n\n                  Group.Sprite_Holder.GotoXY(3,744,14);\n\n                  Group.Sprite_Holder.GotoXY(4,675,84);\n\n                  Group.Sprite_Holder.GotoXY(5,719,210);\n\n                  Group.Sprite_Holder.GotoXY(6,718,282);\n\n                  break;\n\n               case 1:\n\n                  Sprite_Holder.GotoXY(0,713,8);\n\n                  Sprite_Holder.GotoXY(1,701,64);\n\n                  Sprite_Holder.GotoXY(2,718,135);\n\n                  Sprite_Holder.GotoXY(3,709,204);\n\n                  Sprite_Holder.GotoXY(4,714,265);\n\n                  break;\n\n               case 2:\n\n                  Group.Sprite_Holder.GotoXY(8,693,22);\n\n                  Group.Sprite_Holder.GotoXY(9,708,156);\n\n                  break;\n\n            }\n\n            Group.Sprite_Holder.SynchronizeTimers();\n\n            Group.Sprite_Holder.EnableTimers();\n\n            Group.Sound_Holder.PlayDSound(0);\n\n            toolbar=0;\n\n            toolbarPhase=0;\n\n         }\n\n         else\n\n         {\n\n            Group.Sprite_Holder.GotoXY(11,-56,-70);\n\n            SetCursor(0);\n\n         }\n\n         txtHotSpotOn=0;\n\n         Group.HotSpot_Holder.DisableHotSpot(1);\n\n         Group.HotSpot_Holder.EnableHotSpot(0);\n\n         toolbarCase=0;\n\n         break;\n\n      case 2:\n\n         if(txtHotSpotOn==0)   \n\n         {\n\n            Group.Sound_Holder.PlayDSound(3);\t\n\n            Group.Sprite_Holder.GotoXY(11,0,0);\n\n         }\n\n         break;\n\n   }\n\n}\n\n\n\n\n\nvoid Group.Sprite_Holder.InPlace(int spriteID,int x,int y)\n\n{\n\n   switch(spriteID)\n\n   {\n\n      case 0:\n\n         if(x==480)\n\n         {\n\n            toolbar=1;\n\n            Group.HotSpot_Holder.EnableHotSpot(1);\n\n            SetCursor(1);\n\n         }\n\n         else\n\n         {\n\n            SetCursor(0);\n\n            Group.Sprite_Holder.ChangePhase(2,0);\n\n            Group.Sprite_Holder.ChangePhase(3,0);\n\n            Group.Sprite_Holder.ChangePhase(4,0);\n\n            Group.Sprite_Holder.ChangePhase(5,0);\n\n            Group.Sprite_Holder.ChangePhase(6,0);\n\n            Group.Sprite_Holder.ChangePhase(7,0);\n\n            Group.Sprite_Holder.ChangePhase(8,0);\n\n            Group.Sprite_Holder.ChangePhase(9,0);\n\n            \n\n            switch(toolbarCase)\n\n            {\n\n               case 2:   //lewo   \n\n                  FadeScreen(0,1000);\n\n                  LoadPage(\"rachunek.bdf\");\n\n                  break;\n\n               case 3:   //prawo\n\n                  FadeScreen(0,1000);\n\n                  LoadPage(\"zosia.bdf\");\n\n                  break;\n\n               case 4:   //recytacja\n\n                  FadeScreen(0,1000);\n\n                  LoadPage(\"wszysc_r.bdf\");\n\n                  break;\n\n               case 5:   //roznice\n\n                  FadeScreen(0,1000);\n\n                  LoadPage(\"wszysc_c.bdf\");\n\n                  break;\n\n               case 6:   //puzzle\n\n                  Group.Sprite_Holder.DisableTimers();\n\n\n\n                  Group.Sprite_Holder.GotoXY(0,480,0);\n\n                  Sprite_Holder.GotoXY(0,553,8);\n\n                  Sprite_Holder.GotoXY(1,541,64);\n\n                  Sprite_Holder.GotoXY(2,558,135);\n\n                  Sprite_Holder.GotoXY(3,549,204);\n\n                  Sprite_Holder.GotoXY(4,554,265);\n\n                  Group.Sprite_Holder.GotoXY(7,557,404);\n\n\n\n                  Group.Sprite_Holder.SynchronizeTimers();\n\n                  Group.Sprite_Holder.EnableTimers();\n\n                  Group.Sound_Holder.PlayDSound(0);\n\n                  toolbarPhase=1;\n\n                  break;\n\n               case 7:   //Plansza wyboru\n\n                  FadeScreen(0,1000);\n\n                  LoadPage(\"Wyborw.bdf\");\n\n                  break;\n\n               case 8:   //puzzle trudne\n\n                  FadeScreen(0,1000);\n\n                  switch(puzzleNo)\n\n                  {\n\n                     case 0:\n\n                        LoadPage(\"wszyscp1.bdf\");\n\n                        break;\n\n                     case 1:\n\n                        LoadPage(\"murarzp1.bdf\");\n\n                        break;\n\n                     case 2:\n\n                        LoadPage(\"piekarp1.bdf\");\n\n                        break;\n\n                     case 3:\n\n                        LoadPage(\"szewcp1.bdf\");\n\n                        break;\n\n                     case 4:\n\n                        LoadPage(\"krawiep1.bdf\");\n\n                        break;\n\n                  }\n\n                  break;\n\n               case 9:   //puzzle latwe\n\n                  FadeScreen(0,1000);\n\n                  switch(puzzleNo)\n\n                  {\n\n                     case 0:\n\n                        LoadPage(\"wszyscp2.bdf\");\n\n                        break;\n\n                     case 1:\n\n                        LoadPage(\"murarzp2.bdf\");\n\n                        break;\n\n                     case 2:\n\n                        LoadPage(\"piekarp2.bdf\");\n\n                        break;\n\n                     case 3:\n\n                        LoadPage(\"szewcp2.bdf\");\n\n                        break;\n\n                     case 4:\n\n                        LoadPage(\"krawiep2.bdf\");\n\n                        break;\n\n                  }\n\n                  break;\n\n               case 12:\n\n               case 13:\n\n               case 14:\n\n               case 15:\n\n               case 16:\n\n                  Sprite_Holder.ChangePhase(0,0);\n\n                  Sprite_Holder.ChangePhase(1,0);\n\n                  Sprite_Holder.ChangePhase(2,0);\n\n                  Sprite_Holder.ChangePhase(3,0);\n\n                  Sprite_Holder.ChangePhase(4,0);\n\n\n\n                  Group.Sprite_Holder.DisableTimers();\n\n\n\n                  Group.Sprite_Holder.GotoXY(0,480,0);\n\n\n\n                  Group.Sprite_Holder.GotoXY(8,533,22);\n\n                  Group.Sprite_Holder.GotoXY(9,548,156);\n\n                  Group.Sprite_Holder.GotoXY(7,557,404);\n\n\n\n                  Group.Sprite_Holder.SynchronizeTimers();\n\n                  Group.Sprite_Holder.EnableTimers();\n\n                  Group.Sound_Holder.PlayDSound(0);\n\n                  toolbarPhase=2;\n\n                  break;\n\n            }\n\n         }\n\n         break;\n\n      case 11:\n\n         if(x==0)\n\n         {\n\n            Group.HotSpot_Holder.EnableHotSpot(1);\n\n            txtHotSpotOn=1;\n\n            SetCursor(1);\n\n         }\n\n         break;\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseMoveIn(int spriteID)\n\n{\n\n   if(spriteID && toolbar)\n\n      SetCursor(1);\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseMoveOut(int spriteID)\n\n{\n\n   if(spriteID)\n\n      SetCursor(0);\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnDown(int spriteID)\n\n{\n\n   if(spriteID==0)   return;\n\n   if(spriteID==11)\n\n   {\n\n      Group.Sprite_Holder.GotoXY(11,-56,-70);\n\n      Group.Sound_Holder.PlayDSound(2);\t\n\n      toolbarCase=spriteID;\n\n      SetCursor(0);\n\n      if(textMode)    textMode=0;\n\n      else            textMode=1;\n\n      SetTextMode();\n\n   }\n\n   else\n\n   {\n\n      Group.HotSpot_Holder.DisableHotSpot(1);\n\n      Group.Sprite_Holder.ChangePhase(spriteID,1);\n\n      switch(spriteID)\t\n\n      {\n\n         case 2:   //lewo\n\n         case 3:   //prawo \n\n            Group.Sound_Holder.PlayDSound(4);\n\n            break;\n\n         case 4:   //recytacja\n\n            Group.Sound_Holder.PlayDSound(5);\n\n            break;\n\n         case 5:   //roznice\n\n            Group.Sound_Holder.PlayDSound(6);\n\n            break;\n\n         case 6:   //puzzle\n\n            Group.Sound_Holder.PlayDSound(7);\n\n            break;\n\n         case 7:   //plansza glowna\n\n            Group.Sound_Holder.PlayDSound(8);\n\n            break;\n\n         case 8:   //puzzle latwe\n\n            Group.Sound_Holder.PlayDSound(9);\n\n            break;\n\n         case 9:   //puzzle trudne\n\n            Group.Sound_Holder.PlayDSound(10);\n\n            break;\n\n         case 10:  //parent window\n\n            Group.Sound_Holder.PlayDSound(4);\n\n            break;\n\n      }\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnUp(int spriteID)\n\n{\n\n   if(spriteID==0 || spriteID==5 || spriteID==6 || spriteID==8 || spriteID==9 || spriteID==11)   return;\n\n   Group.Sprite_Holder.DisableTimers();\n\n\n\n   Group.Sprite_Holder.GotoXY(0,640,0);\n\n   Group.Sprite_Holder.GotoXY(7,717,404);\n\n\n\n   switch(toolbarPhase)\n\n   {\n\n      case 0:\n\n         Group.Sprite_Holder.GotoXY(2,704,14);\n\n         Group.Sprite_Holder.GotoXY(3,744,14);\n\n         Group.Sprite_Holder.GotoXY(4,675,84);\n\n         Group.Sprite_Holder.GotoXY(5,719,210);\n\n         Group.Sprite_Holder.GotoXY(6,718,282);\n\n         break;\n\n      case 1:\n\n         Sprite_Holder.GotoXY(0,713,8);\n\n         Sprite_Holder.GotoXY(1,701,64);\n\n         Sprite_Holder.GotoXY(2,718,135);\n\n         Sprite_Holder.GotoXY(3,709,204);\n\n         Sprite_Holder.GotoXY(4,714,265);\n\n         break;\n\n      case 2:\n\n         Group.Sprite_Holder.GotoXY(8,693,22);\n\n         Group.Sprite_Holder.GotoXY(9,708,156);\n\n         toolbarPhase=0;\n\n         break;\n\n   }\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID;\n\n}\n\n\n\nvoid Group.Sprite_Holder.EndAnimation(int spriteID)\n\n{\n\n   if(spriteID!=5 && spriteID!=6 && spriteID!=8 && spriteID!=9)   return;\n\n\n\n   Group.Sprite_Holder.ChangePhase(spriteID,2);\n\n\n\n   Group.Sprite_Holder.DisableTimers();\n\n\n\n   if(toolbarPhase==0)\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(2,704,14);\n\n      Group.Sprite_Holder.GotoXY(3,744,14);\n\n      Group.Sprite_Holder.GotoXY(4,675,84);\n\n      Group.Sprite_Holder.GotoXY(5,719,210);\n\n      Group.Sprite_Holder.GotoXY(6,718,282);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n   }\n\n   else\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(8,693,22);\n\n      Group.Sprite_Holder.GotoXY(9,708,156);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n      toolbarPhase=0;\n\n   }\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID;\n\n}\n\n//#############################################################\n\n//############################################################# \n\n\n\n\n\n\n\n\n\n\n\n \n\nvoid Text_Holder.ScrollTextUp(int textID)\n\n{\n\n   SetCursor(3);\n\n}\n\n\n\n \n\nvoid Text_Holder.ScrollTextDown(int textID)\n\n{\n\n   SetCursor(4);\n\n}\n\n\n\n \n\nvoid Text_Holder.EndScrollText(int textID)\n\n{\n\n   if(playStatus)  SetCursor(2);\n\n   else            SetCursor(5);\n\n}\n\n\n\n \n\nvoid Text_Holder.MouseMoveIn(int textID)\n\n{\n\n   if(playStatus)\n\n      SetCursor(2);\n\n   else\n\n      SetCursor(5);\n\n}\n\n\n\n \n\nvoid Text_Holder.MouseMoveOut(int textID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\n \n\nvoid Text_Holder.ClickOnText(int textID)\n\n{\n\n   if(playStatus)\n\n   {\n\n      playStatus=0;\n\n      Sound_Holder.Stop(0);\n\n      Text_Holder.StopSynchroText(0);\n\n      Sound_Holder.SetPlayDSoundParameters(1,0,0,0);\n\n      SetCursor(5);\n\n   }\n\n   else\n\n   {\n\n      playStatus=1;\n\n      Sound_Holder.SetPlayDSoundParameters(1,-1000,0,0);\n\n      Text_Holder.PlaySynchroText(0);\n\n      SetCursor(2);\n\n   }\n\n}\n\n\n\n \n\nvoid Text_Holder.EndOfSynchroText(int textID)\n\n{\n\n   if(playStatus)\n\n      SetCursor(5);\n\n   else\n\n      SetCursor(0);\n\n   playStatus=0;\n\n   Sound_Holder.SetPlayDSoundParameters(1,0,0,0);\n\n}\n\n\n\n \n\nvoid Sound_Holder.EndPlaySound(int soundID)\n\n{\n\n   if(soundID==0 && textMode)\n\n   { \n\n      playStatus=1;\n\n      Text_Holder.EnableMouse(0);\n\n      Text_Holder.PlaySynchroText(0);\n\n   }\n\n}\n\n\n\n\n\n//######################################################## \n\nvoid Sprite_Holder.MouseMoveIn(int spriteID)\n\n{\n\n   SetCursor(1);\n\n}\n\n\n\nvoid Sprite_Holder.MouseMoveOut(int spriteID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\nvoid Sprite_Holder.MouseClickOnDown(int spriteID)\n\n{\n\n   Sprite_Holder.ChangePhase(spriteID,1);\n\n   Group.Sound_Holder.PlayDSound(12);\n\n\n\n}\n\n\n\nvoid Sprite_Holder.MouseClickOnUp(int spriteID)\n\n{\n\n   Group.Sprite_Holder.DisableTimers();\n\n\n\n   Group.Sprite_Holder.GotoXY(0,640,0);\n\n\n\n   Sprite_Holder.GotoXY(0,713,8);\n\n   Sprite_Holder.GotoXY(1,701,64);\n\n   Sprite_Holder.GotoXY(2,718,135);\n\n   Sprite_Holder.GotoXY(3,709,204);\n\n   Sprite_Holder.GotoXY(4,714,265);\n\n   Group.Sprite_Holder.GotoXY(7,717,404);\n\n\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID+12;\n\n   puzzleNo=spriteID;\n\n}\n\n//########################################################\n\n\n\n \n\n  \n\nvoid OnTimer(void)\n\n{\n\n        //Add your command handler code here\n\n   SetTimer(0);\n\n   Sound_Holder.PlayDSound(2);\n\n}\n\n \n\nvoid OnLButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   SetTimer(0);\n\n   Sound_Holder.Stop(2);\n\n}\n\n \n\nvoid OnRButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   Sound_Holder.PlayDSound(2);\n\n}\n\n "
   },
   "warnings": [
-    "3 component(s) have unknown geometry and default to 0,0.",
-    "Recovered 8 TransparentVideoHolder asset rect(s) from serialized entries."
+    "2 component(s) have unknown geometry and default to 0,0.",
+    "Recovered 8 TransparentVideoHolder asset rect(s) from serialized entries.",
+    "Recovered 9 HotSpotHolder rect(s) from serialized records."
   ]
 }

@@ -10,10 +10,11 @@
   ],
   "background": {
     "colorIndex": 0,
+    "color": "rgb(0, 0, 0)",
     "flag": 1,
     "bmpPath": null,
     "bmpUrl": null,
-    "palettePath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\background_palette.bin",
+    "palettePath": "extracted_assets\\bdf\\WIES\\background_palette.bin",
     "paletteUrl": "../extracted_assets/bdf/WIES/background_palette.bin"
   },
   "components": [
@@ -78,7 +79,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_000_004635e5.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_000_004635e5.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_000_004635e5.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -88,7 +89,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_001_0046cc09.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_001_0046cc09.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_001_0046cc09.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -98,7 +99,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_002_0047581d.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_002_0047581d.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_002_0047581d.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -108,7 +109,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_003_004978c5.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_003_004978c5.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_003_004978c5.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -118,7 +119,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_004_004a26e7.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_004_004a26e7.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_004_004a26e7.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -128,7 +129,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_005_004a505d.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_005_004a505d.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_005_004a505d.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -138,7 +139,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_006_004b76e7.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_006_004b76e7.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_006_004b76e7.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -148,7 +149,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_007_004c97fd.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_007_004c97fd.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_007_004c97fd.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -158,7 +159,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_008_004d53cb.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_008_004d53cb.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_008_004d53cb.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -168,7 +169,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_009_004e367b.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_009_004e367b.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_009_004e367b.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -178,7 +179,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_010_004f8819.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_010_004f8819.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_010_004f8819.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -188,7 +189,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_011_0050b1d7.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_011_0050b1d7.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_011_0050b1d7.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -198,7 +199,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_012_005144d5.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_012_005144d5.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_012_005144d5.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -208,7 +209,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_013_0052d1d3.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_013_0052d1d3.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_013_0052d1d3.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -218,7 +219,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_014_00541371.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_014_00541371.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_014_00541371.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -228,7 +229,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_015_005d53fd.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_015_005d53fd.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_015_005d53fd.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -260,7 +261,7 @@
     }
   ],
   "script": {
-    "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\script.txt",
+    "path": "extracted_assets\\bdf\\WIES\\script.txt",
     "url": "../extracted_assets/bdf/WIES/script.txt",
     "handlers": [
       {

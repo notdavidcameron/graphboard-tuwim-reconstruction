@@ -10,10 +10,11 @@
   ],
   "background": {
     "colorIndex": 132,
+    "color": "rgb(153, 204, 0)",
     "flag": 1,
     "bmpPath": null,
     "bmpUrl": null,
-    "palettePath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\background_palette.bin",
+    "palettePath": "extracted_assets\\bdf\\RZECZKA\\background_palette.bin",
     "paletteUrl": "../extracted_assets/bdf/RZECZKA/background_palette.bin"
   },
   "components": [
@@ -21,21 +22,201 @@
       "id": "00_HotSpot_Holder",
       "type": "HotSpot_Holder",
       "index": 0,
-      "z": 0,
+      "z": 4,
       "visible": false,
       "rect": {
-        "x": 0,
-        "y": 0,
-        "width": 120,
-        "height": 80
+        "x": 1,
+        "y": 1,
+        "width": 638,
+        "height": 476
       },
-      "geometryConfidence": "unknown",
+      "geometryConfidence": "serialized_hotspots",
       "sourceOffset": 1173,
       "privateOffset": 2278,
       "privateSize": 827,
       "primaryAssetUrl": null,
       "assets": [],
-      "audio": []
+      "audio": [],
+      "hotspots": [
+        {
+          "index": 0,
+          "id": 0,
+          "name": "",
+          "rect": {
+            "x": 589,
+            "y": 1,
+            "width": 50,
+            "height": 475
+          },
+          "rawRect": {
+            "left": 589,
+            "top": 1,
+            "right": 639,
+            "bottom": 476
+          },
+          "z": 4,
+          "enabled": true,
+          "recordOffset": 2289,
+          "geometryConfidence": "serialized_hotspot"
+        },
+        {
+          "index": 1,
+          "id": 1,
+          "name": "",
+          "rect": {
+            "x": 1,
+            "y": 4,
+            "width": 46,
+            "height": 473
+          },
+          "rawRect": {
+            "left": 1,
+            "top": 4,
+            "right": 47,
+            "bottom": 477
+          },
+          "z": 4,
+          "enabled": true,
+          "recordOffset": 2390,
+          "geometryConfidence": "serialized_hotspot"
+        },
+        {
+          "index": 2,
+          "id": 3,
+          "name": "",
+          "rect": {
+            "x": 466,
+            "y": 60,
+            "width": 88,
+            "height": 124
+          },
+          "rawRect": {
+            "left": 466,
+            "top": 60,
+            "right": 554,
+            "bottom": 184
+          },
+          "z": 4,
+          "enabled": true,
+          "recordOffset": 2491,
+          "geometryConfidence": "serialized_hotspot"
+        },
+        {
+          "index": 3,
+          "id": 4,
+          "name": "",
+          "rect": {
+            "x": 434,
+            "y": 241,
+            "width": 94,
+            "height": 78
+          },
+          "rawRect": {
+            "left": 434,
+            "top": 241,
+            "right": 528,
+            "bottom": 319
+          },
+          "z": 4,
+          "enabled": true,
+          "recordOffset": 2592,
+          "geometryConfidence": "serialized_hotspot"
+        },
+        {
+          "index": 4,
+          "id": 6,
+          "name": "",
+          "rect": {
+            "x": 305,
+            "y": 274,
+            "width": 116,
+            "height": 109
+          },
+          "rawRect": {
+            "left": 305,
+            "top": 274,
+            "right": 421,
+            "bottom": 383
+          },
+          "z": 4,
+          "enabled": true,
+          "recordOffset": 2693,
+          "geometryConfidence": "serialized_hotspot"
+        },
+        {
+          "index": 5,
+          "id": 5,
+          "name": "",
+          "rect": {
+            "x": 226,
+            "y": 258,
+            "width": 72,
+            "height": 76
+          },
+          "rawRect": {
+            "left": 226,
+            "top": 258,
+            "right": 298,
+            "bottom": 334
+          },
+          "z": 4,
+          "enabled": true,
+          "recordOffset": 2794,
+          "geometryConfidence": "serialized_hotspot"
+        },
+        {
+          "index": 6,
+          "id": 7,
+          "name": "",
+          "rect": {
+            "x": 509,
+            "y": 326,
+            "width": 75,
+            "height": 61
+          },
+          "rawRect": {
+            "left": 509,
+            "top": 326,
+            "right": 584,
+            "bottom": 387
+          },
+          "z": 4,
+          "enabled": true,
+          "recordOffset": 2895,
+          "geometryConfidence": "serialized_hotspot"
+        },
+        {
+          "index": 7,
+          "id": 8,
+          "name": "",
+          "rect": {
+            "x": 342,
+            "y": 410,
+            "width": 71,
+            "height": 52
+          },
+          "rawRect": {
+            "left": 342,
+            "top": 410,
+            "right": 413,
+            "bottom": 462
+          },
+          "z": 4,
+          "enabled": true,
+          "recordOffset": 2996,
+          "geometryConfidence": "serialized_hotspot"
+        }
+      ],
+      "hotspotSettings": {
+        "version": 0,
+        "colorA": 210,
+        "colorB": 0,
+        "colorC": 255
+      },
+      "hotspotTrailing": {
+        "nextOrSelectedId": 8,
+        "activeOrSelectedIndex": 0
+      }
     },
     {
       "id": "01_Transparent_Video_Holder",
@@ -57,7 +238,7 @@
       "assets": [
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_000_000010c3_board_video_197x190.gif",
+          "path": "extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_000_000010c3_board_video_197x190.gif",
           "url": "../extracted_assets/bdf/RZECZKA/animations/01_Transparent_Video_Holder_000_000010c3_board_video_197x190.gif",
           "width": 197,
           "height": 190,
@@ -85,7 +266,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_002_0003fdd0_board_video_408x150.gif",
+          "path": "extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_002_0003fdd0_board_video_408x150.gif",
           "url": "../extracted_assets/bdf/RZECZKA/animations/01_Transparent_Video_Holder_002_0003fdd0_board_video_408x150.gif",
           "width": 408,
           "height": 150,
@@ -113,7 +294,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_004_000a8ae2_board_video_248x85.gif",
+          "path": "extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_004_000a8ae2_board_video_248x85.gif",
           "url": "../extracted_assets/bdf/RZECZKA/animations/01_Transparent_Video_Holder_004_000a8ae2_board_video_248x85.gif",
           "width": 248,
           "height": 85,
@@ -141,7 +322,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_006_000de9c9_board_video_178x188.gif",
+          "path": "extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_006_000de9c9_board_video_178x188.gif",
           "url": "../extracted_assets/bdf/RZECZKA/animations/01_Transparent_Video_Holder_006_000de9c9_board_video_178x188.gif",
           "width": 178,
           "height": 188,
@@ -169,7 +350,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_008_00147dac_board_video_211x88.gif",
+          "path": "extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_008_00147dac_board_video_211x88.gif",
           "url": "../extracted_assets/bdf/RZECZKA/animations/01_Transparent_Video_Holder_008_00147dac_board_video_211x88.gif",
           "width": 211,
           "height": 88,
@@ -197,7 +378,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_010_0022e5eb_board_video_87x335.gif",
+          "path": "extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_010_0022e5eb_board_video_87x335.gif",
           "url": "../extracted_assets/bdf/RZECZKA/animations/01_Transparent_Video_Holder_010_0022e5eb_board_video_87x335.gif",
           "width": 87,
           "height": 335,
@@ -225,7 +406,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_012_0032f446_board_video_180x394.gif",
+          "path": "extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_012_0032f446_board_video_180x394.gif",
           "url": "../extracted_assets/bdf/RZECZKA/animations/01_Transparent_Video_Holder_012_0032f446_board_video_180x394.gif",
           "width": 180,
           "height": 394,
@@ -253,7 +434,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_014_004b8fe0_board_video_70x372.gif",
+          "path": "extracted_assets\\bdf\\RZECZKA\\animations\\01_Transparent_Video_Holder_014_004b8fe0_board_video_70x372.gif",
           "url": "../extracted_assets/bdf/RZECZKA/animations/01_Transparent_Video_Holder_014_004b8fe0_board_video_70x372.gif",
           "width": 70,
           "height": 372,
@@ -283,7 +464,7 @@
       "audio": [
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_000_000010c3_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_000_000010c3_board_video_audio.wav",
           "url": "../extracted_assets/bdf/RZECZKA/embedded/01_Transparent_Video_Holder_000_000010c3_board_video_audio.wav",
           "durationSeconds": 4.0,
           "sampleRate": 22050,
@@ -293,7 +474,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_002_0003fdd0_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_002_0003fdd0_board_video_audio.wav",
           "url": "../extracted_assets/bdf/RZECZKA/embedded/01_Transparent_Video_Holder_002_0003fdd0_board_video_audio.wav",
           "durationSeconds": 6.0,
           "sampleRate": 22050,
@@ -303,7 +484,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_004_000a8ae2_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_004_000a8ae2_board_video_audio.wav",
           "url": "../extracted_assets/bdf/RZECZKA/embedded/01_Transparent_Video_Holder_004_000a8ae2_board_video_audio.wav",
           "durationSeconds": 4.0,
           "sampleRate": 22050,
@@ -313,7 +494,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_006_000de9c9_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_006_000de9c9_board_video_audio.wav",
           "url": "../extracted_assets/bdf/RZECZKA/embedded/01_Transparent_Video_Holder_006_000de9c9_board_video_audio.wav",
           "durationSeconds": 3.0,
           "sampleRate": 22050,
@@ -323,7 +504,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_008_00147dac_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_008_00147dac_board_video_audio.wav",
           "url": "../extracted_assets/bdf/RZECZKA/embedded/01_Transparent_Video_Holder_008_00147dac_board_video_audio.wav",
           "durationSeconds": 9.0,
           "sampleRate": 22050,
@@ -333,7 +514,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_010_0022e5eb_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_010_0022e5eb_board_video_audio.wav",
           "url": "../extracted_assets/bdf/RZECZKA/embedded/01_Transparent_Video_Holder_010_0022e5eb_board_video_audio.wav",
           "durationSeconds": 9.0,
           "sampleRate": 22050,
@@ -343,7 +524,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_012_0032f446_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_012_0032f446_board_video_audio.wav",
           "url": "../extracted_assets/bdf/RZECZKA/embedded/01_Transparent_Video_Holder_012_0032f446_board_video_audio.wav",
           "durationSeconds": 10.0,
           "sampleRate": 22050,
@@ -353,7 +534,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_014_004b8fe0_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\01_Transparent_Video_Holder_014_004b8fe0_board_video_audio.wav",
           "url": "../extracted_assets/bdf/RZECZKA/embedded/01_Transparent_Video_Holder_014_004b8fe0_board_video_audio.wav",
           "durationSeconds": 9.0,
           "sampleRate": 22050,
@@ -424,7 +605,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_000_00648ca8.wav",
+          "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_000_00648ca8.wav",
           "url": "../extracted_assets/bdf/RZECZKA/embedded/04_Sound_Holder_000_00648ca8.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -434,7 +615,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_001_0065115a.wav",
+          "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_001_0065115a.wav",
           "url": "../extracted_assets/bdf/RZECZKA/embedded/04_Sound_Holder_001_0065115a.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -444,7 +625,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_002_00655268.wav",
+          "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_002_00655268.wav",
           "url": "../extracted_assets/bdf/RZECZKA/embedded/04_Sound_Holder_002_00655268.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -454,7 +635,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_003_0065d2aa.wav",
+          "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_003_0065d2aa.wav",
           "url": "../extracted_assets/bdf/RZECZKA/embedded/04_Sound_Holder_003_0065d2aa.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -464,7 +645,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_004_006b4c52.wav",
+          "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_004_006b4c52.wav",
           "url": "../extracted_assets/bdf/RZECZKA/embedded/04_Sound_Holder_004_006b4c52.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -474,7 +655,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_005_00748138.wav",
+          "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_005_00748138.wav",
           "url": "../extracted_assets/bdf/RZECZKA/embedded/04_Sound_Holder_005_00748138.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -484,7 +665,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_006_00775124.wav",
+          "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_006_00775124.wav",
           "url": "../extracted_assets/bdf/RZECZKA/embedded/04_Sound_Holder_006_00775124.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -494,7 +675,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_007_007bbdb4.wav",
+          "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_007_007bbdb4.wav",
           "url": "../extracted_assets/bdf/RZECZKA/embedded/04_Sound_Holder_007_007bbdb4.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -504,7 +685,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_008_00802e84.wav",
+          "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_008_00802e84.wav",
           "url": "../extracted_assets/bdf/RZECZKA/embedded/04_Sound_Holder_008_00802e84.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -514,7 +695,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_009_0085bb12.wav",
+          "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_009_0085bb12.wav",
           "url": "../extracted_assets/bdf/RZECZKA/embedded/04_Sound_Holder_009_0085bb12.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -524,7 +705,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_010_008e0836.wav",
+          "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_010_008e0836.wav",
           "url": "../extracted_assets/bdf/RZECZKA/embedded/04_Sound_Holder_010_008e0836.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -534,7 +715,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_011_009c88c4.wav",
+          "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_011_009c88c4.wav",
           "url": "../extracted_assets/bdf/RZECZKA/embedded/04_Sound_Holder_011_009c88c4.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -544,7 +725,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_012_00a0edc6.wav",
+          "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_012_00a0edc6.wav",
           "url": "../extracted_assets/bdf/RZECZKA/embedded/04_Sound_Holder_012_00a0edc6.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -554,7 +735,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_013_00a7920a.wav",
+          "path": "extracted_assets\\bdf\\RZECZKA\\embedded\\04_Sound_Holder_013_00a7920a.wav",
           "url": "../extracted_assets/bdf/RZECZKA/embedded/04_Sound_Holder_013_00a7920a.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -584,7 +765,7 @@
       "assets": [
         {
           "kind": "multibitmap_bmp",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_000_niespodzi.bmp",
+          "path": "extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_000_niespodzi.bmp",
           "url": "../extracted_assets/bdf/RZECZKA/multibitmap/05_MultiBitmap_000_niespodzi.bmp",
           "width": 640,
           "height": 480,
@@ -595,7 +776,7 @@
         },
         {
           "kind": "multibitmap_bmp",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_001_niespodzi.bmp",
+          "path": "extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_001_niespodzi.bmp",
           "url": "../extracted_assets/bdf/RZECZKA/multibitmap/05_MultiBitmap_001_niespodzi.bmp",
           "width": 640,
           "height": 480,
@@ -606,7 +787,7 @@
         },
         {
           "kind": "multibitmap_bmp",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_002_niespodzi.bmp",
+          "path": "extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_002_niespodzi.bmp",
           "url": "../extracted_assets/bdf/RZECZKA/multibitmap/05_MultiBitmap_002_niespodzi.bmp",
           "width": 640,
           "height": 480,
@@ -617,7 +798,7 @@
         },
         {
           "kind": "multibitmap_bmp",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_003_niespodzi.bmp",
+          "path": "extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_003_niespodzi.bmp",
           "url": "../extracted_assets/bdf/RZECZKA/multibitmap/05_MultiBitmap_003_niespodzi.bmp",
           "width": 640,
           "height": 480,
@@ -628,7 +809,7 @@
         },
         {
           "kind": "multibitmap_bmp",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_004_niespodzi.bmp",
+          "path": "extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_004_niespodzi.bmp",
           "url": "../extracted_assets/bdf/RZECZKA/multibitmap/05_MultiBitmap_004_niespodzi.bmp",
           "width": 640,
           "height": 480,
@@ -639,7 +820,7 @@
         },
         {
           "kind": "multibitmap_bmp",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_005_niespodzi.bmp",
+          "path": "extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_005_niespodzi.bmp",
           "url": "../extracted_assets/bdf/RZECZKA/multibitmap/05_MultiBitmap_005_niespodzi.bmp",
           "width": 640,
           "height": 480,
@@ -650,7 +831,7 @@
         },
         {
           "kind": "multibitmap_bmp",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_006_niespodzi.bmp",
+          "path": "extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_006_niespodzi.bmp",
           "url": "../extracted_assets/bdf/RZECZKA/multibitmap/05_MultiBitmap_006_niespodzi.bmp",
           "width": 640,
           "height": 480,
@@ -661,7 +842,7 @@
         },
         {
           "kind": "multibitmap_bmp",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_007_niespodzi.bmp",
+          "path": "extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_007_niespodzi.bmp",
           "url": "../extracted_assets/bdf/RZECZKA/multibitmap/05_MultiBitmap_007_niespodzi.bmp",
           "width": 640,
           "height": 480,
@@ -672,7 +853,7 @@
         },
         {
           "kind": "multibitmap_bmp",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_008_niespodzi.bmp",
+          "path": "extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_008_niespodzi.bmp",
           "url": "../extracted_assets/bdf/RZECZKA/multibitmap/05_MultiBitmap_008_niespodzi.bmp",
           "width": 640,
           "height": 480,
@@ -683,7 +864,7 @@
         },
         {
           "kind": "multibitmap_bmp",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_009_niespodzi.bmp",
+          "path": "extracted_assets\\bdf\\RZECZKA\\multibitmap\\05_MultiBitmap_009_niespodzi.bmp",
           "url": "../extracted_assets/bdf/RZECZKA/multibitmap/05_MultiBitmap_009_niespodzi.bmp",
           "width": 640,
           "height": 480,
@@ -694,7 +875,7 @@
         },
         {
           "kind": "multibitmap_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\animations\\05_MultiBitmap_niespodzi_640x480.gif",
+          "path": "extracted_assets\\bdf\\RZECZKA\\animations\\05_MultiBitmap_niespodzi_640x480.gif",
           "url": "../extracted_assets/bdf/RZECZKA/animations/05_MultiBitmap_niespodzi_640x480.gif",
           "width": 640,
           "height": 480,
@@ -708,7 +889,7 @@
     }
   ],
   "script": {
-    "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA\\script.txt",
+    "path": "extracted_assets\\bdf\\RZECZKA\\script.txt",
     "url": "../extracted_assets/bdf/RZECZKA/script.txt",
     "handlers": [
       {
@@ -947,7 +1128,8 @@
     "rawText": "//###########################################################################\n\n//Script code\n\n//###########################################################################\n\n\n\n\n\nOnOpenPage()\n\n{\n\n\t// Add your component and variables initialization code here\n\n\t// WARNING: All variables definied on this function are global for this page\n\n//   if(IsProject()==0)   int textMode=0;\n\n   int textMode=0;\n\n\n\n   int step=0;\n\n   int curRyb=0;\n\n   int ready=1;\n\n   int view=0;\n\n   int curPlay=0;\n\n   int niesp=0;\n\n   int przyciskPhase;\n\n   int noMove=0;\n\n   int curView=0;\n\n   int curmusic=3;\n\n\n\n   int przedmioty[4];\n\n\n\n   LoadGroup(\"cursors.grp\");\n\n   SetCursor(0);\n\n\n\n//#############################################################################\n\n   int toolbar=0;\n\n   int toolbarCase=0;\n\n   int toolbarPhase=0;\n\n   int txtHotSpotOn=0;\n\n   int playStatus=0;\n\n   int puzzleNo=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n//############################################################################\n\n\n\n   HotSpot_Holder.DisableHotSpot(8);\n\n   Sound_Holder.PlayDSound(curmusic);\n\n   SetTextMode();\n\n   FadeScreen(1,1000);\n\n//   SetTimer(5000);\n\n}\n\n\n\n\n\nvoid SetTextMode(void)\n\n{\n\n   if(textMode)\n\n   {\n\n      curPlay=0;\n\n      niesp=0;\n\n      przyciskPhase=0;\n\n      noMove=0;\n\n      przedmioty[0]=0;\n\n      przedmioty[1]=0;\n\n      przedmioty[2]=0;\n\n      HotSpot_Holder.DisableHotSpot(8);\n\n      HotSpot_Holder.EnableHotSpot(5);\n\n      HotSpot_Holder.EnableHotSpot(6);\n\n      HotSpot_Holder.EnableHotSpot(7);\n\n\n\n      DisableScreen();\n\n      Sprite_Holder.HideSprite(3);\n\n      MultiBitmap.HideBitmap(curView+10);\n\n      MultiBitmap.HideBitmap(curView);\n\n      Sound_Holder.Stop(curmusic);\n\n      Sprite_Holder.ChangePhase(4,przyciskPhase);\n\n      Sprite_Holder.HideSprite(3);\n\n      Sprite_Holder.HideSprite(4);\n\n      EnableScreen();\n\n      ShowBuffer();\n\n      curmusic=3;\n\n      curView=0;\n\n      Sound_Holder.PlayDSound(curmusic);\n\n\n\n      playStatus = 1;\n\n      Sound_Holder.SetPlayDSoundParameters(curmusic,-1000,0,0);\n\n      Sound_Holder.PlayDSound(0);\n\n      Text_Holder.SetTextOffsets(0,0,0);\n\n      Text_Holder.DisableMouse(0);\n\n      Text_Holder.ShowText(0);\n\n      if(ready==0)\n\n         Sprite_Holder.StopAnimation(0);\n\n      Transparent_Video_Holder.Stop();\n\n   }\n\n   else\n\n   {\n\n      Sound_Holder.SetPlayDSoundParameters(curmusic,0,0,0);\n\n      playStatus = 0;\n\n      Text_Holder.HideText(0);\n\n      Text_Holder.StopSynchroText(0);\n\n      if(ready==0)\n\n         Sprite_Holder.ContinueAnimation(0);\n\n      curPlay=0;\n\n      Transparent_Video_Holder.Play(0,0);\n\n   }\n\n}\n\n\n\nvoid OnClosePage(void)\n\n{\n\n\t// Add your close page handler code here\n\n\n\n}\n\n\n\n\n\n \n\nvoid HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n   if(curPlay || textMode || (noMove && rectID!=8))   return;\n\n   switch(rectID)\n\n   {\n\n      case 0:\n\n         if(noMove)   return;\n\n         ready=0;\n\n         view=1;\n\n         Sprite_Holder.GotoXY(0,-640,0);\n\n         SetCursor(7);\n\n         break;\n\n      case 1:\n\n         if(noMove)   return;\n\n         ready=0;\n\n         view=0;\n\n         Sprite_Holder.HideSprite(3);\n\n         Sprite_Holder.GotoXY(0,0,0);\n\n         SetCursor(6);\n\n         break;\n\n      case 3:\n\n      case 4:\n\n      case 5:\n\n         if(view==0 && ready)  SetCursor(1);\n\n         break;\n\n      case 6:\n\n      case 7:\n\n         if(view==1 && ready)  SetCursor(1);\n\n         break;\n\n      case 8:\n\n         SetCursor(1);\n\n         break;\n\n   }\n\n}\n\n\n\n \n\nvoid Transparent_Video_Holder.TheEnd(int videoID)\n\n{\n\n   if(textMode || noMove)   return;\n\n   if(videoID>2)\n\n   {\n\n      Transparent_Video_Holder.HideFirsLastVideoFrame(videoID);\n\n      curPlay=0;\n\n      if(niesp && view)  \n\n      {\n\n         Sprite_Holder.ShowSprite(3);\n\n         HotSpot_Holder.EnableHotSpot(8);\n\n      }\n\n   }\n\n   curRyb++;\n\n   if(curRyb>2)   curRyb=0;\n\n   Transparent_Video_Holder.Play(curRyb,0);\n\n}\n\n\n\n \n\nvoid Sprite_Holder.InPlace(int spriteID,int x,int y)\n\n{\n\n   ready=1;\n\n   SetCursor(0);\n\n   if(niesp && x==-640)\n\n   {\n\n      Sprite_Holder.ShowSprite(3);\n\n      HotSpot_Holder.EnableHotSpot(8);\n\n   }\n\n}\n\n\n\n \n\nvoid HotSpot_Holder.LeftButtonClickOn(int rectID)\n\n{\n\n   if(ready==0 || textMode || (noMove && rectID!=8))   return;\n\n   switch(rectID)\n\n   {\n\n      case 3:\n\n      case 4:\n\n         if(view==0)\n\n         {\n\n            curPlay=rectID;\n\n            Transparent_Video_Holder.Play(rectID,0);\n\n         }\n\n         break;\n\n      case 5:\n\n      case 6:\n\n      case 7:\n\n         rectID-=5;\n\n         if(((view==0 && rectID==0) || (view && rectID)) && przedmioty[rectID]==0)\n\n         {\n\n            curPlay=rectID+5;\n\n            Transparent_Video_Holder.Play(curPlay,0);\n\n            przedmioty[rectID]=1;\n\n            HotSpot_Holder.DisableHotSpot(curPlay);\n\n            SetCursor(0);\n\n            int xx=0;\n\n            while(xx<3)\n\n            {\n\n               if(przedmioty[xx]==0)   break;\n\n               xx++;\n\n            }\n\n            if(xx==3)   niesp=1;\n\n         }\n\n         break;\n\n      case 8:\n\n         if(przyciskPhase==0)\n\n         {\n\n            noMove=1;\n\n            Sprite_Holder.ShowSprite(4);\n\n            Sound_Holder.PlayDSound(1);\n\n         }\n\n         else\n\n         {\n\n            if(przyciskPhase<13)\n\n            {\n\n               Sound_Holder.PlayDSound(1);\n\n               Sprite_Holder.ChangePhase(4,przyciskPhase);\n\n            }\n\n            else\n\n            {\n\n               Transparent_Video_Holder.Stop();\n\n               MultiBitmap.ShowBitmap(curView+10,363,416,4);\n\n               Sprite_Holder.HideSprite(3);\n\n               Sound_Holder.PlayDSound(2);\n\n               MultiBitmap.HideBitmap(curView+10);\n\n               curView++;\n\n               if(curView>9)   curView=0;\n\n               Sound_Holder.Stop(curmusic);\n\n               curmusic=curView+3;\n\n               MultiBitmap.ShowBitmap(curView,0,0,3);\n\n               if(curView)\n\n                  MultiBitmap.HideBitmap(curView-1);\n\n               else\n\n                  MultiBitmap.HideBitmap(9);\n\n               Sound_Holder.PlayDSound(curmusic);\n\n            }   \n\n         }\n\n         przyciskPhase++;\n\n         break;\n\n   }\n\n}\n\n\n\n \n\nvoid HotSpot_Holder.MouseMoveOut(int rectID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\n//############################################################# T O O L B A R #######\n\n//#############################################################---------------#######\n\nvoid Group.HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n   switch(rectID)\n\n   {\n\n      case 0:\n\n         Group.HotSpot_Holder.DisableHotSpot(0);\n\n         if(ready==0 && textMode==0)  Sprite_Holder.StopAnimation(0);\n\n         Group.Sprite_Holder.DisableTimers();\n\n\n\n         Group.Sprite_Holder.GotoXY(0,480,0);\n\n         Group.Sprite_Holder.GotoXY(2,544,14);\n\n         Group.Sprite_Holder.GotoXY(3,584,14);\n\n         Group.Sprite_Holder.GotoXY(4,515,84);\n\n         Group.Sprite_Holder.GotoXY(5,559,210);\n\n         Group.Sprite_Holder.GotoXY(6,558,282);\n\n         Group.Sprite_Holder.GotoXY(7,557,404);\n\n   \n\n         Group.Sprite_Holder.SynchronizeTimers();\n\n         Group.Sprite_Holder.EnableTimers();\n\n         Group.Sound_Holder.PlayDSound(0);\n\n         break;\n\n      case 1:\n\n         if(toolbar)\n\n         {\n\n            Group.Sprite_Holder.DisableTimers();\n\n            Sprite_Holder.DisableTimers();\n\n            Group.Sprite_Holder.GotoXY(0,640,0);\n\n            Group.Sprite_Holder.GotoXY(7,717,404);\n\n  \n\n            switch(toolbarPhase)\n\n            {\n\n               case 0:\n\n                  Group.Sprite_Holder.GotoXY(2,704,14);\n\n                  Group.Sprite_Holder.GotoXY(3,744,14);\n\n                  Group.Sprite_Holder.GotoXY(4,675,84);\n\n                  Group.Sprite_Holder.GotoXY(5,719,210);\n\n                  Group.Sprite_Holder.GotoXY(6,718,282);\n\n                  break;\n\n               case 1:\n\n                  Sprite_Holder.GotoXY(1,707,18);\n\n                  Sprite_Holder.GotoXY(2,710,107);\n\n                  break;\n\n               case 2:\n\n                  Group.Sprite_Holder.GotoXY(8,693,22);\n\n                  Group.Sprite_Holder.GotoXY(9,708,156);\n\n                  break;\n\n            }\n\n            Group.Sprite_Holder.SynchronizeTimers();\n\n            Sprite_Holder.SynchronizeTimers();\n\n            Sprite_Holder.EnableTimers();\n\n            Group.Sprite_Holder.EnableTimers();\n\n\n\n            Group.Sound_Holder.PlayDSound(0);\n\n            toolbar=0;\n\n            toolbarPhase=0;\n\n         }\n\n         else\n\n         {\n\n            Group.Sprite_Holder.GotoXY(11,-56,-70);\n\n            if(toolbarCase!=11)  Group.Sound_Holder.PlayDSound(2);\n\n            SetCursor(0);\n\n         }\n\n         txtHotSpotOn=0;\n\n         Group.HotSpot_Holder.DisableHotSpot(1);\n\n         Group.HotSpot_Holder.EnableHotSpot(0);\n\n         toolbarCase=0;\n\n         break;\n\n      case 2:\n\n         if(ready==0 && textMode==0)  Sprite_Holder.StopAnimation(0);\n\n         if(txtHotSpotOn==0)   \n\n         {\n\n            Group.Sprite_Holder.GotoXY(11,0,0);\n\n            Group.Sound_Holder.PlayDSound(3);\t\n\n         }\n\n         break;\n\n   }\n\n}\n\n\n\n\n\nvoid Group.Sprite_Holder.InPlace(int spriteID,int x,int y)\n\n{\n\n   switch(spriteID)\n\n   {\n\n      case 0:\n\n         if(x==480)\n\n         {\n\n            toolbar=1;\n\n            Group.HotSpot_Holder.EnableHotSpot(1);\n\n            SetCursor(1);\n\n         }\n\n         else\n\n         {\n\n            SetCursor(0);\n\n            Group.Sprite_Holder.ChangePhase(2,0);\n\n            Group.Sprite_Holder.ChangePhase(3,0);\n\n            Group.Sprite_Holder.ChangePhase(4,0);\n\n            Group.Sprite_Holder.ChangePhase(5,0);\n\n            Group.Sprite_Holder.ChangePhase(6,0);\n\n            Group.Sprite_Holder.ChangePhase(7,0);\n\n            Group.Sprite_Holder.ChangePhase(8,0);\n\n            Group.Sprite_Holder.ChangePhase(9,0);\n\n            \n\n            switch(toolbarCase)\n\n            {\n\n               case 2:   //lewo   \n\n                  FadeScreen(0,1000);\n\n                  LoadPage(\"rycerz.bdf\");\n\n                  break;\n\n               case 3:   //prawo\n\n                  FadeScreen(0,1000);\n\n                  LoadPage(\"slon.bdf\");\n\n                  break;\n\n               case 4:   //recytacja\n\n                  FadeScreen(0,1000);\n\n                  LoadPage(\"rzecz_r.bdf\");\n\n                  break;\n\n               case 5:   //roznice\n\n                  FadeScreen(0,1000);\n\n                  LoadPage(\"rzeczk_c.bdf\");\n\n                  break;\n\n               case 6:   //puzzle\n\n                  Group.Sprite_Holder.DisableTimers();\n\n                  Sprite_Holder.DisableTimers();\n\n\n\n                  Group.Sprite_Holder.GotoXY(0,480,0);\n\n                  Sprite_Holder.GotoXY(1,547,18);\n\n                  Sprite_Holder.GotoXY(2,550,107);\n\n                  Group.Sprite_Holder.GotoXY(7,557,404);\n\n\n\n                  Group.Sprite_Holder.SynchronizeTimers();\n\n                  Sprite_Holder.SynchronizeTimers();\n\n                  Sprite_Holder.EnableTimers();\n\n                  Group.Sprite_Holder.EnableTimers();\n\n\n\n                  Group.Sound_Holder.PlayDSound(0);\n\n                  toolbarPhase=1;\n\n                  break;\n\n               case 7:   //Plansza wyboru\n\n                  FadeScreen(0,1000);\n\n                  LoadPage(\"Wyborw.bdf\");\n\n                  break;\n\n               case 8:   //puzzle trudne\n\n                  FadeScreen(0,1000);\n\n                  switch(puzzleNo)\n\n                  {\n\n                     case 1:\n\n                        LoadPage(\"rzecz1p1.bdf\");\n\n                        break;\n\n                     case 2:\n\n                        LoadPage(\"rzecz2p1.bdf\");\n\n                        break;\n\n                 }\n\n                  break;\n\n               case 9:   //puzzle latwe\n\n                  FadeScreen(0,1000);\n\n                  switch(puzzleNo)\n\n                  {\n\n                     case 1:\n\n                        LoadPage(\"rzecz1p2.bdf\");\n\n                        break;\n\n                     case 2:\n\n                        LoadPage(\"rzecz2p2.bdf\");\n\n                        break;\n\n                  }\n\n                  break;\n\n               case 12:\n\n               case 13:\n\n               case 14:\n\n               case 15:\n\n               case 16:\n\n                  Sprite_Holder.ChangePhase(1,0);\n\n                  Sprite_Holder.ChangePhase(2,0);\n\n\n\n                  Group.Sprite_Holder.DisableTimers();\n\n\n\n                  Group.Sprite_Holder.GotoXY(0,480,0);\n\n\n\n                  Group.Sprite_Holder.GotoXY(8,533,22);\n\n                  Group.Sprite_Holder.GotoXY(9,548,156);\n\n                  Group.Sprite_Holder.GotoXY(7,557,404);\n\n\n\n                  Group.Sprite_Holder.SynchronizeTimers();\n\n                  Group.Sprite_Holder.EnableTimers();\n\n                  Group.Sound_Holder.PlayDSound(0);\n\n                  toolbarPhase=2;\n\n                  break;\n\n               default:\n\n                  break;\n\n            }\n\n         }\n\n         break;\n\n      case 11:\n\n         if(x==0)\n\n         {\n\n            Group.HotSpot_Holder.EnableHotSpot(1);\n\n            txtHotSpotOn=1;\n\n            SetCursor(1);\n\n         }\n\n         break;\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseMoveIn(int spriteID)\n\n{\n\n   if(spriteID && toolbar)\n\n      SetCursor(1);\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseMoveOut(int spriteID)\n\n{\n\n   if(spriteID)\n\n      SetCursor(0);\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnDown(int spriteID)\n\n{\n\n   if(spriteID==0)   return;\n\n   if(spriteID==11)\n\n   {\n\n      Group.Sprite_Holder.GotoXY(11,-56,-70);\n\n      Group.Sound_Holder.PlayDSound(2);\t\n\n      toolbarCase=spriteID;\n\n      SetCursor(0);\n\n      if(textMode)    textMode=0;\n\n      else            textMode=1;\n\n      SetTextMode();\n\n   }\n\n   else\n\n   {\n\n      Group.HotSpot_Holder.DisableHotSpot(1);\n\n      Group.Sprite_Holder.ChangePhase(spriteID,1);\n\n      switch(spriteID)\t\n\n      {\n\n         case 2:   //lewo\n\n         case 3:   //prawo \n\n            Group.Sound_Holder.PlayDSound(4);\n\n            break;\n\n         case 4:   //recytacja\n\n            Group.Sound_Holder.PlayDSound(5);\n\n            break;\n\n         case 5:   //roznice\n\n            Group.Sound_Holder.PlayDSound(6);\n\n            break;\n\n         case 6:   //puzzle\n\n            Group.Sound_Holder.PlayDSound(7);\n\n            break;\n\n         case 7:   //plansza glowna\n\n            Group.Sound_Holder.PlayDSound(8);\n\n            break;\n\n         case 8:   //puzzle latwe\n\n            Group.Sound_Holder.PlayDSound(9);\n\n            break;\n\n         case 9:   //puzzle trudne\n\n            Group.Sound_Holder.PlayDSound(10);\n\n            break;\n\n         case 10:  //parent window\n\n            Group.Sound_Holder.PlayDSound(4);\n\n            break;\n\n      }\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnUp(int spriteID)\n\n{\n\n   if(spriteID==0 || spriteID==5 || spriteID==6 || spriteID==8 || spriteID==9 || spriteID==11)   return;\n\n   Group.Sprite_Holder.DisableTimers();\n\n   Sprite_Holder.DisableTimers();\n\n\n\n   Group.Sprite_Holder.GotoXY(0,640,0);\n\n   Group.Sprite_Holder.GotoXY(7,717,404);\n\n\n\n   switch(toolbarPhase)\n\n   {\n\n      case 0:\n\n         Group.Sprite_Holder.GotoXY(2,704,14);\n\n         Group.Sprite_Holder.GotoXY(3,744,14);\n\n         Group.Sprite_Holder.GotoXY(4,675,84);\n\n         Group.Sprite_Holder.GotoXY(5,719,210);\n\n         Group.Sprite_Holder.GotoXY(6,718,282);\n\n         break;\n\n      case 1:\n\n         Sprite_Holder.GotoXY(1,707,18);\n\n         Sprite_Holder.GotoXY(2,710,107);\n\n         break;\n\n      case 2:\n\n         Group.Sprite_Holder.GotoXY(8,693,22);\n\n         Group.Sprite_Holder.GotoXY(9,708,156);\n\n         toolbarPhase=0;\n\n         break;\n\n   }\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Sprite_Holder.SynchronizeTimers();\n\n   Sprite_Holder.EnableTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID;\n\n}\n\n\n\nvoid Group.Sprite_Holder.EndAnimation(int spriteID)\n\n{\n\n   if(spriteID!=5 && spriteID!=6 && spriteID!=8 && spriteID!=9)   return;\n\n\n\n   Group.Sprite_Holder.ChangePhase(spriteID,2);\n\n\n\n   Group.Sprite_Holder.DisableTimers();\n\n\n\n   if(toolbarPhase==0)\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(2,704,14);\n\n      Group.Sprite_Holder.GotoXY(3,744,14);\n\n      Group.Sprite_Holder.GotoXY(4,675,84);\n\n      Group.Sprite_Holder.GotoXY(5,719,210);\n\n      Group.Sprite_Holder.GotoXY(6,718,282);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n   }\n\n   else\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(8,693,22);\n\n      Group.Sprite_Holder.GotoXY(9,708,156);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n      toolbarPhase=0;\n\n   }\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID;\n\n}\n\n//#############################################################\n\n//############################################################# \n\n\n\n\n\n\n\n\n\n\n\n \n\nvoid Text_Holder.ScrollTextUp(int textID)\n\n{\n\n   SetCursor(3);\n\n}\n\n\n\n \n\nvoid Text_Holder.ScrollTextDown(int textID)\n\n{\n\n   SetCursor(4);\n\n}\n\n\n\n \n\nvoid Text_Holder.EndScrollText(int textID)\n\n{\n\n   if(playStatus)  SetCursor(2);\n\n   else            SetCursor(5);\n\n}\n\n\n\n \n\nvoid Text_Holder.MouseMoveIn(int textID)\n\n{\n\n   if(playStatus)\n\n      SetCursor(2);\n\n   else\n\n      SetCursor(5);\n\n}\n\n\n\n \n\nvoid Text_Holder.MouseMoveOut(int textID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\n \n\nvoid Text_Holder.ClickOnText(int textID)\n\n{\n\n   if(playStatus)\n\n   {\n\n      playStatus=0;\n\n      Sound_Holder.Stop(0);\n\n      Text_Holder.StopSynchroText(0);\n\n      Sound_Holder.SetPlayDSoundParameters(curmusic,0,0,0);\n\n      SetCursor(5);\n\n   }\n\n   else\n\n   {\n\n      playStatus=1;\n\n      Sound_Holder.SetPlayDSoundParameters(curmusic,-1000,0,0);\n\n      Text_Holder.PlaySynchroText(0);\n\n      SetCursor(2);\n\n   }\n\n}\n\n\n\n \n\nvoid Text_Holder.EndOfSynchroText(int textID)\n\n{\n\n   if(playStatus)\n\n      SetCursor(5);\n\n   else\n\n      SetCursor(0);\n\n   playStatus=0;\n\n   Sound_Holder.SetPlayDSoundParameters(curmusic,0,0,0);\n\n}\n\n\n\n \n\nvoid Sound_Holder.EndPlaySound(int soundID)\n\n{\n\n   if(soundID==0 && textMode)\n\n   { \n\n      playStatus=1;\n\n      Text_Holder.EnableMouse(0);\n\n      Text_Holder.PlaySynchroText(0);\n\n   }\n\n}\n\n\n\n\n\n//######################################################## \n\nvoid Sprite_Holder.MouseMoveIn(int spriteID)\n\n{\n\n   SetCursor(1);\n\n}\n\n\n\nvoid Sprite_Holder.MouseMoveOut(int spriteID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\nvoid Sprite_Holder.MouseClickOnDown(int spriteID)\n\n{\n\n   switch(spriteID)\n\n   {\n\n      case 1:\n\n      case 2:\n\n         Sprite_Holder.ChangePhase(spriteID,1);\n\n         Group.Sound_Holder.PlayDSound(12);\n\n         break;\n\n   }         \n\n}\n\n\n\nvoid Sprite_Holder.MouseClickOnUp(int spriteID)\n\n{\n\n   if(spriteID!=1 && spriteID!=2)   return;\n\n   Group.Sprite_Holder.DisableTimers();\n\n   Sprite_Holder.DisableTimers();\n\n\n\n   Group.Sprite_Holder.GotoXY(0,640,0);\n\n\n\n   Sprite_Holder.GotoXY(1,707,18);\n\n   Sprite_Holder.GotoXY(2,710,107);\n\n   Group.Sprite_Holder.GotoXY(7,717,404);\n\n\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Sprite_Holder.SynchronizeTimers();\n\n   Sprite_Holder.EnableTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID+12;\n\n   puzzleNo=spriteID;\n\n}\n\n//########################################################\n\n\n\n   \n\nvoid OnTimer(void)\n\n{\n\n        //Add your command handler code here\n\n   SetTimer(0);\n\n   Sound_Holder.PlayDSound(13);\n\n}\n\n \n\nvoid OnLButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   SetTimer(0);\n\n   Sound_Holder.Stop(13);\n\n}\n\n \n\nvoid OnRButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   Sound_Holder.PlayDSound(13);\n\n}\n\n "
   },
   "warnings": [
-    "3 component(s) have unknown geometry and default to 0,0.",
-    "Recovered 8 TransparentVideoHolder asset rect(s) from serialized entries."
+    "2 component(s) have unknown geometry and default to 0,0.",
+    "Recovered 8 TransparentVideoHolder asset rect(s) from serialized entries.",
+    "Recovered 8 HotSpotHolder rect(s) from serialized records."
   ]
 }

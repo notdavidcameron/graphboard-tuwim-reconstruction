@@ -10,10 +10,11 @@
   ],
   "background": {
     "colorIndex": 0,
+    "color": "rgb(0, 0, 0)",
     "flag": 0,
-    "bmpPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH1\\background.bmp",
+    "bmpPath": "extracted_assets\\bdf\\MICH1\\background.bmp",
     "bmpUrl": "../extracted_assets/bdf/MICH1/background.bmp",
-    "palettePath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH1\\background_palette.bin",
+    "palettePath": "extracted_assets\\bdf\\MICH1\\background_palette.bin",
     "paletteUrl": "../extracted_assets/bdf/MICH1/background_palette.bin"
   },
   "components": [
@@ -78,7 +79,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH1\\embedded\\02_Sound_Holder_000_000a9dcd.wav",
+          "path": "extracted_assets\\bdf\\MICH1\\embedded\\02_Sound_Holder_000_000a9dcd.wav",
           "url": "../extracted_assets/bdf/MICH1/embedded/02_Sound_Holder_000_000a9dcd.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -88,7 +89,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH1\\embedded\\02_Sound_Holder_001_001768c3.wav",
+          "path": "extracted_assets\\bdf\\MICH1\\embedded\\02_Sound_Holder_001_001768c3.wav",
           "url": "../extracted_assets/bdf/MICH1/embedded/02_Sound_Holder_001_001768c3.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -98,7 +99,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH1\\embedded\\02_Sound_Holder_002_00177eb1.wav",
+          "path": "extracted_assets\\bdf\\MICH1\\embedded\\02_Sound_Holder_002_00177eb1.wav",
           "url": "../extracted_assets/bdf/MICH1/embedded/02_Sound_Holder_002_00177eb1.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -130,7 +131,7 @@
     }
   ],
   "script": {
-    "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH1\\script.txt",
+    "path": "extracted_assets\\bdf\\MICH1\\script.txt",
     "url": "../extracted_assets/bdf/MICH1/script.txt",
     "handlers": [
       {

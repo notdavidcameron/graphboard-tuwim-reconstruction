@@ -1,1211 +1,1542 @@
 {
   "source_dir": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA",
-  "output_dir": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets",
-  "direct_assets": [],
+  "output_dir": "extracted_assets",
+  "direct_assets": [
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ABECADLO.EXS",
+      "output": "extracted_assets\\direct\\audio\\ABECADLO.wav",
+      "kind": "direct_wave",
+      "size": 1733260
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUD-DEM.EXS",
+      "output": "extracted_assets\\direct\\audio\\CUD-DEM.wav",
+      "kind": "direct_wave",
+      "size": 2337972
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDA.EXS",
+      "output": "extracted_assets\\direct\\audio\\CUDA.wav",
+      "kind": "direct_wave",
+      "size": 2075948
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDA_PIO.EXS",
+      "output": "extracted_assets\\direct\\audio\\CUDA_PIO.wav",
+      "kind": "direct_wave",
+      "size": 9072676
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDA_SON.EXS",
+      "output": "extracted_assets\\direct\\audio\\CUDA_SON.wav",
+      "kind": "direct_wave",
+      "size": 9136020
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\DYZIO.EXS",
+      "output": "extracted_assets\\direct\\audio\\DYZIO.wav",
+      "kind": "direct_wave",
+      "size": 2744230
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\FIGIELEK.EXS",
+      "output": "extracted_assets\\direct\\audio\\FIGIELEK.wav",
+      "kind": "direct_wave",
+      "size": 1692074
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\GRZESIU.EXS",
+      "output": "extracted_assets\\direct\\audio\\GRZESIU.wav",
+      "kind": "direct_wave",
+      "size": 4107614
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\KOTEK.EXS",
+      "output": "extracted_assets\\direct\\audio\\KOTEK.wav",
+      "kind": "direct_wave",
+      "size": 2756482
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\LOK.AVI",
+      "output": "extracted_assets\\direct\\video\\LOK.AVI",
+      "kind": "direct_avi",
+      "size": 25891328
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\LOKOMOT.EXS",
+      "output": "extracted_assets\\direct\\audio\\LOKOMOT.wav",
+      "kind": "direct_wave",
+      "size": 8525810
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MALUSKIE.EXS",
+      "output": "extracted_assets\\direct\\audio\\MALUSKIE.wav",
+      "kind": "direct_wave",
+      "size": 12635176
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MICH0.EXS",
+      "output": "extracted_assets\\direct\\audio\\MICH0.wav",
+      "kind": "direct_wave",
+      "size": 1669180
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MROZ.EXS",
+      "output": "extracted_assets\\direct\\audio\\MROZ.wav",
+      "kind": "direct_wave",
+      "size": 2053006
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MURZYNEK.EXS",
+      "output": "extracted_assets\\direct\\audio\\MURZYNEK.wav",
+      "kind": "direct_wave",
+      "size": 2044460
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\OKULARY.EXS",
+      "output": "extracted_assets\\direct\\audio\\OKULARY.wav",
+      "kind": "direct_wave",
+      "size": 2451750
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\PLOTKI.EXS",
+      "output": "extracted_assets\\direct\\audio\\PLOTKI.wav",
+      "kind": "direct_wave",
+      "size": 1783000
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\PSTRYK.EXS",
+      "output": "extracted_assets\\direct\\audio\\PSTRYK.wav",
+      "kind": "direct_wave",
+      "size": 2680792
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RACHUNEK.EXS",
+      "output": "extracted_assets\\direct\\audio\\RACHUNEK.wav",
+      "kind": "direct_wave",
+      "size": 2892744
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RADIO.EXS",
+      "output": "extracted_assets\\direct\\audio\\RADIO.wav",
+      "kind": "direct_wave",
+      "size": 9197312
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RYCERZ.EXS",
+      "output": "extracted_assets\\direct\\audio\\RYCERZ.wav",
+      "kind": "direct_wave",
+      "size": 2776316
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RZECZKA.EXS_",
+      "output": "extracted_assets\\direct\\audio\\RZECZKA.wav",
+      "kind": "direct_wave",
+      "size": 1468854
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLON.EXS",
+      "output": "extracted_assets\\direct\\audio\\SLON.wav",
+      "kind": "direct_wave",
+      "size": 9501620
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLOWIK.EXS",
+      "output": "extracted_assets\\direct\\audio\\SLOWIK.wav",
+      "kind": "direct_wave",
+      "size": 4307116
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\T03A.AVI",
+      "output": "extracted_assets\\direct\\video\\T03A.AVI",
+      "kind": "direct_avi",
+      "size": 1322108
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\T03B.AVI",
+      "output": "extracted_assets\\direct\\video\\T03B.AVI",
+      "kind": "direct_avi",
+      "size": 1016940
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\T03B2.AVI",
+      "output": "extracted_assets\\direct\\video\\T03B2.AVI",
+      "kind": "direct_avi",
+      "size": 1959356
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\T03C.AVI",
+      "output": "extracted_assets\\direct\\video\\T03C.AVI",
+      "kind": "direct_avi",
+      "size": 684908
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\T04A.AVI",
+      "output": "extracted_assets\\direct\\video\\T04A.AVI",
+      "kind": "direct_avi",
+      "size": 647804
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\T04A2.AVI",
+      "output": "extracted_assets\\direct\\video\\T04A2.AVI",
+      "kind": "direct_avi",
+      "size": 1210748
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\T04B.AVI",
+      "output": "extracted_assets\\direct\\video\\T04B.AVI",
+      "kind": "direct_avi",
+      "size": 433324
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\T04B2.AVI",
+      "output": "extracted_assets\\direct\\video\\T04B2.AVI",
+      "kind": "direct_avi",
+      "size": 1064332
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\T04C.AVI",
+      "output": "extracted_assets\\direct\\video\\T04C.AVI",
+      "kind": "direct_avi",
+      "size": 1146828
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TANIEC.EXS",
+      "output": "extracted_assets\\direct\\audio\\TANIEC.wav",
+      "kind": "direct_wave",
+      "size": 1276980
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TP_01A.AVI",
+      "output": "extracted_assets\\direct\\video\\TP_01A.AVI",
+      "kind": "direct_avi",
+      "size": 1415996
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TP_01A2.AVI",
+      "output": "extracted_assets\\direct\\video\\TP_01A2.AVI",
+      "kind": "direct_avi",
+      "size": 1179884
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TP_01B.AVI",
+      "output": "extracted_assets\\direct\\video\\TP_01B.AVI",
+      "kind": "direct_avi",
+      "size": 2316204
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TP_01C.AVI",
+      "output": "extracted_assets\\direct\\video\\TP_01C.AVI",
+      "kind": "direct_avi",
+      "size": 2341740
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TP_01D.AVI",
+      "output": "extracted_assets\\direct\\video\\TP_01D.AVI",
+      "kind": "direct_avi",
+      "size": 629372
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TP_01E.AVI",
+      "output": "extracted_assets\\direct\\video\\TP_01E.AVI",
+      "kind": "direct_avi",
+      "size": 415084
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TP_01F.AVI",
+      "output": "extracted_assets\\direct\\video\\TP_01F.AVI",
+      "kind": "direct_avi",
+      "size": 451948
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TP_01G.AVI",
+      "output": "extracted_assets\\direct\\video\\TP_01G.AVI",
+      "kind": "direct_avi",
+      "size": 1242236
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TP_01OK.AVI",
+      "output": "extracted_assets\\direct\\video\\TP_01OK.AVI",
+      "kind": "direct_avi",
+      "size": 20938284
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TP_02A.AVI",
+      "output": "extracted_assets\\direct\\video\\TP_02A.AVI",
+      "kind": "direct_avi",
+      "size": 3370620
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TP_02A2.AVI",
+      "output": "extracted_assets\\direct\\video\\TP_02A2.AVI",
+      "kind": "direct_avi",
+      "size": 2594284
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TP_02B.AVI",
+      "output": "extracted_assets\\direct\\video\\TP_02B.AVI",
+      "kind": "direct_avi",
+      "size": 1360412
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TP_02B2.AVI",
+      "output": "extracted_assets\\direct\\video\\TP_02B2.AVI",
+      "kind": "direct_avi",
+      "size": 1237996
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TP_02C.AVI",
+      "output": "extracted_assets\\direct\\video\\TP_02C.AVI",
+      "kind": "direct_avi",
+      "size": 1938124
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TP_02D.AVI",
+      "output": "extracted_assets\\direct\\video\\TP_02D.AVI",
+      "kind": "direct_avi",
+      "size": 1422236
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TP_02OK.AVI",
+      "output": "extracted_assets\\direct\\video\\TP_02OK.AVI",
+      "kind": "direct_avi",
+      "size": 29225796
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TP_03OK.AVI",
+      "output": "extracted_assets\\direct\\video\\TP_03OK.AVI",
+      "kind": "direct_avi",
+      "size": 25839020
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TP_04OK.AVI",
+      "output": "extracted_assets\\direct\\video\\TP_04OK.AVI",
+      "kind": "direct_avi",
+      "size": 22299580
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TRALALA.EXS",
+      "output": "extracted_assets\\direct\\audio\\TRALALA.wav",
+      "kind": "direct_wave",
+      "size": 4793904
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WIES.EXS",
+      "output": "extracted_assets\\direct\\audio\\WIES.wav",
+      "kind": "direct_wave",
+      "size": 2359920
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WSZYSCY.EXS",
+      "output": "extracted_assets\\direct\\audio\\WSZYSCY.wav",
+      "kind": "direct_wave",
+      "size": 1881238
+    },
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ZOSIA.EXS",
+      "output": "extracted_assets\\direct\\audio\\ZOSIA.wav",
+      "kind": "direct_wave",
+      "size": 3164218
+    }
+  ],
   "bdf": [
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ABEC_C.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ABEC_C",
+      "output": "extracted_assets\\bdf\\ABEC_C",
       "component_count": 2,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ABEC_PS.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ABEC_PS",
+      "output": "extracted_assets\\bdf\\ABEC_PS",
       "component_count": 4,
       "output_count": 32
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ABEC_R.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ABEC_R",
+      "output": "extracted_assets\\bdf\\ABEC_R",
       "component_count": 4,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ABEC_T.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ABEC_T",
+      "output": "extracted_assets\\bdf\\ABEC_T",
       "component_count": 4,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ABECADLO.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ABECADLO",
+      "output": "extracted_assets\\bdf\\ABECADLO",
       "component_count": 4,
       "output_count": 10
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ABECADP1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ABECADP1",
+      "output": "extracted_assets\\bdf\\ABECADP1",
       "component_count": 1,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ABECADP2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ABECADP2",
+      "output": "extracted_assets\\bdf\\ABECADP2",
       "component_count": 2,
       "output_count": 6
     },
     {
-      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDA.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA",
-      "component_count": 5,
-      "output_count": 26
-    },
-    {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDA_C.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_C",
+      "output": "extracted_assets\\bdf\\CUDA_C",
       "component_count": 2,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDA_PS1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS1",
+      "output": "extracted_assets\\bdf\\CUDA_PS1",
       "component_count": 5,
       "output_count": 40
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDA_PS2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2",
+      "output": "extracted_assets\\bdf\\CUDA_PS2",
       "component_count": 6,
       "output_count": 30
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDA_PS3.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS3",
+      "output": "extracted_assets\\bdf\\CUDA_PS3",
       "component_count": 6,
       "output_count": 30
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDA_R.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_R",
+      "output": "extracted_assets\\bdf\\CUDA_R",
       "component_count": 4,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDA_T.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_T",
+      "output": "extracted_assets\\bdf\\CUDA_T",
       "component_count": 4,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDAP1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDAP1",
+      "output": "extracted_assets\\bdf\\CUDAP1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDAP2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDAP2",
+      "output": "extracted_assets\\bdf\\CUDAP2",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\DYZIO.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO",
+      "output": "extracted_assets\\bdf\\DYZIO",
       "component_count": 6,
       "output_count": 17
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\DYZIO_C.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO_C",
+      "output": "extracted_assets\\bdf\\DYZIO_C",
       "component_count": 2,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\DYZIO_R.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIO_R",
+      "output": "extracted_assets\\bdf\\DYZIO_R",
       "component_count": 4,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\DYZIOP1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIOP1",
+      "output": "extracted_assets\\bdf\\DYZIOP1",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\DYZIOP2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\DYZIOP2",
+      "output": "extracted_assets\\bdf\\DYZIOP2",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\FIG_R.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIG_R",
+      "output": "extracted_assets\\bdf\\FIG_R",
       "component_count": 4,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\FIGIEL_C.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIEL_C",
+      "output": "extracted_assets\\bdf\\FIGIEL_C",
       "component_count": 2,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\FIGIELEK.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELEK",
+      "output": "extracted_assets\\bdf\\FIGIELEK",
       "component_count": 3,
       "output_count": 34
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\FIGIELP1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELP1",
+      "output": "extracted_assets\\bdf\\FIGIELP1",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\FIGIELP2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\FIGIELP2",
+      "output": "extracted_assets\\bdf\\FIGIELP2",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\GRZES_C.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\GRZES_C",
+      "output": "extracted_assets\\bdf\\GRZES_C",
       "component_count": 2,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\GRZES_R.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\GRZES_R",
+      "output": "extracted_assets\\bdf\\GRZES_R",
       "component_count": 4,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\GRZESIU.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\GRZESIU",
+      "output": "extracted_assets\\bdf\\GRZESIU",
       "component_count": 6,
       "output_count": 37
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\GRZESP1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\GRZESP1",
+      "output": "extracted_assets\\bdf\\GRZESP1",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\GRZESP2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\GRZESP2",
+      "output": "extracted_assets\\bdf\\GRZESP2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\INTRO.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO",
+      "output": "extracted_assets\\bdf\\INTRO",
       "component_count": 3,
       "output_count": 25
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\KOT1P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOT1P1",
+      "output": "extracted_assets\\bdf\\KOT1P1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\KOT1P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOT1P2",
+      "output": "extracted_assets\\bdf\\KOT1P2",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\KOT2P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOT2P1",
+      "output": "extracted_assets\\bdf\\KOT2P1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\KOT2P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOT2P2",
+      "output": "extracted_assets\\bdf\\KOT2P2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\KOT3P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOT3P1",
+      "output": "extracted_assets\\bdf\\KOT3P1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\KOT3P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOT3P2",
+      "output": "extracted_assets\\bdf\\KOT3P2",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\KOT4P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOT4P1",
+      "output": "extracted_assets\\bdf\\KOT4P1",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\KOT4P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOT4P2",
+      "output": "extracted_assets\\bdf\\KOT4P2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\KOT5P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOT5P1",
+      "output": "extracted_assets\\bdf\\KOT5P1",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\KOT5P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOT5P2",
+      "output": "extracted_assets\\bdf\\KOT5P2",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\KOTEK.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK",
+      "output": "extracted_assets\\bdf\\KOTEK",
       "component_count": 3,
       "output_count": 12
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\KOTEK_C.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK_C",
+      "output": "extracted_assets\\bdf\\KOTEK_C",
       "component_count": 2,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\KOTEK_R.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK_R",
+      "output": "extracted_assets\\bdf\\KOTEK_R",
       "component_count": 4,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\KRAWIEC.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC",
+      "output": "extracted_assets\\bdf\\KRAWIEC",
       "component_count": 4,
       "output_count": 11
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\KRAWIEP1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEP1",
+      "output": "extracted_assets\\bdf\\KRAWIEP1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\KRAWIEP2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEP2",
+      "output": "extracted_assets\\bdf\\KRAWIEP2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\LOK1P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOK1P1",
+      "output": "extracted_assets\\bdf\\LOK1P1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\LOK1P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOK1P2",
+      "output": "extracted_assets\\bdf\\LOK1P2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\LOK2P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOK2P1",
+      "output": "extracted_assets\\bdf\\LOK2P1",
       "component_count": 2,
       "output_count": 8
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\LOK2P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOK2P2",
+      "output": "extracted_assets\\bdf\\LOK2P2",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\LOK3P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOK3P1",
+      "output": "extracted_assets\\bdf\\LOK3P1",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\LOK3P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOK3P2",
+      "output": "extracted_assets\\bdf\\LOK3P2",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\LOK4P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOK4P1",
+      "output": "extracted_assets\\bdf\\LOK4P1",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\LOK4P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOK4P2",
+      "output": "extracted_assets\\bdf\\LOK4P2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\LOK5P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOK5P1",
+      "output": "extracted_assets\\bdf\\LOK5P1",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\LOK5P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOK5P2",
+      "output": "extracted_assets\\bdf\\LOK5P2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\LOKOM_C.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOM_C",
+      "output": "extracted_assets\\bdf\\LOKOM_C",
       "component_count": 2,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\LOKOM_R.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOM_R",
+      "output": "extracted_assets\\bdf\\LOKOM_R",
       "component_count": 4,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\LOKOMOT.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOKOMOT",
+      "output": "extracted_assets\\bdf\\LOKOMOT",
       "component_count": 5,
       "output_count": 29
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MALUS_C.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUS_C",
+      "output": "extracted_assets\\bdf\\MALUS_C",
       "component_count": 2,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MALUS_R.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUS_R",
+      "output": "extracted_assets\\bdf\\MALUS_R",
       "component_count": 4,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MALUSKIE.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSKIE",
+      "output": "extracted_assets\\bdf\\MALUSKIE",
       "component_count": 5,
       "output_count": 34
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MALUSP1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSP1",
+      "output": "extracted_assets\\bdf\\MALUSP1",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MALUSP2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MALUSP2",
+      "output": "extracted_assets\\bdf\\MALUSP2",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MICH0.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH0",
+      "output": "extracted_assets\\bdf\\MICH0",
       "component_count": 3,
       "output_count": 8
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MICH1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH1",
+      "output": "extracted_assets\\bdf\\MICH1",
       "component_count": 4,
       "output_count": 7
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MICH2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH2",
+      "output": "extracted_assets\\bdf\\MICH2",
       "component_count": 4,
       "output_count": 7
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MICH3.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH3",
+      "output": "extracted_assets\\bdf\\MICH3",
       "component_count": 4,
       "output_count": 7
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MICH4.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH4",
+      "output": "extracted_assets\\bdf\\MICH4",
       "component_count": 4,
       "output_count": 7
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MICH5.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH5",
+      "output": "extracted_assets\\bdf\\MICH5",
       "component_count": 4,
       "output_count": 7
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MICHAL_C.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICHAL_C",
+      "output": "extracted_assets\\bdf\\MICHAL_C",
       "component_count": 2,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MICHAL_R.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICHAL_R",
+      "output": "extracted_assets\\bdf\\MICHAL_R",
       "component_count": 4,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MICHALP1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICHALP1",
+      "output": "extracted_assets\\bdf\\MICHALP1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MICHALP2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICHALP2",
+      "output": "extracted_assets\\bdf\\MICHALP2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MROZ.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ",
+      "output": "extracted_assets\\bdf\\MROZ",
       "component_count": 7,
       "output_count": 15
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MROZ_C.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ_C",
+      "output": "extracted_assets\\bdf\\MROZ_C",
       "component_count": 2,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MROZ_R.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ_R",
+      "output": "extracted_assets\\bdf\\MROZ_R",
       "component_count": 4,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MROZP1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZP1",
+      "output": "extracted_assets\\bdf\\MROZP1",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MROZP2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZP2",
+      "output": "extracted_assets\\bdf\\MROZP2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MURARZ.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ",
+      "output": "extracted_assets\\bdf\\MURARZ",
       "component_count": 4,
       "output_count": 11
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MURARZP1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZP1",
+      "output": "extracted_assets\\bdf\\MURARZP1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MURARZP2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZP2",
+      "output": "extracted_assets\\bdf\\MURARZP2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MURZ_C.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZ_C",
+      "output": "extracted_assets\\bdf\\MURZ_C",
       "component_count": 2,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MURZ_R.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZ_R",
+      "output": "extracted_assets\\bdf\\MURZ_R",
       "component_count": 4,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MURZYNEK.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNEK",
+      "output": "extracted_assets\\bdf\\MURZYNEK",
       "component_count": 7,
       "output_count": 41
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MURZYNP1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNP1",
+      "output": "extracted_assets\\bdf\\MURZYNP1",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MURZYNP2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZYNP2",
+      "output": "extracted_assets\\bdf\\MURZYNP2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\OKUL1P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKUL1P1",
+      "output": "extracted_assets\\bdf\\OKUL1P1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\OKUL1P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKUL1P2",
+      "output": "extracted_assets\\bdf\\OKUL1P2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\OKUL2P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKUL2P1",
+      "output": "extracted_assets\\bdf\\OKUL2P1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\OKUL2P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKUL2P2",
+      "output": "extracted_assets\\bdf\\OKUL2P2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\OKUL_R.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKUL_R",
+      "output": "extracted_assets\\bdf\\OKUL_R",
       "component_count": 4,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\OKULAR_C.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULAR_C",
+      "output": "extracted_assets\\bdf\\OKULAR_C",
       "component_count": 2,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\OKULARY.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY",
+      "output": "extracted_assets\\bdf\\OKULARY",
       "component_count": 4,
       "output_count": 25
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\PIEKARP1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARP1",
+      "output": "extracted_assets\\bdf\\PIEKARP1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\PIEKARP2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARP2",
+      "output": "extracted_assets\\bdf\\PIEKARP2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\PIEKARZ.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ",
+      "output": "extracted_assets\\bdf\\PIEKARZ",
       "component_count": 4,
       "output_count": 11
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\PLOTKI.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI",
+      "output": "extracted_assets\\bdf\\PLOTKI",
       "component_count": 4,
       "output_count": 22
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\PLOTKI_C.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI_C",
+      "output": "extracted_assets\\bdf\\PLOTKI_C",
       "component_count": 2,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\PLOTKI_R.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI_R",
+      "output": "extracted_assets\\bdf\\PLOTKI_R",
       "component_count": 4,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\PLOTKIP1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKIP1",
+      "output": "extracted_assets\\bdf\\PLOTKIP1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\PLOTKIP2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKIP2",
+      "output": "extracted_assets\\bdf\\PLOTKIP2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\PSTR1P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTR1P1",
+      "output": "extracted_assets\\bdf\\PSTR1P1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\PSTR1P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTR1P2",
+      "output": "extracted_assets\\bdf\\PSTR1P2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\PSTR2P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTR2P1",
+      "output": "extracted_assets\\bdf\\PSTR2P1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\PSTR2P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTR2P2",
+      "output": "extracted_assets\\bdf\\PSTR2P2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\PSTRYK.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK",
+      "output": "extracted_assets\\bdf\\PSTRYK",
       "component_count": 6,
       "output_count": 28
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\PSTRYK_C.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK_C",
+      "output": "extracted_assets\\bdf\\PSTRYK_C",
       "component_count": 2,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\PSTRYK_R.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK_R",
+      "output": "extracted_assets\\bdf\\PSTRYK_R",
       "component_count": 4,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RACH_C.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACH_C",
+      "output": "extracted_assets\\bdf\\RACH_C",
       "component_count": 2,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RACHUN_R.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUN_R",
+      "output": "extracted_assets\\bdf\\RACHUN_R",
       "component_count": 4,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RACHUNEK.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK",
+      "output": "extracted_assets\\bdf\\RACHUNEK",
       "component_count": 4,
       "output_count": 25
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RACHUNP1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNP1",
+      "output": "extracted_assets\\bdf\\RACHUNP1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RACHUNP2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNP2",
+      "output": "extracted_assets\\bdf\\RACHUNP2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RADIO.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RADIO",
+      "output": "extracted_assets\\bdf\\RADIO",
       "component_count": 3,
       "output_count": 114
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RADIO_C.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RADIO_C",
+      "output": "extracted_assets\\bdf\\RADIO_C",
       "component_count": 2,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RADIO_R.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RADIO_R",
+      "output": "extracted_assets\\bdf\\RADIO_R",
       "component_count": 4,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RADIOP1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RADIOP1",
+      "output": "extracted_assets\\bdf\\RADIOP1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RADIOP2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RADIOP2",
+      "output": "extracted_assets\\bdf\\RADIOP2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RYCE1P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCE1P1",
+      "output": "extracted_assets\\bdf\\RYCE1P1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RYCE1P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCE1P2",
+      "output": "extracted_assets\\bdf\\RYCE1P2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RYCE2P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCE2P1",
+      "output": "extracted_assets\\bdf\\RYCE2P1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RYCE2P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCE2P2",
+      "output": "extracted_assets\\bdf\\RYCE2P2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RYCE3P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCE3P1",
+      "output": "extracted_assets\\bdf\\RYCE3P1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RYCE3P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCE3P2",
+      "output": "extracted_assets\\bdf\\RYCE3P2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RYCE4P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCE4P1",
+      "output": "extracted_assets\\bdf\\RYCE4P1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RYCE4P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCE4P2",
+      "output": "extracted_assets\\bdf\\RYCE4P2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RYCERZ.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ",
+      "output": "extracted_assets\\bdf\\RYCERZ",
       "component_count": 6,
       "output_count": 19
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RYCERZ1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1",
+      "output": "extracted_assets\\bdf\\RYCERZ1",
       "component_count": 4,
       "output_count": 21
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RYCERZ_C.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ_C",
+      "output": "extracted_assets\\bdf\\RYCERZ_C",
       "component_count": 2,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RYCERZ_R.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ_R",
+      "output": "extracted_assets\\bdf\\RYCERZ_R",
       "component_count": 4,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RZECZ1P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZ1P1",
+      "output": "extracted_assets\\bdf\\RZECZ1P1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RZECZ1P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZ1P2",
+      "output": "extracted_assets\\bdf\\RZECZ1P2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RZECZ2P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZ2P1",
+      "output": "extracted_assets\\bdf\\RZECZ2P1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RZECZ2P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZ2P2",
+      "output": "extracted_assets\\bdf\\RZECZ2P2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RZECZ_R.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZ_R",
+      "output": "extracted_assets\\bdf\\RZECZ_R",
       "component_count": 4,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RZECZK_C.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZK_C",
+      "output": "extracted_assets\\bdf\\RZECZK_C",
       "component_count": 2,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RZECZKA.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RZECZKA",
+      "output": "extracted_assets\\bdf\\RZECZKA",
       "component_count": 6,
       "output_count": 53
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLON.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON",
+      "output": "extracted_assets\\bdf\\SLON",
       "component_count": 5,
       "output_count": 171
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLON1P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON1P1",
+      "output": "extracted_assets\\bdf\\SLON1P1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLON1P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON1P2",
+      "output": "extracted_assets\\bdf\\SLON1P2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLON2P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON2P1",
+      "output": "extracted_assets\\bdf\\SLON2P1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLON2P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON2P2",
+      "output": "extracted_assets\\bdf\\SLON2P2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLON3P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON3P1",
+      "output": "extracted_assets\\bdf\\SLON3P1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLON3P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON3P2",
+      "output": "extracted_assets\\bdf\\SLON3P2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLON4P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON4P1",
+      "output": "extracted_assets\\bdf\\SLON4P1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLON4P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON4P2",
+      "output": "extracted_assets\\bdf\\SLON4P2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLON_C.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON_C",
+      "output": "extracted_assets\\bdf\\SLON_C",
       "component_count": 2,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLON_R.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON_R",
+      "output": "extracted_assets\\bdf\\SLON_R",
       "component_count": 4,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLOW1P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOW1P1",
+      "output": "extracted_assets\\bdf\\SLOW1P1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLOW1P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOW1P2",
+      "output": "extracted_assets\\bdf\\SLOW1P2",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLOW2P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOW2P1",
+      "output": "extracted_assets\\bdf\\SLOW2P1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLOW2P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOW2P2",
+      "output": "extracted_assets\\bdf\\SLOW2P2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLOWIK.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK",
+      "output": "extracted_assets\\bdf\\SLOWIK",
       "component_count": 5,
       "output_count": 30
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLOWIK1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK1",
+      "output": "extracted_assets\\bdf\\SLOWIK1",
       "component_count": 5,
       "output_count": 29
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLOWIK_C.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK_C",
+      "output": "extracted_assets\\bdf\\SLOWIK_C",
       "component_count": 2,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLOWIK_R.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK_R",
+      "output": "extracted_assets\\bdf\\SLOWIK_R",
       "component_count": 4,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SZEWC.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SZEWC",
+      "output": "extracted_assets\\bdf\\SZEWC",
       "component_count": 4,
       "output_count": 11
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SZEWCP1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SZEWCP1",
+      "output": "extracted_assets\\bdf\\SZEWCP1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SZEWCP2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SZEWCP2",
+      "output": "extracted_assets\\bdf\\SZEWCP2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TAN_PS.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS",
+      "output": "extracted_assets\\bdf\\TAN_PS",
       "component_count": 6,
       "output_count": 22
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TANIE1P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIE1P1",
+      "output": "extracted_assets\\bdf\\TANIE1P1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TANIE1P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIE1P2",
+      "output": "extracted_assets\\bdf\\TANIE1P2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TANIE2P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIE2P1",
+      "output": "extracted_assets\\bdf\\TANIE2P1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TANIE2P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIE2P2",
+      "output": "extracted_assets\\bdf\\TANIE2P2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TANIEC.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC",
+      "output": "extracted_assets\\bdf\\TANIEC",
       "component_count": 6,
       "output_count": 22
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TANIEC_C.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC_C",
+      "output": "extracted_assets\\bdf\\TANIEC_C",
       "component_count": 2,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TANIEC_R.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC_R",
+      "output": "extracted_assets\\bdf\\TANIEC_R",
       "component_count": 4,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TANIEC_T.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC_T",
+      "output": "extracted_assets\\bdf\\TANIEC_T",
       "component_count": 4,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\THEEND.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND",
+      "output": "extracted_assets\\bdf\\THEEND",
       "component_count": 3,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TRAL_R.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRAL_R",
+      "output": "extracted_assets\\bdf\\TRAL_R",
       "component_count": 4,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TRALAL_C.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALAL_C",
+      "output": "extracted_assets\\bdf\\TRALAL_C",
       "component_count": 2,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TRALALA.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA",
+      "output": "extracted_assets\\bdf\\TRALALA",
       "component_count": 5,
       "output_count": 36
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TRALALP1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALP1",
+      "output": "extracted_assets\\bdf\\TRALALP1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TRALALP2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALP2",
+      "output": "extracted_assets\\bdf\\TRALALP2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WIES.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES",
+      "output": "extracted_assets\\bdf\\WIES",
       "component_count": 4,
       "output_count": 18
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WIES1P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES1P1",
+      "output": "extracted_assets\\bdf\\WIES1P1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WIES1P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES1P2",
+      "output": "extracted_assets\\bdf\\WIES1P2",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WIES2P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES2P1",
+      "output": "extracted_assets\\bdf\\WIES2P1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WIES2P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES2P2",
+      "output": "extracted_assets\\bdf\\WIES2P2",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WIES3P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES3P1",
+      "output": "extracted_assets\\bdf\\WIES3P1",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WIES3P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES3P2",
+      "output": "extracted_assets\\bdf\\WIES3P2",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WIES4P1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES4P1",
+      "output": "extracted_assets\\bdf\\WIES4P1",
       "component_count": 2,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WIES4P2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES4P2",
+      "output": "extracted_assets\\bdf\\WIES4P2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WIES_C.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES_C",
+      "output": "extracted_assets\\bdf\\WIES_C",
       "component_count": 2,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WIES_R.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES_R",
+      "output": "extracted_assets\\bdf\\WIES_R",
       "component_count": 4,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WSZYSC_C.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSC_C",
+      "output": "extracted_assets\\bdf\\WSZYSC_C",
       "component_count": 2,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WSZYSC_R.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSC_R",
+      "output": "extracted_assets\\bdf\\WSZYSC_R",
       "component_count": 4,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WSZYSCP1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSCP1",
+      "output": "extracted_assets\\bdf\\WSZYSCP1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WSZYSCP2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSCP2",
+      "output": "extracted_assets\\bdf\\WSZYSCP2",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WSZYSCY.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSCY",
+      "output": "extracted_assets\\bdf\\WSZYSCY",
       "component_count": 5,
       "output_count": 23
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WYBORW.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WYBORW",
+      "output": "extracted_assets\\bdf\\WYBORW",
       "component_count": 5,
       "output_count": 86
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ZOSIA.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA",
+      "output": "extracted_assets\\bdf\\ZOSIA",
       "component_count": 5,
       "output_count": 17
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ZOSIA_C.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_C",
+      "output": "extracted_assets\\bdf\\ZOSIA_C",
       "component_count": 2,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ZOSIA_PS.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS",
+      "output": "extracted_assets\\bdf\\ZOSIA_PS",
       "component_count": 6,
       "output_count": 17
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ZOSIA_R.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_R",
+      "output": "extracted_assets\\bdf\\ZOSIA_R",
       "component_count": 4,
       "output_count": 5
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ZOSIA_T.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_T",
+      "output": "extracted_assets\\bdf\\ZOSIA_T",
       "component_count": 4,
       "output_count": 2
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ZOSIAP1.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIAP1",
+      "output": "extracted_assets\\bdf\\ZOSIAP1",
       "component_count": 2,
       "output_count": 6
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ZOSIAP2.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIAP2",
+      "output": "extracted_assets\\bdf\\ZOSIAP2",
       "component_count": 2,
       "output_count": 6
     }
@@ -1213,43 +1544,43 @@
   "grp": [
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CURSORS.GRP",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS",
+      "output": "extracted_assets\\grp\\CURSORS",
       "cursor_count": 13,
       "output_count": 26
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CURSORS1.GRP",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1",
+      "output": "extracted_assets\\grp\\CURSORS1",
       "cursor_count": 2,
       "output_count": 4
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CURSORS2.GRP",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS2",
+      "output": "extracted_assets\\grp\\CURSORS2",
       "cursor_count": 13,
       "output_count": 26
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\G_PIOS.GRP",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS",
+      "output": "extracted_assets\\grp\\G_PIOS",
       "cursor_count": 4,
       "output_count": 7
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\G_REC.GRP",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC",
+      "output": "extracted_assets\\grp\\G_REC",
       "cursor_count": 6,
       "output_count": 12
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\G_TAN.GRP",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_TAN",
+      "output": "extracted_assets\\grp\\G_TAN",
       "cursor_count": 2,
       "output_count": 4
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\GR_CZYM.GRP",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM",
+      "output": "extracted_assets\\grp\\GR_CZYM",
       "cursor_count": 2,
       "output_count": 4
     }
@@ -1260,5 +1591,10 @@
       "reason": "not a YDP Board data file"
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDA.BDF",
+      "error": "OSError(22, 'Invalid argument')"
+    }
+  ]
 }

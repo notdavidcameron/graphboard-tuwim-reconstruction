@@ -10,10 +10,11 @@
   ],
   "background": {
     "colorIndex": 225,
+    "color": "rgb(120, 120, 120)",
     "flag": 1,
     "bmpPath": null,
     "bmpUrl": null,
-    "palettePath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON2P1\\background_palette.bin",
+    "palettePath": "extracted_assets\\bdf\\SLON2P1\\background_palette.bin",
     "paletteUrl": "../extracted_assets/bdf/SLON2P1/background_palette.bin"
   },
   "components": [
@@ -58,7 +59,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON2P1\\embedded\\01_Sound_Holder_000_0003e6c5.wav",
+          "path": "extracted_assets\\bdf\\SLON2P1\\embedded\\01_Sound_Holder_000_0003e6c5.wav",
           "url": "../extracted_assets/bdf/SLON2P1/embedded/01_Sound_Holder_000_0003e6c5.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -68,7 +69,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON2P1\\embedded\\01_Sound_Holder_001_00040095.wav",
+          "path": "extracted_assets\\bdf\\SLON2P1\\embedded\\01_Sound_Holder_001_00040095.wav",
           "url": "../extracted_assets/bdf/SLON2P1/embedded/01_Sound_Holder_001_00040095.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -78,7 +79,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON2P1\\embedded\\01_Sound_Holder_002_000416d5.wav",
+          "path": "extracted_assets\\bdf\\SLON2P1\\embedded\\01_Sound_Holder_002_000416d5.wav",
           "url": "../extracted_assets/bdf/SLON2P1/embedded/01_Sound_Holder_002_000416d5.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -88,7 +89,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON2P1\\embedded\\01_Sound_Holder_003_00042589.wav",
+          "path": "extracted_assets\\bdf\\SLON2P1\\embedded\\01_Sound_Holder_003_00042589.wav",
           "url": "../extracted_assets/bdf/SLON2P1/embedded/01_Sound_Holder_003_00042589.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -100,7 +101,7 @@
     }
   ],
   "script": {
-    "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON2P1\\script.txt",
+    "path": "extracted_assets\\bdf\\SLON2P1\\script.txt",
     "url": "../extracted_assets/bdf/SLON2P1/script.txt",
     "handlers": [
       {

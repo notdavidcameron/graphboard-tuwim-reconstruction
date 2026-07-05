@@ -10,10 +10,11 @@
   ],
   "background": {
     "colorIndex": 0,
+    "color": "rgb(0, 0, 0)",
     "flag": 0,
-    "bmpPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\background.bmp",
+    "bmpPath": "extracted_assets\\bdf\\RACHUNEK\\background.bmp",
     "bmpUrl": "../extracted_assets/bdf/RACHUNEK/background.bmp",
-    "palettePath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\background_palette.bin",
+    "palettePath": "extracted_assets\\bdf\\RACHUNEK\\background_palette.bin",
     "paletteUrl": "../extracted_assets/bdf/RACHUNEK/background_palette.bin"
   },
   "components": [
@@ -78,7 +79,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_000_0009a3a8.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_000_0009a3a8.wav",
           "url": "../extracted_assets/bdf/RACHUNEK/embedded/02_Sound_Holder_000_0009a3a8.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -88,7 +89,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_001_000acf68.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_001_000acf68.wav",
           "url": "../extracted_assets/bdf/RACHUNEK/embedded/02_Sound_Holder_001_000acf68.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -98,7 +99,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_002_001097f6.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_002_001097f6.wav",
           "url": "../extracted_assets/bdf/RACHUNEK/embedded/02_Sound_Holder_002_001097f6.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -108,7 +109,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_003_0010d0da.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_003_0010d0da.wav",
           "url": "../extracted_assets/bdf/RACHUNEK/embedded/02_Sound_Holder_003_0010d0da.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -118,7 +119,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_004_00110b96.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_004_00110b96.wav",
           "url": "../extracted_assets/bdf/RACHUNEK/embedded/02_Sound_Holder_004_00110b96.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -128,7 +129,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_005_00114580.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_005_00114580.wav",
           "url": "../extracted_assets/bdf/RACHUNEK/embedded/02_Sound_Holder_005_00114580.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -138,7 +139,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_006_00117ed6.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_006_00117ed6.wav",
           "url": "../extracted_assets/bdf/RACHUNEK/embedded/02_Sound_Holder_006_00117ed6.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -148,7 +149,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_007_00129d24.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_007_00129d24.wav",
           "url": "../extracted_assets/bdf/RACHUNEK/embedded/02_Sound_Holder_007_00129d24.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -158,7 +159,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_008_00139d8e.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_008_00139d8e.wav",
           "url": "../extracted_assets/bdf/RACHUNEK/embedded/02_Sound_Holder_008_00139d8e.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -168,7 +169,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_009_0017641a.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_009_0017641a.wav",
           "url": "../extracted_assets/bdf/RACHUNEK/embedded/02_Sound_Holder_009_0017641a.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -178,7 +179,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_010_001932a6.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_010_001932a6.wav",
           "url": "../extracted_assets/bdf/RACHUNEK/embedded/02_Sound_Holder_010_001932a6.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -208,7 +209,7 @@
       "assets": [
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_000_002108c8_board_video_640x72.gif",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_000_002108c8_board_video_640x72.gif",
           "url": "../extracted_assets/bdf/RACHUNEK/animations/03_Transparent_Video_Holder_000_002108c8_board_video_640x72.gif",
           "width": 640,
           "height": 72,
@@ -236,7 +237,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_002_002b4c0e_board_video_640x103.gif",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_002_002b4c0e_board_video_640x103.gif",
           "url": "../extracted_assets/bdf/RACHUNEK/animations/03_Transparent_Video_Holder_002_002b4c0e_board_video_640x103.gif",
           "width": 640,
           "height": 103,
@@ -264,7 +265,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_004_003bfb0b_board_video_640x125.gif",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_004_003bfb0b_board_video_640x125.gif",
           "url": "../extracted_assets/bdf/RACHUNEK/animations/03_Transparent_Video_Holder_004_003bfb0b_board_video_640x125.gif",
           "width": 640,
           "height": 125,
@@ -292,7 +293,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_006_00468c15_board_video_640x52.gif",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_006_00468c15_board_video_640x52.gif",
           "url": "../extracted_assets/bdf/RACHUNEK/animations/03_Transparent_Video_Holder_006_00468c15_board_video_640x52.gif",
           "width": 640,
           "height": 52,
@@ -320,7 +321,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_008_005528a8_board_video_640x73.gif",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_008_005528a8_board_video_640x73.gif",
           "url": "../extracted_assets/bdf/RACHUNEK/animations/03_Transparent_Video_Holder_008_005528a8_board_video_640x73.gif",
           "width": 640,
           "height": 73,
@@ -350,7 +351,7 @@
       "audio": [
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_000_002108c8_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_000_002108c8_board_video_audio.wav",
           "url": "../extracted_assets/bdf/RACHUNEK/embedded/03_Transparent_Video_Holder_000_002108c8_board_video_audio.wav",
           "durationSeconds": 4.0,
           "sampleRate": 22050,
@@ -360,7 +361,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_002_002b4c0e_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_002_002b4c0e_board_video_audio.wav",
           "url": "../extracted_assets/bdf/RACHUNEK/embedded/03_Transparent_Video_Holder_002_002b4c0e_board_video_audio.wav",
           "durationSeconds": 7.0,
           "sampleRate": 22050,
@@ -370,7 +371,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_004_003bfb0b_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_004_003bfb0b_board_video_audio.wav",
           "url": "../extracted_assets/bdf/RACHUNEK/embedded/03_Transparent_Video_Holder_004_003bfb0b_board_video_audio.wav",
           "durationSeconds": 4.0,
           "sampleRate": 22050,
@@ -380,7 +381,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_006_00468c15_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_006_00468c15_board_video_audio.wav",
           "url": "../extracted_assets/bdf/RACHUNEK/embedded/03_Transparent_Video_Holder_006_00468c15_board_video_audio.wav",
           "durationSeconds": 6.0,
           "sampleRate": 22050,
@@ -390,7 +391,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_008_005528a8_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_008_005528a8_board_video_audio.wav",
           "url": "../extracted_assets/bdf/RACHUNEK/embedded/03_Transparent_Video_Holder_008_005528a8_board_video_audio.wav",
           "durationSeconds": 9.0,
           "sampleRate": 22050,
@@ -402,7 +403,7 @@
     }
   ],
   "script": {
-    "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\script.txt",
+    "path": "extracted_assets\\bdf\\RACHUNEK\\script.txt",
     "url": "../extracted_assets/bdf/RACHUNEK/script.txt",
     "handlers": [
       {

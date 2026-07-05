@@ -10,10 +10,11 @@
   ],
   "background": {
     "colorIndex": 230,
+    "color": "rgb(187, 187, 187)",
     "flag": 1,
     "bmpPath": null,
     "bmpUrl": null,
-    "palettePath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOK2P2\\background_palette.bin",
+    "palettePath": "extracted_assets\\bdf\\LOK2P2\\background_palette.bin",
     "paletteUrl": "../extracted_assets/bdf/LOK2P2/background_palette.bin"
   },
   "components": [
@@ -58,7 +59,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOK2P2\\embedded\\01_Sound_Holder_000_0003ad21.wav",
+          "path": "extracted_assets\\bdf\\LOK2P2\\embedded\\01_Sound_Holder_000_0003ad21.wav",
           "url": "../extracted_assets/bdf/LOK2P2/embedded/01_Sound_Holder_000_0003ad21.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -68,7 +69,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOK2P2\\embedded\\01_Sound_Holder_001_0003cfb3.wav",
+          "path": "extracted_assets\\bdf\\LOK2P2\\embedded\\01_Sound_Holder_001_0003cfb3.wav",
           "url": "../extracted_assets/bdf/LOK2P2/embedded/01_Sound_Holder_001_0003cfb3.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -78,7 +79,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOK2P2\\embedded\\01_Sound_Holder_002_0003e6a7.wav",
+          "path": "extracted_assets\\bdf\\LOK2P2\\embedded\\01_Sound_Holder_002_0003e6a7.wav",
           "url": "../extracted_assets/bdf/LOK2P2/embedded/01_Sound_Holder_002_0003e6a7.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -88,7 +89,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\LOK2P2\\embedded\\01_Sound_Holder_003_00040eb5.wav",
+          "path": "extracted_assets\\bdf\\LOK2P2\\embedded\\01_Sound_Holder_003_00040eb5.wav",
           "url": "../extracted_assets/bdf/LOK2P2/embedded/01_Sound_Holder_003_00040eb5.wav",
           "durationSeconds": null,
           "sampleRate": null,

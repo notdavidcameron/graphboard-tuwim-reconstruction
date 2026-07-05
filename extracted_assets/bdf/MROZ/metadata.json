@@ -58,7 +58,7 @@
       "embedded": [
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_000_001cd847_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_000_001cd847_board_video_audio.wav",
           "offset": 1890375,
           "size": 132344,
           "pcm_size": 132300,
@@ -70,7 +70,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_000_001cd847_board_video_129x142.gif",
+          "path": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_000_001cd847_board_video_129x142.gif",
           "offset": 1890375,
           "size": 271396,
           "frame_count": 13,
@@ -82,7 +82,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_002_002188c2_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_002_002188c2_board_video_audio.wav",
           "offset": 2197698,
           "size": 88244,
           "pcm_size": 88200,
@@ -94,7 +94,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_002_002188c2_board_video_69x64.gif",
+          "path": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_002_002188c2_board_video_69x64.gif",
           "offset": 2197698,
           "size": 46116,
           "frame_count": 9,
@@ -106,7 +106,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_004_00234f2e_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_004_00234f2e_board_video_audio.wav",
           "offset": 2314030,
           "size": 88244,
           "pcm_size": 88200,
@@ -118,7 +118,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_004_00234f2e_board_video_51x40.gif",
+          "path": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_004_00234f2e_board_video_51x40.gif",
           "offset": 2314030,
           "size": 21852,
           "frame_count": 9,
@@ -149,10 +149,10 @@
           "audio_record_count": 3,
           "video_record_count": 13,
           "stop_reason": "next_stream",
-          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_000_001cd847_board_video_audio.wav",
+          "audio_output": "extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_000_001cd847_board_video_audio.wav",
           "audio_pcm_size": 132300,
           "duration_seconds": 3.0,
-          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_000_001cd847_board_video_129x142.gif",
+          "video_output": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_000_001cd847_board_video_129x142.gif",
           "transparent_index": 30
         },
         {
@@ -192,10 +192,10 @@
           "audio_record_count": 2,
           "video_record_count": 9,
           "stop_reason": "next_stream",
-          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_002_002188c2_board_video_audio.wav",
+          "audio_output": "extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_002_002188c2_board_video_audio.wav",
           "audio_pcm_size": 88200,
           "duration_seconds": 2.0,
-          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_002_002188c2_board_video_69x64.gif",
+          "video_output": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_002_002188c2_board_video_69x64.gif",
           "transparent_index": 30
         },
         {
@@ -235,10 +235,10 @@
           "audio_record_count": 2,
           "video_record_count": 9,
           "stop_reason": "next_stream",
-          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_004_00234f2e_board_video_audio.wav",
+          "audio_output": "extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_004_00234f2e_board_video_audio.wav",
           "audio_pcm_size": 88200,
           "duration_seconds": 2.0,
-          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_004_00234f2e_board_video_51x40.gif",
+          "video_output": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_004_00234f2e_board_video_51x40.gif",
           "transparent_index": 30
         },
         {
@@ -281,49 +281,49 @@
       "embedded": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_000_0024ee58.wav",
+          "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_000_0024ee58.wav",
           "offset": 2420312,
           "size": 349442,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_001_002a43ba.wav",
+          "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_001_002a43ba.wav",
           "offset": 2769850,
           "size": 10920,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_002_002a6ec2.wav",
+          "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_002_002a6ec2.wav",
           "offset": 2780866,
           "size": 52436,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_003_002b3bf6.wav",
+          "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_003_002b3bf6.wav",
           "offset": 2833398,
           "size": 16852,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_004_002b7e2a.wav",
+          "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_004_002b7e2a.wav",
           "offset": 2850346,
           "size": 241476,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_005_002f2dce.wav",
+          "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_005_002f2dce.wav",
           "offset": 3091918,
           "size": 32504,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_006_002fad26.wav",
+          "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_006_002fad26.wav",
           "offset": 3124518,
           "size": 385818,
           "extension": ".wav"
@@ -343,17 +343,17 @@
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\MROZ\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\script.txt",
+      "path": "extracted_assets\\bdf\\MROZ\\script.txt",
       "size": 17244
     },
     {
       "kind": "board_video_pcm_wave",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_000_001cd847_board_video_audio.wav",
+      "path": "extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_000_001cd847_board_video_audio.wav",
       "offset": 1890375,
       "size": 132344,
       "pcm_size": 132300,
@@ -365,7 +365,7 @@
     },
     {
       "kind": "board_video_gif",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_000_001cd847_board_video_129x142.gif",
+      "path": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_000_001cd847_board_video_129x142.gif",
       "offset": 1890375,
       "size": 271396,
       "frame_count": 13,
@@ -377,7 +377,7 @@
     },
     {
       "kind": "board_video_pcm_wave",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_002_002188c2_board_video_audio.wav",
+      "path": "extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_002_002188c2_board_video_audio.wav",
       "offset": 2197698,
       "size": 88244,
       "pcm_size": 88200,
@@ -389,7 +389,7 @@
     },
     {
       "kind": "board_video_gif",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_002_002188c2_board_video_69x64.gif",
+      "path": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_002_002188c2_board_video_69x64.gif",
       "offset": 2197698,
       "size": 46116,
       "frame_count": 9,
@@ -401,7 +401,7 @@
     },
     {
       "kind": "board_video_pcm_wave",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_004_00234f2e_board_video_audio.wav",
+      "path": "extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_004_00234f2e_board_video_audio.wav",
       "offset": 2314030,
       "size": 88244,
       "pcm_size": 88200,
@@ -413,7 +413,7 @@
     },
     {
       "kind": "board_video_gif",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_004_00234f2e_board_video_51x40.gif",
+      "path": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_004_00234f2e_board_video_51x40.gif",
       "offset": 2314030,
       "size": 21852,
       "frame_count": 9,
@@ -425,37 +425,37 @@
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_000_0024ee58.wav",
+      "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_000_0024ee58.wav",
       "size": 349442
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_001_002a43ba.wav",
+      "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_001_002a43ba.wav",
       "size": 10920
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_002_002a6ec2.wav",
+      "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_002_002a6ec2.wav",
       "size": 52436
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_003_002b3bf6.wav",
+      "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_003_002b3bf6.wav",
       "size": 16852
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_004_002b7e2a.wav",
+      "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_004_002b7e2a.wav",
       "size": 241476
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_005_002f2dce.wav",
+      "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_005_002f2dce.wav",
       "size": 32504
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_006_002fad26.wav",
+      "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_006_002fad26.wav",
       "size": 385818
     }
   ],

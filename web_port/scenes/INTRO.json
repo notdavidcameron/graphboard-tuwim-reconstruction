@@ -10,10 +10,11 @@
   ],
   "background": {
     "colorIndex": 0,
+    "color": "rgb(0, 0, 0)",
     "flag": 0,
-    "bmpPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\background.bmp",
+    "bmpPath": "extracted_assets\\bdf\\INTRO\\background.bmp",
     "bmpUrl": "../extracted_assets/bdf/INTRO/background.bmp",
-    "palettePath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\background_palette.bin",
+    "palettePath": "extracted_assets\\bdf\\INTRO\\background_palette.bin",
     "paletteUrl": "../extracted_assets/bdf/INTRO/background_palette.bin"
   },
   "components": [
@@ -57,7 +58,7 @@
       "assets": [
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_000_00053fb9_board_video_318x386.gif",
+          "path": "extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_000_00053fb9_board_video_318x386.gif",
           "url": "../extracted_assets/bdf/INTRO/animations/01_Transparent_Video_Holder_000_00053fb9_board_video_318x386.gif",
           "width": 318,
           "height": 386,
@@ -85,7 +86,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_002_00161af5_board_video_196x243.gif",
+          "path": "extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_002_00161af5_board_video_196x243.gif",
           "url": "../extracted_assets/bdf/INTRO/animations/01_Transparent_Video_Holder_002_00161af5_board_video_196x243.gif",
           "width": 196,
           "height": 243,
@@ -113,7 +114,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_004_0019283c_board_video_115x61.gif",
+          "path": "extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_004_0019283c_board_video_115x61.gif",
           "url": "../extracted_assets/bdf/INTRO/animations/01_Transparent_Video_Holder_004_0019283c_board_video_115x61.gif",
           "width": 115,
           "height": 61,
@@ -141,7 +142,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_006_001e2b6d_board_video_67x103.gif",
+          "path": "extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_006_001e2b6d_board_video_67x103.gif",
           "url": "../extracted_assets/bdf/INTRO/animations/01_Transparent_Video_Holder_006_001e2b6d_board_video_67x103.gif",
           "width": 67,
           "height": 103,
@@ -169,7 +170,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_008_00226a32_board_video_66x58.gif",
+          "path": "extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_008_00226a32_board_video_66x58.gif",
           "url": "../extracted_assets/bdf/INTRO/animations/01_Transparent_Video_Holder_008_00226a32_board_video_66x58.gif",
           "width": 66,
           "height": 58,
@@ -197,7 +198,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_010_0024e1a6_board_video_216x67.gif",
+          "path": "extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_010_0024e1a6_board_video_216x67.gif",
           "url": "../extracted_assets/bdf/INTRO/animations/01_Transparent_Video_Holder_010_0024e1a6_board_video_216x67.gif",
           "width": 216,
           "height": 67,
@@ -225,7 +226,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_012_0027bfaa_board_video_87x88.gif",
+          "path": "extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_012_0027bfaa_board_video_87x88.gif",
           "url": "../extracted_assets/bdf/INTRO/animations/01_Transparent_Video_Holder_012_0027bfaa_board_video_87x88.gif",
           "width": 87,
           "height": 88,
@@ -253,7 +254,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_014_002ad864_board_video_595x44.gif",
+          "path": "extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_014_002ad864_board_video_595x44.gif",
           "url": "../extracted_assets/bdf/INTRO/animations/01_Transparent_Video_Holder_014_002ad864_board_video_595x44.gif",
           "width": 595,
           "height": 44,
@@ -281,7 +282,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_016_002e7471_board_video_66x75.gif",
+          "path": "extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_016_002e7471_board_video_66x75.gif",
           "url": "../extracted_assets/bdf/INTRO/animations/01_Transparent_Video_Holder_016_002e7471_board_video_66x75.gif",
           "width": 66,
           "height": 75,
@@ -309,7 +310,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_018_0030cce7_board_video_36x32.gif",
+          "path": "extracted_assets\\bdf\\INTRO\\animations\\01_Transparent_Video_Holder_018_0030cce7_board_video_36x32.gif",
           "url": "../extracted_assets/bdf/INTRO/animations/01_Transparent_Video_Holder_018_0030cce7_board_video_36x32.gif",
           "width": 36,
           "height": 32,
@@ -339,7 +340,7 @@
       "audio": [
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_000_00053fb9_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_000_00053fb9_board_video_audio.wav",
           "url": "../extracted_assets/bdf/INTRO/embedded/01_Transparent_Video_Holder_000_00053fb9_board_video_audio.wav",
           "durationSeconds": 2.0,
           "sampleRate": 22050,
@@ -349,7 +350,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_002_00161af5_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_002_00161af5_board_video_audio.wav",
           "url": "../extracted_assets/bdf/INTRO/embedded/01_Transparent_Video_Holder_002_00161af5_board_video_audio.wav",
           "durationSeconds": 3.0,
           "sampleRate": 22050,
@@ -359,7 +360,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_004_0019283c_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_004_0019283c_board_video_audio.wav",
           "url": "../extracted_assets/bdf/INTRO/embedded/01_Transparent_Video_Holder_004_0019283c_board_video_audio.wav",
           "durationSeconds": 5.0,
           "sampleRate": 22050,
@@ -369,7 +370,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_006_001e2b6d_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_006_001e2b6d_board_video_audio.wav",
           "url": "../extracted_assets/bdf/INTRO/embedded/01_Transparent_Video_Holder_006_001e2b6d_board_video_audio.wav",
           "durationSeconds": 5.0,
           "sampleRate": 22050,
@@ -379,7 +380,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_008_00226a32_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_008_00226a32_board_video_audio.wav",
           "url": "../extracted_assets/bdf/INTRO/embedded/01_Transparent_Video_Holder_008_00226a32_board_video_audio.wav",
           "durationSeconds": 3.0,
           "sampleRate": 22050,
@@ -389,7 +390,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_010_0024e1a6_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_010_0024e1a6_board_video_audio.wav",
           "url": "../extracted_assets/bdf/INTRO/embedded/01_Transparent_Video_Holder_010_0024e1a6_board_video_audio.wav",
           "durationSeconds": 3.0,
           "sampleRate": 22050,
@@ -399,7 +400,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_012_0027bfaa_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_012_0027bfaa_board_video_audio.wav",
           "url": "../extracted_assets/bdf/INTRO/embedded/01_Transparent_Video_Holder_012_0027bfaa_board_video_audio.wav",
           "durationSeconds": 4.0,
           "sampleRate": 22050,
@@ -409,7 +410,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_014_002ad864_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_014_002ad864_board_video_audio.wav",
           "url": "../extracted_assets/bdf/INTRO/embedded/01_Transparent_Video_Holder_014_002ad864_board_video_audio.wav",
           "durationSeconds": 4.0,
           "sampleRate": 22050,
@@ -419,7 +420,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_016_002e7471_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_016_002e7471_board_video_audio.wav",
           "url": "../extracted_assets/bdf/INTRO/embedded/01_Transparent_Video_Holder_016_002e7471_board_video_audio.wav",
           "durationSeconds": 3.0,
           "sampleRate": 22050,
@@ -429,7 +430,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_018_0030cce7_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\INTRO\\embedded\\01_Transparent_Video_Holder_018_0030cce7_board_video_audio.wav",
           "url": "../extracted_assets/bdf/INTRO/embedded/01_Transparent_Video_Holder_018_0030cce7_board_video_audio.wav",
           "durationSeconds": 3.0,
           "sampleRate": 22050,
@@ -460,7 +461,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\embedded\\02_Sound_Holder_000_00336cf7.wav",
+          "path": "extracted_assets\\bdf\\INTRO\\embedded\\02_Sound_Holder_000_00336cf7.wav",
           "url": "../extracted_assets/bdf/INTRO/embedded/02_Sound_Holder_000_00336cf7.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -472,7 +473,7 @@
     }
   ],
   "script": {
-    "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\INTRO\\script.txt",
+    "path": "extracted_assets\\bdf\\INTRO\\script.txt",
     "url": "../extracted_assets/bdf/INTRO/script.txt",
     "handlers": [
       {

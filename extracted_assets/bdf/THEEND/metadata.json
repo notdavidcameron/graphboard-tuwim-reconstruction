@@ -40,7 +40,7 @@
       "embedded": [
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\embedded\\01_Transparent_Video_Holder_000_0004c28d_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\THEEND\\embedded\\01_Transparent_Video_Holder_000_0004c28d_board_video_audio.wav",
           "offset": 311949,
           "size": 837944,
           "pcm_size": 837900,
@@ -52,7 +52,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\animations\\01_Transparent_Video_Holder_000_0004c28d_board_video_300x125.gif",
+          "path": "extracted_assets\\bdf\\THEEND\\animations\\01_Transparent_Video_Holder_000_0004c28d_board_video_300x125.gif",
           "offset": 311949,
           "size": 14693661,
           "frame_count": 345,
@@ -83,10 +83,10 @@
           "audio_record_count": 19,
           "video_record_count": 345,
           "stop_reason": "next_stream",
-          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\embedded\\01_Transparent_Video_Holder_000_0004c28d_board_video_audio.wav",
+          "audio_output": "extracted_assets\\bdf\\THEEND\\embedded\\01_Transparent_Video_Holder_000_0004c28d_board_video_audio.wav",
           "audio_pcm_size": 837900,
           "duration_seconds": 19.0,
-          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\animations\\01_Transparent_Video_Holder_000_0004c28d_board_video_300x125.gif",
+          "video_output": "extracted_assets\\bdf\\THEEND\\animations\\01_Transparent_Video_Holder_000_0004c28d_board_video_300x125.gif",
           "transparent_index": 0
         },
         {
@@ -123,27 +123,27 @@
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\THEEND\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "dib",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\background.dib",
+      "path": "extracted_assets\\bdf\\THEEND\\background.dib",
       "size": 308264
     },
     {
       "kind": "bmp",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\background.bmp",
+      "path": "extracted_assets\\bdf\\THEEND\\background.bmp",
       "size": 308278
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\script.txt",
+      "path": "extracted_assets\\bdf\\THEEND\\script.txt",
       "size": 1449
     },
     {
       "kind": "board_video_pcm_wave",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\embedded\\01_Transparent_Video_Holder_000_0004c28d_board_video_audio.wav",
+      "path": "extracted_assets\\bdf\\THEEND\\embedded\\01_Transparent_Video_Holder_000_0004c28d_board_video_audio.wav",
       "offset": 311949,
       "size": 837944,
       "pcm_size": 837900,
@@ -155,7 +155,7 @@
     },
     {
       "kind": "board_video_gif",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\animations\\01_Transparent_Video_Holder_000_0004c28d_board_video_300x125.gif",
+      "path": "extracted_assets\\bdf\\THEEND\\animations\\01_Transparent_Video_Holder_000_0004c28d_board_video_300x125.gif",
       "offset": 311949,
       "size": 14693661,
       "frame_count": 345,

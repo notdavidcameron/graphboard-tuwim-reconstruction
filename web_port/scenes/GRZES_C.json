@@ -10,10 +10,11 @@
   ],
   "background": {
     "colorIndex": 0,
+    "color": "rgb(0, 0, 0)",
     "flag": 1,
     "bmpPath": null,
     "bmpUrl": null,
-    "palettePath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\GRZES_C\\background_palette.bin",
+    "palettePath": "extracted_assets\\bdf\\GRZES_C\\background_palette.bin",
     "paletteUrl": "../extracted_assets/bdf/GRZES_C/background_palette.bin"
   },
   "components": [
@@ -59,7 +60,7 @@
     }
   ],
   "script": {
-    "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\GRZES_C\\script.txt",
+    "path": "extracted_assets\\bdf\\GRZES_C\\script.txt",
     "url": "../extracted_assets/bdf/GRZES_C/script.txt",
     "handlers": [
       {

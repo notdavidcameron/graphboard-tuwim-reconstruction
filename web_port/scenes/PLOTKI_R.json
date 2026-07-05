@@ -10,10 +10,11 @@
   ],
   "background": {
     "colorIndex": 0,
+    "color": "rgb(0, 0, 0)",
     "flag": 0,
-    "bmpPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI_R\\background.bmp",
+    "bmpPath": "extracted_assets\\bdf\\PLOTKI_R\\background.bmp",
     "bmpUrl": "../extracted_assets/bdf/PLOTKI_R/background.bmp",
-    "palettePath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI_R\\background_palette.bin",
+    "palettePath": "extracted_assets\\bdf\\PLOTKI_R\\background_palette.bin",
     "paletteUrl": "../extracted_assets/bdf/PLOTKI_R/background_palette.bin"
   },
   "components": [
@@ -98,7 +99,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI_R\\embedded\\03_Sound_Holder_000_000555da.wav",
+          "path": "extracted_assets\\bdf\\PLOTKI_R\\embedded\\03_Sound_Holder_000_000555da.wav",
           "url": "../extracted_assets/bdf/PLOTKI_R/embedded/03_Sound_Holder_000_000555da.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -110,7 +111,7 @@
     }
   ],
   "script": {
-    "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI_R\\script.txt",
+    "path": "extracted_assets\\bdf\\PLOTKI_R\\script.txt",
     "url": "../extracted_assets/bdf/PLOTKI_R/script.txt",
     "handlers": [
       {

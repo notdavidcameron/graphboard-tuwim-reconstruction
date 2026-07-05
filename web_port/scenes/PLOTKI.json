@@ -10,10 +10,11 @@
   ],
   "background": {
     "colorIndex": 0,
+    "color": "rgb(0, 0, 0)",
     "flag": 0,
-    "bmpPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\background.bmp",
+    "bmpPath": "extracted_assets\\bdf\\PLOTKI\\background.bmp",
     "bmpUrl": "../extracted_assets/bdf/PLOTKI/background.bmp",
-    "palettePath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\background_palette.bin",
+    "palettePath": "extracted_assets\\bdf\\PLOTKI\\background_palette.bin",
     "paletteUrl": "../extracted_assets/bdf/PLOTKI/background_palette.bin"
   },
   "components": [
@@ -57,7 +58,7 @@
       "assets": [
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\animations\\01_Transparent_Video_Holder_000_0007debd_board_video_505x364.gif",
+          "path": "extracted_assets\\bdf\\PLOTKI\\animations\\01_Transparent_Video_Holder_000_0007debd_board_video_505x364.gif",
           "url": "../extracted_assets/bdf/PLOTKI/animations/01_Transparent_Video_Holder_000_0007debd_board_video_505x364.gif",
           "width": 505,
           "height": 364,
@@ -85,7 +86,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\animations\\01_Transparent_Video_Holder_002_0027260c_board_video_505x364.gif",
+          "path": "extracted_assets\\bdf\\PLOTKI\\animations\\01_Transparent_Video_Holder_002_0027260c_board_video_505x364.gif",
           "url": "../extracted_assets/bdf/PLOTKI/animations/01_Transparent_Video_Holder_002_0027260c_board_video_505x364.gif",
           "width": 505,
           "height": 364,
@@ -113,7 +114,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\animations\\01_Transparent_Video_Holder_004_004690ee_board_video_505x364.gif",
+          "path": "extracted_assets\\bdf\\PLOTKI\\animations\\01_Transparent_Video_Holder_004_004690ee_board_video_505x364.gif",
           "url": "../extracted_assets/bdf/PLOTKI/animations/01_Transparent_Video_Holder_004_004690ee_board_video_505x364.gif",
           "width": 505,
           "height": 364,
@@ -141,7 +142,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\animations\\01_Transparent_Video_Holder_006_006626a1_board_video_505x364.gif",
+          "path": "extracted_assets\\bdf\\PLOTKI\\animations\\01_Transparent_Video_Holder_006_006626a1_board_video_505x364.gif",
           "url": "../extracted_assets/bdf/PLOTKI/animations/01_Transparent_Video_Holder_006_006626a1_board_video_505x364.gif",
           "width": 505,
           "height": 364,
@@ -169,7 +170,7 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\animations\\01_Transparent_Video_Holder_008_0085a84c_board_video_505x364.gif",
+          "path": "extracted_assets\\bdf\\PLOTKI\\animations\\01_Transparent_Video_Holder_008_0085a84c_board_video_505x364.gif",
           "url": "../extracted_assets/bdf/PLOTKI/animations/01_Transparent_Video_Holder_008_0085a84c_board_video_505x364.gif",
           "width": 505,
           "height": 364,
@@ -199,7 +200,7 @@
       "audio": [
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\01_Transparent_Video_Holder_000_0007debd_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\PLOTKI\\embedded\\01_Transparent_Video_Holder_000_0007debd_board_video_audio.wav",
           "url": "../extracted_assets/bdf/PLOTKI/embedded/01_Transparent_Video_Holder_000_0007debd_board_video_audio.wav",
           "durationSeconds": 6.0,
           "sampleRate": 22050,
@@ -209,7 +210,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\01_Transparent_Video_Holder_002_0027260c_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\PLOTKI\\embedded\\01_Transparent_Video_Holder_002_0027260c_board_video_audio.wav",
           "url": "../extracted_assets/bdf/PLOTKI/embedded/01_Transparent_Video_Holder_002_0027260c_board_video_audio.wav",
           "durationSeconds": 6.0,
           "sampleRate": 22050,
@@ -219,7 +220,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\01_Transparent_Video_Holder_004_004690ee_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\PLOTKI\\embedded\\01_Transparent_Video_Holder_004_004690ee_board_video_audio.wav",
           "url": "../extracted_assets/bdf/PLOTKI/embedded/01_Transparent_Video_Holder_004_004690ee_board_video_audio.wav",
           "durationSeconds": 6.0,
           "sampleRate": 22050,
@@ -229,7 +230,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\01_Transparent_Video_Holder_006_006626a1_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\PLOTKI\\embedded\\01_Transparent_Video_Holder_006_006626a1_board_video_audio.wav",
           "url": "../extracted_assets/bdf/PLOTKI/embedded/01_Transparent_Video_Holder_006_006626a1_board_video_audio.wav",
           "durationSeconds": 6.0,
           "sampleRate": 22050,
@@ -239,7 +240,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\01_Transparent_Video_Holder_008_0085a84c_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\PLOTKI\\embedded\\01_Transparent_Video_Holder_008_0085a84c_board_video_audio.wav",
           "url": "../extracted_assets/bdf/PLOTKI/embedded/01_Transparent_Video_Holder_008_0085a84c_board_video_audio.wav",
           "durationSeconds": 6.0,
           "sampleRate": 22050,
@@ -290,7 +291,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_000_00a5162d.wav",
+          "path": "extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_000_00a5162d.wav",
           "url": "../extracted_assets/bdf/PLOTKI/embedded/03_Sound_Holder_000_00a5162d.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -300,7 +301,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_001_00a68739.wav",
+          "path": "extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_001_00a68739.wav",
           "url": "../extracted_assets/bdf/PLOTKI/embedded/03_Sound_Holder_001_00a68739.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -310,7 +311,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_002_00ab4f4d.wav",
+          "path": "extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_002_00ab4f4d.wav",
           "url": "../extracted_assets/bdf/PLOTKI/embedded/03_Sound_Holder_002_00ab4f4d.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -320,7 +321,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_003_00ac5a8f.wav",
+          "path": "extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_003_00ac5a8f.wav",
           "url": "../extracted_assets/bdf/PLOTKI/embedded/03_Sound_Holder_003_00ac5a8f.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -330,7 +331,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_004_00acf855.wav",
+          "path": "extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_004_00acf855.wav",
           "url": "../extracted_assets/bdf/PLOTKI/embedded/03_Sound_Holder_004_00acf855.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -340,7 +341,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_005_00ae55a3.wav",
+          "path": "extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_005_00ae55a3.wav",
           "url": "../extracted_assets/bdf/PLOTKI/embedded/03_Sound_Holder_005_00ae55a3.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -350,7 +351,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_006_00aee0e7.wav",
+          "path": "extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_006_00aee0e7.wav",
           "url": "../extracted_assets/bdf/PLOTKI/embedded/03_Sound_Holder_006_00aee0e7.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -360,7 +361,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_007_00af76ab.wav",
+          "path": "extracted_assets\\bdf\\PLOTKI\\embedded\\03_Sound_Holder_007_00af76ab.wav",
           "url": "../extracted_assets/bdf/PLOTKI/embedded/03_Sound_Holder_007_00af76ab.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -372,7 +373,7 @@
     }
   ],
   "script": {
-    "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PLOTKI\\script.txt",
+    "path": "extracted_assets\\bdf\\PLOTKI\\script.txt",
     "url": "../extracted_assets/bdf/PLOTKI/script.txt",
     "handlers": [
       {

@@ -10,10 +10,11 @@
   ],
   "background": {
     "colorIndex": 0,
+    "color": "rgb(0, 0, 0)",
     "flag": 1,
     "bmpPath": null,
     "bmpUrl": null,
-    "palettePath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC_T\\background_palette.bin",
+    "palettePath": "extracted_assets\\bdf\\TANIEC_T\\background_palette.bin",
     "paletteUrl": "../extracted_assets/bdf/TANIEC_T/background_palette.bin"
   },
   "components": [
@@ -21,21 +22,138 @@
       "id": "00_HotSpot_Holder",
       "type": "HotSpot_Holder",
       "index": 0,
-      "z": 0,
+      "z": 1,
       "visible": false,
       "rect": {
-        "x": 0,
-        "y": 0,
-        "width": 120,
-        "height": 80
+        "x": 23,
+        "y": 26,
+        "width": 572,
+        "height": 401
       },
-      "geometryConfidence": "unknown",
+      "geometryConfidence": "serialized_hotspots",
       "sourceOffset": 1173,
       "privateOffset": 2278,
       "privateSize": 524,
       "primaryAssetUrl": null,
       "assets": [],
-      "audio": []
+      "audio": [],
+      "hotspots": [
+        {
+          "index": 0,
+          "id": 1,
+          "name": "",
+          "rect": {
+            "x": 23,
+            "y": 26,
+            "width": 177,
+            "height": 132
+          },
+          "rawRect": {
+            "left": 23,
+            "top": 26,
+            "right": 200,
+            "bottom": 158
+          },
+          "z": 1,
+          "enabled": true,
+          "recordOffset": 2289,
+          "geometryConfidence": "serialized_hotspot"
+        },
+        {
+          "index": 1,
+          "id": 2,
+          "name": "",
+          "rect": {
+            "x": 45,
+            "y": 251,
+            "width": 177,
+            "height": 135
+          },
+          "rawRect": {
+            "left": 45,
+            "top": 251,
+            "right": 222,
+            "bottom": 386
+          },
+          "z": 1,
+          "enabled": true,
+          "recordOffset": 2390,
+          "geometryConfidence": "serialized_hotspot"
+        },
+        {
+          "index": 2,
+          "id": 3,
+          "name": "",
+          "rect": {
+            "x": 220,
+            "y": 89,
+            "width": 177,
+            "height": 133
+          },
+          "rawRect": {
+            "left": 220,
+            "top": 89,
+            "right": 397,
+            "bottom": 222
+          },
+          "z": 1,
+          "enabled": true,
+          "recordOffset": 2491,
+          "geometryConfidence": "serialized_hotspot"
+        },
+        {
+          "index": 3,
+          "id": 4,
+          "name": "",
+          "rect": {
+            "x": 420,
+            "y": 53,
+            "width": 175,
+            "height": 133
+          },
+          "rawRect": {
+            "left": 420,
+            "top": 53,
+            "right": 595,
+            "bottom": 186
+          },
+          "z": 1,
+          "enabled": true,
+          "recordOffset": 2592,
+          "geometryConfidence": "serialized_hotspot"
+        },
+        {
+          "index": 4,
+          "id": 0,
+          "name": "",
+          "rect": {
+            "x": 320,
+            "y": 246,
+            "width": 244,
+            "height": 181
+          },
+          "rawRect": {
+            "left": 320,
+            "top": 246,
+            "right": 564,
+            "bottom": 427
+          },
+          "z": 1,
+          "enabled": true,
+          "recordOffset": 2693,
+          "geometryConfidence": "serialized_hotspot"
+        }
+      ],
+      "hotspotSettings": {
+        "version": 0,
+        "colorA": 0,
+        "colorB": 0,
+        "colorC": 255
+      },
+      "hotspotTrailing": {
+        "nextOrSelectedId": 9,
+        "activeOrSelectedIndex": 0
+      }
     },
     {
       "id": "01_Bitmap_Holder",
@@ -99,7 +217,7 @@
     }
   ],
   "script": {
-    "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC_T\\script.txt",
+    "path": "extracted_assets\\bdf\\TANIEC_T\\script.txt",
     "url": "../extracted_assets/bdf/TANIEC_T/script.txt",
     "handlers": [
       {
@@ -214,6 +332,7 @@
     "rawText": "//###########################################################################\n\n//Script code\n\n//###########################################################################\n\n\n\n\n\nOnOpenPage()\n\n{\n\n\t// Add your component and variables initialization code here\n\n\t// WARNING: All variables definied on this function are global for this page\n\n\n\n   if( IsProject() == 0 )\n\n   {\n\n      CString mHistory;\n\n      mHistory.SetString(\"w_tan.bdf\");\n\n   }\n\n\n\n   int grajDuze = 0;\n\n\n\n   int maxKlatek = 1769;\n\n\n\n   LoadGroup(\"g_tan.grp\");\n\n   SetCursor(-3);\n\n\n\n   int toolbar=0;\n\n   int toolbarCase=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n\n\n   //SetTimer(5000);\n\n   FadeScreen( 1, 1000 );\n\n\n\n   Sprite_Holder.ChangePhase( 7, 1 );\n\n}\n\n\n\n\n\nvoid OnTimer(void)\n\n{\n\n\t// Add your timer handler code here\n\n   SetTimer(0);\n\n   Video_Holder.Stop();\n\n   grajDuze = 0;\n\n\n\n   CreateDirectSound();\n\n   Group.Sound_Holder.PlayDSound( 0 );\n\n}\n\n\n\nvoid OnKeyDown(UINT nChar)\n\n{\n\n\t// Add your keyboard handler code here\n\n\n\n}\n\n\n\nvoid OnClosePage(void)\n\n{\n\n\t// Add your close page handler code here\n\n   FadeScreen( 0, 1000 );\n\n\n\n   Video_Holder.Stop();\n\n\n\n   CreateDirectSound();\n\n   CloseGroup();\n\n}\n\n\n\n\n\n\n\n///////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid OnRButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   SetTimer(0);\n\n   Video_Holder.Stop();\n\n   grajDuze = 0;\n\n\n\n   CreateDirectSound();\n\n   Group.Sound_Holder.PlayDSound( 0 );\n\n}\n\n \n\nvoid OnLButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   SetTimer(0);\n\n   Group.Sound_Holder.Stop(0);\n\n//   ReleaseDirectSound();\n\n}\n\n\n\n\n\n/////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Video_Holder.TheEnd(int videoID)\n\n{\n\n   if( videoID == 0 )\n\n   {\n\n            // zastopuj duze vidoe\n\n            Sprite_Holder.ChangePhase( 0, 0 );\n\n            grajDuze = 0;\n\n   }\n\n}\n\n\n\n  \n\n/////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Sprite_Holder.MouseClickOnDown(int spriteID)\n\n{\n\n   Group.Sound_Holder.StopAll();\n\n\n\n   if( spriteID < 7 )\n\n      Sprite_Holder.ChangePhase( spriteID, 1 );\n\n\n\n   if( grajDuze == 0 )\n\n      Video_Holder.Stop();\n\n\n\n   Bitmap_Holder.HideBitmap(1);\n\n   Bitmap_Holder.HideBitmap(2);\n\n\n\n   switch( spriteID )\n\n   {\n\n      case 0:   // play\n\n         if( grajDuze == 0 )\n\n         {\n\n            // uruchom duze vidoe\n\n            Video_Holder.Play(0);\n\n         }\n\n         break;\n\n\n\n      case 1:   // stop\n\n         if( grajDuze )\n\n         {\n\n            // zastopuj duze vidoe\n\n            Sprite_Holder.ChangePhase( 0, 0 );\n\n            Video_Holder.Stop();\n\n            grajDuze = 0;\n\n         }\n\n         break;\n\n\n\n      case 2: // wroc o 0\n\n         if( grajDuze )\n\n            // zastopuj duze vidoe\n\n            Video_Holder.PlayFromTo( 0, 0,  maxKlatek );\n\n         else\n\n            // uruchom duze vidoe\n\n            Video_Holder.PlayFromTo( 0, 0, 0 );\n\n         break;\n\n\n\n      case 3: // \n\n         if( grajDuze )\n\n            // zastopuj duze vidoe\n\n            Video_Holder.PlayFromTo( 0, 300,  maxKlatek );\n\n         else\n\n            // uruchom duze vidoe\n\n            Video_Holder.PlayFromTo( 0, 300, 300 );\n\n         break;\n\n\n\n      case 4: // przesun 1200\n\n         if( grajDuze )\n\n            // zastopuj duze vidoe\n\n            Video_Holder.PlayFromTo( 0, 600,  maxKlatek );\n\n         else\n\n            // uruchom duze vidoe\n\n            Video_Holder.PlayFromTo( 0, 600,  600 );\n\n         break;\n\n\n\n      case 5: \n\n         if( grajDuze )\n\n            // zastopuj duze vidoe\n\n            Video_Holder.PlayFromTo( 0, 900,  maxKlatek );\n\n         else\n\n            // uruchom duze vidoe\n\n            Video_Holder.PlayFromTo( 0, 900, 900 );\n\n         break;\n\n\n\n      case 6: // \n\n         if( grajDuze )\n\n            // zastopuj duze vidoe\n\n            Video_Holder.PlayFromTo( 0, 1200,  maxKlatek );\n\n         else\n\n            // uruchom duze vidoe\n\n            Video_Holder.PlayFromTo( 0, 1200, 1200 );\n\n         break;\n\n\n\n      case 7:\n\n         Sprite_Holder.ChangePhase( 7, 0 );\n\n         Sprite_Holder.ChangePhase( 7, 1 );   \n\n         break;\n\n   }\n\n\n\n}\n\n\n\n\n\n/////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Sprite_Holder.MouseClickOnUp(int spriteID)\n\n{\n\n   switch( spriteID )\n\n   {\n\n      case 0:   // play\n\n         if( grajDuze==0 )\n\n            // uruchom duze vidoe\n\n            grajDuze = 1;\n\n         break;\n\n\n\n      case 7:\n\n         break;\n\n\n\n      default:\n\n         Sprite_Holder.ChangePhase( spriteID, 0 );\n\n         break;\n\n   }\n\n}\n\n\n\n \n\n\n\n////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Bitmap_Holder.MouseClickOnDown(int bitmapID)\n\n{\n\n   Video_Holder.Stop();\n\n\n\n   grajDuze = 0;\n\n   Sprite_Holder.ChangePhase( 0, 0 );\n\n}\n\n\n\n\n\n\n\n \n\n////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid HotSpot_Holder.LeftButtonClickOn(int rectID)\n\n{\n\n   Group.Sound_Holder.StopAll();\n\n   Video_Holder.Stop();\n\n\n\n   grajDuze = 0;\n\n   Sprite_Holder.ChangePhase( 0, 0 );\n\n\n\n   switch( rectID )\n\n   {\n\n      case 0:\n\n         grajDuze = 1;\n\n         Sprite_Holder.ChangePhase( 0, 1 );\n\n         break;\n\n   }\n\n   Video_Holder.Play( rectID );\n\n}\n\n\n\n \n\n\n\n\n\n\n\n\n\n//############################################################# T O O L B A R #######\n\n//#############################################################---------------#######\n\nvoid Group.HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n   Video_Holder.Stop();\n\n   grajDuze = 0;\n\n   Sprite_Holder.ChangePhase( 0, 0 );\n\n\n\n   CreateDirectSound();\n\n\n\n   if(rectID==0)\n\n   {\n\n      Group.Sprite_Holder.DisableTimers();\n\n\n\n      Group.Sprite_Holder.GotoXY(0,480,0);\n\n      Group.Sprite_Holder.GotoXY(1,560,329);\n\n      Group.Sprite_Holder.GotoXY(2,557,404);\n\n      Group.Sprite_Holder.GotoXY(3,544,14);\n\n      Group.Sprite_Holder.GotoXY(4,584,14);\n\n\n\n      Group.Sprite_Holder.SynchronizeTimers();\n\n      Group.Sprite_Holder.EnableTimers();\n\n      Group.Sound_Holder.PlayDSound(1);\n\n   }\n\n   else\n\n   {\n\n      if(toolbar)\n\n      {\n\n         Group.Sprite_Holder.DisableTimers();\n\n\n\n         Group.Sprite_Holder.GotoXY(0,640,0);\n\n         Group.Sprite_Holder.GotoXY(1,721,329);\n\n         Group.Sprite_Holder.GotoXY(2,717,404);\n\n         Group.Sprite_Holder.GotoXY(3,704,14);\n\n         Group.Sprite_Holder.GotoXY(4,744,14);\n\n\n\n         Group.Sprite_Holder.SynchronizeTimers();\n\n         Group.Sprite_Holder.EnableTimers();\n\n         Group.Sound_Holder.PlayDSound(1);\n\n         toolbar=0;\n\n      }\n\n      Group.HotSpot_Holder.DisableHotSpot(1);\n\n      toolbarCase=0;\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.InPlace(int spriteID,int x,int y)\n\n{\n\n   if(x==480)\n\n   {\n\n      toolbar=1;\n\n      Group.HotSpot_Holder.EnableHotSpot(1);\n\n   }\n\n   else\n\n   {\n\n      Group.Sprite_Holder.ChangePhase(1,0);\n\n      Group.Sprite_Holder.ChangePhase(2,0);\n\n      Group.Sprite_Holder.ChangePhase(3,0);\n\n      Group.Sprite_Holder.ChangePhase(4,0);\n\n      switch(toolbarCase)\n\n      {\n\n         case 3:\t//lewo\n\n            LoadPage(\"cuda_t.bdf\");\n\n            break;\n\n         case 4:\t//prawo\n\n            LoadPage(\"zosia_t.bdf\");\n\n            break;\n\n         case 1:   //do planszy glownej   \n\n            LoadPage( \"taniec.bdf\" );\n\n            break;\n\n         case 2:   //Plansza wyboru\n\n            LoadPage(\"Wyborw.bdf\");\n\n            break;\n\n      }\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnDown(int spriteID)\n\n{\n\n   Group.Sprite_Holder.ChangePhase(spriteID,1);\n\n   switch(spriteID)\n\n   {\n\n      case 1:   //parent window\n\n         Group.Sound_Holder.PlayDSound(2);\n\n         break;\n\n      case 2:   //plansza glowna\n\n         Group.Sound_Holder.PlayDSound(3);\n\n         break;\n\n      case 3:\n\n      case 4:\n\n         Group.Sound_Holder.PlayDSound(4);\n\n         break;\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnUp(int spriteID)\n\n{\n\n   Group.Sprite_Holder.DisableTimers();\n\n\n\n   Group.Sprite_Holder.GotoXY(0,640,0);\n\n   Group.Sprite_Holder.GotoXY(1,721,329);\n\n   Group.Sprite_Holder.GotoXY(2,717,404);\n\n   Group.Sprite_Holder.GotoXY(3,704,14);\n\n   Group.Sprite_Holder.GotoXY(4,744,14);\n\n   \n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n   Group.Sound_Holder.PlayDSound(1);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID;\n\n}\n\n\n\n//#############################################################\n\n//############################################################# \n\n "
   },
   "warnings": [
-    "4 component(s) have unknown geometry and default to 0,0."
+    "3 component(s) have unknown geometry and default to 0,0.",
+    "Recovered 5 HotSpotHolder rect(s) from serialized records."
   ]
 }
