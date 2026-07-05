@@ -241,6 +241,41 @@ Sample `.EXS_` (`RZECZKA.EXS_`) begins with a normal `RIFF/WAVE` header. The obs
 
 `.AVI` files are standard AVI assets and are referenced by video-capable components.
 
+## `HotSpot_Holder` Private State
+
+Targeted Ghidra check in `/extracted/GraphBoard 1.00/HotSpotHolder.dll`:
+
+- Object constructor: `Create_HotSpotHolderComObject` at `10002660`.
+- Main component vtable: `10007d38`.
+- Component serialize/load vtable slot `+0x44`: `HotSpotHolder_SerializePrivateState` at `10004d10`.
+
+The component-private block begins with:
+
+```text
++0x00 u32 versionOrReserved = 0
++0x04 u8  colorOrStateA
++0x05 u8  colorOrStateB
++0x06 u8  colorOrStateC
++0x07 u32 hotspotCount
+```
+
+Each hotspot is serialized as a raw 100-byte record followed by an MFC `CString` label/name:
+
+```text
+record+0x00 i32 left
+record+0x04 i32 top
+record+0x08 i32 right
+record+0x0c i32 bottom
+record+0x10 u32 staleCStringPointer   // ignored on load
+record+0x18 i32 hotspotId
+record+0x1c i32 zLayer
+record+0x20 i32 enabled
+...
+CString label
+```
+
+After the repeated records there are two trailing `u32` values. The first often matches the next/upper hotspot id value; the second is usually zero in checked pages. `graphboard_export_scene.py` uses these records to recover exact browser hitboxes for `HotSpot_Holder` components.
+
 ## `Transparent_Video_Holder` Board Video Audio
 
 Targeted check in `TransparentVideoHolder.dll`:
@@ -328,7 +363,7 @@ RLE payload commands:
 u8 count, u8 values[count]     literal run
 ```
 
-Rows are traversed left-to-right inside the changed rectangle. GIF reconstruction now uses the dominant first-frame background index as transparency; this matches `RZECZKA` better than blindly trusting the header field for all streams.
+Rows are traversed left-to-right inside the changed rectangle. GIF reconstruction now uses the dominant first-frame background index as transparency; this matches `RZECZKA` better than blindly trusting the header field for all streams. The GIF writer uses that transparent index as the logical screen background and restore-to-background disposal so browser playback replaces old frame pixels instead of leaving trails.
 
 `RZECZKA.BDF` `Transparent_Video_Holder` contains 8 serialized entries and therefore 16 visible `Board Video File` signatures when naively scanning for the marker. The extracted playable audio streams are:
 
@@ -475,6 +510,161 @@ file bytes remaining after state: 4 zero bytes
 - `/mcp/instance_info` returned `404 No context found for request` in this session, but this did not block analysis.
 - `Tuwim.exe` remains the primary program for host file-format recovery and has the recovered serializer labels.
 - The Ghidra project also contains the GraphBoard component DLLs under `/extracted/GraphBoard 1.00`. The six DLLs relevant to `RZECZKA.BDF` can be opened when a component-private payload question requires them, but broad exploration should stay centered on `Tuwim.exe`.
+
+## Live RZECZKA x32dbg Notes
+
+Debug target was `Tuwim.exe` with `john-mayhem/x32dbgMCP` exposed at `http://127.0.0.1:8888`.
+
+Useful loaded module bases from the live session:
+
+```text
+tuwim.exe                  0x00400000
+TransparentVideoHolder.dll 0x05ff0000   // current restarted session
+MultiBmp.dll               0x06a20000   // current restarted session
+HotSpotHolder.dll          0x06030000
+SpriteHolder.dll           0x10000000
+WING32.DLL                 0x20000000
+gdi32.dll                  0x75b80000
+```
+
+Confirmed breakpoint:
+
+```text
+0x05ff8120 = TransparentVideoHolder.dll + 0x8120 in the current session
+label: TVH_Play_likely
+source note: recovered FUN_10008120
+```
+
+Older notes in this file may mention `0x030a8120`; that was the same DLL-relative breakpoint from the previous load base.
+
+This is the TransparentVideoHolder play path. At a hit during RZECZKA runtime, stack arguments identified `videoId = 0`, followed by later `videoId = 1`; entry count was `8`. The live holder entries matched exported geometry, for example:
+
+```text
+0: 197x190 at 1,166 z=3
+1: 408x150 at 197,147 z=2
+2: 248x85  at 392,220 z=2
+```
+
+This confirms RZECZKA automatically cycles the fish TVH videos in the original after startup; other click/event animations should stay hidden until their scripts show/play them.
+
+Screenshot comparison from the original paused RZECZKA state shows the visible page is a full-screen MultiBitmap-like underwater scene plus TVH fish layers, not a flat palette background. A rough pixel match against exported `niespodzi` frames ranked `05_MultiBitmap_006_niespodzi.bmp`, `001`, and `000` closest, but the screenshot contains TVH overlays and cursor pixels, so debugger draw-state should be treated as final authority.
+
+RZECZKA script evidence for the active background:
+
+```text
+OnOpenPage:
+  int curView=0;
+  int curmusic=3;
+  Sound_Holder.PlayDSound(curmusic);
+  SetTextMode();
+
+SetTextMode, normal mode:
+  Transparent_Video_Holder.Play(0,0);
+
+surprise button path:
+  MultiBitmap.ShowBitmap(curView+10,363,416,4); // small przycisk overlay
+  curView++;
+  if(curView>9) curView=0;
+  curmusic=curView+3;
+  MultiBitmap.ShowBitmap(curView,0,0,3);        // full-screen niespodzi frame
+  hide previous curView frame
+```
+
+This means startup begins with `curView == 0`, and the `niespodzi` full-screen frames `0..9` are the rotating backgrounds. The original paused screenshot looked closest to exported frame `006`, but that state can be reached after the button cycle; startup should use frame `000` unless debugger state at page-open shows otherwise.
+
+Final page-copy evidence:
+
+```text
+0x200012a0 = WING32.DLL!WinGBitBlt
+hit args:
+  hdcDest = 0x80010abe
+  xDest,yDest = 960,480
+  width,height = 640,480
+  hdcSrc = 0x8d010b4e
+  xSrc,ySrc = 0,0
+  return = 0x0040c5b0
+
+0x75b84960 = gdi32.dll!BitBlt, called inside WinG path
+same effective copy:
+  dest offset = 960,480
+  size = 640x480
+  source = 0x8d010b4e at 0,0
+  ROP = 0x00cc0020 (SRCCOPY)
+```
+
+Breakpoint `0x0040c5b0` was set as `Tuwim_after_WinGBitBlt_page_copy`. At the hit:
+
+```text
+EIP = 0x0040c5b0
+instruction = mov eax, dword ptr ds:[esi+0xD0]
+ESI = 0x00dd63e8   // Tuwim view/page renderer object
+EDI = 0x02dec2b4   // object whose +0x04/+0x08 are the destination HDC
+
+[ESI+0x054] = 0x8d010b4e   // source/backbuffer HDC seen in WinGBitBlt args
+[ESI+0x080] = 641
+[ESI+0x084] = 483
+[ESI+0x090] = 14
+[ESI+0x094] = 960
+[ESI+0x098] = 480
+[ESI+0x09c] = 1600
+[ESI+0x0a0] = 960
+[ESI+0x0ac] = 960
+[ESI+0x0b0] = 480
+[ESI+0x0b8] = 640
+[ESI+0x0bc] = 480
+
+[EDI+0x04] = 0x80010abe
+[EDI+0x08] = 0x80010abe
+```
+
+The immediate caller return site was `0x0040c8b1`. At that hit:
+
+```text
+EIP = 0x0040c8b1
+ESI = 0x00dd63e8
+EDI = 0x02dec2b4
+EBP = 0x06777c20
+ESP = 0x001afe30
+
+stack tuwim.exe return/code pointers included:
+  [ESP+0x14] = 0x00430358
+  [ESP+0x54] = 0x004054bc
+  [ESP+0x60] = 0x0043cf30
+  [ESP+0x64] = 0x00405390
+  [ESP+0x84] = 0x0042ebef
+  [ESP+0x98] = 0x0042eda5
+```
+
+Disassembly around the higher-level caller shows:
+
+```text
+0040c850: and eax, 0
+0040c856: sub esp, 8
+...
+0040c8a3: mov ecx, dword ptr ss:[esp+0x28]
+0040c8a7: push ecx
+0040c8a8: push edi
+0040c8a9: push eax
+0040c8aa: mov ecx, esi
+0040c8ac: call 0x0040c2c0
+0040c8b1: mov edx, dword ptr ds:[edi+0x04]
+0040c8b4: mov eax, dword ptr ds:[esi+0x20]
+0040c8b7: push edx
+0040c8b8: push eax
+0040c8b9: call dword ptr ds:[0x00432834]
+```
+
+Next breakpoint set:
+
+```text
+0x0040c8ac
+label: Tuwim_before_page_copy_call
+expected hit: EIP=0x0040c8ac just before `call 0x0040c2c0`;
+              ECX should be loaded from ESI (the 0x00dd63e8 view object);
+              continuing should usually hit 0x0040c5b0 inside/after the final copy.
+```
+
+Avoid broad API breakpoints unless conditionalized to `640x480`: tiny `WinGBitBlt` hits like `28x15` are cursor/UI noise. The useful final compositor path is the Tuwim call chain above, not the WinG/GDI API breakpoint itself.
 
 ## Open Questions
 

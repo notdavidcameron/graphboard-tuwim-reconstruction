@@ -3,6 +3,7 @@ const state = {
   scene: null,
   selected: 0,
 };
+const CACHE_VERSION = "23";
 
 const els = {
   summary: document.getElementById("summary"),
@@ -48,11 +49,17 @@ function esc(value) {
 }
 
 async function getJson(url) {
-  const response = await fetch(url);
+  const response = await fetch(cacheUrl(url));
   if (!response.ok) {
     throw new Error(`${url}: ${response.status}`);
   }
   return response.json();
+}
+
+function cacheUrl(url) {
+  if (!url || /^(?:data:|blob:)/i.test(url)) return url;
+  const separator = url.includes("?") ? "&" : "?";
+  return `${url}${separator}v=${CACHE_VERSION}`;
 }
 
 function sceneEntry() {
@@ -86,10 +93,11 @@ function runtimeIdFor(component, asset = null) {
 
 function initialAssetVisible(component, asset, isPrimary, hasUnknownGeometry) {
   if (!component.visible) return false;
+  if (component.type === "MultiBitmap") {
+    return asset.kind === "multibitmap_bmp" && Number(asset.id ?? -1) === 0;
+  }
   if (component.type === "Transparent_Video_Holder" && asset.geometryConfidence === "serialized_entry") {
-    const runtimeId = runtimeIdFor(component, asset);
-    const z = Number(asset.z ?? 0);
-    return runtimeId === 0 || z > 0;
+    return false;
   }
   const assetHasGeometry = asset.geometryConfidence && asset.geometryConfidence !== "unknown";
   return isPrimary || els.unknown.checked || !hasUnknownGeometry || assetHasGeometry;
@@ -101,10 +109,22 @@ function bindRuntimeEvents(element, component, runtimeId) {
   element.addEventListener("mouseenter", () => runtime.dispatchComponentEvent(component.type, "MouseMoveIn", runtimeId));
   element.addEventListener("mouseleave", () => runtime.dispatchComponentEvent(component.type, "MouseMoveOut", runtimeId));
   element.addEventListener("mousedown", (event) => {
-    if (event.button === 0) runtime.dispatchComponentEvent(component.type, "MouseClickOnDown", runtimeId);
+    if (event.button === 0) {
+      runtime.dispatchComponentEvent(
+        component.type,
+        component.type === "HotSpot_Holder" ? "LeftButtonClickOn" : "MouseClickOnDown",
+        runtimeId
+      );
+    }
   });
   element.addEventListener("mouseup", (event) => {
-    if (event.button === 0) runtime.dispatchComponentEvent(component.type, "MouseClickOnUp", runtimeId);
+    if (event.button === 0) {
+      runtime.dispatchComponentEvent(
+        component.type,
+        component.type === "HotSpot_Holder" ? "LeftButtonClickOnUp" : "MouseClickOnUp",
+        runtimeId
+      );
+    }
   });
   element.addEventListener("click", (event) => {
     event.stopPropagation();
@@ -114,6 +134,37 @@ function bindRuntimeEvents(element, component, runtimeId) {
   });
 }
 
+function renderHotspotButton(component, hotspot) {
+  const rect = hotspot.rect || { x: 0, y: 0, width: 1, height: 1 };
+  const runtimeId = Number(hotspot.id ?? hotspot.index ?? component.index ?? 0);
+  const layerZ = Number.isFinite(Number(hotspot.z)) ? Number(hotspot.z) : Number(component.z ?? 0);
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "hitbox hotspot";
+  button.style.left = `${rect.x}px`;
+  button.style.top = `${rect.y}px`;
+  button.style.width = `${Math.max(rect.width, 8)}px`;
+  button.style.height = `${Math.max(rect.height, 8)}px`;
+  button.style.zIndex = String(900 + layerZ * 1000 + runtimeId);
+  button.title = `${component.type} ${runtimeId}${hotspot.name ? ` ${hotspot.name}` : ""}`;
+  button.dataset.hotspotId = String(runtimeId);
+  bindRuntimeEvents(button, component, runtimeId);
+  button.classList.toggle("runtime-disabled", hotspot.enabled === false);
+  els.stage.appendChild(button);
+
+  if (els.debug.checked) {
+    const box = document.createElement("div");
+    box.className = "bounds hotspot";
+    box.style.left = `${rect.x}px`;
+    box.style.top = `${rect.y}px`;
+    box.style.width = `${Math.max(rect.width, 18)}px`;
+    box.style.height = `${Math.max(rect.height, 14)}px`;
+    box.style.zIndex = String(2000 + layerZ * 1000 + runtimeId);
+    box.textContent = `H${runtimeId}`;
+    els.stage.appendChild(box);
+  }
+}
+
 function renderStage(scene) {
   els.stage.replaceChildren();
   setStageSize(scene);
@@ -121,17 +172,18 @@ function renderStage(scene) {
   if (els.background.checked && scene.background?.bmpUrl) {
     const img = document.createElement("img");
     img.className = "stage-bg";
-    img.src = scene.background.bmpUrl;
+    img.src = cacheUrl(scene.background.bmpUrl);
     img.alt = "";
     els.stage.appendChild(img);
   } else {
     const colorIndex = scene.background?.colorIndex ?? 0;
-    els.stage.style.background = `hsl(${(colorIndex * 31) % 360} 28% 18%)`;
+    els.stage.style.background = scene.background?.color || `hsl(${(colorIndex * 31) % 360} 28% 18%)`;
   }
 
   const components = [...(scene.components || [])].sort((a, b) => (a.z ?? 0) - (b.z ?? 0));
   for (const component of components) {
     const assets = component.assets || [];
+    const hotspots = component.hotspots || [];
     const hasUnknownGeometry = component.geometryConfidence === "unknown";
     for (const asset of assets) {
       if (!asset.url) continue;
@@ -141,9 +193,9 @@ function renderStage(scene) {
       const assetHasGeometry = asset.geometryConfidence && asset.geometryConfidence !== "unknown";
       const img = document.createElement("img");
       img.className = "layer";
-      img.src = asset.url;
+      img.src = cacheUrl(asset.url);
       img.alt = `${component.id}:${asset.id ?? ""}`;
-      img.dataset.originalSrc = asset.url;
+      img.dataset.originalSrc = cacheUrl(asset.url);
       img.dataset.componentType = component.type;
       img.dataset.assetId = String(asset.id ?? "");
       img.dataset.runtimeId = String(runtimeIdFor(component, asset));
@@ -173,7 +225,11 @@ function renderStage(scene) {
       }
     }
 
-    if (els.unknown.checked || !hasUnknownGeometry || component.type === "HotSpot_Holder") {
+    for (const hotspot of hotspots) {
+      renderHotspotButton(component, hotspot);
+    }
+
+    if (!hotspots.length && (els.unknown.checked || !hasUnknownGeometry || component.type === "HotSpot_Holder")) {
       const rect = component.rect || { x: 0, y: 0, width: 1, height: 1 };
       const hitbox = document.createElement("button");
       hitbox.type = "button";
@@ -207,12 +263,13 @@ function renderComponents(scene) {
   const rows = (scene.components || []).map((component) => {
     const assets = component.assets?.length || 0;
     const audio = component.audio?.length || 0;
+    const hotspots = component.hotspots?.length || 0;
     const rect = component.rect || {};
     return `
       <div class="item">
         <strong>${esc(component.index)}. ${esc(component.type)}</strong>
         <small>${esc(component.geometryConfidence)} rect ${esc(rect.x)},${esc(rect.y)} ${esc(rect.width)}x${esc(rect.height)}</small>
-        <small>${assets} image asset(s), ${audio} audio asset(s), offset ${esc(component.sourceOffset)}</small>
+        <small>${assets} image asset(s), ${audio} audio asset(s), ${hotspots} hotspot(s), offset ${esc(component.sourceOffset)}</small>
       </div>
     `;
   });
@@ -234,7 +291,7 @@ function renderAudio(scene) {
     <div class="audio-row">
       <span class="audio-label">${index + 1}. ${esc(component.type)} #${esc(runtimeIdFor(component, asset))}</span>
       <span class="audio-kind">${esc(asset.kind)}${asset.durationSeconds ? ` ${esc(asset.durationSeconds)}s` : ""}</span>
-      <audio controls preload="none" src="${esc(asset.url)}" data-component-type="${esc(component.type)}" data-asset-id="${esc(asset.id)}" data-runtime-id="${esc(runtimeIdFor(component, asset))}" data-runtime-key="${esc(component.type)}:${esc(asset.id)}" data-duration-seconds="${esc(asset.durationSeconds || "")}"></audio>
+      <audio controls preload="none" src="${esc(cacheUrl(asset.url))}" data-component-type="${esc(component.type)}" data-asset-id="${esc(asset.id)}" data-runtime-id="${esc(runtimeIdFor(component, asset))}" data-runtime-key="${esc(component.type)}:${esc(asset.id)}" data-duration-seconds="${esc(asset.durationSeconds || "")}"></audio>
     </div>
   `).join("");
   els.audioList.innerHTML = `
@@ -302,11 +359,13 @@ async function boot() {
   els.stage.addEventListener("mousedown", (event) => {
     if (event.button !== 0 || event.target !== els.stage) return;
     const rect = els.stage.getBoundingClientRect();
+    runtime.markUserActivated();
     runtime.executeHandler("OnLButtonDown", [Math.round(event.clientX - rect.left), Math.round(event.clientY - rect.top)]);
   });
   els.stage.addEventListener("mouseup", (event) => {
     if (event.button !== 0 || event.target !== els.stage) return;
     const rect = els.stage.getBoundingClientRect();
+    runtime.markUserActivated();
     runtime.executeHandler("OnLButtonUp", [Math.round(event.clientX - rect.left), Math.round(event.clientY - rect.top)]);
   });
   for (const input of [els.debug, els.unknown, els.background]) {

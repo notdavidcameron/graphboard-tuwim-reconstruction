@@ -14,12 +14,15 @@ class GraphBoardRuntime {
     this.onLoadPage = null;
     this.timers = [];
     this.videoTimers = new Map();
+    this.activeAudio = new Map();
     this.returning = false;
+    this.userActivated = false;
   }
 
   reset(scene) {
     this.clearTimers();
     this.clearVideoTimers();
+    this.stopAllActiveAudio();
     this.scene = scene;
     this.layers.clear();
     this.audio.clear();
@@ -28,9 +31,11 @@ class GraphBoardRuntime {
     this.variables.clear();
     this.loadedGroup = null;
     this.screenEnabled = true;
+    this.userActivated = false;
     if (this.logTarget) this.logTarget.textContent = "";
     this.indexSceneAssets();
     this.indexExistingDom();
+    this.freezeInitialVideoLayers();
     this.log(`runtime ready: ${scene?.id || "no scene"}`);
   }
 
@@ -68,6 +73,23 @@ class GraphBoardRuntime {
     }
   }
 
+  freezeInitialVideoLayers() {
+    for (const layer of this.stage.querySelectorAll('.layer[data-component-type="Transparent_Video_Holder"]')) {
+      layer.dataset.videoState = "first";
+      const freeze = () => {
+        if (layer.dataset.videoState === "first" && !layer.classList.contains("runtime-playing")) {
+          this.freezeLayer(layer, "first");
+        }
+      };
+      if (layer.complete && layer.naturalWidth > 0) {
+        freeze();
+      } else if (!layer.dataset.initialFreezeBound) {
+        layer.dataset.initialFreezeBound = "1";
+        layer.addEventListener("load", freeze, { once: true });
+      }
+    }
+  }
+
   clearTimers() {
     for (const timer of this.timers) clearTimeout(timer);
     this.timers = [];
@@ -78,10 +100,22 @@ class GraphBoardRuntime {
     this.videoTimers.clear();
   }
 
+  stopAllActiveAudio() {
+    for (const item of this.activeAudio.values()) {
+      item.pause();
+      item.currentTime = 0;
+    }
+    this.activeAudio.clear();
+  }
+
   log(message) {
     if (!this.logTarget) return;
     const line = `[${new Date().toLocaleTimeString()}] ${message}`;
     this.logTarget.textContent = `${line}\n${this.logTarget.textContent}`.slice(0, 7000);
+  }
+
+  markUserActivated() {
+    this.userActivated = true;
   }
 
   component(type) {
@@ -158,6 +192,13 @@ class GraphBoardRuntime {
     }
   }
 
+  layerZIndex(type, id, z) {
+    const layerZ = Number.isFinite(Number(z)) ? Number(z) : 0;
+    const asset = this.findAsset(type, id);
+    const order = Number.isFinite(Number(asset?.id)) ? Number(asset.id) : Number(id || 0);
+    return String(1000 + layerZ * 1000 + order);
+  }
+
   moveLayer(type, id, x, y, z = undefined) {
     const layer = this.findLayer(type, id);
     if (!layer) {
@@ -167,7 +208,7 @@ class GraphBoardRuntime {
     layer.style.left = `${x}px`;
     layer.style.top = `${y}px`;
     layer.style.transition = "left 180ms linear, top 180ms linear";
-    if (Number.isFinite(z)) layer.style.zIndex = String(10 + z);
+    if (Number.isFinite(z)) layer.style.zIndex = this.layerZIndex(type, id, z);
     layer.classList.remove("runtime-hidden");
     this.log(`${type}.move(${id},${x},${y}${Number.isFinite(z) ? `,${z}` : ""})`);
   }
@@ -178,20 +219,36 @@ class GraphBoardRuntime {
       this.log(`${type}.PlayDSound(${id}) missing audio`);
       return;
     }
-    for (const item of this.audio.values()) {
-      if (item !== audio && item.dataset.componentType === type) item.pause();
+    if (!this.userActivated) {
+      this.log(`${type}.PlayDSound(${id}) skipped until click`);
+      return;
     }
-    audio.currentTime = 0;
-    audio.play().catch((error) => this.log(`audio blocked: ${error.message}`));
+    const key = `${type}:${id}:${Date.now()}:${Math.random()}`;
+    const instance = audio.cloneNode(true);
+    instance.preload = "auto";
+    instance.addEventListener("ended", () => {
+      this.activeAudio.delete(key);
+      const soundId = Number(audio.dataset.runtimeId ?? audio.dataset.assetId ?? id);
+      this.executeHandler(`${type}.EndPlaySound`, [soundId]);
+      if (type === "Sound_Holder") this.executeHandler("Sound_Holder.EndPlaySound", [soundId]);
+    }, { once: true });
+    this.activeAudio.set(key, instance);
+    instance.currentTime = 0;
+    instance.play().catch((error) => {
+      this.activeAudio.delete(key);
+      this.log(`audio blocked: ${error.message}`);
+    });
     this.log(`${type}.PlayDSound(${id})`);
   }
 
   stopAudio(type, id) {
-    const audio = Number.isFinite(id) ? this.findAudio(type, id) : null;
-    const targets = audio ? [audio] : [...this.audio.values()].filter((item) => item.dataset.componentType === type);
-    for (const item of targets) {
+    for (const [key, item] of [...this.activeAudio.entries()]) {
+      const [itemType, itemId] = key.split(":");
+      if (itemType !== type) continue;
+      if (Number.isFinite(id) && Number(itemId) !== Number(id)) continue;
       item.pause();
       item.currentTime = 0;
+      this.activeAudio.delete(key);
     }
     this.log(`${type}.Stop(${Number.isFinite(id) ? id : "all"})`);
   }
@@ -210,6 +267,7 @@ class GraphBoardRuntime {
       this.log(`${type}.Play(${id}) missing layer`);
       return;
     }
+    this.stopVideoSiblings(type, id);
     const key = `${type}:${id}`;
     if (this.videoTimers.has(key)) clearTimeout(this.videoTimers.get(key));
     this.restartLayerAnimation(layer);
@@ -224,6 +282,21 @@ class GraphBoardRuntime {
     this.log(`${type}.Play(${id}) for ${Math.round(delay)}ms`);
   }
 
+  stopVideoSiblings(type, id) {
+    for (const [key, timer] of [...this.videoTimers.entries()]) {
+      if (!key.startsWith(`${type}:`)) continue;
+      clearTimeout(timer);
+      this.videoTimers.delete(key);
+    }
+    this.stopAudio(type);
+    for (const layer of this.stage.querySelectorAll(`.layer[data-component-type="${type}"]`)) {
+      const runtimeId = Number(layer.dataset.runtimeId ?? -1);
+      if (runtimeId === Number(id)) continue;
+      layer.classList.remove("runtime-playing");
+      layer.classList.add("runtime-hidden");
+    }
+  }
+
   enableHotspot(id, enabled) {
     this.hotspots.set(id, enabled);
     for (const target of this.stage.querySelectorAll(`[data-component-type="HotSpot_Holder"][data-runtime-id="${id}"]`)) {
@@ -236,6 +309,9 @@ class GraphBoardRuntime {
     if (type === "HotSpot_Holder" && this.hotspots.has(id) && !this.hotspots.get(id)) {
       this.log(`HotSpot ${id} ignored (${eventName})`);
       return;
+    }
+    if (/Click|Button/i.test(eventName)) {
+      this.userActivated = true;
     }
     const names = [
       `${type}.${eventName}`,
@@ -618,7 +694,7 @@ class GraphBoardRuntime {
       case "HotSpot_Holder.LeftButtonClickOnUp":
         this.dispatchComponentEvent(
           "HotSpot_Holder",
-          local.endsWith("Up") ? "MouseClickOnUp" : "MouseClickOnDown",
+          local.endsWith("Up") ? "LeftButtonClickOnUp" : "LeftButtonClickOn",
           Number(args[0])
         );
         break;

@@ -414,7 +414,7 @@ def write_indexed_bmp(path: Path, pixels: bytes, width: int, height: int, palett
     if width <= 0 or height <= 0:
         return
     row_stride = (width + 3) & ~3
-    if len(pixels) == width * height and row_stride != width:
+    if len(pixels) == width * height:
         padded = bytearray(row_stride * height)
         for row in range(height):
             src = row * width
@@ -424,13 +424,17 @@ def write_indexed_bmp(path: Path, pixels: bytes, width: int, height: int, palett
     palette = palette[:1024]
     if len(palette) < 1024:
         palette = palette + (b"\x00" * (1024 - len(palette)))
+    bmp_palette = bytearray()
+    for offset in range(0, 1024, 4):
+        red, green, blue, reserved = palette[offset : offset + 4]
+        bmp_palette.extend((blue, green, red, reserved))
     pixel_offset = 14 + 40 + len(palette)
     file_size = pixel_offset + len(pixels)
     dib = struct.pack(
         "<IiiHHIIiiII",
         40,
         width,
-        -height,
+        height,
         1,
         8,
         0,
@@ -442,7 +446,7 @@ def write_indexed_bmp(path: Path, pixels: bytes, width: int, height: int, palett
     )
     bmp_header = b"BM" + struct.pack("<IHHI", file_size, 0, 0, pixel_offset)
     mkdir(path.parent)
-    path.write_bytes(bmp_header + dib + palette + pixels)
+    path.write_bytes(bmp_header + dib + bytes(bmp_palette) + pixels)
 
 
 def gif_palette_from_bmp_palette(palette: bytes) -> bytes:
@@ -451,7 +455,7 @@ def gif_palette_from_bmp_palette(palette: bytes) -> bytes:
         palette = palette + (b"\x00" * (1024 - len(palette)))
     rgb = bytearray()
     for offset in range(0, 1024, 4):
-        blue, green, red, _reserved = palette[offset : offset + 4]
+        red, green, blue, _reserved = palette[offset : offset + 4]
         rgb.extend((red, green, blue))
     return bytes(rgb)
 
@@ -517,9 +521,10 @@ def write_indexed_gif(
     if not frames or width <= 0 or height <= 0:
         return
     mkdir(path.parent)
+    background_index = transparent_index & 0xFF if transparent_index is not None else 0
     stream = bytearray()
     stream.extend(b"GIF89a")
-    stream.extend(struct.pack("<HHBBB", width, height, 0xF7, 0, 0))
+    stream.extend(struct.pack("<HHBBB", width, height, 0xF7, background_index, 0))
     stream.extend(gif_palette_from_bmp_palette(palette))
     stream.extend(b"\x21\xff\x0bNETSCAPE2.0\x03\x01\x00\x00\x00")
     for pixels in frames:

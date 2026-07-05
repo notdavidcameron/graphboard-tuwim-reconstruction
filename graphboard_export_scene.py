@@ -139,9 +139,116 @@ def read_i32(data: bytes, offset: int) -> int:
     return struct.unpack_from("<i", data, offset)[0]
 
 
+def read_mfc_cstring(data: bytes, offset: int, limit: int) -> tuple[str | None, int]:
+    if offset >= limit:
+        return None, offset
+    cursor = offset + 1
+    length = data[offset]
+    if length == 0xFF:
+        if cursor + 2 > limit:
+            return None, offset
+        length = struct.unpack_from("<H", data, cursor)[0]
+        cursor += 2
+        if length == 0xFFFF:
+            if cursor + 4 > limit:
+                return None, offset
+            length = read_u32(data, cursor)
+            cursor += 4
+    if cursor + length > limit:
+        return None, offset
+    return data[cursor : cursor + length].decode("cp1250", "replace"), cursor + length
+
+
 def board_video_still_size(width: int, height: int) -> int:
     stride = ((width * 8 + 0x1F) >> 3) & 0x1FFFFFFC
     return stride * height
+
+
+def palette_css_color(palette_path: Path, color_index: int | None) -> str | None:
+    if color_index is None or not palette_path.exists():
+        return None
+    palette = palette_path.read_bytes()
+    offset = int(color_index) * 4
+    if offset + 3 > len(palette):
+        return None
+    red, green, blue = palette[offset : offset + 3]
+    return f"rgb({red}, {green}, {blue})"
+
+
+def parse_hotspot_entries(meta_component: dict[str, Any], bdf_data: bytes | None) -> dict[str, Any]:
+    """Recover HotSpotHolder rectangles from its component-private serialized records."""
+    if meta_component.get("display_name") != "HotSpot_Holder" or not bdf_data:
+        return {}
+
+    private_start = int(meta_component.get("private_offset") or 0)
+    private_size = int(meta_component.get("private_size") or 0)
+    private_end = min(len(bdf_data), private_start + private_size)
+    if private_start + 11 > private_end:
+        return {}
+
+    try:
+        version = read_u32(bdf_data, private_start)
+        color_a = bdf_data[private_start + 4]
+        color_b = bdf_data[private_start + 5]
+        color_c = bdf_data[private_start + 6]
+        declared_count = read_u32(bdf_data, private_start + 7)
+    except (IndexError, struct.error):
+        return {}
+    if version != 0 or declared_count > 1000:
+        return {}
+
+    entries = []
+    cursor = private_start + 11
+    for index in range(declared_count):
+        record_offset = cursor
+        if record_offset + 100 > private_end:
+            return {}
+        try:
+            left = read_i32(bdf_data, record_offset)
+            top = read_i32(bdf_data, record_offset + 4)
+            right = read_i32(bdf_data, record_offset + 8)
+            bottom = read_i32(bdf_data, record_offset + 12)
+            hotspot_id = read_i32(bdf_data, record_offset + 0x18)
+            z = read_i32(bdf_data, record_offset + 0x1C)
+            enabled = read_i32(bdf_data, record_offset + 0x20)
+        except struct.error:
+            return {}
+        if right < left or bottom < top:
+            return {}
+        name, cursor = read_mfc_cstring(bdf_data, record_offset + 100, private_end)
+        if name is None:
+            return {}
+        entries.append(
+            {
+                "index": index,
+                "id": hotspot_id,
+                "name": name,
+                "rect": {
+                    "x": left,
+                    "y": top,
+                    "width": max(1, right - left),
+                    "height": max(1, bottom - top),
+                },
+                "rawRect": {"left": left, "top": top, "right": right, "bottom": bottom},
+                "z": z,
+                "enabled": bool(enabled),
+                "recordOffset": record_offset,
+                "geometryConfidence": "serialized_hotspot",
+            }
+        )
+
+    trailing = {}
+    if cursor + 8 <= private_end:
+        trailing = {
+            "nextOrSelectedId": read_i32(bdf_data, cursor),
+            "activeOrSelectedIndex": read_i32(bdf_data, cursor + 4),
+        }
+
+    return {
+        "settings": {"version": version, "colorA": color_a, "colorB": color_b, "colorC": color_c},
+        "entries": entries,
+        "trailing": trailing,
+    }
 
 
 def parse_transparent_video_entries(meta_component: dict[str, Any], bdf_data: bytes | None) -> dict[int, dict[str, Any]]:
@@ -289,6 +396,7 @@ def build_component(
         elif kind in AUDIO_KINDS:
             audios.append(audio_asset(item, web_root, workspace_root))
     tvh_entries = parse_transparent_video_entries(meta_component, bdf_data)
+    hotspot_data = parse_hotspot_entries(meta_component, bdf_data)
     if tvh_entries:
         for asset in images:
             item_id = normalized_board_video_id(asset.get("path") or "")
@@ -312,10 +420,19 @@ def build_component(
         rect = {"x": min_x, "y": min_y, "width": max_x - min_x, "height": max_y - min_y}
         confidence = "serialized_entries"
         z = min(int(asset.get("z") or 0) for asset in images if asset.get("geometryConfidence") == "serialized_entry")
+    hotspots = hotspot_data.get("entries", [])
+    if hotspots:
+        min_x = min(item["rect"]["x"] for item in hotspots)
+        min_y = min(item["rect"]["y"] for item in hotspots)
+        max_x = max(item["rect"]["x"] + item["rect"]["width"] for item in hotspots)
+        max_y = max(item["rect"]["y"] + item["rect"]["height"] for item in hotspots)
+        rect = {"x": min_x, "y": min_y, "width": max_x - min_x, "height": max_y - min_y}
+        confidence = "serialized_hotspots"
+        z = min(int(item.get("z") or 0) for item in hotspots)
     if meta_component.get("display_name") == "Sound_Holder":
         confidence = "not_visual"
         rect = {"x": 0, "y": 0, "width": 0, "height": 0}
-    return {
+    component = {
         "id": f"{meta_component.get('index'):02d}_{safe_id(meta_component.get('display_name', 'component'))}",
         "type": meta_component.get("display_name"),
         "index": meta_component.get("index"),
@@ -330,6 +447,11 @@ def build_component(
         "assets": images,
         "audio": audios,
     }
+    if hotspot_data:
+        component["hotspots"] = hotspots
+        component["hotspotSettings"] = hotspot_data.get("settings")
+        component["hotspotTrailing"] = hotspot_data.get("trailing")
+    return component
 
 
 def build_scene(meta_path: Path, web_root: Path, workspace_root: Path) -> dict[str, Any]:
@@ -345,6 +467,7 @@ def build_scene(meta_path: Path, web_root: Path, workspace_root: Path) -> dict[s
     ]
     background_bmp = page_dir / "background.bmp"
     palette = page_dir / "background_palette.bin"
+    background_color = palette_css_color(palette, meta.get("background_color_index"))
 
     warnings = []
     if not background_bmp.exists() and meta.get("dib_size", 0):
@@ -362,6 +485,9 @@ def build_scene(meta_path: Path, web_root: Path, workspace_root: Path) -> dict[s
     )
     if recovered_tvh:
         warnings.append(f"Recovered {recovered_tvh} TransparentVideoHolder asset rect(s) from serialized entries.")
+    recovered_hotspots = sum(len(component.get("hotspots", [])) for component in components)
+    if recovered_hotspots:
+        warnings.append(f"Recovered {recovered_hotspots} HotSpotHolder rect(s) from serialized records.")
 
     return {
         "id": meta_path.parent.name,
@@ -370,6 +496,7 @@ def build_scene(meta_path: Path, web_root: Path, workspace_root: Path) -> dict[s
         "pageRect": meta.get("page_rect", [0, 0, 640, 480]),
         "background": {
             "colorIndex": meta.get("background_color_index"),
+            "color": background_color,
             "flag": meta.get("background_flag"),
             "bmpPath": str(background_bmp) if background_bmp.exists() else None,
             "bmpUrl": rel_url(str(background_bmp), web_root, workspace_root) if background_bmp.exists() else None,

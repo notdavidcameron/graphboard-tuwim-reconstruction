@@ -273,6 +273,7 @@ h2 {
 
 .bounds {
   position: absolute;
+  pointer-events: none;
   border: 1px solid rgba(140, 200, 255, 0.85);
   background: rgba(140, 200, 255, 0.08);
   color: white;
@@ -291,6 +292,12 @@ h2 {
 .bounds.asset {
   border-color: rgba(92, 220, 166, 0.75);
   background: rgba(92, 220, 166, 0.08);
+  font-size: 9px;
+}
+
+.bounds.hotspot {
+  border-color: rgba(255, 120, 120, 0.75);
+  background: rgba(255, 120, 120, 0.08);
   font-size: 9px;
 }
 
