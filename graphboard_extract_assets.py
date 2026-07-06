@@ -707,6 +707,80 @@ def extract_multibitmap_frames(
     return {"version": version, "declared_count": declared_count, "parsed_count": len(frames), "frames": frames}, outputs
 
 
+def extract_bitmap_holder_images(
+    data: bytes,
+    private_start: int,
+    private_end: int,
+    component_name: str,
+    page_dir: Path,
+    palette: bytes,
+) -> tuple[dict, list[dict]]:
+    if private_start + 8 > private_end:
+        return {}, []
+    version = read_u32(data, private_start)[0]
+    declared_count = read_u32(data, private_start + 4)[0]
+    if version != 1 or declared_count < 0 or declared_count > 200:
+        return {}, []
+
+    offset = private_start + 8
+    frames = []
+    outputs = []
+    bitmap_dir = page_dir / "bitmap_holder"
+
+    for index in range(declared_count):
+        if offset + 0x90 > private_end:
+            break
+        record_size = read_u32(data, offset)[0]
+        record_end = offset + 4 + record_size
+        if record_size <= 0 or record_end > private_end:
+            break
+
+        left = read_i32(data, offset + 0x0C)[0]
+        top = read_i32(data, offset + 0x10)[0]
+        right = read_i32(data, offset + 0x14)[0]
+        bottom = read_i32(data, offset + 0x18)[0]
+        width = right - left
+        height = bottom - top
+        name = data[offset + 0x38 : offset + 0x58].split(b"\x00", 1)[0].decode("cp1250", "replace")
+        pixel_offset = offset + 0x90
+        pixel_size = width * height
+        frame = {
+            "index": index,
+            "name": name,
+            "record_offset": offset,
+            "record_size": record_size,
+            "pixel_offset": pixel_offset,
+            "width": width,
+            "height": height,
+            "rect": {"x": left, "y": top, "width": width, "height": height},
+        }
+
+        if 0 < width <= 2000 and 0 < height <= 2000 and pixel_offset + pixel_size <= record_end:
+            bmp_path = bitmap_dir / f"{component_name}_{index:03d}_{safe_name(name)}_{width}x{height}.bmp"
+            pixels = data[pixel_offset : pixel_offset + pixel_size]
+            write_indexed_bmp(bmp_path, pixels, width, height, palette)
+            output = {
+                "kind": "bitmap_holder_bmp",
+                "path": str(bmp_path),
+                "offset": pixel_offset,
+                "size": bmp_path.stat().st_size,
+                "pixel_size": pixel_size,
+                "width": width,
+                "height": height,
+                "name": name,
+                "rect": frame["rect"],
+                "geometry_confidence": "serialized_entry",
+                "initially_visible": False,
+            }
+            frame["bmp_output"] = str(bmp_path)
+            outputs.append(output)
+
+        frames.append(frame)
+        offset = record_end
+
+    return {"version": version, "declared_count": declared_count, "parsed_count": len(frames), "frames": frames}, outputs
+
+
 def extract_bdf(path: Path, out_dir: Path, include_raw: bool = False) -> dict:
     data = path.read_bytes()
     page_dir = out_dir / "bdf" / path.stem
@@ -802,6 +876,21 @@ def extract_bdf(path: Path, out_dir: Path, include_raw: bool = False) -> dict:
             if multibitmap:
                 component_meta["multibitmap"] = multibitmap
                 for output in multibitmap_outputs:
+                    component_meta["embedded"].append(output)
+                    metadata["outputs"].append(output)
+
+        if wrapper["display_name"] == "Bitmap_Holder":
+            bitmap_holder, bitmap_outputs = extract_bitmap_holder_images(
+                data,
+                private_start,
+                private_end,
+                component_name,
+                page_dir,
+                data[header["palette_offset"] : header["palette_offset"] + header["palette_size"]],
+            )
+            if bitmap_holder:
+                component_meta["bitmap_holder"] = bitmap_holder
+                for output in bitmap_outputs:
                     component_meta["embedded"].append(output)
                     metadata["outputs"].append(output)
 

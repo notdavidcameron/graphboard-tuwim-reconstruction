@@ -103,6 +103,7 @@ function runtimeIdFor(component, asset = null) {
 }
 
 function initialAssetVisible(component, asset, isPrimary, hasUnknownGeometry) {
+  if (asset.initiallyVisible === false) return false;
   if (!component.visible) return false;
   if (component.type === "Transparent_Video_Holder" && asset.geometryConfidence === "serialized_entry") {
     const runtimeId = runtimeIdFor(component, asset);

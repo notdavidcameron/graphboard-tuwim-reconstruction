@@ -1284,7 +1284,11 @@ class GraphBoardRuntime {
         break;
       case "MultiBitmap.ShowBitmap":
       case "Bitmap_Holder.ShowBitmap":
-        this.moveLayer(local.split(".")[0], Number(args[0]), Number(args[1] || 0), Number(args[2] || 0), Number(args[3] || 0), namespace);
+        if (args.length >= 3) {
+          this.moveLayer(local.split(".")[0], Number(args[0]), Number(args[1] || 0), Number(args[2] || 0), Number(args[3] || 0), namespace);
+        } else {
+          this.setLayerVisible(local.split(".")[0], Number(args[0]), true, namespace);
+        }
         break;
       case "Bitmap_Holder.MoveTo":
       case "Sprite_Holder.GotoXY":

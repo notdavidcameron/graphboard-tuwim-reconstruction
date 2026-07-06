@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import Any
 
 
-IMAGE_KINDS = {"bmp", "dib", "board_video_gif", "multibitmap_bmp", "multibitmap_gif"}
+IMAGE_KINDS = {"bmp", "dib", "board_video_gif", "multibitmap_bmp", "multibitmap_gif", "bitmap_holder_bmp"}
 AUDIO_KINDS = {"WAVE", "riff_wave", "board_video_pcm_wave"}
 
 
@@ -375,7 +375,7 @@ def parse_transparent_video_entries(meta_component: dict[str, Any], bdf_data: by
 def image_asset(item: dict[str, Any], web_root: Path, workspace_root: Path) -> dict[str, Any]:
     path = item.get("path") or item.get("video_output")
     still_path = item.get("still_path") or item.get("still_output")
-    return {
+    asset = {
         "kind": item.get("kind"),
         "path": path,
         "url": rel_url(path, web_root, workspace_root),
@@ -388,6 +388,12 @@ def image_asset(item: dict[str, Any], web_root: Path, workspace_root: Path) -> d
         "name": item.get("name"),
         "id": asset_id_from_path(path or ""),
     }
+    if item.get("initially_visible") is not None:
+        asset["initiallyVisible"] = bool(item.get("initially_visible"))
+    if item.get("rect"):
+        asset["rect"] = item["rect"]
+        asset["geometryConfidence"] = item.get("geometry_confidence") or "serialized_entry"
+    return asset
 
 
 def audio_asset(item: dict[str, Any], web_root: Path, workspace_root: Path) -> dict[str, Any]:
