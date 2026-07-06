@@ -77,12 +77,26 @@ def find_board_video_streams(data: bytes, start: int, end: int) -> list[int]:
     markers = []
     offset = data.find(b"Board Video File", start, end)
     while offset != -1:
+        sample_rate = read_u32(data, offset + 0x90)[0] if offset + 0x94 <= end else 0
+        bits_per_sample = read_u32(data, offset + 0x94)[0] if offset + 0x98 <= end else 0
+        channels = read_u32(data, offset + 0x98)[0] if offset + 0x9C <= end else 0
+        byte_rate = read_u32(data, offset + 0xE0)[0] if offset + 0xE4 <= end else 0
+        video_width = read_u32(data, offset + 0x80)[0] if offset + 0x84 <= end else 0
+        video_height = read_u32(data, offset + 0x84)[0] if offset + 0x88 <= end else 0
+        video_only = sample_rate == 0 and bits_per_sample == 0 and channels == 0 and byte_rate == 0
         if (
             offset + 0x4E8 <= end
             and read_u32(data, offset + 0x68)[0] == 0xADA77777
-            and read_u32(data, offset + 0x90)[0] in (8000, 11025, 22050)
-            and read_u32(data, offset + 0x94)[0] in (8, 16)
-            and read_u32(data, offset + 0x98)[0] in (1, 2)
+            and 0 < video_width <= 2000
+            and 0 < video_height <= 2000
+            and (
+                video_only
+                or (
+                    sample_rate in (8000, 11025, 22050)
+                    and bits_per_sample in (8, 16)
+                    and channels in (1, 2)
+                )
+            )
         ):
             markers.append(offset)
         offset = data.find(b"Board Video File", offset + 1, end)
