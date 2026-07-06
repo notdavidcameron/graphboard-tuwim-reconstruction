@@ -37,8 +37,66 @@
       "display_name": "Transparent_Video_Holder",
       "private_offset": 394469,
       "private_size": 412596,
-      "embedded": [],
-      "board_video_marker_offset": 394481
+      "embedded": [
+        {
+          "kind": "board_video_gif",
+          "path": "extracted_assets\\bdf\\MICH5\\animations\\01_Transparent_Video_Holder_000_000604f1_board_video_398x288.gif",
+          "still_path": "extracted_assets\\bdf\\MICH5\\animations\\01_Transparent_Video_Holder_000_000604f1_board_video_398x288_still.png",
+          "offset": 394481,
+          "size": 2863617,
+          "still_size": 9007,
+          "frame_count": 22,
+          "width": 398,
+          "height": 288,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        }
+      ],
+      "board_video_marker_offset": 394481,
+      "board_video_streams": [
+        {
+          "index": 0,
+          "offset": 394481,
+          "end_offset": 690481,
+          "sample_rate": 0,
+          "bits_per_sample": 0,
+          "channels": 0,
+          "byte_rate": 0,
+          "video_width": 398,
+          "video_height": 288,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 22,
+          "header_record_count": 22,
+          "record_count": 22,
+          "audio_record_count": 0,
+          "video_record_count": 22,
+          "stop_reason": "next_stream",
+          "video_output": "extracted_assets\\bdf\\MICH5\\animations\\01_Transparent_Video_Holder_000_000604f1_board_video_398x288.gif",
+          "still_output": "extracted_assets\\bdf\\MICH5\\animations\\01_Transparent_Video_Holder_000_000604f1_board_video_398x288_still.png",
+          "transparent_index": 30
+        },
+        {
+          "index": 1,
+          "offset": 690481,
+          "end_offset": 691737,
+          "sample_rate": 0,
+          "bits_per_sample": 0,
+          "channels": 0,
+          "byte_rate": 0,
+          "video_width": 398,
+          "video_height": 288,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 22,
+          "header_record_count": 22,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        }
+      ]
     },
     {
       "index": 2,
@@ -50,21 +108,21 @@
       "embedded": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH5\\embedded\\02_Sound_Holder_000_000c5425.wav",
+          "path": "extracted_assets\\bdf\\MICH5\\embedded\\02_Sound_Holder_000_000c5425.wav",
           "offset": 807973,
           "size": 846526,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH5\\embedded\\02_Sound_Holder_001_00193f43.wav",
+          "path": "extracted_assets\\bdf\\MICH5\\embedded\\02_Sound_Holder_001_00193f43.wav",
           "offset": 1654595,
           "size": 5518,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH5\\embedded\\02_Sound_Holder_002_00195531.wav",
+          "path": "extracted_assets\\bdf\\MICH5\\embedded\\02_Sound_Holder_002_00195531.wav",
           "offset": 1660209,
           "size": 62036,
           "extension": ".wav"
@@ -84,37 +142,51 @@
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH5\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\MICH5\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "dib",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH5\\background.dib",
+      "path": "extracted_assets\\bdf\\MICH5\\background.dib",
       "size": 308180
     },
     {
       "kind": "bmp",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH5\\background.bmp",
+      "path": "extracted_assets\\bdf\\MICH5\\background.bmp",
       "size": 308194
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH5\\script.txt",
+      "path": "extracted_assets\\bdf\\MICH5\\script.txt",
       "size": 12467
     },
     {
+      "kind": "board_video_gif",
+      "path": "extracted_assets\\bdf\\MICH5\\animations\\01_Transparent_Video_Holder_000_000604f1_board_video_398x288.gif",
+      "still_path": "extracted_assets\\bdf\\MICH5\\animations\\01_Transparent_Video_Holder_000_000604f1_board_video_398x288_still.png",
+      "offset": 394481,
+      "size": 2863617,
+      "still_size": 9007,
+      "frame_count": 22,
+      "width": 398,
+      "height": 288,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH5\\embedded\\02_Sound_Holder_000_000c5425.wav",
+      "path": "extracted_assets\\bdf\\MICH5\\embedded\\02_Sound_Holder_000_000c5425.wav",
       "size": 846526
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH5\\embedded\\02_Sound_Holder_001_00193f43.wav",
+      "path": "extracted_assets\\bdf\\MICH5\\embedded\\02_Sound_Holder_001_00193f43.wav",
       "size": 5518
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MICH5\\embedded\\02_Sound_Holder_002_00195531.wav",
+      "path": "extracted_assets\\bdf\\MICH5\\embedded\\02_Sound_Holder_002_00195531.wav",
       "size": 62036
     }
   ],
