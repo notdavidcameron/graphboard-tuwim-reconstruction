@@ -28,11 +28,7 @@ const els = {
 
 const runtime = new GraphBoardRuntime(els.stage, els.runtimeLog);
 runtime.onLoadPage = (bdfName) => {
-  const clean = String(bdfName || "").replace(/^.*[\\/]/, "").replace(/\.bdf$/i, "").toLowerCase();
-  const index = state.index.scenes.findIndex((scene) => (
-    scene.id.toLowerCase() === clean ||
-    String(scene.sourceBdf || "").replace(/^.*[\\/]/, "").replace(/\.bdf$/i, "").toLowerCase() === clean
-  ));
+  const index = state.index.scenes.findIndex((scene) => sceneMatchesQuery(scene, bdfName));
   if (index >= 0) {
     loadScene(index);
   }
@@ -60,10 +56,31 @@ function sceneEntry() {
   return state.index.scenes[state.selected];
 }
 
-async function loadScene(selected) {
+function sceneKey(value) {
+  return String(value || "").replace(/^.*[\\/]/, "").replace(/\.bdf$/i, "").toLowerCase();
+}
+
+function sceneMatchesQuery(scene, query) {
+  const wanted = sceneKey(query);
+  return sceneKey(scene.id) === wanted || sceneKey(scene.sourceBdf) === wanted;
+}
+
+function syncSceneUrl(entry) {
+  if (!entry?.id || !window.history?.replaceState) return;
+  const url = new URL(window.location.href);
+  if (url.searchParams.get("scene") === entry.id) return;
+  url.searchParams.set("scene", entry.id);
+  window.history.replaceState({ scene: entry.id }, "", url);
+}
+
+async function loadScene(selected, options = {}) {
+  const { updateUrl = true } = options;
   state.selected = Math.max(0, Math.min(selected, state.index.scenes.length - 1));
   els.select.value = String(state.selected);
   const entry = sceneEntry();
+  if (updateUrl) {
+    syncSceneUrl(entry);
+  }
   state.scene = await getJson(entry.url);
   render();
 }
@@ -201,7 +218,8 @@ function renderStage(scene) {
       els.stage.appendChild(hitbox);
     }
 
-    if ((hitboxes.length === 0) && (els.unknown.checked || !hasUnknownGeometry || component.type === "HotSpot_Holder")) {
+    const isVisualComponent = component.geometryConfidence !== "not_visual";
+    if (isVisualComponent && (hitboxes.length === 0) && (els.unknown.checked || !hasUnknownGeometry || component.type === "HotSpot_Holder")) {
       const rect = component.rect || { x: 0, y: 0, width: 1, height: 1 };
       const hitbox = document.createElement("button");
       hitbox.type = "button";
@@ -217,7 +235,7 @@ function renderStage(scene) {
       els.stage.appendChild(hitbox);
     }
 
-    if (els.debug.checked && (els.unknown.checked || !hasUnknownGeometry || component.visible)) {
+    if (els.debug.checked && isVisualComponent && (els.unknown.checked || !hasUnknownGeometry || component.visible)) {
       const rect = component.rect || { x: 0, y: 0, width: 1, height: 1 };
       const box = document.createElement("div");
       box.className = `bounds ${component.geometryConfidence === "unknown" ? "unknown" : ""}`;
@@ -348,9 +366,9 @@ async function boot() {
   const params = new URLSearchParams(location.search);
   const wanted = params.get("scene");
   const selected = wanted
-    ? Math.max(0, state.index.scenes.findIndex((scene) => scene.id.toLowerCase() === wanted.toLowerCase()))
+    ? state.index.scenes.findIndex((scene) => sceneMatchesQuery(scene, wanted))
     : 0;
-  await loadScene(selected < 0 ? 0 : selected);
+  await loadScene(selected >= 0 ? selected : 0);
 }
 
 boot().catch((error) => {

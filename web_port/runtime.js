@@ -171,9 +171,27 @@ class GraphBoardRuntime {
     }
     if (!create) return null;
     if (["Sprite_Holder", "Bitmap_Holder", "Text_Holder", "Puzzle", "Video_Holder"].includes(cleanType)) {
-      return this.createSyntheticLayer(namespace, cleanType, Number(id) || 0);
+      return this.createSyntheticLayer(namespace, cleanType, Number(id) || 0, this.componentRect(cleanType, id, namespace));
     }
     return null;
+  }
+
+  componentRect(type, id, namespace = "Page") {
+    const cleanType = this.normalizeType(type);
+    const collection = namespace === "Group" ? this.group?.components : this.scene?.components;
+    const components = (collection || []).filter((component) => this.normalizeType(component.type) === cleanType);
+    if (components.length === 0) return null;
+    const wanted = Number(id) || 0;
+    const exact = components.find((component) => Number(component.index) === wanted);
+    const component = exact || (components.length === 1 ? components[0] : null);
+    const rect = component?.rect;
+    if (!rect) return null;
+    return {
+      x: Number(rect.x) || 0,
+      y: Number(rect.y) || 0,
+      width: Number(rect.width) || 1,
+      height: Number(rect.height) || 1,
+    };
   }
 
   findAsset(type, id, namespace = "Page") {
@@ -1097,7 +1115,19 @@ class GraphBoardRuntime {
         button.dataset.componentType = "HotSpot_Holder";
         button.dataset.runtimeNamespace = "Group";
         button.dataset.runtimeId = String(hotspot.id);
-        const rect = hotspot.rect || { x: 0, y: 0, width: 1, height: 1 };
+        const rect = { ...(hotspot.rect || { x: 0, y: 0, width: 1, height: 1 }) };
+        const stageWidth = parseInt(this.stage.style.width || "640", 10) || 640;
+        const stageHeight = parseInt(this.stage.style.height || "480", 10) || 480;
+        if (Number(hotspot.id) === 0 && rect.x >= stageWidth - 2) {
+          rect.x = Math.max(0, stageWidth - 28);
+          rect.y = Math.max(0, rect.y);
+          rect.width = 28;
+          rect.height = Math.max(stageHeight, rect.height || 1);
+        }
+        if (Number(hotspot.id) === 1 && rect.width > stageWidth * 0.75) {
+          rect.x = Math.max(0, rect.x);
+          rect.width = Math.max(1, stageWidth - 170 - rect.x);
+        }
         button.style.left = `${rect.x}px`;
         button.style.top = `${rect.y}px`;
         button.style.width = `${Math.max(8, rect.width)}px`;

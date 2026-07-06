@@ -190,6 +190,96 @@ def parse_hotspot_entries(meta_component: dict[str, Any], source_data: bytes | N
     return entries
 
 
+def plausible_rect(left: int, top: int, right: int, bottom: int, limit: int = 5000) -> dict[str, int] | None:
+    width = right - left
+    height = bottom - top
+    if -limit <= left <= limit and -limit <= top <= limit and 0 < width <= limit and 0 < height <= limit:
+        return {"x": left, "y": top, "width": width, "height": height}
+    return None
+
+
+def parse_bitmap_rect(meta_component: dict[str, Any], source_data: bytes | None) -> dict[str, Any] | None:
+    """Recover BitmapHolder's first visible rectangle.
+
+    The observed BitmapHolder private block starts with version/count/bitmap-size,
+    followed by a per-item record. The stable stage rectangle is left/top/right/bottom
+    at +0x14..+0x20 in the first record.
+    """
+    if runtime_component_type(meta_component.get("display_name")) != "Bitmap_Holder" or not source_data:
+        return None
+    private_start = int(meta_component.get("private_offset") or 0)
+    private_size = int(meta_component.get("private_size") or 0)
+    private_end = min(len(source_data), private_start + private_size)
+    if private_start + 36 > private_end:
+        return None
+    try:
+        version = read_u32(source_data, private_start)
+        count = read_u32(source_data, private_start + 4)
+        left = read_i32(source_data, private_start + 0x14)
+        top = read_i32(source_data, private_start + 0x18)
+        right = read_i32(source_data, private_start + 0x1C)
+        bottom = read_i32(source_data, private_start + 0x20)
+    except struct.error:
+        return None
+    rect = plausible_rect(left, top, right, bottom)
+    if version != 1 or count <= 0 or count > 200 or not rect:
+        return None
+    return {"rect": rect, "sourceOffset": private_start + 0x14, "geometryConfidence": "serialized_entry"}
+
+
+def parse_text_rect(meta_component: dict[str, Any], source_data: bytes | None) -> dict[str, Any] | None:
+    """Recover TextHolder's first text-region rectangle.
+
+    Corpus samples begin with u32 version, u32 entry count, then an entry whose
+    x/y/width/height are stored at +0x0c..+0x18. A duplicate right/bottom rectangle
+    follows later in the same record, but these leading dimensions are enough for a
+    conservative visual/runtime placement.
+    """
+    if runtime_component_type(meta_component.get("display_name")) != "Text_Holder" or not source_data:
+        return None
+    private_start = int(meta_component.get("private_offset") or 0)
+    private_size = int(meta_component.get("private_size") or 0)
+    private_end = min(len(source_data), private_start + private_size)
+    if private_start + 28 > private_end:
+        return None
+    try:
+        version = read_u32(source_data, private_start)
+        count = read_u32(source_data, private_start + 4)
+        x = read_i32(source_data, private_start + 0x0C)
+        y = read_i32(source_data, private_start + 0x10)
+        width = read_i32(source_data, private_start + 0x14)
+        height = read_i32(source_data, private_start + 0x18)
+    except struct.error:
+        return None
+    rect = plausible_rect(x, y, x + width, y + height)
+    if version not in (1, 2) or count <= 0 or count > 200 or not rect:
+        return None
+    return {"rect": rect, "sourceOffset": private_start + 0x0C, "geometryConfidence": "serialized_entry"}
+
+
+def parse_video_rect(meta_component: dict[str, Any], source_data: bytes | None) -> dict[str, Any] | None:
+    if runtime_component_type(meta_component.get("display_name")) != "Video_Holder" or not source_data:
+        return None
+    private_start = int(meta_component.get("private_offset") or 0)
+    private_size = int(meta_component.get("private_size") or 0)
+    private_end = min(len(source_data), private_start + private_size)
+    if private_start + 32 > private_end:
+        return None
+    try:
+        version = read_u32(source_data, private_start)
+        width = read_i32(source_data, private_start + 0x18)
+        height = read_i32(source_data, private_start + 0x1C)
+    except struct.error:
+        return None
+    if version == 1 and 0 < width <= 2000 and 0 < height <= 2000:
+        return {
+            "rect": {"x": 0, "y": 0, "width": width, "height": height},
+            "sourceOffset": private_start + 0x18,
+            "geometryConfidence": "declared_size",
+        }
+    return None
+
+
 def parse_sprite_item_count(meta_component: dict[str, Any], source_data: bytes | None) -> int | None:
     if runtime_component_type(meta_component.get("display_name")) != "Sprite_Holder" or not source_data:
         return None
@@ -500,6 +590,7 @@ def build_component(
                 asset["originalZ"] = entry["originalZ"]
     primary = images[0] if images else None
     rect, confidence, z = pick_rect(component_type, primary, hints)
+    geometry_source_offset = None
     known_rects = [asset["rect"] for asset in images if asset.get("geometryConfidence") == "serialized_entry"]
     if known_rects:
         min_x = min(rect["x"] for rect in known_rects)
@@ -518,12 +609,29 @@ def build_component(
         rect = {"x": min_x, "y": min_y, "width": max_x - min_x, "height": max_y - min_y}
         confidence = "serialized_entries"
         z = 100
+    holder_rect = parse_bitmap_rect(meta_component, source_data) or parse_text_rect(meta_component, source_data) or parse_video_rect(meta_component, source_data)
+    if holder_rect and confidence == "unknown":
+        rect = holder_rect["rect"]
+        confidence = holder_rect["geometryConfidence"]
+        geometry_source_offset = holder_rect["sourceOffset"]
     sprite_item_count = parse_sprite_item_count(meta_component, source_data)
     if sprite_item_count is not None and confidence == "unknown":
         rect = {"x": 0, "y": 0, "width": 48, "height": 48}
         confidence = "synthetic_items"
         z = 50
     if component_type == "Sound_Holder":
+        confidence = "not_visual"
+        rect = {"x": 0, "y": 0, "width": 0, "height": 0}
+    elif component_type == "Recorder":
+        confidence = "not_visual"
+        rect = {"x": 0, "y": 0, "width": 0, "height": 0}
+    elif component_type in {"Panorama", "Panorama_Holder"} and confidence == "unknown":
+        confidence = "fallback_full_page"
+        rect = {"x": 0, "y": 0, "width": 640, "height": 480}
+    elif component_type == "Video_Holder" and confidence == "unknown":
+        confidence = "fallback_full_page"
+        rect = {"x": 0, "y": 0, "width": 640, "height": 480}
+    elif component_type == "HotSpot_Holder" and not hitboxes and int(meta_component.get("private_size") or 0) <= 32:
         confidence = "not_visual"
         rect = {"x": 0, "y": 0, "width": 0, "height": 0}
     return {
@@ -539,6 +647,7 @@ def build_component(
         "itemCount": sprite_item_count,
         "hitboxes": hitboxes,
         "sourceOffset": meta_component.get("offset"),
+        "geometrySourceOffset": geometry_source_offset,
         "privateOffset": meta_component.get("private_offset"),
         "privateSize": meta_component.get("private_size"),
         "primaryAssetUrl": primary.get("url") if primary else None,

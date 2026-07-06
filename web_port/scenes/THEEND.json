@@ -58,6 +58,7 @@
         }
       ],
       "sourceOffset": 309437,
+      "geometrySourceOffset": null,
       "privateOffset": 310542,
       "privateSize": 221,
       "primaryAssetUrl": null,
@@ -82,6 +83,7 @@
       "itemCount": null,
       "hitboxes": [],
       "sourceOffset": 310763,
+      "geometrySourceOffset": null,
       "privateOffset": 311937,
       "privateSize": 1101007,
       "primaryAssetUrl": "../extracted_assets/bdf/THEEND/animations/01_Transparent_Video_Holder_000_0004c28d_board_video_300x125.gif",
@@ -136,18 +138,19 @@
       "sourceType": "Bitmap_Holder",
       "namespace": "Page",
       "index": 2,
-      "z": 2,
+      "z": 0,
       "visible": false,
       "rect": {
         "x": 0,
         "y": 0,
-        "width": 120,
-        "height": 80
+        "width": 640,
+        "height": 480
       },
-      "geometryConfidence": "unknown",
+      "geometryConfidence": "serialized_entry",
       "itemCount": null,
       "hitboxes": [],
       "sourceOffset": 1412944,
+      "geometrySourceOffset": 1414096,
       "privateOffset": 1414076,
       "privateSize": 307356,
       "primaryAssetUrl": null,
@@ -199,7 +202,6 @@
     "rawText": "//###########################################################################\n\n//Script code\n\n//###########################################################################\n\n\n\n\n\nOnOpenPage()\n\n{\n\n\t// Add your component and variables initialization code here\n\n\t// WARNING: All variables definied on this function are global for this page\n\n   int play=0;\n\n   LoadGroup(\"Cursors.grp\");\n\n   SetCursor(0);\n\n   FadeScreen(1,1000);\n\n   SetTimer(20000);\n\n\n\n}\n\n\n\n\n\nvoid OnClosePage(void)\n\n{\n\n\t// Add your close page handler code here\n\n}\n\n\n\n\n\n \n\nvoid OnTimer(void)\n\n{\n\n        //Add your command handler code here\n\n   FadeScreen(0,1000);\n\n   Exit();\n\n}\n\n \n\nvoid OnLButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n}\n\n \n\nvoid HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n   SetCursor(1);\n\n}\n\n\n\n \n\nvoid HotSpot_Holder.MouseMoveOut(int rectID)\n\n{\n\n   if(play==0)   SetCursor(0);\n\n}\n\n\n\n \n\nvoid HotSpot_Holder.LeftButtonClickOn(int rectID)\n\n{\n\n   play=1;\n\n   HotSpot_Holder.DisableHotSpot(1);\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   SetTimer(0);\n\n   FadeScreen(0,1000);\n\n   SetCursor(-2);\n\n   Bitmap_Holder.ShowBitmap(0);\n\n   FadeScreen(1,1000);\n\n   Transparent_Video_Holder.ShowFirsLastVideoFrame(0);\n\n   Transparent_Video_Holder.Play(0,0);\n\n}\n\n\n\n \n\nvoid Group.HotSpot_Holder.LeftButtonClickOn(int rectID)\n\n{\n\n   FadeScreen(0,1000);\n\n   Exit();\n\n}\n\n\n\n \n\nvoid Transparent_Video_Holder.TheEnd(int videoID)\n\n{\n\n   SetTimer(1000);\n\n}\n\n\n\n "
   },
   "warnings": [
-    "1 component(s) have unknown geometry and default to 0,0.",
     "Recovered 1 TransparentVideoHolder asset rect(s) from serialized entries."
   ]
 }
