@@ -1,0 +1,172 @@
+{
+  "id": "G_TAN",
+  "title": "G_TAN",
+  "sourceGrp": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\G_TAN.GRP",
+  "cursors": [
+    {
+      "index": 0,
+      "name": "pause",
+      "width": 32,
+      "height": 32,
+      "url": "../extracted_assets/grp/G_TAN/cursor_00_pause.pgm",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_TAN\\cursor_00_pause.pgm"
+    },
+    {
+      "index": 1,
+      "name": "action",
+      "width": 32,
+      "height": 32,
+      "url": "../extracted_assets/grp/G_TAN/cursor_01_action.pgm",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_TAN\\cursor_01_action.pgm"
+    }
+  ],
+  "components": [
+    {
+      "id": "00_Sound_Holder",
+      "type": "Sound_Holder",
+      "sourceType": "Group.Sound_Holder",
+      "namespace": "Group",
+      "index": 0,
+      "z": 0,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "geometryConfidence": "not_visual",
+      "itemCount": null,
+      "hitboxes": [],
+      "sourceOffset": 2156,
+      "privateOffset": 3058,
+      "privateSize": 974206,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_TAN\\embedded\\00_Group.Sound_Holder_000_00000bfe.wav",
+          "url": "../extracted_assets/grp/G_TAN/embedded/00_Group.Sound_Holder_000_00000bfe.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 3070,
+          "id": 0
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_TAN\\embedded\\00_Group.Sound_Holder_001_000bc98a.wav",
+          "url": "../extracted_assets/grp/G_TAN/embedded/00_Group.Sound_Holder_001_000bc98a.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 772490,
+          "id": 1
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_TAN\\embedded\\00_Group.Sound_Holder_002_000c2212.wav",
+          "url": "../extracted_assets/grp/G_TAN/embedded/00_Group.Sound_Holder_002_000c2212.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 795154,
+          "id": 2
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_TAN\\embedded\\00_Group.Sound_Holder_003_000c538e.wav",
+          "url": "../extracted_assets/grp/G_TAN/embedded/00_Group.Sound_Holder_003_000c538e.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 807822,
+          "id": 3
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_TAN\\embedded\\00_Group.Sound_Holder_004_000ebab6.wav",
+          "url": "../extracted_assets/grp/G_TAN/embedded/00_Group.Sound_Holder_004_000ebab6.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 965302,
+          "id": 4
+        }
+      ]
+    },
+    {
+      "id": "01_HotSpot_Holder",
+      "type": "HotSpot_Holder",
+      "sourceType": "Group.HotSpot_Holder",
+      "namespace": "Group",
+      "index": 1,
+      "z": 100,
+      "visible": false,
+      "rect": {
+        "x": 1,
+        "y": 1,
+        "width": 1000,
+        "height": 478
+      },
+      "geometryConfidence": "serialized_entries",
+      "itemCount": null,
+      "hitboxes": [
+        {
+          "id": 0,
+          "rect": {
+            "x": 624,
+            "y": 1,
+            "width": 377,
+            "height": 478
+          },
+          "sourceOffset": 978386,
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "id": 1,
+          "rect": {
+            "x": 1,
+            "y": 1,
+            "width": 619,
+            "height": 478
+          },
+          "sourceOffset": 978487,
+          "geometryConfidence": "serialized_entry"
+        }
+      ],
+      "sourceOffset": 977264,
+      "privateOffset": 978375,
+      "privateSize": 221,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "02_Sprite_Holder",
+      "type": "Sprite_Holder",
+      "sourceType": "Group.Sprite_Holder",
+      "namespace": "Group",
+      "index": 2,
+      "z": 50,
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 48,
+        "height": 48
+      },
+      "geometryConfidence": "synthetic_items",
+      "itemCount": 5,
+      "hitboxes": [],
+      "sourceOffset": 978596,
+      "privateOffset": 980136,
+      "privateSize": 105924,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    }
+  ],
+  "warnings": []
+}

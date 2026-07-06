@@ -1,0 +1,287 @@
+{
+  "id": "CURSORS1",
+  "title": "CURSORS1",
+  "sourceGrp": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CURSORS1.GRP",
+  "cursors": [
+    {
+      "index": 0,
+      "name": "tu_nie",
+      "width": 28,
+      "height": 30,
+      "url": "../extracted_assets/grp/CURSORS1/cursor_00_tu_nie.pgm",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\cursor_00_tu_nie.pgm"
+    },
+    {
+      "index": 1,
+      "name": "action1",
+      "width": 28,
+      "height": 30,
+      "url": "../extracted_assets/grp/CURSORS1/cursor_01_action1.pgm",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\cursor_01_action1.pgm"
+    }
+  ],
+  "components": [
+    {
+      "id": "00_HotSpot_Holder",
+      "type": "HotSpot_Holder",
+      "sourceType": "Group.HotSpot_Holder",
+      "namespace": "Group",
+      "index": 0,
+      "z": 100,
+      "visible": false,
+      "rect": {
+        "x": 1,
+        "y": -4,
+        "width": 641,
+        "height": 487
+      },
+      "geometryConfidence": "serialized_entries",
+      "itemCount": null,
+      "hitboxes": [
+        {
+          "id": 0,
+          "rect": {
+            "x": 632,
+            "y": -4,
+            "width": 10,
+            "height": 487
+          },
+          "sourceOffset": 2910,
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "id": 1,
+          "rect": {
+            "x": 2,
+            "y": 1,
+            "width": 637,
+            "height": 477
+          },
+          "sourceOffset": 3011,
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "id": 2,
+          "rect": {
+            "x": 1,
+            "y": -4,
+            "width": 35,
+            "height": 50
+          },
+          "sourceOffset": 3112,
+          "geometryConfidence": "serialized_entry"
+        }
+      ],
+      "sourceOffset": 1788,
+      "privateOffset": 2899,
+      "privateSize": 322,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "01_Sprite_Holder",
+      "type": "Sprite_Holder",
+      "sourceType": "Group.Sprite_Holder",
+      "namespace": "Group",
+      "index": 1,
+      "z": 50,
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 48,
+        "height": 48
+      },
+      "geometryConfidence": "synthetic_items",
+      "itemCount": 6,
+      "hitboxes": [],
+      "sourceOffset": 3221,
+      "privateOffset": 4761,
+      "privateSize": 264036,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "02_Sound_Holder",
+      "type": "Sound_Holder",
+      "sourceType": "Group.Sound_Holder",
+      "namespace": "Group",
+      "index": 2,
+      "z": 0,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "geometryConfidence": "not_visual",
+      "itemCount": null,
+      "hitboxes": [],
+      "sourceOffset": 268797,
+      "privateOffset": 269699,
+      "privateSize": 2355726,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_000_00041d8f.wav",
+          "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_000_00041d8f.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 269711,
+          "id": 0
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_001_00047617.wav",
+          "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_001_00047617.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 292375,
+          "id": 1
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_002_0004c667.wav",
+          "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_002_0004c667.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 312935,
+          "id": 2
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_003_000501f3.wav",
+          "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_003_000501f3.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 328179,
+          "id": 3
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_004_0007691b.wav",
+          "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_004_0007691b.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 485659,
+          "id": 4
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_005_00079a97.wav",
+          "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_005_00079a97.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 498327,
+          "id": 5
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_006_0007b003.wav",
+          "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_006_0007b003.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 503811,
+          "id": 6
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_007_0007c9ad.wav",
+          "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_007_0007c9ad.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 510381,
+          "id": 7
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_008_0007d95f.wav",
+          "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_008_0007d95f.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 514399,
+          "id": 8
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_009_000f2569.wav",
+          "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_009_000f2569.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 992617,
+          "id": 9
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_010_0012d267.wav",
+          "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_010_0012d267.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 1233511,
+          "id": 10
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_011_00141ceb.wav",
+          "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_011_00141ceb.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 1318123,
+          "id": 11
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_012_00147c1b.wav",
+          "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_012_00147c1b.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 1342491,
+          "id": 12
+        }
+      ]
+    },
+    {
+      "id": "03_Bitmap_Holder",
+      "type": "Bitmap_Holder",
+      "sourceType": "Group.Bitmap_Holder",
+      "namespace": "Group",
+      "index": 3,
+      "z": 3,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "itemCount": null,
+      "hitboxes": [],
+      "sourceOffset": 2625425,
+      "privateOffset": 2626563,
+      "privateSize": 307356,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    }
+  ],
+  "warnings": []
+}

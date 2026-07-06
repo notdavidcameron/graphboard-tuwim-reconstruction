@@ -1,0 +1,198 @@
+{
+  "id": "G_PIOS",
+  "title": "G_PIOS",
+  "sourceGrp": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\G_PIOS.GRP",
+  "cursors": [
+    {
+      "index": 0,
+      "name": "tu_nie",
+      "width": 28,
+      "height": 30,
+      "url": "../extracted_assets/grp/G_PIOS/cursor_00_tu_nie.pgm",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\cursor_00_tu_nie.pgm"
+    },
+    {
+      "index": 1,
+      "name": "actionj",
+      "width": 28,
+      "height": 30,
+      "url": "../extracted_assets/grp/G_PIOS/cursor_01_actionj.pgm",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\cursor_01_actionj.pgm"
+    },
+    {
+      "index": 2,
+      "name": "upwn",
+      "width": 28,
+      "height": 30,
+      "url": null,
+      "path": null
+    },
+    {
+      "index": 3,
+      "name": "down",
+      "width": 28,
+      "height": 30,
+      "url": "../extracted_assets/grp/G_PIOS/cursor_03_down.pgm",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\cursor_03_down.pgm"
+    }
+  ],
+  "components": [
+    {
+      "id": "00_Sound_Holder",
+      "type": "Sound_Holder",
+      "sourceType": "Group.Sound_Holder",
+      "namespace": "Group",
+      "index": 0,
+      "z": 0,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "geometryConfidence": "not_visual",
+      "itemCount": null,
+      "hitboxes": [],
+      "sourceOffset": 3576,
+      "privateOffset": 4478,
+      "privateSize": 1748050,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_000_0000118a.wav",
+          "url": "../extracted_assets/grp/G_PIOS/embedded/00_Group.Sound_Holder_000_0000118a.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 4490,
+          "id": 0
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_001_00178500.wav",
+          "url": "../extracted_assets/grp/G_PIOS/embedded/00_Group.Sound_Holder_001_00178500.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 1541376,
+          "id": 1
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_002_00179dea.wav",
+          "url": "../extracted_assets/grp/G_PIOS/embedded/00_Group.Sound_Holder_002_00179dea.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 1547754,
+          "id": 2
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_003_0017f672.wav",
+          "url": "../extracted_assets/grp/G_PIOS/embedded/00_Group.Sound_Holder_003_0017f672.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 1570418,
+          "id": 3
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_004_001827ee.wav",
+          "url": "../extracted_assets/grp/G_PIOS/embedded/00_Group.Sound_Holder_004_001827ee.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 1583086,
+          "id": 4
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_005_001a8f16.wav",
+          "url": "../extracted_assets/grp/G_PIOS/embedded/00_Group.Sound_Holder_005_001a8f16.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 1740566,
+          "id": 5
+        }
+      ]
+    },
+    {
+      "id": "01_Sprite_Holder",
+      "type": "Sprite_Holder",
+      "sourceType": "Group.Sprite_Holder",
+      "namespace": "Group",
+      "index": 1,
+      "z": 50,
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 48,
+        "height": 48
+      },
+      "geometryConfidence": "synthetic_items",
+      "itemCount": 11,
+      "hitboxes": [],
+      "sourceOffset": 1752528,
+      "privateOffset": 1754068,
+      "privateSize": 157864,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "02_HotSpot_Holder",
+      "type": "HotSpot_Holder",
+      "sourceType": "Group.HotSpot_Holder",
+      "namespace": "Group",
+      "index": 2,
+      "z": 100,
+      "visible": false,
+      "rect": {
+        "x": -6,
+        "y": 1,
+        "width": 663,
+        "height": 487
+      },
+      "geometryConfidence": "serialized_entries",
+      "itemCount": null,
+      "hitboxes": [
+        {
+          "id": 0,
+          "rect": {
+            "x": 638,
+            "y": 1,
+            "width": 19,
+            "height": 477
+          },
+          "sourceOffset": 1913054,
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "id": 1,
+          "rect": {
+            "x": -6,
+            "y": 12,
+            "width": 634,
+            "height": 476
+          },
+          "sourceOffset": 1913155,
+          "geometryConfidence": "serialized_entry"
+        }
+      ],
+      "sourceOffset": 1911932,
+      "privateOffset": 1913043,
+      "privateSize": 221,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    }
+  ],
+  "warnings": []
+}

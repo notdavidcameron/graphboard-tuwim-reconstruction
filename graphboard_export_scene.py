@@ -139,6 +139,74 @@ def read_i32(data: bytes, offset: int) -> int:
     return struct.unpack_from("<i", data, offset)[0]
 
 
+def runtime_component_type(component_type: str | None) -> str:
+    value = str(component_type or "")
+    return value.removeprefix("Group.")
+
+
+def parse_hotspot_entries(meta_component: dict[str, Any], source_data: bytes | None) -> list[dict[str, Any]]:
+    """Recover HotSpotHolder rectangles from the compact serialized table.
+
+    Corpus samples show a 7-byte prefix, a little-endian u32 count at +7,
+    0x65-byte entries, then an 8-byte tail. Each entry begins with
+    left/top/right/bottom i32 values.
+    """
+    if runtime_component_type(meta_component.get("display_name")) != "HotSpot_Holder" or not source_data:
+        return []
+    private_start = int(meta_component.get("private_offset") or 0)
+    private_size = int(meta_component.get("private_size") or 0)
+    private_end = min(len(source_data), private_start + private_size)
+    if private_start + 19 > private_end:
+        return []
+    try:
+        count = read_u32(source_data, private_start + 7)
+    except struct.error:
+        return []
+    if count <= 0 or count > 100 or private_start + 11 + count * 0x65 > private_end:
+        return []
+
+    entries: list[dict[str, Any]] = []
+    cursor = private_start + 11
+    for index in range(count):
+        try:
+            left = read_i32(source_data, cursor)
+            top = read_i32(source_data, cursor + 4)
+            right = read_i32(source_data, cursor + 8)
+            bottom = read_i32(source_data, cursor + 12)
+        except struct.error:
+            break
+        width = max(1, right - left)
+        height = max(1, bottom - top)
+        if -5000 <= left <= 5000 and -5000 <= top <= 5000 and 0 < width <= 5000 and 0 < height <= 5000:
+            entries.append(
+                {
+                    "id": index,
+                    "rect": {"x": left, "y": top, "width": width, "height": height},
+                    "sourceOffset": cursor,
+                    "geometryConfidence": "serialized_entry",
+                }
+            )
+        cursor += 0x65
+    return entries
+
+
+def parse_sprite_item_count(meta_component: dict[str, Any], source_data: bytes | None) -> int | None:
+    if runtime_component_type(meta_component.get("display_name")) != "Sprite_Holder" or not source_data:
+        return None
+    private_start = int(meta_component.get("private_offset") or 0)
+    private_size = int(meta_component.get("private_size") or 0)
+    if private_start + 12 > min(len(source_data), private_start + private_size):
+        return None
+    try:
+        version = read_u32(source_data, private_start)
+        count = read_u32(source_data, private_start + 4)
+    except struct.error:
+        return None
+    if version == 1 and 0 <= count <= 200:
+        return count
+    return None
+
+
 def board_video_still_size(width: int, height: int) -> int:
     stride = ((width * 8 + 0x1F) >> 3) & 0x1FFFFFFC
     return stride * height
@@ -146,7 +214,7 @@ def board_video_still_size(width: int, height: int) -> int:
 
 def parse_transparent_video_entries(meta_component: dict[str, Any], bdf_data: bytes | None) -> dict[int, dict[str, Any]]:
     """Recover per-video stage geometry from TransparentVideoHolder's serialized entries."""
-    if meta_component.get("display_name") != "Transparent_Video_Holder" or not bdf_data:
+    if runtime_component_type(meta_component.get("display_name")) != "Transparent_Video_Holder" or not bdf_data:
         return {}
 
     private_start = int(meta_component.get("private_offset") or 0)
@@ -216,10 +284,13 @@ def parse_transparent_video_entries(meta_component: dict[str, Any], bdf_data: by
 
 def image_asset(item: dict[str, Any], web_root: Path, workspace_root: Path) -> dict[str, Any]:
     path = item.get("path") or item.get("video_output")
+    still_path = item.get("still_path") or item.get("still_output")
     return {
         "kind": item.get("kind"),
         "path": path,
         "url": rel_url(path, web_root, workspace_root),
+        "stillPath": still_path,
+        "stillUrl": rel_url(still_path, web_root, workspace_root),
         "width": item.get("width") or item.get("video_width"),
         "height": item.get("height") or item.get("video_height"),
         "frameCount": item.get("frame_count"),
@@ -243,7 +314,131 @@ def audio_asset(item: dict[str, Any], web_root: Path, workspace_root: Path) -> d
     }
 
 
+PUZZLE_FALLBACK_PREFIXES = [
+    ("ABECADP", "ABECADLO"),
+    ("CUDAP", "CUDA"),
+    ("DYZIOP", "DYZIO"),
+    ("FIGIELP", "FIGIELEK"),
+    ("GRZESP", "GRZESIU"),
+    ("KOT", "KOTEK"),
+    ("KRAWIEP", "KRAWIEC"),
+    ("LOK", "LOKOMOT"),
+    ("MALUSP", "MALUSKIE"),
+    ("MICHALP", "MICH0"),
+    ("MROZP", "MROZ"),
+    ("MURARZP", "MURARZ"),
+    ("MURZYNP", "MURZYNEK"),
+    ("OKUL", "OKULARY"),
+    ("PIEKARP", "PIEKARZ"),
+    ("PLOTKIP", "PLOTKI"),
+    ("PSTR", "PSTRYK"),
+    ("RACHUNP", "RACHUNEK"),
+    ("RADIOP", "RADIO"),
+    ("RYCE", "RYCERZ"),
+    ("RZECZ", "RZECZKA"),
+    ("SLON", "SLON"),
+    ("SLOW", "SLOWIK"),
+    ("SZEWCP", "SZEWC"),
+    ("TANIE", "TANIEC"),
+    ("TRALALP", "TRALALA"),
+    ("WIES", "WIES"),
+    ("WSZYSCP", "WSZYSCY"),
+    ("ZOSIAP", "ZOSIA"),
+]
+
+
+def bmp_dimensions(path: Path) -> tuple[int | None, int | None]:
+    if not path.exists():
+        return None, None
+    data = path.read_bytes()[:26]
+    if len(data) < 26 or data[:2] != b"BM":
+        return None, None
+    return struct.unpack_from("<i", data, 18)[0], abs(struct.unpack_from("<i", data, 22)[0])
+
+
+def largest_visual_asset(scene_dir: Path) -> tuple[Path, int | None, int | None] | None:
+    background = scene_dir / "background.bmp"
+    if background.exists():
+        width, height = bmp_dimensions(background)
+        return background, width, height
+    metadata = scene_dir / "metadata.json"
+    if not metadata.exists():
+        return None
+    meta = read_json(metadata)
+    candidates = []
+    for output in meta.get("outputs", []):
+        if output.get("kind") not in IMAGE_KINDS:
+            continue
+        path = Path(output.get("path") or "")
+        if not path.exists():
+            continue
+        width = output.get("width")
+        height = output.get("height")
+        area = int(width or 0) * int(height or 0)
+        candidates.append((area, path, width, height))
+    if not candidates:
+        return None
+    _area, path, width, height = max(candidates, key=lambda item: item[0])
+    return path, width, height
+
+
+def puzzle_fallback_background(scene_id: str, bdf_root: Path) -> tuple[Path, int | None, int | None] | None:
+    candidates = []
+    upper_id = scene_id.upper()
+    for prefix, target in PUZZLE_FALLBACK_PREFIXES:
+        if upper_id.startswith(prefix):
+            candidates.append(target)
+    candidates.append(re.sub(r"P[12]$", "", upper_id))
+    for candidate in candidates:
+        visual = largest_visual_asset(bdf_root / candidate)
+        if visual:
+            return visual
+    sibling_prefix = re.sub(r"\d?P[12]$", "", upper_id)
+    sibling_candidates = sorted(path for path in bdf_root.glob(f"{sibling_prefix}*") if path.is_dir())
+    for sibling in sibling_candidates:
+        if re.search(r"P[12]$", sibling.name, re.IGNORECASE):
+            continue
+        visual = largest_visual_asset(sibling)
+        if visual:
+            return visual
+    return None
+
+
+def attach_puzzle_fallbacks(
+    components: list[dict[str, Any]],
+    scene_id: str,
+    bdf_root: Path,
+    web_root: Path,
+    workspace_root: Path,
+) -> None:
+    fallback = puzzle_fallback_background(scene_id, bdf_root)
+    if not fallback:
+        return
+    fallback_path, width, height = fallback
+    for component in components:
+        if component.get("type") != "Puzzle" or component.get("assets"):
+            continue
+        component["assets"].append(
+            {
+                "kind": "puzzle_fallback_background",
+                "path": str(fallback_path),
+                "url": rel_url(str(fallback_path), web_root, workspace_root),
+                "width": width,
+                "height": height,
+                "frameCount": None,
+                "offset": None,
+                "name": fallback_path.parent.name,
+                "id": 0,
+                "geometryConfidence": "fallback",
+            }
+        )
+        component["primaryAssetUrl"] = component["assets"][0]["url"]
+        component["geometryConfidence"] = "fallback"
+        component["rect"] = {"x": 0, "y": 0, "width": 580, "height": 480}
+
+
 def pick_rect(component_type: str, asset: dict[str, Any] | None, hints: dict[str, dict[int, dict[str, int]]]) -> tuple[dict[str, int], str, int]:
+    component_type = runtime_component_type(component_type)
     width = int(asset.get("width") or 120) if asset else 120
     height = int(asset.get("height") or 80) if asset else 80
     z = 0
@@ -278,17 +473,19 @@ def build_component(
     web_root: Path,
     workspace_root: Path,
     hints: dict[str, dict[int, dict[str, int]]],
-    bdf_data: bytes | None = None,
+    source_data: bytes | None = None,
+    namespace: str = "Page",
 ) -> dict[str, Any]:
     images = []
     audios = []
+    component_type = runtime_component_type(meta_component.get("display_name"))
     for item in meta_component.get("embedded", []):
         kind = item.get("kind")
         if kind in IMAGE_KINDS:
             images.append(image_asset(item, web_root, workspace_root))
         elif kind in AUDIO_KINDS:
             audios.append(audio_asset(item, web_root, workspace_root))
-    tvh_entries = parse_transparent_video_entries(meta_component, bdf_data)
+    tvh_entries = parse_transparent_video_entries(meta_component, source_data)
     if tvh_entries:
         for asset in images:
             item_id = normalized_board_video_id(asset.get("path") or "")
@@ -302,7 +499,7 @@ def build_component(
                 asset["originalRect"] = entry["originalRect"]
                 asset["originalZ"] = entry["originalZ"]
     primary = images[0] if images else None
-    rect, confidence, z = pick_rect(meta_component.get("display_name", ""), primary, hints)
+    rect, confidence, z = pick_rect(component_type, primary, hints)
     known_rects = [asset["rect"] for asset in images if asset.get("geometryConfidence") == "serialized_entry"]
     if known_rects:
         min_x = min(rect["x"] for rect in known_rects)
@@ -312,17 +509,35 @@ def build_component(
         rect = {"x": min_x, "y": min_y, "width": max_x - min_x, "height": max_y - min_y}
         confidence = "serialized_entries"
         z = min(int(asset.get("z") or 0) for asset in images if asset.get("geometryConfidence") == "serialized_entry")
-    if meta_component.get("display_name") == "Sound_Holder":
+    hitboxes = parse_hotspot_entries(meta_component, source_data)
+    if hitboxes:
+        min_x = min(item["rect"]["x"] for item in hitboxes)
+        min_y = min(item["rect"]["y"] for item in hitboxes)
+        max_x = max(item["rect"]["x"] + item["rect"]["width"] for item in hitboxes)
+        max_y = max(item["rect"]["y"] + item["rect"]["height"] for item in hitboxes)
+        rect = {"x": min_x, "y": min_y, "width": max_x - min_x, "height": max_y - min_y}
+        confidence = "serialized_entries"
+        z = 100
+    sprite_item_count = parse_sprite_item_count(meta_component, source_data)
+    if sprite_item_count is not None and confidence == "unknown":
+        rect = {"x": 0, "y": 0, "width": 48, "height": 48}
+        confidence = "synthetic_items"
+        z = 50
+    if component_type == "Sound_Holder":
         confidence = "not_visual"
         rect = {"x": 0, "y": 0, "width": 0, "height": 0}
     return {
-        "id": f"{meta_component.get('index'):02d}_{safe_id(meta_component.get('display_name', 'component'))}",
-        "type": meta_component.get("display_name"),
+        "id": f"{meta_component.get('index'):02d}_{safe_id(component_type)}",
+        "type": component_type,
+        "sourceType": meta_component.get("display_name"),
+        "namespace": namespace,
         "index": meta_component.get("index"),
         "z": z if confidence != "unknown" else meta_component.get("index", 0),
-        "visible": bool(primary and confidence != "not_visual"),
+        "visible": bool((primary or sprite_item_count is not None) and confidence != "not_visual"),
         "rect": rect,
         "geometryConfidence": confidence,
+        "itemCount": sprite_item_count,
+        "hitboxes": hitboxes,
         "sourceOffset": meta_component.get("offset"),
         "privateOffset": meta_component.get("private_offset"),
         "privateSize": meta_component.get("private_size"),
@@ -341,8 +556,9 @@ def build_scene(meta_path: Path, web_root: Path, workspace_root: Path) -> dict[s
     source_path = Path(meta.get("source") or "")
     bdf_data = source_path.read_bytes() if source_path.exists() else None
     components = [
-        build_component(component, web_root, workspace_root, hints, bdf_data) for component in meta.get("components", [])
+        build_component(component, web_root, workspace_root, hints, bdf_data, "Page") for component in meta.get("components", [])
     ]
+    attach_puzzle_fallbacks(components, meta_path.parent.name, meta_path.parent.parent, web_root, workspace_root)
     background_bmp = page_dir / "background.bmp"
     palette = page_dir / "background_palette.bin"
 
@@ -382,6 +598,37 @@ def build_scene(meta_path: Path, web_root: Path, workspace_root: Path) -> dict[s
     }
 
 
+def build_group(meta_path: Path, web_root: Path, workspace_root: Path) -> dict[str, Any]:
+    meta = read_json(meta_path)
+    source_path = Path(meta.get("source") or "")
+    grp_data = source_path.read_bytes() if source_path.exists() else None
+    components = [
+        build_component(component, web_root, workspace_root, {"MultiBitmap": {}, "Sprite_Holder": {}, "Transparent_Video_Holder": {}}, grp_data, "Group")
+        for component in meta.get("components", [])
+    ]
+    cursors = []
+    for cursor in meta.get("cursors", []):
+        pgm = cursor.get("pgm_output")
+        cursors.append(
+            {
+                "index": cursor.get("index"),
+                "name": cursor.get("name"),
+                "width": cursor.get("width"),
+                "height": cursor.get("height"),
+                "url": rel_url(pgm, web_root, workspace_root),
+                "path": pgm,
+            }
+        )
+    return {
+        "id": meta_path.parent.name,
+        "title": meta_path.parent.name,
+        "sourceGrp": meta.get("source"),
+        "cursors": cursors,
+        "components": components,
+        "warnings": [],
+    }
+
+
 def validate_scene(scene: dict[str, Any], workspace_root: Path) -> list[str]:
     errors = []
     urls = []
@@ -394,6 +641,8 @@ def validate_scene(scene: dict[str, Any], workspace_root: Path) -> list[str]:
         for asset in component.get("assets", []):
             if asset.get("url"):
                 urls.append(asset["url"])
+            if asset.get("stillUrl"):
+                urls.append(asset["stillUrl"])
         for asset in component.get("audio", []):
             if asset.get("url"):
                 urls.append(asset["url"])
@@ -416,7 +665,9 @@ def main() -> int:
     workspace_root = Path.cwd()
     web_root = args.output
     scenes_dir = web_root / "scenes"
+    groups_dir = web_root / "groups"
     scenes_dir.mkdir(parents=True, exist_ok=True)
+    groups_dir.mkdir(parents=True, exist_ok=True)
 
     metadata_paths = sorted((args.extracted / "bdf").glob("*/metadata.json"))
     available = {path.parent.name.upper(): path for path in metadata_paths}
@@ -432,10 +683,36 @@ def main() -> int:
         "scriptsFound": 0,
         "scriptsMissing": 0,
         "totalPages": 0,
+        "totalGroups": 0,
+        "totalGroupComponents": 0,
+        "totalGroupAssets": 0,
         "totalComponents": 0,
         "totalAssets": 0,
         "warnings": order_warnings,
     }
+
+    group_entries = []
+    for group_meta_path in sorted((args.extracted / "grp").glob("*/metadata.json")):
+        group = build_group(group_meta_path, web_root, workspace_root)
+        write_json(groups_dir / f"{group['id']}.json", group)
+        component_count = len(group["components"])
+        asset_count = sum(len(component["assets"]) + len(component["audio"]) for component in group["components"])
+        missing = validate_scene(group, workspace_root)
+        validation["missingAssets"].extend({"group": group["id"], "error": item} for item in missing)
+        validation["totalGroups"] += 1
+        validation["totalGroupComponents"] += component_count
+        validation["totalGroupAssets"] += asset_count
+        group_entries.append(
+            {
+                "id": group["id"],
+                "title": group["title"],
+                "url": f"groups/{group['id']}.json",
+                "sourceGrp": group["sourceGrp"],
+                "cursorCount": len(group["cursors"]),
+                "componentCount": component_count,
+                "assetCount": asset_count,
+            }
+        )
 
     for scene_id in order:
         meta_path = available.get(scene_id)
@@ -475,10 +752,22 @@ def main() -> int:
         "generatedFrom": str(args.extracted),
         "projectOrderSource": str(args.project) if args.project else None,
         "orderWarnings": order_warnings,
+        "groupsUrl": "groups/index.json",
         "scenes": index_entries,
         "validation": validation,
     }
+    groups_index = {
+        "title": "GraphBoard Group Assets",
+        "generatedFrom": str(args.extracted / "grp"),
+        "groups": group_entries,
+        "validation": {
+            "totalGroups": validation["totalGroups"],
+            "totalGroupComponents": validation["totalGroupComponents"],
+            "totalGroupAssets": validation["totalGroupAssets"],
+        },
+    }
     write_json(scenes_dir / "index.json", index)
+    write_json(groups_dir / "index.json", groups_index)
     write_json(web_root / "validation.json", validation)
     print(json.dumps(validation, indent=2, ensure_ascii=False))
     return 1 if validation["missingAssets"] else 0

@@ -43,7 +43,99 @@
       "kind": "cursor_pgm",
       "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_TAN\\cursor_01_action.pgm",
       "size": 1037
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_TAN\\embedded\\00_Group.Sound_Holder_000_00000bfe.wav",
+      "size": 769324
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_TAN\\embedded\\00_Group.Sound_Holder_001_000bc98a.wav",
+      "size": 22568
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_TAN\\embedded\\00_Group.Sound_Holder_002_000c2212.wav",
+      "size": 12572
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_TAN\\embedded\\00_Group.Sound_Holder_003_000c538e.wav",
+      "size": 157384
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_TAN\\embedded\\00_Group.Sound_Holder_004_000ebab6.wav",
+      "size": 11870
     }
   ],
-  "component_list_offset": 2148
+  "component_list_offset": 2148,
+  "component_list_version": 1,
+  "component_count": 3,
+  "components": [
+    {
+      "index": 0,
+      "offset": 2156,
+      "clsid": "1720D306-6932-11D0-B468-008048EB5D40",
+      "display_name": "Group.Sound_Holder",
+      "private_offset": 3058,
+      "private_size": 974206,
+      "embedded": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_TAN\\embedded\\00_Group.Sound_Holder_000_00000bfe.wav",
+          "offset": 3070,
+          "size": 769324,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_TAN\\embedded\\00_Group.Sound_Holder_001_000bc98a.wav",
+          "offset": 772490,
+          "size": 22568,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_TAN\\embedded\\00_Group.Sound_Holder_002_000c2212.wav",
+          "offset": 795154,
+          "size": 12572,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_TAN\\embedded\\00_Group.Sound_Holder_003_000c538e.wav",
+          "offset": 807822,
+          "size": 157384,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_TAN\\embedded\\00_Group.Sound_Holder_004_000ebab6.wav",
+          "offset": 965302,
+          "size": 11870,
+          "extension": ".wav"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "offset": 977264,
+      "clsid": "DA768116-5341-11D0-B444-008048EB5D40",
+      "display_name": "Group.HotSpot_Holder",
+      "private_offset": 978375,
+      "private_size": 221,
+      "embedded": []
+    },
+    {
+      "index": 2,
+      "offset": 978596,
+      "clsid": "B64F3336-5368-11D0-B445-008048EB5D40",
+      "display_name": "Group.Sprite_Holder",
+      "private_offset": 980136,
+      "private_size": 105924,
+      "embedded": []
+    }
+  ]
 }

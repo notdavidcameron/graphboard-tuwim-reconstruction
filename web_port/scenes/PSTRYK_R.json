@@ -11,15 +11,17 @@
   "background": {
     "colorIndex": 0,
     "flag": 0,
-    "bmpPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK_R\\background.bmp",
+    "bmpPath": "extracted_assets\\bdf\\PSTRYK_R\\background.bmp",
     "bmpUrl": "../extracted_assets/bdf/PSTRYK_R/background.bmp",
-    "palettePath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK_R\\background_palette.bin",
+    "palettePath": "extracted_assets\\bdf\\PSTRYK_R\\background_palette.bin",
     "paletteUrl": "../extracted_assets/bdf/PSTRYK_R/background_palette.bin"
   },
   "components": [
     {
       "id": "00_Recorder",
       "type": "Recorder",
+      "sourceType": "Recorder",
+      "namespace": "Page",
       "index": 0,
       "z": 0,
       "visible": false,
@@ -30,6 +32,8 @@
         "height": 80
       },
       "geometryConfidence": "unknown",
+      "itemCount": null,
+      "hitboxes": [],
       "sourceOffset": 309353,
       "privateOffset": 310347,
       "privateSize": 108,
@@ -40,6 +44,8 @@
     {
       "id": "01_Text_Holder",
       "type": "Text_Holder",
+      "sourceType": "Text_Holder",
+      "namespace": "Page",
       "index": 1,
       "z": 1,
       "visible": false,
@@ -50,6 +56,8 @@
         "height": 80
       },
       "geometryConfidence": "unknown",
+      "itemCount": null,
+      "hitboxes": [],
       "sourceOffset": 310455,
       "privateOffset": 312081,
       "privateSize": 40716,
@@ -60,6 +68,8 @@
     {
       "id": "02_Bitmap_Holder",
       "type": "Bitmap_Holder",
+      "sourceType": "Bitmap_Holder",
+      "namespace": "Page",
       "index": 2,
       "z": 2,
       "visible": false,
@@ -70,6 +80,8 @@
         "height": 80
       },
       "geometryConfidence": "unknown",
+      "itemCount": null,
+      "hitboxes": [],
       "sourceOffset": 352797,
       "privateOffset": 353929,
       "privateSize": 1236,
@@ -80,6 +92,8 @@
     {
       "id": "03_Sound_Holder",
       "type": "Sound_Holder",
+      "sourceType": "Sound_Holder",
+      "namespace": "Page",
       "index": 3,
       "z": 0,
       "visible": false,
@@ -90,6 +104,8 @@
         "height": 0
       },
       "geometryConfidence": "not_visual",
+      "itemCount": null,
+      "hitboxes": [],
       "sourceOffset": 355165,
       "privateOffset": 356061,
       "privateSize": 20290,
@@ -110,7 +126,7 @@
     }
   ],
   "script": {
-    "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK_R\\script.txt",
+    "path": "extracted_assets\\bdf\\PSTRYK_R\\script.txt",
     "url": "../extracted_assets/bdf/PSTRYK_R/script.txt",
     "handlers": [
       {

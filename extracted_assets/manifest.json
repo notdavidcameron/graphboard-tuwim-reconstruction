@@ -10,12 +10,6 @@
       "output_count": 2
     },
     {
-      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ABEC_PS.BDF",
-      "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ABEC_PS",
-      "component_count": 4,
-      "output_count": 32
-    },
-    {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ABEC_R.BDF",
       "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ABEC_R",
       "component_count": 4,
@@ -1215,43 +1209,43 @@
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CURSORS.GRP",
       "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS",
       "cursor_count": 13,
-      "output_count": 26
+      "output_count": 39
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CURSORS1.GRP",
       "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1",
       "cursor_count": 2,
-      "output_count": 4
+      "output_count": 17
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CURSORS2.GRP",
       "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS2",
       "cursor_count": 13,
-      "output_count": 26
+      "output_count": 39
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\G_PIOS.GRP",
       "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS",
       "cursor_count": 4,
-      "output_count": 7
+      "output_count": 13
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\G_REC.GRP",
       "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC",
       "cursor_count": 6,
-      "output_count": 12
+      "output_count": 19
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\G_TAN.GRP",
       "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_TAN",
       "cursor_count": 2,
-      "output_count": 4
+      "output_count": 9
     },
     {
       "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\GR_CZYM.GRP",
       "output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM",
       "cursor_count": 2,
-      "output_count": 4
+      "output_count": 17
     }
   ],
   "skipped": [
@@ -1260,5 +1254,10 @@
       "reason": "not a YDP Board data file"
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "source": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ABEC_PS.BDF",
+      "error": "OSError(22, 'Invalid argument')"
+    }
+  ]
 }

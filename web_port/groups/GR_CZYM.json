@@ -1,0 +1,263 @@
+{
+  "id": "GR_CZYM",
+  "title": "GR_CZYM",
+  "sourceGrp": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\GR_CZYM.GRP",
+  "cursors": [
+    {
+      "index": 0,
+      "name": "tu_nie",
+      "width": 28,
+      "height": 30,
+      "url": "../extracted_assets/grp/GR_CZYM/cursor_00_tu_nie.pgm",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\cursor_00_tu_nie.pgm"
+    },
+    {
+      "index": 1,
+      "name": "action1",
+      "width": 28,
+      "height": 30,
+      "url": "../extracted_assets/grp/GR_CZYM/cursor_01_action1.pgm",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\cursor_01_action1.pgm"
+    }
+  ],
+  "components": [
+    {
+      "id": "00_HotSpot_Holder",
+      "type": "HotSpot_Holder",
+      "sourceType": "Group.HotSpot_Holder",
+      "namespace": "Group",
+      "index": 0,
+      "z": 100,
+      "visible": false,
+      "rect": {
+        "x": -73,
+        "y": -45,
+        "width": 753,
+        "height": 525
+      },
+      "geometryConfidence": "serialized_entries",
+      "itemCount": null,
+      "hitboxes": [
+        {
+          "id": 0,
+          "rect": {
+            "x": -73,
+            "y": -45,
+            "width": 753,
+            "height": 47
+          },
+          "sourceOffset": 2910,
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "id": 1,
+          "rect": {
+            "x": 639,
+            "y": -7,
+            "width": 10,
+            "height": 487
+          },
+          "sourceOffset": 3011,
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "id": 2,
+          "rect": {
+            "x": 4,
+            "y": 6,
+            "width": 624,
+            "height": 471
+          },
+          "sourceOffset": 3112,
+          "geometryConfidence": "serialized_entry"
+        }
+      ],
+      "sourceOffset": 1788,
+      "privateOffset": 2899,
+      "privateSize": 322,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "01_Sound_Holder",
+      "type": "Sound_Holder",
+      "sourceType": "Group.Sound_Holder",
+      "namespace": "Group",
+      "index": 1,
+      "z": 0,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "geometryConfidence": "not_visual",
+      "itemCount": null,
+      "hitboxes": [],
+      "sourceOffset": 3221,
+      "privateOffset": 4123,
+      "privateSize": 2360750,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_000_00001027.wav",
+          "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_000_00001027.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 4135,
+          "id": 0
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_001_000bb92f.wav",
+          "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_001_000bb92f.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 768303,
+          "id": 1
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_002_000d7d15.wav",
+          "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_002_000d7d15.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 883989,
+          "id": 2
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_003_000ff6df.wav",
+          "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_003_000ff6df.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 1046239,
+          "id": 3
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_004_001940cb.wav",
+          "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_004_001940cb.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 1654987,
+          "id": 4
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_005_001c0c9f.wav",
+          "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_005_001c0c9f.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 1838239,
+          "id": 5
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_006_001c6527.wav",
+          "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_006_001c6527.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 1860903,
+          "id": 6
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_007_001c96a3.wav",
+          "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_007_001c96a3.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 1873571,
+          "id": 7
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_008_001efdcb.wav",
+          "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_008_001efdcb.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 2031051,
+          "id": 8
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_009_001f848f.wav",
+          "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_009_001f848f.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 2065551,
+          "id": 9
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_010_00200b53.wav",
+          "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_010_00200b53.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 2100051,
+          "id": 10
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_011_0023b851.wav",
+          "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_011_0023b851.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 2340945,
+          "id": 11
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_012_0023e70f.wav",
+          "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_012_0023e70f.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 2352911,
+          "id": 12
+        }
+      ]
+    },
+    {
+      "id": "02_Sprite_Holder",
+      "type": "Sprite_Holder",
+      "sourceType": "Group.Sprite_Holder",
+      "namespace": "Group",
+      "index": 2,
+      "z": 50,
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 48,
+        "height": 48
+      },
+      "geometryConfidence": "synthetic_items",
+      "itemCount": 7,
+      "hitboxes": [],
+      "sourceOffset": 2364873,
+      "privateOffset": 2366413,
+      "privateSize": 114136,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    }
+  ],
+  "warnings": []
+}

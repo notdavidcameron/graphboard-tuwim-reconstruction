@@ -3,68 +3,140 @@ class GraphBoardRuntime {
     this.stage = stage;
     this.logTarget = logTarget;
     this.scene = null;
+    this.groups = new Map();
+    this.group = null;
     this.layers = new Map();
     this.audio = new Map();
     this.assets = new Map();
     this.hotspots = new Map();
     this.variables = new Map();
     this.loadedGroup = null;
+    this.cursorId = 0;
     this.screenEnabled = true;
     this.callDepth = 0;
     this.onLoadPage = null;
     this.timers = [];
     this.videoTimers = new Map();
     this.returning = false;
+    this.returnValue = undefined;
+    this.recorder = { file: "", hasContent: false, recording: false, playing: false };
+    this.puzzle = { active: false, drops: 0 };
+    this.userInputDepth = 0;
+    this.trustedCallbackDepth = 0;
+    this.handlerStack = [];
   }
 
   reset(scene) {
     this.clearTimers();
     this.clearVideoTimers();
     this.scene = scene;
+    this.group = null;
     this.layers.clear();
     this.audio.clear();
     this.assets.clear();
     this.hotspots.clear();
     this.variables.clear();
     this.loadedGroup = null;
+    this.cursorId = 0;
     this.screenEnabled = true;
+    this.recorder = { file: "", hasContent: false, recording: false, playing: false };
+    this.puzzle = { active: false, drops: 0 };
+    this.userInputDepth = 0;
+    this.trustedCallbackDepth = 0;
+    this.handlerStack = [];
     if (this.logTarget) this.logTarget.textContent = "";
     this.indexSceneAssets();
     this.indexExistingDom();
     this.log(`runtime ready: ${scene?.id || "no scene"}`);
   }
 
+  setGroups(groups) {
+    this.groups = new Map();
+    for (const group of groups || []) {
+      this.groups.set(this.groupKey(group.id), group);
+      this.groups.set(this.groupKey(group.sourceGrp), group);
+    }
+    this.log(`groups ready: ${this.groups.size}`);
+  }
+
+  groupKey(name) {
+    return String(name || "")
+      .replace(/^.*[\\/]/, "")
+      .replace(/\.grp$/i, "")
+      .toUpperCase();
+  }
+
+  key(namespace, type, id) {
+    return `${namespace}:${type}:${Number(id) || 0}`;
+  }
+
+  legacyKey(type, id) {
+    return `${type}:${Number(id) || 0}`;
+  }
+
+  normalizeType(type) {
+    return String(type || "").replace(/^Group\./, "");
+  }
+
+  indexAsset(namespace, component, asset) {
+    const type = this.normalizeType(component.type);
+    const id = Number(asset.id ?? 0);
+    const ids = new Set([id]);
+    if ((type === "Transparent_Video_Holder" || type === "Sprite_Holder") && id > 0 && id % 2 === 0) {
+      ids.add(id / 2);
+    }
+    for (const itemId of ids) {
+      this.assets.set(this.key(namespace, type, itemId), asset);
+      if (namespace === "Page") this.assets.set(this.legacyKey(type, itemId), asset);
+    }
+  }
+
   indexSceneAssets() {
     for (const component of this.scene?.components || []) {
-      for (const asset of component.assets || []) {
-        const id = Number(asset.id ?? 0);
-        this.assets.set(`${component.type}:${id}`, asset);
-        const runtimeId = (component.type === "Transparent_Video_Holder" || component.type === "Sprite_Holder") && id > 0 && id % 2 === 0
-          ? id / 2
-          : id;
-        this.assets.set(`${component.type}:${runtimeId}`, asset);
-      }
+      for (const asset of component.assets || []) this.indexAsset("Page", component, asset);
     }
   }
 
   indexExistingDom() {
-    for (const layer of this.stage.querySelectorAll(".layer")) {
-      const key = layer.dataset.runtimeKey;
-      if (key) this.layers.set(key, layer);
+    for (const layer of this.stage.querySelectorAll("[data-runtime-layer='1']")) {
+      this.indexLayer(layer);
     }
     if (typeof document === "undefined") return;
     for (const audio of document.querySelectorAll("#audioList audio")) {
-      const key = audio.dataset.runtimeKey;
-      if (key) this.audio.set(key, audio);
-      if (!audio.dataset.runtimeIndexed) {
-        audio.dataset.runtimeIndexed = "1";
-        audio.addEventListener("ended", () => {
-          const type = audio.dataset.componentType;
-          const id = Number(audio.dataset.runtimeId ?? audio.dataset.assetId ?? 0);
-          this.executeHandler(`${type}.EndPlaySound`, [id]);
-          if (type === "Sound_Holder") this.executeHandler("Sound_Holder.EndPlaySound", [id]);
-        });
-      }
+      this.indexAudio(audio);
+    }
+  }
+
+  indexLayer(layer) {
+    const namespace = layer.dataset.runtimeNamespace || "Page";
+    const type = this.normalizeType(layer.dataset.componentType);
+    const runtimeId = Number(layer.dataset.runtimeId ?? layer.dataset.assetId ?? 0);
+    const assetId = Number(layer.dataset.assetId ?? runtimeId);
+    const ids = new Set([runtimeId, assetId]);
+    for (const id of ids) {
+      this.layers.set(this.key(namespace, type, id), layer);
+      if (namespace === "Page") this.layers.set(this.legacyKey(type, id), layer);
+    }
+  }
+
+  indexAudio(audio) {
+    const namespace = audio.dataset.runtimeNamespace || "Page";
+    const type = this.normalizeType(audio.dataset.componentType);
+    const runtimeId = Number(audio.dataset.runtimeId ?? audio.dataset.assetId ?? 0);
+    const assetId = Number(audio.dataset.assetId ?? runtimeId);
+    for (const id of new Set([runtimeId, assetId])) {
+      this.audio.set(this.key(namespace, type, id), audio);
+      if (namespace === "Page") this.audio.set(this.legacyKey(type, id), audio);
+    }
+    if (!audio.dataset.runtimeIndexed) {
+      audio.dataset.runtimeIndexed = "1";
+      audio.addEventListener("ended", () => {
+        const endedType = this.normalizeType(audio.dataset.componentType);
+        const id = Number(audio.dataset.runtimeId ?? audio.dataset.assetId ?? 0);
+        const ns = audio.dataset.runtimeNamespace || "Page";
+        this.executeHandler(`${ns === "Group" ? "Group." : ""}${endedType}.EndPlaySound`, [id]);
+        if (endedType === "Sound_Holder" && ns === "Page") this.executeHandler("Sound_Holder.EndPlaySound", [id]);
+      });
     }
   }
 
@@ -81,56 +153,166 @@ class GraphBoardRuntime {
   log(message) {
     if (!this.logTarget) return;
     const line = `[${new Date().toLocaleTimeString()}] ${message}`;
-    this.logTarget.textContent = `${line}\n${this.logTarget.textContent}`.slice(0, 7000);
+    this.logTarget.textContent = `${line}\n${this.logTarget.textContent}`.slice(0, 9000);
   }
 
-  component(type) {
-    return (this.scene?.components || []).find((component) => component.type === type);
+  idCandidates(type, id) {
+    const value = Number(id) || 0;
+    const candidates = [value, value * 2, Math.max(0, value - 1) * 2];
+    if (type === "Sprite_Holder" && value > 0) candidates.push(value - 1);
+    return [...new Set(candidates)];
   }
 
-  componentAssets(type) {
-    const component = this.component(type);
-    return component?.assets || [];
+  findLayer(type, id, namespace = "Page", create = false) {
+    const cleanType = this.normalizeType(type);
+    for (const candidate of this.idCandidates(cleanType, id)) {
+      const layer = this.layers.get(this.key(namespace, cleanType, candidate)) || (namespace === "Page" ? this.layers.get(this.legacyKey(cleanType, candidate)) : null);
+      if (layer) return layer;
+    }
+    if (!create) return null;
+    if (["Sprite_Holder", "Bitmap_Holder", "Text_Holder", "Puzzle", "Video_Holder"].includes(cleanType)) {
+      return this.createSyntheticLayer(namespace, cleanType, Number(id) || 0);
+    }
+    return null;
   }
 
-  findLayer(type, id) {
-    return this.layers.get(`${type}:${id}`) || this.layers.get(`${type}:${id * 2}`) || this.layers.get(`${type}:${Math.max(0, id - 1) * 2}`) || null;
+  findAsset(type, id, namespace = "Page") {
+    const cleanType = this.normalizeType(type);
+    for (const candidate of this.idCandidates(cleanType, id)) {
+      const asset = this.assets.get(this.key(namespace, cleanType, candidate)) || (namespace === "Page" ? this.assets.get(this.legacyKey(cleanType, candidate)) : null);
+      if (asset) return asset;
+    }
+    return null;
   }
 
-  findAsset(type, id) {
-    return this.assets.get(`${type}:${id}`) || this.assets.get(`${type}:${id * 2}`) || this.assets.get(`${type}:${Math.max(0, id - 1) * 2}`) || null;
+  findAudio(type, id, namespace = "Page") {
+    const cleanType = this.normalizeType(type);
+    for (const candidate of this.idCandidates(cleanType, id)) {
+      const audio = this.audio.get(this.key(namespace, cleanType, candidate)) || (namespace === "Page" ? this.audio.get(this.legacyKey(cleanType, candidate)) : null);
+      if (audio) return audio;
+    }
+    return null;
   }
 
-  findAudio(type, id) {
-    return this.audio.get(`${type}:${id}`) || this.audio.get(`${type}:${id * 2}`) || this.audio.get(`${type}:${Math.max(0, id - 1) * 2}`) || null;
+  bindRuntimeEvents(element, type, id, namespace = "Page") {
+    element.dataset.componentType = this.normalizeType(type);
+    element.dataset.runtimeId = String(id);
+    element.dataset.runtimeNamespace = namespace;
+    element.addEventListener("mouseenter", () => this.dispatchComponentEvent(type, "MouseMoveIn", id, [], namespace));
+    element.addEventListener("mouseleave", () => this.dispatchComponentEvent(type, "MouseMoveOut", id, [], namespace));
+    element.addEventListener("mousedown", (event) => {
+      if (event.button === 0) {
+        this.runUserInput(() => {
+          if (type === "Puzzle") this.executeHandler("Puzzle.MouseStartDrag");
+          this.dispatchComponentEvent(type, "MouseClickOnDown", id, [], namespace);
+        });
+      }
+    });
+    element.addEventListener("mouseup", (event) => {
+      if (event.button === 0) {
+        this.runUserInput(() => {
+          if (type === "Puzzle") {
+            this.puzzle.drops += 1;
+            this.executeHandler("Puzzle.MouseDrop");
+            if (this.puzzle.drops >= 3) this.executeHandler("Puzzle.GameOver", [id]);
+          }
+          this.dispatchComponentEvent(type, "MouseClickOnUp", id, [], namespace);
+        });
+      }
+    });
+    element.addEventListener("click", (event) => {
+      event.stopPropagation();
+      this.runUserInput(() => {
+        if (type === "Text_Holder") this.dispatchComponentEvent(type, "ClickOnText", id, [], namespace);
+        if (type === "HotSpot_Holder") this.dispatchComponentEvent(type, "LeftButtonClickOn", id, [], namespace);
+      });
+    });
   }
 
-  setLayerVisible(type, id, visible) {
-    const layer = this.findLayer(type, id);
+  runUserInput(callback) {
+    this.userInputDepth += 1;
+    try {
+      return callback();
+    } finally {
+      this.userInputDepth -= 1;
+    }
+  }
+
+  createSyntheticLayer(namespace, type, id, rect = null) {
+    const layer = document.createElement(type === "Text_Holder" ? "div" : "button");
+    layer.type = "button";
+    layer.className = type === "Text_Holder" ? "text-layer runtime-hidden" : "synthetic-layer layer runtime-hidden";
+    layer.dataset.runtimeLayer = "1";
+    layer.dataset.synthetic = "1";
+    layer.dataset.componentType = type;
+    layer.dataset.runtimeNamespace = namespace;
+    layer.dataset.runtimeId = String(id);
+    layer.dataset.assetId = String(id);
+    layer.dataset.runtimeKey = this.key(namespace, type, id);
+    layer.title = `${namespace} ${type} ${id}`;
+    if (namespace === "Group" && type === "Sprite_Holder") {
+      const labels = {
+        0: "",
+        1: "Home",
+        2: "<",
+        3: ">",
+        4: "R",
+        5: "C",
+        6: "P",
+        7: "Home",
+        8: "Easy",
+        9: "Hard",
+        10: "Back",
+        11: "Text",
+      };
+      layer.dataset.toolbar = "1";
+      layer.dataset.toolbarLabel = labels[id] ?? String(id);
+      layer.title = layer.dataset.toolbarLabel ? `${layer.dataset.toolbarLabel} toolbar button` : "Toolbar";
+      if (layer.dataset.toolbarLabel) layer.textContent = layer.dataset.toolbarLabel;
+    }
+    const defaultRect = rect || { x: 0, y: 0, width: type === "Puzzle" ? 580 : 48, height: type === "Puzzle" ? 480 : 48 };
+    layer.style.left = `${defaultRect.x}px`;
+    layer.style.top = `${defaultRect.y}px`;
+    layer.style.width = `${Math.max(8, defaultRect.width)}px`;
+    layer.style.height = `${Math.max(8, defaultRect.height)}px`;
+    layer.style.zIndex = String(namespace === "Group" && type === "Sprite_Holder" ? 820000 + id : namespace === "Group" ? 600000 + id : 300000 + id);
+    if (type === "Text_Holder") layer.textContent = "";
+    this.bindRuntimeEvents(layer, type, id, namespace);
+    this.stage.appendChild(layer);
+    this.indexLayer(layer);
+    return layer;
+  }
+
+  setLayerVisible(type, id, visible, namespace = "Page") {
+    const layer = this.findLayer(type, id, namespace, visible);
     if (!layer) {
-      this.log(`${type}.${visible ? "show" : "hide"}(${id}) missing layer`);
+      this.log(`${namespace}.${type}.${visible ? "show" : "hide"}(${id}) missing layer`);
       return;
     }
     layer.classList.toggle("runtime-hidden", !visible);
-    this.log(`${type}.${visible ? "show" : "hide"}(${id})`);
+    this.log(`${namespace}.${type}.${visible ? "show" : "hide"}(${id})`);
   }
 
-  setLayerStill(type, id, first = true) {
-    const layer = this.findLayer(type, id);
+  setLayerStill(type, id, first = true, namespace = "Page") {
+    const layer = this.findLayer(type, id, namespace);
     if (!layer) return;
     layer.dataset.videoState = first ? "first" : "last";
     layer.classList.remove("runtime-playing");
     layer.classList.toggle("runtime-hidden", false);
-    if (first && layer.dataset.originalSrc) {
-      layer.src = layer.dataset.originalSrc;
-      setTimeout(() => {
-        if (layer.dataset.videoState === "first") this.freezeLayer(layer, "first");
-      }, 80);
+    if (first) {
+      if (layer.dataset.stillSrc) {
+        layer.src = layer.dataset.stillSrc;
+      } else if (layer.dataset.originalSrc) {
+        layer.src = layer.dataset.originalSrc;
+        setTimeout(() => {
+          if (layer.dataset.videoState === "first") this.freezeLayer(layer, "first");
+        }, 80);
+      }
     }
   }
 
   restartLayerAnimation(layer) {
-    if (!layer) return;
+    if (!layer || !layer.getAttribute) return;
     const src = layer.dataset.originalSrc || layer.getAttribute("src");
     layer.dataset.originalSrc = src || "";
     layer.dataset.videoState = "playing";
@@ -144,7 +326,7 @@ class GraphBoardRuntime {
   }
 
   freezeLayer(layer, state = "last") {
-    if (!layer || !layer.complete || layer.naturalWidth <= 0 || layer.naturalHeight <= 0) return;
+    if (!layer || layer.tagName !== "IMG" || !layer.complete || layer.naturalWidth <= 0 || layer.naturalHeight <= 0) return;
     try {
       const canvas = document.createElement("canvas");
       canvas.width = layer.naturalWidth;
@@ -158,96 +340,125 @@ class GraphBoardRuntime {
     }
   }
 
-  moveLayer(type, id, x, y, z = undefined) {
-    const layer = this.findLayer(type, id);
+  moveLayer(type, id, x, y, z = undefined, namespace = "Page") {
+    const layer = this.findLayer(type, id, namespace, true);
     if (!layer) {
-      this.log(`${type}.move(${id},${x},${y}) missing layer`);
+      this.log(`${namespace}.${type}.move(${id},${x},${y}) missing layer`);
       return;
     }
-    layer.style.left = `${x}px`;
-    layer.style.top = `${y}px`;
+    layer.style.left = `${Number(x) || 0}px`;
+    layer.style.top = `${Number(y) || 0}px`;
     layer.style.transition = "left 180ms linear, top 180ms linear";
-    if (Number.isFinite(z)) layer.style.zIndex = String(10 + z);
+    if (Number.isFinite(Number(z))) layer.style.zIndex = String((namespace === "Group" ? 600000 : 100000) + Number(z));
     layer.classList.remove("runtime-hidden");
-    this.log(`${type}.move(${id},${x},${y}${Number.isFinite(z) ? `,${z}` : ""})`);
+    this.log(`${namespace}.${type}.move(${id},${x},${y}${Number.isFinite(Number(z)) ? `,${z}` : ""})`);
+
+    const prefix = namespace === "Group" ? "Group." : "";
+    const cleanType = this.normalizeType(type);
+    clearTimeout(layer._inPlaceTimer);
+    const inPlaceHandler = `${prefix}${cleanType}.InPlace`;
+    if (namespace === "Group" && this.extractFunctionBody(this.scene?.script?.rawText || "", inPlaceHandler)) {
+      const trusted = this.userInputDepth > 0;
+      layer._inPlaceTimer = setTimeout(() => {
+        if (trusted) this.trustedCallbackDepth += 1;
+        try {
+          this.executeHandler(inPlaceHandler, [Number(id) || 0, Number(x) || 0, Number(y) || 0]);
+        } finally {
+          if (trusted) this.trustedCallbackDepth -= 1;
+        }
+      }, 210);
+    }
   }
 
-  playAudio(type, id) {
-    const audio = this.findAudio(type, id);
+  changePhase(type, id, phase, namespace = "Page") {
+    const layer = this.findLayer(type, id, namespace, true);
+    if (layer) layer.dataset.phase = String(phase);
+    this.log(`${namespace}.${type}.ChangePhase(${id},${phase})`);
+  }
+
+  setDeep(type, id, z, namespace = "Page") {
+    const layer = this.findLayer(type, id, namespace, true);
+    if (layer && Number.isFinite(Number(z))) layer.style.zIndex = String((namespace === "Group" ? 600000 : 100000) + Number(z));
+  }
+
+  playAudio(type, id, namespace = "Page") {
+    const audio = this.findAudio(type, id, namespace);
     if (!audio) {
-      this.log(`${type}.PlayDSound(${id}) missing audio`);
+      this.log(`${namespace}.${type}.PlayDSound(${id}) missing audio`);
       return;
     }
     for (const item of this.audio.values()) {
-      if (item !== audio && item.dataset.componentType === type) item.pause();
+      if (item !== audio && item.dataset.componentType === this.normalizeType(type) && item.dataset.runtimeNamespace === namespace) item.pause();
     }
     audio.currentTime = 0;
     audio.play().catch((error) => this.log(`audio blocked: ${error.message}`));
-    this.log(`${type}.PlayDSound(${id})`);
+    this.log(`${namespace}.${type}.PlayDSound(${id})`);
   }
 
-  stopAudio(type, id) {
-    const audio = Number.isFinite(id) ? this.findAudio(type, id) : null;
-    const targets = audio ? [audio] : [...this.audio.values()].filter((item) => item.dataset.componentType === type);
+  stopAudio(type, id = undefined, namespace = "Page") {
+    const audio = Number.isFinite(Number(id)) ? this.findAudio(type, Number(id), namespace) : null;
+    const targets = audio
+      ? [audio]
+      : [...this.audio.values()].filter((item) => item.dataset.componentType === this.normalizeType(type) && item.dataset.runtimeNamespace === namespace);
     for (const item of targets) {
       item.pause();
       item.currentTime = 0;
     }
-    this.log(`${type}.Stop(${Number.isFinite(id) ? id : "all"})`);
+    this.log(`${namespace}.${type}.Stop(${Number.isFinite(Number(id)) ? id : "all"})`);
   }
 
-  videoDurationMs(type, id) {
-    const asset = this.findAsset(type, id);
+  videoDurationMs(type, id, namespace = "Page") {
+    const asset = this.findAsset(type, id, namespace);
     const frameDuration = Number(asset?.frameCount || 1) * 100;
-    const matchingAudio = this.findAudio(type, id);
+    const matchingAudio = this.findAudio(type, id, namespace);
     const audioDuration = Number(matchingAudio?.dataset.durationSeconds || 0) * 1000;
-    return Math.max(250, audioDuration || frameDuration);
+    return Math.max(350, audioDuration || frameDuration || 3500);
   }
 
-  playVideo(type, id) {
-    const layer = this.findLayer(type, id);
-    if (!layer) {
-      this.log(`${type}.Play(${id}) missing layer`);
-      return;
-    }
-    const key = `${type}:${id}`;
+  playVideo(type, id, namespace = "Page") {
+    const cleanType = this.normalizeType(type);
+    const layer = this.findLayer(cleanType, id, namespace, cleanType === "Video_Holder");
+    const key = this.key(namespace, cleanType, id);
     if (this.videoTimers.has(key)) clearTimeout(this.videoTimers.get(key));
-    this.restartLayerAnimation(layer);
-    this.playAudio(type, id);
-    const delay = this.videoDurationMs(type, id);
+    if (layer) this.restartLayerAnimation(layer);
+    this.playAudio(cleanType, id, namespace);
+    const delay = cleanType === "Video_Holder" ? 4000 : this.videoDurationMs(cleanType, id, namespace);
     this.videoTimers.set(key, setTimeout(() => {
       this.videoTimers.delete(key);
-      layer.classList.remove("runtime-playing");
-      this.freezeLayer(layer, "last");
-      this.executeHandler(`${type}.TheEnd`, [id]);
+      if (layer) {
+        layer.classList.remove("runtime-playing");
+        this.freezeLayer(layer, "last");
+      }
+      this.executeHandler(`${namespace === "Group" ? "Group." : ""}${cleanType}.TheEnd`, [id]);
     }, delay));
-    this.log(`${type}.Play(${id}) for ${Math.round(delay)}ms`);
+    this.log(`${namespace}.${cleanType}.Play(${id}) for ${Math.round(delay)}ms`);
   }
 
-  enableHotspot(id, enabled) {
-    this.hotspots.set(id, enabled);
-    for (const target of this.stage.querySelectorAll(`[data-component-type="HotSpot_Holder"][data-runtime-id="${id}"]`)) {
+  enableHotspot(id, enabled, namespace = "Page") {
+    this.hotspots.set(this.key(namespace, "HotSpot_Holder", id), enabled);
+    for (const target of this.stage.querySelectorAll(`[data-component-type="HotSpot_Holder"][data-runtime-namespace="${namespace}"][data-runtime-id="${id}"]`)) {
       target.classList.toggle("runtime-disabled", !enabled);
     }
-    this.log(`HotSpot ${id} ${enabled ? "enabled" : "disabled"}`);
+    this.log(`${namespace}.HotSpot ${id} ${enabled ? "enabled" : "disabled"}`);
   }
 
-  dispatchComponentEvent(type, eventName, id, extra = []) {
-    if (type === "HotSpot_Holder" && this.hotspots.has(id) && !this.hotspots.get(id)) {
-      this.log(`HotSpot ${id} ignored (${eventName})`);
+  dispatchComponentEvent(type, eventName, id, extra = [], namespace = "Page") {
+    const cleanType = this.normalizeType(type);
+    const hotKey = this.key(namespace, "HotSpot_Holder", id);
+    if (cleanType === "HotSpot_Holder" && this.hotspots.has(hotKey) && !this.hotspots.get(hotKey)) {
+      this.log(`${namespace}.HotSpot ${id} ignored (${eventName})`);
       return;
     }
-    const names = [
-      `${type}.${eventName}`,
-      `Group.${type}.${eventName}`,
-    ];
+    const names = namespace === "Group"
+      ? [`Group.${cleanType}.${eventName}`, `${cleanType}.${eventName}`]
+      : [`${cleanType}.${eventName}`, `Group.${cleanType}.${eventName}`];
     for (const name of names) {
       if (this.extractFunctionBody(this.scene?.script?.rawText || "", name)) {
         this.executeHandler(name, [id, ...extra]);
         return;
       }
     }
-    this.log(`event ${type}.${eventName}(${[id, ...extra].join(",")})`);
+    this.log(`event ${namespace}.${cleanType}.${eventName}(${[id, ...extra].join(",")})`);
   }
 
   executeHandler(name, args = []) {
@@ -255,37 +466,76 @@ class GraphBoardRuntime {
     const body = this.extractFunctionBody(script, name);
     if (!body) {
       this.log(`handler not found: ${name}`);
-      return;
+      return undefined;
     }
-    if (this.callDepth > 12) {
+    if (this.callDepth > 20) {
       this.log(`handler recursion limit: ${name}`);
-      return;
+      return undefined;
     }
     this.log(`run ${name}(${args.join(",")})`);
-    for (const [key, index] of Object.entries({ rectID: 0, videoID: 0, spriteID: 0, soundID: 0, textID: 0, x: 1, y: 2 })) {
+    for (const [key, index] of Object.entries({ rectID: 0, videoID: 0, spriteID: 0, soundID: 0, textID: 0, puzzleID: 0, bitmapID: 0, x: 1, y: 2 })) {
       if (args[index] !== undefined) this.variables.set(key, args[index]);
     }
     this.callDepth += 1;
+    this.handlerStack.push(name);
     const outerReturning = this.returning;
+    const outerReturnValue = this.returnValue;
     this.returning = false;
+    this.returnValue = undefined;
     try {
       this.executeStatements(body, args);
+      return this.returnValue;
     } finally {
       this.returning = outerReturning;
+      this.returnValue = outerReturnValue;
+      this.handlerStack.pop();
       this.callDepth -= 1;
     }
   }
 
   extractFunctionBody(script, name) {
     const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    const re = new RegExp(`(?:^|\\n)\\s*(?:(?:void|int|CString|float|double|char|long)\\s+)?${escaped}\\s*\\([^)]*\\)\\s*\\{`, "m");
+    const re = new RegExp(`(?:^|\\n)\\s*(?:(?:void|int|CString|float|double|char|long|UINT)\\s+)?${escaped}\\s*\\([^)]*\\)\\s*\\{`, "m");
     const match = re.exec(script);
     if (!match) return "";
     let depth = 1;
     let cursor = match.index + match[0].length;
     const start = cursor;
+    let quote = "";
+    let lineComment = false;
+    let blockComment = false;
     while (cursor < script.length && depth > 0) {
       const ch = script[cursor++];
+      const next = script[cursor] || "";
+      if (lineComment) {
+        if (ch === "\n" || ch === "\r") lineComment = false;
+        continue;
+      }
+      if (blockComment) {
+        if (ch === "*" && next === "/") {
+          cursor += 1;
+          blockComment = false;
+        }
+        continue;
+      }
+      if (quote) {
+        if (ch === quote && script[cursor - 2] !== "\\") quote = "";
+        continue;
+      }
+      if (ch === "/" && next === "/") {
+        cursor += 1;
+        lineComment = true;
+        continue;
+      }
+      if (ch === "/" && next === "*") {
+        cursor += 1;
+        blockComment = true;
+        continue;
+      }
+      if (ch === '"' || ch === "'") {
+        quote = ch;
+        continue;
+      }
       if (ch === "{") depth += 1;
       if (ch === "}") depth -= 1;
     }
@@ -305,6 +555,10 @@ class GraphBoardRuntime {
       if (this.returning) return;
       cursor = this.skipSpace(code, cursor);
       if (cursor >= code.length) break;
+      if (code[cursor] === "}") {
+        cursor += 1;
+        continue;
+      }
       if (code[cursor] === "{") {
         const block = this.readBalanced(code, cursor, "{", "}");
         this.executeBlock(block.text, args);
@@ -330,11 +584,11 @@ class GraphBoardRuntime {
         const condition = this.readBalanced(code, conditionStart, "(", ")");
         const unit = this.readUnit(code, condition.end);
         let guard = 0;
-        while (this.evaluateCondition(condition.text) && guard < 128) {
+        while (this.evaluateCondition(condition.text) && guard < 256) {
           this.executeBlock(unit.text, args);
           guard += 1;
         }
-        if (guard === 128) this.log("while loop limit reached");
+        if (guard === 256) this.log("while loop limit reached");
         cursor = unit.end;
         continue;
       }
@@ -348,57 +602,117 @@ class GraphBoardRuntime {
       }
       const statement = this.readStatement(code, cursor);
       this.executeStatement(statement.text.trim(), args);
-      cursor = statement.end;
+      cursor = statement.end > cursor ? statement.end : cursor + 1;
     }
   }
 
   executeStatement(statement, args) {
     if (!statement || /^(switch|case|else|for|break)\b/.test(statement)) return;
-    if (/^return\b/.test(statement)) {
+    let match = /^return(?:\s+(.+))?$/.exec(statement);
+    if (match) {
+      this.returnValue = match[1] ? this.valueOf(match[1]) : undefined;
       this.returning = true;
       return;
     }
-
-    let match = /^(?:int|long|short|bool|float|double|char|CString)?\s*([A-Za-z_][A-Za-z0-9_]*(?:\[[^\]]+\])?)\s*=\s*(.+)$/.exec(statement);
+    match = /^(?:int|long|short|bool|float|double|char|CString|UINT)\s+([A-Za-z_][A-Za-z0-9_]*(?:\s*\[\s*\d+\s*\])?)$/.exec(statement);
     if (match) {
-      this.variables.set(this.variableKey(match[1]), this.valueOf(match[2].trim()));
+      const array = /^([A-Za-z_][A-Za-z0-9_]*)\s*\[\s*(\d+)\s*\]$/.exec(match[1]);
+      if (array) {
+        for (let index = 0; index < Number(array[2]); index += 1) this.variables.set(`${array[1]}[${index}]`, 0);
+      } else if (!this.variables.has(match[1])) {
+        this.variables.set(match[1], 0);
+      }
       return;
     }
-    match = /^([A-Za-z_][A-Za-z0-9_]*(?:\[[^\]]+\])?)\s*(\+\+|--)$/.exec(statement);
+    match = /^(?:(?:int|long|short|bool|float|double|char|CString|UINT)\s+)?([A-Za-z_][A-Za-z0-9_]*(?:\s*\[[^\]]+\])?)\s*=\s*(.+)$/.exec(statement);
+    if (match && !/^[=!<>]/.test(match[2])) {
+      this.variables.set(this.variableKey(match[1]), this.valueOf(match[2]));
+      return;
+    }
+    match = /^([A-Za-z_][A-Za-z0-9_]*(?:\s*\[[^\]]+\])?)\s*([+\-*/%])=\s*(.+)$/.exec(statement);
+    if (match) {
+      const key = this.variableKey(match[1]);
+      const left = this.valueOf(key);
+      const right = this.valueOf(match[3]);
+      const op = match[2];
+      this.variables.set(key, this.applyOperator(left, right, op));
+      return;
+    }
+    match = /^([A-Za-z_][A-Za-z0-9_]*(?:\s*\[[^\]]+\])?)\s*(\+\+|--)$/.exec(statement);
     if (match) {
       const key = this.variableKey(match[1]);
       this.variables.set(key, this.valueOf(key) + (match[2] === "++" ? 1 : -1));
       return;
     }
 
-    const calls = [...statement.matchAll(/([A-Za-z_][A-Za-z0-9_.]*)\s*\(([^()]*)\)/g)];
-    if (calls.length === 0) return;
-    for (const call of calls) {
-      const method = call[1];
-      if (["if", "while", "switch", "for", "return"].includes(method)) continue;
-      const values = this.parseArgs(call[2], args);
-      this.dispatch(method, values);
+    for (const call of this.findTopLevelCalls(statement)) {
+      if (["if", "while", "switch", "for", "return"].includes(call.method)) continue;
+      const values = this.parseArgs(call.args, args);
+      this.dispatch(call.method, values);
     }
   }
 
-  parseArgs(text, handlerArgs) {
-    if (!text.trim()) return [];
-    return text.split(",").map((part) => {
-      const token = part.trim();
-      if (/^-?\d+$/.test(token)) return Number(token);
-      if (/^".*"$/.test(token)) return token.slice(1, -1);
-      if (token === "rectID") return handlerArgs[0] ?? 0;
-      if (token === "videoID") return handlerArgs[0] ?? 0;
-      if (token === "spriteID") return handlerArgs[0] ?? 0;
-      if (token === "x") return handlerArgs[1] ?? 0;
-      if (token === "y") return handlerArgs[2] ?? 0;
-      if (this.variables.has(this.variableKey(token))) return this.variables.get(this.variableKey(token));
-      const simpleMath = /^([A-Za-z_][A-Za-z0-9_]*)\s*([+-])\s*(\d+)$/.exec(token);
-      if (simpleMath && this.variables.has(simpleMath[1])) {
-        return this.variables.get(simpleMath[1]) + (simpleMath[2] === "+" ? 1 : -1) * Number(simpleMath[3]);
+  applyOperator(left, right, op) {
+    const l = Number(left) || 0;
+    const r = Number(right) || 0;
+    switch (op) {
+      case "+": return typeof left === "string" || typeof right === "string" ? `${left}${right}` : l + r;
+      case "-": return l - r;
+      case "*": return l * r;
+      case "/": return r ? Math.trunc(l / r) : 0;
+      case "%": return r ? l % r : 0;
+      default: return 0;
+    }
+  }
+
+  findTopLevelCalls(statement) {
+    const calls = [];
+    const re = /([A-Za-z_][A-Za-z0-9_.]*)\s*\(/g;
+    let match;
+    while ((match = re.exec(statement))) {
+      const start = statement.indexOf("(", match.index);
+      const balanced = this.readBalanced(statement, start, "(", ")");
+      if (balanced.end > start) {
+        calls.push({ method: match[1], args: balanced.text });
+        re.lastIndex = balanced.end;
       }
-      return token;
+    }
+    return calls;
+  }
+
+  parseArgs(text) {
+    if (!text.trim()) return [];
+    return this.splitArgs(text).map((part) => {
+      const token = part.trim();
+      if (/^&\s*[A-Za-z_][A-Za-z0-9_]*(?:\s*\[[^\]]+\])?$/.test(token)) return { ref: this.variableKey(token.replace(/^&\s*/, "")) };
+      return this.valueOf(token);
     });
+  }
+
+  splitArgs(text) {
+    const parts = [];
+    let start = 0;
+    let depth = 0;
+    let quote = "";
+    for (let index = 0; index < text.length; index += 1) {
+      const ch = text[index];
+      if (quote) {
+        if (ch === quote && text[index - 1] !== "\\") quote = "";
+        continue;
+      }
+      if (ch === '"' || ch === "'") {
+        quote = ch;
+        continue;
+      }
+      if (ch === "(" || ch === "[") depth += 1;
+      if (ch === ")" || ch === "]") depth -= 1;
+      if (ch === "," && depth === 0) {
+        parts.push(text.slice(start, index));
+        start = index + 1;
+      }
+    }
+    parts.push(text.slice(start));
+    return parts;
   }
 
   skipSpace(code, cursor) {
@@ -412,9 +726,21 @@ class GraphBoardRuntime {
     let depth = 1;
     let index = cursor + 1;
     const start = index;
+    let quote = "";
     while (index < code.length && depth > 0) {
-      if (code[index] === open) depth += 1;
-      if (code[index] === close) depth -= 1;
+      const ch = code[index];
+      if (quote) {
+        if (ch === quote && code[index - 1] !== "\\") quote = "";
+        index += 1;
+        continue;
+      }
+      if (ch === '"' || ch === "'") {
+        quote = ch;
+        index += 1;
+        continue;
+      }
+      if (ch === open) depth += 1;
+      if (ch === close) depth -= 1;
       index += 1;
     }
     return { text: code.slice(start, index - 1), end: index };
@@ -429,8 +755,19 @@ class GraphBoardRuntime {
   readStatement(code, cursor) {
     let index = cursor;
     let paren = 0;
+    let quote = "";
     while (index < code.length) {
       const ch = code[index];
+      if (quote) {
+        if (ch === quote && code[index - 1] !== "\\") quote = "";
+        index += 1;
+        continue;
+      }
+      if (ch === '"' || ch === "'") {
+        quote = ch;
+        index += 1;
+        continue;
+      }
       if (ch === "(") paren += 1;
       if (ch === ")") paren -= 1;
       if (ch === ";" && paren === 0) return { text: code.slice(cursor, index), end: index + 1 };
@@ -442,17 +779,90 @@ class GraphBoardRuntime {
 
   readSwitchCases(text) {
     const cases = [];
-    const re = /\b(case\s+([^:]+)|default)\s*:/g;
-    let match = re.exec(text);
-    while (match) {
-      const start = re.lastIndex;
-      const label = match[1] === "default" ? "default" : this.valueOf(match[2]);
-      const next = re.exec(text);
-      const end = next ? next.index : text.length;
-      cases.push({ label, text: text.slice(start, end) });
-      match = next;
+    let index = 0;
+    let depth = 0;
+    let quote = "";
+    let lineComment = false;
+    let blockComment = false;
+    while (index < text.length) {
+      const ch = text[index];
+      const next = text[index + 1] || "";
+      if (lineComment) {
+        if (ch === "\n" || ch === "\r") lineComment = false;
+        index += 1;
+        continue;
+      }
+      if (blockComment) {
+        if (ch === "*" && next === "/") {
+          index += 2;
+          blockComment = false;
+          continue;
+        }
+        index += 1;
+        continue;
+      }
+      if (quote) {
+        if (ch === quote && text[index - 1] !== "\\") quote = "";
+        index += 1;
+        continue;
+      }
+      if (ch === "/" && next === "/") {
+        lineComment = true;
+        index += 2;
+        continue;
+      }
+      if (ch === "/" && next === "*") {
+        blockComment = true;
+        index += 2;
+        continue;
+      }
+      if (ch === '"' || ch === "'") {
+        quote = ch;
+        index += 1;
+        continue;
+      }
+      if (ch === "{") depth += 1;
+      if (ch === "}") depth = Math.max(0, depth - 1);
+      if (depth === 0) {
+        const caseMatch = /^(case\s+([^:]+)|default)\s*:/.exec(text.slice(index));
+        if (caseMatch) {
+          cases.push({
+            label: caseMatch[1] === "default" ? "default" : this.valueOf(caseMatch[2]),
+            start: index + caseMatch[0].length,
+            text: "",
+          });
+          index += caseMatch[0].length;
+          continue;
+        }
+      }
+      index += 1;
+    }
+    for (let cursor = 0; cursor < cases.length; cursor += 1) {
+      const end = cursor + 1 < cases.length ? cases[cursor + 1].start - String(cases[cursor + 1].label).length : text.length;
+      const nextCase = cursor + 1 < cases.length ? text.lastIndexOf("case", cases[cursor + 1].start) : -1;
+      cases[cursor].text = text.slice(cases[cursor].start, nextCase >= 0 ? nextCase : end);
     }
     return cases;
+  }
+
+  findTopLevelBreak(text) {
+    let depth = 0;
+    let quote = "";
+    for (let index = 0; index < text.length; index += 1) {
+      const ch = text[index];
+      if (quote) {
+        if (ch === quote && text[index - 1] !== "\\") quote = "";
+        continue;
+      }
+      if (ch === '"' || ch === "'") {
+        quote = ch;
+        continue;
+      }
+      if (ch === "{") depth += 1;
+      if (ch === "}") depth = Math.max(0, depth - 1);
+      if (depth === 0 && /\bbreak\s*;/.test(text.slice(index, index + 16))) return index;
+    }
+    return -1;
   }
 
   executeSwitch(condition, unit, args) {
@@ -464,7 +874,7 @@ class GraphBoardRuntime {
     let body = "";
     for (let cursor = index; cursor < cases.length; cursor += 1) {
       const segment = cases[cursor].text;
-      const breakAt = segment.search(/\bbreak\s*;/);
+      const breakAt = this.findTopLevelBreak(segment);
       if (breakAt >= 0) {
         body += segment.slice(0, breakAt);
         break;
@@ -481,53 +891,310 @@ class GraphBoardRuntime {
     return `${match[1]}[${this.valueOf(match[2])}]`;
   }
 
+  stripOuterParens(text) {
+    let token = String(text || "").trim();
+    while (token.startsWith("(") && token.endsWith(")")) {
+      const balanced = this.readBalanced(token, 0, "(", ")");
+      if (balanced.end !== token.length) break;
+      token = balanced.text.trim();
+    }
+    return token;
+  }
+
+  findTopLevelOperator(text, operators) {
+    let depth = 0;
+    let quote = "";
+    for (let index = text.length - 1; index >= 0; index -= 1) {
+      const ch = text[index];
+      if (quote) {
+        if (ch === quote && text[index - 1] !== "\\") quote = "";
+        continue;
+      }
+      if (ch === '"' || ch === "'") {
+        quote = ch;
+        continue;
+      }
+      if (ch === ")" || ch === "]") depth += 1;
+      if (ch === "(" || ch === "[") depth -= 1;
+      if (depth === 0 && operators.includes(ch)) {
+        if ((ch === "+" || ch === "-") && (index === 0 || /[+\-*/%(<>!=]/.test(text[index - 1]))) continue;
+        return { index, op: ch };
+      }
+    }
+    return null;
+  }
+
   valueOf(expr) {
-    const token = String(expr || "").trim();
+    let token = this.stripOuterParens(expr);
+    if (!token) return 0;
     if (/^-?\d+$/.test(token)) return Number(token);
+    if (/^".*"$/.test(token) || /^'.*'$/.test(token)) return token.slice(1, -1);
+    if (token.startsWith("!")) return this.evaluateCondition(token) ? 1 : 0;
+    if (token.startsWith("-") && !/^-?\d+$/.test(token)) return -Number(this.valueOf(token.slice(1)));
+
+    for (const ops of [["+", "-"], ["*", "/", "%"]]) {
+      const found = this.findTopLevelOperator(token, ops);
+      if (found) return this.applyOperator(this.valueOf(token.slice(0, found.index)), this.valueOf(token.slice(found.index + 1)), found.op);
+    }
+
+    const call = /^([A-Za-z_][A-Za-z0-9_.]*)\s*\(([\s\S]*)\)$/.exec(token);
+    if (call) return this.callFunctionValue(call[1], this.parseArgs(call[2]));
+
     const key = this.variableKey(token);
     if (this.variables.has(key)) return this.variables.get(key);
-    const math = /^(.+?)\s*([+-])\s*(-?\d+)$/.exec(token);
-    if (math) return this.valueOf(math[1]) + (math[2] === "+" ? 1 : -1) * Number(math[3]);
+    return 0;
+  }
+
+  callFunctionValue(method, args) {
+    if (method === "Random") {
+      const min = Number(args[0]) || 0;
+      const max = Number(args[1]) || min;
+      return min + Math.floor(Math.random() * (Math.max(0, max - min) + 1));
+    }
+    if (method.endsWith(".GetString")) {
+      const objectName = method.replace(/\.GetString$/, "");
+      return this.variables.get(objectName) ?? "";
+    }
+    if (method === "Recorder.IsEmpty") return this.recorder.hasContent ? 0 : 1;
+    if (method === "IsProject") return 0;
+    if (!method.includes(".") && this.extractFunctionBody(this.scene?.script?.rawText || "", method)) {
+      const result = this.executeHandler(method, args);
+      return result ?? 0;
+    }
     return 0;
   }
 
   evaluateCondition(condition) {
-    let text = String(condition || "").trim();
+    let text = this.stripOuterParens(condition);
     if (!text) return false;
-    text = text.replace(/^\((.*)\)$/, "$1").trim();
-    const orParts = text.split("||");
+    const orParts = this.splitTopLevel(text, "||");
     if (orParts.length > 1) return orParts.some((part) => this.evaluateCondition(part));
-    const andParts = text.split("&&");
+    const andParts = this.splitTopLevel(text, "&&");
     if (andParts.length > 1) return andParts.every((part) => this.evaluateCondition(part));
-    const compare = /^(.+?)\s*(==|!=|>=|<=|>|<)\s*(.+)$/.exec(text);
+    const compare = this.findTopLevelCompare(text);
     if (compare) {
-      const left = this.valueOf(compare[1]);
-      const right = this.valueOf(compare[3]);
-      switch (compare[2]) {
+      const left = this.valueOf(text.slice(0, compare.index));
+      const right = this.valueOf(text.slice(compare.index + compare.op.length));
+      switch (compare.op) {
         case "==": return left === right;
         case "!=": return left !== right;
-        case ">=": return left >= right;
-        case "<=": return left <= right;
-        case ">": return left > right;
-        case "<": return left < right;
+        case ">=": return Number(left) >= Number(right);
+        case "<=": return Number(left) <= Number(right);
+        case ">": return Number(left) > Number(right);
+        case "<": return Number(left) < Number(right);
       }
     }
     if (text.startsWith("!")) return !this.evaluateCondition(text.slice(1));
     return Boolean(this.valueOf(text));
   }
 
+  splitTopLevel(text, separator) {
+    const parts = [];
+    let start = 0;
+    let depth = 0;
+    let quote = "";
+    for (let index = 0; index < text.length; index += 1) {
+      const ch = text[index];
+      if (quote) {
+        if (ch === quote && text[index - 1] !== "\\") quote = "";
+        continue;
+      }
+      if (ch === '"' || ch === "'") {
+        quote = ch;
+        continue;
+      }
+      if (ch === "(" || ch === "[") depth += 1;
+      if (ch === ")" || ch === "]") depth -= 1;
+      if (depth === 0 && text.startsWith(separator, index)) {
+        parts.push(text.slice(start, index));
+        start = index + separator.length;
+        index += separator.length - 1;
+      }
+    }
+    parts.push(text.slice(start));
+    return parts.map((part) => part.trim()).filter(Boolean);
+  }
+
+  findTopLevelCompare(text) {
+    const ops = ["==", "!=", ">=", "<=", ">", "<"];
+    let depth = 0;
+    let quote = "";
+    for (let index = 0; index < text.length; index += 1) {
+      const ch = text[index];
+      if (quote) {
+        if (ch === quote && text[index - 1] !== "\\") quote = "";
+        continue;
+      }
+      if (ch === '"' || ch === "'") {
+        quote = ch;
+        continue;
+      }
+      if (ch === "(" || ch === "[") depth += 1;
+      if (ch === ")" || ch === "]") depth -= 1;
+      if (depth === 0) {
+        for (const op of ops) {
+          if (text.startsWith(op, index)) return { index, op };
+        }
+      }
+    }
+    return null;
+  }
+
+  setRef(arg, value) {
+    if (arg && typeof arg === "object" && arg.ref) this.variables.set(arg.ref, value);
+  }
+
+  loadGroup(name) {
+    const clean = this.groupKey(name);
+    const group = this.groups.get(clean);
+    this.closeGroup();
+    this.loadedGroup = clean;
+    if (!group) {
+      this.log(`LoadGroup(${name}) missing exported group`);
+      return;
+    }
+    this.group = group;
+    for (const component of group.components || []) {
+      for (const asset of component.assets || []) {
+        this.indexAsset("Group", component, asset);
+        if (!asset.url) continue;
+        const img = document.createElement("img");
+        img.className = "layer group-layer runtime-hidden";
+        img.src = component.type === "Transparent_Video_Holder" && asset.stillUrl ? asset.stillUrl : asset.url;
+        img.alt = `${component.id}:${asset.id ?? ""}`;
+        img.dataset.runtimeLayer = "1";
+        img.dataset.originalSrc = asset.url;
+        if (asset.stillUrl) img.dataset.stillSrc = asset.stillUrl;
+        img.dataset.componentType = component.type;
+        img.dataset.runtimeNamespace = "Group";
+        img.dataset.assetId = String(asset.id ?? "");
+        img.dataset.runtimeId = String(asset.id ?? 0);
+        const rect = asset.rect || component.rect || { x: 0, y: 0, width: asset.width || 1, height: asset.height || 1 };
+        img.style.left = `${rect.x}px`;
+        img.style.top = `${rect.y}px`;
+        img.style.width = `${asset.width || rect.width}px`;
+        img.style.height = `${asset.height || rect.height}px`;
+        img.style.zIndex = String(600000 + Number(asset.z ?? component.z ?? 0));
+        this.bindRuntimeEvents(img, component.type, Number(asset.id ?? 0), "Group");
+        this.stage.appendChild(img);
+        this.indexLayer(img);
+      }
+      for (const asset of component.audio || []) {
+        if (!asset.url) continue;
+        const audio = new Audio(asset.url);
+        audio.preload = "none";
+        audio.dataset.componentType = component.type;
+        audio.dataset.runtimeNamespace = "Group";
+        audio.dataset.assetId = String(asset.id ?? "");
+        audio.dataset.runtimeId = String(asset.id ?? 0);
+        audio.dataset.durationSeconds = String(asset.durationSeconds || "");
+        this.indexAudio(audio);
+      }
+      for (const hotspot of component.hitboxes || []) {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "hitbox group-layer";
+        button.dataset.componentType = "HotSpot_Holder";
+        button.dataset.runtimeNamespace = "Group";
+        button.dataset.runtimeId = String(hotspot.id);
+        const rect = hotspot.rect || { x: 0, y: 0, width: 1, height: 1 };
+        button.style.left = `${rect.x}px`;
+        button.style.top = `${rect.y}px`;
+        button.style.width = `${Math.max(8, rect.width)}px`;
+        button.style.height = `${Math.max(8, rect.height)}px`;
+        button.style.zIndex = String(700000 + Number(hotspot.id || 0));
+        button.title = `Group HotSpot ${hotspot.id}`;
+        this.bindRuntimeEvents(button, "HotSpot_Holder", Number(hotspot.id), "Group");
+        this.stage.appendChild(button);
+      }
+      if (component.type === "Sprite_Holder" && Number(component.itemCount) > 0) {
+        for (let id = 0; id < Number(component.itemCount); id += 1) {
+          const layer = this.createSyntheticLayer("Group", "Sprite_Holder", id, component.rect);
+          layer.classList.add("group-layer");
+        }
+      }
+    }
+    this.log(`LoadGroup(${name}) mounted ${group.components?.length || 0} component(s)`);
+  }
+
+  closeGroup() {
+    for (const item of [...this.audio.values()]) {
+      if (item.dataset.runtimeNamespace === "Group") {
+        item.pause();
+        item.currentTime = 0;
+      }
+    }
+    for (const item of this.stage.querySelectorAll('[data-runtime-namespace="Group"], .group-layer')) item.remove();
+    for (const map of [this.layers, this.audio, this.assets, this.hotspots]) {
+      for (const key of [...map.keys()]) {
+        if (String(key).startsWith("Group:")) map.delete(key);
+      }
+    }
+    this.group = null;
+  }
+
+  showPuzzle(args = []) {
+    this.puzzle.active = true;
+    const layer = this.findLayer("Puzzle", 0, "Page", true);
+    const asset = this.findAsset("Puzzle", 0, "Page");
+    layer.className = "puzzle-surface";
+    layer.dataset.runtimeLayer = "1";
+    layer.dataset.componentType = "Puzzle";
+    layer.dataset.runtimeNamespace = "Page";
+    layer.dataset.runtimeId = "0";
+    layer.style.left = `${Number(args[1] ?? 0) || 0}px`;
+    layer.style.top = `${Number(args[2] ?? 0) || 0}px`;
+    layer.style.width = `${Math.max(80, Number(args[3] ?? 580) || 580)}px`;
+    layer.style.height = `${Math.max(80, Number(args[4] ?? 480) || 480)}px`;
+    layer.style.zIndex = "500000";
+    if (asset?.url) {
+      layer.style.backgroundImage = `url("${asset.url}")`;
+      layer.style.backgroundSize = "cover";
+      layer.style.backgroundPosition = "center";
+      let image = layer.querySelector?.("img.puzzle-image");
+      if (!image) {
+        image = document.createElement("img");
+        image.className = "puzzle-image";
+        image.alt = "";
+        layer.appendChild(image);
+      }
+      image.src = asset.url;
+    }
+    layer.classList.remove("runtime-hidden");
+    this.bindRuntimeEvents(layer, "Puzzle", 0, "Page");
+    this.log(`Puzzle.Open/Mix(${args.join(",")})`);
+  }
+
+  setText(id, text = "") {
+    const layer = this.findLayer("Text_Holder", id, "Page", true);
+    layer.textContent = String(text || layer.textContent || "");
+  }
+
   dispatch(method, args) {
+    const isGroup = method.startsWith("Group.");
     const local = method.replace(/^Group\./, "");
+    const namespace = isGroup ? "Group" : "Page";
     switch (local) {
       case "LoadGroup":
-        this.loadedGroup = String(args[0] || "");
-        this.log(`LoadGroup(${this.loadedGroup})`);
+        this.loadGroup(String(args[0] || ""));
+        break;
+      case "CloseGroup":
+        this.closeGroup();
+        this.log("CloseGroup()");
         break;
       case "LoadPage":
+        if (this.handlerStack.includes("Group.Sprite_Holder.InPlace") && this.trustedCallbackDepth <= 0) {
+          this.log(`blocked untrusted ${namespace}.LoadPage(${args[0] || ""})`);
+          break;
+        }
         this.log(`LoadPage(${args[0] || ""})`);
         if (this.onLoadPage) this.onLoadPage(String(args[0] || ""));
         break;
       case "SetCursor":
+        this.cursorId = Number(args[0]) || 0;
+        this.stage.dataset.cursorId = String(this.cursorId);
+        this.log(`SetCursor(${args.join(",")})`);
+        break;
       case "FadeScreen":
       case "ShowBuffer":
         this.log(`${local}(${args.join(",")})`);
@@ -549,94 +1216,187 @@ class GraphBoardRuntime {
         this.log("DisableScreen()");
         break;
       case "Sound_Holder.PlayDSound":
-        this.playAudio("Sound_Holder", Number(args[0]));
+        this.playAudio("Sound_Holder", Number(args[0]), namespace);
         break;
       case "Sound_Holder.Stop":
-        this.stopAudio("Sound_Holder", Number(args[0]));
+        this.stopAudio("Sound_Holder", Number(args[0]), namespace);
         break;
       case "Sound_Holder.StopAll":
-        this.stopAudio("Sound_Holder");
+        this.stopAudio("Sound_Holder", undefined, namespace);
         break;
       case "Sound_Holder.SetPlayDSoundParameters":
-        this.log(`${local}(${args.join(",")})`);
+      case "Text_Holder.SetSoundParameters":
+        this.log(`${namespace}.${local}(${args.join(",")})`);
         break;
       case "Transparent_Video_Holder.Play":
-        this.playVideo("Transparent_Video_Holder", Number(args[0]));
+      case "Video_Holder.Play":
+      case "Video_Holder.PlayFromTo":
+        this.playVideo(local.split(".")[0], Number(args[0]), namespace);
         break;
       case "Transparent_Video_Holder.Stop":
-        this.stopAudio("Transparent_Video_Holder");
+      case "Video_Holder.Stop":
+        this.stopAudio(local.split(".")[0], undefined, namespace);
         this.clearVideoTimers();
-        this.log("Transparent_Video_Holder.Stop()");
+        this.log(`${namespace}.${local}(${args.join(",")})`);
         break;
       case "Transparent_Video_Holder.ResetVideo":
-        this.setLayerStill("Transparent_Video_Holder", Number(args[0]), true);
+        this.setLayerStill("Transparent_Video_Holder", Number(args[0]), true, namespace);
         break;
       case "Transparent_Video_Holder.ShowFirsLastVideoFrame":
-        this.setLayerStill("Transparent_Video_Holder", Number(args[0]), false);
+        this.setLayerStill("Transparent_Video_Holder", Number(args[0]), false, namespace);
         break;
       case "Transparent_Video_Holder.HideFirsLastVideoFrame":
-        this.setLayerVisible("Transparent_Video_Holder", Number(args[0]), false);
+        this.setLayerVisible("Transparent_Video_Holder", Number(args[0]), false, namespace);
         break;
       case "Transparent_Video_Holder.SetDeep":
-      case "Transparent_Video_Holder.GetDeep":
-        this.log(`${local}(${args.join(",")})`);
+      case "Sprite_Holder.SetDeep":
+        this.setDeep(local.split(".")[0], Number(args[0]), Number(args[1]), namespace);
         break;
       case "MultiBitmap.ShowBitmap":
       case "Bitmap_Holder.ShowBitmap":
-        this.moveLayer(local.split(".")[0], Number(args[0]), Number(args[1] || 0), Number(args[2] || 0), Number(args[3] || 0));
+        this.moveLayer(local.split(".")[0], Number(args[0]), Number(args[1] || 0), Number(args[2] || 0), Number(args[3] || 0), namespace);
+        break;
+      case "Bitmap_Holder.MoveTo":
+      case "Sprite_Holder.GotoXY":
+      case "Sprite_Holder.MoveTo":
+      case "HotSpot_Holder.MoveTo":
+        this.moveLayer(local.split(".")[0], Number(args[0]), Number(args[1] || 0), Number(args[2] || 0), undefined, namespace);
         break;
       case "MultiBitmap.HideBitmap":
       case "Bitmap_Holder.HideBitmap":
-        this.setLayerVisible(local.split(".")[0], Number(args[0]), false);
+        this.setLayerVisible(local.split(".")[0], Number(args[0]), false, namespace);
         break;
-      case "Sprite_Holder.GotoXY":
-      case "Sprite_Holder.MoveTo":
-        this.moveLayer("Sprite_Holder", Number(args[0]), Number(args[1] || 0), Number(args[2] || 0));
+      case "Bitmap_Holder.EnableDrag":
+      case "Bitmap_Holder.DisableDrag":
+      case "Sprite_Holder.CompEnableDrag":
+      case "Sprite_Holder.CompDisableDrag":
+      case "Sprite_Holder.DisableDragMode":
+        this.log(`${namespace}.${local}(${args.join(",")})`);
         break;
       case "Sprite_Holder.ShowSprite":
-        this.setLayerVisible("Sprite_Holder", Number(args[0]), true);
+        this.setLayerVisible("Sprite_Holder", Number(args[0]), true, namespace);
         break;
       case "Sprite_Holder.HideSprite":
-        this.setLayerVisible("Sprite_Holder", Number(args[0]), false);
+        this.setLayerVisible("Sprite_Holder", Number(args[0]), false, namespace);
         break;
       case "Sprite_Holder.ChangePhase":
-      case "Sprite_Holder.SetDeep":
+        this.changePhase("Sprite_Holder", Number(args[0]), Number(args[1] || 0), namespace);
+        break;
+      case "Sprite_Holder.GetPosition": {
+        const layer = this.findLayer("Sprite_Holder", Number(args[0]), namespace, true);
+        this.setRef(args[1], parseInt(layer.style.left || "0", 10) || 0);
+        this.setRef(args[2], parseInt(layer.style.top || "0", 10) || 0);
+        this.setRef(args[3], parseInt(layer.style.zIndex || "0", 10) || 0);
+        break;
+      }
       case "Sprite_Holder.EnableTimers":
       case "Sprite_Holder.DisableTimers":
       case "Sprite_Holder.SynchronizeTimers":
       case "Sprite_Holder.StopAnimation":
       case "Sprite_Holder.ContinueAnimation":
-        this.log(`${local}(${args.join(",")})`);
+        this.log(`${namespace}.${local}(${args.join(",")})`);
         break;
       case "HotSpot_Holder.EnableHotSpot":
-        this.enableHotspot(Number(args[0]), true);
+        this.enableHotspot(Number(args[0]), true, namespace);
         break;
       case "HotSpot_Holder.DisableHotSpot":
-        this.enableHotspot(Number(args[0]), false);
+        this.enableHotspot(Number(args[0]), false, namespace);
         break;
       case "HotSpot_Holder.LeftButtonClickOn":
       case "HotSpot_Holder.LeftButtonClickOnUp":
         this.dispatchComponentEvent(
           "HotSpot_Holder",
           local.endsWith("Up") ? "MouseClickOnUp" : "MouseClickOnDown",
-          Number(args[0])
+          Number(args[0]),
+          [],
+          namespace
         );
         break;
-      case "HotSpot_Holder.MoveTo":
-        this.log(`${local}(${args.join(",")})`);
+      case "HotSpot_Holder.PointInHotSpot":
+        this.setRef(args[3], 1);
         break;
       case "Text_Holder.ShowText":
+        this.setLayerVisible("Text_Holder", Number(args[0]), true, namespace);
+        break;
       case "Text_Holder.HideText":
+        this.setLayerVisible("Text_Holder", Number(args[0]), false, namespace);
+        break;
+      case "Text_Holder.SetText":
+        this.setText(Number(args[0]), args[1]);
+        break;
       case "Text_Holder.PlaySynchroText":
+        this.setLayerVisible("Text_Holder", Number(args[0]), true, namespace);
+        this.playAudio("Text_Holder", Number(args[0]), namespace);
+        this.timers.push(setTimeout(() => this.executeHandler("Text_Holder.EndOfSynchroText", [Number(args[0])]), 1800));
+        break;
       case "Text_Holder.StopSynchroText":
+        this.stopAudio("Text_Holder", Number(args[0]), namespace);
+        break;
       case "Text_Holder.SetTextOffsets":
       case "Text_Holder.EnableMouse":
       case "Text_Holder.DisableMouse":
       case "Text_Holder.SetCurrentSelect":
-        this.log(`${local}(${args.join(",")})`);
+        this.log(`${namespace}.${local}(${args.join(",")})`);
+        break;
+      case "Text_Holder.GetTextOffsets":
+        this.setRef(args[1], 0);
+        this.setRef(args[2], 0);
+        break;
+      case "Puzzle.OpenPuzzle":
+      case "Puzzle.Mix":
+        this.showPuzzle(args);
+        break;
+      case "Puzzle.ShowFullBitmap":
+        this.showPuzzle([0, Number(args[0] || 0), Number(args[1] || 0), 460, 360]);
+        this.timers.push(setTimeout(() => this.executeHandler("Puzzle.EndShowFullBitmap", [Number(args[2] || 0)]), 500));
+        break;
+      case "Puzzle.EndShowFullBitmap":
+      case "Puzzle.EndShowBitmap":
+        this.executeHandler(local, args);
+        break;
+      case "Recorder.OpenFile":
+        this.recorder.file = String(args[0] || "");
+        this.log(`Recorder.OpenFile(${this.recorder.file})`);
+        break;
+      case "Recorder.CloseFile":
+        this.recorder.file = "";
+        this.log("Recorder.CloseFile()");
+        break;
+      case "Recorder.EmptyFile":
+        this.recorder.hasContent = false;
+        this.log("Recorder.EmptyFile()");
+        break;
+      case "Recorder.IsEmpty":
+        this.setRef(args[0], this.recorder.hasContent ? 0 : 1);
+        this.log("Recorder.IsEmpty()");
+        break;
+      case "Recorder.Record":
+        this.recorder.recording = true;
+        this.recorder.hasContent = true;
+        this.timers.push(setTimeout(() => this.executeHandler("Recorder.EndRecordSound"), 1000));
+        this.log("Recorder.Record()");
+        break;
+      case "Recorder.Stop":
+        this.recorder.recording = false;
+        this.recorder.playing = false;
+        this.log("Recorder.Stop()");
+        break;
+      case "Recorder.Play":
+        this.recorder.playing = true;
+        this.timers.push(setTimeout(() => this.executeHandler("Recorder.EndPlaySound"), 1000));
+        this.log("Recorder.Play()");
         break;
       default:
-        if (!method.includes(".") && this.extractFunctionBody(this.scene?.script?.rawText || "", method)) {
+        if (/^[A-Za-z_][A-Za-z0-9_]*\.SetString$/.test(method)) {
+          this.variables.set(method.replace(/\.SetString$/, ""), args[0] ?? "");
+        } else if (/^[A-Za-z_][A-Za-z0-9_]*\.Format$/.test(method)) {
+          const objectName = method.replace(/\.Format$/, "");
+          let index = 1;
+          const formatted = String(args[0] || "").replace(/%[sd]/g, () => String(args[index++] ?? ""));
+          this.variables.set(objectName, formatted);
+        } else if (/^[A-Za-z_][A-Za-z0-9_]*\.SetRect$/.test(method) || method === "SetRect") {
+          this.log(`${method}(${args.join(",")})`);
+        } else if (!method.includes(".") && this.extractFunctionBody(this.scene?.script?.rawText || "", method)) {
           this.executeHandler(method, args);
         } else if (method.includes(".")) {
           this.log(`stub ${method}(${args.join(",")})`);

@@ -1,5 +1,6 @@
 const state = {
   index: null,
+  groups: null,
   scene: null,
   selected: 0,
 };
@@ -95,22 +96,28 @@ function initialAssetVisible(component, asset, isPrimary, hasUnknownGeometry) {
   return isPrimary || els.unknown.checked || !hasUnknownGeometry || assetHasGeometry;
 }
 
-function bindRuntimeEvents(element, component, runtimeId) {
+function bindRuntimeEvents(element, component, runtimeId, namespace = component.namespace || "Page") {
   element.dataset.componentType = component.type;
   element.dataset.runtimeId = String(runtimeId);
-  element.addEventListener("mouseenter", () => runtime.dispatchComponentEvent(component.type, "MouseMoveIn", runtimeId));
-  element.addEventListener("mouseleave", () => runtime.dispatchComponentEvent(component.type, "MouseMoveOut", runtimeId));
+  element.dataset.runtimeNamespace = namespace;
+  element.addEventListener("mouseenter", () => runtime.dispatchComponentEvent(component.type, "MouseMoveIn", runtimeId, [], namespace));
+  element.addEventListener("mouseleave", () => runtime.dispatchComponentEvent(component.type, "MouseMoveOut", runtimeId, [], namespace));
   element.addEventListener("mousedown", (event) => {
-    if (event.button === 0) runtime.dispatchComponentEvent(component.type, "MouseClickOnDown", runtimeId);
+    if (event.button === 0) runtime.runUserInput(() => runtime.dispatchComponentEvent(component.type, "MouseClickOnDown", runtimeId, [], namespace));
   });
   element.addEventListener("mouseup", (event) => {
-    if (event.button === 0) runtime.dispatchComponentEvent(component.type, "MouseClickOnUp", runtimeId);
+    if (event.button === 0) runtime.runUserInput(() => runtime.dispatchComponentEvent(component.type, "MouseClickOnUp", runtimeId, [], namespace));
   });
   element.addEventListener("click", (event) => {
     event.stopPropagation();
-    if (component.type === "Text_Holder") {
-      runtime.dispatchComponentEvent(component.type, "ClickOnText", runtimeId);
-    }
+    runtime.runUserInput(() => {
+      if (component.type === "Text_Holder") {
+        runtime.dispatchComponentEvent(component.type, "ClickOnText", runtimeId, [], namespace);
+      }
+      if (component.type === "HotSpot_Holder") {
+        runtime.dispatchComponentEvent(component.type, "LeftButtonClickOn", runtimeId, [], namespace);
+      }
+    });
   });
 }
 
@@ -139,16 +146,20 @@ function renderStage(scene) {
       const layerZ = Number.isFinite(Number(asset.z)) ? Number(asset.z) : Number(component.z ?? 0);
       const assetOrder = Number.isFinite(Number(asset.id)) ? Number(asset.id) : 0;
       const assetHasGeometry = asset.geometryConfidence && asset.geometryConfidence !== "unknown";
+      const initialSrc = component.type === "Transparent_Video_Holder" && asset.stillUrl ? asset.stillUrl : asset.url;
       const img = document.createElement("img");
       img.className = "layer";
-      img.src = asset.url;
+      img.src = initialSrc;
       img.alt = `${component.id}:${asset.id ?? ""}`;
       img.dataset.originalSrc = asset.url;
+      if (asset.stillUrl) img.dataset.stillSrc = asset.stillUrl;
+      img.dataset.runtimeLayer = "1";
+      img.dataset.runtimeNamespace = "Page";
       img.dataset.componentType = component.type;
       img.dataset.assetId = String(asset.id ?? "");
       img.dataset.runtimeId = String(runtimeIdFor(component, asset));
-      img.dataset.runtimeKey = `${component.type}:${asset.id ?? ""}`;
-      img.dataset.runtimeLookupKey = `${component.type}:${runtimeIdFor(component, asset)}`;
+      img.dataset.runtimeKey = `Page:${component.type}:${asset.id ?? ""}`;
+      img.dataset.runtimeLookupKey = `Page:${component.type}:${runtimeIdFor(component, asset)}`;
       img.style.left = `${rect.x}px`;
       img.style.top = `${rect.y}px`;
       img.style.width = `${asset.width || rect.width}px`;
@@ -157,7 +168,7 @@ function renderStage(scene) {
       const isPrimary = component.primaryAssetUrl === asset.url;
       const shouldShow = initialAssetVisible(component, asset, isPrimary, hasUnknownGeometry);
       img.classList.toggle("runtime-hidden", !shouldShow);
-      bindRuntimeEvents(img, component, runtimeIdFor(component, asset));
+      bindRuntimeEvents(img, component, runtimeIdFor(component, asset), "Page");
       els.stage.appendChild(img);
 
       if (els.debug.checked && assetHasGeometry) {
@@ -173,18 +184,36 @@ function renderStage(scene) {
       }
     }
 
-    if (els.unknown.checked || !hasUnknownGeometry || component.type === "HotSpot_Holder") {
+    const hitboxes = component.hitboxes || [];
+    for (const hotspot of hitboxes) {
+      const rect = hotspot.rect || { x: 0, y: 0, width: 1, height: 1 };
+      const hitbox = document.createElement("button");
+      hitbox.type = "button";
+      hitbox.className = "hitbox";
+      hitbox.dataset.runtimeNamespace = "Page";
+      hitbox.style.left = `${rect.x}px`;
+      hitbox.style.top = `${rect.y}px`;
+      hitbox.style.width = `${Math.max(rect.width, 8)}px`;
+      hitbox.style.height = `${Math.max(rect.height, 8)}px`;
+      hitbox.style.zIndex = String(900000 + Number(hotspot.id || 0));
+      hitbox.title = `${component.type} ${hotspot.id}`;
+      bindRuntimeEvents(hitbox, component, Number(hotspot.id || 0), "Page");
+      els.stage.appendChild(hitbox);
+    }
+
+    if ((hitboxes.length === 0) && (els.unknown.checked || !hasUnknownGeometry || component.type === "HotSpot_Holder")) {
       const rect = component.rect || { x: 0, y: 0, width: 1, height: 1 };
       const hitbox = document.createElement("button");
       hitbox.type = "button";
       hitbox.className = "hitbox";
+      hitbox.dataset.runtimeNamespace = "Page";
       hitbox.style.left = `${rect.x}px`;
       hitbox.style.top = `${rect.y}px`;
       hitbox.style.width = `${Math.max(rect.width, 8)}px`;
       hitbox.style.height = `${Math.max(rect.height, 8)}px`;
       hitbox.style.zIndex = String(component.type === "HotSpot_Holder" ? 900 + (component.z ?? 0) : 1 + (component.z ?? 0));
       hitbox.title = `${component.type} ${component.index}`;
-      bindRuntimeEvents(hitbox, component, component.index ?? 0);
+      bindRuntimeEvents(hitbox, component, component.index ?? 0, "Page");
       els.stage.appendChild(hitbox);
     }
 
@@ -212,7 +241,7 @@ function renderComponents(scene) {
       <div class="item">
         <strong>${esc(component.index)}. ${esc(component.type)}</strong>
         <small>${esc(component.geometryConfidence)} rect ${esc(rect.x)},${esc(rect.y)} ${esc(rect.width)}x${esc(rect.height)}</small>
-        <small>${assets} image asset(s), ${audio} audio asset(s), offset ${esc(component.sourceOffset)}</small>
+      <small>${assets} image asset(s), ${audio} audio asset(s), ${component.hitboxes?.length || 0} hitbox(es), offset ${esc(component.sourceOffset)}</small>
       </div>
     `;
   });
@@ -234,7 +263,7 @@ function renderAudio(scene) {
     <div class="audio-row">
       <span class="audio-label">${index + 1}. ${esc(component.type)} #${esc(runtimeIdFor(component, asset))}</span>
       <span class="audio-kind">${esc(asset.kind)}${asset.durationSeconds ? ` ${esc(asset.durationSeconds)}s` : ""}</span>
-      <audio controls preload="none" src="${esc(asset.url)}" data-component-type="${esc(component.type)}" data-asset-id="${esc(asset.id)}" data-runtime-id="${esc(runtimeIdFor(component, asset))}" data-runtime-key="${esc(component.type)}:${esc(asset.id)}" data-duration-seconds="${esc(asset.durationSeconds || "")}"></audio>
+      <audio controls preload="none" src="${esc(asset.url)}" data-runtime-namespace="Page" data-component-type="${esc(component.type)}" data-asset-id="${esc(asset.id)}" data-runtime-id="${esc(runtimeIdFor(component, asset))}" data-runtime-key="Page:${esc(component.type)}:${esc(asset.id)}" data-duration-seconds="${esc(asset.durationSeconds || "")}"></audio>
     </div>
   `).join("");
   els.audioList.innerHTML = `
@@ -281,7 +310,10 @@ function render() {
 
 async function boot() {
   state.index = await getJson("scenes/index.json");
-  els.summary.textContent = `${state.index.scenes.length} pages, ${state.index.validation.totalComponents} components, ${state.index.validation.totalAssets} assets`;
+  state.groups = await getJson(state.index.groupsUrl || "groups/index.json").catch(() => ({ groups: [] }));
+  const loadedGroups = await Promise.all((state.groups.groups || []).map((group) => getJson(group.url)));
+  runtime.setGroups(loadedGroups);
+  els.summary.textContent = `${state.index.scenes.length} pages, ${loadedGroups.length} groups, ${state.index.validation.totalComponents} components, ${state.index.validation.totalAssets} assets`;
   els.select.innerHTML = state.index.scenes.map((scene, index) => (
     `<option value="${index}">${esc(scene.title)} (${scene.componentCount})</option>`
   )).join("");

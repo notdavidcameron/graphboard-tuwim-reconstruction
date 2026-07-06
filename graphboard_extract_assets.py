@@ -16,6 +16,7 @@ import re
 import shutil
 import struct
 import wave
+import zlib
 from pathlib import Path
 
 from graphboard_bdf_inspect import (
@@ -282,6 +283,7 @@ def extract_board_video_streams(
             palette = data[marker + 0xEC : marker + 0xEC + 1024]
             asset_name = f"{component_name}_{stream_index:03d}_{marker:08x}_board_video_{video_width}x{video_height}.gif"
             asset_path = embedded_dir.parent / "animations" / asset_name
+            still_path = asset_path.with_name(f"{asset_path.stem}_still.png")
             write_indexed_gif(
                 asset_path,
                 video_frames,
@@ -291,11 +293,21 @@ def extract_board_video_streams(
                 delay_cs=delay_cs,
                 transparent_index=transparent_index,
             )
+            write_indexed_png(
+                still_path,
+                video_frames[0],
+                video_width,
+                video_height,
+                palette,
+                transparent_index=transparent_index,
+            )
             output = {
                 "kind": "board_video_gif",
                 "path": str(asset_path),
+                "still_path": str(still_path),
                 "offset": marker,
                 "size": asset_path.stat().st_size,
+                "still_size": still_path.stat().st_size if still_path.exists() else None,
                 "frame_count": len(video_frames),
                 "width": video_width,
                 "height": video_height,
@@ -304,6 +316,7 @@ def extract_board_video_streams(
                 "delay_centiseconds": delay_cs,
             }
             item["video_output"] = str(asset_path)
+            item["still_output"] = str(still_path)
             item["transparent_index"] = transparent_index
             outputs.append(output)
 
@@ -454,6 +467,38 @@ def gif_palette_from_bmp_palette(palette: bytes) -> bytes:
         blue, green, red, _reserved = palette[offset : offset + 4]
         rgb.extend((red, green, blue))
     return bytes(rgb)
+
+
+def png_chunk(kind: bytes, payload: bytes) -> bytes:
+    return struct.pack(">I", len(payload)) + kind + payload + struct.pack(">I", zlib.crc32(kind + payload) & 0xFFFFFFFF)
+
+
+def write_indexed_png(
+    path: Path,
+    pixels: bytes,
+    width: int,
+    height: int,
+    palette: bytes,
+    transparent_index: int | None = None,
+) -> None:
+    if width <= 0 or height <= 0 or len(pixels) < width * height:
+        return
+    mkdir(path.parent)
+    scanlines = bytearray()
+    for row in range(height):
+        start = row * width
+        scanlines.append(0)
+        scanlines.extend(pixels[start : start + width])
+    stream = bytearray(b"\x89PNG\r\n\x1a\n")
+    stream.extend(png_chunk(b"IHDR", struct.pack(">IIBBBBB", width, height, 8, 3, 0, 0, 0)))
+    stream.extend(png_chunk(b"PLTE", gif_palette_from_bmp_palette(palette)))
+    if transparent_index is not None and 0 <= transparent_index < 256:
+        alpha = bytearray([255] * (transparent_index + 1))
+        alpha[transparent_index] = 0
+        stream.extend(png_chunk(b"tRNS", bytes(alpha)))
+    stream.extend(png_chunk(b"IDAT", zlib.compress(bytes(scanlines), 1)))
+    stream.extend(png_chunk(b"IEND", b""))
+    path.write_bytes(stream)
 
 
 def gif_lzw_compress(indexed_pixels: bytes, min_code_size: int = 8) -> bytes:
@@ -799,6 +844,46 @@ def parse_grp(path: Path, out_dir: Path) -> dict:
             }
         )
     metadata["component_list_offset"] = offset
+
+    if offset + 8 <= len(data):
+        component_list_version, cursor = read_u32(data, offset)
+        component_count, cursor = read_u32(data, cursor)
+        component_offsets = find_next_wrappers(data, cursor, component_count)
+        metadata["component_list_version"] = component_list_version
+        metadata["component_count"] = component_count
+        metadata["components"] = []
+
+        embedded_dir = group_dir / "embedded"
+        for component_index, component_offset in enumerate(component_offsets):
+            wrapper = parse_wrapper(data, component_offset)
+            private_start = wrapper["private_offset"]
+            private_end = (
+                component_offsets[component_index + 1]
+                if component_index + 1 < len(component_offsets)
+                else len(data)
+            )
+            component_name = f"{component_index:02d}_{safe_name(wrapper['display_name'])}"
+            component_meta = {
+                "index": component_index,
+                "offset": component_offset,
+                "clsid": wrapper["clsid"],
+                "display_name": wrapper["display_name"],
+                "private_offset": private_start,
+                "private_size": max(0, private_end - private_start),
+                "embedded": [],
+            }
+
+            for riff_index, chunk in enumerate(find_riff_chunks(data, private_start, private_end)):
+                asset_name = f"{component_name}_{riff_index:03d}_{chunk['offset']:08x}{chunk['extension']}"
+                asset_path = embedded_dir / asset_name
+                mkdir(asset_path.parent)
+                asset_path.write_bytes(data[chunk["offset"] : chunk["offset"] + chunk["size"]])
+                item = {"kind": "riff_" + chunk["kind"].lower(), "path": str(asset_path), **chunk}
+                component_meta["embedded"].append(item)
+                metadata["outputs"].append({"kind": item["kind"], "path": str(asset_path), "size": chunk["size"]})
+
+            metadata["components"].append(component_meta)
+
     write_json(group_dir / "metadata.json", metadata)
     return metadata
 

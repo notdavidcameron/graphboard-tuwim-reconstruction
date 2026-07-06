@@ -11,15 +11,17 @@
   "background": {
     "colorIndex": 0,
     "flag": 0,
-    "bmpPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\background.bmp",
+    "bmpPath": "extracted_assets\\bdf\\KRAWIEC\\background.bmp",
     "bmpUrl": "../extracted_assets/bdf/KRAWIEC/background.bmp",
-    "palettePath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\background_palette.bin",
+    "palettePath": "extracted_assets\\bdf\\KRAWIEC\\background_palette.bin",
     "paletteUrl": "../extracted_assets/bdf/KRAWIEC/background_palette.bin"
   },
   "components": [
     {
       "id": "00_Bitmap_Holder",
       "type": "Bitmap_Holder",
+      "sourceType": "Bitmap_Holder",
+      "namespace": "Page",
       "index": 0,
       "z": 0,
       "visible": false,
@@ -30,6 +32,8 @@
         "height": 80
       },
       "geometryConfidence": "unknown",
+      "itemCount": null,
+      "hitboxes": [],
       "sourceOffset": 309357,
       "privateOffset": 310489,
       "privateSize": 57312,
@@ -40,16 +44,87 @@
     {
       "id": "01_HotSpot_Holder",
       "type": "HotSpot_Holder",
+      "sourceType": "HotSpot_Holder",
+      "namespace": "Page",
       "index": 1,
-      "z": 1,
+      "z": 100,
       "visible": false,
       "rect": {
-        "x": 0,
-        "y": 0,
-        "width": 120,
-        "height": 80
+        "x": 84,
+        "y": 6,
+        "width": 495,
+        "height": 354
       },
-      "geometryConfidence": "unknown",
+      "geometryConfidence": "serialized_entries",
+      "itemCount": null,
+      "hitboxes": [
+        {
+          "id": 0,
+          "rect": {
+            "x": 84,
+            "y": 94,
+            "width": 76,
+            "height": 186
+          },
+          "sourceOffset": 368917,
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "id": 1,
+          "rect": {
+            "x": 156,
+            "y": 242,
+            "width": 79,
+            "height": 118
+          },
+          "sourceOffset": 369018,
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "id": 2,
+          "rect": {
+            "x": 305,
+            "y": 125,
+            "width": 78,
+            "height": 84
+          },
+          "sourceOffset": 369119,
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "id": 3,
+          "rect": {
+            "x": 266,
+            "y": 249,
+            "width": 93,
+            "height": 108
+          },
+          "sourceOffset": 369220,
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "id": 4,
+          "rect": {
+            "x": 309,
+            "y": 6,
+            "width": 82,
+            "height": 89
+          },
+          "sourceOffset": 369321,
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "id": 5,
+          "rect": {
+            "x": 450,
+            "y": 45,
+            "width": 129,
+            "height": 183
+          },
+          "sourceOffset": 369422,
+          "geometryConfidence": "serialized_entry"
+        }
+      ],
       "sourceOffset": 367801,
       "privateOffset": 368906,
       "privateSize": 625,
@@ -60,6 +135,8 @@
     {
       "id": "02_Sound_Holder",
       "type": "Sound_Holder",
+      "sourceType": "Sound_Holder",
+      "namespace": "Page",
       "index": 2,
       "z": 0,
       "visible": false,
@@ -70,6 +147,8 @@
         "height": 0
       },
       "geometryConfidence": "not_visual",
+      "itemCount": null,
+      "hitboxes": [],
       "sourceOffset": 369531,
       "privateOffset": 370427,
       "privateSize": 1281938,
@@ -151,6 +230,8 @@
     {
       "id": "03_Text_Holder",
       "type": "Text_Holder",
+      "sourceType": "Text_Holder",
+      "namespace": "Page",
       "index": 3,
       "z": 3,
       "visible": false,
@@ -161,6 +242,8 @@
         "height": 80
       },
       "geometryConfidence": "unknown",
+      "itemCount": null,
+      "hitboxes": [],
       "sourceOffset": 1652365,
       "privateOffset": 1653991,
       "privateSize": 13207,
@@ -170,7 +253,7 @@
     }
   ],
   "script": {
-    "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\script.txt",
+    "path": "extracted_assets\\bdf\\KRAWIEC\\script.txt",
     "url": "../extracted_assets/bdf/KRAWIEC/script.txt",
     "handlers": [
       {
@@ -365,6 +448,6 @@
     "rawText": "//###########################################################################\n\n//Script code\n\n//###########################################################################\n\n\n\n\n\nOnOpenPage()\n\n{\n\n\t// Add your component and variables initialization code here\n\n\t// WARNING: All variables definied on this function are global for this page\n\n   if(IsProject()==0)   \n\n   {\n\n//      int textMode=0;\n\n      CString parentWnd;\n\n   }\n\n   int textMode=0;\n\n   int totalRes=0;\n\n   parentWnd.SetString(\"krawiec.bdf\");\n\n\n\n   LoadGroup(\"cursors.grp\");\n\n   SetCursor(0);\n\n\n\n\n\n//#############################################################################\n\n   int toolbar=0;\n\n   int toolbarCase=0;\n\n   int toolbarPhase=0;\n\n   int txtHotSpotOn=0;\n\n   int playStatus=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n//############################################################################\n\n   Sound_Holder.PlayDSound(0);\n\n   SetTextMode();\n\n\n\n   FadeScreen(1,1000);\n\n//   SetTimer(5000);\n\n}\n\n\n\nvoid SetTextMode()\n\n{\n\n   if(textMode==0)\n\n   {\n\n      Sound_Holder.SetPlayDSoundParameters( 0, 0, 0, 0 );\n\n      playStatus = 0;\n\n      Sound_Holder.Stop(3);\n\n      Text_Holder.HideText(0);\n\n      Text_Holder.StopSynchroText(0);\n\n      Bitmap_Holder.EnableDrag();\n\n   }\n\n   else\n\n   {\n\n      playStatus = 1;   \n\n      Sound_Holder.SetPlayDSoundParameters( 0, -1000, 0, 0 );\n\n      Sound_Holder.PlayDSound(5);\n\n      Text_Holder.SetTextOffsets(0,0,0);\n\n      Text_Holder.DisableMouse(0);\n\n      Text_Holder.ShowText(0);\n\n      Bitmap_Holder.DisableDrag();\n\n   }\n\n}\n\n\n\nvoid OnClosePage(void)\n\n{\n\n\t// Add your close page handler code here\n\n\n\n}\n\n\n\n\n\n \n\nvoid Bitmap_Holder.MouseMoveIn(int bitmapID)\n\n{\n\n   if(textMode==0)   SetCursor(1);\n\n}\n\n\n\n \n\nvoid Bitmap_Holder.MouseMoveOut(int bitmapID)\n\n{\n\n   if(textMode==0)   SetCursor(0);\n\n}\n\n\n\n \n\n\n\nvoid Bitmap_Holder.MouseClickOnDown(int bitmapID)\n\n{\n\n   if(textMode==0)   Sound_Holder.PlayDSound(1);\n\n}\n\n\n\nvoid Bitmap_Holder.MouseDrop(int bitmapID,int left,int top,int right,int bottom)\n\n{\n\n   if(textMode)   return;\n\n   int res;\n\n   HotSpot_Holder.PointInHotSpot(bitmapID,left+((right-left)/2),top+((bottom-top)/2),&res);\n\n   if(res)\n\n   {\n\n      Bitmap_Holder.ShowBitmap(bitmapID+5);\n\n      Bitmap_Holder.HideBitmap(bitmapID);\n\n      totalRes++;\n\n      if(totalRes<5)\n\n         Sound_Holder.PlayDSound(3);\n\n      else\n\n         Sound_Holder.PlayDSound(4);\n\n   }\n\n   else\n\n   {\n\n      Sound_Holder.PlayDSound(2);\n\n      switch(bitmapID)\n\n      {\n\n         case 0:\n\n            Bitmap_Holder.MoveTo(bitmapID,182,402);\n\n            break;\n\n         case 1:\n\n            Bitmap_Holder.MoveTo(bitmapID,79,402);\n\n            break;\n\n         case 2:\n\n            Bitmap_Holder.MoveTo(bitmapID,395,397);\n\n            break;\n\n         case 3:\n\n            Bitmap_Holder.MoveTo(bitmapID,288,403);\n\n            break;\n\n         case 4:\n\n            Bitmap_Holder.MoveTo(bitmapID,496,402);\n\n            break;\n\n      }\n\n   }\n\n}\n\n\n\n \n\nvoid HotSpot_Holder.LeftButtonClickOn(int rectID)\n\n{\n\n   if(textMode)   return;\n\n   if(rectID==10)  \n\n   {\n\n      FadeScreen(0,1000);\n\n      LoadPage(\"wszyscy.bdf\");\n\n   }\n\n}\n\n\n\n \n\nvoid HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n   if(textMode==0)  SetCursor(1);\n\n}\n\n\n\n \n\nvoid HotSpot_Holder.MouseMoveOut(int bitmapID)\n\n{\n\n   if(textMode==0)  SetCursor(0);\n\n}\n\n\n\n//############################################################# T O O L B A R #######\n\n//#############################################################---------------#######\n\nvoid Group.HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n   switch(rectID)\n\n   {\n\n      case 0:\n\n         Group.HotSpot_Holder.DisableHotSpot(0);\n\n         Group.Sprite_Holder.DisableTimers();\n\n\n\n         Group.Sprite_Holder.GotoXY(0,480,0);\n\n         Group.Sprite_Holder.GotoXY(2,544,14);\n\n         Group.Sprite_Holder.GotoXY(3,584,14);\n\n         Group.Sprite_Holder.GotoXY(4,515,84);\n\n         Group.Sprite_Holder.GotoXY(5,559,210);\n\n         Group.Sprite_Holder.GotoXY(6,558,282);\n\n         Group.Sprite_Holder.GotoXY(7,557,404);\n\n   \n\n         Group.Sprite_Holder.SynchronizeTimers();\n\n         Group.Sprite_Holder.EnableTimers();\n\n         Group.Sound_Holder.PlayDSound(0);\n\n         break;\n\n      case 1:\n\n         if(toolbar)\n\n         {\n\n            Group.Sprite_Holder.DisableTimers();\n\n   \n\n            if(toolbarPhase==0)\n\n            {\n\n               Group.Sprite_Holder.GotoXY(0,640,0);\n\n               Group.Sprite_Holder.GotoXY(2,704,14);\n\n               Group.Sprite_Holder.GotoXY(3,744,14);\n\n               Group.Sprite_Holder.GotoXY(4,675,84);\n\n               Group.Sprite_Holder.GotoXY(5,719,210);\n\n               Group.Sprite_Holder.GotoXY(6,718,282);\n\n               Group.Sprite_Holder.GotoXY(7,717,404);\n\n            }\n\n            else\n\n            {\n\n               Group.Sprite_Holder.GotoXY(0,640,0);\n\n               Group.Sprite_Holder.GotoXY(8,693,22);\n\n               Group.Sprite_Holder.GotoXY(9,708,156);\n\n               Group.Sprite_Holder.GotoXY(7,717,404);\n\n            }\n\n            Group.Sprite_Holder.SynchronizeTimers();\n\n            Group.Sprite_Holder.EnableTimers();\n\n            Group.Sound_Holder.PlayDSound(0);\n\n            toolbar=0;\n\n            toolbarPhase=0;\n\n         }\n\n         else\n\n         {\n\n            Group.Sprite_Holder.GotoXY(11,-56,-70);\n\n            if(toolbarCase!=11)   Group.Sound_Holder.PlayDSound(2);\n\n            SetCursor(0);\n\n         }\n\n         txtHotSpotOn=0;\n\n         Group.HotSpot_Holder.DisableHotSpot(1);\n\n         Group.HotSpot_Holder.EnableHotSpot(0);\n\n         toolbarCase=0;\n\n         break;\n\n      case 2:\n\n         if(txtHotSpotOn==0)   \n\n         {\n\n            Group.Sprite_Holder.GotoXY(11,0,0);\n\n            Group.Sound_Holder.PlayDSound(3);\n\n         }\n\n         break;\n\n   }\n\n}\n\n\n\n\n\nvoid Group.Sprite_Holder.InPlace(int spriteID,int x,int y)\n\n{\n\n   switch(spriteID)\n\n   {\n\n      case 0:\n\n         if(x==480)\n\n         {\n\n            toolbar=1;\n\n            Group.HotSpot_Holder.EnableHotSpot(1);\n\n            SetCursor(1);\n\n         }\n\n         else\n\n         {\n\n            SetCursor(0);\n\n            Group.Sprite_Holder.ChangePhase(2,0);\n\n            Group.Sprite_Holder.ChangePhase(3,0);\n\n            Group.Sprite_Holder.ChangePhase(4,0);\n\n            Group.Sprite_Holder.ChangePhase(5,0);\n\n            Group.Sprite_Holder.ChangePhase(6,0);\n\n            Group.Sprite_Holder.ChangePhase(7,0);\n\n            Group.Sprite_Holder.ChangePhase(8,0);\n\n            Group.Sprite_Holder.ChangePhase(9,0);\n\n            switch(toolbarCase)\n\n            {\n\n            case 2:   //lewo   \n\n               FadeScreen(0,1000);\n\n               LoadPage(\"rachunek.bdf\");\n\n               break;\n\n            case 3:   //prawo\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"zosia.bdf\");\n\n               break;\n\n            case 4:   //recytacja\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"wszysc_r.bdf\");\n\n               break;\n\n            case 5:   //roznice\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"wszysc_c.bdf\");\n\n               break;\n\n            case 6:   //puzzle\n\n               Group.Sprite_Holder.DisableTimers();\n\n\n\n               Group.Sprite_Holder.GotoXY(0,480,0);\n\n               Group.Sprite_Holder.GotoXY(8,533,22);\n\n               Group.Sprite_Holder.GotoXY(9,548,156);\n\n               Group.Sprite_Holder.GotoXY(7,557,404);\n\n\n\n               Group.Sprite_Holder.SynchronizeTimers();\n\n               Group.Sprite_Holder.EnableTimers();\n\n               Group.Sound_Holder.PlayDSound(0);\n\n               toolbarPhase=1;\n\n               break;\n\n            case 7:   //Plansza wyboru\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"Wyborw.bdf\");\n\n               break;\n\n            case 8:   //puzzle trudne\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"krawiep1.bdf\");\n\n               break;\n\n            case 9:   //puzzle latwe\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"krawiep2.bdf\");\n\n               break;\n\n            }\n\n         }\n\n         break;\n\n      case 11:\n\n         if(x==0)\n\n         {\n\n            Group.HotSpot_Holder.EnableHotSpot(1);\n\n            txtHotSpotOn=1;\n\n            SetCursor(1);\n\n         }\n\n         break;\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseMoveIn(int spriteID)\n\n{\n\n   if(spriteID && toolbar)\n\n      SetCursor(1);\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseMoveOut(int spriteID)\n\n{\n\n   if(spriteID)\n\n      SetCursor(0);\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnDown(int spriteID)\n\n{\n\n   if(spriteID==0)   return;\n\n   if(spriteID==11)\n\n   {\n\n      Group.Sprite_Holder.GotoXY(11,-56,-70);\n\n      Group.Sound_Holder.PlayDSound(2);\n\n      toolbarCase=spriteID;\n\n      SetCursor(0);\n\n      if(textMode)    textMode=0;\n\n      else            textMode=1;\n\n      SetTextMode();\n\n   }\n\n   else\n\n   {\n\n      Group.HotSpot_Holder.DisableHotSpot(1);\n\n      Group.Sprite_Holder.ChangePhase(spriteID,1);\n\n      switch(spriteID)\n\n      {\n\n         case 2:   //lewo\n\n         case 3:   //prawo \n\n            Group.Sound_Holder.PlayDSound(4);\n\n            break;\n\n         case 4:   //recytacja\n\n            Group.Sound_Holder.PlayDSound(5);\n\n            break;\n\n         case 5:   //roznice\n\n            Group.Sound_Holder.PlayDSound(6);\n\n            break;\n\n         case 6:   //puzzle\n\n            Group.Sound_Holder.PlayDSound(7);\n\n            break;\n\n         case 7:   //plansza glowna\n\n            Group.Sound_Holder.PlayDSound(8);\n\n            break;\n\n         case 8:   //puzzle latwe\n\n            Group.Sound_Holder.PlayDSound(9);\n\n            break;\n\n         case 9:   //puzzle trudne\n\n            Group.Sound_Holder.PlayDSound(10);\n\n            break;\n\n         case 10:  //parent window\n\n            Group.Sound_Holder.PlayDSound(4);\n\n            break;\n\n      }\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnUp(int spriteID)\n\n{\n\n   if(spriteID==0 || spriteID==5 || spriteID==6 || spriteID==8 || spriteID==9 || spriteID==11)   return;\n\n   Group.Sprite_Holder.DisableTimers();\n\n\n\n   if(toolbarPhase==0)\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(2,704,14);\n\n      Group.Sprite_Holder.GotoXY(3,744,14);\n\n      Group.Sprite_Holder.GotoXY(4,675,84);\n\n      Group.Sprite_Holder.GotoXY(5,719,210);\n\n      Group.Sprite_Holder.GotoXY(6,718,282);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n   }\n\n   else\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(8,693,22);\n\n      Group.Sprite_Holder.GotoXY(9,708,156);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n      toolbarPhase=0;\n\n   }\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID;\n\n}\n\n\n\nvoid Group.Sprite_Holder.EndAnimation(int spriteID)\n\n{\n\n   if(spriteID!=5 && spriteID!=6 && spriteID!=8 && spriteID!=9)   return;\n\n\n\n   Group.Sprite_Holder.ChangePhase(spriteID,2);\n\n\n\n   Group.Sprite_Holder.DisableTimers();\n\n\n\n   if(toolbarPhase==0)\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(2,704,14);\n\n      Group.Sprite_Holder.GotoXY(3,744,14);\n\n      Group.Sprite_Holder.GotoXY(4,675,84);\n\n      Group.Sprite_Holder.GotoXY(5,719,210);\n\n      Group.Sprite_Holder.GotoXY(6,718,282);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n   }\n\n   else\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(8,693,22);\n\n      Group.Sprite_Holder.GotoXY(9,708,156);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n      toolbarPhase=0;\n\n   }\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID;\n\n}\n\n//#############################################################\n\n//############################################################# \n\n\n\n\n\n\n\n \n\nvoid Text_Holder.ScrollTextUp(int textID)\n\n{\n\n   if( textMode == 0 ) return;\n\n\n\n   SetCursor(3);\n\n}\n\n\n\n \n\nvoid Text_Holder.ScrollTextDown(int textID)\n\n{\n\n   if( textMode == 0 ) return;\n\n\n\n   SetCursor(4);\n\n}\n\n\n\n \n\nvoid Text_Holder.EndScrollText(int textID)\n\n{\n\n   if( textMode == 0 ) return;\n\n   if(playStatus)  SetCursor(2);\n\n   else            SetCursor(5);\n\n}\n\n\n\n \n\nvoid Text_Holder.MouseMoveIn(int textID)\n\n{\n\n   if( textMode == 0 ) return;\n\n\n\n   if(playStatus)\n\n      SetCursor(2);\n\n   else\n\n      SetCursor(5);\n\n}\n\n\n\n \n\nvoid Text_Holder.MouseMoveOut(int textID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\n \n\nvoid Text_Holder.ClickOnText(int textID)\n\n{\n\n   if( textMode == 0 ) return;\n\n\n\n   if(playStatus)\n\n   {\n\n      playStatus=0;\n\n      Sound_Holder.Stop(3);\n\n      Text_Holder.StopSynchroText(0);\n\n      Sound_Holder.SetPlayDSoundParameters( 2, 0, 0, 0 );\n\n      SetCursor(5);\n\n   }\n\n   else\n\n   {\n\n      playStatus=1;\n\n      Sound_Holder.SetPlayDSoundParameters( 0, -1000, 0, 0 );\n\n      Text_Holder.PlaySynchroText(0);\n\n      SetCursor(2);\n\n   }\n\n}\n\n\n\n \n\nvoid Text_Holder.EndOfSynchroText(int textID)\n\n{\n\n   if(playStatus)\n\n      SetCursor(5);\n\n   else\n\n      SetCursor(0);\n\n   playStatus=0;\n\n   Sound_Holder.SetPlayDSoundParameters( 0, 0, 0, 0 );\n\n}\n\n\n\n \n\nvoid Sound_Holder.EndPlaySound(int soundID)\n\n{\n\n   if(soundID==5 && textMode)\n\n   { \n\n      playStatus=1;\n\n      Text_Holder.EnableMouse(0);\n\n      Text_Holder.PlaySynchroText(0);\n\n   }\n\n}\n\n  \n\nvoid OnTimer(void)\n\n{\n\n        //Add your command handler code here\n\n   SetTimer(0);\n\n   Sound_Holder.PlayDSound(6);\n\n}\n\n \n\nvoid OnLButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   SetTimer(0);\n\n   Sound_Holder.Stop(6);\n\n}\n\n \n\nvoid OnRButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   Sound_Holder.PlayDSound(6);\n\n}\n\n "
   },
   "warnings": [
-    "3 component(s) have unknown geometry and default to 0,0."
+    "2 component(s) have unknown geometry and default to 0,0."
   ]
 }

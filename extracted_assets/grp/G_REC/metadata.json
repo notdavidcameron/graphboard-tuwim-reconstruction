@@ -123,7 +123,132 @@
       "kind": "cursor_pgm",
       "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\cursor_05_sluchajay.pgm",
       "size": 853
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\embedded\\02_Group.Sound_Holder_000_000264de.wav",
+      "size": 1953620
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\embedded\\02_Group.Sound_Holder_001_00203492.wav",
+      "size": 238
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\embedded\\02_Group.Sound_Holder_002_002035e0.wav",
+      "size": 22568
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\embedded\\02_Group.Sound_Holder_003_00208e68.wav",
+      "size": 12572
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\embedded\\02_Group.Sound_Holder_004_0020bfe4.wav",
+      "size": 157384
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\embedded\\02_Group.Sound_Holder_005_0023270c.wav",
+      "size": 11870
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\embedded\\02_Group.Sound_Holder_006_002355ca.wav",
+      "size": 11870
     }
   ],
-  "component_list_offset": 5332
+  "component_list_offset": 5332,
+  "component_list_version": 1,
+  "component_count": 4,
+  "components": [
+    {
+      "index": 0,
+      "offset": 5340,
+      "clsid": "B64F3336-5368-11D0-B445-008048EB5D40",
+      "display_name": "Group.Sprite_Holder",
+      "private_offset": 6880,
+      "private_size": 147768,
+      "embedded": []
+    },
+    {
+      "index": 1,
+      "offset": 154648,
+      "clsid": "DA768116-5341-11D0-B444-008048EB5D40",
+      "display_name": "Group.HotSpot_Holder",
+      "private_offset": 155759,
+      "private_size": 221,
+      "embedded": []
+    },
+    {
+      "index": 2,
+      "offset": 155980,
+      "clsid": "1720D306-6932-11D0-B468-008048EB5D40",
+      "display_name": "Group.Sound_Holder",
+      "private_offset": 156882,
+      "private_size": 2170802,
+      "embedded": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\embedded\\02_Group.Sound_Holder_000_000264de.wav",
+          "offset": 156894,
+          "size": 1953620,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\embedded\\02_Group.Sound_Holder_001_00203492.wav",
+          "offset": 2110610,
+          "size": 238,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\embedded\\02_Group.Sound_Holder_002_002035e0.wav",
+          "offset": 2110944,
+          "size": 22568,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\embedded\\02_Group.Sound_Holder_003_00208e68.wav",
+          "offset": 2133608,
+          "size": 12572,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\embedded\\02_Group.Sound_Holder_004_0020bfe4.wav",
+          "offset": 2146276,
+          "size": 157384,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\embedded\\02_Group.Sound_Holder_005_0023270c.wav",
+          "offset": 2303756,
+          "size": 11870,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\embedded\\02_Group.Sound_Holder_006_002355ca.wav",
+          "offset": 2315722,
+          "size": 11870,
+          "extension": ".wav"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "offset": 2327684,
+      "clsid": "0D8A5736-5337-11D0-B444-008048EB5D40",
+      "display_name": "Group.Bitmap_Holder",
+      "private_offset": 2328822,
+      "private_size": 1820,
+      "embedded": []
+    }
+  ]
 }

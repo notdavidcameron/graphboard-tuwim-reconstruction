@@ -78,7 +78,111 @@
       "kind": "cursor_pgm",
       "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\cursor_03_down.pgm",
       "size": 853
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_000_0000118a.wav",
+      "size": 1536790
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_001_00178500.wav",
+      "size": 6282
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_002_00179dea.wav",
+      "size": 22568
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_003_0017f672.wav",
+      "size": 12572
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_004_001827ee.wav",
+      "size": 157384
+    },
+    {
+      "kind": "WAVE",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_005_001a8f16.wav",
+      "size": 11870
     }
   ],
-  "component_list_offset": 3568
+  "component_list_offset": 3568,
+  "component_list_version": 1,
+  "component_count": 3,
+  "components": [
+    {
+      "index": 0,
+      "offset": 3576,
+      "clsid": "1720D306-6932-11D0-B468-008048EB5D40",
+      "display_name": "Group.Sound_Holder",
+      "private_offset": 4478,
+      "private_size": 1748050,
+      "embedded": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_000_0000118a.wav",
+          "offset": 4490,
+          "size": 1536790,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_001_00178500.wav",
+          "offset": 1541376,
+          "size": 6282,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_002_00179dea.wav",
+          "offset": 1547754,
+          "size": 22568,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_003_0017f672.wav",
+          "offset": 1570418,
+          "size": 12572,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_004_001827ee.wav",
+          "offset": 1583086,
+          "size": 157384,
+          "extension": ".wav"
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_005_001a8f16.wav",
+          "offset": 1740566,
+          "size": 11870,
+          "extension": ".wav"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "offset": 1752528,
+      "clsid": "B64F3336-5368-11D0-B445-008048EB5D40",
+      "display_name": "Group.Sprite_Holder",
+      "private_offset": 1754068,
+      "private_size": 157864,
+      "embedded": []
+    },
+    {
+      "index": 2,
+      "offset": 1911932,
+      "clsid": "DA768116-5341-11D0-B444-008048EB5D40",
+      "display_name": "Group.HotSpot_Holder",
+      "private_offset": 1913043,
+      "private_size": 221,
+      "embedded": []
+    }
+  ]
 }

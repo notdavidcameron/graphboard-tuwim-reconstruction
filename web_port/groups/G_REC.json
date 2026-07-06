@@ -1,0 +1,248 @@
+{
+  "id": "G_REC",
+  "title": "G_REC",
+  "sourceGrp": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\G_REC.GRP",
+  "cursors": [
+    {
+      "index": 0,
+      "name": "action1",
+      "width": 28,
+      "height": 30,
+      "url": "../extracted_assets/grp/G_REC/cursor_00_action1.pgm",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\cursor_00_action1.pgm"
+    },
+    {
+      "index": 1,
+      "name": "up1",
+      "width": 28,
+      "height": 30,
+      "url": "../extracted_assets/grp/G_REC/cursor_01_up1.pgm",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\cursor_01_up1.pgm"
+    },
+    {
+      "index": 2,
+      "name": "down1",
+      "width": 28,
+      "height": 30,
+      "url": "../extracted_assets/grp/G_REC/cursor_02_down1.pgm",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\cursor_02_down1.pgm"
+    },
+    {
+      "index": 3,
+      "name": "sluchaj",
+      "width": 28,
+      "height": 30,
+      "url": "../extracted_assets/grp/G_REC/cursor_03_sluchaj.pgm",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\cursor_03_sluchaj.pgm"
+    },
+    {
+      "index": 4,
+      "name": "tu_nie",
+      "width": 28,
+      "height": 30,
+      "url": "../extracted_assets/grp/G_REC/cursor_04_tu_nie.pgm",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\cursor_04_tu_nie.pgm"
+    },
+    {
+      "index": 5,
+      "name": "sluchajay",
+      "width": 28,
+      "height": 30,
+      "url": "../extracted_assets/grp/G_REC/cursor_05_sluchajay.pgm",
+      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\cursor_05_sluchajay.pgm"
+    }
+  ],
+  "components": [
+    {
+      "id": "00_Sprite_Holder",
+      "type": "Sprite_Holder",
+      "sourceType": "Group.Sprite_Holder",
+      "namespace": "Group",
+      "index": 0,
+      "z": 50,
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 48,
+        "height": 48
+      },
+      "geometryConfidence": "synthetic_items",
+      "itemCount": 12,
+      "hitboxes": [],
+      "sourceOffset": 5340,
+      "privateOffset": 6880,
+      "privateSize": 147768,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "01_HotSpot_Holder",
+      "type": "HotSpot_Holder",
+      "sourceType": "Group.HotSpot_Holder",
+      "namespace": "Group",
+      "index": 1,
+      "z": 100,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": -1,
+        "width": 640,
+        "height": 483
+      },
+      "geometryConfidence": "serialized_entries",
+      "itemCount": null,
+      "hitboxes": [
+        {
+          "id": 0,
+          "rect": {
+            "x": 629,
+            "y": -1,
+            "width": 11,
+            "height": 483
+          },
+          "sourceOffset": 155770,
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "id": 1,
+          "rect": {
+            "x": 0,
+            "y": 6,
+            "width": 635,
+            "height": 474
+          },
+          "sourceOffset": 155871,
+          "geometryConfidence": "serialized_entry"
+        }
+      ],
+      "sourceOffset": 154648,
+      "privateOffset": 155759,
+      "privateSize": 221,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    },
+    {
+      "id": "02_Sound_Holder",
+      "type": "Sound_Holder",
+      "sourceType": "Group.Sound_Holder",
+      "namespace": "Group",
+      "index": 2,
+      "z": 0,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "geometryConfidence": "not_visual",
+      "itemCount": null,
+      "hitboxes": [],
+      "sourceOffset": 155980,
+      "privateOffset": 156882,
+      "privateSize": 2170802,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": [
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\embedded\\02_Group.Sound_Holder_000_000264de.wav",
+          "url": "../extracted_assets/grp/G_REC/embedded/02_Group.Sound_Holder_000_000264de.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 156894,
+          "id": 0
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\embedded\\02_Group.Sound_Holder_001_00203492.wav",
+          "url": "../extracted_assets/grp/G_REC/embedded/02_Group.Sound_Holder_001_00203492.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 2110610,
+          "id": 1
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\embedded\\02_Group.Sound_Holder_002_002035e0.wav",
+          "url": "../extracted_assets/grp/G_REC/embedded/02_Group.Sound_Holder_002_002035e0.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 2110944,
+          "id": 2
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\embedded\\02_Group.Sound_Holder_003_00208e68.wav",
+          "url": "../extracted_assets/grp/G_REC/embedded/02_Group.Sound_Holder_003_00208e68.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 2133608,
+          "id": 3
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\embedded\\02_Group.Sound_Holder_004_0020bfe4.wav",
+          "url": "../extracted_assets/grp/G_REC/embedded/02_Group.Sound_Holder_004_0020bfe4.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 2146276,
+          "id": 4
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\embedded\\02_Group.Sound_Holder_005_0023270c.wav",
+          "url": "../extracted_assets/grp/G_REC/embedded/02_Group.Sound_Holder_005_0023270c.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 2303756,
+          "id": 5
+        },
+        {
+          "kind": "WAVE",
+          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_REC\\embedded\\02_Group.Sound_Holder_006_002355ca.wav",
+          "url": "../extracted_assets/grp/G_REC/embedded/02_Group.Sound_Holder_006_002355ca.wav",
+          "durationSeconds": null,
+          "sampleRate": null,
+          "channels": null,
+          "offset": 2315722,
+          "id": 6
+        }
+      ]
+    },
+    {
+      "id": "03_Bitmap_Holder",
+      "type": "Bitmap_Holder",
+      "sourceType": "Group.Bitmap_Holder",
+      "namespace": "Group",
+      "index": 3,
+      "z": 3,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 80
+      },
+      "geometryConfidence": "unknown",
+      "itemCount": null,
+      "hitboxes": [],
+      "sourceOffset": 2327684,
+      "privateOffset": 2328822,
+      "privateSize": 1820,
+      "primaryAssetUrl": null,
+      "assets": [],
+      "audio": []
+    }
+  ],
+  "warnings": []
+}
