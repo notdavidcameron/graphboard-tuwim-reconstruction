@@ -5,6 +5,10 @@ not a direct paste of Ghidra decompiler output. Decompiled code and recovered
 offsets are used as references, but the port is organized around domain concepts:
 archives, projects, pages, components, assets, and runtime actions.
 
+Dependency-free code is not a goal by itself. Prefer proven libraries when they
+reduce risk or keep the port focused on recovered behavior instead of commodity
+plumbing.
+
 ## Current Scope
 
 - MFC `CArchive` string decoding.
@@ -34,6 +38,8 @@ Inspect files:
 ## Porting Policy
 
 - Prefer clear types and checked parsing over raw pointer arithmetic.
+- Use existing working libraries for solved problems: JSON, image/audio codecs,
+  windowing, compression, and tests are all fair game.
 - Keep source offsets in parsed structures when they help compare against Ghidra.
 - Treat serialized pointer-looking fields as file artifacts unless proven live.
 - Add tests with synthetic byte streams before wiring larger recovered assets.

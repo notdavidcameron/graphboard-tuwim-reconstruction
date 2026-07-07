@@ -48,6 +48,5 @@ ProjectManifest parseProjectManifest(BinaryReader& reader);
 BdfHeader parseBdfHeader(BinaryReader& reader);
 
 std::string decodeShiftedSignature(const std::string& encoded);
-std::string jsonEscape(const std::string& value);
 
 } // namespace graphboard

@@ -1,5 +1,7 @@
 #include "graphboard/format.hpp"
 
+#include <nlohmann/json.hpp>
+
 #include <algorithm>
 #include <cctype>
 #include <filesystem>
@@ -9,6 +11,7 @@ namespace {
 
 using graphboard::BdfHeader;
 using graphboard::ProjectManifest;
+using nlohmann::json;
 
 std::string lowerExtension(const std::filesystem::path& path) {
     auto ext = path.extension().string();
@@ -18,61 +21,38 @@ std::string lowerExtension(const std::filesystem::path& path) {
     return ext;
 }
 
-void printStringArray(const std::vector<std::string>& values, const char* indent) {
-    std::cout << "[";
-    for (std::size_t i = 0; i < values.size(); ++i) {
-        if (i != 0) {
-            std::cout << ",";
-        }
-        std::cout << "\n" << indent << "\"" << graphboard::jsonEscape(values[i]) << "\"";
-    }
-    if (!values.empty()) {
-        std::cout << "\n  ";
-    }
-    std::cout << "]";
+json projectToJson(const ProjectManifest& project) {
+    return {
+        {"kind", "START.PRJ"},
+        {"version", project.version},
+        {"startupPage", project.startupPage},
+        {"currentPageOrGroupState", project.currentPageOrGroupState},
+        {"audioPresetIndex", project.audioPresetIndex},
+        {"pageCount", project.pageNames.size()},
+        {"pages", project.pageNames},
+        {"groupCount", project.groupNames.size()},
+        {"groups", project.groupNames},
+        {"decodedSignature", project.decodedSignature},
+        {"trailingAudioManagerOffset", project.trailingAudioManagerOffset},
+        {"trailingAudioManagerBytes", project.trailingAudioManagerBytes},
+    };
 }
 
-void printProject(const ProjectManifest& project) {
-    std::cout
-        << "{\n"
-        << "  \"kind\": \"START.PRJ\",\n"
-        << "  \"version\": " << project.version << ",\n"
-        << "  \"startupPage\": \"" << graphboard::jsonEscape(project.startupPage) << "\",\n"
-        << "  \"currentPageOrGroupState\": \"" << graphboard::jsonEscape(project.currentPageOrGroupState) << "\",\n"
-        << "  \"audioPresetIndex\": " << project.audioPresetIndex << ",\n"
-        << "  \"pageCount\": " << project.pageNames.size() << ",\n"
-        << "  \"pages\": ";
-    printStringArray(project.pageNames, "    ");
-    std::cout
-        << ",\n"
-        << "  \"groupCount\": " << project.groupNames.size() << ",\n"
-        << "  \"groups\": ";
-    printStringArray(project.groupNames, "    ");
-    std::cout
-        << ",\n"
-        << "  \"decodedSignature\": \"" << graphboard::jsonEscape(project.decodedSignature) << "\",\n"
-        << "  \"trailingAudioManagerOffset\": " << project.trailingAudioManagerOffset << ",\n"
-        << "  \"trailingAudioManagerBytes\": " << project.trailingAudioManagerBytes << "\n"
-        << "}\n";
-}
-
-void printBdf(const BdfHeader& header) {
-    std::cout
-        << "{\n"
-        << "  \"kind\": \"BDF\",\n"
-        << "  \"banner\": \"" << graphboard::jsonEscape(header.banner) << "\",\n"
-        << "  \"version\": " << header.version << ",\n"
-        << "  \"pageRect\": [" << header.pageRect.left << ", " << header.pageRect.top << ", "
-        << header.pageRect.right << ", " << header.pageRect.bottom << "],\n"
-        << "  \"layerRange\": [" << header.minLayer << ", " << header.maxLayer << "],\n"
-        << "  \"backgroundFlag\": " << header.backgroundFlag << ",\n"
-        << "  \"backgroundColorIndex\": " << static_cast<int>(header.backgroundColorIndex) << ",\n"
-        << "  \"paletteByteCount\": " << header.paletteByteCount << ",\n"
-        << "  \"paletteOffset\": " << header.paletteOffset << ",\n"
-        << "  \"dibByteCount\": " << header.dibByteCount << ",\n"
-        << "  \"dibOffset\": " << header.dibOffset << ",\n"
-        << "  \"componentListOffset\": " << header.componentListOffset << "\n"
-        << "}\n";
+json bdfToJson(const BdfHeader& header) {
+    return {
+        {"kind", "BDF"},
+        {"banner", header.banner},
+        {"version", header.version},
+        {"pageRect", {header.pageRect.left, header.pageRect.top, header.pageRect.right, header.pageRect.bottom}},
+        {"layerRange", {header.minLayer, header.maxLayer}},
+        {"backgroundFlag", header.backgroundFlag},
+        {"backgroundColorIndex", header.backgroundColorIndex},
+        {"paletteByteCount", header.paletteByteCount},
+        {"paletteOffset", header.paletteOffset},
+        {"dibByteCount", header.dibByteCount},
+        {"dibOffset", header.dibOffset},
+        {"componentListOffset", header.componentListOffset},
+    };
 }
 
 } // namespace
@@ -88,9 +68,9 @@ int main(int argc, char** argv) {
         auto reader = graphboard::BinaryReader::fromFile(path);
         const auto ext = lowerExtension(path);
         if (ext == ".prj") {
-            printProject(graphboard::parseProjectManifest(reader));
+            std::cout << projectToJson(graphboard::parseProjectManifest(reader)).dump(2) << "\n";
         } else if (ext == ".bdf") {
-            printBdf(graphboard::parseBdfHeader(reader));
+            std::cout << bdfToJson(graphboard::parseBdfHeader(reader)).dump(2) << "\n";
         } else {
             std::cerr << "unsupported extension: " << ext << "\n";
             return 2;

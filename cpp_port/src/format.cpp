@@ -1,8 +1,5 @@
 #include "graphboard/format.hpp"
 
-#include <iomanip>
-#include <sstream>
-
 namespace graphboard {
 
 namespace {
@@ -72,42 +69,6 @@ std::string decodeShiftedSignature(const std::string& encoded) {
         decoded.push_back(static_cast<char>(c - 0x21));
     }
     return decoded;
-}
-
-std::string jsonEscape(const std::string& value) {
-    std::ostringstream out;
-    for (const unsigned char c : value) {
-        switch (c) {
-        case '\\':
-            out << "\\\\";
-            break;
-        case '"':
-            out << "\\\"";
-            break;
-        case '\b':
-            out << "\\b";
-            break;
-        case '\f':
-            out << "\\f";
-            break;
-        case '\n':
-            out << "\\n";
-            break;
-        case '\r':
-            out << "\\r";
-            break;
-        case '\t':
-            out << "\\t";
-            break;
-        default:
-            if (c < 0x20) {
-                out << "\\u" << std::hex << std::setw(4) << std::setfill('0') << static_cast<int>(c);
-            } else {
-                out << static_cast<char>(c);
-            }
-        }
-    }
-    return out.str();
 }
 
 } // namespace graphboard
