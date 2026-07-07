@@ -21,6 +21,9 @@ component DLL classes. For that reason this branch uses `.cpp`.
 - `generated/extracted_graphboard_1.00_recorder.dll.offset*.cpp` and
   `generated/extracted_graphboard_1.00_recorder.dll/functions/*.cpp` - chunked
   direct export for `Recorder.dll`.
+- `generated/extracted_graphboard_1.00_audioholder.dll.offset*.cpp` and
+  `generated/extracted_graphboard_1.00_audioholder.dll/functions/*.cpp` -
+  chunked direct export for `AudioHolder.dll`.
 - `generated/*.manifest.json` - source program, address, and function metadata
   captured during export.
 - `include/ghidra_compat.hpp` - minimal type shims for decompiler-style code.
@@ -32,10 +35,10 @@ component DLL classes. For that reason this branch uses `.cpp`.
 ## Current Ghidra status
 
 The focused exports for `Tuwim.exe`, `TransparentVideoHolder.dll`, `SetColor.dll`,
-and `Recorder.dll` were captured from the local MCP server. Broad open attempts
-previously hung on `/iscript.dll`, and the user later opened the useful component
-programs manually. Prefer querying already-open programs and exporting in small
-chunks with pauses between runs.
+`Recorder.dll`, and `AudioHolder.dll` were captured from the local MCP server.
+Broad open attempts previously hung on `/iscript.dll`, and the user later opened
+the useful component programs manually. Prefer querying already-open programs and
+exporting in small chunks with pauses between runs.
 
 ## Re-export
 

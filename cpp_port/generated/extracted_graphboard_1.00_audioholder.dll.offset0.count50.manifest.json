@@ -1,0 +1,302 @@
+﻿[
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10001060",
+        "address":  "10001060",
+        "info":  "Function: FUN_10001060 at 10001060\nSignature: undefined __stdcall FUN_10001060(void)\nEntry: 10001060\nBody: 10001060 - 10001069"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10001070",
+        "address":  "10001070",
+        "info":  "Function: FUN_10001070 at 10001070\nSignature: undefined __stdcall FUN_10001070(void)\nEntry: 10001070\nBody: 10001070 - 1000107b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "~CWinApp",
+        "address":  "10001090",
+        "info":  "Function: ~CWinApp at 10001090\nSignature: void __thiscall ~CWinApp(CWinApp * this)\nEntry: 10001090\nBody: 10001090 - 10001094"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_100010a0",
+        "address":  "100010a0",
+        "info":  "Function: FUN_100010a0 at 100010a0\nSignature: CWinApp * __fastcall FUN_100010a0(CWinApp * param_1)\nEntry: 100010a0\nBody: 100010a0 - 100010b3"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_100010c0",
+        "address":  "100010c0",
+        "info":  "Function: FUN_100010c0 at 100010c0\nSignature: CWinApp * __thiscall FUN_100010c0(void * this, byte param_1)\nEntry: 100010c0\nBody: 100010c0 - 100010dd"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "DllCanUnloadNow",
+        "address":  "100012a0",
+        "info":  "Function: DllCanUnloadNow at 100012a0\nSignature: HRESULT __stdcall DllCanUnloadNow(void)\nEntry: 100012a0\nBody: 100012a0 - 100012e8"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "DllGetClassObject",
+        "address":  "100012f0",
+        "info":  "Function: DllGetClassObject at 100012f0\nSignature: HRESULT __stdcall DllGetClassObject(IID * rclsid, IID * riid, LPVOID * ppv)\nEntry: 100012f0\nBody: 100012f0 - 100013d5"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "DllRegisterServer",
+        "address":  "100013e0",
+        "info":  "Function: DllRegisterServer at 100013e0\nSignature: HRESULT __stdcall DllRegisterServer(void)\nEntry: 100013e0\nBody: 100013e0 - 10001462"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "DllUnregisterServer",
+        "address":  "10001470",
+        "info":  "Function: DllUnregisterServer at 10001470\nSignature: undefined4 __stdcall DllUnregisterServer(void)\nEntry: 10001470\nBody: 10001470 - 100014d0"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "Create_AudioHolderClassFactory",
+        "address":  "100014f0",
+        "info":  "Function: Create_AudioHolderClassFactory at 100014f0\nSignature: undefined __stdcall Create_AudioHolderClassFactory(void)\nEntry: 100014f0\nBody: 100014f0 - 1000155a"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "Catch@1000155b",
+        "address":  "1000155b",
+        "info":  "Function: Catch@1000155b at 1000155b\nSignature: undefined * __stdcall Catch@1000155b(void)\nEntry: 1000155b\nBody: 1000155b - 10001560"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10001564",
+        "address":  "10001564",
+        "info":  "Function: FUN_10001564 at 10001564\nSignature: int __stdcall FUN_10001564(void)\nEntry: 10001564\nBody: 10001564 - 100015da"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "AudioHolderClassFactory_AddRef",
+        "address":  "10001610",
+        "info":  "Function: AudioHolderClassFactory_AddRef at 10001610\nSignature: LONG __stdcall AudioHolderClassFactory_AddRef(int param_1)\nEntry: 10001610\nBody: 10001610 - 1000164d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "AudioHolderClassFactory_Release",
+        "address":  "10001650",
+        "info":  "Function: AudioHolderClassFactory_Release at 10001650\nSignature: int __stdcall AudioHolderClassFactory_Release(undefined4 * param_1)\nEntry: 10001650\nBody: 10001650 - 100016ac"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "AudioHolderClassFactory_Destroy",
+        "address":  "100016b0",
+        "info":  "Function: AudioHolderClassFactory_Destroy at 100016b0\nSignature: undefined __fastcall AudioHolderClassFactory_Destroy(undefined4 * param_1)\nEntry: 100016b0\nBody: 100016b0 - 100016df"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "AudioHolder_QueryInterfaceFromMap",
+        "address":  "100016e0",
+        "info":  "Function: AudioHolder_QueryInterfaceFromMap at 100016e0\nSignature: int __stdcall AudioHolder_QueryInterfaceFromMap(int * param_1, int * param_2, undefined4 * param_3)\nEntry: 100016e0\nBody: 100016e0 - 100017d2"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "Create_AudioHolderComObject",
+        "address":  "100017e0",
+        "info":  "Function: Create_AudioHolderComObject at 100017e0\nSignature: undefined __stdcall Create_AudioHolderComObject(void)\nEntry: 100017e0\nBody: 100017e0 - 1000185c"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "Catch@1000185d",
+        "address":  "1000185d",
+        "info":  "Function: Catch@1000185d at 1000185d\nSignature: undefined * __stdcall Catch@1000185d(void)\nEntry: 1000185d\nBody: 1000185d - 10001862"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10001866",
+        "address":  "10001866",
+        "info":  "Function: FUN_10001866 at 10001866\nSignature: int __stdcall FUN_10001866(void)\nEntry: 10001866\nBody: 10001866 - 100018eb"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_100018f0",
+        "address":  "100018f0",
+        "info":  "Function: FUN_100018f0 at 100018f0\nSignature: HRESULT __stdcall FUN_100018f0(undefined4 param_1, undefined4 param_2, BSTR param_3, undefined4 * param_4)\nEntry: 100018f0\nBody: 100018f0 - 10001936"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10001a60",
+        "address":  "10001a60",
+        "info":  "Function: FUN_10001a60 at 10001a60\nSignature: HRESULT __stdcall FUN_10001a60(undefined4 param_1, undefined4 param_2, BSTR param_3, undefined4 * param_4)\nEntry: 10001a60\nBody: 10001a60 - 10001aa6"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10001be0",
+        "address":  "10001be0",
+        "info":  "Function: FUN_10001be0 at 10001be0\nSignature: HRESULT __stdcall FUN_10001be0(undefined4 param_1, undefined4 param_2, BSTR param_3, undefined4 * param_4)\nEntry: 10001be0\nBody: 10001be0 - 10001c26"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10001d50",
+        "address":  "10001d50",
+        "info":  "Function: FUN_10001d50 at 10001d50\nSignature: undefined __stdcall FUN_10001d50(undefined4 param_1)\nEntry: 10001d50\nBody: 10001d50 - 10001de0"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "Catch@10001de1",
+        "address":  "10001de1",
+        "info":  "Function: Catch@10001de1 at 10001de1\nSignature: undefined * __stdcall Catch@10001de1(void)\nEntry: 10001de1\nBody: 10001de1 - 10001de6"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10001dec",
+        "address":  "10001dec",
+        "info":  "Function: FUN_10001dec at 10001dec\nSignature: undefined4 * __stdcall FUN_10001dec(void)\nEntry: 10001dec\nBody: 10001dec - 10001e5d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "AudioHolderRefCountedState_Construct",
+        "address":  "10001e60",
+        "info":  "Function: AudioHolderRefCountedState_Construct at 10001e60\nSignature: undefined4 * __fastcall AudioHolderRefCountedState_Construct(undefined4 * param_1)\nEntry: 10001e60\nBody: 10001e60 - 10001e76"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10001ee0",
+        "address":  "10001ee0",
+        "info":  "Function: FUN_10001ee0 at 10001ee0\nSignature: undefined __fastcall FUN_10001ee0(undefined4 * param_1)\nEntry: 10001ee0\nBody: 10001ee0 - 10001f18"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10002040",
+        "address":  "10002040",
+        "info":  "Function: FUN_10002040 at 10002040\nSignature: LONG __stdcall FUN_10002040(undefined4 * param_1)\nEntry: 10002040\nBody: 10002040 - 10002070"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10002080",
+        "address":  "10002080",
+        "info":  "Function: FUN_10002080 at 10002080\nSignature: undefined __fastcall FUN_10002080(undefined4 * param_1)\nEntry: 10002080\nBody: 10002080 - 100020a4"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10002480",
+        "address":  "10002480",
+        "info":  "Function: FUN_10002480 at 10002480\nSignature: IID * __stdcall FUN_10002480(int param_1, IID * param_2, BYTE * param_3, BYTE * param_4, HKEY param_5, uint param_6)\nEntry: 10002480\nBody: 10002480 - 1000289a"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_100028a0",
+        "address":  "100028a0",
+        "info":  "Function: FUN_100028a0 at 100028a0\nSignature: undefined __fastcall FUN_100028a0(undefined4 * param_1)\nEntry: 100028a0\nBody: 100028a0 - 100028b7"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_100028c0",
+        "address":  "100028c0",
+        "info":  "Function: FUN_100028c0 at 100028c0\nSignature: LSTATUS __fastcall FUN_100028c0(undefined4 * param_1)\nEntry: 100028c0\nBody: 100028c0 - 100028d9"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_100028e0",
+        "address":  "100028e0",
+        "info":  "Function: FUN_100028e0 at 100028e0\nSignature: undefined __thiscall FUN_100028e0(void * this, HKEY param_1, LPCSTR param_2, LPSTR param_3, DWORD param_4, REGSAM param_5, LPSECURITY_ATTRIBUTES param_6, undefined4 * param_7)\nEntry: 100028e0\nBody: 100028e0 - 1000294b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10002950",
+        "address":  "10002950",
+        "info":  "Function: FUN_10002950 at 10002950\nSignature: LSTATUS __thiscall FUN_10002950(void * this, LPCSTR param_1, BYTE * param_2, LPCSTR param_3)\nEntry: 10002950\nBody: 10002950 - 100029ba"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_100029c0",
+        "address":  "100029c0",
+        "info":  "Function: FUN_100029c0 at 100029c0\nSignature: undefined __thiscall FUN_100029c0(void * this, BYTE * param_1, LPCSTR param_2)\nEntry: 100029c0\nBody: 100029c0 - 100029e8"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_100029f0",
+        "address":  "100029f0",
+        "info":  "Function: FUN_100029f0 at 100029f0\nSignature: undefined4 __stdcall FUN_100029f0(undefined4 param_1, IID * param_2, HKEY param_3, LPCSTR param_4)\nEntry: 100029f0\nBody: 100029f0 - 10002d24"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10002d30",
+        "address":  "10002d30",
+        "info":  "Function: FUN_10002d30 at 10002d30\nSignature: undefined __thiscall FUN_10002d30(void * this, HKEY param_1, LPCSTR param_2, REGSAM param_3)\nEntry: 10002d30\nBody: 10002d30 - 10002d79"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10002d80",
+        "address":  "10002d80",
+        "info":  "Function: FUN_10002d80 at 10002d80\nSignature: undefined FUN_10002d80(void)\nEntry: 10002d80\nBody: 10002d80 - 10002ed3"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10002ee0",
+        "address":  "10002ee0",
+        "info":  "Function: FUN_10002ee0 at 10002ee0\nSignature: int __stdcall FUN_10002ee0(undefined4 param_1, int * param_2, int param_3)\nEntry: 10002ee0\nBody: 10002ee0 - 1000300f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10003010",
+        "address":  "10003010",
+        "info":  "Function: FUN_10003010 at 10003010\nSignature: undefined __fastcall FUN_10003010(int * param_1)\nEntry: 10003010\nBody: 10003010 - 1000301c"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10003020",
+        "address":  "10003020",
+        "info":  "Function: FUN_10003020 at 10003020\nSignature: HRESULT __stdcall FUN_10003020(int param_1, LPCWSTR param_2)\nEntry: 10003020\nBody: 10003020 - 10003210"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10003220",
+        "address":  "10003220",
+        "info":  "Function: FUN_10003220 at 10003220\nSignature: LPWSTR __stdcall FUN_10003220(LPWSTR param_1, LPCSTR param_2, int param_3, UINT param_4)\nEntry: 10003220\nBody: 10003220 - 10003249"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10003250",
+        "address":  "10003250",
+        "info":  "Function: FUN_10003250 at 10003250\nSignature: LPSTR __stdcall FUN_10003250(LPSTR param_1, LPCWSTR param_2, int param_3, UINT param_4)\nEntry: 10003250\nBody: 10003250 - 1000327b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10003280",
+        "address":  "10003280",
+        "info":  "Function: FUN_10003280 at 10003280\nSignature: int __stdcall FUN_10003280(short * param_1)\nEntry: 10003280\nBody: 10003280 - 100032bb"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10003350",
+        "address":  "10003350",
+        "info":  "Function: FUN_10003350 at 10003350\nSignature: undefined __fastcall FUN_10003350(undefined4 * param_1)\nEntry: 10003350\nBody: 10003350 - 10003359"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10003360",
+        "address":  "10003360",
+        "info":  "Function: FUN_10003360 at 10003360\nSignature: HRESULT __thiscall FUN_10003360(void * this, BSTR param_1)\nEntry: 10003360\nBody: 10003360 - 100035f5"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10003600",
+        "address":  "10003600",
+        "info":  "Function: FUN_10003600 at 10003600\nSignature: undefined4 __stdcall FUN_10003600(int param_1, undefined4 param_2, undefined4 param_3)\nEntry: 10003600\nBody: 10003600 - 10003696"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "Catch@1000364e",
+        "address":  "1000364e",
+        "info":  "Function: Catch@1000364e at 1000364e\nSignature: undefined4 __stdcall Catch@1000364e(void)\nEntry: 1000364e\nBody: 1000364e - 10003653"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_100036a0",
+        "address":  "100036a0",
+        "info":  "Function: FUN_100036a0 at 100036a0\nSignature: undefined __stdcall FUN_100036a0(int param_1)\nEntry: 100036a0\nBody: 100036a0 - 100036f4"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "AudioHolderContext_Construct",
+        "address":  "10003770",
+        "info":  "Function: AudioHolderContext_Construct at 10003770\nSignature: undefined4 * __fastcall AudioHolderContext_Construct(undefined4 * param_1)\nEntry: 10003770\nBody: 10003770 - 1000383c"
+    }
+]

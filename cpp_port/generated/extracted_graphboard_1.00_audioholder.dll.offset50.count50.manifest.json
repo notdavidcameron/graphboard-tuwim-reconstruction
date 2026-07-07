@@ -1,0 +1,302 @@
+﻿[
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "AudioHolderCriticalSection_Destroy",
+        "address":  "10003840",
+        "info":  "Function: AudioHolderCriticalSection_Destroy at 10003840\nSignature: undefined __fastcall AudioHolderCriticalSection_Destroy(int param_1)\nEntry: 10003840\nBody: 10003840 - 1000384a"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10003850",
+        "address":  "10003850",
+        "info":  "Function: FUN_10003850 at 10003850\nSignature: undefined __fastcall FUN_10003850(undefined4 * param_1)\nEntry: 10003850\nBody: 10003850 - 10003969"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "AudioHolder_AttachBackPointer",
+        "address":  "10003b00",
+        "info":  "Function: AudioHolder_AttachBackPointer at 10003b00\nSignature: undefined4 __stdcall AudioHolder_AttachBackPointer(int param_1)\nEntry: 10003b00\nBody: 10003b00 - 10003b1b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "AudioArchive_WriteFileRange",
+        "address":  "10003b40",
+        "info":  "Function: AudioArchive_WriteFileRange at 10003b40\nSignature: undefined4 __stdcall AudioArchive_WriteFileRange(CArchive * param_1, int * param_2, uint param_3)\nEntry: 10003b40\nBody: 10003b40 - 10003be2"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "AudioArchive_ReadFileRange",
+        "address":  "10003bf0",
+        "info":  "Function: AudioArchive_ReadFileRange at 10003bf0\nSignature: undefined4 __stdcall AudioArchive_ReadFileRange(int * param_1, CArchive * param_2, uint param_3)\nEntry: 10003bf0\nBody: 10003bf0 - 10003c91"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "AudioHolder_StartPlaybackForEntry",
+        "address":  "10004280",
+        "info":  "Function: AudioHolder_StartPlaybackForEntry at 10004280\nSignature: undefined4 __thiscall AudioHolder_StartPlaybackForEntry(void * this, int param_1)\nEntry: 10004280\nBody: 10004280 - 100047a6"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "AudioHolder_StopPlaybackForEntry",
+        "address":  "100047b0",
+        "info":  "Function: AudioHolder_StopPlaybackForEntry at 100047b0\nSignature: undefined4 __thiscall AudioHolder_StopPlaybackForEntry(void * this, int param_1)\nEntry: 100047b0\nBody: 100047b0 - 10004872"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10004880",
+        "address":  "10004880",
+        "info":  "Function: FUN_10004880 at 10004880\nSignature: undefined4 __stdcall FUN_10004880(int param_1, undefined4 param_2)\nEntry: 10004880\nBody: 10004880 - 1000489f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_100048a0",
+        "address":  "100048a0",
+        "info":  "Function: FUN_100048a0 at 100048a0\nSignature: undefined __fastcall FUN_100048a0(void * param_1)\nEntry: 100048a0\nBody: 100048a0 - 10004c4a"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "AudioHolder_DeletePropertiesDialog",
+        "address":  "10004c50",
+        "info":  "Function: AudioHolder_DeletePropertiesDialog at 10004c50\nSignature: undefined __stdcall AudioHolder_DeletePropertiesDialog(void * param_1)\nEntry: 10004c50\nBody: 10004c50 - 10004c5d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "AudioHolder_SetPlaybackParams",
+        "address":  "10004d30",
+        "info":  "Function: AudioHolder_SetPlaybackParams at 10004d30\nSignature: undefined4 __stdcall AudioHolder_SetPlaybackParams(int param_1, int param_2, int param_3, int param_4, int param_5)\nEntry: 10004d30\nBody: 10004d30 - 10004ddd"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "AudioSettingsPage_Construct",
+        "address":  "10005010",
+        "info":  "Function: AudioSettingsPage_Construct at 10005010\nSignature: CPropertyPage * __fastcall AudioSettingsPage_Construct(CPropertyPage * param_1)\nEntry: 10005010\nBody: 10005010 - 10005167"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10005170",
+        "address":  "10005170",
+        "info":  "Function: FUN_10005170 at 10005170\nSignature: CPropertyPage * __thiscall FUN_10005170(void * this, byte param_1)\nEntry: 10005170\nBody: 10005170 - 1000518d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10005190",
+        "address":  "10005190",
+        "info":  "Function: FUN_10005190 at 10005190\nSignature: undefined __fastcall FUN_10005190(CPropertyPage * param_1)\nEntry: 10005190\nBody: 10005190 - 10005284"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10005290",
+        "address":  "10005290",
+        "info":  "Function: FUN_10005290 at 10005290\nSignature: undefined __thiscall FUN_10005290(void * this, CDataExchange * param_1)\nEntry: 10005290\nBody: 10005290 - 1000541d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10005440",
+        "address":  "10005440",
+        "info":  "Function: FUN_10005440 at 10005440\nSignature: undefined __fastcall FUN_10005440(int param_1)\nEntry: 10005440\nBody: 10005440 - 1000562f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10005630",
+        "address":  "10005630",
+        "info":  "Function: FUN_10005630 at 10005630\nSignature: undefined4 __thiscall FUN_10005630(void * this, int param_1)\nEntry: 10005630\nBody: 10005630 - 100058b8"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_100058c0",
+        "address":  "100058c0",
+        "info":  "Function: FUN_100058c0 at 100058c0\nSignature: undefined __fastcall FUN_100058c0(CWnd * param_1)\nEntry: 100058c0\nBody: 100058c0 - 100059ac"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_100059b0",
+        "address":  "100059b0",
+        "info":  "Function: FUN_100059b0 at 100059b0\nSignature: undefined __fastcall FUN_100059b0(CWnd * param_1)\nEntry: 100059b0\nBody: 100059b0 - 10005a00"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10005a10",
+        "address":  "10005a10",
+        "info":  "Function: FUN_10005a10 at 10005a10\nSignature: undefined __fastcall FUN_10005a10(CWnd * param_1)\nEntry: 10005a10\nBody: 10005a10 - 10005a96"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10005aa0",
+        "address":  "10005aa0",
+        "info":  "Function: FUN_10005aa0 at 10005aa0\nSignature: undefined __fastcall FUN_10005aa0(CWnd * param_1)\nEntry: 10005aa0\nBody: 10005aa0 - 10005b44"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10005b50",
+        "address":  "10005b50",
+        "info":  "Function: FUN_10005b50 at 10005b50\nSignature: undefined __fastcall FUN_10005b50(CWnd * param_1)\nEntry: 10005b50\nBody: 10005b50 - 10005ec6"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "~CDialog",
+        "address":  "10005ed0",
+        "info":  "Function: ~CDialog at 10005ed0\nSignature: void __thiscall ~CDialog(CDialog * this)\nEntry: 10005ed0\nBody: 10005ed0 - 10005ed4"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10005ee0",
+        "address":  "10005ee0",
+        "info":  "Function: FUN_10005ee0 at 10005ee0\nSignature: undefined __fastcall FUN_10005ee0(CDialog * param_1)\nEntry: 10005ee0\nBody: 10005ee0 - 10005f2e"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10005f30",
+        "address":  "10005f30",
+        "info":  "Function: FUN_10005f30 at 10005f30\nSignature: undefined __fastcall FUN_10005f30(CWnd * param_1)\nEntry: 10005f30\nBody: 10005f30 - 10005f54"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10005f60",
+        "address":  "10005f60",
+        "info":  "Function: FUN_10005f60 at 10005f60\nSignature: undefined __fastcall FUN_10005f60(int param_1)\nEntry: 10005f60\nBody: 10005f60 - 10005f7d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10005f80",
+        "address":  "10005f80",
+        "info":  "Function: FUN_10005f80 at 10005f80\nSignature: undefined __fastcall FUN_10005f80(int param_1)\nEntry: 10005f80\nBody: 10005f80 - 10006038"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10006040",
+        "address":  "10006040",
+        "info":  "Function: FUN_10006040 at 10006040\nSignature: undefined4 __fastcall FUN_10006040(CDialog * param_1)\nEntry: 10006040\nBody: 10006040 - 10006087"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10006090",
+        "address":  "10006090",
+        "info":  "Function: FUN_10006090 at 10006090\nSignature: undefined __fastcall FUN_10006090(int param_1)\nEntry: 10006090\nBody: 10006090 - 100060c4"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_100060d0",
+        "address":  "100060d0",
+        "info":  "Function: FUN_100060d0 at 100060d0\nSignature: undefined __fastcall FUN_100060d0(CWnd * param_1)\nEntry: 100060d0\nBody: 100060d0 - 100060e2"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10006100",
+        "address":  "10006100",
+        "info":  "Function: FUN_10006100 at 10006100\nSignature: undefined __fastcall FUN_10006100(CWnd * param_1)\nEntry: 10006100\nBody: 10006100 - 1000647a"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10006480",
+        "address":  "10006480",
+        "info":  "Function: FUN_10006480 at 10006480\nSignature: undefined __stdcall FUN_10006480(void)\nEntry: 10006480\nBody: 10006480 - 10006482"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_100064b0",
+        "address":  "100064b0",
+        "info":  "Function: FUN_100064b0 at 100064b0\nSignature: CStatic * __thiscall FUN_100064b0(void * this, byte param_1)\nEntry: 100064b0\nBody: 100064b0 - 100064cd"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_100064d0",
+        "address":  "100064d0",
+        "info":  "Function: FUN_100064d0 at 100064d0\nSignature: CButton * __thiscall FUN_100064d0(void * this, byte param_1)\nEntry: 100064d0\nBody: 100064d0 - 100064ed"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_100064f0",
+        "address":  "100064f0",
+        "info":  "Function: FUN_100064f0 at 100064f0\nSignature: CListBox * __thiscall FUN_100064f0(void * this, byte param_1)\nEntry: 100064f0\nBody: 100064f0 - 1000650d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10006530",
+        "address":  "10006530",
+        "info":  "Function: FUN_10006530 at 10006530\nSignature: CWnd * __thiscall FUN_10006530(void * this, undefined4 param_1)\nEntry: 10006530\nBody: 10006530 - 100065cf"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_100065d0",
+        "address":  "100065d0",
+        "info":  "Function: FUN_100065d0 at 100065d0\nSignature: CWnd * __thiscall FUN_100065d0(void * this, byte param_1)\nEntry: 100065d0\nBody: 100065d0 - 100065ed"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_100065f0",
+        "address":  "100065f0",
+        "info":  "Function: FUN_100065f0 at 100065f0\nSignature: UINT_PTR __thiscall FUN_100065f0(void * this, UINT param_1)\nEntry: 100065f0\nBody: 100065f0 - 1000662b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10006630",
+        "address":  "10006630",
+        "info":  "Function: FUN_10006630 at 10006630\nSignature: undefined __thiscall FUN_10006630(void * this, UINT_PTR param_1)\nEntry: 10006630\nBody: 10006630 - 1000666b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10006670",
+        "address":  "10006670",
+        "info":  "Function: FUN_10006670 at 10006670\nSignature: undefined __fastcall FUN_10006670(CWnd * param_1)\nEntry: 10006670\nBody: 10006670 - 100066c5"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10006710",
+        "address":  "10006710",
+        "info":  "Function: FUN_10006710 at 10006710\nSignature: CPropertySheet * __thiscall FUN_10006710(void * this, uint param_1, undefined4 param_2, uint param_3)\nEntry: 10006710\nBody: 10006710 - 10006787"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_10006790",
+        "address":  "10006790",
+        "info":  "Function: FUN_10006790 at 10006790\nSignature: CPropertySheet * __thiscall FUN_10006790(void * this, byte param_1)\nEntry: 10006790\nBody: 10006790 - 100067ad"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "FUN_100067b0",
+        "address":  "100067b0",
+        "info":  "Function: FUN_100067b0 at 100067b0\nSignature: undefined __fastcall FUN_100067b0(CPropertySheet * param_1)\nEntry: 100067b0\nBody: 100067b0 - 10006804"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "~CWinApp",
+        "address":  "10006830",
+        "info":  "Function: ~CWinApp at 10006830\nSignature: void __thiscall ~CWinApp(CWinApp * this)\nEntry: 10006830\nBody: 10006830 - 10006835"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "CWinApp",
+        "address":  "10006908",
+        "info":  "Function: CWinApp at 10006908\nSignature: undefined __thiscall CWinApp(CWinApp * this, char * param_1)\nEntry: 10006908\nBody: 10006908 - 1000690d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "operator_delete",
+        "address":  "1000690e",
+        "info":  "Function: operator_delete at 1000690e\nSignature: void __cdecl operator_delete(void * param_1)\nEntry: 1000690e\nBody: 1000690e - 10006913"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "InitInstance",
+        "address":  "10006914",
+        "info":  "Function: InitInstance at 10006914\nSignature: int __thiscall InitInstance(CWinApp * this)\nEntry: 10006914\nBody: 10006914 - 10006919"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "ExitInstance",
+        "address":  "1000691a",
+        "info":  "Function: ExitInstance at 1000691a\nSignature: int __thiscall ExitInstance(CWinApp * this)\nEntry: 1000691a\nBody: 1000691a - 1000691f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "AfxDllCanUnloadNow",
+        "address":  "10006920",
+        "info":  "Function: AfxDllCanUnloadNow at 10006920\nSignature: long __stdcall AfxDllCanUnloadNow(void)\nEntry: 10006920\nBody: 10006920 - 10006925"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/AudioHolder.dll",
+        "function":  "AFX_MAINTAIN_STATE2",
+        "address":  "10006926",
+        "info":  "Function: AFX_MAINTAIN_STATE2 at 10006926\nSignature: undefined __thiscall AFX_MAINTAIN_STATE2(AFX_MAINTAIN_STATE2 * this, AFX_MODULE_STATE * param_1)\nEntry: 10006926\nBody: 10006926 - 1000692b"
+    }
+]
