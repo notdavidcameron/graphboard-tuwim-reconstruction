@@ -44,15 +44,102 @@ def rel_url(path: str | None, web_root: Path, workspace_root: Path) -> str | Non
             return asset.as_posix()
 
 
+def parse_project_file(project_path: Path | None) -> dict[str, Any] | None:
+    """Parse START.PRJ exactly per GraphBrdDoc_SerializeProjectState (Tuwim.exe:00406020).
+
+    Layout (little-endian, MFC CArchive), verified against START.PRJ:
+        u32 version                     # 1
+        CString startupPage             # e.g. "intro.bdf"
+        CString currentPageOrGroupState # usually empty
+        u32 audioPresetIndex            # audioManager(+0xbc)->[+0x20]
+        u32 pageCount;  CString pageNames[pageCount]
+        u32 groupCount; CString groupNames[groupCount]
+        CString signature               # "Julian Tuwim", each byte +0x21 on save
+        u32 scriptVersion               # global script editor (document field +0xa0)
+        CString globalScript            # project-wide global-variable/handler script
+
+    The trailing (scriptVersion, globalScript) pair is written by the group/global
+    script editor's Serialize (GraphBrdScriptEditor_SerializeText, Tuwim.exe:004230a0),
+    the same routine the page serializer uses for per-page script text. It is NOT
+    audio-manager state; the audio manager only contributes audioPresetIndex.
+
+    Returns a dict of recovered fields, or None if the bytes do not match the
+    expected structure (caller falls back to a permissive scan).
+    """
+    if not project_path or not project_path.exists():
+        return None
+    data = project_path.read_bytes()
+    pos = 0
+
+    def u32() -> int:
+        nonlocal pos
+        value = struct.unpack_from("<I", data, pos)[0]
+        pos += 4
+        return value
+
+    def cstring_bytes() -> bytes:
+        # MFC CArchive string length prefix: u8, or 0xff+u16, or 0xff 0xffff+u32.
+        nonlocal pos
+        length = data[pos]
+        pos += 1
+        if length == 0xFF:
+            length = struct.unpack_from("<H", data, pos)[0]
+            pos += 2
+            if length == 0xFFFF:
+                length = struct.unpack_from("<I", data, pos)[0]
+                pos += 4
+        raw = data[pos : pos + length]
+        pos += length
+        return raw
+
+    try:
+        version = u32()
+        startup_page = cstring_bytes().decode("cp1250", "replace")
+        current_state = cstring_bytes().decode("cp1250", "replace")
+        audio_preset_index = u32()
+        page_count = u32()
+        if page_count > 4096:
+            return None
+        page_names = [cstring_bytes().decode("cp1250", "replace") for _ in range(page_count)]
+        group_count = u32()
+        if group_count > 4096:
+            return None
+        group_names = [cstring_bytes().decode("cp1250", "replace") for _ in range(group_count)]
+        signature = bytes((b - 0x21) & 0xFF for b in cstring_bytes()).decode("latin1", "replace")
+        script_version = u32()
+        global_script = cstring_bytes().decode("cp1250", "replace")
+    except (struct.error, IndexError):
+        return None
+
+    return {
+        "version": version,
+        "startupPage": startup_page,
+        "currentState": current_state,
+        "audioPresetIndex": audio_preset_index,
+        "pageNames": page_names,
+        "groupNames": group_names,
+        "signature": signature,
+        "signatureValid": signature == "Julian Tuwim",
+        "scriptVersion": script_version,
+        "globalScript": global_script,
+        "trailingBytes": len(data) - pos,
+    }
+
+
 def parse_project_order(project_path: Path | None, available_ids: set[str]) -> tuple[list[str], list[str]]:
     warnings: list[str] = []
     if not project_path or not project_path.exists():
         return [], ["START.PRJ not found; scene order is alphabetical."]
-    data = project_path.read_bytes()
-    names = [
-        item.decode("cp1250", "replace").upper().removesuffix(".BDF")
-        for item in re.findall(rb"[A-Za-z0-9_]{2,16}\.bdf", data, flags=re.IGNORECASE)
-    ]
+    project = parse_project_file(project_path)
+    if project is not None:
+        names = [name.upper().removesuffix(".BDF") for name in project["pageNames"]]
+    else:
+        warnings.append("START.PRJ did not match the expected project layout; used a permissive name scan.")
+        data = project_path.read_bytes()
+        names = [
+            item.decode("cp1250", "replace").upper().removesuffix(".BDF")
+            for item in re.findall(rb"[A-Za-z0-9_]{2,16}\.bdf", data, flags=re.IGNORECASE)
+        ]
     ordered: list[str] = []
     for name in names:
         if name in available_ids and name not in ordered:
@@ -824,6 +911,24 @@ def main() -> int:
     if not order:
         order = sorted(available)
 
+    project_info = parse_project_file(args.project)
+    project_block = None
+    if project_info is not None:
+        global_script = project_info["globalScript"]
+        project_block = {
+            "version": project_info["version"],
+            "startupPage": project_info["startupPage"],
+            "audioPresetIndex": project_info["audioPresetIndex"],
+            "pageCount": len(project_info["pageNames"]),
+            "groupNames": project_info["groupNames"],
+            "signatureValid": project_info["signatureValid"],
+            "globalScript": global_script,
+            "globalScriptHandlers": [
+                {"name": match.group(1), "signature": f"{match.group(1)}({match.group(2).strip()})"}
+                for match in HANDLER_PATTERN.finditer(global_script)
+            ],
+        }
+
     index_entries = []
     validation = {
         "missingAssets": [],
@@ -901,6 +1006,7 @@ def main() -> int:
         "generatedFrom": str(args.extracted),
         "projectOrderSource": str(args.project) if args.project else None,
         "orderWarnings": order_warnings,
+        "project": project_block,
         "groupsUrl": "groups/index.json",
         "scenes": index_entries,
         "validation": validation,

@@ -2,6 +2,11 @@
 
 Continuation from the initial `Tuwim.exe` serializer reconstruction, now cross-checked against `RZECZKA.BDF` and the running Ghidra MCP server.
 
+The four host-document serializers described below (`START.PRJ`, `.BDF`, `.GRP`,
+and the shared script-text block) have a source-style C++ reconstruction in
+`ghidra_import/GraphBoardDocument_reconstructed.cpp`, kept compile-checkable via
+`tools/compile_reconstructions.ps1`.
+
 ## Shared Encoding
 
 - Integers are little-endian.
@@ -31,10 +36,42 @@ CString pageNames[pageCount]
 u32 groupCount
 CString groupNames[groupCount]
 CString encodedSignature            // "Julian Tuwim", each byte + 0x21 on save
-AudioManagerProjectState trailing block
+u32 globalScriptVersion             // currently 1
+CString globalScript                // project-wide global-variable / handler script
 ```
 
-Sample `START.PRJ` contains 34 page names, 6 group names, and 339 trailing bytes after the project manifest, attributed to the audio manager serialize call at document field `+0xa0`.
+The `audioPresetIndex` is the only project field owned by the audio manager: the
+serializer reads/writes it from `audioManager(+0xbc)->[+0x20]`. The audio manager
+does **not** serialize any trailing block into `START.PRJ`.
+
+The trailing `(globalScriptVersion, globalScript)` pair is written by the group /
+global script editor at document field `+0xa0`, via
+`GraphBrdScriptEditor_SerializeText` (`Tuwim.exe:004230a0`) — the same routine the
+page serializer uses for per-page script text (see below). On load the host runs
+this text through `GraphBrdScript_RunGlobalSetupBlock` (`this+0xb4`), so it holds
+the project's global variables and shared handlers.
+
+Sample `START.PRJ` (827 bytes) verified end-to-end: version 1, `startupPage`
+`"intro.bdf"`, empty `currentPageOrGroupState`, `audioPresetIndex` 11, 34 page
+names, 6 group names, a valid `"Julian Tuwim"` signature, then a 339-byte trailing
+block = `u32 1` + a 332-byte `globalScript` CString that begins with
+`//Global variables ... int global1=0;` and consumes exactly to end-of-file.
+
+## Script Editor Text Serialization
+
+Serializer: `GraphBrdScriptEditor_SerializeText` at `Tuwim.exe:004230a0`.
+
+Both the page script editor (document field `+0x9c`) and the group / global script
+editor (document field `+0xa0`) are the same dialog class and share this routine:
+
+```text
+u32 version                         // currently 1
+CString scriptText                  // editor buffer at editor+0xe0, no trailing NUL
+```
+
+`GraphBrdDoc_SerializePageData` invokes it on `+0x9c` for per-page script text;
+`GraphBrdDoc_SerializeProjectState` invokes it on `+0xa0` for the `START.PRJ`
+global script.
 
 ## `.BDF` Page Files
 
@@ -190,7 +227,7 @@ scriptEngine+0x24 = page script editor (+0x9c)
 scriptEngine+0x28 = group script editor (+0xa0)
 ```
 
-The page serializer calls `+0xa4`, `+0x9c`, then `+0xb4`. The group serializer below calls `+0xa8`; the group script editor is not part of the cursor/group serializer recovered so far.
+The page serializer calls `+0xa4`, `+0x9c`, then `+0xb4`. The project serializer (`GraphBrdDoc_SerializeProjectState`) calls the group / global script editor at `+0xa0`, which emits the `START.PRJ` trailing global-script block. The group serializer (`.GRP`) below calls `+0xa8`; its group script editor is not part of the cursor/group serializer recovered so far.
 
 ## `.GRP` Group Files
 
@@ -488,5 +525,8 @@ file bytes remaining after state: 4 zero bytes
   - `Sound.dll`
   - `MultiBmp.dll`
 - Recover exact semantic names for `ScriptEngineState` fields and indexed block records.
-- Continue the dedicated pass through `START.PRJ` audio manager state.
+- `START.PRJ` layout is now fully recovered and byte-exact (the former "audio
+  manager trailing block" is actually the global script editor's text; the audio
+  manager owns only `audioPresetIndex`). Remaining audio-manager work is to map
+  the runtime meaning of `audioPresetIndex` and the `+0xbc` object's other fields.
 - Validate cursor record fields at `+0x10/+0x14` against cursor selection/rendering code.
