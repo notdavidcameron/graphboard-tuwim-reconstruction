@@ -1,0 +1,302 @@
+﻿[
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "ExitInstance",
+        "address":  "10006100",
+        "info":  "Function: ExitInstance at 10006100\nSignature: int __thiscall ExitInstance(CWinApp * this)\nEntry: 10006100\nBody: 10006100 - 10006105"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "AfxDllCanUnloadNow",
+        "address":  "10006106",
+        "info":  "Function: AfxDllCanUnloadNow at 10006106\nSignature: long __stdcall AfxDllCanUnloadNow(void)\nEntry: 10006106\nBody: 10006106 - 1000610b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "AFX_MAINTAIN_STATE2",
+        "address":  "1000610c",
+        "info":  "Function: AFX_MAINTAIN_STATE2 at 1000610c\nSignature: undefined __thiscall AFX_MAINTAIN_STATE2(AFX_MAINTAIN_STATE2 * this, AFX_MODULE_STATE * param_1)\nEntry: 1000610c\nBody: 1000610c - 10006111"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "operator_new",
+        "address":  "10006112",
+        "info":  "Function: operator_new at 10006112\nSignature: void * __cdecl operator_new(uint param_1)\nEntry: 10006112\nBody: 10006112 - 10006117"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "~CString",
+        "address":  "10006118",
+        "info":  "Function: ~CString at 10006118\nSignature: void __thiscall ~CString(CString * this)\nEntry: 10006118\nBody: 10006118 - 1000611d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "CString",
+        "address":  "1000611e",
+        "info":  "Function: CString at 1000611e\nSignature: undefined __thiscall CString(CString * this)\nEntry: 1000611e\nBody: 1000611e - 10006123"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "AfxGetModuleState",
+        "address":  "10006124",
+        "info":  "Function: AfxGetModuleState at 10006124\nSignature: AFX_MODULE_STATE * __stdcall AfxGetModuleState(void)\nEntry: 10006124\nBody: 10006124 - 10006129"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "operator\u003e\u003e",
+        "address":  "1000612a",
+        "info":  "Function: operator\u003e\u003e at 1000612a\nSignature: CArchive * __stdcall operator\u003e\u003e(CArchive * param_1, CString * param_2)\nEntry: 1000612a\nBody: 1000612a - 1000612f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "Read",
+        "address":  "10006130",
+        "info":  "Function: Read at 10006130\nSignature: uint __thiscall Read(CArchive * this, void * param_1, uint param_2)\nEntry: 10006130\nBody: 10006130 - 10006135"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FillBuffer",
+        "address":  "10006136",
+        "info":  "Function: FillBuffer at 10006136\nSignature: void __thiscall FillBuffer(CArchive * this, uint param_1)\nEntry: 10006136\nBody: 10006136 - 1000613b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "operator\u003c\u003c",
+        "address":  "1000613c",
+        "info":  "Function: operator\u003c\u003c at 1000613c\nSignature: CArchive * __stdcall operator\u003c\u003c(CArchive * param_1, CString * param_2)\nEntry: 1000613c\nBody: 1000613c - 10006141"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "Write",
+        "address":  "10006142",
+        "info":  "Function: Write at 10006142\nSignature: void __thiscall Write(CArchive * this, void * param_1, uint param_2)\nEntry: 10006142\nBody: 10006142 - 10006147"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "Flush",
+        "address":  "10006148",
+        "info":  "Function: Flush at 10006148\nSignature: void __thiscall Flush(CArchive * this)\nEntry: 10006148\nBody: 10006148 - 1000614d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "operator+=",
+        "address":  "1000614e",
+        "info":  "Function: operator+= at 1000614e\nSignature: CString * __thiscall operator+=(CString * this, char * param_1)\nEntry: 1000614e\nBody: 1000614e - 10006153"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "Left",
+        "address":  "10006154",
+        "info":  "Function: Left at 10006154\nSignature: CString __thiscall Left(CString * this, int param_1)\nEntry: 10006154\nBody: 10006154 - 10006159"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "operator=",
+        "address":  "1000615a",
+        "info":  "Function: operator= at 1000615a\nSignature: CString * __thiscall operator=(CString * this, CString * param_1)\nEntry: 1000615a\nBody: 1000615a - 1000615f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "Empty",
+        "address":  "10006160",
+        "info":  "Function: Empty at 10006160\nSignature: void __thiscall Empty(CString * this)\nEntry: 10006160\nBody: 10006160 - 10006165"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "AfxMessageBox",
+        "address":  "10006166",
+        "info":  "Function: AfxMessageBox at 10006166\nSignature: int __stdcall AfxMessageBox(char * param_1, uint param_2, uint param_3)\nEntry: 10006166\nBody: 10006166 - 1000616b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "Format",
+        "address":  "1000616c",
+        "info":  "Function: Format at 1000616c\nSignature: void __thiscall Format(CString * this, char * param_1, ...)\nEntry: 1000616c\nBody: 1000616c - 10006171"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "operator+=",
+        "address":  "10006172",
+        "info":  "Function: operator+= at 10006172\nSignature: CString * __thiscall operator+=(CString * this, CString * param_1)\nEntry: 10006172\nBody: 10006172 - 10006177"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "~CListBox",
+        "address":  "10006238",
+        "info":  "Function: ~CListBox at 10006238\nSignature: void __thiscall ~CListBox(CListBox * this)\nEntry: 10006238\nBody: 10006238 - 1000623d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "~CEdit",
+        "address":  "1000623e",
+        "info":  "Function: ~CEdit at 1000623e\nSignature: void __thiscall ~CEdit(CEdit * this)\nEntry: 1000623e\nBody: 1000623e - 10006243"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "~CButton",
+        "address":  "10006244",
+        "info":  "Function: ~CButton at 10006244\nSignature: void __thiscall ~CButton(CButton * this)\nEntry: 10006244\nBody: 10006244 - 10006249"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "~CStatic",
+        "address":  "1000624a",
+        "info":  "Function: ~CStatic at 1000624a\nSignature: void __thiscall ~CStatic(CStatic * this)\nEntry: 1000624a\nBody: 1000624a - 1000624f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "~CPropertyPage",
+        "address":  "10006250",
+        "info":  "Function: ~CPropertyPage at 10006250\nSignature: void __thiscall ~CPropertyPage(CPropertyPage * this)\nEntry: 10006250\nBody: 10006250 - 10006255"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "CPropertyPage",
+        "address":  "10006256",
+        "info":  "Function: CPropertyPage at 10006256\nSignature: undefined __thiscall CPropertyPage(CPropertyPage * this, uint param_1, uint param_2)\nEntry: 10006256\nBody: 10006256 - 1000625b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "SetWindowTextA",
+        "address":  "1000625c",
+        "info":  "Function: SetWindowTextA at 1000625c\nSignature: void __thiscall SetWindowTextA(CWnd * this, char * param_1)\nEntry: 1000625c\nBody: 1000625c - 10006261"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "DDX_Text",
+        "address":  "10006262",
+        "info":  "Function: DDX_Text at 10006262\nSignature: void __stdcall DDX_Text(CDataExchange * param_1, int param_2, int * param_3)\nEntry: 10006262\nBody: 10006262 - 10006267"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "DDX_Check",
+        "address":  "10006268",
+        "info":  "Function: DDX_Check at 10006268\nSignature: void __stdcall DDX_Check(CDataExchange * param_1, int param_2, int * param_3)\nEntry: 10006268\nBody: 10006268 - 1000626d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "DDX_Control",
+        "address":  "1000626e",
+        "info":  "Function: DDX_Control at 1000626e\nSignature: void __stdcall DDX_Control(CDataExchange * param_1, int param_2, CWnd * param_3)\nEntry: 1000626e\nBody: 1000626e - 10006273"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "EnableWindow",
+        "address":  "10006274",
+        "info":  "Function: EnableWindow at 10006274\nSignature: int __thiscall EnableWindow(CWnd * this, int param_1)\nEntry: 10006274\nBody: 10006274 - 10006279"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "UpdateData",
+        "address":  "1000627a",
+        "info":  "Function: UpdateData at 1000627a\nSignature: int __thiscall UpdateData(CWnd * this, int param_1)\nEntry: 1000627a\nBody: 1000627a - 1000627f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "Remove",
+        "address":  "10006280",
+        "info":  "Function: Remove at 10006280\nSignature: void __stdcall Remove(char * param_1)\nEntry: 10006280\nBody: 10006280 - 10006285"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "CString",
+        "address":  "10006286",
+        "info":  "Function: CString at 10006286\nSignature: undefined __thiscall CString(CString * this, CString * param_1)\nEntry: 10006286\nBody: 10006286 - 1000628b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "Write",
+        "address":  "1000628c",
+        "info":  "Function: Write at 1000628c\nSignature: void __thiscall Write(CFile * this, void * param_1, uint param_2)\nEntry: 1000628c\nBody: 1000628c - 10006291"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "Read",
+        "address":  "10006292",
+        "info":  "Function: Read at 10006292\nSignature: uint __thiscall Read(CFile * this, void * param_1, uint param_2)\nEntry: 10006292\nBody: 10006292 - 10006297"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "~CFile",
+        "address":  "10006298",
+        "info":  "Function: ~CFile at 10006298\nSignature: void __thiscall ~CFile(CFile * this)\nEntry: 10006298\nBody: 10006298 - 1000629d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "Close",
+        "address":  "1000629e",
+        "info":  "Function: Close at 1000629e\nSignature: void __thiscall Close(CFile * this)\nEntry: 1000629e\nBody: 1000629e - 100062a3"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "Open",
+        "address":  "100062a4",
+        "info":  "Function: Open at 100062a4\nSignature: int __thiscall Open(CFile * this, char * param_1, uint param_2, CFileException * param_3)\nEntry: 100062a4\nBody: 100062a4 - 100062a9"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "CFile",
+        "address":  "100062aa",
+        "info":  "Function: CFile at 100062aa\nSignature: undefined __thiscall CFile(CFile * this)\nEntry: 100062aa\nBody: 100062aa - 100062af"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "~CDialog",
+        "address":  "100062b0",
+        "info":  "Function: ~CDialog at 100062b0\nSignature: void __thiscall ~CDialog(CDialog * this)\nEntry: 100062b0\nBody: 100062b0 - 100062b5"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "SetModified",
+        "address":  "100062b6",
+        "info":  "Function: SetModified at 100062b6\nSignature: void __thiscall SetModified(CPropertyPage * this, int param_1)\nEntry: 100062b6\nBody: 100062b6 - 100062bb"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "GetFileTitle",
+        "address":  "100062bc",
+        "info":  "Function: GetFileTitle at 100062bc\nSignature: CString __thiscall GetFileTitle(CFileDialog * this)\nEntry: 100062bc\nBody: 100062bc - 100062c1"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "GetPathName",
+        "address":  "100062c2",
+        "info":  "Function: GetPathName at 100062c2\nSignature: CString __thiscall GetPathName(CFileDialog * this)\nEntry: 100062c2\nBody: 100062c2 - 100062c7"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "GetFileName",
+        "address":  "100062c8",
+        "info":  "Function: GetFileName at 100062c8\nSignature: CString __thiscall GetFileName(CFileDialog * this)\nEntry: 100062c8\nBody: 100062c8 - 100062cd"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "DoModal",
+        "address":  "100062ce",
+        "info":  "Function: DoModal at 100062ce\nSignature: int __thiscall DoModal(CFileDialog * this)\nEntry: 100062ce\nBody: 100062ce - 100062d3"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "CFileDialog",
+        "address":  "100062d4",
+        "info":  "Function: CFileDialog at 100062d4\nSignature: undefined __thiscall CFileDialog(CFileDialog * this, int param_1, char * param_2, char * param_3, ulong param_4, char * param_5, CWnd * param_6)\nEntry: 100062d4\nBody: 100062d4 - 100062d9"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "GetWindowTextA",
+        "address":  "100062da",
+        "info":  "Function: GetWindowTextA at 100062da\nSignature: void __thiscall GetWindowTextA(CWnd * this, CString * param_1)\nEntry: 100062da\nBody: 100062da - 100062df"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "OnInitDialog",
+        "address":  "100062e0",
+        "info":  "Function: OnInitDialog at 100062e0\nSignature: int __thiscall OnInitDialog(CDialog * this)\nEntry: 100062e0\nBody: 100062e0 - 100062e5"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_100062f0",
+        "address":  "100062f0",
+        "info":  "Function: FUN_100062f0 at 100062f0\nSignature: undefined4 * __stdcall FUN_100062f0(void)\nEntry: 100062f0\nBody: 100062f0 - 10006317"
+    }
+]

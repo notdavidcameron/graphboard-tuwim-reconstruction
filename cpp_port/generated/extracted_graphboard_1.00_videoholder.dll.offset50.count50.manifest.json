@@ -1,0 +1,302 @@
+﻿[
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_100034e0",
+        "address":  "100034e0",
+        "info":  "Function: FUN_100034e0 at 100034e0\nSignature: undefined __fastcall FUN_100034e0(undefined4 * param_1)\nEntry: 100034e0\nBody: 100034e0 - 100034e9"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_100034f0",
+        "address":  "100034f0",
+        "info":  "Function: FUN_100034f0 at 100034f0\nSignature: int __stdcall FUN_100034f0(short * param_1)\nEntry: 100034f0\nBody: 100034f0 - 1000352b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_100035c0",
+        "address":  "100035c0",
+        "info":  "Function: FUN_100035c0 at 100035c0\nSignature: HRESULT __thiscall FUN_100035c0(void * this, BSTR param_1)\nEntry: 100035c0\nBody: 100035c0 - 10003855"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "Com_ReleaseInterfacePointer",
+        "address":  "10003860",
+        "info":  "Function: Com_ReleaseInterfacePointer at 10003860\nSignature: undefined __fastcall Com_ReleaseInterfacePointer(int * param_1)\nEntry: 10003860\nBody: 10003860 - 1000386c"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10003870",
+        "address":  "10003870",
+        "info":  "Function: FUN_10003870 at 10003870\nSignature: undefined4 __stdcall FUN_10003870(int param_1, undefined4 param_2, undefined4 param_3)\nEntry: 10003870\nBody: 10003870 - 10003906"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "Catch@100038be",
+        "address":  "100038be",
+        "info":  "Function: Catch@100038be at 100038be\nSignature: undefined4 __stdcall Catch@100038be(void)\nEntry: 100038be\nBody: 100038be - 100038c3"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "ComTypeInfo_CleanupDispatchMap",
+        "address":  "10003910",
+        "info":  "Function: ComTypeInfo_CleanupDispatchMap at 10003910\nSignature: undefined __stdcall ComTypeInfo_CleanupDispatchMap(int param_1)\nEntry: 10003910\nBody: 10003910 - 10003964"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "VideoHolderContext_Construct",
+        "address":  "100039e0",
+        "info":  "Function: VideoHolderContext_Construct at 100039e0\nSignature: undefined4 * __fastcall VideoHolderContext_Construct(undefined4 * param_1)\nEntry: 100039e0\nBody: 100039e0 - 10003ad1"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "VideoHolderCriticalSection_Destroy",
+        "address":  "10003ae0",
+        "info":  "Function: VideoHolderCriticalSection_Destroy at 10003ae0\nSignature: undefined __fastcall VideoHolderCriticalSection_Destroy(int param_1)\nEntry: 10003ae0\nBody: 10003ae0 - 10003aea"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10003af0",
+        "address":  "10003af0",
+        "info":  "Function: FUN_10003af0 at 10003af0\nSignature: undefined __fastcall FUN_10003af0(undefined4 * param_1)\nEntry: 10003af0\nBody: 10003af0 - 10003bc8"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "VideoHolder_CloseAllVideos",
+        "address":  "10003da0",
+        "info":  "Function: VideoHolder_CloseAllVideos at 10003da0\nSignature: undefined4 __stdcall VideoHolder_CloseAllVideos(int param_1)\nEntry: 10003da0\nBody: 10003da0 - 10003e16"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "VideoHolder_MciWindowSubclassProc",
+        "address":  "100040d0",
+        "info":  "Function: VideoHolder_MciWindowSubclassProc at 100040d0\nSignature: undefined __stdcall VideoHolder_MciWindowSubclassProc(HWND param_1, UINT param_2, WPARAM param_3, LPARAM param_4)\nEntry: 100040d0\nBody: 100040d0 - 10004117"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "VideoHolder_StopAndHideActiveVideo",
+        "address":  "10004760",
+        "info":  "Function: VideoHolder_StopAndHideActiveVideo at 10004760\nSignature: undefined4 __stdcall VideoHolder_StopAndHideActiveVideo(int param_1)\nEntry: 10004760\nBody: 10004760 - 100047ea"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "VideoHolder_PlayActiveVideo",
+        "address":  "100047f0",
+        "info":  "Function: VideoHolder_PlayActiveVideo at 100047f0\nSignature: undefined __fastcall VideoHolder_PlayActiveVideo(int param_1)\nEntry: 100047f0\nBody: 100047f0 - 100048c4"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "VideoHolder_DeletePropertiesDialog",
+        "address":  "10004aa0",
+        "info":  "Function: VideoHolder_DeletePropertiesDialog at 10004aa0\nSignature: undefined __stdcall VideoHolder_DeletePropertiesDialog(void * param_1)\nEntry: 10004aa0\nBody: 10004aa0 - 10004aad"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "VideoHolderCallback_ClearPlaybackState",
+        "address":  "10004e50",
+        "info":  "Function: VideoHolderCallback_ClearPlaybackState at 10004e50\nSignature: undefined4 __stdcall VideoHolderCallback_ClearPlaybackState(int param_1, undefined4 param_2)\nEntry: 10004e50\nBody: 10004e50 - 10004e85"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10004e90",
+        "address":  "10004e90",
+        "info":  "Function: FUN_10004e90 at 10004e90\nSignature: undefined4 __stdcall FUN_10004e90(int param_1, undefined4 param_2)\nEntry: 10004e90\nBody: 10004e90 - 10004eaf"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "VideoSettingsPage_Create",
+        "address":  "10004eb0",
+        "info":  "Function: VideoSettingsPage_Create at 10004eb0\nSignature: CPropertyPage * __stdcall VideoSettingsPage_Create(void)\nEntry: 10004eb0\nBody: 10004eb0 - 10004f09"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10004f30",
+        "address":  "10004f30",
+        "info":  "Function: FUN_10004f30 at 10004f30\nSignature: CPropertyPage * __fastcall FUN_10004f30(CPropertyPage * param_1)\nEntry: 10004f30\nBody: 10004f30 - 10005089"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "VideoSettingsPage_ScalarDeletingDestructor",
+        "address":  "10005090",
+        "info":  "Function: VideoSettingsPage_ScalarDeletingDestructor at 10005090\nSignature: CPropertyPage * __thiscall VideoSettingsPage_ScalarDeletingDestructor(void * this, byte param_1)\nEntry: 10005090\nBody: 10005090 - 100050ad"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "VideoSettingsPage_Destroy",
+        "address":  "100050b0",
+        "info":  "Function: VideoSettingsPage_Destroy at 100050b0\nSignature: undefined __fastcall VideoSettingsPage_Destroy(CPropertyPage * param_1)\nEntry: 100050b0\nBody: 100050b0 - 100051a4"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "VideoSettingsPage_UpdateControls",
+        "address":  "100053b0",
+        "info":  "Function: VideoSettingsPage_UpdateControls at 100053b0\nSignature: undefined __fastcall VideoSettingsPage_UpdateControls(int param_1)\nEntry: 100053b0\nBody: 100053b0 - 100054c3"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_100054d0",
+        "address":  "100054d0",
+        "info":  "Function: FUN_100054d0 at 100054d0\nSignature: undefined __fastcall FUN_100054d0(CWnd * param_1)\nEntry: 100054d0\nBody: 100054d0 - 10005640"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10005650",
+        "address":  "10005650",
+        "info":  "Function: FUN_10005650 at 10005650\nSignature: undefined __fastcall FUN_10005650(CWnd * param_1)\nEntry: 10005650\nBody: 10005650 - 100056a0"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_100056c0",
+        "address":  "100056c0",
+        "info":  "Function: FUN_100056c0 at 100056c0\nSignature: undefined __fastcall FUN_100056c0(CWnd * param_1)\nEntry: 100056c0\nBody: 100056c0 - 1000573d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10005740",
+        "address":  "10005740",
+        "info":  "Function: FUN_10005740 at 10005740\nSignature: undefined __fastcall FUN_10005740(CWnd * param_1)\nEntry: 10005740\nBody: 10005740 - 100057db"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_100057e0",
+        "address":  "100057e0",
+        "info":  "Function: FUN_100057e0 at 100057e0\nSignature: undefined4 __stdcall FUN_100057e0(char * param_1, char * param_2, char * param_3)\nEntry: 100057e0\nBody: 100057e0 - 100059d5"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_100059e0",
+        "address":  "100059e0",
+        "info":  "Function: FUN_100059e0 at 100059e0\nSignature: undefined __fastcall FUN_100059e0(CWnd * param_1)\nEntry: 100059e0\nBody: 100059e0 - 10005d29"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "~CDialog",
+        "address":  "10005d30",
+        "info":  "Function: ~CDialog at 10005d30\nSignature: void __thiscall ~CDialog(CDialog * this)\nEntry: 10005d30\nBody: 10005d30 - 10005d34"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10005d40",
+        "address":  "10005d40",
+        "info":  "Function: FUN_10005d40 at 10005d40\nSignature: undefined __fastcall FUN_10005d40(CDialog * param_1)\nEntry: 10005d40\nBody: 10005d40 - 10005d8e"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10005d90",
+        "address":  "10005d90",
+        "info":  "Function: FUN_10005d90 at 10005d90\nSignature: undefined __fastcall FUN_10005d90(int param_1)\nEntry: 10005d90\nBody: 10005d90 - 10005e48"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10005e50",
+        "address":  "10005e50",
+        "info":  "Function: FUN_10005e50 at 10005e50\nSignature: undefined4 __fastcall FUN_10005e50(CDialog * param_1)\nEntry: 10005e50\nBody: 10005e50 - 10005e9b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10005ea0",
+        "address":  "10005ea0",
+        "info":  "Function: FUN_10005ea0 at 10005ea0\nSignature: CStatic * __thiscall FUN_10005ea0(void * this, byte param_1)\nEntry: 10005ea0\nBody: 10005ea0 - 10005ebd"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10005ec0",
+        "address":  "10005ec0",
+        "info":  "Function: FUN_10005ec0 at 10005ec0\nSignature: CButton * __thiscall FUN_10005ec0(void * this, byte param_1)\nEntry: 10005ec0\nBody: 10005ec0 - 10005edd"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10005ee0",
+        "address":  "10005ee0",
+        "info":  "Function: FUN_10005ee0 at 10005ee0\nSignature: CListBox * __thiscall FUN_10005ee0(void * this, byte param_1)\nEntry: 10005ee0\nBody: 10005ee0 - 10005efd"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10005f00",
+        "address":  "10005f00",
+        "info":  "Function: FUN_10005f00 at 10005f00\nSignature: CEdit * __thiscall FUN_10005f00(void * this, byte param_1)\nEntry: 10005f00\nBody: 10005f00 - 10005f1d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "MCIWndCreateA",
+        "address":  "10005f20",
+        "info":  "Function: MCIWndCreateA at 10005f20\nSignature: undefined MCIWndCreateA(void)\nEntry: 10005f20\nBody: 10005f20 - 10005f25"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "DestroyWindow",
+        "address":  "10005f9e",
+        "info":  "Function: DestroyWindow at 10005f9e\nSignature: int __thiscall DestroyWindow(CWnd * this)\nEntry: 10005f9e\nBody: 10005f9e - 10005fa3"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "CWnd",
+        "address":  "10006016",
+        "info":  "Function: CWnd at 10006016\nSignature: undefined __thiscall CWnd(CWnd * this)\nEntry: 10006016\nBody: 10006016 - 1000601b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "operator_delete",
+        "address":  "1000601c",
+        "info":  "Function: operator_delete at 1000601c\nSignature: void __cdecl operator_delete(void * param_1)\nEntry: 1000601c\nBody: 1000601c - 10006021"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "~CWnd",
+        "address":  "10006022",
+        "info":  "Function: ~CWnd at 10006022\nSignature: void __thiscall ~CWnd(CWnd * this)\nEntry: 10006022\nBody: 10006022 - 10006027"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "CreateEx",
+        "address":  "10006028",
+        "info":  "Function: CreateEx at 10006028\nSignature: int __thiscall CreateEx(CWnd * this, ulong param_1, char * param_2, char * param_3, ulong param_4, int param_5, int param_6, int param_7, int param_8, HWND__ * param_9, HMENU__ * param_10, void * param_11)\nEntry: 10006028\nBody: 10006028 - 1000602d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "AfxRegisterWndClass",
+        "address":  "1000602e",
+        "info":  "Function: AfxRegisterWndClass at 1000602e\nSignature: char * __stdcall AfxRegisterWndClass(uint param_1, HICON__ * param_2, HBRUSH__ * param_3, HICON__ * param_4)\nEntry: 1000602e\nBody: 1000602e - 10006033"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "DoModal",
+        "address":  "10006046",
+        "info":  "Function: DoModal at 10006046\nSignature: int __thiscall DoModal(CPropertySheet * this)\nEntry: 10006046\nBody: 10006046 - 1000604b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "~CPropertySheet",
+        "address":  "10006064",
+        "info":  "Function: ~CPropertySheet at 10006064\nSignature: void __thiscall ~CPropertySheet(CPropertySheet * this)\nEntry: 10006064\nBody: 10006064 - 10006069"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "AddPage",
+        "address":  "1000606a",
+        "info":  "Function: AddPage at 1000606a\nSignature: void __thiscall AddPage(CPropertySheet * this, CPropertyPage * param_1)\nEntry: 1000606a\nBody: 1000606a - 1000606f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "CPropertySheet",
+        "address":  "10006070",
+        "info":  "Function: CPropertySheet at 10006070\nSignature: undefined __thiscall CPropertySheet(CPropertySheet * this, uint param_1, CWnd * param_2, uint param_3)\nEntry: 10006070\nBody: 10006070 - 10006075"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "~CWinApp",
+        "address":  "10006076",
+        "info":  "Function: ~CWinApp at 10006076\nSignature: void __thiscall ~CWinApp(CWinApp * this)\nEntry: 10006076\nBody: 10006076 - 1000607b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "CWinApp",
+        "address":  "100060f4",
+        "info":  "Function: CWinApp at 100060f4\nSignature: undefined __thiscall CWinApp(CWinApp * this, char * param_1)\nEntry: 100060f4\nBody: 100060f4 - 100060f9"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "InitInstance",
+        "address":  "100060fa",
+        "info":  "Function: InitInstance at 100060fa\nSignature: int __thiscall InitInstance(CWinApp * this)\nEntry: 100060fa\nBody: 100060fa - 100060ff"
+    }
+]

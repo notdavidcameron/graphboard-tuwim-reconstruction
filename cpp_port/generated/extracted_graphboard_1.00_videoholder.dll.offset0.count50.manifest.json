@@ -1,0 +1,302 @@
+﻿[
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10001020",
+        "address":  "10001020",
+        "info":  "Function: FUN_10001020 at 10001020\nSignature: CWnd * __thiscall FUN_10001020(void * this, undefined4 param_1)\nEntry: 10001020\nBody: 10001020 - 1000103a"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10001040",
+        "address":  "10001040",
+        "info":  "Function: FUN_10001040 at 10001040\nSignature: CWnd * __thiscall FUN_10001040(void * this, byte param_1)\nEntry: 10001040\nBody: 10001040 - 1000105d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10001060",
+        "address":  "10001060",
+        "info":  "Function: FUN_10001060 at 10001060\nSignature: undefined __fastcall FUN_10001060(CWnd * param_1)\nEntry: 10001060\nBody: 10001060 - 100010b5"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_100010c0",
+        "address":  "100010c0",
+        "info":  "Function: FUN_100010c0 at 100010c0\nSignature: bool __fastcall FUN_100010c0(CWnd * param_1)\nEntry: 100010c0\nBody: 100010c0 - 10001110"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10001150",
+        "address":  "10001150",
+        "info":  "Function: FUN_10001150 at 10001150\nSignature: undefined __stdcall FUN_10001150(void)\nEntry: 10001150\nBody: 10001150 - 10001152"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_100011b0",
+        "address":  "100011b0",
+        "info":  "Function: FUN_100011b0 at 100011b0\nSignature: CPropertySheet * __thiscall FUN_100011b0(void * this, uint param_1, undefined4 param_2, uint param_3)\nEntry: 100011b0\nBody: 100011b0 - 10001227"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10001230",
+        "address":  "10001230",
+        "info":  "Function: FUN_10001230 at 10001230\nSignature: CPropertySheet * __thiscall FUN_10001230(void * this, byte param_1)\nEntry: 10001230\nBody: 10001230 - 1000124d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10001250",
+        "address":  "10001250",
+        "info":  "Function: FUN_10001250 at 10001250\nSignature: undefined __fastcall FUN_10001250(CPropertySheet * param_1)\nEntry: 10001250\nBody: 10001250 - 100012a4"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10001330",
+        "address":  "10001330",
+        "info":  "Function: FUN_10001330 at 10001330\nSignature: undefined __stdcall FUN_10001330(void)\nEntry: 10001330\nBody: 10001330 - 10001339"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10001340",
+        "address":  "10001340",
+        "info":  "Function: FUN_10001340 at 10001340\nSignature: undefined __stdcall FUN_10001340(void)\nEntry: 10001340\nBody: 10001340 - 1000134b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "~CWinApp",
+        "address":  "10001360",
+        "info":  "Function: ~CWinApp at 10001360\nSignature: void __thiscall ~CWinApp(CWinApp * this)\nEntry: 10001360\nBody: 10001360 - 10001364"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10001370",
+        "address":  "10001370",
+        "info":  "Function: FUN_10001370 at 10001370\nSignature: CWinApp * __fastcall FUN_10001370(CWinApp * param_1)\nEntry: 10001370\nBody: 10001370 - 10001383"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10001390",
+        "address":  "10001390",
+        "info":  "Function: FUN_10001390 at 10001390\nSignature: CWinApp * __thiscall FUN_10001390(void * this, byte param_1)\nEntry: 10001390\nBody: 10001390 - 100013ad"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "DllCanUnloadNow",
+        "address":  "10001570",
+        "info":  "Function: DllCanUnloadNow at 10001570\nSignature: HRESULT __stdcall DllCanUnloadNow(void)\nEntry: 10001570\nBody: 10001570 - 100015b8"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "DllGetClassObject",
+        "address":  "100015c0",
+        "info":  "Function: DllGetClassObject at 100015c0\nSignature: HRESULT __stdcall DllGetClassObject(IID * rclsid, IID * riid, LPVOID * ppv)\nEntry: 100015c0\nBody: 100015c0 - 100016a5"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "DllRegisterServer",
+        "address":  "100016b0",
+        "info":  "Function: DllRegisterServer at 100016b0\nSignature: HRESULT __stdcall DllRegisterServer(void)\nEntry: 100016b0\nBody: 100016b0 - 10001732"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "DllUnregisterServer",
+        "address":  "10001740",
+        "info":  "Function: DllUnregisterServer at 10001740\nSignature: undefined4 __stdcall DllUnregisterServer(void)\nEntry: 10001740\nBody: 10001740 - 1000178e"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "Create_VideoHolderClassFactory",
+        "address":  "100017a0",
+        "info":  "Function: Create_VideoHolderClassFactory at 100017a0\nSignature: undefined __stdcall Create_VideoHolderClassFactory(void)\nEntry: 100017a0\nBody: 100017a0 - 1000180a"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "Catch@1000180b",
+        "address":  "1000180b",
+        "info":  "Function: Catch@1000180b at 1000180b\nSignature: undefined * __stdcall Catch@1000180b(void)\nEntry: 1000180b\nBody: 1000180b - 10001810"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10001814",
+        "address":  "10001814",
+        "info":  "Function: FUN_10001814 at 10001814\nSignature: int __stdcall FUN_10001814(void)\nEntry: 10001814\nBody: 10001814 - 1000188a"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "VideoHolderClassFactory_AddRef",
+        "address":  "100018c0",
+        "info":  "Function: VideoHolderClassFactory_AddRef at 100018c0\nSignature: LONG __stdcall VideoHolderClassFactory_AddRef(int param_1)\nEntry: 100018c0\nBody: 100018c0 - 100018fd"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "VideoHolderClassFactory_Release",
+        "address":  "10001900",
+        "info":  "Function: VideoHolderClassFactory_Release at 10001900\nSignature: int __stdcall VideoHolderClassFactory_Release(undefined4 * param_1)\nEntry: 10001900\nBody: 10001900 - 1000195c"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "VideoHolderClassFactory_Destroy",
+        "address":  "10001960",
+        "info":  "Function: VideoHolderClassFactory_Destroy at 10001960\nSignature: undefined __fastcall VideoHolderClassFactory_Destroy(undefined4 * param_1)\nEntry: 10001960\nBody: 10001960 - 1000198f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "VideoHolder_QueryInterfaceFromMap",
+        "address":  "10001990",
+        "info":  "Function: VideoHolder_QueryInterfaceFromMap at 10001990\nSignature: int __stdcall VideoHolder_QueryInterfaceFromMap(int * param_1, int * param_2, undefined4 * param_3)\nEntry: 10001990\nBody: 10001990 - 10001a82"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "Create_VideoHolderComObject",
+        "address":  "10001a90",
+        "info":  "Function: Create_VideoHolderComObject at 10001a90\nSignature: undefined __stdcall Create_VideoHolderComObject(void)\nEntry: 10001a90\nBody: 10001a90 - 10001b0c"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "Catch@10001b0d",
+        "address":  "10001b0d",
+        "info":  "Function: Catch@10001b0d at 10001b0d\nSignature: undefined * __stdcall Catch@10001b0d(void)\nEntry: 10001b0d\nBody: 10001b0d - 10001b12"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10001b16",
+        "address":  "10001b16",
+        "info":  "Function: FUN_10001b16 at 10001b16\nSignature: int __stdcall FUN_10001b16(void)\nEntry: 10001b16\nBody: 10001b16 - 10001b9b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10001bb0",
+        "address":  "10001bb0",
+        "info":  "Function: FUN_10001bb0 at 10001bb0\nSignature: HRESULT __stdcall FUN_10001bb0(undefined4 param_1, undefined4 param_2, BSTR param_3, undefined4 * param_4)\nEntry: 10001bb0\nBody: 10001bb0 - 10001bf6"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10001d20",
+        "address":  "10001d20",
+        "info":  "Function: FUN_10001d20 at 10001d20\nSignature: HRESULT __stdcall FUN_10001d20(undefined4 param_1, undefined4 param_2, BSTR param_3, undefined4 * param_4)\nEntry: 10001d20\nBody: 10001d20 - 10001d66"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10001e90",
+        "address":  "10001e90",
+        "info":  "Function: FUN_10001e90 at 10001e90\nSignature: HRESULT __stdcall FUN_10001e90(undefined4 param_1, undefined4 param_2, BSTR param_3, undefined4 * param_4)\nEntry: 10001e90\nBody: 10001e90 - 10001ed6"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10002000",
+        "address":  "10002000",
+        "info":  "Function: FUN_10002000 at 10002000\nSignature: undefined __stdcall FUN_10002000(undefined4 param_1)\nEntry: 10002000\nBody: 10002000 - 10002090"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "Catch@10002091",
+        "address":  "10002091",
+        "info":  "Function: Catch@10002091 at 10002091\nSignature: undefined * __stdcall Catch@10002091(void)\nEntry: 10002091\nBody: 10002091 - 10002096"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_1000209c",
+        "address":  "1000209c",
+        "info":  "Function: FUN_1000209c at 1000209c\nSignature: undefined4 * __stdcall FUN_1000209c(void)\nEntry: 1000209c\nBody: 1000209c - 1000210d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "VideoHolderRefCountedState_Construct",
+        "address":  "10002110",
+        "info":  "Function: VideoHolderRefCountedState_Construct at 10002110\nSignature: undefined4 * __fastcall VideoHolderRefCountedState_Construct(undefined4 * param_1)\nEntry: 10002110\nBody: 10002110 - 10002126"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10002190",
+        "address":  "10002190",
+        "info":  "Function: FUN_10002190 at 10002190\nSignature: undefined __fastcall FUN_10002190(undefined4 * param_1)\nEntry: 10002190\nBody: 10002190 - 100021c8"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_100022f0",
+        "address":  "100022f0",
+        "info":  "Function: FUN_100022f0 at 100022f0\nSignature: LONG __stdcall FUN_100022f0(undefined4 * param_1)\nEntry: 100022f0\nBody: 100022f0 - 10002320"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10002330",
+        "address":  "10002330",
+        "info":  "Function: FUN_10002330 at 10002330\nSignature: undefined __fastcall FUN_10002330(undefined4 * param_1)\nEntry: 10002330\nBody: 10002330 - 10002354"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10002720",
+        "address":  "10002720",
+        "info":  "Function: FUN_10002720 at 10002720\nSignature: IID * __stdcall FUN_10002720(int param_1, IID * param_2, BYTE * param_3, BYTE * param_4, HKEY param_5, uint param_6)\nEntry: 10002720\nBody: 10002720 - 10002b01"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10002b10",
+        "address":  "10002b10",
+        "info":  "Function: FUN_10002b10 at 10002b10\nSignature: undefined __fastcall FUN_10002b10(undefined4 * param_1)\nEntry: 10002b10\nBody: 10002b10 - 10002b27"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10002b30",
+        "address":  "10002b30",
+        "info":  "Function: FUN_10002b30 at 10002b30\nSignature: LSTATUS __fastcall FUN_10002b30(undefined4 * param_1)\nEntry: 10002b30\nBody: 10002b30 - 10002b49"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10002b50",
+        "address":  "10002b50",
+        "info":  "Function: FUN_10002b50 at 10002b50\nSignature: undefined __thiscall FUN_10002b50(void * this, HKEY param_1, LPCSTR param_2, LPSTR param_3, DWORD param_4, REGSAM param_5, LPSECURITY_ATTRIBUTES param_6, undefined4 * param_7)\nEntry: 10002b50\nBody: 10002b50 - 10002bbb"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10002bc0",
+        "address":  "10002bc0",
+        "info":  "Function: FUN_10002bc0 at 10002bc0\nSignature: LSTATUS __thiscall FUN_10002bc0(void * this, LPCSTR param_1, BYTE * param_2, LPCSTR param_3)\nEntry: 10002bc0\nBody: 10002bc0 - 10002c2a"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10002c30",
+        "address":  "10002c30",
+        "info":  "Function: FUN_10002c30 at 10002c30\nSignature: undefined __thiscall FUN_10002c30(void * this, BYTE * param_1, LPCSTR param_2)\nEntry: 10002c30\nBody: 10002c30 - 10002c58"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10002c60",
+        "address":  "10002c60",
+        "info":  "Function: FUN_10002c60 at 10002c60\nSignature: undefined4 __stdcall FUN_10002c60(undefined4 param_1, IID * param_2, HKEY param_3, LPCSTR param_4)\nEntry: 10002c60\nBody: 10002c60 - 10002f94"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10002fa0",
+        "address":  "10002fa0",
+        "info":  "Function: FUN_10002fa0 at 10002fa0\nSignature: undefined __thiscall FUN_10002fa0(void * this, HKEY param_1, LPCSTR param_2, REGSAM param_3)\nEntry: 10002fa0\nBody: 10002fa0 - 10002fe9"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10002ff0",
+        "address":  "10002ff0",
+        "info":  "Function: FUN_10002ff0 at 10002ff0\nSignature: undefined FUN_10002ff0(void)\nEntry: 10002ff0\nBody: 10002ff0 - 10003143"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10003150",
+        "address":  "10003150",
+        "info":  "Function: FUN_10003150 at 10003150\nSignature: int __stdcall FUN_10003150(undefined4 param_1, int * param_2, int param_3)\nEntry: 10003150\nBody: 10003150 - 1000327f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10003280",
+        "address":  "10003280",
+        "info":  "Function: FUN_10003280 at 10003280\nSignature: HRESULT __stdcall FUN_10003280(int param_1, LPCWSTR param_2)\nEntry: 10003280\nBody: 10003280 - 10003470"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_10003480",
+        "address":  "10003480",
+        "info":  "Function: FUN_10003480 at 10003480\nSignature: LPWSTR __stdcall FUN_10003480(LPWSTR param_1, LPCSTR param_2, int param_3, UINT param_4)\nEntry: 10003480\nBody: 10003480 - 100034a9"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/VideoHolder.dll",
+        "function":  "FUN_100034b0",
+        "address":  "100034b0",
+        "info":  "Function: FUN_100034b0 at 100034b0\nSignature: LPSTR __stdcall FUN_100034b0(LPSTR param_1, LPCWSTR param_2, int param_3, UINT param_4)\nEntry: 100034b0\nBody: 100034b0 - 100034db"
+    }
+]
