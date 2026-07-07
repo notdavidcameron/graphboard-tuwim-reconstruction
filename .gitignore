@@ -5,6 +5,14 @@ __pycache__/
 .mypy_cache/
 .ruff_cache/
 
+# Local native build outputs
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+*.o
+*.obj
+
 # Local editor/OS noise
 .DS_Store
 Thumbs.db

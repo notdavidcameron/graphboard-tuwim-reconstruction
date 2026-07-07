@@ -51,6 +51,14 @@ http://127.0.0.1:8765/web_port/index.html?scene=RADIO
 python .\graphboard_export_scene.py --extracted .\extracted_assets --output .\web_port --project "C:\Users\Administrator\Desktop\Multimedialny świat Juliana Tuwima PL\Tuwim\DATA\START.PRJ"
 ```
 
+## Compile Reconstruction Notes
+
+The source-style C++ reconstructions under `ghidra_import/` are kept compile-checkable as object files. With Chocolatey-installed `mingw`, `cmake`, and `ninja`, run:
+
+```powershell
+.\tools\compile_reconstructions.ps1
+```
+
 ## Notes
 
 The repository includes recovered assets for local preservation/research. Keep repository visibility and sharing choices appropriate for the source material.
