@@ -1,0 +1,302 @@
+﻿[
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "FUN_100034b0",
+        "address":  "100034b0",
+        "info":  "Function: FUN_100034b0 at 100034b0\nSignature: HRESULT __stdcall FUN_100034b0(int param_1, LPCWSTR param_2)\nEntry: 100034b0\nBody: 100034b0 - 100036a0"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "FUN_100036b0",
+        "address":  "100036b0",
+        "info":  "Function: FUN_100036b0 at 100036b0\nSignature: LPWSTR __stdcall FUN_100036b0(LPWSTR param_1, LPCSTR param_2, int param_3, UINT param_4)\nEntry: 100036b0\nBody: 100036b0 - 100036d9"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "FUN_100036e0",
+        "address":  "100036e0",
+        "info":  "Function: FUN_100036e0 at 100036e0\nSignature: LPSTR __stdcall FUN_100036e0(LPSTR param_1, LPCWSTR param_2, int param_3, UINT param_4)\nEntry: 100036e0\nBody: 100036e0 - 1000370b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "FUN_10003710",
+        "address":  "10003710",
+        "info":  "Function: FUN_10003710 at 10003710\nSignature: int __stdcall FUN_10003710(short * param_1)\nEntry: 10003710\nBody: 10003710 - 1000374b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "FUN_100037e0",
+        "address":  "100037e0",
+        "info":  "Function: FUN_100037e0 at 100037e0\nSignature: HRESULT __thiscall FUN_100037e0(void * this, BSTR param_1)\nEntry: 100037e0\nBody: 100037e0 - 10003a75"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "FUN_10003a80",
+        "address":  "10003a80",
+        "info":  "Function: FUN_10003a80 at 10003a80\nSignature: undefined4 __stdcall FUN_10003a80(int param_1, undefined4 param_2, undefined4 param_3)\nEntry: 10003a80\nBody: 10003a80 - 10003b16"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Catch@10003ace",
+        "address":  "10003ace",
+        "info":  "Function: Catch@10003ace at 10003ace\nSignature: undefined4 __stdcall Catch@10003ace(void)\nEntry: 10003ace\nBody: 10003ace - 10003ad3"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "ComTypeInfo_CleanupDispatchMap",
+        "address":  "10003b20",
+        "info":  "Function: ComTypeInfo_CleanupDispatchMap at 10003b20\nSignature: undefined __stdcall ComTypeInfo_CleanupDispatchMap(int param_1)\nEntry: 10003b20\nBody: 10003b20 - 10003b74"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "RecorderContext_Construct",
+        "address":  "10003bf0",
+        "info":  "Function: RecorderContext_Construct at 10003bf0\nSignature: undefined4 * __fastcall RecorderContext_Construct(undefined4 * param_1)\nEntry: 10003bf0\nBody: 10003bf0 - 10003c91"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "RecorderContext_Destroy",
+        "address":  "10003ca0",
+        "info":  "Function: RecorderContext_Destroy at 10003ca0\nSignature: undefined __fastcall RecorderContext_Destroy(char * param_1)\nEntry: 10003ca0\nBody: 10003ca0 - 10003d6a"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Recorder_ShowPropertiesDialog",
+        "address":  "10003e00",
+        "info":  "Function: Recorder_ShowPropertiesDialog at 10003e00\nSignature: undefined __fastcall Recorder_ShowPropertiesDialog(int param_1)\nEntry: 10003e00\nBody: 10003e00 - 10003ea9"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Recorder_BuildWaveFormatFromPreset",
+        "address":  "10004030",
+        "info":  "Function: Recorder_BuildWaveFormatFromPreset at 10004030\nSignature: undefined __stdcall Recorder_BuildWaveFormatFromPreset(undefined2 * param_1, uint param_2)\nEntry: 10004030\nBody: 10004030 - 100040cf"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Recorder_StartCapture",
+        "address":  "100040d0",
+        "info":  "Function: Recorder_StartCapture at 100040d0\nSignature: bool __fastcall Recorder_StartCapture(int param_1)\nEntry: 100040d0\nBody: 100040d0 - 10004233"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Recorder_StopCapture",
+        "address":  "10004240",
+        "info":  "Function: Recorder_StopCapture at 10004240\nSignature: undefined4 __fastcall Recorder_StopCapture(int param_1)\nEntry: 10004240\nBody: 10004240 - 100042f3"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Recorder_StartPlaybackPreview",
+        "address":  "100045e0",
+        "info":  "Function: Recorder_StartPlaybackPreview at 100045e0\nSignature: undefined4 __fastcall Recorder_StartPlaybackPreview(int param_1)\nEntry: 100045e0\nBody: 100045e0 - 100047e9"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Recorder_StopPlaybackPreview",
+        "address":  "100047f0",
+        "info":  "Function: Recorder_StopPlaybackPreview at 100047f0\nSignature: undefined __fastcall Recorder_StopPlaybackPreview(int param_1)\nEntry: 100047f0\nBody: 100047f0 - 10004846"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "FUN_10004970",
+        "address":  "10004970",
+        "info":  "Function: FUN_10004970 at 10004970\nSignature: undefined4 __stdcall FUN_10004970(int * param_1)\nEntry: 10004970\nBody: 10004970 - 10004991"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "FUN_100049d0",
+        "address":  "100049d0",
+        "info":  "Function: FUN_100049d0 at 100049d0\nSignature: undefined __stdcall FUN_100049d0(void * param_1)\nEntry: 100049d0\nBody: 100049d0 - 100049dd"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Recorder_StartCaptureFromInnerObject",
+        "address":  "10004a80",
+        "info":  "Function: Recorder_StartCaptureFromInnerObject at 10004a80\nSignature: bool __stdcall Recorder_StartCaptureFromInnerObject(int * param_1)\nEntry: 10004a80\nBody: 10004a80 - 10004aa2"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "FUN_10004ab0",
+        "address":  "10004ab0",
+        "info":  "Function: FUN_10004ab0 at 10004ab0\nSignature: undefined4 __stdcall FUN_10004ab0(int param_1)\nEntry: 10004ab0\nBody: 10004ab0 - 10004ad8"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "FUN_10004c90",
+        "address":  "10004c90",
+        "info":  "Function: FUN_10004c90 at 10004c90\nSignature: undefined4 __stdcall FUN_10004c90(int param_1)\nEntry: 10004c90\nBody: 10004c90 - 10004cab"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "FUN_10004cb0",
+        "address":  "10004cb0",
+        "info":  "Function: FUN_10004cb0 at 10004cb0\nSignature: undefined4 __stdcall FUN_10004cb0(int * param_1)\nEntry: 10004cb0\nBody: 10004cb0 - 10004cd5"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "FUN_10004ce0",
+        "address":  "10004ce0",
+        "info":  "Function: FUN_10004ce0 at 10004ce0\nSignature: undefined4 __stdcall FUN_10004ce0(int * param_1)\nEntry: 10004ce0\nBody: 10004ce0 - 10004d05"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "FUN_10004d10",
+        "address":  "10004d10",
+        "info":  "Function: FUN_10004d10 at 10004d10\nSignature: undefined4 __stdcall FUN_10004d10(int param_1, undefined4 param_2)\nEntry: 10004d10\nBody: 10004d10 - 10004d2f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "FUN_10004d30",
+        "address":  "10004d30",
+        "info":  "Function: FUN_10004d30 at 10004d30\nSignature: undefined4 __stdcall FUN_10004d30(int param_1, undefined4 param_2)\nEntry: 10004d30\nBody: 10004d30 - 10004d4f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "FUN_10004d50",
+        "address":  "10004d50",
+        "info":  "Function: FUN_10004d50 at 10004d50\nSignature: CPropertyPage * __stdcall FUN_10004d50(void)\nEntry: 10004d50\nBody: 10004d50 - 10004da9"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "FUN_10004dd0",
+        "address":  "10004dd0",
+        "info":  "Function: FUN_10004dd0 at 10004dd0\nSignature: CPropertyPage * __fastcall FUN_10004dd0(CPropertyPage * param_1)\nEntry: 10004dd0\nBody: 10004dd0 - 10004e2d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "FUN_10004e30",
+        "address":  "10004e30",
+        "info":  "Function: FUN_10004e30 at 10004e30\nSignature: CPropertyPage * __thiscall FUN_10004e30(void * this, byte param_1)\nEntry: 10004e30\nBody: 10004e30 - 10004e4d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "FUN_10004e50",
+        "address":  "10004e50",
+        "info":  "Function: FUN_10004e50 at 10004e50\nSignature: undefined __fastcall FUN_10004e50(CPropertyPage * param_1)\nEntry: 10004e50\nBody: 10004e50 - 10004ea4"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "FUN_10004f90",
+        "address":  "10004f90",
+        "info":  "Function: FUN_10004f90 at 10004f90\nSignature: undefined __fastcall FUN_10004f90(CPropertyPage * param_1)\nEntry: 10004f90\nBody: 10004f90 - 10004fba"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "FUN_10004fc0",
+        "address":  "10004fc0",
+        "info":  "Function: FUN_10004fc0 at 10004fc0\nSignature: CComboBox * __thiscall FUN_10004fc0(void * this, byte param_1)\nEntry: 10004fc0\nBody: 10004fc0 - 10004fdd"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "DestroyWindow",
+        "address":  "10005058",
+        "info":  "Function: DestroyWindow at 10005058\nSignature: int __thiscall DestroyWindow(CWnd * this)\nEntry: 10005058\nBody: 10005058 - 1000505d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "~CWnd",
+        "address":  "100050d0",
+        "info":  "Function: ~CWnd at 100050d0\nSignature: void __thiscall ~CWnd(CWnd * this)\nEntry: 100050d0\nBody: 100050d0 - 100050d5"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "CreateEx",
+        "address":  "100050d6",
+        "info":  "Function: CreateEx at 100050d6\nSignature: int __thiscall CreateEx(CWnd * this, ulong param_1, char * param_2, char * param_3, ulong param_4, int param_5, int param_6, int param_7, int param_8, HWND__ * param_9, HMENU__ * param_10, void * param_11)\nEntry: 100050d6\nBody: 100050d6 - 100050db"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "AfxRegisterWndClass",
+        "address":  "100050dc",
+        "info":  "Function: AfxRegisterWndClass at 100050dc\nSignature: char * __stdcall AfxRegisterWndClass(uint param_1, HICON__ * param_2, HBRUSH__ * param_3, HICON__ * param_4)\nEntry: 100050dc\nBody: 100050dc - 100050e1"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "CWnd",
+        "address":  "100050e2",
+        "info":  "Function: CWnd at 100050e2\nSignature: undefined __thiscall CWnd(CWnd * this)\nEntry: 100050e2\nBody: 100050e2 - 100050e7"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "operator_delete",
+        "address":  "100050e8",
+        "info":  "Function: operator_delete at 100050e8\nSignature: void __cdecl operator_delete(void * param_1)\nEntry: 100050e8\nBody: 100050e8 - 100050ed"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "~CPropertySheet",
+        "address":  "1000511e",
+        "info":  "Function: ~CPropertySheet at 1000511e\nSignature: void __thiscall ~CPropertySheet(CPropertySheet * this)\nEntry: 1000511e\nBody: 1000511e - 10005123"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "AddPage",
+        "address":  "10005124",
+        "info":  "Function: AddPage at 10005124\nSignature: void __thiscall AddPage(CPropertySheet * this, CPropertyPage * param_1)\nEntry: 10005124\nBody: 10005124 - 10005129"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "CPropertySheet",
+        "address":  "1000512a",
+        "info":  "Function: CPropertySheet at 1000512a\nSignature: undefined __thiscall CPropertySheet(CPropertySheet * this, uint param_1, CWnd * param_2, uint param_3)\nEntry: 1000512a\nBody: 1000512a - 1000512f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "~CWinApp",
+        "address":  "10005130",
+        "info":  "Function: ~CWinApp at 10005130\nSignature: void __thiscall ~CWinApp(CWinApp * this)\nEntry: 10005130\nBody: 10005130 - 10005135"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "CWinApp",
+        "address":  "100051ae",
+        "info":  "Function: CWinApp at 100051ae\nSignature: undefined __thiscall CWinApp(CWinApp * this, char * param_1)\nEntry: 100051ae\nBody: 100051ae - 100051b3"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "InitInstance",
+        "address":  "100051b4",
+        "info":  "Function: InitInstance at 100051b4\nSignature: int __thiscall InitInstance(CWinApp * this)\nEntry: 100051b4\nBody: 100051b4 - 100051b9"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "ExitInstance",
+        "address":  "100051ba",
+        "info":  "Function: ExitInstance at 100051ba\nSignature: int __thiscall ExitInstance(CWinApp * this)\nEntry: 100051ba\nBody: 100051ba - 100051bf"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "AfxDllCanUnloadNow",
+        "address":  "100051c0",
+        "info":  "Function: AfxDllCanUnloadNow at 100051c0\nSignature: long __stdcall AfxDllCanUnloadNow(void)\nEntry: 100051c0\nBody: 100051c0 - 100051c5"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "AFX_MAINTAIN_STATE2",
+        "address":  "100051c6",
+        "info":  "Function: AFX_MAINTAIN_STATE2 at 100051c6\nSignature: undefined __thiscall AFX_MAINTAIN_STATE2(AFX_MAINTAIN_STATE2 * this, AFX_MODULE_STATE * param_1)\nEntry: 100051c6\nBody: 100051c6 - 100051cb"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "operator_new",
+        "address":  "100051cc",
+        "info":  "Function: operator_new at 100051cc\nSignature: void * __cdecl operator_new(uint param_1)\nEntry: 100051cc\nBody: 100051cc - 100051d1"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "~CString",
+        "address":  "100051d2",
+        "info":  "Function: ~CString at 100051d2\nSignature: void __thiscall ~CString(CString * this)\nEntry: 100051d2\nBody: 100051d2 - 100051d7"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Remove",
+        "address":  "100051d8",
+        "info":  "Function: Remove at 100051d8\nSignature: void __stdcall Remove(char * param_1)\nEntry: 100051d8\nBody: 100051d8 - 100051dd"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "AfxGetModuleState",
+        "address":  "100051de",
+        "info":  "Function: AfxGetModuleState at 100051de\nSignature: AFX_MODULE_STATE * __stdcall AfxGetModuleState(void)\nEntry: 100051de\nBody: 100051de - 100051e3"
+    }
+]

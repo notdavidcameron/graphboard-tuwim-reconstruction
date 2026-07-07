@@ -18,6 +18,9 @@ component DLL classes. For that reason this branch uses `.cpp`.
 - `generated/extracted_graphboard_1.00_setcolor.dll.offset*.cpp` and
   `generated/extracted_graphboard_1.00_setcolor.dll/functions/*.cpp` - chunked
   direct export for `SetColor.dll`.
+- `generated/extracted_graphboard_1.00_recorder.dll.offset*.cpp` and
+  `generated/extracted_graphboard_1.00_recorder.dll/functions/*.cpp` - chunked
+  direct export for `Recorder.dll`.
 - `generated/*.manifest.json` - source program, address, and function metadata
   captured during export.
 - `include/ghidra_compat.hpp` - minimal type shims for decompiler-style code.
@@ -28,10 +31,11 @@ component DLL classes. For that reason this branch uses `.cpp`.
 
 ## Current Ghidra status
 
-The first export succeeded for `Tuwim.exe`. A later attempt to open every project
-program one by one hung on `/iscript.dll`; subsequent health checks to
-`/list_open_programs` timed out. The exporter script keeps `iscript.dll` last so
-the useful GraphBoard binaries can be opened before that known trouble spot.
+The focused exports for `Tuwim.exe`, `TransparentVideoHolder.dll`, `SetColor.dll`,
+and `Recorder.dll` were captured from the local MCP server. Broad open attempts
+previously hung on `/iscript.dll`, and the user later opened the useful component
+programs manually. Prefer querying already-open programs and exporting in small
+chunks with pauses between runs.
 
 ## Re-export
 

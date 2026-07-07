@@ -1,0 +1,248 @@
+﻿[
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "AfxWinTerm",
+        "address":  "100058bc",
+        "info":  "Function: AfxWinTerm at 100058bc\nSignature: void __stdcall AfxWinTerm(void)\nEntry: 100058bc\nBody: 100058bc - 100058c1"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "AfxWinInit",
+        "address":  "100058c2",
+        "info":  "Function: AfxWinInit at 100058c2\nSignature: int __stdcall AfxWinInit(HINSTANCE__ * param_1, HINSTANCE__ * param_2, char * param_3, int param_4)\nEntry: 100058c2\nBody: 100058c2 - 100058c7"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "AfxGetThreadState",
+        "address":  "100058c8",
+        "info":  "Function: AfxGetThreadState at 100058c8\nSignature: _AFX_THREAD_STATE * __stdcall AfxGetThreadState(void)\nEntry: 100058c8\nBody: 100058c8 - 100058cd"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "AfxCoreInitModule",
+        "address":  "100058ce",
+        "info":  "Function: AfxCoreInitModule at 100058ce\nSignature: void __stdcall AfxCoreInitModule(void)\nEntry: 100058ce\nBody: 100058ce - 100058d3"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@100058e0",
+        "address":  "100058e0",
+        "info":  "Function: Unwind@100058e0 at 100058e0\nSignature: undefined __stdcall Unwind@100058e0(void)\nEntry: 100058e0\nBody: 100058e0 - 100058e7"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005900",
+        "address":  "10005900",
+        "info":  "Function: Unwind@10005900 at 10005900\nSignature: undefined __stdcall Unwind@10005900(void)\nEntry: 10005900\nBody: 10005900 - 10005907"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005920",
+        "address":  "10005920",
+        "info":  "Function: Unwind@10005920 at 10005920\nSignature: undefined __stdcall Unwind@10005920(void)\nEntry: 10005920\nBody: 10005920 - 10005927"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005928",
+        "address":  "10005928",
+        "info":  "Function: Unwind@10005928 at 10005928\nSignature: undefined __stdcall Unwind@10005928(void)\nEntry: 10005928\nBody: 10005928 - 10005935"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005940",
+        "address":  "10005940",
+        "info":  "Function: Unwind@10005940 at 10005940\nSignature: undefined __stdcall Unwind@10005940(void)\nEntry: 10005940\nBody: 10005940 - 10005947"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005960",
+        "address":  "10005960",
+        "info":  "Function: Unwind@10005960 at 10005960\nSignature: undefined __stdcall Unwind@10005960(void)\nEntry: 10005960\nBody: 10005960 - 1000596a"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005980",
+        "address":  "10005980",
+        "info":  "Function: Unwind@10005980 at 10005980\nSignature: undefined __stdcall Unwind@10005980(void)\nEntry: 10005980\nBody: 10005980 - 1000598a"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@100059a0",
+        "address":  "100059a0",
+        "info":  "Function: Unwind@100059a0 at 100059a0\nSignature: undefined __stdcall Unwind@100059a0(void)\nEntry: 100059a0\nBody: 100059a0 - 100059aa"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@100059c0",
+        "address":  "100059c0",
+        "info":  "Function: Unwind@100059c0 at 100059c0\nSignature: undefined __stdcall Unwind@100059c0(void)\nEntry: 100059c0\nBody: 100059c0 - 100059c7"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@100059c8",
+        "address":  "100059c8",
+        "info":  "Function: Unwind@100059c8 at 100059c8\nSignature: undefined __stdcall Unwind@100059c8(void)\nEntry: 100059c8\nBody: 100059c8 - 100059cf"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@100059d0",
+        "address":  "100059d0",
+        "info":  "Function: Unwind@100059d0 at 100059d0\nSignature: undefined __stdcall Unwind@100059d0(void)\nEntry: 100059d0\nBody: 100059d0 - 100059d7"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@100059d8",
+        "address":  "100059d8",
+        "info":  "Function: Unwind@100059d8 at 100059d8\nSignature: undefined __stdcall Unwind@100059d8(void)\nEntry: 100059d8\nBody: 100059d8 - 100059df"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@100059e0",
+        "address":  "100059e0",
+        "info":  "Function: Unwind@100059e0 at 100059e0\nSignature: undefined __stdcall Unwind@100059e0(void)\nEntry: 100059e0\nBody: 100059e0 - 100059e7"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@100059e8",
+        "address":  "100059e8",
+        "info":  "Function: Unwind@100059e8 at 100059e8\nSignature: undefined __stdcall Unwind@100059e8(void)\nEntry: 100059e8\nBody: 100059e8 - 100059ef"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005a00",
+        "address":  "10005a00",
+        "info":  "Function: Unwind@10005a00 at 10005a00\nSignature: undefined __stdcall Unwind@10005a00(void)\nEntry: 10005a00\nBody: 10005a00 - 10005a07"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005a08",
+        "address":  "10005a08",
+        "info":  "Function: Unwind@10005a08 at 10005a08\nSignature: undefined __stdcall Unwind@10005a08(void)\nEntry: 10005a08\nBody: 10005a08 - 10005a0f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005a10",
+        "address":  "10005a10",
+        "info":  "Function: Unwind@10005a10 at 10005a10\nSignature: undefined __stdcall Unwind@10005a10(void)\nEntry: 10005a10\nBody: 10005a10 - 10005a17"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005a18",
+        "address":  "10005a18",
+        "info":  "Function: Unwind@10005a18 at 10005a18\nSignature: undefined __stdcall Unwind@10005a18(void)\nEntry: 10005a18\nBody: 10005a18 - 10005a1f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005a30",
+        "address":  "10005a30",
+        "info":  "Function: Unwind@10005a30 at 10005a30\nSignature: undefined __stdcall Unwind@10005a30(void)\nEntry: 10005a30\nBody: 10005a30 - 10005a3a"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005a50",
+        "address":  "10005a50",
+        "info":  "Function: Unwind@10005a50 at 10005a50\nSignature: undefined __stdcall Unwind@10005a50(void)\nEntry: 10005a50\nBody: 10005a50 - 10005a57"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005a70",
+        "address":  "10005a70",
+        "info":  "Function: Unwind@10005a70 at 10005a70\nSignature: undefined __stdcall Unwind@10005a70(void)\nEntry: 10005a70\nBody: 10005a70 - 10005a77"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005a78",
+        "address":  "10005a78",
+        "info":  "Function: Unwind@10005a78 at 10005a78\nSignature: undefined __stdcall Unwind@10005a78(void)\nEntry: 10005a78\nBody: 10005a78 - 10005a7f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005a90",
+        "address":  "10005a90",
+        "info":  "Function: Unwind@10005a90 at 10005a90\nSignature: undefined __stdcall Unwind@10005a90(void)\nEntry: 10005a90\nBody: 10005a90 - 10005a97"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005a98",
+        "address":  "10005a98",
+        "info":  "Function: Unwind@10005a98 at 10005a98\nSignature: undefined __stdcall Unwind@10005a98(void)\nEntry: 10005a98\nBody: 10005a98 - 10005a9f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005aa0",
+        "address":  "10005aa0",
+        "info":  "Function: Unwind@10005aa0 at 10005aa0\nSignature: undefined __stdcall Unwind@10005aa0(void)\nEntry: 10005aa0\nBody: 10005aa0 - 10005aa7"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005aa8",
+        "address":  "10005aa8",
+        "info":  "Function: Unwind@10005aa8 at 10005aa8\nSignature: undefined __stdcall Unwind@10005aa8(void)\nEntry: 10005aa8\nBody: 10005aa8 - 10005ab2"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005ab3",
+        "address":  "10005ab3",
+        "info":  "Function: Unwind@10005ab3 at 10005ab3\nSignature: undefined __stdcall Unwind@10005ab3(void)\nEntry: 10005ab3\nBody: 10005ab3 - 10005aba"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005ae0",
+        "address":  "10005ae0",
+        "info":  "Function: Unwind@10005ae0 at 10005ae0\nSignature: undefined __stdcall Unwind@10005ae0(void)\nEntry: 10005ae0\nBody: 10005ae0 - 10005ae9"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005b00",
+        "address":  "10005b00",
+        "info":  "Function: Unwind@10005b00 at 10005b00\nSignature: undefined __stdcall Unwind@10005b00(void)\nEntry: 10005b00\nBody: 10005b00 - 10005b07"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005b20",
+        "address":  "10005b20",
+        "info":  "Function: Unwind@10005b20 at 10005b20\nSignature: undefined __stdcall Unwind@10005b20(void)\nEntry: 10005b20\nBody: 10005b20 - 10005b29"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005b40",
+        "address":  "10005b40",
+        "info":  "Function: Unwind@10005b40 at 10005b40\nSignature: undefined __stdcall Unwind@10005b40(void)\nEntry: 10005b40\nBody: 10005b40 - 10005b47"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005b48",
+        "address":  "10005b48",
+        "info":  "Function: Unwind@10005b48 at 10005b48\nSignature: undefined __stdcall Unwind@10005b48(void)\nEntry: 10005b48\nBody: 10005b48 - 10005b51"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005b60",
+        "address":  "10005b60",
+        "info":  "Function: Unwind@10005b60 at 10005b60\nSignature: undefined __stdcall Unwind@10005b60(void)\nEntry: 10005b60\nBody: 10005b60 - 10005b67"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005b80",
+        "address":  "10005b80",
+        "info":  "Function: Unwind@10005b80 at 10005b80\nSignature: undefined __stdcall Unwind@10005b80(void)\nEntry: 10005b80\nBody: 10005b80 - 10005b89"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005ba0",
+        "address":  "10005ba0",
+        "info":  "Function: Unwind@10005ba0 at 10005ba0\nSignature: undefined __stdcall Unwind@10005ba0(void)\nEntry: 10005ba0\nBody: 10005ba0 - 10005ba7"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005bc0",
+        "address":  "10005bc0",
+        "info":  "Function: Unwind@10005bc0 at 10005bc0\nSignature: undefined __stdcall Unwind@10005bc0(void)\nEntry: 10005bc0\nBody: 10005bc0 - 10005bc7"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/Recorder.dll",
+        "function":  "Unwind@10005bd4",
+        "address":  "10005bd4",
+        "info":  "Function: Unwind@10005bd4 at 10005bd4\nSignature: undefined __stdcall Unwind@10005bd4(void)\nEntry: 10005bd4\nBody: 10005bd4 - 10005bdb"
+    }
+]
