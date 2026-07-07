@@ -115,6 +115,7 @@ function runtimeIdFor(component, asset = null) {
 
 function initialAssetVisible(component, asset, isPrimary, hasUnknownGeometry) {
   if (asset.initiallyVisible === false) return false;
+  if (component.type === "Sprite_Holder" && asset.kind === "sprite_holder_png" && Number(asset.width || 0) > 640) return false;
   if (!component.visible) return false;
   if (component.type === "Transparent_Video_Holder" && asset.geometryConfidence === "serialized_entry") {
     const runtimeId = runtimeIdFor(component, asset);
@@ -189,6 +190,9 @@ function renderStage(scene) {
       img.dataset.runtimeId = String(runtimeIdFor(component, asset));
       img.dataset.runtimeKey = `Page:${component.type}:${asset.id ?? ""}`;
       img.dataset.runtimeLookupKey = `Page:${component.type}:${runtimeIdFor(component, asset)}`;
+      if (component.type === "Sprite_Holder" && asset.kind === "sprite_holder_png" && Number(asset.width || 0) > 640) {
+        img.dataset.suppressVisual = "1";
+      }
       img.style.left = `${rect.x}px`;
       img.style.top = `${rect.y}px`;
       img.style.width = `${asset.width || rect.width}px`;

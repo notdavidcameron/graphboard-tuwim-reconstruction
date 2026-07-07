@@ -311,7 +311,7 @@ class GraphBoardRuntime {
       this.log(`${namespace}.${type}.${visible ? "show" : "hide"}(${id}) missing layer`);
       return;
     }
-    layer.classList.toggle("runtime-hidden", !visible);
+    layer.classList.toggle("runtime-hidden", !visible || layer.dataset.suppressVisual === "1");
     this.log(`${namespace}.${type}.${visible ? "show" : "hide"}(${id})`);
   }
 
@@ -372,7 +372,7 @@ class GraphBoardRuntime {
     layer.style.top = `${Number(y) || 0}px`;
     layer.style.transition = "left 180ms linear, top 180ms linear";
     if (Number.isFinite(Number(z))) layer.style.zIndex = String((namespace === "Group" ? 600000 : 100000) + Number(z));
-    layer.classList.remove("runtime-hidden");
+    if (layer.dataset.suppressVisual !== "1") layer.classList.remove("runtime-hidden");
     this.log(`${namespace}.${type}.move(${id},${x},${y}${Number.isFinite(Number(z)) ? `,${z}` : ""})`);
 
     const prefix = namespace === "Group" ? "Group." : "";
@@ -398,7 +398,7 @@ class GraphBoardRuntime {
       layer.dataset.phase = String(phase);
       const asset = this.findAsset(type, id, namespace);
       const phaseAsset = asset?.phaseAssets?.find((item) => Number(item.phase) === Number(phase));
-      if (phaseAsset?.url && layer.tagName === "IMG") {
+      if (phaseAsset?.url && layer.tagName === "IMG" && layer.dataset.suppressVisual !== "1") {
         layer.src = graphBoardCacheBustUrl(phaseAsset.url);
       }
     }
