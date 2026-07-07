@@ -5,6 +5,17 @@ const state = {
   selected: 0,
 };
 
+const CACHE_BUST = new URL(document.currentScript?.src || window.location.href).searchParams.get("v") || String(Date.now());
+
+function cacheBustUrl(url) {
+  if (!url) return url;
+  const parsed = new URL(url, window.location.href);
+  parsed.searchParams.set("v", CACHE_BUST);
+  return parsed.href;
+}
+
+window.GraphBoardCacheBustUrl = cacheBustUrl;
+
 const els = {
   summary: document.getElementById("summary"),
   select: document.getElementById("sceneSelect"),
@@ -45,7 +56,7 @@ function esc(value) {
 }
 
 async function getJson(url) {
-  const response = await fetch(url);
+  const response = await fetch(cacheBustUrl(url), { cache: "no-store" });
   if (!response.ok) {
     throw new Error(`${url}: ${response.status}`);
   }
@@ -146,7 +157,7 @@ function renderStage(scene) {
   if (els.background.checked && scene.background?.bmpUrl) {
     const img = document.createElement("img");
     img.className = "stage-bg";
-    img.src = scene.background.bmpUrl;
+    img.src = cacheBustUrl(scene.background.bmpUrl);
     img.alt = "";
     els.stage.appendChild(img);
   } else {
@@ -167,10 +178,10 @@ function renderStage(scene) {
       const initialSrc = component.type === "Transparent_Video_Holder" && asset.stillUrl ? asset.stillUrl : asset.url;
       const img = document.createElement("img");
       img.className = "layer";
-      img.src = initialSrc;
+      img.src = cacheBustUrl(initialSrc);
       img.alt = `${component.id}:${asset.id ?? ""}`;
-      img.dataset.originalSrc = asset.url;
-      if (asset.stillUrl) img.dataset.stillSrc = asset.stillUrl;
+      img.dataset.originalSrc = cacheBustUrl(asset.url);
+      if (asset.stillUrl) img.dataset.stillSrc = cacheBustUrl(asset.stillUrl);
       img.dataset.runtimeLayer = "1";
       img.dataset.runtimeNamespace = "Page";
       img.dataset.componentType = component.type;
@@ -282,7 +293,7 @@ function renderAudio(scene) {
     <div class="audio-row">
       <span class="audio-label">${index + 1}. ${esc(component.type)} #${esc(runtimeIdFor(component, asset))}</span>
       <span class="audio-kind">${esc(asset.kind)}${asset.durationSeconds ? ` ${esc(asset.durationSeconds)}s` : ""}</span>
-      <audio controls preload="none" src="${esc(asset.url)}" data-runtime-namespace="Page" data-component-type="${esc(component.type)}" data-asset-id="${esc(asset.id)}" data-runtime-id="${esc(runtimeIdFor(component, asset))}" data-runtime-key="Page:${esc(component.type)}:${esc(asset.id)}" data-duration-seconds="${esc(asset.durationSeconds || "")}"></audio>
+      <audio controls preload="none" src="${esc(cacheBustUrl(asset.url))}" data-runtime-namespace="Page" data-component-type="${esc(component.type)}" data-asset-id="${esc(asset.id)}" data-runtime-id="${esc(runtimeIdFor(component, asset))}" data-runtime-key="Page:${esc(component.type)}:${esc(asset.id)}" data-duration-seconds="${esc(asset.durationSeconds || "")}"></audio>
     </div>
   `).join("");
   els.audioList.innerHTML = `

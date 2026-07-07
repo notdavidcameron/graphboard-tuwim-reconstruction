@@ -290,11 +290,9 @@ def extract_board_video_streams(
             delay_cs = 10
             if 0 < frames_per_second <= 60:
                 delay_cs = max(1, round(100 / frames_per_second))
-            transparent_index = max(
-                range(256),
-                key=lambda value: video_frames[0].count(value),
-            )
+            transparent_index = header_transparent_index
             palette = data[marker + 0xEC : marker + 0xEC + 1024]
+            video_frames = remap_chroma_key_pixels(video_frames, palette, transparent_index)
             asset_name = f"{component_name}_{stream_index:03d}_{marker:08x}_board_video_{video_width}x{video_height}.gif"
             asset_path = embedded_dir.parent / "animations" / asset_name
             still_path = asset_path.with_name(f"{asset_path.stem}_still.png")
@@ -481,6 +479,28 @@ def gif_palette_from_bmp_palette(palette: bytes) -> bytes:
         blue, green, red, _reserved = palette[offset : offset + 4]
         rgb.extend((red, green, blue))
     return bytes(rgb)
+
+
+def bright_green_palette_indices(palette: bytes) -> set[int]:
+    indices = set()
+    palette = palette[:1024]
+    for index, offset in enumerate(range(0, len(palette) - 3, 4)):
+        blue, green, red, _reserved = palette[offset : offset + 4]
+        if red <= 24 and green >= 224 and 24 <= blue <= 96:
+            indices.add(index)
+    return indices
+
+
+def remap_chroma_key_pixels(frames: list[bytes], palette: bytes, transparent_index: int) -> list[bytes]:
+    chroma_indices = bright_green_palette_indices(palette)
+    chroma_indices.discard(transparent_index)
+    if not chroma_indices:
+        return frames
+    remapped = []
+    translation = bytes(transparent_index if value in chroma_indices else value for value in range(256))
+    for frame in frames:
+        remapped.append(frame.translate(translation))
+    return remapped
 
 
 def png_chunk(kind: bytes, payload: bytes) -> bytes:

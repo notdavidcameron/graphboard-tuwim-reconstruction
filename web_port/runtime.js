@@ -1,3 +1,7 @@
+function graphBoardCacheBustUrl(url) {
+  return window.GraphBoardCacheBustUrl ? window.GraphBoardCacheBustUrl(url) : url;
+}
+
 class GraphBoardRuntime {
   constructor(stage, logTarget) {
     this.stage = stage;
@@ -1078,11 +1082,11 @@ class GraphBoardRuntime {
         if (!asset.url) continue;
         const img = document.createElement("img");
         img.className = "layer group-layer runtime-hidden";
-        img.src = component.type === "Transparent_Video_Holder" && asset.stillUrl ? asset.stillUrl : asset.url;
+        img.src = graphBoardCacheBustUrl(component.type === "Transparent_Video_Holder" && asset.stillUrl ? asset.stillUrl : asset.url);
         img.alt = `${component.id}:${asset.id ?? ""}`;
         img.dataset.runtimeLayer = "1";
-        img.dataset.originalSrc = asset.url;
-        if (asset.stillUrl) img.dataset.stillSrc = asset.stillUrl;
+        img.dataset.originalSrc = graphBoardCacheBustUrl(asset.url);
+        if (asset.stillUrl) img.dataset.stillSrc = graphBoardCacheBustUrl(asset.stillUrl);
         img.dataset.componentType = component.type;
         img.dataset.runtimeNamespace = "Group";
         img.dataset.assetId = String(asset.id ?? "");
@@ -1099,7 +1103,7 @@ class GraphBoardRuntime {
       }
       for (const asset of component.audio || []) {
         if (!asset.url) continue;
-        const audio = new Audio(asset.url);
+        const audio = new Audio(graphBoardCacheBustUrl(asset.url));
         audio.preload = "none";
         audio.dataset.componentType = component.type;
         audio.dataset.runtimeNamespace = "Group";
@@ -1178,7 +1182,7 @@ class GraphBoardRuntime {
     layer.style.height = `${Math.max(80, Number(args[4] ?? 480) || 480)}px`;
     layer.style.zIndex = "500000";
     if (asset?.url) {
-      layer.style.backgroundImage = `url("${asset.url}")`;
+      layer.style.backgroundImage = `url("${graphBoardCacheBustUrl(asset.url)}")`;
       layer.style.backgroundSize = "cover";
       layer.style.backgroundPosition = "center";
       let image = layer.querySelector?.("img.puzzle-image");
@@ -1188,7 +1192,7 @@ class GraphBoardRuntime {
         image.alt = "";
         layer.appendChild(image);
       }
-      image.src = asset.url;
+      image.src = graphBoardCacheBustUrl(asset.url);
     }
     layer.classList.remove("runtime-hidden");
     this.bindRuntimeEvents(layer, "Puzzle", 0, "Page");
