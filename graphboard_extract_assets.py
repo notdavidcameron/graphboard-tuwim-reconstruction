@@ -435,6 +435,15 @@ def write_bmp_from_dib(path: Path, dib: bytes) -> None:
     path.write_bytes(bmp_header + dib)
 
 
+def flip_indexed_rows(pixels: bytes, width: int, height: int) -> bytes:
+    if width <= 0 or height <= 0 or len(pixels) < width * height:
+        return pixels
+    return b"".join(
+        pixels[row * width : (row + 1) * width]
+        for row in range(height - 1, -1, -1)
+    )
+
+
 def write_indexed_bmp(path: Path, pixels: bytes, width: int, height: int, palette: bytes) -> None:
     if width <= 0 or height <= 0:
         return
@@ -501,6 +510,23 @@ def remap_chroma_key_pixels(frames: list[bytes], palette: bytes, transparent_ind
     for frame in frames:
         remapped.append(frame.translate(translation))
     return remapped
+
+
+def dominant_border_index(pixels: bytes, width: int, height: int, palette: bytes | None = None) -> int:
+    if width <= 0 or height <= 0 or len(pixels) < width * height:
+        return 0
+    counts: dict[int, int] = {}
+    for x in range(width):
+        counts[pixels[x]] = counts.get(pixels[x], 0) + 1
+        counts[pixels[(height - 1) * width + x]] = counts.get(pixels[(height - 1) * width + x], 0) + 1
+    for y in range(1, height - 1):
+        counts[pixels[y * width]] = counts.get(pixels[y * width], 0) + 1
+        counts[pixels[y * width + width - 1]] = counts.get(pixels[y * width + width - 1], 0) + 1
+    if palette is not None:
+        chroma = bright_green_palette_indices(palette).intersection(counts)
+        if chroma:
+            return max(chroma, key=lambda value: counts[value])
+    return max(counts, key=counts.get) if counts else 0
 
 
 def png_chunk(kind: bytes, payload: bytes) -> bytes:
@@ -658,7 +684,7 @@ def extract_multibitmap_frames(
 
         if width > 0 and height > 0 and pixel_size == width * height:
             bmp_path = frame_dir / f"{frame_base}.bmp"
-            pixels = data[pixel_offset : pixel_offset + pixel_size]
+            pixels = flip_indexed_rows(data[pixel_offset : pixel_offset + pixel_size], width, height)
             write_indexed_bmp(bmp_path, pixels, width, height, palette)
             output = {
                 "kind": "multibitmap_bmp",
@@ -723,6 +749,92 @@ def extract_multibitmap_frames(
                 "delay_centiseconds": 10,
             }
         )
+
+    return {"version": version, "declared_count": declared_count, "parsed_count": len(frames), "frames": frames}, outputs
+
+
+def extract_sprite_holder_images(
+    data: bytes,
+    private_start: int,
+    private_end: int,
+    component_name: str,
+    page_dir: Path,
+    palette: bytes,
+) -> tuple[dict, list[dict]]:
+    if private_start + 12 > private_end:
+        return {}, []
+    version = read_u32(data, private_start)[0]
+    declared_count = read_u32(data, private_start + 4)[0]
+    offset = private_start + 8
+    frames = []
+    outputs = []
+    sprite_dir = page_dir / "sprite_holder"
+
+    for index in range(min(declared_count, 200)):
+        if offset + 0xE4 > private_end:
+            break
+        record_size = read_u32(data, offset + 4)[0]
+        record_end = offset + 4 + record_size
+        if record_size <= 0 or record_end > private_end:
+            break
+
+        name = data[offset + 0x0C : offset + 0x2C].split(b"\x00", 1)[0].decode("cp1250", "replace")
+        x = read_i32(data, offset + 0x14)[0]
+        y = read_i32(data, offset + 0x94)[0]
+        width = read_u32(data, offset + 0x88)[0]
+        height = read_u32(data, offset + 0x8C)[0]
+        phase_count = read_u32(data, offset + 0xC0)[0]
+        if phase_count <= 0 or phase_count > 64:
+            phase_count = 1
+        pixel_size = width * height * phase_count
+        pixel_offset = record_end - pixel_size
+
+        frame = {
+            "index": index,
+            "name": name,
+            "record_offset": offset,
+            "record_size": record_size,
+            "width": width,
+            "height": height,
+            "phase_count": phase_count,
+        }
+
+        if 0 < width <= 2000 and 0 < height <= 2000 and pixel_offset >= offset and pixel_offset + pixel_size <= record_end:
+            phase_outputs = []
+            base = f"{component_name}_{index:03d}_{safe_name(name)}"
+            for phase in range(phase_count):
+                start = pixel_offset + phase * width * height
+                pixels = flip_indexed_rows(data[start : start + width * height], width, height)
+                transparent_index = dominant_border_index(pixels, width, height, palette)
+                png_path = sprite_dir / f"{base}_phase_{phase:02d}.png"
+                write_indexed_png(png_path, pixels, width, height, palette, transparent_index=transparent_index)
+                phase_outputs.append(
+                    {
+                        "phase": phase,
+                        "path": str(png_path),
+                        "size": png_path.stat().st_size,
+                    }
+                )
+            output = {
+                "kind": "sprite_holder_png",
+                "path": phase_outputs[0]["path"],
+                "offset": pixel_offset,
+                "size": Path(phase_outputs[0]["path"]).stat().st_size,
+                "pixel_size": pixel_size,
+                "width": width,
+                "height": height,
+                "name": name,
+                "id": index,
+                "phase_count": phase_count,
+                "phase_outputs": phase_outputs,
+                "rect": {"x": 0 if width > 640 else x, "y": 0 if width > 640 else y, "width": width, "height": height},
+                "geometry_confidence": "serialized_sprite",
+            }
+            frame["phase_outputs"] = phase_outputs
+            outputs.append(output)
+
+        frames.append(frame)
+        offset = record_end
 
     return {"version": version, "declared_count": declared_count, "parsed_count": len(frames), "frames": frames}, outputs
 
@@ -896,6 +1008,21 @@ def extract_bdf(path: Path, out_dir: Path, include_raw: bool = False) -> dict:
             if multibitmap:
                 component_meta["multibitmap"] = multibitmap
                 for output in multibitmap_outputs:
+                    component_meta["embedded"].append(output)
+                    metadata["outputs"].append(output)
+
+        if wrapper["display_name"] == "Sprite_Holder":
+            sprite_holder, sprite_outputs = extract_sprite_holder_images(
+                data,
+                private_start,
+                private_end,
+                component_name,
+                page_dir,
+                data[header["palette_offset"] : header["palette_offset"] + header["palette_size"]],
+            )
+            if sprite_holder:
+                component_meta["sprite_holder"] = sprite_holder
+                for output in sprite_outputs:
                     component_meta["embedded"].append(output)
                     metadata["outputs"].append(output)
 

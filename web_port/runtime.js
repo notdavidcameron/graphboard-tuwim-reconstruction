@@ -86,7 +86,7 @@ class GraphBoardRuntime {
     const type = this.normalizeType(component.type);
     const id = Number(asset.id ?? 0);
     const ids = new Set([id]);
-    if ((type === "Transparent_Video_Holder" || type === "Sprite_Holder") && id > 0 && id % 2 === 0) {
+    if (type === "Transparent_Video_Holder" && id > 0 && id % 2 === 0) {
       ids.add(id / 2);
     }
     for (const itemId of ids) {
@@ -379,7 +379,7 @@ class GraphBoardRuntime {
     const cleanType = this.normalizeType(type);
     clearTimeout(layer._inPlaceTimer);
     const inPlaceHandler = `${prefix}${cleanType}.InPlace`;
-    if (namespace === "Group" && this.extractFunctionBody(this.scene?.script?.rawText || "", inPlaceHandler)) {
+    if (this.extractFunctionBody(this.scene?.script?.rawText || "", inPlaceHandler)) {
       const trusted = this.userInputDepth > 0;
       layer._inPlaceTimer = setTimeout(() => {
         if (trusted) this.trustedCallbackDepth += 1;
@@ -394,7 +394,14 @@ class GraphBoardRuntime {
 
   changePhase(type, id, phase, namespace = "Page") {
     const layer = this.findLayer(type, id, namespace, true);
-    if (layer) layer.dataset.phase = String(phase);
+    if (layer) {
+      layer.dataset.phase = String(phase);
+      const asset = this.findAsset(type, id, namespace);
+      const phaseAsset = asset?.phaseAssets?.find((item) => Number(item.phase) === Number(phase));
+      if (phaseAsset?.url && layer.tagName === "IMG") {
+        layer.src = graphBoardCacheBustUrl(phaseAsset.url);
+      }
+    }
     this.log(`${namespace}.${type}.ChangePhase(${id},${phase})`);
   }
 

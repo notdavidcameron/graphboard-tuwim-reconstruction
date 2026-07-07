@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import Any
 
 
-IMAGE_KINDS = {"bmp", "dib", "board_video_gif", "multibitmap_bmp", "multibitmap_gif", "bitmap_holder_bmp"}
+IMAGE_KINDS = {"bmp", "dib", "board_video_gif", "multibitmap_bmp", "multibitmap_gif", "bitmap_holder_bmp", "sprite_holder_png"}
 AUDIO_KINDS = {"WAVE", "riff_wave", "board_video_pcm_wave"}
 
 
@@ -386,8 +386,18 @@ def image_asset(item: dict[str, Any], web_root: Path, workspace_root: Path) -> d
         "frameCount": item.get("frame_count"),
         "offset": item.get("offset"),
         "name": item.get("name"),
-        "id": asset_id_from_path(path or ""),
+        "id": item.get("id") if item.get("id") is not None else asset_id_from_path(path or ""),
     }
+    if item.get("phase_outputs"):
+        asset["phaseAssets"] = [
+            {
+                "phase": phase.get("phase"),
+                "path": phase.get("path"),
+                "url": rel_url(phase.get("path"), web_root, workspace_root),
+            }
+            for phase in item.get("phase_outputs", [])
+        ]
+        asset["phaseCount"] = item.get("phase_count") or len(asset["phaseAssets"])
     if item.get("initially_visible") is not None:
         asset["initiallyVisible"] = bool(item.get("initially_visible"))
     if item.get("rect"):

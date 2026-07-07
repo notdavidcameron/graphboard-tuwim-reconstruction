@@ -107,7 +107,7 @@ function setStageSize(scene) {
 function runtimeIdFor(component, asset = null) {
   if (!asset) return component.index ?? 0;
   const id = Number(asset.id ?? 0);
-  if (component.type === "Transparent_Video_Holder" || component.type === "Sprite_Holder") {
+  if (component.type === "Transparent_Video_Holder") {
     return id > 0 && id % 2 === 0 ? id / 2 : id;
   }
   return id;
