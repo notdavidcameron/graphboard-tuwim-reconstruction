@@ -249,6 +249,7 @@ Targeted check in `TransparentVideoHolder.dll`:
 - Holder serialize/load routine: `TransparentVideoHolder.dll:10007af0`, manually defined in Ghidra as `TVH_SerializeOrDeserialize`.
 - Board-video stream setup/write helpers: `FUN_1000a620`, `FUN_1000a880`, `FUN_1000aab0`.
 - Audio rewrite helper: `FUN_1000ab90`.
+- Source-style C++ reconstruction: `ghidra_import/TransparentVideoHolder_reconstructed.cpp`.
 
 The component-private block stores one or more custom streams whose header starts with the ASCII string `Board Video File Ver:0`. The block begins with:
 
@@ -319,6 +320,8 @@ Known record tags:
 For audio records, `recordByteSize == audioByteRate + 0x4c` in the observed files. PCM bytes begin at `record + 0x48`, and the usable PCM length is `recordByteSize - 0x4c`. In `RZECZKA.BDF`, this produces ordinary 22050 Hz, mono, 16-bit signed PCM WAV files.
 
 Video records use a simple changed-rectangle RLE stream. The current decoder treats `record + 0x14..0x24` as `left, top, right, bottom, unchangedFlag`, and decodes payload bytes from `record + 0x48` through `record + recordByteSize - 4`.
+
+Ghidra confirms the matching encoder/decoder pair in `TransparentVideoHolder.dll`: `FUN_1000b370` writes the RLE payload, `FUN_1000b8a0` draws an unclipped payload into an 8-bpp bottom-up DIB, and `FUN_1000b670` handles clipped rectangles. The decoder skips pixels equal to the `transparentIndex` argument when that argument is at most `0xff`; callers pass `1000` to disable transparency.
 
 RLE payload commands:
 
