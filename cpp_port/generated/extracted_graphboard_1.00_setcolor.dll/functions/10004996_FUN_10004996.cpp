@@ -1,0 +1,40 @@
+/*
+  Direct C++ port generated from Ghidra MCP localhost.
+  Source program: /extracted/GraphBoard 1.00/SetColor.dll
+  Source function: FUN_10004996 @ 10004996
+*/
+#include "../../../include/ghidra_compat.hpp"
+
+// clang-format off
+
+// ============================================================================
+// Function: FUN_10004996 at 10004996
+// Signature: undefined __stdcall FUN_10004996(HWND__ * param_1, uint param_2, uint param_3, long param_4)
+// Entry: 10004996
+// Body: 10004996 - 100049da
+// ============================================================================
+/* WARNING: Function: _EH_prolog replaced with injection: EH_prolog */
+
+void FUN_10004996(HWND__ *param_1,uint param_2,uint param_3,long param_4)
+
+{
+  undefined4 local_18;
+  int local_14;
+  void *local_10;
+  undefined *puStack_c;
+  undefined4 local_8;
+  
+  local_8 = 0xffffffff;
+  puStack_c = &DAT_10005348;
+  local_10 = ExceptionList;
+  ExceptionList = &local_10;
+  AFX_MAINTAIN_STATE2::AFX_MAINTAIN_STATE2
+            ((AFX_MAINTAIN_STATE2 *)&local_18,(AFX_MODULE_STATE *)&DAT_10008330);
+  local_8 = 0;
+  AfxWndProc(param_1,param_2,param_3,param_4);
+  *(undefined4 *)(local_14 + 4) = local_18;
+  ExceptionList = local_10;
+  return;
+}
+
+// clang-format on

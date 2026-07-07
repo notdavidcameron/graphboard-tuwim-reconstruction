@@ -1,0 +1,302 @@
+﻿[
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "FUN_100049db",
+        "address":  "100049db",
+        "info":  "Function: FUN_100049db at 100049db\nSignature: undefined4 * __stdcall FUN_100049db(void)\nEntry: 100049db\nBody: 100049db - 100049e0"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "FUN_100049e1",
+        "address":  "100049e1",
+        "info":  "Function: FUN_100049e1 at 100049e1\nSignature: undefined4 __stdcall FUN_100049e1(HINSTANCE__ * param_1, int param_2)\nEntry: 100049e1\nBody: 100049e1 - 10004b07"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "FUN_10004b08",
+        "address":  "10004b08",
+        "info":  "Function: FUN_10004b08 at 10004b08\nSignature: undefined4 __stdcall FUN_10004b08(undefined4 param_1, int param_2)\nEntry: 10004b08\nBody: 10004b08 - 10004b58"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "FUN_10004b59",
+        "address":  "10004b59",
+        "info":  "Function: FUN_10004b59 at 10004b59\nSignature: undefined __fastcall FUN_10004b59(undefined4 * param_1)\nEntry: 10004b59\nBody: 10004b59 - 10004b61"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "FUN_10004b70",
+        "address":  "10004b70",
+        "info":  "Function: FUN_10004b70 at 10004b70\nSignature: undefined __cdecl FUN_10004b70(_onexit_t param_1)\nEntry: 10004b70\nBody: 10004b70 - 10004b9b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "FUN_10004b9c",
+        "address":  "10004b9c",
+        "info":  "Function: FUN_10004b9c at 10004b9c\nSignature: int __cdecl FUN_10004b9c(_onexit_t param_1)\nEntry: 10004b9c\nBody: 10004b9c - 10004bad"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "FUN_10004bc0",
+        "address":  "10004bc0",
+        "info":  "Function: FUN_10004bc0 at 10004bc0\nSignature: undefined __stdcall FUN_10004bc0(void)\nEntry: 10004bc0\nBody: 10004bc0 - 10004bee"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "FUN_10004bef",
+        "address":  "10004bef",
+        "info":  "Function: FUN_10004bef at 10004bef\nSignature: undefined __stdcall FUN_10004bef(undefined4 param_1, undefined4 param_2, int param_3, undefined * param_4)\nEntry: 10004bef\nBody: 10004bef - 10004c56"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "FUN_10004c57",
+        "address":  "10004c57",
+        "info":  "Function: FUN_10004c57 at 10004c57\nSignature: undefined __stdcall FUN_10004c57(void)\nEntry: 10004c57\nBody: 10004c57 - 10004c6e"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "FUN_10004c6f",
+        "address":  "10004c6f",
+        "info":  "Function: FUN_10004c6f at 10004c6f\nSignature: undefined __stdcall FUN_10004c6f(undefined4 param_1, undefined4 param_2, int param_3, undefined * param_4)\nEntry: 10004c6f\nBody: 10004c6f - 10004ccc"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "FUN_10004ccd",
+        "address":  "10004ccd",
+        "info":  "Function: FUN_10004ccd at 10004ccd\nSignature: undefined4 __cdecl FUN_10004ccd(undefined4 * param_1)\nEntry: 10004ccd\nBody: 10004ccd - 10004ce2"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "FUN_10004ce3",
+        "address":  "10004ce3",
+        "info":  "Function: FUN_10004ce3 at 10004ce3\nSignature: undefined __stdcall FUN_10004ce3(undefined4 param_1, undefined4 param_2, int param_3, undefined * param_4)\nEntry: 10004ce3\nBody: 10004ce3 - 10004d4c"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "FUN_10004d4d",
+        "address":  "10004d4d",
+        "info":  "Function: FUN_10004d4d at 10004d4d\nSignature: undefined __stdcall FUN_10004d4d(void)\nEntry: 10004d4d\nBody: 10004d4d - 10004d64"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "FUN_10004d65",
+        "address":  "10004d65",
+        "info":  "Function: FUN_10004d65 at 10004d65\nSignature: undefined4 __stdcall FUN_10004d65(undefined4 param_1, int param_2)\nEntry: 10004d65\nBody: 10004d65 - 10004e0f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "entry",
+        "address":  "10004e10",
+        "info":  "Function: entry at 10004e10\nSignature: int __stdcall entry(HINSTANCE__ * param_1, int param_2, undefined4 param_3)\nEntry: 10004e10\nBody: 10004e10 - 10004eac"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "FUN_10004ead",
+        "address":  "10004ead",
+        "info":  "Function: FUN_10004ead at 10004ead\nSignature: type_info * __thiscall FUN_10004ead(void * this, byte param_1)\nEntry: 10004ead\nBody: 10004ead - 10004ec8"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "_EH_prolog",
+        "address":  "10004eca",
+        "info":  "Function: _EH_prolog at 10004eca\nSignature: undefined _EH_prolog(void)\nEntry: 10004eca\nBody: 10004eca - 10004ecf"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "__dllonexit",
+        "address":  "10004ed0",
+        "info":  "Function: __dllonexit at 10004ed0\nSignature: undefined __dllonexit(void)\nEntry: 10004ed0\nBody: 10004ed0 - 10004ed5"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "terminate",
+        "address":  "10004edc",
+        "info":  "Function: terminate at 10004edc\nSignature: noreturn void __cdecl terminate(void)\nEntry: 10004edc\nBody: 10004edc - 10004ee1"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "initterm",
+        "address":  "10004ee2",
+        "info":  "Function: initterm at 10004ee2\nSignature: undefined __cdecl initterm(void)\nEntry: 10004ee2\nBody: 10004ee2 - 10004ee7"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "~type_info",
+        "address":  "10004ee8",
+        "info":  "Function: ~type_info at 10004ee8\nSignature: void __thiscall ~type_info(type_info * this)\nEntry: 10004ee8\nBody: 10004ee8 - 10004eed"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "AFX_MODULE_STATE",
+        "address":  "10004eee",
+        "info":  "Function: AFX_MODULE_STATE at 10004eee\nSignature: undefined __thiscall AFX_MODULE_STATE(AFX_MODULE_STATE * this, int param_1, _func_long_HWND___ptr_uint_uint_long * param_2, ulong param_3)\nEntry: 10004eee\nBody: 10004eee - 10004ef3"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "operator_delete",
+        "address":  "10004ef4",
+        "info":  "Function: operator_delete at 10004ef4\nSignature: void __stdcall operator_delete(void * param_1)\nEntry: 10004ef4\nBody: 10004ef4 - 10004ef9"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "~AFX_MODULE_STATE",
+        "address":  "10004efa",
+        "info":  "Function: ~AFX_MODULE_STATE at 10004efa\nSignature: void __thiscall ~AFX_MODULE_STATE(AFX_MODULE_STATE * this)\nEntry: 10004efa\nBody: 10004efa - 10004eff"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "AfxWndProc",
+        "address":  "10004f00",
+        "info":  "Function: AfxWndProc at 10004f00\nSignature: long __stdcall AfxWndProc(HWND__ * param_1, uint param_2, uint param_3, long param_4)\nEntry: 10004f00\nBody: 10004f00 - 10004f05"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "AfxTermThread",
+        "address":  "10004f06",
+        "info":  "Function: AfxTermThread at 10004f06\nSignature: void __stdcall AfxTermThread(HINSTANCE__ * param_1)\nEntry: 10004f06\nBody: 10004f06 - 10004f0b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "AfxTermExtensionModule",
+        "address":  "10004f0c",
+        "info":  "Function: AfxTermExtensionModule at 10004f0c\nSignature: void __stdcall AfxTermExtensionModule(AFX_EXTENSION_MODULE * param_1, int param_2)\nEntry: 10004f0c\nBody: 10004f0c - 10004f11"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "AfxUnlockTempMaps",
+        "address":  "10004f12",
+        "info":  "Function: AfxUnlockTempMaps at 10004f12\nSignature: int __stdcall AfxUnlockTempMaps(int param_1)\nEntry: 10004f12\nBody: 10004f12 - 10004f17"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "AfxLockTempMaps",
+        "address":  "10004f18",
+        "info":  "Function: AfxLockTempMaps at 10004f18\nSignature: void __stdcall AfxLockTempMaps(void)\nEntry: 10004f18\nBody: 10004f18 - 10004f1d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "AfxSetModuleState",
+        "address":  "10004f1e",
+        "info":  "Function: AfxSetModuleState at 10004f1e\nSignature: AFX_MODULE_STATE * __stdcall AfxSetModuleState(AFX_MODULE_STATE * param_1)\nEntry: 10004f1e\nBody: 10004f1e - 10004f23"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "CDynLinkLibrary",
+        "address":  "10004f24",
+        "info":  "Function: CDynLinkLibrary at 10004f24\nSignature: undefined __thiscall CDynLinkLibrary(CDynLinkLibrary * this, AFX_EXTENSION_MODULE * param_1, int param_2)\nEntry: 10004f24\nBody: 10004f24 - 10004f29"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "AfxInitExtensionModule",
+        "address":  "10004f2a",
+        "info":  "Function: AfxInitExtensionModule at 10004f2a\nSignature: int __stdcall AfxInitExtensionModule(AFX_EXTENSION_MODULE * param_1, HINSTANCE__ * param_2)\nEntry: 10004f2a\nBody: 10004f2a - 10004f2f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "AfxWinTerm",
+        "address":  "10004f30",
+        "info":  "Function: AfxWinTerm at 10004f30\nSignature: void __stdcall AfxWinTerm(void)\nEntry: 10004f30\nBody: 10004f30 - 10004f35"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "AfxWinInit",
+        "address":  "10004f36",
+        "info":  "Function: AfxWinInit at 10004f36\nSignature: int __stdcall AfxWinInit(HINSTANCE__ * param_1, HINSTANCE__ * param_2, char * param_3, int param_4)\nEntry: 10004f36\nBody: 10004f36 - 10004f3b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "AfxGetThreadState",
+        "address":  "10004f3c",
+        "info":  "Function: AfxGetThreadState at 10004f3c\nSignature: _AFX_THREAD_STATE * __stdcall AfxGetThreadState(void)\nEntry: 10004f3c\nBody: 10004f3c - 10004f41"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "AfxCoreInitModule",
+        "address":  "10004f42",
+        "info":  "Function: AfxCoreInitModule at 10004f42\nSignature: void __stdcall AfxCoreInitModule(void)\nEntry: 10004f42\nBody: 10004f42 - 10004f47"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "Unwind@10004f50",
+        "address":  "10004f50",
+        "info":  "Function: Unwind@10004f50 at 10004f50\nSignature: undefined __stdcall Unwind@10004f50(void)\nEntry: 10004f50\nBody: 10004f50 - 10004f57"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "Unwind@10004f58",
+        "address":  "10004f58",
+        "info":  "Function: Unwind@10004f58 at 10004f58\nSignature: undefined __stdcall Unwind@10004f58(void)\nEntry: 10004f58\nBody: 10004f58 - 10004f62"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "Unwind@10004f63",
+        "address":  "10004f63",
+        "info":  "Function: Unwind@10004f63 at 10004f63\nSignature: undefined __stdcall Unwind@10004f63(void)\nEntry: 10004f63\nBody: 10004f63 - 10004f6d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "Unwind@10004f6e",
+        "address":  "10004f6e",
+        "info":  "Function: Unwind@10004f6e at 10004f6e\nSignature: undefined __stdcall Unwind@10004f6e(void)\nEntry: 10004f6e\nBody: 10004f6e - 10004f7b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "Unwind@10004f7c",
+        "address":  "10004f7c",
+        "info":  "Function: Unwind@10004f7c at 10004f7c\nSignature: undefined __stdcall Unwind@10004f7c(void)\nEntry: 10004f7c\nBody: 10004f7c - 10004f89"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "Unwind@10004f8a",
+        "address":  "10004f8a",
+        "info":  "Function: Unwind@10004f8a at 10004f8a\nSignature: undefined __stdcall Unwind@10004f8a(void)\nEntry: 10004f8a\nBody: 10004f8a - 10004f97"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "Unwind@10004f98",
+        "address":  "10004f98",
+        "info":  "Function: Unwind@10004f98 at 10004f98\nSignature: undefined __stdcall Unwind@10004f98(void)\nEntry: 10004f98\nBody: 10004f98 - 10004fa5"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "Unwind@10004fa6",
+        "address":  "10004fa6",
+        "info":  "Function: Unwind@10004fa6 at 10004fa6\nSignature: undefined __stdcall Unwind@10004fa6(void)\nEntry: 10004fa6\nBody: 10004fa6 - 10004fb3"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "Unwind@10004fb4",
+        "address":  "10004fb4",
+        "info":  "Function: Unwind@10004fb4 at 10004fb4\nSignature: undefined __stdcall Unwind@10004fb4(void)\nEntry: 10004fb4\nBody: 10004fb4 - 10004fc1"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "Unwind@10004fc2",
+        "address":  "10004fc2",
+        "info":  "Function: Unwind@10004fc2 at 10004fc2\nSignature: undefined __stdcall Unwind@10004fc2(void)\nEntry: 10004fc2\nBody: 10004fc2 - 10004fcf"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "Unwind@10004fd0",
+        "address":  "10004fd0",
+        "info":  "Function: Unwind@10004fd0 at 10004fd0\nSignature: undefined __stdcall Unwind@10004fd0(void)\nEntry: 10004fd0\nBody: 10004fd0 - 10004fdd"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "Unwind@10004ff0",
+        "address":  "10004ff0",
+        "info":  "Function: Unwind@10004ff0 at 10004ff0\nSignature: undefined __stdcall Unwind@10004ff0(void)\nEntry: 10004ff0\nBody: 10004ff0 - 10004ff7"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "Unwind@10004ff8",
+        "address":  "10004ff8",
+        "info":  "Function: Unwind@10004ff8 at 10004ff8\nSignature: undefined __stdcall Unwind@10004ff8(void)\nEntry: 10004ff8\nBody: 10004ff8 - 10005002"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "Unwind@10005003",
+        "address":  "10005003",
+        "info":  "Function: Unwind@10005003 at 10005003\nSignature: undefined __stdcall Unwind@10005003(void)\nEntry: 10005003\nBody: 10005003 - 1000500d"
+    }
+]

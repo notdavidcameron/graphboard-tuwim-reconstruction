@@ -1,0 +1,38 @@
+﻿[
+    {
+        "program":  "/Tuwim.exe",
+        "function":  "GraphBrdDoc_Construct",
+        "address":  "00405780",
+        "info":  "Function: GraphBrdDoc_Construct at 00405780\nSignature: COleDocument * __fastcall GraphBrdDoc_Construct(COleDocument * param_1)\nEntry: 00405780\nBody: 00405780 - 00405a4c"
+    },
+    {
+        "program":  "/Tuwim.exe",
+        "function":  "GraphBrdDoc_SerializeProjectState",
+        "address":  "00406020",
+        "info":  "Function: GraphBrdDoc_SerializeProjectState at 00406020\nSignature: undefined4 __thiscall GraphBrdDoc_SerializeProjectState(void * this, CArchive * param_1)\nEntry: 00406020\nBody: 00406020 - 004064b3"
+    },
+    {
+        "program":  "/Tuwim.exe",
+        "function":  "GraphBrdDoc_SerializeCursorAndGroupState",
+        "address":  "004064c0",
+        "info":  "Function: GraphBrdDoc_SerializeCursorAndGroupState at 004064c0\nSignature: undefined4 __thiscall GraphBrdDoc_SerializeCursorAndGroupState(void * this, CArchive * param_1)\nEntry: 004064c0\nBody: 004064c0 - 004066ee"
+    },
+    {
+        "program":  "/Tuwim.exe",
+        "function":  "GraphBrdDoc_SerializePageData",
+        "address":  "004066f0",
+        "info":  "Function: GraphBrdDoc_SerializePageData at 004066f0\nSignature: undefined __fastcall GraphBrdDoc_SerializePageData(COleDocument * param_1)\nEntry: 004066f0\nBody: 004066f0 - 00406f5d"
+    },
+    {
+        "program":  "/Tuwim.exe",
+        "function":  "GraphBrdScriptEngine_Serialize",
+        "address":  "0041aad0",
+        "info":  "Function: GraphBrdScriptEngine_Serialize at 0041aad0\nSignature: undefined __thiscall GraphBrdScriptEngine_Serialize(void * this, CArchive * param_1)\nEntry: 0041aad0\nBody: 0041aad0 - 0041b2c8"
+    },
+    {
+        "program":  "/Tuwim.exe",
+        "function":  "GraphBrdCntrItem_Serialize",
+        "address":  "0042b920",
+        "info":  "Function: GraphBrdCntrItem_Serialize at 0042b920\nSignature: undefined __thiscall GraphBrdCntrItem_Serialize(void * this, CArchive * param_1)\nEntry: 0042b920\nBody: 0042b920 - 0042bf91"
+    }
+]

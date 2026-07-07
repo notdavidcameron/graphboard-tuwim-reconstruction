@@ -1,0 +1,122 @@
+﻿[
+    {
+        "program":  "/GraphBoardComponents/TransparentVideoHolder.dll",
+        "function":  "TVH_ComputeZRange",
+        "address":  "100073b0",
+        "info":  "Function: TVH_ComputeZRange at 100073b0\nSignature: undefined4 __stdcall TVH_ComputeZRange(int param_1, int * param_2, int * param_3)\nEntry: 100073b0\nBody: 100073b0 - 1000742d"
+    },
+    {
+        "program":  "/GraphBoardComponents/TransparentVideoHolder.dll",
+        "function":  "TVH_ResetVideo",
+        "address":  "10007880",
+        "info":  "Function: TVH_ResetVideo at 10007880\nSignature: undefined4 __stdcall TVH_ResetVideo(int param_1, undefined4 param_2)\nEntry: 10007880\nBody: 10007880 - 10007951"
+    },
+    {
+        "program":  "/GraphBoardComponents/TransparentVideoHolder.dll",
+        "function":  "TVH_WriteArchiveChunked",
+        "address":  "10007990",
+        "info":  "Function: TVH_WriteArchiveChunked at 10007990\nSignature: undefined4 __stdcall TVH_WriteArchiveChunked(CArchive * param_1, int * param_2, uint param_3)\nEntry: 10007990\nBody: 10007990 - 10007a32"
+    },
+    {
+        "program":  "/GraphBoardComponents/TransparentVideoHolder.dll",
+        "function":  "TVH_ReadArchiveChunked",
+        "address":  "10007a40",
+        "info":  "Function: TVH_ReadArchiveChunked at 10007a40\nSignature: undefined4 __stdcall TVH_ReadArchiveChunked(int * param_1, CArchive * param_2, uint param_3)\nEntry: 10007a40\nBody: 10007a40 - 10007ae1"
+    },
+    {
+        "program":  "/GraphBoardComponents/TransparentVideoHolder.dll",
+        "function":  "TVH_SerializeOrDeserialize",
+        "address":  "10007af0",
+        "info":  "Function: TVH_SerializeOrDeserialize at 10007af0\nSignature: undefined4 __stdcall TVH_SerializeOrDeserialize(int param_1, CArchive * param_2)\nEntry: 10007af0\nBody: 10007af0 - 10008113"
+    },
+    {
+        "program":  "/GraphBoardComponents/TransparentVideoHolder.dll",
+        "function":  "TVH_SeekEntryVideo",
+        "address":  "10008120",
+        "info":  "Function: TVH_SeekEntryVideo at 10008120\nSignature: undefined4 __stdcall TVH_SeekEntryVideo(int param_1, int param_2)\nEntry: 10008120\nBody: 10008120 - 100081f7"
+    },
+    {
+        "program":  "/GraphBoardComponents/TransparentVideoHolder.dll",
+        "function":  "TVH_HideVideoRect",
+        "address":  "10008200",
+        "info":  "Function: TVH_HideVideoRect at 10008200\nSignature: undefined4 __fastcall TVH_HideVideoRect(int param_1)\nEntry: 10008200\nBody: 10008200 - 1000828d"
+    },
+    {
+        "program":  "/GraphBoardComponents/TransparentVideoHolder.dll",
+        "function":  "TVH_FreeEntryBuffers",
+        "address":  "10009550",
+        "info":  "Function: TVH_FreeEntryBuffers at 10009550\nSignature: undefined __fastcall TVH_FreeEntryBuffers(int param_1)\nEntry: 10009550\nBody: 10009550 - 100095ac"
+    },
+    {
+        "program":  "/GraphBoardComponents/TransparentVideoHolder.dll",
+        "function":  "TVH_OpenAudioDevice",
+        "address":  "10009690",
+        "info":  "Function: TVH_OpenAudioDevice at 10009690\nSignature: undefined4 __thiscall TVH_OpenAudioDevice(void * this, int param_1)\nEntry: 10009690\nBody: 10009690 - 100097f0"
+    },
+    {
+        "program":  "/GraphBoardComponents/TransparentVideoHolder.dll",
+        "function":  "TVH_CloseAudioDevice",
+        "address":  "10009800",
+        "info":  "Function: TVH_CloseAudioDevice at 10009800\nSignature: undefined4 __fastcall TVH_CloseAudioDevice(int param_1)\nEntry: 10009800\nBody: 10009800 - 10009815"
+    },
+    {
+        "program":  "/GraphBoardComponents/TransparentVideoHolder.dll",
+        "function":  "TVH_StopAudioPlayback",
+        "address":  "10009820",
+        "info":  "Function: TVH_StopAudioPlayback at 10009820\nSignature: undefined __fastcall TVH_StopAudioPlayback(int param_1)\nEntry: 10009820\nBody: 10009820 - 10009925"
+    },
+    {
+        "program":  "/GraphBoardComponents/TransparentVideoHolder.dll",
+        "function":  "TVH_SetPlaybackRect",
+        "address":  "10009930",
+        "info":  "Function: TVH_SetPlaybackRect at 10009930\nSignature: undefined __thiscall TVH_SetPlaybackRect(void * this, undefined4 * param_1)\nEntry: 10009930\nBody: 10009930 - 1000994f"
+    },
+    {
+        "program":  "/GraphBoardComponents/TransparentVideoHolder.dll",
+        "function":  "TVH_OpenEntryPlayback",
+        "address":  "10009970",
+        "info":  "Function: TVH_OpenEntryPlayback at 10009970\nSignature: undefined4 __thiscall TVH_OpenEntryPlayback(void * this, int * param_1, undefined4 param_2, int param_3)\nEntry: 10009970\nBody: 10009970 - 100099f3"
+    },
+    {
+        "program":  "/GraphBoardComponents/TransparentVideoHolder.dll",
+        "function":  "TVH_DrawStillFrame",
+        "address":  "10009a00",
+        "info":  "Function: TVH_DrawStillFrame at 10009a00\nSignature: undefined4 __thiscall TVH_DrawStillFrame(void * this, int param_1)\nEntry: 10009a00\nBody: 10009a00 - 10009a98"
+    },
+    {
+        "program":  "/GraphBoardComponents/TransparentVideoHolder.dll",
+        "function":  "TVH_ProcessVideoChunks",
+        "address":  "10009aa0",
+        "info":  "Function: TVH_ProcessVideoChunks at 10009aa0\nSignature: undefined __thiscall TVH_ProcessVideoChunks(void * this, uint param_1)\nEntry: 10009aa0\nBody: 10009aa0 - 1000a17e"
+    },
+    {
+        "program":  "/GraphBoardComponents/TransparentVideoHolder.dll",
+        "function":  "TVH_StopEntryPlayback",
+        "address":  "1000a180",
+        "info":  "Function: TVH_StopEntryPlayback at 1000a180\nSignature: undefined4 __fastcall TVH_StopEntryPlayback(int param_1)\nEntry: 1000a180\nBody: 1000a180 - 1000a1ac"
+    },
+    {
+        "program":  "/GraphBoardComponents/TransparentVideoHolder.dll",
+        "function":  "TVH_IsEntryPlaying",
+        "address":  "1000a1b0",
+        "info":  "Function: TVH_IsEntryPlaying at 1000a1b0\nSignature: bool __fastcall TVH_IsEntryPlaying(int param_1)\nEntry: 1000a1b0\nBody: 1000a1b0 - 1000a1bd"
+    },
+    {
+        "program":  "/GraphBoardComponents/TransparentVideoHolder.dll",
+        "function":  "TVH_ReadFirstChunk",
+        "address":  "1000a1c0",
+        "info":  "Function: TVH_ReadFirstChunk at 1000a1c0\nSignature: undefined4 __fastcall TVH_ReadFirstChunk(void * param_1)\nEntry: 1000a1c0\nBody: 1000a1c0 - 1000a3ca"
+    },
+    {
+        "program":  "/GraphBoardComponents/TransparentVideoHolder.dll",
+        "function":  "TVH_StartEntryPlayback",
+        "address":  "1000a3d0",
+        "info":  "Function: TVH_StartEntryPlayback at 1000a3d0\nSignature: undefined4 __thiscall TVH_StartEntryPlayback(void * this, undefined4 param_1)\nEntry: 1000a3d0\nBody: 1000a3d0 - 1000a417"
+    },
+    {
+        "program":  "/GraphBoardComponents/TransparentVideoHolder.dll",
+        "function":  "TVH_NotifyPlaybackEnd",
+        "address":  "1000a420",
+        "info":  "Function: TVH_NotifyPlaybackEnd at 1000a420\nSignature: undefined __thiscall TVH_NotifyPlaybackEnd(void * this, undefined4 param_1)\nEntry: 1000a420\nBody: 1000a420 - 1000a459"
+    }
+]

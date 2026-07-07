@@ -1,0 +1,302 @@
+﻿[
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "FUN_10003b60",
+        "address":  "10003b60",
+        "info":  "Function: FUN_10003b60 at 10003b60\nSignature: undefined __fastcall FUN_10003b60(undefined4 * param_1)\nEntry: 10003b60\nBody: 10003b60 - 10003b69"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "FUN_10003b70",
+        "address":  "10003b70",
+        "info":  "Function: FUN_10003b70 at 10003b70\nSignature: int __stdcall FUN_10003b70(short * param_1)\nEntry: 10003b70\nBody: 10003b70 - 10003bab"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "FUN_10003c40",
+        "address":  "10003c40",
+        "info":  "Function: FUN_10003c40 at 10003c40\nSignature: HRESULT __thiscall FUN_10003c40(void * this, BSTR param_1)\nEntry: 10003c40\nBody: 10003c40 - 10003ed5"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "ComTypeInfo_AddDispatchMapEntry",
+        "address":  "10003ee0",
+        "info":  "Function: ComTypeInfo_AddDispatchMapEntry at 10003ee0\nSignature: undefined4 __stdcall ComTypeInfo_AddDispatchMapEntry(int param_1, undefined4 param_2, undefined4 param_3)\nEntry: 10003ee0\nBody: 10003ee0 - 10003f76"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "Catch@10003f2e",
+        "address":  "10003f2e",
+        "info":  "Function: Catch@10003f2e at 10003f2e\nSignature: undefined4 __stdcall Catch@10003f2e(void)\nEntry: 10003f2e\nBody: 10003f2e - 10003f33"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "FUN_10003f80",
+        "address":  "10003f80",
+        "info":  "Function: FUN_10003f80 at 10003f80\nSignature: undefined __stdcall FUN_10003f80(Editor * param_1)\nEntry: 10003f80\nBody: 10003f80 - 10003fd4"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "SetColorObject_Construct",
+        "address":  "10004050",
+        "info":  "Function: SetColorObject_Construct at 10004050\nSignature: undefined4 * __fastcall SetColorObject_Construct(undefined4 * param_1)\nEntry: 10004050\nBody: 10004050 - 1000407f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "SetColor_ShowColorIndexDialog",
+        "address":  "10004080",
+        "info":  "Function: SetColor_ShowColorIndexDialog at 10004080\nSignature: undefined4 __stdcall SetColor_ShowColorIndexDialog(undefined4 param_1, byte * param_2, undefined4 param_3, int * param_4)\nEntry: 10004080\nBody: 10004080 - 10004276"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "CpuFeatures_DetectMmxSupport",
+        "address":  "10004280",
+        "info":  "Function: CpuFeatures_DetectMmxSupport at 10004280\nSignature: undefined4 __stdcall CpuFeatures_DetectMmxSupport(void)\nEntry: 10004280\nBody: 10004280 - 100042c5"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "DibUtil_CreateIndexedDib",
+        "address":  "10004450",
+        "info":  "Function: DibUtil_CreateIndexedDib at 10004450\nSignature: undefined4 * __stdcall DibUtil_CreateIndexedDib(int param_1, int param_2, int param_3)\nEntry: 10004450\nBody: 10004450 - 100045a8"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "DibUtil_GetIndexedPixelAddress",
+        "address":  "100045b0",
+        "info":  "Function: DibUtil_GetIndexedPixelAddress at 100045b0\nSignature: int __stdcall DibUtil_GetIndexedPixelAddress(int param_1, uint param_2, uint param_3)\nEntry: 100045b0\nBody: 100045b0 - 10004607"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "DibUtil_FillIndexedPixels",
+        "address":  "10004610",
+        "info":  "Function: DibUtil_FillIndexedPixels at 10004610\nSignature: undefined4 __stdcall DibUtil_FillIndexedPixels(uint param_1, undefined4 * param_2, undefined1 param_3)\nEntry: 10004610\nBody: 10004610 - 10004691"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "DoModal",
+        "address":  "100046b8",
+        "info":  "Function: DoModal at 100046b8\nSignature: int __thiscall DoModal(CDialog * this)\nEntry: 100046b8\nBody: 100046b8 - 100046bd"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "~CButton",
+        "address":  "100047e4",
+        "info":  "Function: ~CButton at 100047e4\nSignature: void __thiscall ~CButton(CButton * this)\nEntry: 100047e4\nBody: 100047e4 - 100047e9"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "~CStatic",
+        "address":  "100047ea",
+        "info":  "Function: ~CStatic at 100047ea\nSignature: void __thiscall ~CStatic(CStatic * this)\nEntry: 100047ea\nBody: 100047ea - 100047ef"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "~CString",
+        "address":  "100047f0",
+        "info":  "Function: ~CString at 100047f0\nSignature: void __thiscall ~CString(CString * this)\nEntry: 100047f0\nBody: 100047f0 - 100047f5"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "~CDialog",
+        "address":  "100047f6",
+        "info":  "Function: ~CDialog at 100047f6\nSignature: void __thiscall ~CDialog(CDialog * this)\nEntry: 100047f6\nBody: 100047f6 - 100047fb"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "CWnd",
+        "address":  "100047fc",
+        "info":  "Function: CWnd at 100047fc\nSignature: undefined __thiscall CWnd(CWnd * this)\nEntry: 100047fc\nBody: 100047fc - 10004801"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "CString",
+        "address":  "10004802",
+        "info":  "Function: CString at 10004802\nSignature: undefined __thiscall CString(CString * this)\nEntry: 10004802\nBody: 10004802 - 10004807"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "CDialog",
+        "address":  "10004808",
+        "info":  "Function: CDialog at 10004808\nSignature: undefined __thiscall CDialog(CDialog * this, uint param_1, CWnd * param_2)\nEntry: 10004808\nBody: 10004808 - 1000480d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "operator_delete",
+        "address":  "1000480e",
+        "info":  "Function: operator_delete at 1000480e\nSignature: void __cdecl operator_delete(void * param_1)\nEntry: 1000480e\nBody: 1000480e - 10004813"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "operator=",
+        "address":  "10004814",
+        "info":  "Function: operator= at 10004814\nSignature: CString * __thiscall operator=(CString * this, CString * param_1)\nEntry: 10004814\nBody: 10004814 - 10004819"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "operator+",
+        "address":  "1000481a",
+        "info":  "Function: operator+ at 1000481a\nSignature: CString __stdcall operator+(CString * param_1, CString * param_2)\nEntry: 1000481a\nBody: 1000481a - 1000481f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "SetWindowTextA",
+        "address":  "10004820",
+        "info":  "Function: SetWindowTextA at 10004820\nSignature: void __thiscall SetWindowTextA(CWnd * this, char * param_1)\nEntry: 10004820\nBody: 10004820 - 10004825"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "Format",
+        "address":  "10004826",
+        "info":  "Function: Format at 10004826\nSignature: void __thiscall Format(CString * this, char * param_1, ...)\nEntry: 10004826\nBody: 10004826 - 1000482b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "GetWindowTextA",
+        "address":  "1000482c",
+        "info":  "Function: GetWindowTextA at 1000482c\nSignature: void __thiscall GetWindowTextA(CWnd * this, CString * param_1)\nEntry: 1000482c\nBody: 1000482c - 10004831"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "EnableWindow",
+        "address":  "10004832",
+        "info":  "Function: EnableWindow at 10004832\nSignature: int __thiscall EnableWindow(CWnd * this, int param_1)\nEntry: 10004832\nBody: 10004832 - 10004837"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "DDX_Check",
+        "address":  "10004838",
+        "info":  "Function: DDX_Check at 10004838\nSignature: void __stdcall DDX_Check(CDataExchange * param_1, int param_2, int * param_3)\nEntry: 10004838\nBody: 10004838 - 1000483d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "DDX_Control",
+        "address":  "1000483e",
+        "info":  "Function: DDX_Control at 1000483e\nSignature: void __stdcall DDX_Control(CDataExchange * param_1, int param_2, CWnd * param_3)\nEntry: 1000483e\nBody: 1000483e - 10004843"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "UpdateData",
+        "address":  "10004844",
+        "info":  "Function: UpdateData at 10004844\nSignature: int __thiscall UpdateData(CWnd * this, int param_1)\nEntry: 10004844\nBody: 10004844 - 10004849"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "AfxMessageBox",
+        "address":  "1000484a",
+        "info":  "Function: AfxMessageBox at 1000484a\nSignature: int __stdcall AfxMessageBox(char * param_1, uint param_2, uint param_3)\nEntry: 1000484a\nBody: 1000484a - 1000484f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "ShowWindow",
+        "address":  "10004850",
+        "info":  "Function: ShowWindow at 10004850\nSignature: int __thiscall ShowWindow(CWnd * this, int param_1)\nEntry: 10004850\nBody: 10004850 - 10004855"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "OnInitDialog",
+        "address":  "10004856",
+        "info":  "Function: OnInitDialog at 10004856\nSignature: int __thiscall OnInitDialog(CDialog * this)\nEntry: 10004856\nBody: 10004856 - 1000485b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "Default",
+        "address":  "1000485c",
+        "info":  "Function: Default at 1000485c\nSignature: long __thiscall Default(CWnd * this)\nEntry: 1000485c\nBody: 1000485c - 10004861"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "~CPaintDC",
+        "address":  "1000486e",
+        "info":  "Function: ~CPaintDC at 1000486e\nSignature: void __thiscall ~CPaintDC(CPaintDC * this)\nEntry: 1000486e\nBody: 1000486e - 10004873"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "SelectPalette",
+        "address":  "1000487a",
+        "info":  "Function: SelectPalette at 1000487a\nSignature: CPalette * __thiscall SelectPalette(CDC * this, CPalette * param_1, int param_2)\nEntry: 1000487a\nBody: 1000487a - 1000487f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "CClientDC",
+        "address":  "10004880",
+        "info":  "Function: CClientDC at 10004880\nSignature: undefined __thiscall CClientDC(CClientDC * this, CWnd * param_1)\nEntry: 10004880\nBody: 10004880 - 10004885"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "operator_new",
+        "address":  "10004886",
+        "info":  "Function: operator_new at 10004886\nSignature: void * __cdecl operator_new(uint param_1)\nEntry: 10004886\nBody: 10004886 - 1000488b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "~CWinApp",
+        "address":  "1000488c",
+        "info":  "Function: ~CWinApp at 1000488c\nSignature: void __thiscall ~CWinApp(CWinApp * this)\nEntry: 1000488c\nBody: 1000488c - 10004891"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "CWinApp",
+        "address":  "1000490a",
+        "info":  "Function: CWinApp at 1000490a\nSignature: undefined __thiscall CWinApp(CWinApp * this, char * param_1)\nEntry: 1000490a\nBody: 1000490a - 1000490f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "InitInstance",
+        "address":  "10004910",
+        "info":  "Function: InitInstance at 10004910\nSignature: int __thiscall InitInstance(CWinApp * this)\nEntry: 10004910\nBody: 10004910 - 10004915"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "ExitInstance",
+        "address":  "10004916",
+        "info":  "Function: ExitInstance at 10004916\nSignature: int __thiscall ExitInstance(CWinApp * this)\nEntry: 10004916\nBody: 10004916 - 1000491b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "AfxDllCanUnloadNow",
+        "address":  "1000491c",
+        "info":  "Function: AfxDllCanUnloadNow at 1000491c\nSignature: long __stdcall AfxDllCanUnloadNow(void)\nEntry: 1000491c\nBody: 1000491c - 10004921"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "AFX_MAINTAIN_STATE2",
+        "address":  "10004922",
+        "info":  "Function: AFX_MAINTAIN_STATE2 at 10004922\nSignature: undefined __thiscall AFX_MAINTAIN_STATE2(AFX_MAINTAIN_STATE2 * this, AFX_MODULE_STATE * param_1)\nEntry: 10004922\nBody: 10004922 - 10004927"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "AfxGetModuleState",
+        "address":  "10004928",
+        "info":  "Function: AfxGetModuleState at 10004928\nSignature: AFX_MODULE_STATE * __stdcall AfxGetModuleState(void)\nEntry: 10004928\nBody: 10004928 - 1000492d"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "FUN_10004938",
+        "address":  "10004938",
+        "info":  "Function: FUN_10004938 at 10004938\nSignature: undefined4 * __stdcall FUN_10004938(void)\nEntry: 10004938\nBody: 10004938 - 1000495f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "FUN_10004960",
+        "address":  "10004960",
+        "info":  "Function: FUN_10004960 at 10004960\nSignature: AFX_MODULE_STATE * __thiscall FUN_10004960(void * this, byte param_1)\nEntry: 10004960\nBody: 10004960 - 1000497a"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "~AFX_MODULE_STATE",
+        "address":  "1000497b",
+        "info":  "Function: ~AFX_MODULE_STATE at 1000497b\nSignature: void __thiscall ~AFX_MODULE_STATE(AFX_MODULE_STATE * this)\nEntry: 1000497b\nBody: 1000497b - 1000497f"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "FUN_10004980",
+        "address":  "10004980",
+        "info":  "Function: FUN_10004980 at 10004980\nSignature: undefined __stdcall FUN_10004980(void)\nEntry: 10004980\nBody: 10004980 - 1000498b"
+    },
+    {
+        "program":  "/extracted/GraphBoard 1.00/SetColor.dll",
+        "function":  "FUN_10004996",
+        "address":  "10004996",
+        "info":  "Function: FUN_10004996 at 10004996\nSignature: undefined __stdcall FUN_10004996(HWND__ * param_1, uint param_2, uint param_3, long param_4)\nEntry: 10004996\nBody: 10004996 - 100049da"
+    }
+]
