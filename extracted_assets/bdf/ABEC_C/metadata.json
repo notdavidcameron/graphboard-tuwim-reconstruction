@@ -28,7 +28,897 @@
       "display_name": "Sprite_Holder",
       "private_offset": 2707,
       "private_size": 359816,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_000_dobry_phase_00.png",
+          "offset": 2983,
+          "size": 122389,
+          "pixel_size": 235200,
+          "width": 560,
+          "height": 420,
+          "name": "dobry",
+          "id": 0,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_000_dobry_phase_00.png",
+              "size": 122389
+            }
+          ],
+          "rect": {
+            "x": 0,
+            "y": 50,
+            "width": 560,
+            "height": 420
+          },
+          "geometry_confidence": "serialized_sprite"
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_001_brans_phase_00.png",
+          "offset": 238398,
+          "size": 2058,
+          "pixel_size": 2277,
+          "width": 99,
+          "height": 23,
+          "name": "brans",
+          "id": 1,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_001_brans_phase_00.png",
+              "size": 2058
+            }
+          ],
+          "rect": {
+            "x": 0,
+            "y": 100,
+            "width": 99,
+            "height": 23
+          },
+          "geometry_confidence": "serialized_sprite"
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_002_h 01_phase_00.png",
+          "offset": 241099,
+          "size": 1858,
+          "pixel_size": 2132,
+          "width": 41,
+          "height": 52,
+          "name": "h 01",
+          "id": 2,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_002_h 01_phase_00.png",
+              "size": 1858
+            }
+          ],
+          "rect": {
+            "x": 0,
+            "y": 100,
+            "width": 41,
+            "height": 52
+          },
+          "geometry_confidence": "serialized_sprite"
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_003_ij 01_phase_00.png",
+          "offset": 243570,
+          "size": 4966,
+          "pixel_size": 8165,
+          "width": 115,
+          "height": 71,
+          "name": "ij 01",
+          "id": 3,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_003_ij 01_phase_00.png",
+              "size": 4966
+            }
+          ],
+          "rect": {
+            "x": 0,
+            "y": 100,
+            "width": 115,
+            "height": 71
+          },
+          "geometry_confidence": "serialized_sprite"
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_004_kokos_phase_00.png",
+          "offset": 252015,
+          "size": 1874,
+          "pixel_size": 1672,
+          "width": 38,
+          "height": 44,
+          "name": "kokos",
+          "id": 4,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_004_kokos_phase_00.png",
+              "size": 1874
+            }
+          ],
+          "rect": {
+            "x": 0,
+            "y": 100,
+            "width": 38,
+            "height": 44
+          },
+          "geometry_confidence": "serialized_sprite"
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_005_kolczyk_phase_00.png",
+          "offset": 254137,
+          "size": 8010,
+          "pixel_size": 12126,
+          "width": 141,
+          "height": 86,
+          "name": "kolczyk",
+          "id": 5,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_005_kolczyk_phase_00.png",
+              "size": 8010
+            }
+          ],
+          "rect": {
+            "x": 0,
+            "y": 100,
+            "width": 141,
+            "height": 86
+          },
+          "geometry_confidence": "serialized_sprite"
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_006_kosc_phase_00.png",
+          "offset": 266509,
+          "size": 1968,
+          "pixel_size": 2106,
+          "width": 39,
+          "height": 54,
+          "name": "kosc",
+          "id": 6,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_006_kosc_phase_00.png",
+              "size": 1968
+            }
+          ],
+          "rect": {
+            "x": 0,
+            "y": 100,
+            "width": 39,
+            "height": 54
+          },
+          "geometry_confidence": "serialized_sprite"
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_007_piersc_phase_00.png",
+          "offset": 268871,
+          "size": 2040,
+          "pixel_size": 1728,
+          "width": 27,
+          "height": 64,
+          "name": "piersc",
+          "id": 7,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_007_piersc_phase_00.png",
+              "size": 2040
+            }
+          ],
+          "rect": {
+            "x": 0,
+            "y": 100,
+            "width": 27,
+            "height": 64
+          },
+          "geometry_confidence": "serialized_sprite"
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_008_ptak_phase_00.png",
+          "offset": 270845,
+          "size": 2318,
+          "pixel_size": 2538,
+          "width": 47,
+          "height": 54,
+          "name": "ptak",
+          "id": 8,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_008_ptak_phase_00.png",
+              "size": 2318
+            }
+          ],
+          "rect": {
+            "x": 0,
+            "y": 100,
+            "width": 47,
+            "height": 54
+          },
+          "geometry_confidence": "serialized_sprite"
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_009_slonce_phase_00.png",
+          "offset": 273689,
+          "size": 2549,
+          "pixel_size": 3078,
+          "width": 54,
+          "height": 57,
+          "name": "slonce",
+          "id": 9,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_009_slonce_phase_00.png",
+              "size": 2549
+            }
+          ],
+          "rect": {
+            "x": 0,
+            "y": 100,
+            "width": 54,
+            "height": 57
+          },
+          "geometry_confidence": "serialized_sprite"
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_010_usta_phase_00.png",
+          "offset": 277011,
+          "size": 2420,
+          "pixel_size": 2444,
+          "width": 47,
+          "height": 52,
+          "name": "usta",
+          "id": 10,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_010_usta_phase_00.png",
+              "size": 2420
+            }
+          ],
+          "rect": {
+            "x": 0,
+            "y": 100,
+            "width": 47,
+            "height": 52
+          },
+          "geometry_confidence": "serialized_sprite"
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_011_ef_s_phase_00.png",
+          "offset": 282046,
+          "size": 1682,
+          "pixel_size": 2277,
+          "width": 99,
+          "height": 23,
+          "name": "ef_s",
+          "id": 11,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_011_ef_s_phase_00.png",
+              "size": 1682
+            }
+          ],
+          "rect": {
+            "x": 0,
+            "y": 400,
+            "width": 99,
+            "height": 23
+          },
+          "geometry_confidence": "serialized_sprite"
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_012_h_s_phase_00.png",
+          "offset": 286827,
+          "size": 1836,
+          "pixel_size": 2132,
+          "width": 41,
+          "height": 52,
+          "name": "h_s",
+          "id": 12,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_012_h_s_phase_00.png",
+              "size": 1836
+            }
+          ],
+          "rect": {
+            "x": 0,
+            "y": 400,
+            "width": 41,
+            "height": 52
+          },
+          "geometry_confidence": "serialized_sprite"
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_013_ij_s_phase_00.png",
+          "offset": 297534,
+          "size": 3628,
+          "pixel_size": 8165,
+          "width": 115,
+          "height": 71,
+          "name": "ij_s",
+          "id": 13,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_013_ij_s_phase_00.png",
+              "size": 3628
+            }
+          ],
+          "rect": {
+            "x": 0,
+            "y": 400,
+            "width": 115,
+            "height": 71
+          },
+          "geometry_confidence": "serialized_sprite"
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_014_l_s_phase_00.png",
+          "offset": 307639,
+          "size": 1521,
+          "pixel_size": 1672,
+          "width": 38,
+          "height": 44,
+          "name": "l_s ",
+          "id": 14,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_014_l_s_phase_00.png",
+              "size": 1521
+            }
+          ],
+          "rect": {
+            "x": 0,
+            "y": 400,
+            "width": 38,
+            "height": 44
+          },
+          "geometry_confidence": "serialized_sprite"
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_015_rp_s_phase_00.png",
+          "offset": 321877,
+          "size": 7753,
+          "pixel_size": 12126,
+          "width": 141,
+          "height": 86,
+          "name": "rp_s",
+          "id": 15,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_015_rp_s_phase_00.png",
+              "size": 7753
+            }
+          ],
+          "rect": {
+            "x": 0,
+            "y": 400,
+            "width": 141,
+            "height": 86
+          },
+          "geometry_confidence": "serialized_sprite"
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_016_s_s_phase_00.png",
+          "offset": 336485,
+          "size": 1727,
+          "pixel_size": 2106,
+          "width": 39,
+          "height": 54,
+          "name": "s_s",
+          "id": 16,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_016_s_s_phase_00.png",
+              "size": 1727
+            }
+          ],
+          "rect": {
+            "x": 0,
+            "y": 400,
+            "width": 39,
+            "height": 54
+          },
+          "geometry_confidence": "serialized_sprite"
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_017_skrzynka__phase_00.png",
+          "offset": 340715,
+          "size": 1857,
+          "pixel_size": 1728,
+          "width": 27,
+          "height": 64,
+          "name": "skrzynka_",
+          "id": 17,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_017_skrzynka__phase_00.png",
+              "size": 1857
+            }
+          ],
+          "rect": {
+            "x": 95,
+            "y": 400,
+            "width": 27,
+            "height": 64
+          },
+          "geometry_confidence": "serialized_sprite"
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_018_t_s_phase_00.png",
+          "offset": 345357,
+          "size": 2159,
+          "pixel_size": 2538,
+          "width": 47,
+          "height": 54,
+          "name": "t_s",
+          "id": 18,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_018_t_s_phase_00.png",
+              "size": 2159
+            }
+          ],
+          "rect": {
+            "x": 0,
+            "y": 400,
+            "width": 47,
+            "height": 54
+          },
+          "geometry_confidence": "serialized_sprite"
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_019_w_s_phase_00.png",
+          "offset": 351241,
+          "size": 2281,
+          "pixel_size": 3078,
+          "width": 54,
+          "height": 57,
+          "name": "w_s",
+          "id": 19,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_019_w_s_phase_00.png",
+              "size": 2281
+            }
+          ],
+          "rect": {
+            "x": 0,
+            "y": 400,
+            "width": 54,
+            "height": 57
+          },
+          "geometry_confidence": "serialized_sprite"
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_020_z_s_phase_00.png",
+          "offset": 357135,
+          "size": 1999,
+          "pixel_size": 2444,
+          "width": 47,
+          "height": 52,
+          "name": "z_s",
+          "id": 20,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_020_z_s_phase_00.png",
+              "size": 1999
+            }
+          ],
+          "rect": {
+            "x": 0,
+            "y": 400,
+            "width": 47,
+            "height": 52
+          },
+          "geometry_confidence": "serialized_sprite"
+        }
+      ],
+      "sprite_holder": {
+        "version": 1,
+        "declared_count": 21,
+        "parsed_count": 21,
+        "frames": [
+          {
+            "index": 0,
+            "name": "dobry",
+            "record_offset": 2715,
+            "record_size": 235464,
+            "width": 560,
+            "height": 420,
+            "phase_count": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_000_dobry_phase_00.png",
+                "size": 122389
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "brans",
+            "record_offset": 238183,
+            "record_size": 2488,
+            "width": 99,
+            "height": 23,
+            "phase_count": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_001_brans_phase_00.png",
+                "size": 2058
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "h 01",
+            "record_offset": 240675,
+            "record_size": 2552,
+            "width": 41,
+            "height": 52,
+            "phase_count": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_002_h 01_phase_00.png",
+                "size": 1858
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "name": "ij 01",
+            "record_offset": 243231,
+            "record_size": 8500,
+            "width": 115,
+            "height": 71,
+            "phase_count": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_003_ij 01_phase_00.png",
+                "size": 4966
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "name": "kokos",
+            "record_offset": 251735,
+            "record_size": 1948,
+            "width": 38,
+            "height": 44,
+            "phase_count": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_004_kokos_phase_00.png",
+                "size": 1874
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "name": "kolczyk",
+            "record_offset": 253687,
+            "record_size": 12572,
+            "width": 141,
+            "height": 86,
+            "phase_count": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_005_kolczyk_phase_00.png",
+                "size": 8010
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "name": "kosc",
+            "record_offset": 266263,
+            "record_size": 2348,
+            "width": 39,
+            "height": 54,
+            "phase_count": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_006_kosc_phase_00.png",
+                "size": 1968
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "name": "piersc",
+            "record_offset": 268615,
+            "record_size": 1980,
+            "width": 27,
+            "height": 64,
+            "phase_count": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_007_piersc_phase_00.png",
+                "size": 2040
+              }
+            ]
+          },
+          {
+            "index": 8,
+            "name": "ptak",
+            "record_offset": 270599,
+            "record_size": 2780,
+            "width": 47,
+            "height": 54,
+            "phase_count": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_008_ptak_phase_00.png",
+                "size": 2318
+              }
+            ]
+          },
+          {
+            "index": 9,
+            "name": "slonce",
+            "record_offset": 273383,
+            "record_size": 3380,
+            "width": 54,
+            "height": 57,
+            "phase_count": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_009_slonce_phase_00.png",
+                "size": 2549
+              }
+            ]
+          },
+          {
+            "index": 10,
+            "name": "usta",
+            "record_offset": 276767,
+            "record_size": 2684,
+            "width": 47,
+            "height": 52,
+            "phase_count": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_010_usta_phase_00.png",
+                "size": 2420
+              }
+            ]
+          },
+          {
+            "index": 11,
+            "name": "ef_s",
+            "record_offset": 279455,
+            "record_size": 4864,
+            "width": 99,
+            "height": 23,
+            "phase_count": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_011_ef_s_phase_00.png",
+                "size": 1682
+              }
+            ]
+          },
+          {
+            "index": 12,
+            "name": "h_s",
+            "record_offset": 284323,
+            "record_size": 4632,
+            "width": 41,
+            "height": 52,
+            "phase_count": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_012_h_s_phase_00.png",
+                "size": 1836
+              }
+            ]
+          },
+          {
+            "index": 13,
+            "name": "ij_s",
+            "record_offset": 288959,
+            "record_size": 16736,
+            "width": 115,
+            "height": 71,
+            "phase_count": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_013_ij_s_phase_00.png",
+                "size": 3628
+              }
+            ]
+          },
+          {
+            "index": 14,
+            "name": "l_s ",
+            "record_offset": 305699,
+            "record_size": 3608,
+            "width": 38,
+            "height": 44,
+            "phase_count": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_014_l_s_phase_00.png",
+                "size": 1521
+              }
+            ]
+          },
+          {
+            "index": 15,
+            "name": "rp_s",
+            "record_offset": 309311,
+            "record_size": 24688,
+            "width": 141,
+            "height": 86,
+            "phase_count": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_015_rp_s_phase_00.png",
+                "size": 7753
+              }
+            ]
+          },
+          {
+            "index": 16,
+            "name": "s_s",
+            "record_offset": 334003,
+            "record_size": 4584,
+            "width": 39,
+            "height": 54,
+            "phase_count": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_016_s_s_phase_00.png",
+                "size": 1727
+              }
+            ]
+          },
+          {
+            "index": 17,
+            "name": "skrzynka_",
+            "record_offset": 338591,
+            "record_size": 3848,
+            "width": 27,
+            "height": 64,
+            "phase_count": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_017_skrzynka__phase_00.png",
+                "size": 1857
+              }
+            ]
+          },
+          {
+            "index": 18,
+            "name": "t_s",
+            "record_offset": 342443,
+            "record_size": 5448,
+            "width": 47,
+            "height": 54,
+            "phase_count": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_018_t_s_phase_00.png",
+                "size": 2159
+              }
+            ]
+          },
+          {
+            "index": 19,
+            "name": "w_s",
+            "record_offset": 347895,
+            "record_size": 6420,
+            "width": 54,
+            "height": 57,
+            "phase_count": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_019_w_s_phase_00.png",
+                "size": 2281
+              }
+            ]
+          },
+          {
+            "index": 20,
+            "name": "z_s",
+            "record_offset": 354319,
+            "record_size": 5256,
+            "width": 47,
+            "height": 52,
+            "phase_count": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_020_z_s_phase_00.png",
+                "size": 1999
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "index": 1,
@@ -37,19 +927,625 @@
       "display_name": "Bitmap_Holder",
       "private_offset": 363655,
       "private_size": 307356,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\ABEC_C\\bitmap_holder\\01_Bitmap_Holder_000_abecad_oz_640x480.bmp",
+          "offset": 363807,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "abecadłoz",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 640,
+            "height": 480
+          },
+          "geometry_confidence": "serialized_entry",
+          "initially_visible": false
+        }
+      ],
+      "bitmap_holder": {
+        "version": 1,
+        "declared_count": 1,
+        "parsed_count": 1,
+        "frames": [
+          {
+            "index": 0,
+            "name": "abecadłoz",
+            "record_offset": 363663,
+            "record_size": 307344,
+            "pixel_offset": 363807,
+            "width": 640,
+            "height": 480,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 640,
+              "height": 480
+            },
+            "bmp_output": "extracted_assets\\bdf\\ABEC_C\\bitmap_holder\\01_Bitmap_Holder_000_abecad_oz_640x480.bmp"
+          }
+        ]
+      }
     }
   ],
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ABEC_C\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\ABEC_C\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ABEC_C\\script.txt",
+      "path": "extracted_assets\\bdf\\ABEC_C\\script.txt",
       "size": 8757
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_000_dobry_phase_00.png",
+      "offset": 2983,
+      "size": 122389,
+      "pixel_size": 235200,
+      "width": 560,
+      "height": 420,
+      "name": "dobry",
+      "id": 0,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_000_dobry_phase_00.png",
+          "size": 122389
+        }
+      ],
+      "rect": {
+        "x": 0,
+        "y": 50,
+        "width": 560,
+        "height": 420
+      },
+      "geometry_confidence": "serialized_sprite"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_001_brans_phase_00.png",
+      "offset": 238398,
+      "size": 2058,
+      "pixel_size": 2277,
+      "width": 99,
+      "height": 23,
+      "name": "brans",
+      "id": 1,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_001_brans_phase_00.png",
+          "size": 2058
+        }
+      ],
+      "rect": {
+        "x": 0,
+        "y": 100,
+        "width": 99,
+        "height": 23
+      },
+      "geometry_confidence": "serialized_sprite"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_002_h 01_phase_00.png",
+      "offset": 241099,
+      "size": 1858,
+      "pixel_size": 2132,
+      "width": 41,
+      "height": 52,
+      "name": "h 01",
+      "id": 2,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_002_h 01_phase_00.png",
+          "size": 1858
+        }
+      ],
+      "rect": {
+        "x": 0,
+        "y": 100,
+        "width": 41,
+        "height": 52
+      },
+      "geometry_confidence": "serialized_sprite"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_003_ij 01_phase_00.png",
+      "offset": 243570,
+      "size": 4966,
+      "pixel_size": 8165,
+      "width": 115,
+      "height": 71,
+      "name": "ij 01",
+      "id": 3,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_003_ij 01_phase_00.png",
+          "size": 4966
+        }
+      ],
+      "rect": {
+        "x": 0,
+        "y": 100,
+        "width": 115,
+        "height": 71
+      },
+      "geometry_confidence": "serialized_sprite"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_004_kokos_phase_00.png",
+      "offset": 252015,
+      "size": 1874,
+      "pixel_size": 1672,
+      "width": 38,
+      "height": 44,
+      "name": "kokos",
+      "id": 4,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_004_kokos_phase_00.png",
+          "size": 1874
+        }
+      ],
+      "rect": {
+        "x": 0,
+        "y": 100,
+        "width": 38,
+        "height": 44
+      },
+      "geometry_confidence": "serialized_sprite"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_005_kolczyk_phase_00.png",
+      "offset": 254137,
+      "size": 8010,
+      "pixel_size": 12126,
+      "width": 141,
+      "height": 86,
+      "name": "kolczyk",
+      "id": 5,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_005_kolczyk_phase_00.png",
+          "size": 8010
+        }
+      ],
+      "rect": {
+        "x": 0,
+        "y": 100,
+        "width": 141,
+        "height": 86
+      },
+      "geometry_confidence": "serialized_sprite"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_006_kosc_phase_00.png",
+      "offset": 266509,
+      "size": 1968,
+      "pixel_size": 2106,
+      "width": 39,
+      "height": 54,
+      "name": "kosc",
+      "id": 6,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_006_kosc_phase_00.png",
+          "size": 1968
+        }
+      ],
+      "rect": {
+        "x": 0,
+        "y": 100,
+        "width": 39,
+        "height": 54
+      },
+      "geometry_confidence": "serialized_sprite"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_007_piersc_phase_00.png",
+      "offset": 268871,
+      "size": 2040,
+      "pixel_size": 1728,
+      "width": 27,
+      "height": 64,
+      "name": "piersc",
+      "id": 7,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_007_piersc_phase_00.png",
+          "size": 2040
+        }
+      ],
+      "rect": {
+        "x": 0,
+        "y": 100,
+        "width": 27,
+        "height": 64
+      },
+      "geometry_confidence": "serialized_sprite"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_008_ptak_phase_00.png",
+      "offset": 270845,
+      "size": 2318,
+      "pixel_size": 2538,
+      "width": 47,
+      "height": 54,
+      "name": "ptak",
+      "id": 8,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_008_ptak_phase_00.png",
+          "size": 2318
+        }
+      ],
+      "rect": {
+        "x": 0,
+        "y": 100,
+        "width": 47,
+        "height": 54
+      },
+      "geometry_confidence": "serialized_sprite"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_009_slonce_phase_00.png",
+      "offset": 273689,
+      "size": 2549,
+      "pixel_size": 3078,
+      "width": 54,
+      "height": 57,
+      "name": "slonce",
+      "id": 9,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_009_slonce_phase_00.png",
+          "size": 2549
+        }
+      ],
+      "rect": {
+        "x": 0,
+        "y": 100,
+        "width": 54,
+        "height": 57
+      },
+      "geometry_confidence": "serialized_sprite"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_010_usta_phase_00.png",
+      "offset": 277011,
+      "size": 2420,
+      "pixel_size": 2444,
+      "width": 47,
+      "height": 52,
+      "name": "usta",
+      "id": 10,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_010_usta_phase_00.png",
+          "size": 2420
+        }
+      ],
+      "rect": {
+        "x": 0,
+        "y": 100,
+        "width": 47,
+        "height": 52
+      },
+      "geometry_confidence": "serialized_sprite"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_011_ef_s_phase_00.png",
+      "offset": 282046,
+      "size": 1682,
+      "pixel_size": 2277,
+      "width": 99,
+      "height": 23,
+      "name": "ef_s",
+      "id": 11,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_011_ef_s_phase_00.png",
+          "size": 1682
+        }
+      ],
+      "rect": {
+        "x": 0,
+        "y": 400,
+        "width": 99,
+        "height": 23
+      },
+      "geometry_confidence": "serialized_sprite"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_012_h_s_phase_00.png",
+      "offset": 286827,
+      "size": 1836,
+      "pixel_size": 2132,
+      "width": 41,
+      "height": 52,
+      "name": "h_s",
+      "id": 12,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_012_h_s_phase_00.png",
+          "size": 1836
+        }
+      ],
+      "rect": {
+        "x": 0,
+        "y": 400,
+        "width": 41,
+        "height": 52
+      },
+      "geometry_confidence": "serialized_sprite"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_013_ij_s_phase_00.png",
+      "offset": 297534,
+      "size": 3628,
+      "pixel_size": 8165,
+      "width": 115,
+      "height": 71,
+      "name": "ij_s",
+      "id": 13,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_013_ij_s_phase_00.png",
+          "size": 3628
+        }
+      ],
+      "rect": {
+        "x": 0,
+        "y": 400,
+        "width": 115,
+        "height": 71
+      },
+      "geometry_confidence": "serialized_sprite"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_014_l_s_phase_00.png",
+      "offset": 307639,
+      "size": 1521,
+      "pixel_size": 1672,
+      "width": 38,
+      "height": 44,
+      "name": "l_s ",
+      "id": 14,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_014_l_s_phase_00.png",
+          "size": 1521
+        }
+      ],
+      "rect": {
+        "x": 0,
+        "y": 400,
+        "width": 38,
+        "height": 44
+      },
+      "geometry_confidence": "serialized_sprite"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_015_rp_s_phase_00.png",
+      "offset": 321877,
+      "size": 7753,
+      "pixel_size": 12126,
+      "width": 141,
+      "height": 86,
+      "name": "rp_s",
+      "id": 15,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_015_rp_s_phase_00.png",
+          "size": 7753
+        }
+      ],
+      "rect": {
+        "x": 0,
+        "y": 400,
+        "width": 141,
+        "height": 86
+      },
+      "geometry_confidence": "serialized_sprite"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_016_s_s_phase_00.png",
+      "offset": 336485,
+      "size": 1727,
+      "pixel_size": 2106,
+      "width": 39,
+      "height": 54,
+      "name": "s_s",
+      "id": 16,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_016_s_s_phase_00.png",
+          "size": 1727
+        }
+      ],
+      "rect": {
+        "x": 0,
+        "y": 400,
+        "width": 39,
+        "height": 54
+      },
+      "geometry_confidence": "serialized_sprite"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_017_skrzynka__phase_00.png",
+      "offset": 340715,
+      "size": 1857,
+      "pixel_size": 1728,
+      "width": 27,
+      "height": 64,
+      "name": "skrzynka_",
+      "id": 17,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_017_skrzynka__phase_00.png",
+          "size": 1857
+        }
+      ],
+      "rect": {
+        "x": 95,
+        "y": 400,
+        "width": 27,
+        "height": 64
+      },
+      "geometry_confidence": "serialized_sprite"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_018_t_s_phase_00.png",
+      "offset": 345357,
+      "size": 2159,
+      "pixel_size": 2538,
+      "width": 47,
+      "height": 54,
+      "name": "t_s",
+      "id": 18,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_018_t_s_phase_00.png",
+          "size": 2159
+        }
+      ],
+      "rect": {
+        "x": 0,
+        "y": 400,
+        "width": 47,
+        "height": 54
+      },
+      "geometry_confidence": "serialized_sprite"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_019_w_s_phase_00.png",
+      "offset": 351241,
+      "size": 2281,
+      "pixel_size": 3078,
+      "width": 54,
+      "height": 57,
+      "name": "w_s",
+      "id": 19,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_019_w_s_phase_00.png",
+          "size": 2281
+        }
+      ],
+      "rect": {
+        "x": 0,
+        "y": 400,
+        "width": 54,
+        "height": 57
+      },
+      "geometry_confidence": "serialized_sprite"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_020_z_s_phase_00.png",
+      "offset": 357135,
+      "size": 1999,
+      "pixel_size": 2444,
+      "width": 47,
+      "height": 52,
+      "name": "z_s",
+      "id": 20,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_C\\sprite_holder\\00_Sprite_Holder_020_z_s_phase_00.png",
+          "size": 1999
+        }
+      ],
+      "rect": {
+        "x": 0,
+        "y": 400,
+        "width": 47,
+        "height": 52
+      },
+      "geometry_confidence": "serialized_sprite"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\ABEC_C\\bitmap_holder\\01_Bitmap_Holder_000_abecad_oz_640x480.bmp",
+      "offset": 363807,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "abecadłoz",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 640,
+        "height": 480
+      },
+      "geometry_confidence": "serialized_entry",
+      "initially_visible": false
     }
   ],
   "script": {

@@ -869,10 +869,8 @@ def extract_bitmap_holder_images(
 
         left = read_i32(data, offset + 0x0C)[0]
         top = read_i32(data, offset + 0x10)[0]
-        right = read_i32(data, offset + 0x14)[0]
-        bottom = read_i32(data, offset + 0x18)[0]
-        width = right - left
-        height = bottom - top
+        width = read_i32(data, offset + 0x14)[0]
+        height = read_i32(data, offset + 0x18)[0]
         name = data[offset + 0x38 : offset + 0x58].split(b"\x00", 1)[0].decode("cp1250", "replace")
         pixel_offset = offset + 0x90
         pixel_size = width * height

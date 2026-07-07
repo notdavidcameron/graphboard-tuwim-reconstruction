@@ -202,7 +202,7 @@ def parse_bitmap_rect(meta_component: dict[str, Any], source_data: bytes | None)
     """Recover BitmapHolder's first visible rectangle.
 
     The observed BitmapHolder private block starts with version/count/bitmap-size,
-    followed by a per-item record. The stable stage rectangle is left/top/right/bottom
+    followed by a per-item record. The stable stage rectangle is x/y/width/height
     at +0x14..+0x20 in the first record.
     """
     if runtime_component_type(meta_component.get("display_name")) != "Bitmap_Holder" or not source_data:
@@ -217,11 +217,11 @@ def parse_bitmap_rect(meta_component: dict[str, Any], source_data: bytes | None)
         count = read_u32(source_data, private_start + 4)
         left = read_i32(source_data, private_start + 0x14)
         top = read_i32(source_data, private_start + 0x18)
-        right = read_i32(source_data, private_start + 0x1C)
-        bottom = read_i32(source_data, private_start + 0x20)
+        width = read_i32(source_data, private_start + 0x1C)
+        height = read_i32(source_data, private_start + 0x20)
     except struct.error:
         return None
-    rect = plausible_rect(left, top, right, bottom)
+    rect = plausible_rect(left, top, left + width, top + height)
     if version != 1 or count <= 0 or count > 200 or not rect:
         return None
     return {"rect": rect, "sourceOffset": private_start + 0x14, "geometryConfidence": "serialized_entry"}
@@ -543,6 +543,28 @@ def attach_puzzle_fallbacks(
         component["rect"] = {"x": 0, "y": 0, "width": 580, "height": 480}
 
 
+def promote_full_page_bitmap_background(components: list[dict[str, Any]], has_background_bmp: bool) -> bool:
+    if has_background_bmp:
+        return False
+    for component in components:
+        if component.get("type") != "Bitmap_Holder":
+            continue
+        for asset in component.get("assets") or []:
+            rect = asset.get("rect") or component.get("rect") or {}
+            width = int(rect.get("width") or asset.get("width") or 0)
+            height = int(rect.get("height") or asset.get("height") or 0)
+            x = int(rect.get("x") or 0)
+            y = int(rect.get("y") or 0)
+            if x <= 0 and y <= 0 and width >= 600 and height >= 440:
+                asset["initiallyVisible"] = True
+                asset["z"] = min(int(asset.get("z") or component.get("z") or 0), -1)
+                component["visible"] = True
+                component["z"] = min(int(component.get("z") or 0), -1)
+                component["primaryAssetUrl"] = asset.get("url")
+                return True
+    return False
+
+
 def pick_rect(component_type: str, asset: dict[str, Any] | None, hints: dict[str, dict[int, dict[str, int]]]) -> tuple[dict[str, int], str, int]:
     component_type = runtime_component_type(component_type)
     width = int(asset.get("width") or 120) if asset else 120
@@ -688,6 +710,8 @@ def build_scene(meta_path: Path, web_root: Path, workspace_root: Path) -> dict[s
     palette = page_dir / "background_palette.bin"
 
     warnings = []
+    if promote_full_page_bitmap_background(components, background_bmp.exists()):
+        warnings.append("Promoted full-page BitmapHolder asset as background fallback.")
     if not background_bmp.exists() and meta.get("dib_size", 0):
         warnings.append("DIB exists in metadata, but converted background.bmp was not found.")
     if not background_bmp.exists() and not components:
