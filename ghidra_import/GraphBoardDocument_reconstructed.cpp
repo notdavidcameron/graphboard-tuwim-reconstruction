@@ -11,6 +11,8 @@
 //   004066f0 GraphBrdDoc_SerializePageData            (.BDF page files)
 //   004064c0 GraphBrdDoc_SerializeCursorAndGroupState (.GRP group files)
 //   004230a0 GraphBrdScriptEditor_SerializeText       (script text block)
+//   0042b920 GraphBrdCntrItem_Serialize               (component wrapper records)
+//   0041aad0 GraphBrdScriptEngine_Serialize           (parsed-script index state)
 //
 // Cross-checked byte-exact against START.PRJ (827 bytes), RZECZKA.BDF, and
 // CURSORS.GRP. See graphboard_file_formats.md for the narrative format notes.
@@ -431,4 +433,304 @@ BOOL GraphBrdDoc_SerializeCursorAndGroupState(CGraphBrdDoc *doc, CArchive *ar)
 
     ComponentList_Serialize(Field<void *>(doc, kOffGroupComponentList), ar);
     return 1;
+}
+
+// ===========================================================================
+// 0042b920  GraphBrdCntrItem_Serialize  ->  component wrapper records
+//
+// Serialized once per component inside every page/group component list:
+//
+//   u32 wrapperVersion(=1)
+//   u32 reflectedFunctionCount
+//   CString displayName                 (e.g. "Transparent_Video_Holder")
+//   u32 reflectedPropertyCount
+//   BYTE clsid[16]                      (duplicate of the ComponentList CLSID)
+//   FunctionMemberRecord[reflectedFunctionCount]
+//   PropertyMemberRecord[reflectedPropertyCount]
+//   <component-private state: interface vtable slot +0x44>
+//
+// The member records are a reflection cache of the component's IDispatch
+// surface; on load the dispatch-member cache is cleared and rebuilt from them.
+// ===========================================================================
+
+// In-memory member records. Pointer-sized fields keep the original x86 layout
+// only on 32-bit targets; the serializers below never rely on sizeof(record).
+struct FunctionMemberRecord {            // operator_new(0x1c)
+    uint32_t dispatchIdOrOffset;         // +0x00
+    uint32_t rawNameByteCount;           // +0x04
+    char    *rawName;                    // +0x08, rawNameByteCount+1 bytes incl. NUL
+    CString *typeOrReturnName;           // +0x0c
+    CString *displayName;                // +0x10
+    CString *descriptionOrHelpName;      // +0x14
+    uint16_t flagsOrInvokeKind;          // +0x18
+};
+
+struct PropertyMemberRecord {            // operator_new(0x14)
+    uint32_t rawNameByteCount;           // +0x00
+    char    *rawName;                    // +0x04, rawNameByteCount+1 bytes incl. NUL
+    uint32_t variantTypeOrDispatchMetadata; // +0x08
+    CString *displayName;                // +0x0c
+    uint16_t flagsOrInvokeKind;          // +0x10
+};
+
+// CGraphBrdCntrItem field offsets (COleClientItem-derived).
+static const size_t kOffItemFunctionTable  = 0x20;   // FunctionMemberRecord*[50] inline
+static const size_t kOffItemFunctionCount  = 0xe8;
+static const size_t kOffItemDisplayName    = 0xf0;   // CString
+static const size_t kOffItemClsid          = 0xf4;   // 16 raw bytes
+static const size_t kOffItemPropertyCount  = 0x104;
+static const size_t kOffItemPropertyTable  = 0x108;  // PropertyMemberRecord** (GlobalAlloc)
+static const size_t kOffItemComponentItf   = 0x10c;  // component interface pointer
+static const uint32_t kWrapperVersion      = 1;
+
+extern void GraphBrdCntrItem_ClearDispatchMemberCache(void *item);
+extern void ComponentInterface_Serialize(void *itf, CArchive *ar);  // vtable +0x44
+extern uint16_t CArchiveOps_ReadU16(CArchive *ar);   // ar >> WORD
+extern void     CArchiveOps_WriteU16(CArchive *ar, uint16_t v);
+
+static CString *NewArchiveCString(CArchive *ar)
+{
+    CString *s = static_cast<CString *>(operator_new(4));
+    CStringOps::Construct(s);
+    CStringOps::Extract(ar, s);
+    return s;
+}
+
+void GraphBrdCntrItem_Serialize(void *item, CArchive *ar)
+{
+    int &functionCount = Field<int>(item, kOffItemFunctionCount);
+    int &propertyCount = Field<int>(item, kOffItemPropertyCount);
+    FunctionMemberRecord **functionTable =
+        &Field<FunctionMemberRecord *>(item, kOffItemFunctionTable);
+    PropertyMemberRecord **&propertyTable =
+        Field<PropertyMemberRecord **>(item, kOffItemPropertyTable);
+
+    if (!CArchiveOps::IsStoring(ar)) {
+        GraphBrdCntrItem_ClearDispatchMemberCache(item);
+
+        (void)CArchiveOps::ReadU32(ar);              // wrapperVersion, ignored
+        functionCount = static_cast<int>(CArchiveOps::ReadU32(ar));
+        CStringOps::Extract(ar, &Field<CString>(item, kOffItemDisplayName));
+        propertyCount = static_cast<int>(CArchiveOps::ReadU32(ar));
+        CArchiveOps::Read(ar, &Field<uint8_t>(item, kOffItemClsid), 0x10);
+
+        for (int i = 0; i < functionCount; ++i) {
+            FunctionMemberRecord *rec =
+                static_cast<FunctionMemberRecord *>(operator_new(0x1c));
+            functionTable[i] = rec;
+            rec->dispatchIdOrOffset = CArchiveOps::ReadU32(ar);
+            rec->rawNameByteCount   = CArchiveOps::ReadU32(ar);
+            rec->rawName = static_cast<char *>(operator_new(rec->rawNameByteCount + 1));
+            CArchiveOps::Read(ar, rec->rawName, rec->rawNameByteCount + 1);
+            rec->typeOrReturnName      = NewArchiveCString(ar);
+            rec->displayName           = NewArchiveCString(ar);
+            rec->descriptionOrHelpName = NewArchiveCString(ar);
+            rec->flagsOrInvokeKind     = CArchiveOps_ReadU16(ar);
+        }
+
+        propertyTable = static_cast<PropertyMemberRecord **>(
+            GlobalLock(GlobalAlloc(0x42, propertyCount * 4 + 4)));
+        for (int i = 0; i < propertyCount; ++i) {
+            PropertyMemberRecord *rec =
+                static_cast<PropertyMemberRecord *>(operator_new(0x14));
+            propertyTable[i] = rec;
+            rec->rawNameByteCount = CArchiveOps::ReadU32(ar);
+            rec->rawName = static_cast<char *>(operator_new(rec->rawNameByteCount + 1));
+            CArchiveOps::Read(ar, rec->rawName, rec->rawNameByteCount + 1);
+            rec->variantTypeOrDispatchMetadata = CArchiveOps::ReadU32(ar);
+            rec->displayName       = NewArchiveCString(ar);
+            rec->flagsOrInvokeKind = CArchiveOps_ReadU16(ar);
+        }
+    } else {
+        CArchiveOps::WriteU32(ar, kWrapperVersion);
+        CArchiveOps::WriteU32(ar, static_cast<uint32_t>(functionCount));
+        CStringOps::Insert(ar, &Field<CString>(item, kOffItemDisplayName));
+        CArchiveOps::WriteU32(ar, static_cast<uint32_t>(propertyCount));
+        CArchiveOps::Write(ar, &Field<uint8_t>(item, kOffItemClsid), 0x10);
+
+        for (int i = 0; i < functionCount; ++i) {
+            FunctionMemberRecord *rec = functionTable[i];
+            CArchiveOps::WriteU32(ar, rec->dispatchIdOrOffset);
+            CArchiveOps::WriteU32(ar, rec->rawNameByteCount);
+            CArchiveOps::Write(ar, rec->rawName, rec->rawNameByteCount + 1);
+            CStringOps::Insert(ar, rec->typeOrReturnName);
+            CStringOps::Insert(ar, rec->displayName);
+            CStringOps::Insert(ar, rec->descriptionOrHelpName);
+            CArchiveOps_WriteU16(ar, rec->flagsOrInvokeKind);
+        }
+
+        for (int i = 0; i < propertyCount; ++i) {
+            PropertyMemberRecord *rec = propertyTable[i];
+            CArchiveOps::WriteU32(ar, rec->rawNameByteCount);
+            CArchiveOps::Write(ar, rec->rawName, rec->rawNameByteCount + 1);
+            CArchiveOps::WriteU32(ar, rec->variantTypeOrDispatchMetadata);
+            CStringOps::Insert(ar, rec->displayName);
+            CArchiveOps_WriteU16(ar, rec->flagsOrInvokeKind);
+        }
+    }
+
+    // Component-private state: the component DLL's serialize method sits at
+    // interface vtable slot +0x44 and reads/writes directly after the records.
+    void *componentItf = Field<void *>(item, kOffItemComponentItf);
+    if (componentItf != nullptr) {
+        ComponentInterface_Serialize(componentItf, ar);
+    }
+}
+
+// ===========================================================================
+// 0041aad0  GraphBrdScriptEngine_Serialize  ->  parsed-script index state
+//
+// Appears in .BDF right after the page script text (document field +0xb4).
+// It caches the parse results for the page script so the runtime can jump to
+// switch blocks and built-in calls without re-scanning the text. All offsets
+// are character offsets into the page script text.
+//
+//   u32 schemaVersion(=4)
+//   u32 switchBlockCount
+//   u32 engine+0x38, engine+0x3c, engine+0x30, engine+0x34   (parser state)
+//   repeat switchBlockCount:                (SwitchCaseRecord, 0x14 in memory)
+//       u32 blockStart                      (written twice; both copies are
+//       u32 blockStart                       rec+0x00, second wins on load)
+//       u32 caseCount
+//       u32 blockEnd
+//       u32 defaultBodyOffset
+//       repeat caseCount: u32 caseValue, u32 caseBodyOffset
+//   u32 builtinCallCount
+//   u32 builtinTokenOffsets[builtinCallCount]   (raw block, engine+0x11b4)
+//   u32 builtinCallKinds[builtinCallCount]      (raw block, engine+0x1344)
+//   if schema >= 2: u32 engine+0x44, +0x48, +0x4c, +0x50
+//   if schema >= 3: u32 engine+0x54
+//   if schema >= 4: u32 engine+0x58
+//
+// Tables are built by GraphBrdScript_IndexSwitchCaseBlocks (00426480) and
+// GraphBrdScript_IndexBuiltInCalls (00427dd0); the call records feed
+// GraphBrdScript_InvokeIndexedCall at runtime. Both tables cap at 100 entries.
+// ===========================================================================
+struct SwitchCaseEntry {                 // operator_new(8)
+    uint32_t caseValue;
+    uint32_t caseBodyOffset;
+};
+
+struct SwitchCaseRecord {                // operator_new(0x14)
+    uint32_t blockStart;                 // +0x00
+    uint32_t caseCount;                  // +0x04
+    SwitchCaseEntry **cases;             // +0x08 (GlobalAlloc'd pointer array)
+    uint32_t blockEnd;                   // +0x0c
+    uint32_t defaultBodyOffset;          // +0x10
+};
+
+// CGraphBrdScriptEngine field offsets.
+static const size_t kOffEngineSwitchTable   = 0x1020;  // SwitchCaseRecord*[100] inline
+static const size_t kOffEngineSwitchCount   = 0x11b0;
+static const size_t kOffEngineTokenOffsets  = 0x11b4;  // u32[100]
+static const size_t kOffEngineCallKinds     = 0x1344;  // u32[100]
+static const size_t kOffEngineCallCount     = 0x14d4;
+static const size_t kOffEngineRuntimeFlag   = 0x14e0;  // cleared on load
+// Serialized scalar parser state; exact roles not yet recovered.
+static const size_t kOffEngineState30 = 0x30, kOffEngineState34 = 0x34;
+static const size_t kOffEngineState38 = 0x38, kOffEngineState3c = 0x3c;
+static const size_t kOffEngineState44 = 0x44, kOffEngineState48 = 0x48;
+static const size_t kOffEngineState4c = 0x4c, kOffEngineState50 = 0x50;
+static const size_t kOffEngineState54 = 0x54, kOffEngineState58 = 0x58;
+static const uint32_t kScriptEngineSchema = 4;
+
+void GraphBrdScriptEngine_Serialize(void *engine, CArchive *ar)
+{
+    SwitchCaseRecord **switchTable = &Field<SwitchCaseRecord *>(engine, kOffEngineSwitchTable);
+    int      &switchCount  = Field<int>(engine, kOffEngineSwitchCount);
+    int      &callCount    = Field<int>(engine, kOffEngineCallCount);
+    uint32_t *tokenOffsets = &Field<uint32_t>(engine, kOffEngineTokenOffsets);
+    uint32_t *callKinds    = &Field<uint32_t>(engine, kOffEngineCallKinds);
+
+    if (!CArchiveOps::IsStoring(ar)) {
+        // Free the previous switch index before reading the new one.
+        for (int i = 0; i < switchCount; ++i) {
+            SwitchCaseRecord *rec = switchTable[i];
+            for (uint32_t j = 0; j < rec->caseCount; ++j) {
+                operator_delete(rec->cases[j]);
+            }
+            GlobalUnlock(GlobalHandle(rec->cases));
+            GlobalFree(GlobalHandle(rec->cases));
+            operator_delete(rec);
+        }
+
+        uint32_t schema = CArchiveOps::ReadU32(ar);
+        switchCount = static_cast<int>(CArchiveOps::ReadU32(ar));
+        Field<uint32_t>(engine, kOffEngineState38) = CArchiveOps::ReadU32(ar);
+        Field<uint32_t>(engine, kOffEngineState3c) = CArchiveOps::ReadU32(ar);
+        Field<uint32_t>(engine, kOffEngineState30) = CArchiveOps::ReadU32(ar);
+        Field<uint32_t>(engine, kOffEngineState34) = CArchiveOps::ReadU32(ar);
+
+        for (int i = 0; i < switchCount; ++i) {
+            SwitchCaseRecord *rec =
+                static_cast<SwitchCaseRecord *>(operator_new(0x14));
+            switchTable[i] = rec;
+            rec->blockStart = CArchiveOps::ReadU32(ar);   // legacy copy
+            rec->blockStart = CArchiveOps::ReadU32(ar);   // current copy wins
+            rec->caseCount  = CArchiveOps::ReadU32(ar);
+            rec->blockEnd   = CArchiveOps::ReadU32(ar);
+            rec->defaultBodyOffset = CArchiveOps::ReadU32(ar);
+            rec->cases = static_cast<SwitchCaseEntry **>(
+                GlobalLock(GlobalAlloc(0x42, rec->caseCount * 4)));
+            for (uint32_t j = 0; j < rec->caseCount; ++j) {
+                SwitchCaseEntry *entry =
+                    static_cast<SwitchCaseEntry *>(operator_new(8));
+                rec->cases[j] = entry;
+                entry->caseValue      = CArchiveOps::ReadU32(ar);
+                entry->caseBodyOffset = CArchiveOps::ReadU32(ar);
+            }
+        }
+
+        callCount = static_cast<int>(CArchiveOps::ReadU32(ar));
+        if (callCount != 0) {
+            CArchiveOps::Read(ar, tokenOffsets, callCount * 4);
+            CArchiveOps::Read(ar, callKinds, callCount * 4);
+        }
+
+        if (schema > 1) {
+            Field<uint32_t>(engine, kOffEngineState44) = CArchiveOps::ReadU32(ar);
+            Field<uint32_t>(engine, kOffEngineState48) = CArchiveOps::ReadU32(ar);
+            Field<uint32_t>(engine, kOffEngineState4c) = CArchiveOps::ReadU32(ar);
+            Field<uint32_t>(engine, kOffEngineState50) = CArchiveOps::ReadU32(ar);
+        }
+        if (schema > 2) {
+            Field<uint32_t>(engine, kOffEngineState54) = CArchiveOps::ReadU32(ar);
+        }
+        if (schema > 3) {
+            Field<uint32_t>(engine, kOffEngineState58) = CArchiveOps::ReadU32(ar);
+        }
+        Field<uint32_t>(engine, kOffEngineRuntimeFlag) = 0;
+    } else {
+        CArchiveOps::WriteU32(ar, kScriptEngineSchema);
+        CArchiveOps::WriteU32(ar, static_cast<uint32_t>(switchCount));
+        CArchiveOps::WriteU32(ar, Field<uint32_t>(engine, kOffEngineState38));
+        CArchiveOps::WriteU32(ar, Field<uint32_t>(engine, kOffEngineState3c));
+        CArchiveOps::WriteU32(ar, Field<uint32_t>(engine, kOffEngineState30));
+        CArchiveOps::WriteU32(ar, Field<uint32_t>(engine, kOffEngineState34));
+
+        for (int i = 0; i < switchCount; ++i) {
+            SwitchCaseRecord *rec = switchTable[i];
+            CArchiveOps::WriteU32(ar, rec->blockStart);
+            CArchiveOps::WriteU32(ar, rec->blockStart);
+            CArchiveOps::WriteU32(ar, rec->caseCount);
+            CArchiveOps::WriteU32(ar, rec->blockEnd);
+            CArchiveOps::WriteU32(ar, rec->defaultBodyOffset);
+            for (uint32_t j = 0; j < rec->caseCount; ++j) {
+                CArchiveOps::WriteU32(ar, rec->cases[j]->caseValue);
+                CArchiveOps::WriteU32(ar, rec->cases[j]->caseBodyOffset);
+            }
+        }
+
+        CArchiveOps::WriteU32(ar, static_cast<uint32_t>(callCount));
+        if (callCount != 0) {
+            CArchiveOps::Write(ar, tokenOffsets, callCount * 4);
+            CArchiveOps::Write(ar, callKinds, callCount * 4);
+        }
+        CArchiveOps::WriteU32(ar, Field<uint32_t>(engine, kOffEngineState44));
+        CArchiveOps::WriteU32(ar, Field<uint32_t>(engine, kOffEngineState48));
+        CArchiveOps::WriteU32(ar, Field<uint32_t>(engine, kOffEngineState4c));
+        CArchiveOps::WriteU32(ar, Field<uint32_t>(engine, kOffEngineState50));
+        CArchiveOps::WriteU32(ar, Field<uint32_t>(engine, kOffEngineState54));
+        CArchiveOps::WriteU32(ar, Field<uint32_t>(engine, kOffEngineState58));
+    }
 }

@@ -2,8 +2,9 @@
 
 Continuation from the initial `Tuwim.exe` serializer reconstruction, now cross-checked against `RZECZKA.BDF` and the running Ghidra MCP server.
 
-The four host-document serializers described below (`START.PRJ`, `.BDF`, `.GRP`,
-and the shared script-text block) have a source-style C++ reconstruction in
+The host serializers described below (`START.PRJ`, `.BDF`, `.GRP`, the shared
+script-text block, the reflected component wrapper, and the script engine
+state) have a source-style C++ reconstruction in
 `ghidra_import/GraphBoardDocument_reconstructed.cpp`, kept compile-checkable via
 `tools/compile_reconstructions.ps1`.
 
@@ -205,6 +206,47 @@ u16 flagsOrInvokeKind
 ```
 
 For `Sprite_Holder`, the final reflected property is `CompDisableDrag`; the component-private state begins immediately after its `u16 flags` at `0x00598572`.
+
+## Script Engine State
+
+Serializer: `GraphBrdScriptEngine_Serialize` at `Tuwim.exe:0041aad0`.
+
+Appears in `.BDF` immediately after the page script text block (document field
+`+0xb4`). It caches parse results for the page script; all offsets are
+character offsets into the page script text.
+
+```text
+u32 schemaVersion                   // current exe writes 4; RZECZKA.BDF has 2
+u32 switchBlockCount                // max 100
+u32 parserState[4]                  // engine +0x38, +0x3c, +0x30, +0x34
+repeat switchBlockCount:
+  u32 blockStart                    // written twice; second copy wins on load
+  u32 blockStart
+  u32 caseCount
+  u32 blockEnd
+  u32 defaultBodyOffset
+  repeat caseCount:
+    u32 caseValue
+    u32 caseBodyOffset
+u32 builtinCallCount                // max 100
+u32 builtinTokenOffsets[builtinCallCount]   // engine +0x11b4
+u32 builtinCallKinds[builtinCallCount]      // engine +0x1344
+if schema >= 2: u32 engine +0x44, +0x48, +0x4c, +0x50
+if schema >= 3: u32 engine +0x54
+if schema >= 4: u32 engine +0x58
+```
+
+The switch index is built by `GraphBrdScript_IndexSwitchCaseBlocks`
+(`Tuwim.exe:00426480`) and the call records by
+`GraphBrdScript_IndexBuiltInCalls` (`Tuwim.exe:00427dd0`); the call records
+feed `GraphBrdScript_InvokeIndexedCall` at runtime.
+
+Verified against `RZECZKA.BDF` (engine state at `0xdfb493`): schema 2,
+11 switch blocks whose offsets all fall inside the 19,831-byte script text,
+one built-in call record pointing at `SetTextMode(void)`, and the schema-2
+scalar fields `19598, 0, 19730, 0` (values near the text length suggest these
+are also text offsets, roles not yet recovered). The block ends 4 bytes before
+EOF; the remaining u32 is the `COleDocument::Serialize` trailing state.
 
 ## Document Field Roles
 
