@@ -1,4 +1,7 @@
+#include "graphboard/component.hpp"
 #include "graphboard/format.hpp"
+#include "graphboard/guid.hpp"
+#include "graphboard/holders.hpp"
 
 #include <cassert>
 #include <cstdint>
@@ -29,6 +32,17 @@ void appendArchiveString(std::vector<std::uint8_t>& bytes, const std::string& va
     bytes.insert(bytes.end(), value.begin(), value.end());
 }
 
+// Reflected member names: u32 byteCount then byteCount+1 bytes incl. trailing NUL.
+void appendCountedNulName(std::vector<std::uint8_t>& bytes, const std::string& value) {
+    appendU32(bytes, static_cast<std::uint32_t>(value.size()));
+    bytes.insert(bytes.end(), value.begin(), value.end());
+    bytes.push_back(0);
+}
+
+void appendGuid(std::vector<std::uint8_t>& bytes, const graphboard::Guid& guid) {
+    bytes.insert(bytes.end(), guid.bytes.begin(), guid.bytes.end());
+}
+
 void appendFixedString(std::vector<std::uint8_t>& bytes, const std::string& value, std::size_t width) {
     assert(value.size() <= width);
     bytes.insert(bytes.end(), value.begin(), value.end());
@@ -43,66 +57,211 @@ std::string encodeSignature(const std::string& value) {
     return out;
 }
 
+void testProjectManifest() {
+    std::vector<std::uint8_t> bytes;
+    appendU32(bytes, 1);
+    appendArchiveString(bytes, "intro.bdf");
+    appendArchiveString(bytes, "");
+    appendU32(bytes, 11);
+    appendU32(bytes, 2);
+    appendArchiveString(bytes, "intro.bdf");
+    appendArchiveString(bytes, "radio.bdf");
+    appendU32(bytes, 1);
+    appendArchiveString(bytes, "cursors.grp");
+    appendArchiveString(bytes, encodeSignature("Julian Tuwim"));
+    appendU32(bytes, 1);                                    // globalScriptVersion
+    appendArchiveString(bytes, "int global1=0;");           // globalScript
+
+    graphboard::BinaryReader reader(bytes);
+    const auto project = graphboard::parseProjectManifest(reader);
+    assert(project.version == 1);
+    assert(project.startupPage == "intro.bdf");
+    assert(project.audioPresetIndex == 11);
+    assert(project.pageNames.size() == 2);
+    assert(project.groupNames.size() == 1);
+    assert(project.decodedSignature == "Julian Tuwim");
+    assert(project.globalScriptVersion == 1);
+    assert(project.globalScript == "int global1=0;");
+    assert(reader.eof());
+}
+
+void testBdfHeader() {
+    std::vector<std::uint8_t> bytes;
+    appendFixedString(bytes, "YDP Board data file. Ver:1 1996.07.", 100);
+    appendU32(bytes, 1);
+    appendU32(bytes, 0);
+    appendU32(bytes, 0);
+    appendU32(bytes, 640);
+    appendU32(bytes, 480);
+    appendU32(bytes, 0xffffffffu);
+    appendU32(bytes, 8);
+    appendU32(bytes, 1);
+    appendU8(bytes, 132);
+    appendU32(bytes, 4);
+    appendU8(bytes, 1);
+    appendU8(bytes, 2);
+    appendU8(bytes, 3);
+    appendU8(bytes, 4);
+    appendU32(bytes, 3);
+    appendU8(bytes, 9);
+    appendU8(bytes, 8);
+    appendU8(bytes, 7);
+    appendU32(bytes, 1);
+
+    graphboard::BinaryReader reader(bytes);
+    const auto header = graphboard::parseBdfHeader(reader);
+    assert(header.version == 1);
+    assert(header.pageRect.right == 640);
+    assert(header.pageRect.bottom == 480);
+    assert(header.minLayer == -1);
+    assert(header.backgroundColorIndex == 132);
+    assert(header.paletteByteCount == 4);
+    assert(header.dibByteCount == 3);
+    assert(header.componentListOffset == 148);
+}
+
+void testGuidRoundTrip() {
+    const std::string text = "DA768116-5341-11D0-B444-008048EB5D40";
+    const auto guid = graphboard::Guid::fromString(text);
+    // On-disk byte order: Data1/Data2/Data3 little-endian, Data4 raw.
+    assert(guid.bytes[0] == 0x16);
+    assert(guid.bytes[1] == 0x81);
+    assert(guid.bytes[2] == 0x76);
+    assert(guid.bytes[3] == 0xDA);
+    assert(guid.bytes[4] == 0x41);
+    assert(guid.bytes[5] == 0x53);
+    assert(guid.bytes[6] == 0xD0);
+    assert(guid.bytes[7] == 0x11);
+    assert(guid.bytes[8] == 0xB4);
+    assert(guid.bytes[15] == 0x40);
+    assert(guid.toString() == text);
+
+    const auto* info = graphboard::lookupHolder(guid);
+    assert(info != nullptr);
+    assert(info->kind == graphboard::HolderKind::HotSpotHolder);
+    assert(info->displayName == "HotSpot_Holder");
+}
+
+void testComponentWrapper() {
+    const auto clsid = graphboard::Guid::fromString("DA768116-5341-11D0-B444-008048EB5D40");
+    std::vector<std::uint8_t> bytes;
+    appendU32(bytes, 1);                 // wrapperVersion
+    appendU32(bytes, 1);                 // functionCount
+    appendArchiveString(bytes, "HotSpot_Holder");
+    appendU32(bytes, 1);                 // propertyCount
+    appendGuid(bytes, clsid);
+    // one function member
+    appendU32(bytes, 0x60020000);        // dispatchIdOrOffset
+    appendCountedNulName(bytes, "EnableHotSpot");
+    appendArchiveString(bytes, "void");
+    appendArchiveString(bytes, "EnableHotSpot");
+    appendArchiveString(bytes, "");
+    appendU16(bytes, 1);                 // flagsOrInvokeKind
+    // one property member
+    appendCountedNulName(bytes, "CompDisableDrag");
+    appendU32(bytes, 0x0b);              // variantType
+    appendArchiveString(bytes, "CompDisableDrag");
+    appendU16(bytes, 4);                 // flagsOrInvokeKind
+
+    graphboard::BinaryReader reader(bytes);
+    const auto wrapper = graphboard::parseComponentWrapper(reader);
+    assert(wrapper.wrapperVersion == 1);
+    assert(wrapper.displayName == "HotSpot_Holder");
+    assert(wrapper.clsid == clsid);
+    assert(wrapper.functions.size() == 1);
+    assert(wrapper.functions[0].rawName == "EnableHotSpot");
+    assert(wrapper.functions[0].typeOrReturnName == "void");
+    assert(wrapper.properties.size() == 1);
+    assert(wrapper.properties[0].rawName == "CompDisableDrag");
+    assert(wrapper.properties[0].variantTypeOrDispatchMetadata == 0x0b);
+    assert(reader.eof());
+}
+
+void testComponentListItem() {
+    const auto clsid = graphboard::Guid::fromString("DA768116-5341-11D0-B444-008048EB5D40");
+    std::vector<std::uint8_t> bytes;
+    appendU32(bytes, 1);                 // list version
+    appendU32(bytes, 1);                 // list count
+    // item = container CLSID + CntrItem record + private state
+    appendGuid(bytes, clsid);            // leading container-written CLSID
+    appendU32(bytes, 1);                 // wrapperVersion
+    appendU32(bytes, 0);                 // functionCount
+    appendArchiveString(bytes, "HotSpot_Holder");
+    appendU32(bytes, 0);                 // propertyCount
+    appendGuid(bytes, clsid);            // duplicate CLSID inside the wrapper
+
+    graphboard::BinaryReader reader(bytes);
+    const auto header = graphboard::parseComponentListHeader(reader);
+    assert(header.version == 1);
+    assert(header.count == 1);
+    const auto item = graphboard::parseComponentListItem(reader);
+    assert(item.clsid == clsid);
+    assert(item.wrapper.clsid == clsid);
+    assert(item.wrapper.displayName == "HotSpot_Holder");
+    const auto* info = graphboard::lookupHolder(item.clsid);
+    assert(info != nullptr && info->kind == graphboard::HolderKind::HotSpotHolder);
+    assert(reader.eof());
+}
+
+void appendHotSpotRecord(std::vector<std::uint8_t>& bytes, std::int32_t left, std::int32_t top,
+                         std::int32_t right, std::int32_t bottom, std::int32_t layer,
+                         std::int32_t enabled) {
+    std::vector<std::uint8_t> record(100, 0);
+    auto put = [&record](std::size_t off, std::int32_t v) {
+        const auto u = static_cast<std::uint32_t>(v);
+        record[off] = static_cast<std::uint8_t>(u & 0xff);
+        record[off + 1] = static_cast<std::uint8_t>((u >> 8) & 0xff);
+        record[off + 2] = static_cast<std::uint8_t>((u >> 16) & 0xff);
+        record[off + 3] = static_cast<std::uint8_t>((u >> 24) & 0xff);
+    };
+    put(0x00, left);
+    put(0x04, top);
+    put(0x08, right);
+    put(0x0c, bottom);
+    put(0x1c, layer);
+    put(0x20, enabled);
+    bytes.insert(bytes.end(), record.begin(), record.end());
+}
+
+void testHotSpotHolderState() {
+    std::vector<std::uint8_t> bytes;
+    appendU32(bytes, 0);                 // version
+    appendU8(bytes, 0);                  // flag0
+    appendU8(bytes, 1);                  // flag1
+    appendU8(bytes, 0);                  // flag2
+    appendU32(bytes, 2);                 // hotspotCount
+    appendHotSpotRecord(bytes, 589, 1, 639, 476, 3, 1);
+    appendArchiveString(bytes, "prawo");
+    appendHotSpotRecord(bytes, 1, 4, 47, 477, 3, 0);
+    appendArchiveString(bytes, "lewo");
+    appendU32(bytes, 0x11);              // field1f0
+    appendU32(bytes, 0x22);              // field1c8
+
+    graphboard::BinaryReader reader(bytes);
+    const auto state = graphboard::parseHotSpotHolderState(reader);
+    assert(state.version == 0);
+    assert(state.flag1 == 1);
+    assert(state.hotspots.size() == 2);
+    assert(state.hotspots[0].left == 589);
+    assert(state.hotspots[0].bottom == 476);
+    assert(state.hotspots[0].layer == 3);
+    assert(state.hotspots[0].enabled == 1);
+    assert(state.hotspots[0].name == "prawo");
+    assert(state.hotspots[1].enabled == 0);
+    assert(state.hotspots[1].name == "lewo");
+    assert(state.field1f0 == 0x11);
+    assert(state.field1c8 == 0x22);
+    assert(reader.eof());
+}
+
 } // namespace
 
 int main() {
-    {
-        std::vector<std::uint8_t> bytes;
-        appendU32(bytes, 1);
-        appendArchiveString(bytes, "intro.bdf");
-        appendArchiveString(bytes, "");
-        appendU32(bytes, 11);
-        appendU32(bytes, 2);
-        appendArchiveString(bytes, "intro.bdf");
-        appendArchiveString(bytes, "radio.bdf");
-        appendU32(bytes, 1);
-        appendArchiveString(bytes, "cursors.grp");
-        appendArchiveString(bytes, encodeSignature("Julian Tuwim"));
-        appendU32(bytes, 0x12345678);
-
-        graphboard::BinaryReader reader(bytes);
-        const auto project = graphboard::parseProjectManifest(reader);
-        assert(project.version == 1);
-        assert(project.startupPage == "intro.bdf");
-        assert(project.audioPresetIndex == 11);
-        assert(project.pageNames.size() == 2);
-        assert(project.groupNames.size() == 1);
-        assert(project.decodedSignature == "Julian Tuwim");
-        assert(project.trailingAudioManagerBytes == 4);
-    }
-
-    {
-        std::vector<std::uint8_t> bytes;
-        appendFixedString(bytes, "YDP Board data file. Ver:1 1996.07.", 100);
-        appendU32(bytes, 1);
-        appendU32(bytes, 0);
-        appendU32(bytes, 0);
-        appendU32(bytes, 640);
-        appendU32(bytes, 480);
-        appendU32(bytes, 0xffffffffu);
-        appendU32(bytes, 8);
-        appendU32(bytes, 1);
-        appendU8(bytes, 132);
-        appendU32(bytes, 4);
-        appendU8(bytes, 1);
-        appendU8(bytes, 2);
-        appendU8(bytes, 3);
-        appendU8(bytes, 4);
-        appendU32(bytes, 3);
-        appendU8(bytes, 9);
-        appendU8(bytes, 8);
-        appendU8(bytes, 7);
-        appendU32(bytes, 1);
-
-        graphboard::BinaryReader reader(bytes);
-        const auto header = graphboard::parseBdfHeader(reader);
-        assert(header.version == 1);
-        assert(header.pageRect.right == 640);
-        assert(header.pageRect.bottom == 480);
-        assert(header.minLayer == -1);
-        assert(header.backgroundColorIndex == 132);
-        assert(header.paletteByteCount == 4);
-        assert(header.dibByteCount == 3);
-        assert(header.componentListOffset == 148);
-    }
+    testProjectManifest();
+    testBdfHeader();
+    testGuidRoundTrip();
+    testComponentWrapper();
+    testComponentListItem();
+    testHotSpotHolderState();
+    return 0;
 }

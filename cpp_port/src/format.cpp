@@ -35,8 +35,10 @@ ProjectManifest parseProjectManifest(BinaryReader& reader) {
     project.groupNames = readStringTable(reader);
     project.encodedSignature = reader.readArchiveString();
     project.decodedSignature = decodeShiftedSignature(project.encodedSignature);
-    project.trailingAudioManagerOffset = reader.position();
-    project.trailingAudioManagerBytes = reader.remaining();
+    // Group/global script editor block (GraphBrdScriptEditor_SerializeText):
+    // u32 version, then the project-wide global script as a CString.
+    project.globalScriptVersion = reader.readU32();
+    project.globalScript = reader.readArchiveString();
     return project;
 }
 

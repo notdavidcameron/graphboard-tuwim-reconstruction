@@ -166,9 +166,30 @@ The six wrappers validate by the host `GraphBrdCntrItem_Serialize` shape: CLSID,
 
 The original quick scan missed `MultiBitmap` because its display name does not end in `_Holder`.
 
+## Component List Framing
+
+Container serializer: `ComponentList_Serialize` (MFC `COleDocument` item list,
+document fields `+0xa4` page / `+0xa8` group). Confirmed against `RZECZKA.BDF`
+(page component list at `0x048d`) by the `cpp_port` walker:
+
+```text
+u32 version                         // currently 1
+u32 count
+repeat count:
+  GUID clsid                        // 16 raw bytes, written by the container
+  <GraphBrdCntrItem_Serialize record>   // begins 16 bytes after the item start
+  <ComponentPrivateState>               // holder-specific
+```
+
+The per-item leading `clsid` is what selects the holder class; the wrapper record
+below carries a **duplicate** of it. The "wrapper offset" values in the component
+list dumps above point at this leading `clsid`; the `CntrItem` record (starting
+with `u32 version`) begins 16 bytes later. There is no additional inter-item tag.
+
 ## Reflected Wrapper Notes
 
-Serializer: `GraphBrdCntrItem_Serialize` at `Tuwim.exe:0042b920`.
+Serializer: `GraphBrdCntrItem_Serialize` at `Tuwim.exe:0042b920`. This record is
+what follows the per-item leading CLSID described above.
 
 Layout:
 
@@ -177,7 +198,7 @@ u32 version                         // currently 1
 u32 reflectedFunctionCount
 CString displayName
 u32 reflectedPropertyCount
-GUID clsid                          // duplicate of ComponentList CLSID
+GUID clsid                          // duplicate of the leading ComponentList CLSID
 FunctionMemberRecord reflectedFunctionRecords[reflectedFunctionCount]
 PropertyMemberRecord reflectedPropertyRecords[reflectedPropertyCount]
 ComponentPrivateState

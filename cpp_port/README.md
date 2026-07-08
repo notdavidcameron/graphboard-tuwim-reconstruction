@@ -11,14 +11,27 @@ plumbing.
 
 ## Current Scope
 
-- MFC `CArchive` string decoding.
-- `START.PRJ` project manifest parsing.
-- Top-level `.BDF` page header parsing.
-- A small `gbinspect` command-line tool that prints parsed summaries as JSON.
+- MFC `CArchive` string decoding (`binary_reader`).
+- `START.PRJ` project manifest parsing, including the trailing global-script block
+  (`format`). Verified byte-exact against the real `START.PRJ`.
+- Top-level `.BDF` page header parsing (`format`).
+- OLE `CLSID`/GUID handling (`guid`).
+- Page/group component-list walking (`component`): the container framing
+  (per-item leading CLSID) plus the reflected `GraphBrdCntrItem` wrapper record
+  (functions/properties). Verified against `RZECZKA.BDF`.
+- A holder registry (`holders`) mapping the six confirmed wrapper CLSIDs to their
+  identity, implementing DLL, and serializer anchor, with a note on which
+  component-private payloads this port can currently parse.
+- The `HotSpot_Holder` component-private state parser (byte-exact vs `RZECZKA.BDF`).
+- A `gbinspect` command-line tool that prints parsed summaries as JSON, walking a
+  page's components as far as the implemented private-state parsers allow.
 
-Component-private payloads such as TransparentVideoHolder, BitmapHolder,
-SpriteHolder, and SoundHolder should be added as focused modules as their layouts
-become stable.
+The remaining component-private payloads (TransparentVideoHolder, SpriteHolder,
+Text_Holder, Sound_Holder, MultiBitmap) are documented in
+`../graphboard_file_formats.md` and registered in `holders`; each should be added
+as a focused parser module. Because a component's private block can only be
+skipped by fully parsing it, the walker stops at the first component whose private
+state is not yet implemented and reports how far it got.
 
 ## Build
 

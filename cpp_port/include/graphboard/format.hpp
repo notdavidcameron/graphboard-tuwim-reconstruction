@@ -20,13 +20,15 @@ struct ProjectManifest {
     std::uint32_t version = 0;
     std::string startupPage;
     std::string currentPageOrGroupState;
-    std::uint32_t audioPresetIndex = 0;
+    std::uint32_t audioPresetIndex = 0;   // audioManager+0x20; only project field it owns
     std::vector<std::string> pageNames;
     std::vector<std::string> groupNames;
     std::string encodedSignature;
     std::string decodedSignature;
-    std::size_t trailingAudioManagerOffset = 0;
-    std::size_t trailingAudioManagerBytes = 0;
+    // Trailing block is the group/global script editor's text (doc +0xa0),
+    // written by GraphBrdScriptEditor_SerializeText, NOT audio-manager state.
+    std::uint32_t globalScriptVersion = 0;
+    std::string globalScript;
 };
 
 struct BdfHeader {

@@ -17,6 +17,8 @@ FetchContent_MakeAvailable(nlohmann_json)
 add_library(graphboard_core
     src/binary_reader.cpp
     src/format.cpp
+    src/component.cpp
+    src/holders.cpp
 )
 
 target_include_directories(graphboard_core PUBLIC
@@ -28,6 +30,11 @@ add_executable(gbinspect
 )
 
 target_link_libraries(gbinspect PRIVATE graphboard_core nlohmann_json::nlohmann_json)
+
+if(WIN32)
+    # CommandLineToArgvW for lossless non-ASCII path handling.
+    target_link_libraries(gbinspect PRIVATE shell32)
+endif()
 
 include(CTest)
 if(BUILD_TESTING)
