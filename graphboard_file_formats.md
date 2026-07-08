@@ -5,7 +5,7 @@ Continuation from the initial `Tuwim.exe` serializer reconstruction, now cross-c
 The host serializers described below (`START.PRJ`, `.BDF`, `.GRP`, the shared
 script-text block, the reflected component wrapper, and the script engine
 state) have a source-style C++ reconstruction in
-`ghidra_import/GraphBoardDocument_reconstructed.cpp`, kept compile-checkable via
+`cpp_port/reconstructed/GraphBoardDocument_reconstructed.cpp`, kept compile-checkable via
 `tools/compile_reconstructions.ps1`.
 
 ## Shared Encoding
@@ -254,7 +254,7 @@ Each component's private block follows its reflected wrapper and is written by
 the component DLL's own serialize method (reached through the wrapper interface
 vtable slot `+0x44`). Two component-private serializers have now been recovered
 directly from their DLLs and reconstructed in
-`ghidra_import/ComponentHolders_reconstructed.cpp`.
+`cpp_port/reconstructed/ComponentHolders_reconstructed.cpp`.
 
 ### `Sprite_Holder`
 
@@ -389,7 +389,7 @@ Targeted check in `TransparentVideoHolder.dll`:
 - Holder serialize/load routine: `TransparentVideoHolder.dll:10007af0`, manually defined in Ghidra as `TVH_SerializeOrDeserialize`.
 - Board-video stream setup/write helpers: `FUN_1000a620`, `FUN_1000a880`, `FUN_1000aab0`.
 - Audio rewrite helper: `FUN_1000ab90`.
-- Source-style C++ reconstruction: `ghidra_import/TransparentVideoHolder_reconstructed.cpp`.
+- Source-style C++ reconstruction: `cpp_port/reconstructed/TransparentVideoHolder_reconstructed.cpp`.
 
 The component-private block stores one or more custom streams whose header starts with the ASCII string `Board Video File Ver:0`. The block begins with:
 

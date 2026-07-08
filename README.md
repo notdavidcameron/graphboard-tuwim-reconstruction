@@ -10,6 +10,7 @@ Tools, notes, extracted assets, and a static HTML scene viewer for recovered Gra
 - `graphboard_file_formats.md` documents the recovered file-format structures and Ghidra findings.
 - `extracted_assets/` contains the recovered visual/audio assets used by the viewer.
 - `ghidra_import/` contains component DLL references/decompilation notes used during reverse engineering.
+- `cpp_port/` contains the C++ decompilation/reconstruction work: `reconstructed/` holds the compile-checkable source-style serializer reconstructions.
 
 ## Current Runtime Coverage
 
@@ -53,7 +54,7 @@ python .\graphboard_export_scene.py --extracted .\extracted_assets --output .\we
 
 ## Compile Reconstruction Notes
 
-The source-style C++ reconstructions under `ghidra_import/` are kept compile-checkable as object files. With Chocolatey-installed `mingw`, `cmake`, and `ninja`, run:
+The source-style C++ reconstructions under `cpp_port/reconstructed/` are kept compile-checkable as object files. With Chocolatey-installed `mingw`, `cmake`, and `ninja`, run:
 
 ```powershell
 .\tools\compile_reconstructions.ps1
