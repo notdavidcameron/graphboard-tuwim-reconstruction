@@ -22,16 +22,17 @@ plumbing.
 - A holder registry (`holders`) mapping the six confirmed wrapper CLSIDs to their
   identity, implementing DLL, and serializer anchor, with a note on which
   component-private payloads this port can currently parse.
-- The `HotSpot_Holder` component-private state parser (byte-exact vs `RZECZKA.BDF`).
+- Component-private state parsers, each byte-exact vs `RZECZKA.BDF`:
+  `HotSpot_Holder`, `Sprite_Holder`, `MultiBitmap`, `Transparent_Video_Holder`.
 - A `gbinspect` command-line tool that prints parsed summaries as JSON, walking a
   page's components as far as the implemented private-state parsers allow.
 
-The remaining component-private payloads (TransparentVideoHolder, SpriteHolder,
-Text_Holder, Sound_Holder, MultiBitmap) are documented in
-`../graphboard_file_formats.md` and registered in `holders`; each should be added
-as a focused parser module. Because a component's private block can only be
-skipped by fully parsing it, the walker stops at the first component whose private
-state is not yet implemented and reports how far it got.
+The two remaining payloads — `Text_Holder` (plus its trailing FontControl font
+block) and `Sound_Holder` — have fully recovered, real-file-verified layouts and
+a step-by-step implementation plan in `docs/holder_recovery_notes.md`. Because a
+component's private block can only be skipped by fully parsing it, the walker
+stops at the first component whose private state is not yet implemented and
+reports how far it got.
 
 ## Build
 

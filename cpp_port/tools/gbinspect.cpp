@@ -83,6 +83,79 @@ json wrapperToJson(const ComponentWrapper& wrapper) {
     return out;
 }
 
+json spriteStateToJson(const graphboard::SpriteHolderState& state) {
+    json definitions = json::array();
+    for (const auto& definition : state.definitions) {
+        definitions.push_back({
+            {"name", definition.name},
+            {"width", definition.width},
+            {"height", definition.height},
+            {"blobByteCount", definition.blobByteCount},
+            {"blobOffset", definition.blobOffset},
+        });
+    }
+    json instances = json::array();
+    for (const auto& instance : state.instances) {
+        instances.push_back({
+            {"definitionIndex", instance.definitionIndex},
+            {"field04", instance.field04},
+            {"posX", instance.posX},
+            {"posY", instance.posY},
+        });
+    }
+    return {
+        {"version", state.version},
+        {"definitionCount", state.definitions.size()},
+        {"definitions", definitions},
+        {"instanceCount", state.instances.size()},
+        {"instances", instances},
+    };
+}
+
+json multiBitmapStateToJson(const graphboard::MultiBitmapState& state) {
+    json records = json::array();
+    for (const auto& record : state.records) {
+        records.push_back({
+            {"name", record.name},
+            {"width", record.width},
+            {"height", record.height},
+            {"pixelByteCount", record.pixelByteCount},
+            {"pixelOffset", record.pixelOffset},
+            {"pixelsAreRawIndexed", record.pixelsAreRawIndexed},
+        });
+    }
+    return {
+        {"version", state.version},
+        {"recordCount", state.records.size()},
+        {"records", records},
+    };
+}
+
+json transparentVideoStateToJson(const graphboard::TransparentVideoHolderState& state) {
+    json entries = json::array();
+    for (const auto& entry : state.entries) {
+        entries.push_back({
+            {"streamOffset", entry.stream.streamOffset},
+            {"streamByteCount", entry.stream.streamByteCount},
+            {"magicOk", entry.stream.magic == 0xada77777u},
+            {"frameDurationMs", entry.stream.frameDurationMs},
+            {"videoSize", {entry.stream.width, entry.stream.height}},
+            {"chunkRecordCount", entry.stream.chunkRecordCount},
+            {"frameCount", entry.stream.frameCount},
+            {"audioSampleRate", entry.stream.audioSampleRate},
+            {"original", {entry.originalX, entry.originalY, entry.originalZ}},
+            {"stage", {entry.stageX, entry.stageY, entry.stageZ}},
+            {"stillFrameOffset", entry.stillFrameOffset},
+            {"stillFrameByteCount", entry.stillFrameByteCount},
+        });
+    }
+    return {
+        {"version", state.version},
+        {"entryCount", state.entries.size()},
+        {"entries", entries},
+    };
+}
+
 json hotspotStateToJson(const HotSpotHolderState& state) {
     json hotspots = json::array();
     for (const auto& hotspot : state.hotspots) {
@@ -117,9 +190,23 @@ json componentListToJson(graphboard::BinaryReader& reader) {
         component["index"] = i;
 
         const auto* info = graphboard::lookupHolder(item.clsid);
-        if (info && info->kind == graphboard::HolderKind::HotSpotHolder) {
+        const auto kind = info ? info->kind : graphboard::HolderKind::Unknown;
+        if (kind == graphboard::HolderKind::HotSpotHolder) {
             component["privateStateParsed"] = true;
             component["privateState"] = hotspotStateToJson(graphboard::parseHotSpotHolderState(reader));
+            components.push_back(std::move(component));
+        } else if (kind == graphboard::HolderKind::SpriteHolder) {
+            component["privateStateParsed"] = true;
+            component["privateState"] = spriteStateToJson(graphboard::parseSpriteHolderState(reader));
+            components.push_back(std::move(component));
+        } else if (kind == graphboard::HolderKind::MultiBitmap) {
+            component["privateStateParsed"] = true;
+            component["privateState"] = multiBitmapStateToJson(graphboard::parseMultiBitmapState(reader));
+            components.push_back(std::move(component));
+        } else if (kind == graphboard::HolderKind::TransparentVideoHolder) {
+            component["privateStateParsed"] = true;
+            component["privateState"] =
+                transparentVideoStateToJson(graphboard::parseTransparentVideoHolderState(reader));
             components.push_back(std::move(component));
         } else {
             component["privateStateParsed"] = false;

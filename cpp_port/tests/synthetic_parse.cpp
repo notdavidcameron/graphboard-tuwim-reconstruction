@@ -254,6 +254,122 @@ void testHotSpotHolderState() {
     assert(reader.eof());
 }
 
+void testSpriteHolderState() {
+    std::vector<std::uint8_t> bytes;
+    appendU32(bytes, 1);                 // version
+    appendU32(bytes, 1);                 // definitionCount
+    appendU32(bytes, 2);                 // instanceCount
+    // one definition blob: 0x90 bytes, name at +0x04, width/height +0x80/+0x84
+    appendU32(bytes, 0x90);              // blobByteCount
+    std::vector<std::uint8_t> blob(0x90, 0);
+    const std::string name = "rzeczka";
+    for (std::size_t i = 0; i < name.size(); ++i) blob[0x04 + i] = static_cast<std::uint8_t>(name[i]);
+    blob[0x80] = 73;                     // width
+    blob[0x84] = 59;                     // height
+    bytes.insert(bytes.end(), blob.begin(), blob.end());
+    // two instance records
+    for (std::uint32_t i = 0; i < 2; ++i) {
+        std::vector<std::uint8_t> record(0x8c, 0);
+        record[0x00] = 0;                                       // definitionIndex
+        record[0x04] = static_cast<std::uint8_t>(8 - i);        // field04
+        record[0x08] = static_cast<std::uint8_t>(10 + i);       // posX
+        record[0x0c] = static_cast<std::uint8_t>(20 + i);       // posY
+        bytes.insert(bytes.end(), record.begin(), record.end());
+    }
+
+    graphboard::BinaryReader reader(bytes);
+    const auto state = graphboard::parseSpriteHolderState(reader);
+    assert(state.version == 1);
+    assert(state.definitions.size() == 1);
+    assert(state.definitions[0].name == "rzeczka");
+    assert(state.definitions[0].width == 73);
+    assert(state.definitions[0].height == 59);
+    assert(state.instances.size() == 2);
+    assert(state.instances[0].field04 == 8);
+    assert(state.instances[1].posX == 11);
+    assert(state.instances[1].posY == 21);
+    assert(reader.eof());
+}
+
+void testMultiBitmapState() {
+    std::vector<std::uint8_t> bytes;
+    appendU32(bytes, 1);                 // version
+    appendU32(bytes, 1);                 // recordCount
+    appendU32(bytes, 6);                 // pixelByteCount (== 3x2 -> raw indexed)
+    for (std::uint8_t i = 0; i < 6; ++i) appendU8(bytes, i);
+    std::vector<std::uint8_t> metadata(0xc0, 0);
+    metadata[0x10] = 3;                  // width
+    metadata[0x14] = 2;                  // height
+    const std::string name = "przycisk";
+    for (std::size_t i = 0; i < name.size(); ++i) metadata[0x28 + i] = static_cast<std::uint8_t>(name[i]);
+    bytes.insert(bytes.end(), metadata.begin(), metadata.end());
+
+    graphboard::BinaryReader reader(bytes);
+    const auto state = graphboard::parseMultiBitmapState(reader);
+    assert(state.version == 1);
+    assert(state.records.size() == 1);
+    assert(state.records[0].width == 3);
+    assert(state.records[0].height == 2);
+    assert(state.records[0].name == "przycisk");
+    assert(state.records[0].pixelsAreRawIndexed);
+    assert(state.records[0].pixelOffset == 12);
+    assert(reader.eof());
+}
+
+void testTransparentVideoHolderState() {
+    std::vector<std::uint8_t> bytes;
+    appendU32(bytes, 3);                 // version
+    appendU32(bytes, 1);                 // entryCount
+    // stream: fixed 0x4e8 header only (no chunk records)
+    appendU32(bytes, 0x4e8);             // streamByteCount
+    std::vector<std::uint8_t> header(0x4e8, 0);
+    auto putU32 = [&header](std::size_t off, std::uint32_t v) {
+        header[off] = static_cast<std::uint8_t>(v & 0xff);
+        header[off + 1] = static_cast<std::uint8_t>((v >> 8) & 0xff);
+        header[off + 2] = static_cast<std::uint8_t>((v >> 16) & 0xff);
+        header[off + 3] = static_cast<std::uint8_t>((v >> 24) & 0xff);
+    };
+    putU32(0x68, 0xada77777u);           // magic
+    putU32(0x7c, 100);                   // frameDurationMs
+    putU32(0x80, 6);                     // width  (stride 8)
+    putU32(0x84, 2);                     // height
+    putU32(0x88, 4);                     // chunkRecordCount
+    putU32(0x8c, 3);                     // frameCount
+    putU32(0x90, 22050);                 // audioSampleRate
+    bytes.insert(bytes.end(), header.begin(), header.end());
+    // holder entry: header copy + placement fields
+    std::vector<std::uint8_t> entry(0x568, 0);
+    auto putEntryU32 = [&entry](std::size_t off, std::uint32_t v) {
+        entry[off] = static_cast<std::uint8_t>(v & 0xff);
+        entry[off + 1] = static_cast<std::uint8_t>((v >> 8) & 0xff);
+        entry[off + 2] = static_cast<std::uint8_t>((v >> 16) & 0xff);
+        entry[off + 3] = static_cast<std::uint8_t>((v >> 24) & 0xff);
+    };
+    putEntryU32(0x80, 6);                // entry width -> still frame stride 8
+    putEntryU32(0x84, 2);                // entry height -> still 16 bytes
+    putEntryU32(0x508, 12);              // originalX
+    putEntryU32(0x50c, 34);              // originalY
+    putEntryU32(0x54c, 56);              // stageX
+    putEntryU32(0x550, 78);              // stageY
+    bytes.insert(bytes.end(), entry.begin(), entry.end());
+    // still frame: stride(6)=8, height 2 -> 16 bytes
+    for (int i = 0; i < 16; ++i) appendU8(bytes, 0xaa);
+
+    graphboard::BinaryReader reader(bytes);
+    const auto state = graphboard::parseTransparentVideoHolderState(reader);
+    assert(state.version == 3);
+    assert(state.entries.size() == 1);
+    const auto& e = state.entries[0];
+    assert(e.stream.magic == 0xada77777u);
+    assert(e.stream.width == 6 && e.stream.height == 2);
+    assert(e.stream.frameCount == 3);
+    assert(e.stream.audioSampleRate == 22050);
+    assert(e.originalX == 12 && e.originalY == 34);
+    assert(e.stageX == 56 && e.stageY == 78);
+    assert(e.stillFrameByteCount == 16);
+    assert(reader.eof());
+}
+
 } // namespace
 
 int main() {
@@ -263,5 +379,8 @@ int main() {
     testComponentWrapper();
     testComponentListItem();
     testHotSpotHolderState();
+    testSpriteHolderState();
+    testMultiBitmapState();
+    testTransparentVideoHolderState();
     return 0;
 }

@@ -642,12 +642,11 @@ file bytes remaining after state: 4 zero bytes
 
 ## Open Questions
 
-- Recover component-private serializers from:
-  - `HotSpotHolder.dll`
-  - `SpriteHolder.dll`
-  - `TextHolder.dll`
-  - `Sound.dll`
-  - `MultiBmp.dll`
+- `TextHolder.dll`, `Sound.dll`, and `FontControl.dll` serializer layouts are now
+  recovered and byte-verified against `RZECZKA.BDF`; see
+  `cpp_port/docs/holder_recovery_notes.md` for the layouts and the C++
+  implementation plan (parsers not yet implemented in `cpp_port`).
+- Locate and name the `MultiBmp.dll` private serializer (layout known empirically).
 - Recover exact semantic names for `ScriptEngineState` fields and indexed block records.
 - `START.PRJ` layout is now fully recovered and byte-exact (the former "audio
   manager trailing block" is actually the global script editor's text; the audio
