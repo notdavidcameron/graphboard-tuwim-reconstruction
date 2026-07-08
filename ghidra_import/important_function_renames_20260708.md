@@ -182,3 +182,37 @@ Readback after the rename pass confirmed all eleven names, and
 of `HotSpotHolder.dll` left remaining candidates unnamed because they were
 generic registry/type-info/destructor support or low-level drawing helpers whose
 component-specific role was not yet clear enough for this core pass.
+
+### MultiBmp.dll and BitmapHolder.dll
+
+These names cover one clear MultiBitmap property-page list helper and two
+indexed-bitmap pixel helpers relevant to recovered bitmap payloads and
+transparent blitting:
+
+```text
+MultiBmp.dll:10001e30      MultiBmpSettingsPage_RebuildBitmapList
+BitmapHolder.dll:100071d0  BitmapUtil_RemapIndexedPixelValue
+BitmapHolder.dll:10007250  BitmapUtil_BlitIndexedRectWithTransparency
+```
+
+Readback confirmed all three names, and both
+`/extracted/GraphBoard 1.00/MultiBmp.dll` and
+`/extracted/GraphBoard 1.00/BitmapHolder.dll` were saved. Other inspected
+MultiBmp/BitmapHolder defaults were left unnamed as COM dispatch, registry,
+CRT/MFC startup, stack-probe, or tiny thunk helpers.
+
+### Panorama.dll and PanoramaHolder.dll
+
+Although panorama support is peripheral to the current static viewer, these
+three names were high confidence from caller/callee evidence and matching
+existing timer/blit/list patterns:
+
+```text
+Panorama.dll:1000705c       PanoramaSettingsPage_RebuildSceneList
+PanoramaHolder.dll:10001390 PanoramaHolderTimerWindow_SetTrackedTimer
+PanoramaHolder.dll:1000dd20 PanoramaHolder_BlitIndexedRectWithTransparency
+```
+
+Readback confirmed all three names, and both
+`/extracted/GraphBoard 1.00/Panorama.dll` and
+`/extracted/GraphBoard 1.00/PanoramaHolder.dll` were saved.
