@@ -9,10 +9,10 @@
 
 namespace graphboard {
 
-// The GraphBoard component ("holder") kinds recovered so far. These are the six
-// wrapper CLSIDs observed in RZECZKA.BDF; the full component set is larger (each
-// *.dll under "GraphBoard 1.00" is a candidate) and can be added as its CLSID is
-// confirmed. Anything not in the registry parses as Unknown.
+// The GraphBoard component ("holder") kinds recovered so far. The first six
+// wrapper CLSIDs were observed in RZECZKA.BDF; the rest were collected by
+// walking every page in the Tuwim DATA folder. Anything not in the registry
+// parses as Unknown.
 enum class HolderKind {
     Unknown,
     HotSpotHolder,
@@ -21,6 +21,12 @@ enum class HolderKind {
     TextHolder,
     SoundHolder,
     MultiBitmap,
+    BitmapHolder,
+    VideoHolder,
+    PanoramaHolder,
+    Panorama,
+    Puzzle,
+    Recorder,
 };
 
 // Registry entry mapping a wrapper CLSID to a known holder identity. `dll` and

@@ -27,12 +27,30 @@ plumbing.
 - A `gbinspect` command-line tool that prints parsed summaries as JSON, walking a
   page's components as far as the implemented private-state parsers allow.
 
-The two remaining payloads — `Text_Holder` (plus its trailing FontControl font
-block) and `Sound_Holder` — have fully recovered, real-file-verified layouts and
-a step-by-step implementation plan in `docs/holder_recovery_notes.md`. Because a
-component's private block can only be skipped by fully parsing it, the walker
-stops at the first component whose private state is not yet implemented and
-reports how far it got.
+`Text_Holder` (plus its trailing FontControl font block) and `Sound_Holder` have
+fully recovered, real-file-verified layouts and a step-by-step implementation
+plan in `docs/holder_recovery_notes.md`. Six more holder CLSIDs found across the
+DATA folder (`Bitmap_Holder`, `Video_Holder`, `Panorama_Holder`, `Panorama`,
+`Puzzle`, `Recorder`) are registered but their private layouts are unrecovered.
+Because a component's private block can only be skipped by fully parsing it, the
+walker stops at the first component whose private state is not yet implemented
+and reports how far it got.
+
+## Real-File Regression Check
+
+`tools/verify_scenes.ps1` runs `gbinspect` against the original game DATA and
+asserts recovered ground truth for four files: `START.PRJ`, `RZECZKA.BDF`,
+`GRZESIU.BDF` (TVH-first ordering, cp1250 sprite names), and `INTRO.BDF`
+(stop-at-final-component edge). Run it after any parser change:
+
+```powershell
+.\cpp_port\tools\verify_scenes.ps1
+```
+
+All GraphBoard strings are Windows-1250; `include/graphboard/text.hpp` converts
+them to UTF-8 at the JSON boundary. `gbinspect` refuses files whose banner is
+not `"YDP Board data file."` — the DATA folder contains misnamed non-BDF files
+(e.g. `KOTEK2.BDF` is a 16-bit NE executable).
 
 ## Build
 

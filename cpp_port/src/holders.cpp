@@ -30,6 +30,28 @@ const std::vector<HolderInfo>& registry() {
         t.push_back({HolderKind::MultiBitmap,
                      Guid::fromString("F7794041-1EB4-11D1-9B25-008048EB5D40"),
                      "MultiBitmap", "MultiBmp.dll", "", true});
+        // Observed while walking the full Tuwim DATA folder. Implementing DLLs
+        // are not yet confirmed against the disassembly (candidates by name:
+        // BitmapHolder.dll, VideoHolder.dll, PanoramaHolder.dll, Panorama.dll,
+        // Puzzle.dll, Recorder.dll — all open in the Ghidra project).
+        t.push_back({HolderKind::BitmapHolder,
+                     Guid::fromString("0D8A5736-5337-11D0-B444-008048EB5D40"),
+                     "Bitmap_Holder", "", "", false});
+        t.push_back({HolderKind::VideoHolder,
+                     Guid::fromString("B2CDC8DE-5359-11D0-B445-008048EB5D40"),
+                     "Video_Holder", "", "", false});
+        t.push_back({HolderKind::PanoramaHolder,
+                     Guid::fromString("B2CDC8D6-5359-11D0-B445-008048EB5D40"),
+                     "Panorama_Holder", "", "", false});
+        t.push_back({HolderKind::Panorama,
+                     Guid::fromString("8B446B11-0746-11D1-9B09-008048EB5D40"),
+                     "Panorama", "", "", false});
+        t.push_back({HolderKind::Puzzle,
+                     Guid::fromString("196E7596-AB2B-11D0-B2A5-008048EB5D40"),
+                     "Puzzle", "", "", false});
+        t.push_back({HolderKind::Recorder,
+                     Guid::fromString("2B61D676-9627-11D0-B280-008048EB5D40"),
+                     "Recorder", "", "", false});
         return t;
     }();
     return table;

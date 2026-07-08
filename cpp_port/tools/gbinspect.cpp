@@ -1,6 +1,7 @@
 #include "graphboard/component.hpp"
 #include "graphboard/format.hpp"
 #include "graphboard/holders.hpp"
+#include "graphboard/text.hpp"
 
 #include <nlohmann/json.hpp>
 
@@ -23,6 +24,11 @@ using graphboard::HotSpotHolderState;
 using graphboard::ProjectManifest;
 using nlohmann::json;
 
+// All GraphBoard strings are Windows-1250; JSON requires UTF-8.
+std::string t(const std::string& cp1250) {
+    return graphboard::cp1250ToUtf8(cp1250);
+}
+
 std::string lowerExtension(const std::filesystem::path& path) {
     auto ext = path.extension().string();
     std::transform(ext.begin(), ext.end(), ext.begin(), [](unsigned char c) {
@@ -35,23 +41,31 @@ json projectToJson(const ProjectManifest& project) {
     return {
         {"kind", "START.PRJ"},
         {"version", project.version},
-        {"startupPage", project.startupPage},
-        {"currentPageOrGroupState", project.currentPageOrGroupState},
+        {"startupPage", t(project.startupPage)},
+        {"currentPageOrGroupState", t(project.currentPageOrGroupState)},
         {"audioPresetIndex", project.audioPresetIndex},
         {"pageCount", project.pageNames.size()},
-        {"pages", project.pageNames},
+        {"pages", [&] {
+             json names = json::array();
+             for (const auto& name : project.pageNames) names.push_back(t(name));
+             return names;
+         }()},
         {"groupCount", project.groupNames.size()},
-        {"groups", project.groupNames},
-        {"decodedSignature", project.decodedSignature},
+        {"groups", [&] {
+             json names = json::array();
+             for (const auto& name : project.groupNames) names.push_back(t(name));
+             return names;
+         }()},
+        {"decodedSignature", t(project.decodedSignature)},
         {"globalScriptVersion", project.globalScriptVersion},
         {"globalScriptByteCount", project.globalScript.size()},
-        {"globalScript", project.globalScript},
+        {"globalScript", t(project.globalScript)},
     };
 }
 
 json headerToJson(const BdfHeader& header) {
     return {
-        {"banner", header.banner},
+        {"banner", t(header.banner)},
         {"version", header.version},
         {"pageRect", {header.pageRect.left, header.pageRect.top, header.pageRect.right, header.pageRect.bottom}},
         {"layerRange", {header.minLayer, header.maxLayer}},
@@ -68,7 +82,7 @@ json headerToJson(const BdfHeader& header) {
 json wrapperToJson(const ComponentWrapper& wrapper) {
     const auto* info = graphboard::lookupHolder(wrapper.clsid);
     json out = {
-        {"displayName", wrapper.displayName},
+        {"displayName", t(wrapper.displayName)},
         {"clsid", wrapper.clsid.toString()},
         {"holderKind", info ? info->displayName : std::string("Unknown")},
         {"wrapperVersion", wrapper.wrapperVersion},
@@ -87,7 +101,7 @@ json spriteStateToJson(const graphboard::SpriteHolderState& state) {
     json definitions = json::array();
     for (const auto& definition : state.definitions) {
         definitions.push_back({
-            {"name", definition.name},
+            {"name", t(definition.name)},
             {"width", definition.width},
             {"height", definition.height},
             {"blobByteCount", definition.blobByteCount},
@@ -116,7 +130,7 @@ json multiBitmapStateToJson(const graphboard::MultiBitmapState& state) {
     json records = json::array();
     for (const auto& record : state.records) {
         records.push_back({
-            {"name", record.name},
+            {"name", t(record.name)},
             {"width", record.width},
             {"height", record.height},
             {"pixelByteCount", record.pixelByteCount},
@@ -163,7 +177,7 @@ json hotspotStateToJson(const HotSpotHolderState& state) {
             {"rect", {hotspot.left, hotspot.top, hotspot.right, hotspot.bottom}},
             {"layer", hotspot.layer},
             {"enabled", hotspot.enabled},
-            {"name", hotspot.name},
+            {"name", t(hotspot.name)},
         });
     }
     return {
@@ -234,6 +248,18 @@ json componentListToJson(graphboard::BinaryReader& reader) {
 }
 
 json bdfToJson(graphboard::BinaryReader& reader) {
+    // The original loader never validates the banner, but as a tool guard we
+    // do: the DATA folder contains misnamed non-BDF files (e.g. KOTEK2.BDF is
+    // a 16-bit NE executable) that would otherwise mis-walk with absurd sizes.
+    // Peek before the full header parse — the palette/dib skips inside
+    // parseBdfHeader would throw a confusing end-of-input error first.
+    {
+        const auto banner = reader.readBytesAsString(20);
+        reader.seek(0);
+        if (banner != "YDP Board data file.") {
+            throw graphboard::ParseError("not a YDP Board data file (banner mismatch)");
+        }
+    }
     const auto header = graphboard::parseBdfHeader(reader);
     return {
         {"kind", "BDF"},

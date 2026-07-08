@@ -162,6 +162,33 @@ the component list should sit exactly at the page script text block
 (`u32 1`, then the script CString) — parse those two fields as a cheap
 end-to-end assertion.
 
+## Parser priority (full-DATA-folder survey, 2026-07-08)
+
+Walking all 202 `*.BDF` files with the four implemented parsers, the histogram
+of "which holder kind stopped the walk" is:
+
+```text
+Puzzle          102   (Puzzle.dll open in Ghidra)
+Bitmap_Holder    45   (BitmapHolder.dll open in Ghidra)
+Recorder         24   (Recorder.dll open in Ghidra)
+Text_Holder      12   (recovered above - implement first, it unblocks RZECZKA)
+Sound_Holder     12   (recovered above)
+Panorama          3
+Panorama_Holder   2
+Video_Holder      1
+```
+
+So after Text/Sound, `Puzzle` and `Bitmap_Holder` are by far the highest-value
+serializers to recover next. All six new CLSIDs are registered in
+`../src/holders.cpp` with their wrapper display names; their implementing DLLs
+are unconfirmed (match by name in the Ghidra project). One DATA file,
+`KOTEK2.BDF`, is a misnamed 16-bit NE executable, not a board file — gbinspect
+now rejects it by banner.
+
+`tools/verify_scenes.ps1` asserts recovered ground truth for START.PRJ,
+RZECZKA, GRZESIU, and INTRO — add each newly parsed scene there as its values
+are verified by hand.
+
 ## Open questions for later passes
 
 - Exact width of the Sound trailer name field (+0x0c..? — zeros in RZECZKA past
