@@ -10,7 +10,7 @@ Tools, notes, extracted assets, and a static HTML scene viewer for recovered Gra
 - `graphboard_file_formats.md` documents the recovered file-format structures and Ghidra findings.
 - `extracted_assets/` contains the recovered visual/audio assets used by the viewer.
 - `ghidra_import/` contains component DLL references/decompilation notes used during reverse engineering.
-- `cpp_port/` contains the C++ decompilation/reconstruction work: `reconstructed/` holds the compile-checkable source-style serializer reconstructions.
+- `cpp_port/` contains the C++ decompilation/reconstruction work: `reconstructed/` holds the compile-checkable source-style serializer reconstructions, and the top-level `cpp_port` CMake project is a readable high-level port (`gbinspect` tool, `START.PRJ`/`.BDF` parsing) — see `cpp_port/README.md`.
 
 ## Current Runtime Coverage
 
