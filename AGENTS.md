@@ -31,7 +31,8 @@ Current pushed commit:
 - `web_port/runtime.js` - partial GraphBoard script/runtime emulator.
 - `extracted_assets/` - canonical recovered assets used by the viewer.
 - `ghidra_import/TransparentVideoHolder_decomp.txt` - decompiled TVH notes used for geometry recovery.
-- `ghidra_import/GraphBoardDocument_reconstructed.cpp` - source-style reconstruction of the `Tuwim.exe` host serializers (`START.PRJ`, `.BDF`, `.GRP`, script-text block).
+- `ghidra_import/GraphBoardDocument_reconstructed.cpp` - source-style reconstruction of the `Tuwim.exe` host serializers (`START.PRJ`, `.BDF`, `.GRP`, script-text block, component wrapper, script engine state).
+- `ghidra_import/ComponentHolders_reconstructed.cpp` - source-style reconstruction of the `SpriteHolder.dll` and `HotSpotHolder.dll` component-private serializers.
 
 Ignored duplicate/generated collection folders:
 

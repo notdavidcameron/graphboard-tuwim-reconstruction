@@ -248,6 +248,67 @@ scalar fields `19598, 0, 19730, 0` (values near the text length suggest these
 are also text offsets, roles not yet recovered). The block ends 4 bytes before
 EOF; the remaining u32 is the `COleDocument::Serialize` trailing state.
 
+## Component-Private State
+
+Each component's private block follows its reflected wrapper and is written by
+the component DLL's own serialize method (reached through the wrapper interface
+vtable slot `+0x44`). Two component-private serializers have now been recovered
+directly from their DLLs and reconstructed in
+`ghidra_import/ComponentHolders_reconstructed.cpp`.
+
+### `Sprite_Holder`
+
+Serializer: `SpriteHolder.dll:10008930`.
+
+```text
+u32 version                         // 1
+u32 definitionCount
+u32 instanceCount
+repeat definitionCount:
+  u32  blobByteCount
+  u8   blob[blobByteCount]          // CSpriteDef: name +0x0c, width +0x88,
+                                    // height +0x8c, phase table (0x4c-byte
+                                    // entries) +0x8c, phase count +0xc0,
+                                    // pixel data trailing (see extractor)
+repeat instanceCount:
+  u8   record[0x8c]                 // CSpriteParam; record+0x00 is a
+                                    // definition INDEX on disk, rebound to a
+                                    // pointer on load
+```
+
+Verified against `RZECZKA.BDF` (private block at `0x00598572`): version 1,
+5 definitions, 5 instance records (definition indices 0..4), ending exactly at
+the next wrapper (`Text_Holder` at `0x00641bea`). The instance count was missed
+by earlier scans; the block is definitions first, then fixed-size instances.
+
+### `HotSpot_Holder`
+
+Serializer: `HotSpotHolder.dll:10004d10`.
+
+```text
+u32 version                         // 0
+u8  flag0, flag1, flag2             // holder +0x1d0, +0x1d1, +0x1d2
+u32 hotspotCount                    // holder +0x1c4
+repeat hotspotCount:
+  u8  record[100]                   // CHotSpot: i32 left/top/right/bottom at
+                                    // +0x00/+0x04/+0x08/+0x0c, i32 layer +0x1c,
+                                    // i32 enabled +0x20; +0x10 name ptr stale
+  CString name
+u32 field1f0                        // holder +0x1f0 (active/selected index)
+u32 field1c8                        // holder +0x1c8
+```
+
+These are the real hit-test rectangles used by
+`HotSpotHolder_TestPointInEnabledHotSpot`: a point hits when
+`left <= x <= right`, `top <= y < bottom`, the record is enabled (`+0x20 != 0`),
+and its layer (`+0x1c`) matches the query layer.
+
+Verified against `RZECZKA.BDF` (private block at `0x000008e6`): version 0,
+8 hotspots with concrete rects (e.g. `589,1,639,476` and `1,4,47,477`) and
+layer values, ending exactly at `0x00000c21` (827 bytes) where the next wrapper
+(`Transparent_Video_Holder`) begins. These recover the true hotspot geometry
+that page component boxes previously only approximated.
+
 ## Document Field Roles
 
 `GraphBrdDoc_Construct` at `Tuwim.exe:00405780` resolves the document-owned helper objects:

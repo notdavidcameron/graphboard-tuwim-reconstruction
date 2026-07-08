@@ -9,6 +9,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 add_library(ghidra_reconstructions OBJECT
     ghidra_import/TransparentVideoHolder_reconstructed.cpp
     ghidra_import/GraphBoardDocument_reconstructed.cpp
+    ghidra_import/ComponentHolders_reconstructed.cpp
 )
 
 if(MSVC)
