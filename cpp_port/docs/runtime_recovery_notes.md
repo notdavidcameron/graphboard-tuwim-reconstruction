@@ -117,24 +117,41 @@ recovered engine functions, not the JS approximation.
    `/* */`, two-char operators, tolerant of unterminated strings/comments.
    Faithful in output to `SkipTriviaAndMeasureToken`/`SkipLineOrBlockComment`;
    it is a plain scanner, not yet the offset-measuring variant the engine uses.
-2. [TODO] `runtime/Value` — the variant record + coercion table from the
-   recovered compare/assign functions.
-3. [TODO] `runtime/ScriptInterpreter` — statement driver mirroring
-   `InterpretStatements`/`ExecuteStatementOrBuiltin`; use the parsed
-   switch-block cache exactly like the original (`ExecuteSwitchStatement`).
-4. [PARTIAL] `runtime/script` — `discoverHandlers` finds every top-level
-   function (page events, dotted component callbacks, user functions) with
-   params and body spans; `collectCalls` finds every builtin/component call
-   site. These give the interpreter its handler table and API surface. Still
-   TODO: fold in components + engine state into an executable `Page` and a
-   component registry keyed by displayName.
+2. [DONE] `runtime/value` — an int/CString variant with the coercion rules the
+   recovered compare/assign operators imply ('+' concatenates if either side is
+   a string; comparisons are numeric only when both sides are ints; truthiness
+   is `toInt()!=0`). CRect/storage/class value objects and floats are not yet
+   modeled.
+3. [DONE] `runtime/interpreter` — a tree-walking `Interpreter` over the tokens:
+   declarations, assignment + compound assign, `++`/`--` (pre/postfix),
+   `if/else`, `while`, `switch/case/default/break`, `return`, user-function
+   calls, dotted (and chained `A.B.C`) component calls to the Host, undotted
+   host builtins, and precedence-climbing expressions. A `Host` interface
+   supplies `callBuiltin`/`callComponent`. Undotted name resolution is:
+   user function if defined in this page, else host builtin (verified sound
+   over all 191 pages). Known simplifications, each guarded/noted in code:
+   no `&&`/`||` short-circuit, arrays are parsed-but-not-stored, switch runs
+   without the offset cache. Loop guard 2M iterations, call-depth guard 256.
+4. [PARTIAL] `runtime/script` — `discoverHandlers` + `collectCalls` feed the
+   interpreter its handler table and API surface. Still TODO: fold components +
+   engine state into an executable `Page` with a component registry keyed by
+   displayName (so `callComponent` reaches real holder behavior).
 5. [TODO] Component behavior stubs — start with HotSpot (hit test is already
    recovered: `left<=x<=right, top<=y<bottom, enabled, layer`), Sound
    (embedded WAVs), MultiBitmap/Bitmap (blit), TVH (frame streams already
    decodable per the RLE reconstruction).
-6. [TODO] Drive it headless first: load START.PRJ → run global setup → open
-   intro.bdf → run OnOpenPage → feed synthetic clicks/timers; assert against
-   script-visible state. Rendering can come later.
+6. [DONE (headless drive)] `gbinspect <page.bdf> --run <handler>` parses the
+   BDF, extracts the script, and runs a handler against a recording Host,
+   printing the call trace as JSON. Verified: every one of the 191 scripted
+   pages runs `OnOpenPage` to completion with no hang (busiest ABECADLO = 89
+   calls: nested `while` loops with `++` counters, a user function, `if/else`,
+   `Random`, arrays as no-ops). START.PRJ global-setup + synthetic
+   click/timer feeding and asserting richer script-visible state is next.
+
+**IMPORTANT (workflow):** always run `--run` under `timeout` and never in the
+background — a script bug that stalls a loop counter makes the recording Host
+grow without bound (a hung run reached 10 GB). See the
+`gbinspect-run-timeout-hazard` memory.
 
 ## Recovered API surface (from `collectCalls` over all 191 scripted pages)
 
@@ -184,18 +201,48 @@ functions for exact semantics.
 
 ## Wanted from the Ghidra renaming agent (notes, no rush)
 
-- `Recorder.dll`: locate/name the private-state serializer. cpp_port treats
-  the block as `u32 version + 0x68 raw bytes` (empirically constant across
-  ABEC_R/CUDA_R/DYZIO_R/FIG_R); confirming field semantics would firm it up.
-- `MultiBmp.dll`: locate/name the serializer backing the (already verified)
-  MultiBitmap layout.
-- `VideoHolder.dll`, `PanoramaHolder.dll`, `Panorama.dll`: serializers — the
-  last 10 unwalkable pages stop on these three holders.
+- [DONE 2026-07-09] `Recorder.dll`: private-state serializer named
+  `Recorder_SerializePrivateState` at 10003ef0. It writes schema `1`,
+  serializes `holder+0x34`, then transfers a 100-byte state block through
+  `CArchive`. cpp_port still treats shipped title data as
+  `u32 version + 0x68 raw bytes` until the old/new layout skew is reconciled.
+- [DONE 2026-07-09] `MultiBmp.dll`: serializer was already named
+  `MultiBmp_SerializePrivateState` at 10004353. It writes schema/count, each
+  backing byte range, and a `0xc0` metadata record per bitmap.
+- [DONE 2026-07-09] `VideoHolder.dll`: serializer named
+  `VideoHolder_SerializePrivateState` at 10003e20. It writes schema `1`,
+  holder entry count at `+0x118`, then each `0x6c` record plus `CString`.
+- [DONE 2026-07-09] `PanoramaHolder.dll`: serializer named
+  `PanoramaHolder_SerializePrivateState` at 10005e20. It writes schema `0`,
+  scene count at `+0x40`, each `0x224` scene record, DIB payload bytes,
+  variable subimage blocks, and `0x48` region/animation records. `Panorama.dll`
+  already had `PanoramaState_Serialize` at 10004b6a.
 - Script engine field semantics: engine `+0x30/+0x34/+0x38/+0x3c` (serialized
   parserState) and `+0x44..+0x58` (schema 2-4 scalar fields; RZECZKA values
   19598/0/19730/0 look like text offsets).
-- Map `GraphBrdComponentCallback_InvokeScriptSlotXX` slot numbers to component
-  event names (which slot is TVH end-of-playback, HotSpot click, etc.).
-- Tuwim.exe builtin dispatch table used by `MatchTokenInTable`/
-  `InvokeIndexedCall`: the token table address + kind enumeration would give
-  the authoritative builtin list for the C++ runtime.
+- [PARTIAL 2026-07-09] Map `GraphBrdComponentCallback_InvokeScriptSlotXX` slot
+  numbers to component event names. The host thunks at 00429520..0042aa90 are
+  mechanically generated wrappers for slots 7..0x38; each only preserves MFC
+  module state and calls `GraphBrdComponentCallback_RunScriptEvent(owner,
+  slotId, rawArgs)`. `RunScriptEvent` resolves the callback record from
+  `CntrItem + 0x20 + slotId*4`; that record provides the script offset and
+  argument type bytes. Exact event names therefore need per-component callback
+  table/typeinfo evidence rather than a host-side rename.
+- [DONE 2026-07-09] Tuwim.exe builtin dispatch tables used by
+  `MatchTokenInTable` / `InvokeIndexedCall` were labeled. Host builtin pointer
+  tables exist twice with the same 24-entry order:
+  `GraphBrdScript_HostBuiltinNameTable` at 0043b62c for
+  `ExecuteStatementOrBuiltin`, and
+  `GraphBrdScript_IndexedHostBuiltinNameTable` at 0043c470 for
+  `IndexBuiltInCalls`. The order is `MessageBox`, `Random`, `FadeScreen`,
+  `LoadPage`, `Exit`, `SetTimer`, `SetCursor`, `CreateDirectSound`,
+  `ReleaseDirectSound`, `EnableScreen`, `DisableScreen`, `ShowBuffer`,
+  `IsProject`, `Debug`, `LoadGroup`, `CloseGroup`, `SetDisplayMode`,
+  `PrintBuffer`, `Execute`, `GetProgramPath`, `GetCommandLine`, `DeleteFile`,
+  `ShellExecute`, `GetResourcePath`. Page-event lookup table
+  `GraphBrdScript_PageEventNameTable` at 0043c444 has `OnTimer`, `OnKeyDown`,
+  `OnKeyUp`, `OnLButtonDown`, `OnLButtonUp`, `OnRButtonDown`, `OnRButtonUp`,
+  `OnClosePage`, `OnOpenPage`, `OnMouseMoveStart`, `OnMouseMoveStop`.
+  `GraphBrdScript_ValueTypeNameTable` at 0043c3a0 has `char`, `int`, `long`,
+  `float`, `unsigned`, `UINT`, `BYTE`, `BOOL`, `void`, `CString`, `CRect`,
+  `CVarStorage`.

@@ -1,6 +1,7 @@
 #include "graphboard/component.hpp"
 #include "graphboard/format.hpp"
 #include "graphboard/holders.hpp"
+#include "graphboard/runtime/interpreter.hpp"
 #include "graphboard/runtime/script.hpp"
 #include "graphboard/text.hpp"
 
@@ -489,19 +490,106 @@ std::vector<std::filesystem::path> collectArgs(int argc, char** argv) {
     return args;
 }
 
+// Records builtin/component calls so a page can be driven headless and its
+// externally-visible behavior inspected or asserted.
+class RecordingHost : public graphboard::runtime::Host {
+public:
+    json calls = json::array();
+
+    graphboard::runtime::Value callBuiltin(
+        const std::string& name,
+        const std::vector<graphboard::runtime::Value>& args) override {
+        calls.push_back(callToJson(false, "", name, args));
+        if (name == "IsProject") return graphboard::runtime::Value::integer(1);
+        return graphboard::runtime::Value();
+    }
+    graphboard::runtime::Value callComponent(
+        const std::string& component, const std::string& method,
+        const std::vector<graphboard::runtime::Value>& args) override {
+        calls.push_back(callToJson(true, component, method, args));
+        return graphboard::runtime::Value();
+    }
+
+private:
+    static json callToJson(bool component, const std::string& comp, const std::string& name,
+                           const std::vector<graphboard::runtime::Value>& args) {
+        json a = json::array();
+        for (const auto& value : args) {
+            if (value.isInt()) {
+                a.push_back(value.toInt());
+            } else {
+                a.push_back(t(value.toString()));
+            }
+        }
+        json call = {{"name", name}, {"args", a}};
+        if (component) {
+            call["component"] = comp;
+        }
+        return call;
+    }
+};
+
+// Drive one handler of a .BDF page and print the resulting call trace as JSON.
+int runHandler(const std::filesystem::path& path, const std::string& handler) {
+    auto reader = graphboard::BinaryReader::fromFile(path);
+    const auto info = bdfToJson(reader);
+    if (!info.contains("pageScript")) {
+        std::cerr << "gbinspect: page has no reachable script (walk stopped early)\n";
+        return 1;
+    }
+    const std::string script = info["pageScript"]["text"].get<std::string>();
+
+    RecordingHost host;
+    graphboard::runtime::Interpreter interp(script, host);
+    if (!interp.hasHandler(handler)) {
+        std::cerr << "gbinspect: handler '" << handler << "' is not defined in this page\n";
+        return 1;
+    }
+    interp.runHandler(handler, {});
+
+    json out = {{"handler", handler}, {"calls", host.calls}};
+    std::cout << out.dump(2) << "\n";
+    return 0;
+}
+
+bool isFlag(const std::filesystem::path& arg, const char* flag) {
+    const auto s = arg.u8string();
+    return std::string(s.begin(), s.end()) == flag;
+}
+
 } // namespace
 
 int main(int argc, char** argv) {
     const auto args = collectArgs(argc, argv);
-    if (args.size() != 2) {
-        std::cerr << "usage: gbinspect <START.PRJ|PAGE.BDF>\n";
+
+    // gbinspect <file>                         -> inspect
+    // gbinspect <file.bdf> --run <handler>     -> drive one handler headless
+    std::filesystem::path file;
+    std::string runTarget;
+    for (std::size_t i = 1; i < args.size(); ++i) {
+        if (isFlag(args[i], "--run") && i + 1 < args.size()) {
+            const auto s = args[++i].u8string();
+            runTarget.assign(s.begin(), s.end());
+        } else if (file.empty()) {
+            file = args[i];
+        }
+    }
+    if (file.empty()) {
+        std::cerr << "usage: gbinspect <START.PRJ|PAGE.BDF> [--run <handler>]\n";
         return 2;
     }
 
     try {
-        const std::filesystem::path path = args[1];
-        auto reader = graphboard::BinaryReader::fromFile(path);
-        const auto ext = lowerExtension(path);
+        const auto ext = lowerExtension(file);
+        if (!runTarget.empty()) {
+            if (ext != ".bdf") {
+                std::cerr << "gbinspect: --run requires a .BDF page\n";
+                return 2;
+            }
+            return runHandler(file, runTarget);
+        }
+
+        auto reader = graphboard::BinaryReader::fromFile(file);
         if (ext == ".prj") {
             std::cout << projectToJson(graphboard::parseProjectManifest(reader)).dump(2) << "\n";
         } else if (ext == ".bdf") {

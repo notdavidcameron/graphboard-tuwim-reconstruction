@@ -21,6 +21,8 @@ add_library(graphboard_core
     src/holders.cpp
     src/runtime/lexer.cpp
     src/runtime/script.cpp
+    src/runtime/value.cpp
+    src/runtime/interpreter.cpp
 )
 
 target_include_directories(graphboard_core PUBLIC
@@ -51,4 +53,10 @@ if(BUILD_TESTING)
     )
     target_link_libraries(graphboard_runtime_script_test PRIVATE graphboard_core)
     add_test(NAME runtime_script COMMAND graphboard_runtime_script_test)
+
+    add_executable(graphboard_runtime_interpreter_test
+        tests/runtime_interpreter.cpp
+    )
+    target_link_libraries(graphboard_runtime_interpreter_test PRIVATE graphboard_core)
+    add_test(NAME runtime_interpreter COMMAND graphboard_runtime_interpreter_test)
 endif()
