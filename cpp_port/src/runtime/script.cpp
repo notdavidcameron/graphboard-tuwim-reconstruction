@@ -46,19 +46,41 @@ std::vector<ScriptParameter> parseParameters(const std::vector<Token>& tokens,
 } // namespace
 
 const std::vector<std::string>& pageEventNames() {
-    // GraphBrdScript_Run* entry points in Tuwim.exe (see runtime notes). Kept as
-    // a stable, sorted-by-use list; membership is what matters.
+    // The authoritative page-event lookup table, GraphBrdScript_PageEventNameTable
+    // (Tuwim.exe:0043c444), in the host's own order. Membership is what matters.
     static const std::vector<std::string> names = {
-        "OnOpenPage",     "OnClosePage",   "OnTimer",       "OnLButtonDown",
-        "OnLButtonUp",    "OnRButtonDown", "OnRButtonUp",   "OnLButtonDblClk",
-        "OnMouseMove",    "OnMouseMoveStop", "OnKeyDown",   "OnKeyUp",
-        "OnChar",
+        "OnTimer",         "OnKeyDown",       "OnKeyUp",         "OnLButtonDown",
+        "OnLButtonUp",     "OnRButtonDown",   "OnRButtonUp",     "OnClosePage",
+        "OnOpenPage",      "OnMouseMoveStart", "OnMouseMoveStop",
     };
     return names;
 }
 
 bool isPageEventName(const std::string& name) {
     const auto& names = pageEventNames();
+    return std::find(names.begin(), names.end(), name) != names.end();
+}
+
+const std::vector<std::string>& hostBuiltinNames() {
+    // The authoritative host builtin dispatch table,
+    // GraphBrdScript_HostBuiltinNameTable (Tuwim.exe:0043b62c), in index order.
+    // An undotted script call resolves to a user function first (if defined in
+    // the page), else one of these builtins.
+    static const std::vector<std::string> names = {
+        "MessageBox",         "Random",             "FadeScreen",
+        "LoadPage",           "Exit",               "SetTimer",
+        "SetCursor",          "CreateDirectSound",  "ReleaseDirectSound",
+        "EnableScreen",       "DisableScreen",      "ShowBuffer",
+        "IsProject",          "Debug",              "LoadGroup",
+        "CloseGroup",         "SetDisplayMode",     "PrintBuffer",
+        "Execute",            "GetProgramPath",     "GetCommandLine",
+        "DeleteFile",         "ShellExecute",       "GetResourcePath",
+    };
+    return names;
+}
+
+bool isHostBuiltinName(const std::string& name) {
+    const auto& names = hostBuiltinNames();
     return std::find(names.begin(), names.end(), name) != names.end();
 }
 

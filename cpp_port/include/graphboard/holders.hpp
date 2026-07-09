@@ -367,11 +367,11 @@ PuzzleState parsePuzzleState(BinaryReader& reader);
 
 // -------------------------------------------------------------------------
 // Recorder component-private state.
-// Layout recovered EMPIRICALLY (the serializer function in Recorder.dll has
-// not been located/named yet): a fixed block of u32 version(=1) plus a
-// 0x68-byte record whose visible contents are stale runtime pointers.
-// Verified identical (108 bytes) across ABEC_R/CUDA_R/DYZIO_R/FIG_R, each
-// ending exactly at the next wrapper CLSID.
+// Serializer: Recorder_SerializePrivateState (Recorder.dll:10003ef0) — named by
+// the Ghidra pass; it writes schema 1, a holder+0x34 field, and a fixed state
+// block. On disk this port sees u32 version(=1) + a 0x68-byte record (108 bytes
+// total), verified identical across ABEC_R/CUDA_R/DYZIO_R/FIG_R, each ending
+// exactly at the next wrapper CLSID.
 // -------------------------------------------------------------------------
 struct RecorderState {
     std::uint32_t version = 0;
@@ -379,5 +379,95 @@ struct RecorderState {
 };
 
 RecorderState parseRecorderState(BinaryReader& reader);
+
+// -------------------------------------------------------------------------
+// Video_Holder component-private state.
+// Serializer: VideoHolder_SerializePrivateState (VideoHolder.dll:10003e20).
+// Verified byte-exact against ABEC_T.BDF (private block at 0x865: version 1,
+// 9 AVI entries; the walk lands exactly on the next wrapper CLSID). Video_Holder
+// plays external .AVI assets referenced by name.
+//
+//   u32 version (=1)
+//   u32 entryCount           // holder+0x118
+//   repeat entryCount:
+//       u8 record[0x6c]      // +0x10 posX, +0x14 posY, +0x20 embedded name copy
+//       CString aviName
+// -------------------------------------------------------------------------
+struct VideoEntry {
+    std::size_t recordOffset = 0;
+    std::int32_t posX = 0;   // record+0x10
+    std::int32_t posY = 0;   // record+0x14
+    std::string name;        // trailing CString: the .avi filename
+};
+
+struct VideoHolderState {
+    std::uint32_t version = 0;
+    std::vector<VideoEntry> entries;
+};
+
+VideoHolderState parseVideoHolderState(BinaryReader& reader);
+
+// -------------------------------------------------------------------------
+// Panorama_Holder component-private state.
+// Serializer: PanoramaHolder_SerializePrivateState (PanoramaHolder.dll:10005e20).
+// Verified byte-exact against MROZ.BDF (lands on the next wrapper CLSID). The
+// per-block byte counts are length-prefixed on disk, so the block self-describes.
+//
+//   u32 version (=0)
+//   u32 sceneCount           // holder+0x40
+//   repeat sceneCount:
+//       u8  sceneRecord[0x224]
+//       u32 dibByteCount;    u8 dib[dibByteCount]        // BITMAPINFO+palette+pixels
+//       u32 subImageCount;   repeat: u32 size; u8 data[size]   // record+0x88...
+//       u32 regionCount;     repeat: u8 region[0x48]           // record+0x154...
+// -------------------------------------------------------------------------
+struct PanoramaHolderScene {
+    std::size_t recordOffset = 0;
+    std::uint32_t dibByteCount = 0;
+    std::uint32_t subImageCount = 0;
+    std::uint32_t regionCount = 0;
+};
+
+struct PanoramaHolderState {
+    std::uint32_t version = 0;
+    std::vector<PanoramaHolderScene> scenes;
+};
+
+PanoramaHolderState parsePanoramaHolderState(BinaryReader& reader);
+
+// -------------------------------------------------------------------------
+// Panorama (non-holder) component-private state.
+// Serializer: PanoramaState_Serialize (Panorama.dll:10004b6a). Verified against
+// OKULARY.BDF (1224x480 scene, 19 layers; lands on the next wrapper CLSID).
+// Unlike Panorama_Holder, image byte counts are NOT length-prefixed: they are
+// computed from width*height fields inside the just-read fixed records, and the
+// sub-image/region counts live inside the 0x224 scene record itself.
+//
+//   u32 version (=1)
+//   u32 sceneCount           // state+0x38
+//   repeat sceneCount:
+//       u8  sceneRecord[0x224]           // width +0x04, height +0x08,
+//                                         // subImageCount +0x150, regionCount +0x21c
+//       u8  basePixels[width*height]
+//       repeat subImageCount:            // record+0x88...
+//           u8 layerRecord[0x78]         // width +0x24, height +0x2c
+//           u8 layerPixels[width*height]
+//       repeat regionCount:              // record+0x154...
+//           u8 region[0x34]
+// -------------------------------------------------------------------------
+struct PanoramaScene {
+    std::size_t recordOffset = 0;
+    std::uint32_t width = 0;
+    std::uint32_t height = 0;
+    std::uint32_t subImageCount = 0;
+    std::uint32_t regionCount = 0;
+};
+
+struct PanoramaState {
+    std::uint32_t version = 0;
+    std::vector<PanoramaScene> scenes;
+};
+
+PanoramaState parsePanoramaState(BinaryReader& reader);
 
 } // namespace graphboard

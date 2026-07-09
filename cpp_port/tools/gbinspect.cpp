@@ -259,6 +259,48 @@ json puzzleStateToJson(const graphboard::PuzzleState& state) {
     };
 }
 
+json videoHolderStateToJson(const graphboard::VideoHolderState& state) {
+    json entries = json::array();
+    for (const auto& entry : state.entries) {
+        entries.push_back({
+            {"name", t(entry.name)},
+            {"pos", {entry.posX, entry.posY}},
+            {"recordOffset", entry.recordOffset},
+        });
+    }
+    return {
+        {"version", state.version},
+        {"entryCount", state.entries.size()},
+        {"entries", entries},
+    };
+}
+
+json panoramaHolderStateToJson(const graphboard::PanoramaHolderState& state) {
+    json scenes = json::array();
+    for (const auto& scene : state.scenes) {
+        scenes.push_back({
+            {"recordOffset", scene.recordOffset},
+            {"dibByteCount", scene.dibByteCount},
+            {"subImageCount", scene.subImageCount},
+            {"regionCount", scene.regionCount},
+        });
+    }
+    return {{"version", state.version}, {"sceneCount", state.scenes.size()}, {"scenes", scenes}};
+}
+
+json panoramaStateToJson(const graphboard::PanoramaState& state) {
+    json scenes = json::array();
+    for (const auto& scene : state.scenes) {
+        scenes.push_back({
+            {"size", {scene.width, scene.height}},
+            {"subImageCount", scene.subImageCount},
+            {"regionCount", scene.regionCount},
+            {"recordOffset", scene.recordOffset},
+        });
+    }
+    return {{"version", state.version}, {"sceneCount", state.scenes.size()}, {"scenes", scenes}};
+}
+
 json hotspotStateToJson(const HotSpotHolderState& state) {
     json hotspots = json::array();
     for (const auto& hotspot : state.hotspots) {
@@ -322,6 +364,18 @@ json componentListToJson(graphboard::BinaryReader& reader) {
         } else if (kind == graphboard::HolderKind::Puzzle) {
             component["privateStateParsed"] = true;
             component["privateState"] = puzzleStateToJson(graphboard::parsePuzzleState(reader));
+            components.push_back(std::move(component));
+        } else if (kind == graphboard::HolderKind::PanoramaHolder) {
+            component["privateStateParsed"] = true;
+            component["privateState"] = panoramaHolderStateToJson(graphboard::parsePanoramaHolderState(reader));
+            components.push_back(std::move(component));
+        } else if (kind == graphboard::HolderKind::Panorama) {
+            component["privateStateParsed"] = true;
+            component["privateState"] = panoramaStateToJson(graphboard::parsePanoramaState(reader));
+            components.push_back(std::move(component));
+        } else if (kind == graphboard::HolderKind::VideoHolder) {
+            component["privateStateParsed"] = true;
+            component["privateState"] = videoHolderStateToJson(graphboard::parseVideoHolderState(reader));
             components.push_back(std::move(component));
         } else if (kind == graphboard::HolderKind::Recorder) {
             const auto recorder = graphboard::parseRecorderState(reader);

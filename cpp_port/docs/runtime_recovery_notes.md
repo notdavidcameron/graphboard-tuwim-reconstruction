@@ -217,9 +217,30 @@ functions for exact semantics.
   scene count at `+0x40`, each `0x224` scene record, DIB payload bytes,
   variable subimage blocks, and `0x48` region/animation records. `Panorama.dll`
   already had `PanoramaState_Serialize` at 10004b6a.
-- Script engine field semantics: engine `+0x30/+0x34/+0x38/+0x3c` (serialized
-  parserState) and `+0x44..+0x58` (schema 2-4 scalar fields; RZECZKA values
-  19598/0/19730/0 look like text offsets).
+- [DONE 2026-07-09] Script-engine event handler offsets at `+0x30..+0x58`
+  are all page-script text offsets, confirmed through
+  `GraphBrdScriptEngine_ValidatePageEventHandlers` (00427450),
+  `GraphBrdScriptEngine_Serialize` (0041aad0), and the event runners:
+
+  ```text
+  +0x30 OnClosePage
+  +0x34 OnOpenPage
+  +0x38 OnTimer
+  +0x3c OnKeyDown
+  +0x40 OnKeyUp
+  +0x44 OnLButtonDown
+  +0x48 OnLButtonUp
+  +0x4c OnRButtonDown
+  +0x50 OnRButtonUp
+  +0x54 OnMouseMoveStart
+  +0x58 OnMouseMoveStop
+  ```
+
+  Schema 1 serializes `+0x38`, `+0x3c`, `+0x30`, `+0x34` in that disk order.
+  Schema 2 adds `+0x44..+0x50`, schema 3 adds `+0x54`, and schema 4 adds
+  `+0x58`. Key handlers receive one temporary argument; button handlers
+  receive two integer `x`/`y` arguments. `OnOpenPage` and `OnClosePage` are
+  required by validation.
 - [PARTIAL 2026-07-09] Map `GraphBrdComponentCallback_InvokeScriptSlotXX` slot
   numbers to component event names. The host thunks at 00429520..0042aa90 are
   mechanically generated wrappers for slots 7..0x38; each only preserves MFC

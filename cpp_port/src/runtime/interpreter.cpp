@@ -9,9 +9,13 @@ namespace graphboard::runtime {
 namespace {
 
 const std::unordered_set<std::string>& typeKeywords() {
+    // The authoritative value/type keyword table
+    // (GraphBrdScript_ValueTypeNameTable, Tuwim.exe:0043c3a0) plus a few common
+    // C aliases the scripts also use in declarations.
     static const std::unordered_set<std::string> kw = {
-        "int", "CString", "float", "double", "long", "char", "bool", "void",
-        "CRect", "short", "unsigned", "DWORD", "BOOL", "UINT", "WORD", "BYTE",
+        "char", "int", "long", "float", "unsigned", "UINT", "BYTE", "BOOL",
+        "void", "CString", "CRect", "CVarStorage",
+        "double", "short", "DWORD", "WORD", "bool",
     };
     return kw;
 }

@@ -35,11 +35,18 @@ struct ScriptHandler {
     std::size_t bodyEndOffset = 0;  // byte offset just past the matching '}'
 };
 
-// The canonical page-event handler names the host looks up
-// (GraphBrdScript_Run* in Tuwim.exe). A discovered top-level function whose
-// (undotted) name is in this set is classified as a PageEvent.
+// The authoritative page-event lookup table
+// (GraphBrdScript_PageEventNameTable, Tuwim.exe:0043c444). A discovered
+// top-level function whose (undotted) name is in this set is a PageEvent.
 bool isPageEventName(const std::string& name);
 const std::vector<std::string>& pageEventNames();
+
+// The authoritative host builtin dispatch table
+// (GraphBrdScript_HostBuiltinNameTable, Tuwim.exe:0043b62c), in index order.
+// These are the 24 undotted calls the host implements directly; anything else
+// undotted is a page-local user function.
+bool isHostBuiltinName(const std::string& name);
+const std::vector<std::string>& hostBuiltinNames();
 
 // Discover top-level function definitions in page-script source. Robust to the
 // optional return type and to nested braces/strings/comments inside bodies.

@@ -15,6 +15,11 @@ param(
 $ErrorActionPreference = "Stop"
 $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 
+# gbinspect emits UTF-8 (cp1250 source is converted). Decode its stdout as UTF-8
+# so cp1250-derived names (e.g. "uśmiech") round-trip through ConvertFrom-Json
+# regardless of the host console codepage.
+try { [Console]::OutputEncoding = [System.Text.Encoding]::UTF8 } catch {}
+
 # gbinspect is built with MinGW and needs its runtime DLLs on PATH.
 $extraPath = @(
     "C:\ProgramData\mingw64\mingw64\bin",
@@ -178,10 +183,37 @@ Assert-Eq $ar.scriptEngineState.switchBlockCount 12 "ABEC_R engine switch blocks
 Assert-Eq $ar.scriptEngineState.builtinCallCount 3 "ABEC_R engine builtin calls"
 Assert-Eq $ar.trailingByteCount 4 "ABEC_R trailing bytes"
 
+# ---------------------------------------------------------------- ABEC_T.BDF
+# Video_Holder: 9 external .AVI clips; page walks fully to the script.
+$at = Get-Scene "ABEC_T.BDF"
+Assert-Eq $at.componentList.componentsParsed $at.componentList.count "ABEC_T fully parsed"
+$vh = $at.componentList.components | Where-Object holderKind -eq 'Video_Holder'
+Assert-Eq $vh.privateState.entryCount 9 "ABEC_T video entries"
+Assert-Eq $vh.privateState.entries[0].name "tp_01ok.avi" "ABEC_T video0 name"
+Assert-Eq ([bool]$at.pageScript) $true "ABEC_T script reached"
+
+# --------------------------------------------------------------- OKULARY.BDF
+# Panorama (non-holder): one 1224x480 panoramic scene with 19 layers.
+$ok = Get-Scene "OKULARY.BDF"
+Assert-Eq $ok.componentList.componentsParsed $ok.componentList.count "OKULARY fully parsed"
+$pan = $ok.componentList.components | Where-Object holderKind -eq 'Panorama'
+Assert-Eq $pan.privateState.sceneCount 1 "OKULARY panorama scenes"
+Assert-Eq ($pan.privateState.scenes[0].size -join 'x') "1224x480" "OKULARY panorama size"
+Assert-Eq $pan.privateState.scenes[0].subImageCount 19 "OKULARY panorama layers"
+
+# ------------------------------------------------------------------ MROZ.BDF
+# Panorama_Holder: length-prefixed scene block; 7-component page walks fully.
+$mroz = Get-Scene "MROZ.BDF"
+Assert-Eq $mroz.componentList.count 7 "MROZ component count"
+Assert-Eq $mroz.componentList.componentsParsed 7 "MROZ fully parsed"
+$panh = $mroz.componentList.components | Where-Object holderKind -eq 'Panorama_Holder'
+Assert-Eq $panh.privateState.version 0 "MROZ panorama-holder version"
+Assert-Eq $panh.privateState.sceneCount 1 "MROZ panorama-holder scenes"
+
 # ------------------------------------------------------------------- summary
 Write-Output ""
 if ($script:failures -eq 0) {
-    Write-Output "verify_scenes: all $script:checks checks passed (START.PRJ, RZECZKA, GRZESIU, INTRO, ABEC_R)"
+    Write-Output "verify_scenes: all $script:checks checks passed (START.PRJ, RZECZKA, GRZESIU, INTRO, ABEC_R, ABEC_T, OKULARY, MROZ)"
     exit 0
 } else {
     Write-Output "verify_scenes: $script:failures of $script:checks checks FAILED"

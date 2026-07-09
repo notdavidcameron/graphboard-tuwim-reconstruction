@@ -140,6 +140,27 @@ void testCollectCalls() {
     assert(badControl == 0);        // control keywords are not calls
 }
 
+void testAuthoritativeTables() {
+    // Page events and host builtins match the recovered Tuwim.exe dispatch
+    // tables. The names that scripts call but are NOT host builtins
+    // (SetTextMode, SetRect, MoveSprite) must be user functions.
+    assert(pageEventNames().size() == 11);
+    assert(isPageEventName("OnOpenPage"));
+    assert(isPageEventName("OnMouseMoveStart"));
+    assert(!isPageEventName("OnChar"));  // not in this title's table
+
+    assert(hostBuiltinNames().size() == 24);
+    assert(isHostBuiltinName("FadeScreen"));
+    assert(isHostBuiltinName("GetResourcePath"));
+    assert(!isHostBuiltinName("SetTextMode"));  // page-local user function
+    assert(!isHostBuiltinName("MoveSprite"));
+
+    // MessageBox is builtin 0; classification still routes it as a PageEvent
+    // only if named exactly as an event (it is not).
+    assert(isHostBuiltinName("MessageBox"));
+    assert(!isPageEventName("MessageBox"));
+}
+
 } // namespace
 
 int main() {
@@ -148,5 +169,6 @@ int main() {
     testDiscoverIntroHandlers();
     testNoFalsePositives();
     testCollectCalls();
+    testAuthoritativeTables();
     return 0;
 }

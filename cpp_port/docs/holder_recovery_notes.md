@@ -162,10 +162,19 @@ the component list should sit exactly at the page script text block
 (`u32 1`, then the script CString) — parse those two fields as a cheap
 end-to-end assertion.
 
+## STATUS: complete (2026-07-09)
+
+Every component-private serializer is now implemented and verified byte-exact
+against real pages: HotSpot, Sprite, MultiBitmap, TransparentVideo, Sound, Text
+(+ FontControl), Bitmap, Puzzle, Recorder, Video, Panorama, and Panorama_Holder.
+**201 of 202 DATA pages parse fully** through components → page script → engine
+state → trailer (the one exception, `KOTEK2.BDF`, is a misnamed 16-bit NE
+executable, rejected by banner). The priority survey below is kept for history.
+
 ## Parser priority (full-DATA-folder survey, 2026-07-08)
 
-Walking all 202 `*.BDF` files with the four implemented parsers, the histogram
-of "which holder kind stopped the walk" is:
+Walking all 202 `*.BDF` files with the FIRST four implemented parsers, the
+historical histogram of "which holder kind stopped the walk" was:
 
 ```text
 Puzzle          102   (Puzzle.dll open in Ghidra)

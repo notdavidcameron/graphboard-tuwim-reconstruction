@@ -31,24 +31,26 @@ const std::vector<HolderInfo>& registry() {
                      "Sound.dll:10004090", true});
         t.push_back({HolderKind::MultiBitmap,
                      Guid::fromString("F7794041-1EB4-11D1-9B25-008048EB5D40"),
-                     "MultiBitmap", "MultiBmp.dll", "", true});
-        // Observed while walking the full Tuwim DATA folder. Implementing DLLs
-        // are not yet confirmed against the disassembly (candidates by name:
-        // BitmapHolder.dll, VideoHolder.dll, PanoramaHolder.dll, Panorama.dll,
-        // Puzzle.dll, Recorder.dll — all open in the Ghidra project).
+                     "MultiBitmap", "MultiBmp.dll",
+                     "MultiBmp.dll:10004353", true});
+        // Recovered by walking the full Tuwim DATA folder; serializer anchors
+        // confirmed against the disassembly by the Ghidra rename pass.
         t.push_back({HolderKind::BitmapHolder,
                      Guid::fromString("0D8A5736-5337-11D0-B444-008048EB5D40"),
                      "Bitmap_Holder", "BitmapHolder.dll",
                      "BitmapHolder.dll:10003d20", true});
         t.push_back({HolderKind::VideoHolder,
                      Guid::fromString("B2CDC8DE-5359-11D0-B445-008048EB5D40"),
-                     "Video_Holder", "", "", false});
+                     "Video_Holder", "VideoHolder.dll",
+                     "VideoHolder.dll:10003e20", true});
         t.push_back({HolderKind::PanoramaHolder,
                      Guid::fromString("B2CDC8D6-5359-11D0-B445-008048EB5D40"),
-                     "Panorama_Holder", "", "", false});
+                     "Panorama_Holder", "PanoramaHolder.dll",
+                     "PanoramaHolder.dll:10005e20", true});
         t.push_back({HolderKind::Panorama,
                      Guid::fromString("8B446B11-0746-11D1-9B09-008048EB5D40"),
-                     "Panorama", "", "", false});
+                     "Panorama", "Panorama.dll",
+                     "Panorama.dll:10004b6a", true});
         t.push_back({HolderKind::Puzzle,
                      Guid::fromString("196E7596-AB2B-11D0-B2A5-008048EB5D40"),
                      "Puzzle", "Puzzle.dll",
@@ -442,6 +444,93 @@ RecorderState parseRecorderState(BinaryReader& reader) {
     state.version = reader.readU32();
     state.recordOffset = reader.position();
     reader.skip(kRecorderRecordBytes);
+    return state;
+}
+
+VideoHolderState parseVideoHolderState(BinaryReader& reader) {
+    constexpr std::size_t kVideoRecordBytes = 0x6c;
+    VideoHolderState state;
+    state.version = reader.readU32();
+    const auto entryCount = reader.readU32();
+
+    state.entries.reserve(entryCount);
+    for (std::uint32_t i = 0; i < entryCount; ++i) {
+        VideoEntry entry;
+        entry.recordOffset = reader.position();
+        const auto record = reader.readBytes(kVideoRecordBytes);
+        entry.posX = static_cast<std::int32_t>(readU32At(record, 0x10));
+        entry.posY = static_cast<std::int32_t>(readU32At(record, 0x14));
+        entry.name = reader.readArchiveString();
+        state.entries.push_back(std::move(entry));
+    }
+
+    return state;
+}
+
+PanoramaHolderState parsePanoramaHolderState(BinaryReader& reader) {
+    constexpr std::size_t kSceneRecordBytes = 0x224;
+    constexpr std::size_t kRegionRecordBytes = 0x48;
+
+    PanoramaHolderState state;
+    state.version = reader.readU32();
+    const auto sceneCount = reader.readU32();
+
+    state.scenes.reserve(sceneCount);
+    for (std::uint32_t i = 0; i < sceneCount; ++i) {
+        PanoramaHolderScene scene;
+        scene.recordOffset = reader.position();
+        reader.skip(kSceneRecordBytes);
+
+        scene.dibByteCount = reader.readU32();
+        reader.skip(scene.dibByteCount);
+
+        scene.subImageCount = reader.readU32();
+        for (std::uint32_t s = 0; s < scene.subImageCount; ++s) {
+            reader.skip(reader.readU32());
+        }
+
+        scene.regionCount = reader.readU32();
+        reader.skip(static_cast<std::size_t>(scene.regionCount) * kRegionRecordBytes);
+
+        state.scenes.push_back(scene);
+    }
+
+    return state;
+}
+
+PanoramaState parsePanoramaState(BinaryReader& reader) {
+    constexpr std::size_t kSceneRecordBytes = 0x224;
+    constexpr std::size_t kLayerRecordBytes = 0x78;
+    constexpr std::size_t kRegionRecordBytes = 0x34;
+
+    PanoramaState state;
+    state.version = reader.readU32();
+    const auto sceneCount = reader.readU32();
+
+    state.scenes.reserve(sceneCount);
+    for (std::uint32_t i = 0; i < sceneCount; ++i) {
+        PanoramaScene scene;
+        scene.recordOffset = reader.position();
+        const auto record = reader.readBytes(kSceneRecordBytes);
+        scene.width = readU32At(record, 0x04);
+        scene.height = readU32At(record, 0x08);
+        scene.subImageCount = readU32At(record, 0x150);
+        scene.regionCount = readU32At(record, 0x21c);
+
+        // Base image: width*height bytes, size derived from the record fields.
+        reader.skip(static_cast<std::uint64_t>(scene.width) * scene.height);
+
+        for (std::uint32_t s = 0; s < scene.subImageCount; ++s) {
+            const auto layer = reader.readBytes(kLayerRecordBytes);
+            const auto lw = readU32At(layer, 0x24);
+            const auto lh = readU32At(layer, 0x2c);
+            reader.skip(static_cast<std::uint64_t>(lw) * lh);
+        }
+
+        reader.skip(static_cast<std::size_t>(scene.regionCount) * kRegionRecordBytes);
+        state.scenes.push_back(scene);
+    }
+
     return state;
 }
 
