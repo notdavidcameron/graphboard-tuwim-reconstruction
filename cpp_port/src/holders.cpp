@@ -23,10 +23,12 @@ const std::vector<HolderInfo>& registry() {
                      "SpriteHolder.dll:10008930", true});
         t.push_back({HolderKind::TextHolder,
                      Guid::fromString("AD45ADB6-5290-11D0-B442-008048EB5D40"),
-                     "Text_Holder", "TextHolder.dll", "", false});
+                     "Text_Holder", "TextHolder.dll",
+                     "TextHolder.dll:10008200", true});
         t.push_back({HolderKind::SoundHolder,
                      Guid::fromString("1720D306-6932-11D0-B468-008048EB5D40"),
-                     "Sound_Holder", "", "", false});
+                     "Sound_Holder", "Sound.dll",
+                     "Sound.dll:10004090", true});
         t.push_back({HolderKind::MultiBitmap,
                      Guid::fromString("F7794041-1EB4-11D1-9B25-008048EB5D40"),
                      "MultiBitmap", "MultiBmp.dll", "", true});
@@ -36,7 +38,8 @@ const std::vector<HolderInfo>& registry() {
         // Puzzle.dll, Recorder.dll — all open in the Ghidra project).
         t.push_back({HolderKind::BitmapHolder,
                      Guid::fromString("0D8A5736-5337-11D0-B444-008048EB5D40"),
-                     "Bitmap_Holder", "", "", false});
+                     "Bitmap_Holder", "BitmapHolder.dll",
+                     "BitmapHolder.dll:10003d20", true});
         t.push_back({HolderKind::VideoHolder,
                      Guid::fromString("B2CDC8DE-5359-11D0-B445-008048EB5D40"),
                      "Video_Holder", "", "", false});
@@ -48,10 +51,11 @@ const std::vector<HolderInfo>& registry() {
                      "Panorama", "", "", false});
         t.push_back({HolderKind::Puzzle,
                      Guid::fromString("196E7596-AB2B-11D0-B2A5-008048EB5D40"),
-                     "Puzzle", "", "", false});
+                     "Puzzle", "Puzzle.dll",
+                     "Puzzle.dll:10003470", true});
         t.push_back({HolderKind::Recorder,
                      Guid::fromString("2B61D676-9627-11D0-B280-008048EB5D40"),
-                     "Recorder", "", "", false});
+                     "Recorder", "Recorder.dll", "", true});
         return t;
     }();
     return table;
@@ -255,6 +259,189 @@ TransparentVideoHolderState parseTransparentVideoHolderState(BinaryReader& reade
         state.entries.push_back(entry);
     }
 
+    return state;
+}
+
+SoundHolderState parseSoundHolderState(BinaryReader& reader) {
+    // 0x58-byte record framing per the shipped 1997 DLL; the GraphBoard 1.00
+    // DLL writes 0x6c-byte records (see holders.hpp / recovery notes).
+    constexpr std::size_t kSoundRecordBytes = 0x58;
+
+    SoundHolderState state;
+    state.version = reader.readU32();
+    const auto soundCount = reader.readU32();
+
+    state.sounds.reserve(soundCount);
+    for (std::uint32_t i = 0; i < soundCount; ++i) {
+        SoundEntry sound;
+        sound.soundByteCount = reader.readU32();
+        sound.soundOffset = reader.position();
+        const auto riffTag = reader.readBytes(4);
+        sound.looksLikeRiff =
+            riffTag[0] == 'R' && riffTag[1] == 'I' && riffTag[2] == 'F' && riffTag[3] == 'F';
+        if (sound.soundByteCount < 4) {
+            throw ParseError("Sound entry shorter than a RIFF tag");
+        }
+        reader.skip(sound.soundByteCount - 4);
+
+        const auto record = reader.readBytes(kSoundRecordBytes);
+        sound.archiveStart = readU32At(record, 0x04);
+        sound.archiveEnd = readU32At(record, 0x08);
+        sound.name = readNulPaddedName(record, 0x0c, 0x20);
+        sound.waveFormatByteCount = reader.readU32();
+        reader.skip(sound.waveFormatByteCount);
+        state.sounds.push_back(std::move(sound));
+    }
+
+    return state;
+}
+
+TextHolderState parseTextHolderState(BinaryReader& reader) {
+    constexpr std::size_t kTextEntryBytes = 0xc4;
+    constexpr std::size_t kRenderCacheBytes = 0x68;
+    constexpr std::size_t kFontSlotBytes = 0xc84;
+    constexpr std::uint32_t kFontSlotCount = 50;
+    constexpr std::size_t kGlyphCount = 256;
+
+    TextHolderState state;
+    state.version = reader.readU32();
+    const auto textCount = reader.readU32();
+    for (auto& color : state.colors) {
+        color = reader.readU8();
+    }
+
+    state.entries.reserve(textCount);
+    for (std::uint32_t i = 0; i < textCount; ++i) {
+        const auto record = reader.readBytes(kTextEntryBytes);
+        TextEntry entry;
+        entry.hasRenderCache = readU32At(record, 0x70) != 0;
+        entry.hasSecondaryText = readU32At(record, 0x90) != 0;
+
+        if (entry.hasRenderCache) {
+            if (!entry.hasSecondaryText) {
+                // Branch A: embedded render-object stream, then the cache record.
+                entry.streamByteCount = reader.readU32();
+                entry.streamOffset = reader.position();
+                reader.skip(entry.streamByteCount);
+            }
+            const auto cache = reader.readBytes(kRenderCacheBytes);
+            const auto lineOffsetsPtr = readU32At(cache, 0x0c);
+            entry.lineCount = readU32At(cache, 0x10);
+            if (lineOffsetsPtr != 0 && entry.lineCount != 0) {
+                entry.lineOffsets.reserve(entry.lineCount);
+                for (std::uint32_t line = 0; line < entry.lineCount; ++line) {
+                    entry.lineOffsets.push_back(reader.readU32());
+                }
+            }
+            if (entry.hasSecondaryText) {
+                entry.secondaryText = reader.readArchiveString();
+            }
+        }
+        entry.primaryText = reader.readArchiveString();
+        state.entries.push_back(std::move(entry));
+    }
+
+    // FontControl block: always appended by TextHolder_SerializeDocument.
+    for (std::uint32_t slot = 0; slot < kFontSlotCount; ++slot) {
+        const auto present = reader.readU32();
+        if (present == 0) {
+            continue;
+        }
+        const auto slotRecord = reader.readBytes(kFontSlotBytes);
+        FontSlot font;
+        font.height = readU32At(slotRecord, 0xc00);
+        for (std::size_t g = 0; g < kGlyphCount; ++g) {
+            if (readU32At(slotRecord, g * 4) != 0) {
+                const auto width = static_cast<std::uint32_t>(slotRecord[0x800 + g * 4]) |
+                                   (static_cast<std::uint32_t>(slotRecord[0x801 + g * 4]) << 8);
+                reader.skip(((width + 3) & ~3u) * font.height);
+                ++font.glyphCount;
+            }
+        }
+        state.fontSlots.push_back(font);
+    }
+
+    return state;
+}
+
+BitmapHolderState parseBitmapHolderState(BinaryReader& reader) {
+    constexpr std::size_t kBitmapHeaderBytes = 0x90;
+
+    BitmapHolderState state;
+    state.version = reader.readU32();
+    const auto bitmapCount = reader.readU32();
+
+    state.bitmaps.reserve(bitmapCount);
+    for (std::uint32_t i = 0; i < bitmapCount; ++i) {
+        BitmapHolderBitmap bitmap;
+        bitmap.blobByteCount = reader.readU32();
+        bitmap.blobOffset = reader.position();
+        const auto blob = reader.readBytes(bitmap.blobByteCount);
+        if (blob.size() >= kBitmapHeaderBytes) {
+            bitmap.left = static_cast<std::int32_t>(readU32At(blob, 0x08));
+            bitmap.top = static_cast<std::int32_t>(readU32At(blob, 0x0c));
+            bitmap.right = static_cast<std::int32_t>(readU32At(blob, 0x10));
+            bitmap.bottom = static_cast<std::int32_t>(readU32At(blob, 0x14));
+            bitmap.name = readNulPaddedName(blob, 0x34, 12);
+            bitmap.pixelOffset = bitmap.blobOffset + kBitmapHeaderBytes;
+            const auto width = static_cast<std::uint32_t>(bitmap.right - bitmap.left);
+            const auto height = static_cast<std::uint32_t>(bitmap.bottom - bitmap.top);
+            bitmap.pixelSizeConsistent =
+                bitmap.right > bitmap.left && bitmap.bottom > bitmap.top &&
+                static_cast<std::uint64_t>((width + 3) & ~3u) * height ==
+                    bitmap.blobByteCount - kBitmapHeaderBytes;
+        }
+        state.bitmaps.push_back(std::move(bitmap));
+    }
+
+    return state;
+}
+
+PuzzleState parsePuzzleState(BinaryReader& reader) {
+    constexpr std::size_t kBoardBytes = 0x60;
+    constexpr std::size_t kChipBytes = 0x48;
+    constexpr std::size_t kSubRecordBytes = 0x2c;
+
+    PuzzleState state;
+    state.version = reader.readU32();
+    const auto boardCount = reader.readU32();
+
+    state.boards.reserve(boardCount);
+    for (std::uint32_t b = 0; b < boardCount; ++b) {
+        const auto board = reader.readBytes(kBoardBytes);
+        const auto chipCount = readU32At(board, 0x0c);
+
+        PuzzleBoard puzzleBoard;
+        puzzleBoard.chips.reserve(chipCount);
+        for (std::uint32_t c = 0; c < chipCount; ++c) {
+            const auto chip = reader.readBytes(kChipBytes);
+            PuzzleChip puzzleChip;
+            puzzleChip.left = static_cast<std::int32_t>(readU32At(chip, 0x00));
+            puzzleChip.top = static_cast<std::int32_t>(readU32At(chip, 0x04));
+            puzzleChip.right = static_cast<std::uint16_t>(
+                static_cast<std::uint32_t>(chip[0x08]) |
+                (static_cast<std::uint32_t>(chip[0x09]) << 8));
+            puzzleChip.bottom = static_cast<std::int32_t>(readU32At(chip, 0x0c));
+            puzzleChip.subRecordCount = readU32At(chip, 0x20);
+
+            puzzleChip.pixelByteCount = reader.readU32();
+            puzzleChip.pixelOffset = reader.position();
+            reader.skip(puzzleChip.pixelByteCount);
+            reader.skip(static_cast<std::size_t>(puzzleChip.subRecordCount) * kSubRecordBytes);
+            puzzleBoard.chips.push_back(puzzleChip);
+        }
+        state.boards.push_back(std::move(puzzleBoard));
+    }
+
+    return state;
+}
+
+RecorderState parseRecorderState(BinaryReader& reader) {
+    constexpr std::size_t kRecorderRecordBytes = 0x68;
+    RecorderState state;
+    state.version = reader.readU32();
+    state.recordOffset = reader.position();
+    reader.skip(kRecorderRecordBytes);
     return state;
 }
 

@@ -213,4 +213,171 @@ struct TransparentVideoHolderState {
 
 TransparentVideoHolderState parseTransparentVideoHolderState(BinaryReader& reader);
 
+// -------------------------------------------------------------------------
+// Sound_Holder component-private state.
+// Serializer: SoundHolder_SerializeSoundData (Sound.dll:10004090); layout
+// recovered read-only and verified walking all 14 RZECZKA.BDF sounds
+// (0x648c9c..0xb04568). See docs/holder_recovery_notes.md, including the
+// version-skew caveat: the shipped 1997 DLL wrote a 0x58-byte record + u32
+// waveFormatByteCount (0 in every observed sound); the GraphBoard 1.00 DLL in
+// the Ghidra project writes a 0x6c record and a nonzero wave-format block.
+//
+//   u32 version              // ignored on load; RZECZKA: 2
+//   u32 soundCount
+//   repeat soundCount:
+//       u32 soundByteCount
+//       u8  soundBytes[soundByteCount]  // complete RIFF/WAVE file
+//       u8  record[0x58]     // +0x04/+0x08 archive start/end, +0x0c name
+//       u32 waveFormatByteCount
+//       u8  waveFormat[waveFormatByteCount]
+// -------------------------------------------------------------------------
+struct SoundEntry {
+    std::uint32_t soundByteCount = 0;
+    std::size_t soundOffset = 0;      // file offset of the RIFF bytes
+    std::string name;                 // record+0x0c, NUL padded
+    std::uint32_t archiveStart = 0;   // record+0x04 (matches soundOffset on disk)
+    std::uint32_t archiveEnd = 0;     // record+0x08
+    std::uint32_t waveFormatByteCount = 0;
+    bool looksLikeRiff = false;       // soundBytes begin with "RIFF"
+};
+
+struct SoundHolderState {
+    std::uint32_t version = 0;
+    std::vector<SoundEntry> sounds;
+};
+
+SoundHolderState parseSoundHolderState(BinaryReader& reader);
+
+// -------------------------------------------------------------------------
+// Text_Holder component-private state (including the trailing FontControl
+// block). Serializers: TextHolder_SerializeDocument (TextHolder.dll:10008200),
+// TextHolder_SerializeOneTextEntry (TextHolder.dll:10007de0),
+// FontControl_SerializeFontSlots (FontControl.dll:10004230). Layout recovered
+// read-only and verified against RZECZKA.BDF: text entries 0x642244..0x642508,
+// FontControl block ends exactly at the Sound wrapper 0x64891c.
+//
+//   u32 version (=2)
+//   u32 textCount
+//   u8  color0..color3
+//   repeat textCount:
+//       u8 entry[0xc4]                       // stale ptrs +0x70/+0x90 act as flags
+//       if entry+0x70 != 0:
+//           if entry+0x90 == 0:
+//               u32 streamByteCount; u8 stream[streamByteCount]
+//               u8 renderCache[0x68]; [u32 lineOffsets[lineCount]]
+//           else:
+//               u8 renderCache[0x68]; [u32 lineOffsets[lineCount]]
+//               CString secondaryText        // e.g. "rzeczka.exs" synchro ref
+//       CString primaryText                  // the display text (cp1250)
+//   FontControl block: exactly 50 slots of
+//       u32 present; if present: u8 slot[0xc84] + per-glyph bitmaps
+// -------------------------------------------------------------------------
+struct TextEntry {
+    bool hasRenderCache = false;      // entry+0x70 != 0
+    bool hasSecondaryText = false;    // entry+0x90 != 0
+    std::uint32_t streamByteCount = 0;   // embedded render stream (branch A only)
+    std::size_t streamOffset = 0;
+    std::uint32_t lineCount = 0;         // renderCache+0x10
+    std::vector<std::uint32_t> lineOffsets;
+    std::string secondaryText;           // branch B only
+    std::string primaryText;
+};
+
+struct FontSlot {
+    std::uint32_t height = 0;         // slot+0xc00
+    std::uint32_t glyphCount = 0;     // glyphs with bitmaps present
+};
+
+struct TextHolderState {
+    std::uint32_t version = 0;
+    std::uint8_t colors[4] = {0, 0, 0, 0};
+    std::vector<TextEntry> entries;
+    std::vector<FontSlot> fontSlots;  // present slots only, in slot order
+};
+
+TextHolderState parseTextHolderState(BinaryReader& reader);
+
+// -------------------------------------------------------------------------
+// Bitmap_Holder component-private state.
+// Serializer: BitmapHolder_SerializeBitmaps (BitmapHolder.dll:10003d20).
+// Verified against GRZESIU.BDF (private block 0xa54ae8: one 452x359 bitmap
+// "autobus09"; the walk lands exactly on the next wrapper's CLSID).
+//
+//   u32 version (=1)         // ignored on load
+//   u32 bitmapCount          // holder+0x1dc
+//   repeat bitmapCount:
+//       u32 blobByteCount
+//       u8  blob[blobByteCount]
+//
+// Blob fields (verified): rect left/top/right/bottom i32 at +0x08..+0x14,
+// name char[12] at +0x34, current-position copies at +0x40/+0x44 (load copies
+// +0x08/+0x0c over them), 8-bpp pixels from +0x90 with stride
+// ((right-left)+3 & ~3) and (bottom-top) rows.
+// -------------------------------------------------------------------------
+struct BitmapHolderBitmap {
+    std::uint32_t blobByteCount = 0;
+    std::size_t blobOffset = 0;
+    std::int32_t left = 0, top = 0, right = 0, bottom = 0;
+    std::string name;                 // blob+0x34
+    std::size_t pixelOffset = 0;      // blobOffset + 0x90
+    bool pixelSizeConsistent = false; // stride*(bottom-top) == blobByteCount-0x90
+};
+
+struct BitmapHolderState {
+    std::uint32_t version = 0;
+    std::vector<BitmapHolderBitmap> bitmaps;
+};
+
+BitmapHolderState parseBitmapHolderState(BinaryReader& reader);
+
+// -------------------------------------------------------------------------
+// Puzzle component-private state.
+// Serializer: PuzzleContext_SerializeBoards (Puzzle.dll:10003470).
+//
+//   u32 version (=1)         // ignored on load
+//   u32 boardCount           // ctx+0x110
+//   repeat boardCount:
+//       u8 board[0x60]       // +0x0c chipCount (ptr table at +0x08 is stale)
+//       repeat chipCount:
+//           u8  chip[0x48]   // +0x00 i32 left, +0x04 i32 top, +0x08 u16 right,
+//                            // +0x0c i32 bottom, +0x20 subRecordCount
+//           u32 pixelByteCount   // save computes (bottom-top) *
+//                                // ((right-left)+3 & ~3); load trusts the u32
+//           u8  pixels[pixelByteCount]      // 8-bpp chip image
+//           u8  subRecords[subRecordCount][0x2c]
+// -------------------------------------------------------------------------
+struct PuzzleChip {
+    std::int32_t left = 0, top = 0, bottom = 0;
+    std::uint16_t right = 0;
+    std::uint32_t pixelByteCount = 0;
+    std::size_t pixelOffset = 0;
+    std::uint32_t subRecordCount = 0;
+};
+
+struct PuzzleBoard {
+    std::vector<PuzzleChip> chips;
+};
+
+struct PuzzleState {
+    std::uint32_t version = 0;
+    std::vector<PuzzleBoard> boards;
+};
+
+PuzzleState parsePuzzleState(BinaryReader& reader);
+
+// -------------------------------------------------------------------------
+// Recorder component-private state.
+// Layout recovered EMPIRICALLY (the serializer function in Recorder.dll has
+// not been located/named yet): a fixed block of u32 version(=1) plus a
+// 0x68-byte record whose visible contents are stale runtime pointers.
+// Verified identical (108 bytes) across ABEC_R/CUDA_R/DYZIO_R/FIG_R, each
+// ending exactly at the next wrapper CLSID.
+// -------------------------------------------------------------------------
+struct RecorderState {
+    std::uint32_t version = 0;
+    std::size_t recordOffset = 0;   // file offset of the 0x68-byte record
+};
+
+RecorderState parseRecorderState(BinaryReader& reader);
+
 } // namespace graphboard

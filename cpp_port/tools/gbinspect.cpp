@@ -1,6 +1,7 @@
 #include "graphboard/component.hpp"
 #include "graphboard/format.hpp"
 #include "graphboard/holders.hpp"
+#include "graphboard/runtime/script.hpp"
 #include "graphboard/text.hpp"
 
 #include <nlohmann/json.hpp>
@@ -9,6 +10,7 @@
 #include <cctype>
 #include <filesystem>
 #include <iostream>
+#include <set>
 #include <vector>
 
 #ifdef _WIN32
@@ -170,6 +172,92 @@ json transparentVideoStateToJson(const graphboard::TransparentVideoHolderState& 
     };
 }
 
+json soundStateToJson(const graphboard::SoundHolderState& state) {
+    json sounds = json::array();
+    for (const auto& sound : state.sounds) {
+        sounds.push_back({
+            {"name", t(sound.name)},
+            {"soundByteCount", sound.soundByteCount},
+            {"soundOffset", sound.soundOffset},
+            {"looksLikeRiff", sound.looksLikeRiff},
+            {"waveFormatByteCount", sound.waveFormatByteCount},
+        });
+    }
+    return {
+        {"version", state.version},
+        {"soundCount", state.sounds.size()},
+        {"sounds", sounds},
+    };
+}
+
+json textStateToJson(const graphboard::TextHolderState& state) {
+    json entries = json::array();
+    for (const auto& entry : state.entries) {
+        json item = {
+            {"hasRenderCache", entry.hasRenderCache},
+            {"lineCount", entry.lineCount},
+            {"primaryText", t(entry.primaryText)},
+        };
+        if (entry.hasSecondaryText) {
+            item["secondaryText"] = t(entry.secondaryText);
+        }
+        if (entry.streamByteCount != 0) {
+            item["streamByteCount"] = entry.streamByteCount;
+            item["streamOffset"] = entry.streamOffset;
+        }
+        entries.push_back(std::move(item));
+    }
+    json fonts = json::array();
+    for (const auto& slot : state.fontSlots) {
+        fonts.push_back({{"height", slot.height}, {"glyphCount", slot.glyphCount}});
+    }
+    return {
+        {"version", state.version},
+        {"colors", {state.colors[0], state.colors[1], state.colors[2], state.colors[3]}},
+        {"entryCount", state.entries.size()},
+        {"entries", entries},
+        {"fontSlots", fonts},
+    };
+}
+
+json bitmapHolderStateToJson(const graphboard::BitmapHolderState& state) {
+    json bitmaps = json::array();
+    for (const auto& bitmap : state.bitmaps) {
+        bitmaps.push_back({
+            {"name", t(bitmap.name)},
+            {"rect", {bitmap.left, bitmap.top, bitmap.right, bitmap.bottom}},
+            {"blobByteCount", bitmap.blobByteCount},
+            {"pixelOffset", bitmap.pixelOffset},
+            {"pixelSizeConsistent", bitmap.pixelSizeConsistent},
+        });
+    }
+    return {
+        {"version", state.version},
+        {"bitmapCount", state.bitmaps.size()},
+        {"bitmaps", bitmaps},
+    };
+}
+
+json puzzleStateToJson(const graphboard::PuzzleState& state) {
+    json boards = json::array();
+    for (const auto& board : state.boards) {
+        json chips = json::array();
+        for (const auto& chip : board.chips) {
+            chips.push_back({
+                {"rect", {chip.left, chip.top, chip.right, chip.bottom}},
+                {"pixelByteCount", chip.pixelByteCount},
+                {"subRecordCount", chip.subRecordCount},
+            });
+        }
+        boards.push_back({{"chipCount", board.chips.size()}, {"chips", chips}});
+    }
+    return {
+        {"version", state.version},
+        {"boardCount", state.boards.size()},
+        {"boards", boards},
+    };
+}
+
 json hotspotStateToJson(const HotSpotHolderState& state) {
     json hotspots = json::array();
     for (const auto& hotspot : state.hotspots) {
@@ -222,6 +310,31 @@ json componentListToJson(graphboard::BinaryReader& reader) {
             component["privateState"] =
                 transparentVideoStateToJson(graphboard::parseTransparentVideoHolderState(reader));
             components.push_back(std::move(component));
+        } else if (kind == graphboard::HolderKind::SoundHolder) {
+            component["privateStateParsed"] = true;
+            component["privateState"] = soundStateToJson(graphboard::parseSoundHolderState(reader));
+            components.push_back(std::move(component));
+        } else if (kind == graphboard::HolderKind::BitmapHolder) {
+            component["privateStateParsed"] = true;
+            component["privateState"] = bitmapHolderStateToJson(graphboard::parseBitmapHolderState(reader));
+            components.push_back(std::move(component));
+        } else if (kind == graphboard::HolderKind::Puzzle) {
+            component["privateStateParsed"] = true;
+            component["privateState"] = puzzleStateToJson(graphboard::parsePuzzleState(reader));
+            components.push_back(std::move(component));
+        } else if (kind == graphboard::HolderKind::Recorder) {
+            const auto recorder = graphboard::parseRecorderState(reader);
+            component["privateStateParsed"] = true;
+            component["privateState"] = {
+                {"version", recorder.version},
+                {"recordOffset", recorder.recordOffset},
+                {"note", "fixed 0x68-byte runtime record; layout empirical"},
+            };
+            components.push_back(std::move(component));
+        } else if (kind == graphboard::HolderKind::TextHolder) {
+            component["privateStateParsed"] = true;
+            component["privateState"] = textStateToJson(graphboard::parseTextHolderState(reader));
+            components.push_back(std::move(component));
         } else {
             component["privateStateParsed"] = false;
             const std::string who = info ? info->displayName : wrapper.clsid.toString();
@@ -261,11 +374,91 @@ json bdfToJson(graphboard::BinaryReader& reader) {
         }
     }
     const auto header = graphboard::parseBdfHeader(reader);
-    return {
+    json out = {
         {"kind", "BDF"},
         {"header", headerToJson(header)},
         {"componentList", componentListToJson(reader)},
     };
+
+    // When every component parsed, the reader sits at the page script text
+    // block (GraphBrdScriptEditor_SerializeText), followed by the script
+    // engine parse cache and the COleDocument trailing state.
+    if (!out["componentList"].contains("note")) {
+        const auto scriptOffset = reader.position();
+        const auto script = graphboard::parseScriptText(reader);
+        const auto engineOffset = reader.position();
+        const auto engine = graphboard::parseScriptEngineState(reader);
+
+        json switchBlocks = json::array();
+        for (const auto& block : engine.switchBlocks) {
+            json cases = json::array();
+            for (const auto& entry : block.cases) {
+                cases.push_back({{"value", entry.caseValue}, {"bodyOffset", entry.caseBodyOffset}});
+            }
+            switchBlocks.push_back({
+                {"start", block.blockStart},
+                {"end", block.blockEnd},
+                {"defaultBodyOffset", block.defaultBodyOffset},
+                {"cases", cases},
+            });
+        }
+        json handlers = json::array();
+        for (const auto& handler : graphboard::runtime::discoverHandlers(script.text)) {
+            json params = json::array();
+            for (const auto& param : handler.parameters) {
+                params.push_back({{"type", param.type}, {"name", param.name}});
+            }
+            const char* kindName =
+                handler.kind == graphboard::runtime::HandlerKind::PageEvent ? "pageEvent"
+                : handler.kind == graphboard::runtime::HandlerKind::ComponentCallback
+                    ? "componentCallback"
+                    : "userFunction";
+            json entry = {
+                {"kind", kindName},
+                {"name", handler.name},
+                {"returnType", handler.returnType},
+                {"parameters", params},
+                {"nameOffset", handler.nameOffset},
+                {"bodyOffset", handler.bodyOffset},
+                {"bodyEndOffset", handler.bodyEndOffset},
+            };
+            if (handler.kind == graphboard::runtime::HandlerKind::ComponentCallback) {
+                entry["component"] = handler.component;
+                entry["method"] = handler.method;
+            }
+            handlers.push_back(std::move(entry));
+        }
+        // Unique API surface used by this page's script.
+        std::set<std::string> builtinsUsed;
+        std::set<std::string> componentMethodsUsed;
+        for (const auto& call : graphboard::runtime::collectCalls(script.text)) {
+            if (call.isBuiltin) {
+                builtinsUsed.insert(call.name);
+            } else {
+                componentMethodsUsed.insert(call.component + "." + call.name);
+            }
+        }
+        out["pageScript"] = {
+            {"offset", scriptOffset},
+            {"version", script.version},
+            {"textByteCount", script.text.size()},
+            {"handlers", handlers},
+            {"builtinsUsed", builtinsUsed},
+            {"componentMethodsUsed", componentMethodsUsed},
+            {"text", t(script.text)},
+        };
+        out["scriptEngineState"] = {
+            {"offset", engineOffset},
+            {"schemaVersion", engine.schemaVersion},
+            {"switchBlockCount", engine.switchBlocks.size()},
+            {"switchBlocks", switchBlocks},
+            {"builtinCallCount", engine.builtinTokenOffsets.size()},
+            {"builtinTokenOffsets", engine.builtinTokenOffsets},
+            {"builtinCallKinds", engine.builtinCallKinds},
+        };
+        out["trailingByteCount"] = reader.remaining();
+    }
+    return out;
 }
 
 } // namespace

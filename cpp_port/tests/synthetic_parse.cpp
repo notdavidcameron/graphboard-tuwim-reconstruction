@@ -370,6 +370,115 @@ void testTransparentVideoHolderState() {
     assert(reader.eof());
 }
 
+void testSoundHolderState() {
+    std::vector<std::uint8_t> bytes;
+    appendU32(bytes, 2);                 // version
+    appendU32(bytes, 1);                 // soundCount
+    // one sound: 12-byte fake RIFF, 0x58 record, u32 wfSize=2, 2 wf bytes
+    appendU32(bytes, 12);
+    const char riff[12] = {'R','I','F','F',4,0,0,0,'W','A','V','E'};
+    for (const char c : riff) appendU8(bytes, static_cast<std::uint8_t>(c));
+    std::vector<std::uint8_t> record(0x58, 0);
+    record[0x04] = 8;                    // archiveStart
+    record[0x08] = 20;                   // archiveEnd
+    const std::string name = "kamyki";
+    for (std::size_t i = 0; i < name.size(); ++i) record[0x0c + i] = static_cast<std::uint8_t>(name[i]);
+    bytes.insert(bytes.end(), record.begin(), record.end());
+    appendU32(bytes, 2);
+    appendU8(bytes, 0xaa);
+    appendU8(bytes, 0xbb);
+
+    graphboard::BinaryReader reader(bytes);
+    const auto state = graphboard::parseSoundHolderState(reader);
+    assert(state.version == 2);
+    assert(state.sounds.size() == 1);
+    assert(state.sounds[0].looksLikeRiff);
+    assert(state.sounds[0].name == "kamyki");
+    assert(state.sounds[0].archiveStart == 8);
+    assert(state.sounds[0].waveFormatByteCount == 2);
+    assert(reader.eof());
+}
+
+void testTextHolderState() {
+    std::vector<std::uint8_t> bytes;
+    appendU32(bytes, 2);                 // version
+    appendU32(bytes, 1);                 // textCount
+    appendU8(bytes, 0x17); appendU8(bytes, 0xbb); appendU8(bytes, 0x37); appendU8(bytes, 0x00);
+    // entry record: both stale pointers set -> secondary-text branch
+    std::vector<std::uint8_t> entry(0xc4, 0);
+    entry[0x70] = 1;                     // pRenderCache present
+    entry[0x90] = 1;                     // pSecondaryText present
+    bytes.insert(bytes.end(), entry.begin(), entry.end());
+    // renderCache: lineOffsetsPtr nonzero, lineCount 2
+    std::vector<std::uint8_t> cache(0x68, 0);
+    cache[0x0c] = 1;
+    cache[0x10] = 2;
+    bytes.insert(bytes.end(), cache.begin(), cache.end());
+    appendU32(bytes, 10);
+    appendU32(bytes, 25);
+    appendArchiveString(bytes, "rzeczka.exs");
+    appendArchiveString(bytes, "Rzeczka");
+    // FontControl: one present slot with one glyph (width 5 -> stride 8, height 2)
+    appendU32(bytes, 1);                 // slot 0 present
+    std::vector<std::uint8_t> slot(0xc84, 0);
+    slot[0x00] = 1;                      // glyph 0 present
+    slot[0x800] = 5;                     // glyph 0 width
+    slot[0xc00] = 2;                     // slot height
+    bytes.insert(bytes.end(), slot.begin(), slot.end());
+    for (int i = 0; i < 16; ++i) appendU8(bytes, 0xee);  // glyph bitmap
+    for (int i = 0; i < 49; ++i) appendU32(bytes, 0);    // remaining absent slots
+
+    graphboard::BinaryReader reader(bytes);
+    const auto state = graphboard::parseTextHolderState(reader);
+    assert(state.version == 2);
+    assert(state.colors[1] == 0xbb);
+    assert(state.entries.size() == 1);
+    assert(state.entries[0].hasSecondaryText);
+    assert(state.entries[0].lineCount == 2);
+    assert(state.entries[0].lineOffsets[1] == 25);
+    assert(state.entries[0].secondaryText == "rzeczka.exs");
+    assert(state.entries[0].primaryText == "Rzeczka");
+    assert(state.fontSlots.size() == 1);
+    assert(state.fontSlots[0].height == 2);
+    assert(state.fontSlots[0].glyphCount == 1);
+    assert(reader.eof());
+}
+
+void testScriptBlocks() {
+    std::vector<std::uint8_t> bytes;
+    appendU32(bytes, 1);                 // script text version
+    appendArchiveString(bytes, "switch(x){}");
+    // engine state, schema 2
+    appendU32(bytes, 2);                 // schemaVersion
+    appendU32(bytes, 1);                 // switchBlockCount
+    appendU32(bytes, 7); appendU32(bytes, 0); appendU32(bytes, 0); appendU32(bytes, 3);  // parserState
+    appendU32(bytes, 5); appendU32(bytes, 6);   // blockStart twice (second wins)
+    appendU32(bytes, 1);                 // caseCount
+    appendU32(bytes, 11);                // blockEnd
+    appendU32(bytes, 9);                 // defaultBodyOffset
+    appendU32(bytes, 3); appendU32(bytes, 8);   // case value/offset
+    appendU32(bytes, 1);                 // builtinCallCount
+    appendU32(bytes, 4);                 // token offset
+    appendU32(bytes, 2);                 // call kind
+    appendU32(bytes, 100); appendU32(bytes, 0); appendU32(bytes, 200); appendU32(bytes, 0);  // schema2
+
+    graphboard::BinaryReader reader(bytes);
+    const auto script = graphboard::parseScriptText(reader);
+    assert(script.version == 1);
+    assert(script.text == "switch(x){}");
+    const auto engine = graphboard::parseScriptEngineState(reader);
+    assert(engine.schemaVersion == 2);
+    assert(engine.parserState[0] == 7);
+    assert(engine.switchBlocks.size() == 1);
+    assert(engine.switchBlocks[0].blockStart == 6);
+    assert(engine.switchBlocks[0].blockEnd == 11);
+    assert(engine.switchBlocks[0].cases[0].caseValue == 3);
+    assert(engine.builtinTokenOffsets.size() == 1);
+    assert(engine.builtinCallKinds[0] == 2);
+    assert(engine.schema2Fields[2] == 200);
+    assert(reader.eof());
+}
+
 } // namespace
 
 int main() {
@@ -382,5 +491,8 @@ int main() {
     testSpriteHolderState();
     testMultiBitmapState();
     testTransparentVideoHolderState();
+    testSoundHolderState();
+    testTextHolderState();
+    testScriptBlocks();
     return 0;
 }

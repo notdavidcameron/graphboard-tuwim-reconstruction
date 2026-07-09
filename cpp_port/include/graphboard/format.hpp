@@ -46,8 +46,44 @@ struct BdfHeader {
     std::size_t componentListOffset = 0;
 };
 
+// Script editor text block (GraphBrdScriptEditor_SerializeText,
+// Tuwim.exe:004230a0). Used for both the per-page script (after the page
+// component list in .BDF) and the global project script (end of START.PRJ).
+struct ScriptText {
+    std::uint32_t version = 0;   // currently 1
+    std::string text;            // cp1250 script source
+};
+
+// Script engine parse cache (GraphBrdScriptEngine_Serialize,
+// Tuwim.exe:0041aad0). Follows the page script text in .BDF. All offsets are
+// character offsets into the page script text.
+struct ScriptSwitchCase {
+    std::uint32_t caseValue = 0;
+    std::uint32_t caseBodyOffset = 0;
+};
+
+struct ScriptSwitchBlock {
+    std::uint32_t blockStart = 0;       // written twice on disk; second copy wins
+    std::uint32_t blockEnd = 0;
+    std::uint32_t defaultBodyOffset = 0;
+    std::vector<ScriptSwitchCase> cases;
+};
+
+struct ScriptEngineState {
+    std::uint32_t schemaVersion = 0;    // current exe writes 4; RZECZKA has 2
+    std::uint32_t parserState[4] = {0, 0, 0, 0};  // engine +0x38,+0x3c,+0x30,+0x34
+    std::vector<ScriptSwitchBlock> switchBlocks;
+    std::vector<std::uint32_t> builtinTokenOffsets;  // engine +0x11b4
+    std::vector<std::uint32_t> builtinCallKinds;     // engine +0x1344
+    std::uint32_t schema2Fields[4] = {0, 0, 0, 0};   // engine +0x44..+0x50
+    std::uint32_t schema3Field = 0;                  // engine +0x54
+    std::uint32_t schema4Field = 0;                  // engine +0x58
+};
+
 ProjectManifest parseProjectManifest(BinaryReader& reader);
 BdfHeader parseBdfHeader(BinaryReader& reader);
+ScriptText parseScriptText(BinaryReader& reader);
+ScriptEngineState parseScriptEngineState(BinaryReader& reader);
 
 std::string decodeShiftedSignature(const std::string& encoded);
 

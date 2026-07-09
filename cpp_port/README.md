@@ -24,8 +24,16 @@ plumbing.
   component-private payloads this port can currently parse.
 - Component-private state parsers, each byte-exact vs `RZECZKA.BDF`:
   `HotSpot_Holder`, `Sprite_Holder`, `MultiBitmap`, `Transparent_Video_Holder`.
+- Page script text + script-engine parse cache parsing (`format`), so a full
+  `.BDF` is read end-to-end: header, components, script, engine state, trailer.
+- A runtime front-end (`runtime/lexer`, `runtime/script`): a cp1250-safe token
+  scanner, plus `discoverHandlers` (page events, dotted component callbacks,
+  user functions with params + body spans) and `collectCalls` (the builtin /
+  component-method API surface). This is the first stage of the runtime; see
+  `docs/runtime_recovery_notes.md` for the recovered engine internals and plan.
 - A `gbinspect` command-line tool that prints parsed summaries as JSON, walking a
-  page's components as far as the implemented private-state parsers allow.
+  page's components as far as the implemented private-state parsers allow and
+  reporting each page's script handlers and API usage.
 
 `Text_Holder` (plus its trailing FontControl font block) and `Sound_Holder` have
 fully recovered, real-file-verified layouts and a step-by-step implementation

@@ -19,6 +19,8 @@ add_library(graphboard_core
     src/format.cpp
     src/component.cpp
     src/holders.cpp
+    src/runtime/lexer.cpp
+    src/runtime/script.cpp
 )
 
 target_include_directories(graphboard_core PUBLIC
@@ -43,4 +45,10 @@ if(BUILD_TESTING)
     )
     target_link_libraries(graphboard_synthetic_parse_test PRIVATE graphboard_core)
     add_test(NAME synthetic_parse COMMAND graphboard_synthetic_parse_test)
+
+    add_executable(graphboard_runtime_script_test
+        tests/runtime_script.cpp
+    )
+    target_link_libraries(graphboard_runtime_script_test PRIVATE graphboard_core)
+    add_test(NAME runtime_script COMMAND graphboard_runtime_script_test)
 endif()

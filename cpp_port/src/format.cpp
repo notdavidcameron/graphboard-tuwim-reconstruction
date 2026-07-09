@@ -64,6 +64,63 @@ BdfHeader parseBdfHeader(BinaryReader& reader) {
     return header;
 }
 
+ScriptText parseScriptText(BinaryReader& reader) {
+    ScriptText script;
+    script.version = reader.readU32();
+    script.text = reader.readArchiveString();
+    return script;
+}
+
+ScriptEngineState parseScriptEngineState(BinaryReader& reader) {
+    ScriptEngineState state;
+    state.schemaVersion = reader.readU32();
+    const auto switchBlockCount = reader.readU32();
+    for (auto& field : state.parserState) {
+        field = reader.readU32();
+    }
+
+    state.switchBlocks.reserve(switchBlockCount);
+    for (std::uint32_t i = 0; i < switchBlockCount; ++i) {
+        ScriptSwitchBlock block;
+        block.blockStart = reader.readU32();
+        block.blockStart = reader.readU32();   // duplicate on disk; second wins
+        const auto caseCount = reader.readU32();
+        block.blockEnd = reader.readU32();
+        block.defaultBodyOffset = reader.readU32();
+        block.cases.reserve(caseCount);
+        for (std::uint32_t c = 0; c < caseCount; ++c) {
+            ScriptSwitchCase entry;
+            entry.caseValue = reader.readU32();
+            entry.caseBodyOffset = reader.readU32();
+            block.cases.push_back(entry);
+        }
+        state.switchBlocks.push_back(std::move(block));
+    }
+
+    const auto builtinCallCount = reader.readU32();
+    state.builtinTokenOffsets.reserve(builtinCallCount);
+    for (std::uint32_t i = 0; i < builtinCallCount; ++i) {
+        state.builtinTokenOffsets.push_back(reader.readU32());
+    }
+    state.builtinCallKinds.reserve(builtinCallCount);
+    for (std::uint32_t i = 0; i < builtinCallCount; ++i) {
+        state.builtinCallKinds.push_back(reader.readU32());
+    }
+
+    if (state.schemaVersion > 1) {
+        for (auto& field : state.schema2Fields) {
+            field = reader.readU32();
+        }
+    }
+    if (state.schemaVersion > 2) {
+        state.schema3Field = reader.readU32();
+    }
+    if (state.schemaVersion > 3) {
+        state.schema4Field = reader.readU32();
+    }
+    return state;
+}
+
 std::string decodeShiftedSignature(const std::string& encoded) {
     std::string decoded;
     decoded.reserve(encoded.size());
