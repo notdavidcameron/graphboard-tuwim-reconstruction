@@ -1,22 +1,27 @@
-# Component Event Interfaces (component → script callbacks)
+# Component Interfaces (both directions)
 
-Every GraphBoard component wrapper carries a reflected copy of the component's
-IDispatch typeinfo — `cpp_port` already parses it (`ComponentWrapper::functions`
-/ `properties`, from `GraphBrdCntrItem_Serialize`). The event/source members are
-the callbacks a component fires back into the page script; a page script binds
-one by defining a top-level function named `Component_Name.Event(args)` (which
-`discoverHandlers` classifies as a `ComponentCallback`).
+Each GraphBoard component exposes three interfaces, all recovered here:
 
-This catalog is recovered directly from that reflected typeinfo — the human name
-is the record's `displayName`, the argument list is `descriptionOrHelpName`, and
-event members carry `flags = 0x18 (24)`. Dump it for any page with:
+- **`IObject`** — the shared base every component implements (host-facing
+  lifecycle + raw input).
+- **`IMyObjectProperty`** — the **incoming** methods a page script *calls*
+  (`Sprite_Holder.MoveTo`, `Sound_Holder.PlayDSound`, …).
+- **`IMyEvents`** — the **outgoing** events a component *fires* back into the
+  page script (`Sprite_Holder.MouseClickOnDown`, `Transparent_Video_Holder.TheEnd`).
 
-```
-gbinspect PAGE.BDF   # each component now emits its functions[]/properties[]
-```
+Two independent sources, which agree:
 
-The first seven functions of every component are the standard
-IUnknown/IDispatch slots (QueryInterface … Invoke) and are omitted below.
+1. Each component DLL embeds a compiled MSFT **type library**; its name table
+   lists every interface, method, property and parameter. `tools/extract_typelib.py`
+   parses it straight from the DLL bytes. This is the authoritative, complete
+   list and the source for the incoming-method tables below.
+2. The `.BDF` component wrapper carries a host-cached reflection of the
+   component's **event** typeinfo — `cpp_port` parses it
+   (`ComponentWrapper::functions`, from `GraphBrdCntrItem_Serialize`), and
+   `gbinspect PAGE.BDF` now emits it with names + argument signatures. This is
+   the source for the event signatures below (the human name is the record's
+   `displayName`, the signature is `descriptionOrHelpName`; event members carry
+   `flags = 0x18`).
 
 ## Why this matters for the runtime
 
@@ -37,7 +42,200 @@ The signatures give the exact argument count/order to pass. The runtime only
 fires an event if the page defines the matching handler (already known from
 `discoverHandlers`).
 
-## Catalog
+## Incoming methods (script -> component)
+
+The methods a page script *calls* on a component, recovered from each DLL's
+embedded MSFT type library (`tools/extract_typelib.py`) - the
+`IMyObjectProperty` dispinterface. These resolve at runtime through the
+component's `IDispatch::GetIDsOfNames` + `Invoke`, not the host-cached event
+reflection.
+
+### Shared base interface — `IObject` (every component)
+
+Host-facing lifecycle + raw input, dispatched by the board, not usually by
+script name:
+```
+IsYou
+MinMaxDeep
+Draw
+SetBufferSize
+EditProperties
+ConnectToBoard
+ConnnectionPoint
+ComponentInfo
+SetObjectMode
+Serialize
+LButtonDown
+LButtonUp
+MouseMove
+LButtonDblClk
+RButtonDown
+RButtonUp
+OnKeyDown
+OnKeyUp
+CheckRect
+```
+
+### HotSpot_Holder
+```
+EnableHotSpot
+DisableHotSpot
+MoveTo
+PointInHotSpot
+```
+
+### Sprite_Holder
+```
+GotoXY
+ChangePhase
+MoveTo
+ShowSprite
+HideSprite
+StopAnimation
+ContinueAnimation
+SetDeep
+GetPosition
+DisableDragMode
+DisableTimers
+EnableTimers
+SynchronizeTimers
+CompEnableDrag
+CompDisableDrag
+```
+
+### Transparent_Video_Holder
+```
+Play
+Stop
+MoveTo
+ShowFirsLastVideoFrame
+HideFirsLastVideoFrame
+ResetVideo
+SetDeep
+GetPosition
+GetDeep
+```
+
+### Video_Holder
+```
+Play
+PlayFromTo
+Stop
+NewOpen
+NewPlay
+NewPlayFromTo
+NewStop
+NewClose
+```
+
+### Text_Holder
+```
+ShowText
+HideText
+SetText
+SetTextColor
+StartScroll
+StopScroll
+ScrollUp
+ScrollDown
+SetTextOffsets
+GetTextSize
+MoveTextToPosition
+PlaySynchroText
+StopSynchroText
+Pause
+ContinuePlay
+SetCurrentSelect
+GetTextOffsets
+SetSoundParameters
+SetPosition
+EnableMouse
+DisableMouse
+```
+
+### Sound_Holder
+```
+PlayDSound
+PlayDSoundEx
+SetPlayDSoundParameters
+Stop
+StopAll
+PlayExtern
+PlayExternEx
+```
+
+### MultiBitmap
+```
+ShowBitmap
+HideBitmap
+MoveTo
+```
+
+### Bitmap_Holder
+```
+ShowBitmap
+HideBitmap
+MoveTo
+GetPixel
+EnableDrag
+DisableDrag
+```
+
+### Puzzle
+```
+OpenPuzzle
+ClosePuzzle
+Mix
+ShowFullBitmap
+EndShowFullBitmap
+```
+
+### Panorama
+```
+OpenPanorama
+ClosePanorama
+RemoveSprite
+StartSpriteAnimation
+ResetSprite
+Enable
+Disable
+SetHorAngle
+SetVertOffset
+SetZoom
+```
+
+### Panorama_Holder
+```
+OpenPanorama
+ClosePanorama
+ZoomIn
+ZoomOut
+GoLeft
+GoRight
+GoTop
+GoBottom
+Stop
+SetHorizontalAngle
+SetVerticalAngle
+ShowSprite
+HideSprite
+ResetSprite
+StartSpriteAnimation
+SetZoom
+```
+
+### Recorder
+```
+OpenFile
+EmptyFile
+IsEmpty
+Record
+Stop
+Play
+CloseFile
+```
+
+## Events catalog
 
 ### HotSpot_Holder
 ```
@@ -169,15 +367,20 @@ MoveBottom(int panoramaNo)
 MoveEnd(int panoramaNo)
 ```
 
-## Open question: the incoming (script → component) method interface
+## Notes
 
-The reflected `functions` table above is the **event/source** dispinterface
-(all `flags = 0x18`). The methods a script *calls* — `Sprite_Holder.MoveTo`,
-`ChangePhase`, `ShowBitmap`, `Sound_Holder.PlayDSound`, etc. — are NOT in this
-reflected table. `GraphBrdScript_InvokeComponentDispatchMethod` (Tuwim.exe
-00419950) resolves those by name against the component's live IDispatch
-(`GetIDsOfNames` → `Invoke`), not the cached reflection. Recovering that full
-incoming method list per component means reading each DLL's primary
-`IDispatch::GetIDsOfNames` name table / typeinfo — the natural next
-Ghidra-side task. Until then the runtime models the common incoming methods by
-their (self-documenting) script names in `runtime/page`.
+- The `.BDF` wrapper only caches the **event** typeinfo (`flags = 0x18`); the
+  incoming methods above come from the DLL type library instead.
+  `GraphBrdScript_InvokeComponentDispatchMethod` (Tuwim.exe 00419950) resolves a
+  script `Component.Method(args)` call by name against the component's live
+  `IDispatch` (`GetIDsOfNames` → `Invoke`) — the type library is exactly that
+  name table.
+- Script names sometimes differ from the runtime's generic modelling: sprites
+  use `ShowSprite`/`HideSprite` (not `ShowBitmap`), video/TVH use `Play`/`Stop`,
+  panoramas open with `OpenPanorama`. `runtime/page` can now dispatch these by
+  their real names.
+- Still deeper (optional): the full `FUNCDESC` for each incoming method
+  (parameter types + `[out]`/`[in]`, DISPIDs). The parameter *names* are already
+  in the type library name table (e.g. sprite `phase`, `x`, `y`, `deep`,
+  `ref_x`); wiring them to methods means walking the typelib `FUNCDESC` records,
+  not just the name table `extract_typelib.py` reads today.
