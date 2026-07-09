@@ -23,6 +23,7 @@ add_library(graphboard_core
     src/runtime/script.cpp
     src/runtime/value.cpp
     src/runtime/interpreter.cpp
+    src/runtime/page.cpp
 )
 
 target_include_directories(graphboard_core PUBLIC
@@ -59,4 +60,10 @@ if(BUILD_TESTING)
     )
     target_link_libraries(graphboard_runtime_interpreter_test PRIVATE graphboard_core)
     add_test(NAME runtime_interpreter COMMAND graphboard_runtime_interpreter_test)
+
+    add_executable(graphboard_runtime_page_test
+        tests/runtime_page.cpp
+    )
+    target_link_libraries(graphboard_runtime_page_test PRIVATE graphboard_core)
+    add_test(NAME runtime_page COMMAND graphboard_runtime_page_test)
 endif()

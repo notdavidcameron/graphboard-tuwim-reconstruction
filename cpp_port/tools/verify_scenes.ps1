@@ -64,6 +64,12 @@ function Get-Scene($name) {
     return $raw | ConvertFrom-Json
 }
 
+function Invoke-Drive($name, $handler) {
+    $raw = & $GbInspect (Join-Path $DataDir $name) "--drive" $handler 2>&1
+    if ($LASTEXITCODE -ne 0) { throw "gbinspect --drive failed on $name/$handler`: $raw" }
+    return $raw | ConvertFrom-Json
+}
+
 # ---------------------------------------------------------------- START.PRJ
 $prj = Get-Scene "START.PRJ"
 Assert-Eq $prj.version 1 "START.PRJ version"
@@ -209,6 +215,17 @@ Assert-Eq $mroz.componentList.componentsParsed 7 "MROZ fully parsed"
 $panh = $mroz.componentList.components | Where-Object holderKind -eq 'Panorama_Holder'
 Assert-Eq $panh.privateState.version 0 "MROZ panorama-holder version"
 Assert-Eq $panh.privateState.sceneCount 1 "MROZ panorama-holder scenes"
+
+# ----------------------------------------------- INTRO.BDF driven via the Page
+# Run OnOpenPage through the executable Page model and assert real, live
+# script-visible component + page state (not just a call trace).
+$drive = Invoke-Drive "INTRO.BDF" "OnOpenPage"
+Assert-Eq $drive.cursor 1 "INTRO drive: cursor set to 1"
+Assert-Eq $drive.currentGroup "cursors.grp" "INTRO drive: group loaded"
+$tvh = $drive.components | Where-Object name -eq 'Transparent_Video_Holder'
+Assert-Eq $tvh.props.playing 0 "INTRO drive: TVH playing clip 0"
+$snd = $drive.components | Where-Object name -eq 'Sound_Holder'
+Assert-Eq $snd.props.playing 0 "INTRO drive: Sound playing clip 0"
 
 # ------------------------------------------------------------------- summary
 Write-Output ""

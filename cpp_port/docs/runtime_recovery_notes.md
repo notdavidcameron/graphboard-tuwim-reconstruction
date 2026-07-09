@@ -132,21 +132,33 @@ recovered engine functions, not the JS approximation.
    over all 191 pages). Known simplifications, each guarded/noted in code:
    no `&&`/`||` short-circuit, arrays are parsed-but-not-stored, switch runs
    without the offset cache. Loop guard 2M iterations, call-depth guard 256.
-4. [PARTIAL] `runtime/script` — `discoverHandlers` + `collectCalls` feed the
-   interpreter its handler table and API surface. Still TODO: fold components +
-   engine state into an executable `Page` with a component registry keyed by
-   displayName (so `callComponent` reaches real holder behavior).
-5. [TODO] Component behavior stubs — start with HotSpot (hit test is already
-   recovered: `left<=x<=right, top<=y<bottom, enabled, layer`), Sound
-   (embedded WAVs), MultiBitmap/Bitmap (blit), TVH (frame streams already
-   decodable per the RLE reconstruction).
-6. [DONE (headless drive)] `gbinspect <page.bdf> --run <handler>` parses the
-   BDF, extracts the script, and runs a handler against a recording Host,
-   printing the call trace as JSON. Verified: every one of the 191 scripted
-   pages runs `OnOpenPage` to completion with no hang (busiest ABECADLO = 89
-   calls: nested `while` loops with `++` counters, a user function, `if/else`,
-   `Random`, arrays as no-ops). START.PRJ global-setup + synthetic
-   click/timer feeding and asserting richer script-visible state is next.
+4. [DONE] `runtime/page` — an executable `Page` folds the parsed components +
+   script into a live scene. It loads a `.BDF` (header → components → script),
+   builds a component registry keyed by displayName, and implements the `Host`
+   itself: `callComponent` dispatches to stateful `ComponentState` objects
+   (index-addressed items + holder props) and `callBuiltin` updates page state
+   (pendingPage, cursor, group, timer). Event entry points (`open`, `timer`,
+   `lButtonDown`, ...) run the matching handler. Verified: all 201 scripted
+   pages drive `OnOpenPage` through `Page` with no hang; `gbinspect --drive`
+   dumps the resulting component/page state (INTRO: cursor 1, group cursors.grp,
+   TVH+Sound playing clip 0).
+5. [PARTIAL] Component behavior — the common script->component mutators are
+   modeled with real state effects: Sprite/Bitmap show/hide/move/phase/anim,
+   HotSpot enable/disable (+ the recovered hit test
+   `left<=x<=right, top<=y<bottom, enabled, highest layer`, exposed as
+   `Page::hitTestHotSpot`), Sound/TVH play/stop. Still TODO: the
+   component->script callback direction (a hotspot click or video-end firing
+   `Sprite_Holder.MouseClickOnDown`, `Transparent_Video_Holder.TheEnd`, ...),
+   which needs the callback-slot → event-name mapping; and real asset effects
+   (blitting frames, playing WAVs) for a rendered runtime.
+6. [DONE (headless drive)] Two drive modes: `gbinspect --run <handler>` prints
+   a raw call trace (recording Host); `gbinspect --drive <handler>` runs through
+   `Page` and prints live component + page state. Every scripted page drives
+   `OnOpenPage` with no hang (busiest ABECADLO = 89 calls: nested `while` loops
+   with `++` counters, a user function, `if/else`, `Random`, arrays as no-ops).
+   Next: feed synthetic clicks/timers that route through hotspot hit-testing to
+   component callbacks (needs the callback-slot mapping), and START.PRJ
+   global-setup before opening the first page.
 
 **IMPORTANT (workflow):** always run `--run` under `timeout` and never in the
 background — a script bug that stalls a loop counter makes the recording Host

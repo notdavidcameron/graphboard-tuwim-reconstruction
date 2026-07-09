@@ -2,6 +2,7 @@
 #include "graphboard/format.hpp"
 #include "graphboard/holders.hpp"
 #include "graphboard/runtime/interpreter.hpp"
+#include "graphboard/runtime/page.hpp"
 #include "graphboard/runtime/script.hpp"
 #include "graphboard/text.hpp"
 
@@ -606,6 +607,50 @@ int runHandler(const std::filesystem::path& path, const std::string& handler) {
     return 0;
 }
 
+json valueToJson(const graphboard::runtime::Value& v) {
+    return v.isInt() ? json(v.toInt()) : json(t(v.toString()));
+}
+
+// Drive a handler through the executable Page model (holders wired as stateful
+// components) and print the resulting page + component state as JSON.
+int drivePage(const std::filesystem::path& path, const std::string& handler) {
+    auto page = graphboard::runtime::Page::loadFromFile(path);
+    if (!page->hasHandler(handler)) {
+        std::cerr << "gbinspect: handler '" << handler << "' is not defined in this page\n";
+        return 1;
+    }
+    page->runEvent(handler, {});
+
+    json components = json::array();
+    for (const auto& name : page->componentNames()) {
+        const auto* c = page->component(name);
+        json items = json::object();
+        for (const auto& item : c->items) {
+            json fields = json::object();
+            for (const auto& field : item.second) {
+                fields[field.first] = valueToJson(field.second);
+            }
+            items[std::to_string(item.first)] = fields;
+        }
+        json props = json::object();
+        for (const auto& prop : c->props) {
+            props[prop.first] = valueToJson(prop.second);
+        }
+        components.push_back({{"name", t(name)}, {"items", items}, {"props", props}});
+    }
+
+    json out = {
+        {"handler", handler},
+        {"pendingPage", t(page->pendingPage())},
+        {"currentGroup", t(page->currentGroup())},
+        {"cursor", page->cursor()},
+        {"timerInterval", page->timerInterval()},
+        {"components", components},
+    };
+    std::cout << out.dump(2) << "\n";
+    return 0;
+}
+
 bool isFlag(const std::filesystem::path& arg, const char* flag) {
     const auto s = arg.u8string();
     return std::string(s.begin(), s.end()) == flag;
@@ -620,16 +665,20 @@ int main(int argc, char** argv) {
     // gbinspect <file.bdf> --run <handler>     -> drive one handler headless
     std::filesystem::path file;
     std::string runTarget;
+    std::string driveTarget;
     for (std::size_t i = 1; i < args.size(); ++i) {
         if (isFlag(args[i], "--run") && i + 1 < args.size()) {
             const auto s = args[++i].u8string();
             runTarget.assign(s.begin(), s.end());
+        } else if (isFlag(args[i], "--drive") && i + 1 < args.size()) {
+            const auto s = args[++i].u8string();
+            driveTarget.assign(s.begin(), s.end());
         } else if (file.empty()) {
             file = args[i];
         }
     }
     if (file.empty()) {
-        std::cerr << "usage: gbinspect <START.PRJ|PAGE.BDF> [--run <handler>]\n";
+        std::cerr << "usage: gbinspect <START.PRJ|PAGE.BDF> [--run <handler>] [--drive <handler>]\n";
         return 2;
     }
 
@@ -641,6 +690,13 @@ int main(int argc, char** argv) {
                 return 2;
             }
             return runHandler(file, runTarget);
+        }
+        if (!driveTarget.empty()) {
+            if (ext != ".bdf") {
+                std::cerr << "gbinspect: --drive requires a .BDF page\n";
+                return 2;
+            }
+            return drivePage(file, driveTarget);
         }
 
         auto reader = graphboard::BinaryReader::fromFile(file);
