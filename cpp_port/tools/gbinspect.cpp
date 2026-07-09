@@ -85,6 +85,27 @@ json headerToJson(const BdfHeader& header) {
 
 json wrapperToJson(const ComponentWrapper& wrapper) {
     const auto* info = graphboard::lookupHolder(wrapper.clsid);
+    // In the reflected typeinfo record the real member name is `displayName`
+    // and `descriptionOrHelpName` is the parameter signature; `rawName` holds
+    // an internal mangled token (not human-readable).
+    json functions = json::array();
+    for (const auto& fn : wrapper.functions) {
+        functions.push_back({
+            {"name", t(fn.displayName)},
+            {"returnType", t(fn.typeOrReturnName)},
+            {"signature", t(fn.descriptionOrHelpName)},
+            {"dispatchId", fn.dispatchIdOrOffset},
+            {"flags", fn.flagsOrInvokeKind},
+        });
+    }
+    json properties = json::array();
+    for (const auto& pr : wrapper.properties) {
+        properties.push_back({
+            {"name", t(pr.displayName)},
+            {"variantType", pr.variantTypeOrDispatchMetadata},
+            {"flags", pr.flagsOrInvokeKind},
+        });
+    }
     json out = {
         {"displayName", t(wrapper.displayName)},
         {"clsid", wrapper.clsid.toString()},
@@ -92,6 +113,8 @@ json wrapperToJson(const ComponentWrapper& wrapper) {
         {"wrapperVersion", wrapper.wrapperVersion},
         {"functionCount", wrapper.functions.size()},
         {"propertyCount", wrapper.properties.size()},
+        {"functions", functions},
+        {"properties", properties},
         {"wrapperOffset", wrapper.wrapperOffset},
         {"privateStateOffset", wrapper.privateStateOffset},
     };
