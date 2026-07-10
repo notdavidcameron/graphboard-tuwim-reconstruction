@@ -62,12 +62,12 @@ struct CFileOps {
 };
 
 static const uint32_t kTVHPrivateVersion = 3;
-static const uint32_t kBoardVideoHeaderSize = 0x4e8;
+static const uint32_t kBoardVideoRecordHeaderSize = 0x4e8;
 static const uint32_t kVideoRecordTag = 0xff000001;
 static const uint32_t kAudioRecordTag = 0xff000002;
-static const uint32_t kRecordHeaderSize = 0x4c;
-static const uint32_t kRecordPayloadOffset = 0x48;
-static const uint32_t kTransparentDisabled = 1000;
+static const uint32_t kChunkRecordHeaderSize = 0x4c;
+static const uint32_t kChunkPayloadOffset = 0x48;
+static const uint32_t kDisabledDisplayIndex = 1000;
 
 static inline uint32_t DIBStride8(uint32_t width)
 {

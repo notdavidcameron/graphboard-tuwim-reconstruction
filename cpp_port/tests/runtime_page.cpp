@@ -91,7 +91,7 @@ std::vector<std::uint8_t> buildSyntheticBdf(const std::string& script) {
     putArchiveString(b, "hs0");
     putHotSpotRecord(b, 200, 200, 300, 300, 1, 1);
     putArchiveString(b, "hs1");
-    putU32(b, 0); putU32(b, 0);      // field1f0 / field1c8
+    putU32(b, 0); putU32(b, 0);      // activeIndex / auxStateWord
 
     // Item 1: Sprite_Holder with one definition and one instance.
     putWrapper(b, spriteClsid, "Sprite_Holder");
@@ -186,9 +186,68 @@ void testDriveSyntheticPage() {
     assert(page->pendingPage() == "next.bdf");
 }
 
+const char* kCallbackScript = R"S(
+void OnOpenPage() {}
+
+void HotSpot_Holder.LeftButtonClickOn(int rectID)
+{
+   Sprite_Holder.ChangePhase(0, rectID + 10);
+}
+
+void HotSpot_Holder.RightButtonClickOn(int rectID)
+{
+   Sprite_Holder.ChangePhase(0, rectID + 20);
+}
+
+void HotSpot_Holder.MouseMoveIn(int rectID)
+{
+   Sprite_Holder.ChangePhase(0, rectID + 100);
+}
+
+void HotSpot_Holder.MouseMoveOut(int rectID)
+{
+   Sprite_Holder.ChangePhase(0, rectID + 200);
+}
+)S";
+
+// The component->script callback direction: a click or hover crossing a
+// HotSpot_Holder rect fires the matching reflected event (recovered in
+// docs/component_interfaces.md) only if the page script defines it.
+void testHotSpotCallbacks() {
+    const auto bytes = buildSyntheticBdf(kCallbackScript);
+    BinaryReader reader(bytes);
+    auto page = Page::loadFromReader(reader, "synthetic-callbacks");
+    const auto* sprite = page->component("Sprite_Holder");
+
+    // Click on hotspot 1 (200,200)-(300,300) fires LeftButtonClickOn(1).
+    page->lButtonDown(250, 250);
+    assert(item(sprite, 0, "phase").toInt() == 11);
+
+    // Right-click on hotspot 0 fires RightButtonClickOn(0).
+    page->rButtonDown(50, 50);
+    assert(item(sprite, 0, "phase").toInt() == 20);
+
+    // Hovering into hotspot 0 fires MouseMoveIn(0); repeating the same point
+    // does not re-fire.
+    page->mouseMove(50, 50);
+    assert(item(sprite, 0, "phase").toInt() == 100);
+    page->mouseMove(50, 50);
+    assert(item(sprite, 0, "phase").toInt() == 100);
+
+    // Moving into hotspot 1 fires MouseMoveOut(0) then MouseMoveIn(1); the
+    // final phase reflects whichever ran last (MouseMoveIn).
+    page->mouseMove(250, 250);
+    assert(item(sprite, 0, "phase").toInt() == 101);
+
+    // Moving to empty space fires MouseMoveOut(1) with nothing to enter.
+    page->mouseMove(150, 150);
+    assert(item(sprite, 0, "phase").toInt() == 201);
+}
+
 } // namespace
 
 int main() {
     testDriveSyntheticPage();
+    testHotSpotCallbacks();
     return 0;
 }

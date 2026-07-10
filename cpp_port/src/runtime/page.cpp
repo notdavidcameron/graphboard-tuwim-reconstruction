@@ -210,8 +210,8 @@ Value Page::callBuiltin(const std::string& name, const std::vector<Value>& args)
     return Value();
 }
 
-int Page::hitTestHotSpot(int x, int y) const {
-    int best = -1;
+Page::HotSpotHit Page::findHotSpotHit(int x, int y) const {
+    HotSpotHit hit;
     std::int32_t bestLayer = 0;
     for (const auto& state : components_) {
         if (state.kind != HolderKind::HotSpotHolder) {
@@ -223,14 +223,50 @@ int Page::hitTestHotSpot(int x, int y) const {
                 continue;
             }
             if (x >= h.left && x <= h.right && y >= h.top && y < h.bottom) {
-                if (best == -1 || h.layer >= bestLayer) {
-                    best = static_cast<int>(i);
+                if (hit.index == -1 || h.layer >= bestLayer) {
+                    hit.index = static_cast<int>(i);
+                    hit.component = state.displayName;
                     bestLayer = h.layer;
                 }
             }
         }
     }
-    return best;
+    return hit;
+}
+
+int Page::hitTestHotSpot(int x, int y) const {
+    return findHotSpotHit(x, y).index;
+}
+
+void Page::lButtonDown(int x, int y) {
+    runEvent("OnLButtonDown", {Value::integer(x), Value::integer(y)});
+    const auto hit = findHotSpotHit(x, y);
+    if (hit.index != -1) {
+        runEvent(hit.component + ".LeftButtonClickOn", {Value::integer(hit.index)});
+    }
+}
+
+void Page::rButtonDown(int x, int y) {
+    runEvent("OnRButtonDown", {Value::integer(x), Value::integer(y)});
+    const auto hit = findHotSpotHit(x, y);
+    if (hit.index != -1) {
+        runEvent(hit.component + ".RightButtonClickOn", {Value::integer(hit.index)});
+    }
+}
+
+void Page::mouseMove(int x, int y) {
+    const auto hit = findHotSpotHit(x, y);
+    if (hit.index == hoverHotSpotIndex_ && hit.component == hoverHotSpotComponent_) {
+        return;
+    }
+    if (hoverHotSpotIndex_ != -1) {
+        runEvent(hoverHotSpotComponent_ + ".MouseMoveOut", {Value::integer(hoverHotSpotIndex_)});
+    }
+    if (hit.index != -1) {
+        runEvent(hit.component + ".MouseMoveIn", {Value::integer(hit.index)});
+    }
+    hoverHotSpotIndex_ = hit.index;
+    hoverHotSpotComponent_ = hit.component;
 }
 
 } // namespace graphboard::runtime

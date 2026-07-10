@@ -89,8 +89,8 @@ static const size_t kOffPageComponentList  = 0xa4;  // page component-list dialo
 static const size_t kOffGroupComponentList = 0xa8;  // group component-list dialog
 static const size_t kOffScriptEngine       = 0xb4;  // GraphBoard script engine
 static const size_t kOffAudioManager       = 0xbc;  // audio manager
-static const size_t kOffPageDibPacked       = 0xfc; // HGLOBAL of packed DIB
-static const size_t kOffScriptParsedFlag    = 0xe4;
+static const size_t kOffPagePackedDibHandle  = 0xfc; // HGLOBAL of packed DIB
+static const size_t kOffScriptParsedState    = 0xe4;
 
 // Page geometry / background (written by SerializePageData, in disk order).
 static const size_t kOffPageMinLayer       = 0x100;
@@ -117,7 +117,7 @@ static const size_t kOffPageNamesPtr       = 0x200;  // CString*[]
 static const size_t kOffPageCount          = 0x204;
 static const size_t kOffGroupNamesPtr      = 0x208;  // CString*[]
 static const size_t kOffGroupCount         = 0x20c;
-static const size_t kOffAudioPresetSlot    = 0x20;   // within audio manager object
+static const size_t kOffAudioPresetIndex   = 0x20;   // within audio manager object
 
 // Script editor dialog: serialized buffer lives at editor+0xe0.
 static const size_t kOffEditorText         = 0xe0;
@@ -127,7 +127,7 @@ static const uint32_t kPageVersion         = 1;
 static const uint32_t kScriptBlockVersion  = 1;
 static const uint32_t kBannerBytes         = 100;
 static const uint32_t kFullPaletteBytes    = 0x400;  // 256 * sizeof(PALETTEENTRY)
-static const int      kSignatureBias       = 0x21;   // stored byte = plain + 0x21
+static const int      kEncodedSignatureByteBias = 0x21;   // stored byte = plain + 0x21
 
 // External helpers referenced by the serializers (defined elsewhere in the exe).
 extern void GraphBrdScript_RunGlobalSetupBlock(void *engine);
@@ -200,7 +200,7 @@ BOOL GraphBrdDoc_SerializeProjectState(CGraphBrdDoc *doc, CArchive *ar)
         CArchiveOps::WriteU32(ar, kProjectVersion);
         CStringOps::Insert(ar, &Field<CString>(doc, kOffStartupPage));
         CStringOps::Insert(ar, &Field<CString>(doc, kOffCurrentState));
-        CArchiveOps::WriteU32(ar, Field<uint32_t>(audioMgr, kOffAudioPresetSlot));
+        CArchiveOps::WriteU32(ar, Field<uint32_t>(audioMgr, kOffAudioPresetIndex));
 
         CArchiveOps::WriteU32(ar, static_cast<uint32_t>(pageCount));
         for (int i = 0; i < pageCount; ++i) {
@@ -214,11 +214,11 @@ BOOL GraphBrdDoc_SerializeProjectState(CGraphBrdDoc *doc, CArchive *ar)
         // Obfuscate the signature (+0x21) only for the duration of the write,
         // then restore the in-memory plaintext.
         for (int i = 0, n = CStringOps::GetLength(sig); i < n; ++i) {
-            CStringOps::SetAt(sig, i, static_cast<char>(CStringOps::GetAt(sig, i) + kSignatureBias));
+            CStringOps::SetAt(sig, i, static_cast<char>(CStringOps::GetAt(sig, i) + kEncodedSignatureByteBias));
         }
         CStringOps::Insert(ar, sig);
         for (int i = 0, n = CStringOps::GetLength(sig); i < n; ++i) {
-            CStringOps::SetAt(sig, i, static_cast<char>(CStringOps::GetAt(sig, i) - kSignatureBias));
+            CStringOps::SetAt(sig, i, static_cast<char>(CStringOps::GetAt(sig, i) - kEncodedSignatureByteBias));
         }
     } else {
         // Free any previously loaded name tables before reading fresh ones.
@@ -236,7 +236,7 @@ BOOL GraphBrdDoc_SerializeProjectState(CGraphBrdDoc *doc, CArchive *ar)
         (void)CArchiveOps::ReadU32(ar);       // version, ignored
         CStringOps::Extract(ar, &Field<CString>(doc, kOffStartupPage));
         CStringOps::Extract(ar, &Field<CString>(doc, kOffCurrentState));
-        Field<uint32_t>(audioMgr, kOffAudioPresetSlot) = CArchiveOps::ReadU32(ar);
+        Field<uint32_t>(audioMgr, kOffAudioPresetIndex) = CArchiveOps::ReadU32(ar);
 
         pageCount = static_cast<int>(CArchiveOps::ReadU32(ar));
         pageTable = pageCount ? static_cast<CString **>(operator_new(pageCount * 4)) : nullptr;
@@ -259,7 +259,7 @@ BOOL GraphBrdDoc_SerializeProjectState(CGraphBrdDoc *doc, CArchive *ar)
         if (hadPages) {
             CStringOps::Extract(ar, sig);
             for (int i = 0, n = CStringOps::GetLength(sig); i < n; ++i) {
-                CStringOps::SetAt(sig, i, static_cast<char>(CStringOps::GetAt(sig, i) - kSignatureBias));
+                CStringOps::SetAt(sig, i, static_cast<char>(CStringOps::GetAt(sig, i) - kEncodedSignatureByteBias));
             }
             if (!SignatureMatchesJulianTuwim(sig)) {
                 ReportEndOfMemoryAndQuit();   // original PostMessage(WM_CLOSE) path
@@ -299,7 +299,7 @@ void GraphBrdDoc_SerializePageData(CGraphBrdDoc *doc, CArchive *ar)
 
     if (!CArchiveOps::IsStoring(ar)) {
         // Release a previously loaded packed DIB, if any.
-        HGLOBAL &dibSlot = Field<HGLOBAL>(doc, kOffPageDibPacked);
+        HGLOBAL &dibSlot = Field<HGLOBAL>(doc, kOffPagePackedDibHandle);
         if (dibSlot) {
             GlobalUnlock(GlobalHandle(dibSlot));
             GlobalFree(GlobalHandle(dibSlot));
@@ -330,7 +330,7 @@ void GraphBrdDoc_SerializePageData(CGraphBrdDoc *doc, CArchive *ar)
             }
         } else {
             void *dib = ReadPackedDib(ar, dibBytes);
-            Field<void *>(doc, kOffPageDibPacked) = dib;
+            Field<void *>(doc, kOffPagePackedDibHandle) = dib;
             if (!dib) ReportEndOfMemoryAndQuit();
             GraphBrdView_CreateOrResizeBackBufferFromDib(view, dib);
         }
@@ -358,7 +358,7 @@ void GraphBrdDoc_SerializePageData(CGraphBrdDoc *doc, CArchive *ar)
             WritePagePalette(view, ar);
         }
 
-        void *dib = Field<void *>(doc, kOffPageDibPacked);
+        void *dib = Field<void *>(doc, kOffPagePackedDibHandle);
         if (dib == nullptr) {
             CArchiveOps::WriteU32(ar, 0);
         } else {
@@ -372,7 +372,7 @@ void GraphBrdDoc_SerializePageData(CGraphBrdDoc *doc, CArchive *ar)
     ComponentList_Serialize(Field<void *>(doc, kOffPageComponentList), ar);
     GraphBrdScriptEditor_SerializeText(Field<CScriptEditorDlg *>(doc, kOffPageScriptEditor), ar);
     ScriptEngine_Serialize(Field<void *>(doc, kOffScriptEngine), ar);
-    if (Field<int>(doc, kOffScriptParsedFlag) == 0) {
+    if (Field<int>(doc, kOffScriptParsedState) == 0) {
         GraphBrdScriptEngine_ParsePageScript(Field<void *>(doc, kOffScriptEngine));
     }
     ColeDocument_Serialize(doc, ar);

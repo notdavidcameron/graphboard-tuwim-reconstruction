@@ -146,19 +146,36 @@ recovered engine functions, not the JS approximation.
    modeled with real state effects: Sprite/Bitmap show/hide/move/phase/anim,
    HotSpot enable/disable (+ the recovered hit test
    `left<=x<=right, top<=y<bottom, enabled, highest layer`, exposed as
-   `Page::hitTestHotSpot`), Sound/TVH play/stop. Still TODO: the
-   component->script callback direction (a hotspot click or video-end firing
-   `Sprite_Holder.MouseClickOnDown`, `Transparent_Video_Holder.TheEnd`, ...),
-   which needs the callback-slot → event-name mapping; and real asset effects
-   (blitting frames, playing WAVs) for a rendered runtime.
+   `Page::hitTestHotSpot`), Sound/TVH play/stop. The component->script callback
+   direction is now wired for `HotSpot_Holder`, using the event names/
+   signatures recovered in `docs/component_interfaces.md`:
+   `Page::lButtonDown`/`rButtonDown` hit-test and fire `LeftButtonClickOn(id)`/
+   `RightButtonClickOn(id)`; the new `Page::mouseMove(x, y)` entry point tracks
+   the last-hovered item across calls and fires `MouseMoveIn(id)`/
+   `MouseMoveOut(id)` on transitions — all only if the page script defines the
+   matching handler. Verified in `tests/runtime_page.cpp` (`testHotSpotCallbacks`)
+   and against all 8 real files in `verify_scenes.ps1`. Still TODO: the same
+   direction for Sprite_Holder/MultiBitmap/Bitmap_Holder/etc. — this needs (a)
+   per-item click rects for those holders (sprite width/height is recovered in
+   `SpriteDefinition`, but instances aren't yet seeded into a hit-testable rect
+   list the way hotspots are) and (b) a verified cross-kind z-order rule for
+   when a click could hit two different holder kinds at once (only HotSpot's
+   own layer-ordering is verified; nothing establishes hotspot-vs-sprite
+   priority). Playback-completion events (`Transparent_Video_Holder.TheEnd`,
+   `Sound_Holder.EndPlaySound`) need timer/duration simulation, not hit-testing,
+   and real asset effects (blitting frames, playing WAVs) remain out of scope
+   for a headless runtime.
 6. [DONE (headless drive)] Two drive modes: `gbinspect --run <handler>` prints
    a raw call trace (recording Host); `gbinspect --drive <handler>` runs through
    `Page` and prints live component + page state. Every scripted page drives
    `OnOpenPage` with no hang (busiest ABECADLO = 89 calls: nested `while` loops
    with `++` counters, a user function, `if/else`, `Random`, arrays as no-ops).
-   Next: feed synthetic clicks/timers that route through hotspot hit-testing to
-   component callbacks (needs the callback-slot mapping), and START.PRJ
-   global-setup before opening the first page.
+   `gbinspect --drive` only runs a named handler with no args; it does not yet
+   expose `Page::lButtonDown`/`mouseMove` coordinates from the CLI, so the new
+   click/hover callback wiring above is exercised by the unit test, not by
+   `gbinspect` against real files. Next: extend the CLI to drive synthetic
+   clicks/timers on real pages, and run START.PRJ global-setup before opening
+   the first page.
 
 **IMPORTANT (workflow):** always run `--run` under `timeout` and never in the
 background — a script bug that stalls a loop counter makes the recording Host

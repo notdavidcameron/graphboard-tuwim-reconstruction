@@ -170,8 +170,8 @@ void SpriteHolder_SerializePrivateState(void *holder, CArchive *ar)
 //                                        enabled flag at +0x20; +0x10 name ptr is
 //                                        stale on disk and rebuilt below)
 //       CString name
-//   u32 field1f0 (holder+0x1f0)         (RZECZKA: 8 — active/selected index)
-//   u32 field1c8 (holder+0x1c8)
+//   u32 activeIndex (holder+0x1f0)      (RZECZKA: 8 - active/selected index)
+//   u32 auxStateWord (holder+0x1c8)
 //
 // The 100-byte record carries the real hit-test rectangle and layer used by
 // HotSpotHolder_TestPointInEnabledHotSpot (10004*): a point hits when
@@ -192,8 +192,8 @@ static const size_t   kOffHotSpotCount   = 0x1c4;
 static const size_t   kOffHotSpotFlag0   = 0x1d0;
 static const size_t   kOffHotSpotFlag1   = 0x1d1;
 static const size_t   kOffHotSpotFlag2   = 0x1d2;
-static const size_t   kOffHotSpotField1c8 = 0x1c8;
-static const size_t   kOffHotSpotField1f0 = 0x1f0;
+static const size_t   kOffHotSpotAuxStateWord = 0x1c8;
+static const size_t   kOffHotSpotActiveIndex = 0x1f0;
 static const size_t   kOffHotSpotName    = 0x10;    // within a record
 static const size_t   kHotSpotRecordSize = 100;
 static const uint32_t kHotSpotVersion    = 0;
@@ -230,8 +230,8 @@ void HotSpotHolder_SerializePrivateState(void *holder, CArchive *ar)
             CStringOps::Extract(ar, name);
         }
 
-        Field<uint32_t>(holder, kOffHotSpotField1f0) = CArchiveOps::ReadU32(ar);
-        Field<uint32_t>(holder, kOffHotSpotField1c8) = CArchiveOps::ReadU32(ar);
+        Field<uint32_t>(holder, kOffHotSpotActiveIndex) = CArchiveOps::ReadU32(ar);
+        Field<uint32_t>(holder, kOffHotSpotAuxStateWord) = CArchiveOps::ReadU32(ar);
         Field<uint32_t>(holder, 0x1f4) = 0;          // runtime flag cleared on load
     } else {
         CArchiveOps::WriteU32(ar, kHotSpotVersion);
@@ -246,7 +246,8 @@ void HotSpotHolder_SerializePrivateState(void *holder, CArchive *ar)
             CStringOps::Insert(ar, Field<CString *>(rec, kOffHotSpotName));
         }
 
-        CArchiveOps::WriteU32(ar, Field<uint32_t>(holder, kOffHotSpotField1f0));
-        CArchiveOps::WriteU32(ar, Field<uint32_t>(holder, kOffHotSpotField1c8));
+        CArchiveOps::WriteU32(ar, Field<uint32_t>(holder, kOffHotSpotActiveIndex));
+        CArchiveOps::WriteU32(ar, Field<uint32_t>(holder, kOffHotSpotAuxStateWord));
     }
 }
+

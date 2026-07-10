@@ -54,12 +54,18 @@ public:
     void open() { runEvent("OnOpenPage", {}); }
     void close() { runEvent("OnClosePage", {}); }
     void timer() { runEvent("OnTimer", {Value::integer(0)}); }
-    void lButtonDown(int x, int y) {
-        runEvent("OnLButtonDown", {Value::integer(x), Value::integer(y)});
-    }
-    void rButtonDown(int x, int y) {
-        runEvent("OnRButtonDown", {Value::integer(x), Value::integer(y)});
-    }
+
+    // Raw input dispatch. Mirrors the original view's two-step handling: the
+    // page-level script handler always runs, then (as the board would deliver
+    // IObject::LButtonDown/MouseMove to each component) the hit HotSpot_Holder
+    // item's own callback fires if the page script defines it. Only
+    // HotSpot_Holder is wired here: its hit-test rule and event names are
+    // verified (see docs/component_interfaces.md); other holder kinds need
+    // per-item click geometry and a verified cross-kind z-order rule before
+    // they can be dispatched the same way (see runtime_recovery_notes.md).
+    void lButtonDown(int x, int y);
+    void rButtonDown(int x, int y);
+    void mouseMove(int x, int y);
     void keyDown(int key) { runEvent("OnKeyDown", {Value::integer(key)}); }
 
     // Host interface.
@@ -90,6 +96,14 @@ private:
     void parse(BinaryReader& reader);
     ComponentState* resolve(const std::string& componentPath);
 
+    // Which HotSpot_Holder instance (by display name) and item index, if any,
+    // the point hits, using the recovered rule (enabled, highest layer wins).
+    struct HotSpotHit {
+        std::string component;
+        int index = -1;
+    };
+    HotSpotHit findHotSpotHit(int x, int y) const;
+
     std::string script_;
     std::vector<ComponentState> components_;
     std::map<std::string, std::size_t> byName_;
@@ -102,6 +116,11 @@ private:
     int timerInterval_ = 0;
     bool exited_ = false;
     std::uint32_t randomState_ = 0x12345678u;
+
+    // Last hovered HotSpot_Holder item, for MouseMoveIn/MouseMoveOut edge
+    // detection across successive mouseMove() calls.
+    int hoverHotSpotIndex_ = -1;
+    std::string hoverHotSpotComponent_;
 };
 
 } // namespace graphboard::runtime
