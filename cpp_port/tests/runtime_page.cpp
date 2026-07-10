@@ -50,7 +50,7 @@ void putWrapper(std::vector<std::uint8_t>& b, const Guid& clsid, const std::stri
 
 void putHotSpotRecord(std::vector<std::uint8_t>& b, std::int32_t l, std::int32_t t,
                       std::int32_t r, std::int32_t bot, std::int32_t layer,
-                      std::int32_t enabled) {
+                      std::int32_t enabled, std::int32_t id) {
     std::vector<std::uint8_t> rec(100, 0);
     auto put = [&rec](std::size_t off, std::int32_t v) {
         const auto u = static_cast<std::uint32_t>(v);
@@ -60,7 +60,7 @@ void putHotSpotRecord(std::vector<std::uint8_t>& b, std::int32_t l, std::int32_t
         rec[off + 3] = static_cast<std::uint8_t>(u >> 24);
     };
     put(0x00, l); put(0x04, t); put(0x08, r); put(0x0c, bot);
-    put(0x1c, layer); put(0x20, enabled);
+    put(0x18, id); put(0x1c, layer); put(0x20, enabled);
     b.insert(b.end(), rec.begin(), rec.end());
 }
 
@@ -87,9 +87,11 @@ std::vector<std::uint8_t> buildSyntheticBdf(const std::string& script) {
     putU32(b, 0);                    // hotspot private version
     putU8(b, 0); putU8(b, 0); putU8(b, 0);  // flags
     putU32(b, 2);                    // hotspot count
-    putHotSpotRecord(b, 0, 0, 100, 100, 1, 1);
+    // Ids deliberately differ from array indices (as in RZECZKA.BDF, which
+    // stores 0,1,3,4,6,5,7,8): the script sees the id, never the index.
+    putHotSpotRecord(b, 0, 0, 100, 100, 1, 1, /*id=*/5);
     putArchiveString(b, "hs0");
-    putHotSpotRecord(b, 200, 200, 300, 300, 1, 1);
+    putHotSpotRecord(b, 200, 200, 300, 300, 1, 1, /*id=*/7);
     putArchiveString(b, "hs1");
     putU32(b, 0); putU32(b, 0);      // activeIndex / auxStateWord
 
@@ -121,7 +123,7 @@ std::vector<std::uint8_t> buildSyntheticBdf(const std::string& script) {
 const char* kScript = R"S(
 OnOpenPage()
 {
-   HotSpot_Holder.DisableHotSpot(0);
+   HotSpot_Holder.DisableHotSpot(5);
    Sprite_Holder.MoveTo(0, 100, 200);
    Sprite_Holder.ShowBitmap(0);
    Sprite_Holder.ChangePhase(0, 2);
@@ -132,7 +134,7 @@ OnOpenPage()
 void OnLButtonDown(int x, int y)
 {
    Sprite_Holder.ChangePhase(0, 5);
-   Group.HotSpot_Holder.EnableHotSpot(0);
+   Group.HotSpot_Holder.EnableHotSpot(5);
    LoadPage("next.bdf");
 }
 )S";
@@ -157,10 +159,14 @@ void testDriveSyntheticPage() {
     assert(page->component("HotSpot_Holder")->hotspots.size() == 2);
     assert(page->hasHandler("OnOpenPage"));
 
-    // Hit-test before running: both hotspots enabled.
-    assert(page->hitTestHotSpot(50, 50) == 0);
-    assert(page->hitTestHotSpot(250, 250) == 1);
+    // Hit-test before running: both hotspots enabled. The reported value is the
+    // stored id (5 / 7), not the array index (0 / 1).
+    assert(page->hitTestHotSpot(50, 50) == 5);
+    assert(page->hitTestHotSpot(250, 250) == 7);
     assert(page->hitTestHotSpot(150, 150) == -1);
+    // The click-path rect is inclusive on every edge (LButtonDown semantics).
+    assert(page->hitTestHotSpot(100, 100) == 5);
+    assert(page->hitTestHotSpot(101, 100) == -1);
 
     // Run OnOpenPage; assert script-visible component + page state.
     page->open();
@@ -172,17 +178,17 @@ void testDriveSyntheticPage() {
     assert(page->currentGroup() == "cursors.grp");
     assert(page->cursor() == 3);
 
-    // HotSpot 0 was disabled by the script -> hit-test now misses it.
-    assert(item(page->component("HotSpot_Holder"), 0, "enabled").toInt() == 0);
+    // Hotspot id 5 was disabled by the script -> hit-test now misses it.
+    assert(item(page->component("HotSpot_Holder"), 5, "enabled").toInt() == 0);
     assert(page->hitTestHotSpot(50, 50) == -1);
-    assert(page->hitTestHotSpot(250, 250) == 1);
+    assert(page->hitTestHotSpot(250, 250) == 7);
 
-    // A click re-enables hotspot 0 (via Group.HotSpot_Holder.EnableHotSpot),
+    // A click re-enables hotspot id 5 (via Group.HotSpot_Holder.EnableHotSpot),
     // changes the sprite phase, and requests the next page.
     page->lButtonDown(250, 250);
     assert(item(page->component("Sprite_Holder"), 0, "phase").toInt() == 5);
-    assert(item(page->component("HotSpot_Holder"), 0, "enabled").toInt() == 1);
-    assert(page->hitTestHotSpot(50, 50) == 0);
+    assert(item(page->component("HotSpot_Holder"), 5, "enabled").toInt() == 1);
+    assert(page->hitTestHotSpot(50, 50) == 5);
     assert(page->pendingPage() == "next.bdf");
 }
 
@@ -212,36 +218,37 @@ void HotSpot_Holder.MouseMoveOut(int rectID)
 
 // The component->script callback direction: a click or hover crossing a
 // HotSpot_Holder rect fires the matching reflected event (recovered in
-// docs/component_interfaces.md) only if the page script defines it.
+// docs/component_interfaces.md) only if the page script defines it. The rectID
+// handed to the script is the record's stored id (5 / 7), never the index.
 void testHotSpotCallbacks() {
     const auto bytes = buildSyntheticBdf(kCallbackScript);
     BinaryReader reader(bytes);
     auto page = Page::loadFromReader(reader, "synthetic-callbacks");
     const auto* sprite = page->component("Sprite_Holder");
 
-    // Click on hotspot 1 (200,200)-(300,300) fires LeftButtonClickOn(1).
+    // Click on the (200,200)-(300,300) hotspot -> LeftButtonClickOn(7).
     page->lButtonDown(250, 250);
-    assert(item(sprite, 0, "phase").toInt() == 11);
+    assert(item(sprite, 0, "phase").toInt() == 17);
 
-    // Right-click on hotspot 0 fires RightButtonClickOn(0).
+    // Right-click on the (0,0)-(100,100) hotspot -> RightButtonClickOn(5).
     page->rButtonDown(50, 50);
-    assert(item(sprite, 0, "phase").toInt() == 20);
+    assert(item(sprite, 0, "phase").toInt() == 25);
 
-    // Hovering into hotspot 0 fires MouseMoveIn(0); repeating the same point
-    // does not re-fire.
+    // Hovering in fires MouseMoveIn(5); repeating the same point does not
+    // re-fire.
     page->mouseMove(50, 50);
-    assert(item(sprite, 0, "phase").toInt() == 100);
+    assert(item(sprite, 0, "phase").toInt() == 105);
     page->mouseMove(50, 50);
-    assert(item(sprite, 0, "phase").toInt() == 100);
+    assert(item(sprite, 0, "phase").toInt() == 105);
 
-    // Moving into hotspot 1 fires MouseMoveOut(0) then MouseMoveIn(1); the
-    // final phase reflects whichever ran last (MouseMoveIn).
+    // Moving across fires MouseMoveOut(5) then MouseMoveIn(7); the final phase
+    // reflects whichever ran last (MouseMoveIn).
     page->mouseMove(250, 250);
-    assert(item(sprite, 0, "phase").toInt() == 101);
+    assert(item(sprite, 0, "phase").toInt() == 107);
 
-    // Moving to empty space fires MouseMoveOut(1) with nothing to enter.
+    // Moving to empty space fires MouseMoveOut(7) with nothing to enter.
     page->mouseMove(150, 150);
-    assert(item(sprite, 0, "phase").toInt() == 201);
+    assert(item(sprite, 0, "phase").toInt() == 207);
 }
 
 } // namespace

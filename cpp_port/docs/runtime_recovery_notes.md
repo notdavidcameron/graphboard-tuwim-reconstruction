@@ -155,16 +155,32 @@ recovered engine functions, not the JS approximation.
    `MouseMoveOut(id)` on transitions — all only if the page script defines the
    matching handler. Verified in `tests/runtime_page.cpp` (`testHotSpotCallbacks`)
    and against all 8 real files in `verify_scenes.ps1`. Still TODO: the same
-   direction for Sprite_Holder/MultiBitmap/Bitmap_Holder/etc. — this needs (a)
-   per-item click rects for those holders (sprite width/height is recovered in
-   `SpriteDefinition`, but instances aren't yet seeded into a hit-testable rect
-   list the way hotspots are) and (b) a verified cross-kind z-order rule for
-   when a click could hit two different holder kinds at once (only HotSpot's
-   own layer-ordering is verified; nothing establishes hotspot-vs-sprite
-   priority). Playback-completion events (`Transparent_Video_Holder.TheEnd`,
+   direction for Sprite_Holder/MultiBitmap/Bitmap_Holder/etc. The blocking
+   questions here are now **answered** — see "Raw input routing" in
+   `docs/component_interfaces.md`: the board dispatches `LButtonDown(pt, deep,
+   handled)` one layer at a time, each holder tests only items on that layer,
+   scanning last→first, and the board stops at the first component that handles
+   it. Sprite click rects are the current phase's frame
+   (`def + 0x6c + phase*0x4c`, `w` at `+0x14`, `h` at `+0x18`) at the instance's
+   position. What remains is implementation: seed sprite instances into a
+   hit-testable list keyed by layer, then route clicks through the same
+   layer-descending walk `findHotSpotHit` now performs.
+   Playback-completion events (`Transparent_Video_Holder.TheEnd`,
    `Sound_Holder.EndPlaySound`) need timer/duration simulation, not hit-testing,
    and real asset effects (blitting frames, playing WAVs) remain out of scope
    for a headless runtime.
+
+   **Corrected 2026-07-10 (was a real bug):** hotspots are addressed by the
+   record's stored id (`+0x18`), not their array index, both for the
+   `LeftButtonClickOn(rectID)` callback and for `EnableHotSpot`/`DisableHotSpot`.
+   RZECZKA.BDF stores ids `0,1,3,4,6,5,7,8` for indices `0..7`. The earlier
+   callback wiring passed the index and therefore mis-fired every
+   `switch(rectID)` from index 2 on. Also, the click path's rect is inclusive on
+   every edge (`top<=y<=bottom`); the bottom-exclusive rule the port used comes
+   from `IsYou`, the engine's *query* entry point, not from `LButtonDown`. And
+   the "highest layer wins" tiebreak was an approximation — the real mechanism
+   is the board's per-layer dispatch, which produces that behavior as a
+   consequence rather than as a rule inside the holder.
 6. [DONE (headless drive + input)] Drive modes: `gbinspect --run <handler>`
    prints a raw call trace (recording Host); `gbinspect --drive <handler>` runs
    one handler through `Page` and prints live component + page state; and an

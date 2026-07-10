@@ -55,12 +55,32 @@ MouseMoveIn(int rectID)
 MouseMoveOut(int rectID)
 ```
 
-Firing rules the C++ reference implements:
+Firing rules the C++ reference implements (all read out of `HotSpotHolder.dll`
+with Ghidra; see "How the board routes raw input" in `component_interfaces.md`):
 
-- **Hit-test rule:** a point hits a hotspot rect when
-  `left <= x <= right && top <= y < bottom` (note: **inclusive** on left/right
-  and top, **exclusive** on bottom), the hotspot is **enabled**, and among all
-  containing enabled hotspots the **highest layer wins**.
+- **`rectID` is the hotspot's stored id, not its array index.** The engine reads
+  it from the record's `+0x18` field. RZECZKA.BDF stores ids `0,1,3,4,6,5,7,8`
+  for array indices `0..7` — id `2` does not exist and `5`/`6` are transposed.
+  This applies in both directions: the callback receives the id, and
+  `EnableHotSpot(id)` / `DisableHotSpot(id)` match on it.
+
+  > **Confirmed bug in the current web_port.** `web_port/scenes/RZECZKA.json`
+  > emits `hitboxes` with ids `[0,1,2,3,4,5,6,7]` — the enumeration order — while
+  > the `.BDF` record's `+0x18` field holds `0,1,3,4,6,5,7,8`. `runtime.js` then
+  > dispatches `LeftButtonClickOn` with the index, so RZECZKA's third hotspot
+  > fires `rectID=2` (which its `switch` ignores) instead of `rectID=3`, and the
+  > fourth plays video 3 instead of video 4. The fix belongs in the scene
+  > exporter (`graphboard_export_scene.py`): emit the `+0x18` field as `id`.
+  > Every scene with non-contiguous ids is affected.
+- **Hit-test rule (click path):** a point hits when
+  `left <= x <= right && top <= y <= bottom` — **inclusive on every edge** — and
+  the hotspot is **enabled**. (The engine's separate *query* entry point,
+  `IsYou`, uses a bottom-exclusive rect; don't mix them up.)
+- **Layering:** the board dispatches mouse input one layer at a time, topmost
+  layer first, and a holder only considers records on the layer being dispatched;
+  within a layer, the **last** matching record wins an overlap. The net effect is
+  "highest layer wins, later record breaks ties" — but it is a consequence of the
+  board's per-layer walk, not a sort inside the holder.
 - Left click over a hit hotspot → `HotSpot_Holder.LeftButtonClickOn(rectID)`.
 - Right click over a hit hotspot → `HotSpot_Holder.RightButtonClickOn(rectID)`.
 - Hover: `MouseMoveIn`/`MouseMoveOut` are **edge-triggered** — fire once when

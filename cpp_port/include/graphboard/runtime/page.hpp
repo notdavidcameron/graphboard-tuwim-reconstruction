@@ -93,9 +93,12 @@ public:
     int timerInterval() const { return timerInterval_; }
     bool exited() const { return exited_; }
 
-    // Index of the top-most enabled HotSpot_Holder hotspot containing (x, y),
-    // or -1. Uses the recovered hit-test rule (left<=x<=right, top<=y<bottom,
-    // enabled, highest layer wins).
+    // Stored id ("rectID") of the top-most enabled HotSpot_Holder hotspot
+    // containing (x, y), or -1. This is the value the engine hands the script,
+    // which is the record's +0x18 field and NOT its array index. Uses the
+    // recovered click-path rule: enabled, layer == the board's current layer
+    // (so the highest layer wins), rect inclusive on every edge, last record on
+    // that layer wins an overlap. See findHotSpotHit in page.cpp.
     int hitTestHotSpot(int x, int y) const;
 
 private:
@@ -103,11 +106,11 @@ private:
     void parse(BinaryReader& reader);
     ComponentState* resolve(const std::string& componentPath);
 
-    // Which HotSpot_Holder instance (by display name) and item index, if any,
-    // the point hits, using the recovered rule (enabled, highest layer wins).
+    // Which HotSpot_Holder instance (by display name) and which hotspot id, if
+    // any, the point hits. `index` carries the record's stored id (+0x18).
     struct HotSpotHit {
         std::string component;
-        int index = -1;
+        int index = -1;   // hotspot id, or -1 for no hit
     };
     HotSpotHit findHotSpotHit(int x, int y) const;
 

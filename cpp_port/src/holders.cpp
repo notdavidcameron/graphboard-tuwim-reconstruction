@@ -77,6 +77,11 @@ constexpr std::size_t kOffLeft = 0x00;
 constexpr std::size_t kOffTop = 0x04;
 constexpr std::size_t kOffRight = 0x08;
 constexpr std::size_t kOffBottom = 0x0c;
+// The script-visible hotspot id ("rectID"), NOT the array index: the engine
+// passes record+0x18 to LeftButtonClickOn and matches EnableHotSpot(id) against
+// it (HotSpotHolder.dll LButtonDown @ 100050a0, IsYou @ 100047c0). RZECZKA.BDF
+// stores ids 0,1,3,4,6,5,7,8 for array indices 0..7.
+constexpr std::size_t kOffHotSpotId = 0x18;
 constexpr std::size_t kOffLayer = 0x1c;
 constexpr std::size_t kOffEnabled = 0x20;
 
@@ -111,14 +116,15 @@ HotSpotHolderState parseHotSpotHolderState(BinaryReader& reader) {
         hotspot.top = readI32(record, kOffTop);
         hotspot.right = readI32(record, kOffRight);
         hotspot.bottom = readI32(record, kOffBottom);
+        hotspot.id = readI32(record, kOffHotSpotId);
         hotspot.layer = readI32(record, kOffLayer);
         hotspot.enabled = readI32(record, kOffEnabled);
         hotspot.name = reader.readArchiveString();
         state.hotspots.push_back(std::move(hotspot));
     }
 
-    state.field1f0 = reader.readU32();
-    state.field1c8 = reader.readU32();
+    state.activeIndex = reader.readU32();
+    state.auxStateWord = reader.readU32();
     return state;
 }
 

@@ -367,6 +367,83 @@ MoveBottom(int panoramaNo)
 MoveEnd(int panoramaNo)
 ```
 
+## How the board routes raw input (recovered 2026-07-10)
+
+Read out of `SpriteHolder.dll` and `HotSpotHolder.dll` with Ghidra, plus
+`Tuwim.exe`. Every component implements a common `IObject` vtable; the slots
+that matter here, given the interface pointer `B`:
+
+| slot | meaning | SpriteHolder | HotSpotHolder |
+|------|---------|--------------|---------------|
+| `B+0x1c` | `IsYou(x, y, deep, BOOL* out)` — pure query | `10007fa0` | `100047c0` |
+| `B+0x20` | `MinMaxDeep(int* outMin, int* outMax)` | `10008240` | `10004930` |
+| `B+0x44` | `Serialize` | `10008930` | `10004d10` |
+| `B+0x48` | `LButtonDown(POINT* pt, int deep, BOOL* handled)` | `10008c80` | `100050a0` |
+| `B+0x6c` | the slot `GraphBrdViewCallback_HitTestComponents` calls | `10008090` | — |
+
+Anchors: `B+0x20` is fixed by `GraphBrdViewCallback_RecomputeComponentTimingBounds`
+(Tuwim.exe `0040cda0`), which calls it with two out-params and folds the results
+into `doc+0x100`/`doc+0x104` — the page's min/max layer (`kOffPageMinLayer`).
+`B+0x44` is fixed by both DLLs' known serializers.
+
+**The board dispatches raw mouse input one layer at a time.** `LButtonDown`
+receives the current layer in `deep`, and each holder considers *only* items
+whose layer field equals it:
+
+- `Sprite_Holder`: instance `+0x18` is the layer. (`MinMaxDeep` scans exactly
+  this field for its min/max, which is what proves the field's meaning.)
+- `HotSpot_Holder`: record `+0x1c` is the layer.
+
+Since the document keeps the aggregate min/max layer, the board walks layers
+top-down and stops at the first component that sets `*handled` — so the highest
+layer containing the point wins, and on a tie the earlier component in the list
+order wins. (`HitTestComponents` shows the list order explicitly: page list
+first, then group list.)
+
+**Within a holder, items are scanned last → first.** Both `LButtonDown`
+implementations count down from `count-1` and return on the first match, so a
+later item wins an overlap on the same layer.
+
+**Hit rectangles.** The *click* path and the *query* path do not agree on edges:
+
+| | `LButtonDown` (click routing) | `IsYou` (query) |
+|---|---|---|
+| HotSpot | `left<=x<=right && top<=y<=bottom` | `left<=x<=right && top<=y<bottom` |
+| Sprite | `x<=px<=x+w && y<=py<=y+h` | `x<=px<x+w && y<=py<y+h` |
+
+i.e. `IsYou` is exclusive on the right/bottom edge, `LButtonDown` is inclusive
+on every edge. `IsYou` additionally treats `deep < 0` as "any layer", checks the
+sprite's visible flag (instance `+0x88`) and skips the holder's excluded index
+(`holder+0x508`).
+
+For a sprite, `w`/`h` come from the **current phase's** frame record, not the
+definition header: `frame = def + 0x6c + phase*0x4c`, with `w` at `frame+0x14`
+and `h` at `frame+0x18`. (For phase 0 that is `def+0x80`/`def+0x84`, which is
+what `SpriteDefinition::width/height` already parse.) The instance's live
+position is a float read through `ftol()`; the *on-disk* `posX`/`posY` at
+instance `+0x08`/`+0x0c` are plain `int32` — confirmed against RZECZKA.BDF,
+where they hold sensible coordinates (707, 18, 710, 107, …) that would be
+denormal garbage if reinterpreted as floats.
+
+### Hotspots are addressed by a stored id, not their array index
+
+`HotSpotHolder::LButtonDown` fires the click callback with **record `+0x18`**,
+and `IsYou` / `EnableHotSpot` / `DisableHotSpot` match against the same field.
+It is *not* the position in the array. RZECZKA.BDF:
+
+| array index | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+|---|---|---|---|---|---|---|---|---|
+| stored id (`+0x18`) | 0 | 1 | 3 | 4 | 6 | 5 | 7 | 8 |
+
+So `2` is absent and `5`/`6` are transposed. Passing the index instead of the id
+silently mis-fires every script `switch(rectID)` from index 2 onward — e.g.
+clicking RZECZKA's `(434,241)-(528,319)` rect (index 3, id 4) must fire
+`LeftButtonClickOn(4)` and play video 4, not video 3. `HotSpot::id` carries this
+field, and `runtime::Page` keys its hotspot item state by id.
+
+Note the record's `enabled` flag is `+0x20`, checked in the runtime branch of
+`LButtonDown` before the callback fires.
+
 ## Notes
 
 - The `.BDF` wrapper only caches the **event** typeinfo (`flags = 0x18`); the

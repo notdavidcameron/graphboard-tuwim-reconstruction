@@ -58,16 +58,21 @@ const std::vector<HolderInfo>& knownHolders();
 //   u8  flag0, flag1, flag2
 //   u32 hotspotCount
 //   repeat hotspotCount:
-//       u8 record[100]     (rects at +0/+4/+8/+0xc, layer +0x1c, enabled +0x20)
+//       u8 record[100]     (rects at +0/+4/+8/+0xc, id +0x18, layer +0x1c,
+//                           enabled +0x20)
 //       CString name
-//   u32 field1f0
-//   u32 field1c8
+//   u32 activeIndex   (holder +0x1f0: active/selected hotspot index)
+//   u32 auxStateWord  (holder +0x1c8)
 // -------------------------------------------------------------------------
 struct HotSpot {
     std::int32_t left = 0;
     std::int32_t top = 0;
     std::int32_t right = 0;
     std::int32_t bottom = 0;
+    // Script-visible "rectID": what LeftButtonClickOn receives and what
+    // EnableHotSpot/DisableHotSpot match on. Not the array index -- RZECZKA.BDF
+    // stores ids 0,1,3,4,6,5,7,8 for indices 0..7.
+    std::int32_t id = 0;         // record +0x18
     std::int32_t layer = 0;
     std::int32_t enabled = 0;
     std::string name;
@@ -79,8 +84,8 @@ struct HotSpotHolderState {
     std::uint8_t flag1 = 0;
     std::uint8_t flag2 = 0;
     std::vector<HotSpot> hotspots;
-    std::uint32_t field1f0 = 0;
-    std::uint32_t field1c8 = 0;
+    std::uint32_t activeIndex = 0;   // holder +0x1f0
+    std::uint32_t auxStateWord = 0;  // holder +0x1c8
 };
 
 HotSpotHolderState parseHotSpotHolderState(BinaryReader& reader);

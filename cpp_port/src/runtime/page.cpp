@@ -20,9 +20,11 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
         case HolderKind::HotSpotHolder: {
             const auto hs = parseHotSpotHolderState(reader);
             state.hotspots = hs.hotspots;
-            for (std::size_t i = 0; i < hs.hotspots.size(); ++i) {
-                state.items[static_cast<int>(i)]["enabled"] =
-                    Value::integer(hs.hotspots[i].enabled);
+            // Hotspots are addressed by their stored id (record+0x18), which is
+            // what scripts pass to EnableHotSpot/DisableHotSpot and receive in
+            // LeftButtonClickOn -- not the array index.
+            for (const auto& h : hs.hotspots) {
+                state.items[h.id]["enabled"] = Value::integer(h.enabled);
             }
             break;
         }
@@ -169,15 +171,14 @@ Value Page::callComponent(const std::string& component, const std::string& metho
         item["animating"] = Value::integer(1);
     } else if (method == "StopAnimation") {
         item["animating"] = Value::integer(0);
-    } else if (method == "EnableHotSpot") {
-        item["enabled"] = Value::integer(1);
-        if (id >= 0 && static_cast<std::size_t>(id) < state->hotspots.size()) {
-            state->hotspots[static_cast<std::size_t>(id)].enabled = 1;
-        }
-    } else if (method == "DisableHotSpot") {
-        item["enabled"] = Value::integer(0);
-        if (id >= 0 && static_cast<std::size_t>(id) < state->hotspots.size()) {
-            state->hotspots[static_cast<std::size_t>(id)].enabled = 0;
+    } else if (method == "EnableHotSpot" || method == "DisableHotSpot") {
+        // Addressed by the hotspot's stored id, not its position in the array.
+        const std::int32_t enabled = method == "EnableHotSpot" ? 1 : 0;
+        item["enabled"] = Value::integer(enabled);
+        for (auto& h : state->hotspots) {
+            if (h.id == id) {
+                h.enabled = enabled;
+            }
         }
     } else if (method == "PlayDSound" || method == "Play") {
         state->props["playing"] =
@@ -224,6 +225,21 @@ Value Page::callBuiltin(const std::string& name, const std::vector<Value>& args)
     return Value();
 }
 
+// Mirrors HotSpotHolder::LButtonDown (HotSpotHolder.dll @ 100050a0), which the
+// board calls once per layer with that layer in `deep`:
+//
+//   * only records whose layer == deep are considered;
+//   * records are scanned last -> first, so a later record wins an overlap;
+//   * the rect test is inclusive on every edge (left<=x<=right, top<=y<=bottom);
+//   * only enabled records fire, and the value handed to the script is the
+//     record's stored id (+0x18), not its array index.
+//
+// The board walks layers top-down (it keeps the page's min/max layer, which
+// GraphBrdViewCallback_RecomputeComponentTimingBounds aggregates from every
+// component's MinMaxDeep), so the highest layer containing the point wins.
+// Note IsYou (@ 100047c0) -- the engine's *query* entry point -- uses a
+// bottom-exclusive rect (top<=y<bottom) and scans first->last; this routine
+// deliberately follows the click path, not the query path.
 Page::HotSpotHit Page::findHotSpotHit(int x, int y) const {
     HotSpotHit hit;
     std::int32_t bestLayer = 0;
@@ -231,17 +247,23 @@ Page::HotSpotHit Page::findHotSpotHit(int x, int y) const {
         if (state.kind != HolderKind::HotSpotHolder) {
             continue;
         }
-        for (std::size_t i = 0; i < state.hotspots.size(); ++i) {
-            const auto& h = state.hotspots[i];
+        // Reverse scan: within a layer the last matching record wins.
+        for (auto it = state.hotspots.rbegin(); it != state.hotspots.rend(); ++it) {
+            const auto& h = *it;
             if (h.enabled == 0) {
                 continue;
             }
-            if (x >= h.left && x <= h.right && y >= h.top && y < h.bottom) {
-                if (hit.index == -1 || h.layer >= bestLayer) {
-                    hit.index = static_cast<int>(i);
-                    hit.component = state.displayName;
-                    bestLayer = h.layer;
-                }
+            if (x < h.left || x > h.right || y < h.top || y > h.bottom) {
+                continue;
+            }
+            // Strictly-greater keeps the first record seen at the winning
+            // layer: reverse order means that is the last record on it, and
+            // across holders it means the earliest holder wins a tie (the board
+            // stops at the first component that handles the layer).
+            if (hit.index == -1 || h.layer > bestLayer) {
+                hit.index = h.id;
+                hit.component = state.displayName;
+                bestLayer = h.layer;
             }
         }
     }
