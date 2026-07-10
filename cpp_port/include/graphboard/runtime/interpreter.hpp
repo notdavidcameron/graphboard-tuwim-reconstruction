@@ -48,11 +48,19 @@ public:
     // No-op returning Empty if the handler is not defined.
     Value runHandler(const std::string& name, const std::vector<Value>& args);
 
+    // Execute the script's top-level statements (skipping function definitions),
+    // declaring into the global scope. This is the recovered
+    // GraphBrdScript_RunGlobalSetupBlock (Tuwim.exe:004281b0) behavior: the
+    // START.PRJ trailing script is a block of global variable declarations that
+    // the host runs once at project load, before any page opens.
+    void runGlobalSetup();
+
     // Global variables (script globals live in the bottom scope). Useful for
     // driving a page and asserting script-visible state in tests.
     const std::map<std::string, Value>& globals() const { return scopes_.front(); }
     bool hasGlobal(const std::string& name) const;
     Value getGlobal(const std::string& name) const;
+    void setGlobal(const std::string& name, Value value);
 
 private:
     enum class Flow { Normal, Return, Break };
@@ -101,6 +109,11 @@ private:
     Host& host_;
     std::vector<Token> tokens_;
     std::map<std::string, Function> functions_;
+    // First token index of each top-level function definition (its return type,
+    // or its name when the type is omitted) -> the token index of the body's
+    // closing '}'. Lets runGlobalSetup step over definitions without executing
+    // their signatures or bodies as statements.
+    std::map<std::size_t, std::size_t> functionSpans_;
     std::vector<std::map<std::string, Value>> scopes_;
 
     std::size_t pos_ = 0;

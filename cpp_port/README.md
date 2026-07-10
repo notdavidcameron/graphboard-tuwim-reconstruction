@@ -31,9 +31,13 @@ plumbing.
   user functions with params + body spans) and `collectCalls` (the builtin /
   component-method API surface). This is the first stage of the runtime; see
   `docs/runtime_recovery_notes.md` for the recovered engine internals and plan.
+- An executable `Project` (`runtime/project`): runs the `START.PRJ` global-setup
+  block (project-wide script variables), opens pages by name with those globals
+  seeded and harvested back, and follows script-driven `LoadPage` navigation.
 - A `gbinspect` command-line tool that prints parsed summaries as JSON, walking a
   page's components as far as the implemented private-state parsers allow and
-  reporting each page's script handlers and API usage.
+  reporting each page's script handlers and API usage. It can also drive a page
+  or a whole project headless with synthetic input (see Build, below).
 
 `Text_Holder` (plus its trailing FontControl font block) and `Sound_Holder` have
 fully recovered, real-file-verified layouts and a step-by-step implementation
@@ -81,6 +85,15 @@ prints the resulting state + host call log). Input events apply in order:
 ```powershell
 .\cpp_port\build\gbinspect.exe "C:\path\to\RZECZKA.BDF" --click 481,280
 .\cpp_port\build\gbinspect.exe "C:\path\to\RZECZKA.BDF" --move 100,100 --timer --key 27
+```
+
+Drive the whole project: runs the `START.PRJ` global-setup block, opens the
+startup page (or `--page NAME`) with the project globals seeded, applies input,
+and follows up to N `LoadPage` navigations:
+
+```powershell
+.\cpp_port\build\gbinspect.exe "C:\path\to\START.PRJ" --click 320,240 --follow 3
+.\cpp_port\build\gbinspect.exe "C:\path\to\START.PRJ" --page michalp1.bdf --follow 0
 ```
 
 ## Porting Policy

@@ -3,6 +3,7 @@
 #include "graphboard/holders.hpp"
 #include "graphboard/runtime/interpreter.hpp"
 #include "graphboard/runtime/page.hpp"
+#include "graphboard/runtime/project.hpp"
 #include "graphboard/runtime/script.hpp"
 #include "graphboard/text.hpp"
 
@@ -690,6 +691,31 @@ struct InputEvent {
     int b = 0;  // y
 };
 
+// Apply a synthetic input sequence to a live page, in order.
+void applyEvents(graphboard::runtime::Page& page, const std::vector<InputEvent>& events) {
+    for (const auto& ev : events) {
+        switch (ev.kind) {
+            case InputEvent::Kind::Click:  page.lButtonDown(ev.a, ev.b); break;
+            case InputEvent::Kind::RClick: page.rButtonDown(ev.a, ev.b); break;
+            case InputEvent::Kind::Move:   page.mouseMove(ev.a, ev.b); break;
+            case InputEvent::Kind::Timer:  page.timer(); break;
+            case InputEvent::Kind::Key:    page.keyDown(ev.a); break;
+        }
+    }
+}
+
+json callLogJson(const graphboard::runtime::Page& page) {
+    json calls = json::array();
+    for (const auto& rec : page.callLog()) {
+        json a = json::array();
+        for (const auto& v : rec.args) a.push_back(valueToJson(v));
+        json entry = {{"name", t(rec.name)}, {"args", a}};
+        if (!rec.builtin) entry["component"] = t(rec.component);
+        calls.push_back(entry);
+    }
+    return calls;
+}
+
 // Open a real page (OnOpenPage) and replay a synthetic input sequence through
 // the runtime, exercising the component->script callback direction against real
 // game data. Prints the final page state plus the full host call log so fired
@@ -703,29 +729,43 @@ int interactPage(const std::filesystem::path& path, bool runOpen,
     // Calls up to here are OnOpenPage's; anything after is attributable to the
     // synthetic input events, so a consumer can slice calls[openCallCount:].
     const std::size_t openCallCount = page->callLog().size();
-    for (const auto& ev : events) {
-        switch (ev.kind) {
-            case InputEvent::Kind::Click:  page->lButtonDown(ev.a, ev.b); break;
-            case InputEvent::Kind::RClick: page->rButtonDown(ev.a, ev.b); break;
-            case InputEvent::Kind::Move:   page->mouseMove(ev.a, ev.b); break;
-            case InputEvent::Kind::Timer:  page->timer(); break;
-            case InputEvent::Kind::Key:    page->keyDown(ev.a); break;
-        }
-    }
-
-    json calls = json::array();
-    for (const auto& rec : page->callLog()) {
-        json a = json::array();
-        for (const auto& v : rec.args) a.push_back(valueToJson(v));
-        json entry = {{"name", t(rec.name)}, {"args", a}};
-        if (!rec.builtin) entry["component"] = t(rec.component);
-        calls.push_back(entry);
-    }
+    applyEvents(*page, events);
 
     json out = pageStateJson(*page);
     out["opened"] = runOpen;
     out["openCallCount"] = openCallCount;
-    out["calls"] = calls;
+    out["calls"] = callLogJson(*page);
+    std::cout << out.dump(2) << "\n";
+    return 0;
+}
+
+// Load a project: run the START.PRJ global-setup block, open the startup page
+// with those globals seeded, then replay the input sequence. With --follow, keep
+// opening whatever page the script requests via LoadPage (bounded).
+int interactProject(const std::filesystem::path& path, const std::vector<InputEvent>& events,
+                    int followLimit, const std::string& pageName) {
+    auto project = graphboard::runtime::Project::loadFromFile(path);
+    auto& page = pageName.empty() ? project->openStartupPage() : project->openPage(pageName);
+    applyEvents(page, events);
+
+    json visited = json::array();
+    visited.push_back(t(project->currentPageName()));
+    for (int i = 0; i < followLimit && project->followPendingPage(); ++i) {
+        visited.push_back(t(project->currentPageName()));
+    }
+
+    json globals = json::object();
+    for (const auto& [name, value] : project->globals()) {
+        globals[name] = valueToJson(value);
+    }
+
+    auto* cur = project->currentPage();
+    json out = pageStateJson(*cur);
+    out["startupPage"] = t(project->manifest().startupPage);
+    out["currentPage"] = t(project->currentPageName());
+    out["visitedPages"] = visited;
+    out["projectGlobals"] = globals;
+    out["calls"] = callLogJson(*cur);
     std::cout << out.dump(2) << "\n";
     return 0;
 }
@@ -767,6 +807,8 @@ int main(int argc, char** argv) {
     std::vector<InputEvent> events;
     bool interact = false;
     bool runOpen = true;
+    int followLimit = 0;
+    std::string pageName;
     try {
         for (std::size_t i = 1; i < args.size(); ++i) {
             if (isFlag(args[i], "--run") && i + 1 < args.size()) {
@@ -793,6 +835,12 @@ int main(int argc, char** argv) {
                 interact = true;
             } else if (isFlag(args[i], "--no-open")) {
                 runOpen = false;
+            } else if (isFlag(args[i], "--follow") && i + 1 < args.size()) {
+                followLimit = std::stoi(argToUtf8(args[++i]));
+                interact = true;
+            } else if (isFlag(args[i], "--page") && i + 1 < args.size()) {
+                pageName = argToUtf8(args[++i]);
+                interact = true;
             } else if (file.empty()) {
                 file = args[i];
             }
@@ -804,7 +852,10 @@ int main(int argc, char** argv) {
     if (file.empty()) {
         std::cerr << "usage: gbinspect <START.PRJ|PAGE.BDF> [--run <handler>] [--drive <handler>]\n"
                      "       gbinspect <PAGE.BDF> [--no-open] (--click X,Y | --rclick X,Y |\n"
-                     "                 --move X,Y | --timer | --key N)...\n";
+                     "                 --move X,Y | --timer | --key N)...\n"
+                     "       gbinspect <START.PRJ> [--follow N] (--click X,Y | ...)...\n"
+                     "                 runs the global setup block, opens the startup page,\n"
+                     "                 applies input, and follows up to N LoadPage jumps\n";
         return 2;
     }
 
@@ -825,8 +876,13 @@ int main(int argc, char** argv) {
             return drivePage(file, driveTarget);
         }
         if (interact) {
+            // START.PRJ drives the whole project: global setup -> startup page
+            // -> input (-> LoadPage navigation). A .BDF drives that page alone.
+            if (ext == ".prj") {
+                return interactProject(file, events, followLimit, pageName);
+            }
             if (ext != ".bdf") {
-                std::cerr << "gbinspect: input events require a .BDF page\n";
+                std::cerr << "gbinspect: input events require a .BDF page or START.PRJ\n";
                 return 2;
             }
             return interactPage(file, runOpen, events);

@@ -67,7 +67,41 @@ Interpreter::Interpreter(std::string source, Host& host)
             }
         }
         functions_[handler.name] = fn;
+
+        // The definition starts at the name, or one token earlier when a return
+        // type was written ("void OnTimer" / "int square"). A dotted callback
+        // name ("Sound_Holder.TheEnd") starts at its component token, which is
+        // where nameOffset points.
+        const auto nameIt = offsetToTok.find(handler.nameOffset);
+        if (nameIt != offsetToTok.end()) {
+            std::size_t defStart = nameIt->second;
+            if (!handler.returnType.empty() && defStart > 0) {
+                --defStart;
+            }
+            functionSpans_[defStart] = fn.bodyClose;
+        }
     }
+}
+
+void Interpreter::runGlobalSetup() {
+    // Top-level statements only: the global block is a list of declarations.
+    // Function definitions are stepped over, never executed.
+    const bool savedDeclareToGlobal = declareToGlobal_;
+    declareToGlobal_ = true;  // no scope is pushed here, but be explicit
+    pos_ = 0;
+    while (pos_ < tokens_.size() && tok().kind != TokenKind::End) {
+        const auto span = functionSpans_.find(pos_);
+        if (span != functionSpans_.end()) {
+            pos_ = span->second + 1;  // just past the body's '}'
+            continue;
+        }
+        const std::size_t before = pos_;
+        execStatement();
+        if (pos_ == before) {
+            ++pos_;  // guarantee progress on anything unmodeled
+        }
+    }
+    declareToGlobal_ = savedDeclareToGlobal;
 }
 
 bool Interpreter::hasHandler(const std::string& name) const {
@@ -81,6 +115,10 @@ bool Interpreter::hasGlobal(const std::string& name) const {
 Value Interpreter::getGlobal(const std::string& name) const {
     const auto it = scopes_.front().find(name);
     return it != scopes_.front().end() ? it->second : Value();
+}
+
+void Interpreter::setGlobal(const std::string& name, Value value) {
+    scopes_.front()[name] = std::move(value);
 }
 
 Value Interpreter::runHandler(const std::string& name, const std::vector<Value>& args) {

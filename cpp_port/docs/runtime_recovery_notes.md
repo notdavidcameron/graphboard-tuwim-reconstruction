@@ -179,9 +179,28 @@ recovered engine functions, not the JS approximation.
    `Transparent_Video_Holder.Play(3,0)` (TVH `playing` -> 3). Swept all 201
    real BDFs with `--click --move --timer` under `timeout`: 0 hangs, 0 crashes
    (only KOTEK2.BDF is refused — it is the documented misnamed NE executable).
-   Next: run the START.PRJ global-setup block before opening the first page, and
-   extend the component->script callback direction beyond HotSpot_Holder (needs
-   per-item click rects + a verified cross-kind z-order rule; see item 5).
+7. [DONE] `runtime/project` — an executable `Project` closes the last gap in the
+   page lifecycle. `Project::loadFromFile(START.PRJ)` parses the manifest and
+   runs its trailing script through `Interpreter::runGlobalSetup()` (the
+   recovered `GraphBrdScript_RunGlobalSetupBlock`, 004281b0): the block is a
+   list of declarations (`int global1..global4; CString parentWnd;`) whose
+   variables are **project-wide**, and 52 of the title's pages read or write
+   them, so they must survive a page change. `openPage()` resolves the name
+   case-insensitively (manifest says `intro.bdf`, disk says `INTRO.BDF`), seeds
+   the project globals into the page's script scope *before* `OnOpenPage` (its
+   guards read them), then harvests the declared names back out; a page's own
+   OnOpenPage variables stay page-scoped. `followPendingPage()` opens whatever
+   `LoadPage(...)` requested, so navigation is script-driven.
+   `gbinspect START.PRJ [--page NAME] [--follow N] --click X,Y ...` drives the
+   whole flow. Verified on real data: the project opens `intro.bdf`, a click
+   runs `LoadPage("wyborw.bdf")` and `--follow` lands on it with its own
+   components; `--page michalp1.bdf` harvests that page's `global4=972` into the
+   project globals. All 34 manifest pages open through the project path with 0
+   failures and 0 hangs. Covered by `tests/runtime_project.cpp`.
+
+   Next: extend the component->script callback direction beyond HotSpot_Holder
+   (needs per-item click rects + a verified cross-kind z-order rule; see item 5),
+   and model `.GRP` group loading (`LoadGroup`) as a second component namespace.
 
 **Recovered engine semantics — OnOpenPage declares page-globals.** Every real
 page's `OnOpenPage` carries the comment *"All variables definied on this

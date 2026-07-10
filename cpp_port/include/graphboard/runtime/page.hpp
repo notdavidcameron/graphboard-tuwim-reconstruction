@@ -79,6 +79,13 @@ public:
     const std::string& scriptText() const { return script_; }
     const std::vector<HostCallRecord>& callLog() const { return callLog_; }
 
+    // Script globals. A Project seeds the project-wide globals (declared by the
+    // START.PRJ setup block) before running OnOpenPage, and harvests them back
+    // afterwards so writes carry to the next page.
+    bool hasGlobal(const std::string& name) const;
+    Value getGlobal(const std::string& name) const;
+    void setGlobal(const std::string& name, Value value);
+
     // Page/host state set by builtins.
     const std::string& pendingPage() const { return pendingPage_; }
     const std::string& currentGroup() const { return currentGroup_; }

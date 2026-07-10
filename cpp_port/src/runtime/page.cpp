@@ -101,6 +101,20 @@ void Page::runEvent(const std::string& name, const std::vector<Value>& args) {
     }
 }
 
+bool Page::hasGlobal(const std::string& name) const {
+    return interpreter_ && interpreter_->hasGlobal(name);
+}
+
+Value Page::getGlobal(const std::string& name) const {
+    return interpreter_ ? interpreter_->getGlobal(name) : Value();
+}
+
+void Page::setGlobal(const std::string& name, Value value) {
+    if (interpreter_) {
+        interpreter_->setGlobal(name, std::move(value));
+    }
+}
+
 ComponentState* Page::resolve(const std::string& componentPath) {
     // Scripts may qualify a component as Group.HotSpot_Holder; the instance is
     // keyed by its bare display name (the segment after the last '.').
