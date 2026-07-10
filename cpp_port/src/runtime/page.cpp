@@ -30,11 +30,23 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
         }
         case HolderKind::SpriteHolder: {
             const auto sp = parseSpriteHolderState(reader);
+            // Sprites are addressed by instance index: SpriteHolder::LButtonDown
+            // (@ 10008c80) hands the loop counter straight to the callback.
             for (std::size_t i = 0; i < sp.instances.size(); ++i) {
+                const auto& inst = sp.instances[i];
                 auto& item = state.items[static_cast<int>(i)];
-                item["definition"] = Value::integer(sp.instances[i].definitionIndex);
-                item["x"] = Value::integer(sp.instances[i].posX);
-                item["y"] = Value::integer(sp.instances[i].posY);
+                item["definition"] = Value::integer(inst.definitionIndex);
+                item["x"] = Value::integer(inst.posX);
+                item["y"] = Value::integer(inst.posY);
+                item["phase"] = Value::integer(inst.phase);
+                item["visible"] = Value::integer(inst.visible);
+
+                SpriteGeometry geom;
+                geom.layer = inst.layer;
+                if (inst.definitionIndex < sp.definitions.size()) {
+                    geom.frames = sp.definitions[inst.definitionIndex].frames;
+                }
+                state.sprites.push_back(std::move(geom));
             }
             break;
         }
@@ -225,84 +237,161 @@ Value Page::callBuiltin(const std::string& name, const std::vector<Value>& args)
     return Value();
 }
 
-// Mirrors HotSpotHolder::LButtonDown (HotSpotHolder.dll @ 100050a0), which the
-// board calls once per layer with that layer in `deep`:
-//
-//   * only records whose layer == deep are considered;
-//   * records are scanned last -> first, so a later record wins an overlap;
-//   * the rect test is inclusive on every edge (left<=x<=right, top<=y<=bottom);
-//   * only enabled records fire, and the value handed to the script is the
-//     record's stored id (+0x18), not its array index.
-//
-// The board walks layers top-down (it keeps the page's min/max layer, which
-// GraphBrdViewCallback_RecomputeComponentTimingBounds aggregates from every
-// component's MinMaxDeep), so the highest layer containing the point wins.
-// Note IsYou (@ 100047c0) -- the engine's *query* entry point -- uses a
-// bottom-exclusive rect (top<=y<bottom) and scans first->last; this routine
-// deliberately follows the click path, not the query path.
-Page::HotSpotHit Page::findHotSpotHit(int x, int y) const {
-    HotSpotHit hit;
-    std::int32_t bestLayer = 0;
-    for (const auto& state : components_) {
-        if (state.kind != HolderKind::HotSpotHolder) {
-            continue;
-        }
-        // Reverse scan: within a layer the last matching record wins.
+namespace {
+
+// One candidate item found inside a single holder: the value the script will
+// see, plus the layer that decides against other holders.
+struct Candidate {
+    int index = -1;
+    std::int32_t layer = 0;
+};
+
+std::int64_t itemInt(const ComponentState& state, int id, const std::string& key) {
+    const auto ci = state.items.find(id);
+    if (ci == state.items.end()) return 0;
+    const auto ki = ci->second.find(key);
+    return ki == ci->second.end() ? 0 : ki->second.toInt();
+}
+
+// The topmost item of one holder under (x, y). Mirrors the holder's own
+// LButtonDown: reverse scan (a later item wins an overlap on the same layer),
+// rect inclusive on every edge, invisible/disabled items skipped.
+Candidate topItemIn(const ComponentState& state, int x, int y) {
+    Candidate best;
+    if (state.kind == HolderKind::HotSpotHolder) {
+        // HotSpotHolder::LButtonDown @ 100050a0. The script sees the record's
+        // stored id (+0x18), not the array index.
         for (auto it = state.hotspots.rbegin(); it != state.hotspots.rend(); ++it) {
             const auto& h = *it;
-            if (h.enabled == 0) {
-                continue;
+            if (h.enabled == 0) continue;
+            if (x < h.left || x > h.right || y < h.top || y > h.bottom) continue;
+            if (best.index == -1 || h.layer > best.layer) {
+                best.index = h.id;
+                best.layer = h.layer;
             }
-            if (x < h.left || x > h.right || y < h.top || y > h.bottom) {
-                continue;
+        }
+    } else if (state.kind == HolderKind::SpriteHolder) {
+        // SpriteHolder::LButtonDown @ 10008c80. The script sees the instance
+        // index. The rect is the *current phase's* frame at the live position.
+        for (std::size_t r = state.sprites.size(); r-- > 0;) {
+            const int id = static_cast<int>(r);
+            const auto& geom = state.sprites[r];
+            if (itemInt(state, id, "visible") == 0 || geom.frames.empty()) continue;
+
+            const auto phase = itemInt(state, id, "phase");
+            const auto& frame = (phase >= 0 && phase < static_cast<std::int64_t>(geom.frames.size()))
+                                    ? geom.frames[static_cast<std::size_t>(phase)]
+                                    : geom.frames.front();
+            const auto left = itemInt(state, id, "x");
+            const auto top = itemInt(state, id, "y");
+            const auto right = left + static_cast<std::int64_t>(frame.width);
+            const auto bottom = top + static_cast<std::int64_t>(frame.height);
+            if (x < left || x > right || y < top || y > bottom) continue;
+
+            if (best.index == -1 || geom.layer > best.layer) {
+                best.index = id;
+                best.layer = geom.layer;
             }
-            // Strictly-greater keeps the first record seen at the winning
-            // layer: reverse order means that is the last record on it, and
-            // across holders it means the earliest holder wins a tie (the board
-            // stops at the first component that handles the layer).
-            if (hit.index == -1 || h.layer > bestLayer) {
-                hit.index = h.id;
-                hit.component = state.displayName;
-                bestLayer = h.layer;
-            }
+        }
+    }
+    return best;
+}
+
+} // namespace
+
+// The board dispatches raw mouse input one layer at a time, topmost layer
+// first, and stops at the first component that handles it (see "How the board
+// routes raw input" in docs/component_interfaces.md). Scanning every holder and
+// keeping the strictly-highest layer reproduces that: on a tie the earliest
+// holder in list order wins, exactly as the board's per-layer walk would.
+//
+// Note IsYou (@ 100047c0 / 10007fa0) -- the engine's *query* entry point -- uses
+// a bottom-exclusive rect and scans first->last. This routine deliberately
+// follows the click path, not the query path.
+//
+// Limitation: SpriteHolder::LButtonDown refines a rect hit with a per-pixel
+// transparency test (frame+0x04 holds the transparent colour index, frame+0x48
+// the pixel data, frame+0x10 the row width), gated on a per-frame flag. This
+// port stops at the bounding rect, so an irregular sprite reports a hit in its
+// transparent corners.
+Page::Hit Page::findHit(int x, int y) const {
+    Hit hit;
+    std::int32_t bestLayer = 0;
+    for (const auto& state : components_) {
+        const auto candidate = topItemIn(state, x, y);
+        if (candidate.index == -1) continue;
+        if (hit.index == -1 || candidate.layer > bestLayer) {
+            hit.index = candidate.index;
+            hit.component = state.displayName;
+            hit.kind = state.kind;
+            bestLayer = candidate.layer;
         }
     }
     return hit;
 }
 
 int Page::hitTestHotSpot(int x, int y) const {
-    return findHotSpotHit(x, y).index;
+    // Hotspot-only query, kept for callers that want the rectID specifically.
+    Hit hit;
+    std::int32_t bestLayer = 0;
+    for (const auto& state : components_) {
+        if (state.kind != HolderKind::HotSpotHolder) continue;
+        const auto candidate = topItemIn(state, x, y);
+        if (candidate.index == -1) continue;
+        if (hit.index == -1 || candidate.layer > bestLayer) {
+            hit.index = candidate.index;
+            bestLayer = candidate.layer;
+        }
+    }
+    return hit.index;
 }
+
+void Page::fireHitEvent(const Hit& hit, const char* event) {
+    if (hit.index == -1 || event == nullptr) {
+        return;
+    }
+    runEvent(hit.component + "." + event, {Value::integer(hit.index)});
+}
+
+namespace {
+
+// Per-kind event names, from the recovered typeinfo. Sprite_Holder has no
+// right-click event, so a right click over a sprite fires nothing.
+const char* clickEventFor(HolderKind kind) {
+    switch (kind) {
+        case HolderKind::HotSpotHolder: return "LeftButtonClickOn";
+        case HolderKind::SpriteHolder:  return "MouseClickOnDown";
+        default: return nullptr;
+    }
+}
+
+const char* rightClickEventFor(HolderKind kind) {
+    return kind == HolderKind::HotSpotHolder ? "RightButtonClickOn" : nullptr;
+}
+
+} // namespace
 
 void Page::lButtonDown(int x, int y) {
     runEvent("OnLButtonDown", {Value::integer(x), Value::integer(y)});
-    const auto hit = findHotSpotHit(x, y);
-    if (hit.index != -1) {
-        runEvent(hit.component + ".LeftButtonClickOn", {Value::integer(hit.index)});
-    }
+    const auto hit = findHit(x, y);
+    fireHitEvent(hit, clickEventFor(hit.kind));
 }
 
 void Page::rButtonDown(int x, int y) {
     runEvent("OnRButtonDown", {Value::integer(x), Value::integer(y)});
-    const auto hit = findHotSpotHit(x, y);
-    if (hit.index != -1) {
-        runEvent(hit.component + ".RightButtonClickOn", {Value::integer(hit.index)});
-    }
+    const auto hit = findHit(x, y);
+    fireHitEvent(hit, rightClickEventFor(hit.kind));
 }
 
 void Page::mouseMove(int x, int y) {
-    const auto hit = findHotSpotHit(x, y);
-    if (hit.index == hoverHotSpotIndex_ && hit.component == hoverHotSpotComponent_) {
+    const auto hit = findHit(x, y);
+    if (hit.index == hover_.index && hit.component == hover_.component) {
         return;
     }
-    if (hoverHotSpotIndex_ != -1) {
-        runEvent(hoverHotSpotComponent_ + ".MouseMoveOut", {Value::integer(hoverHotSpotIndex_)});
-    }
-    if (hit.index != -1) {
-        runEvent(hit.component + ".MouseMoveIn", {Value::integer(hit.index)});
-    }
-    hoverHotSpotIndex_ = hit.index;
-    hoverHotSpotComponent_ = hit.component;
+    // Both HotSpot_Holder and Sprite_Holder expose MouseMoveIn/MouseMoveOut.
+    fireHitEvent(hover_, "MouseMoveOut");
+    fireHitEvent(hit, "MouseMoveIn");
+    hover_ = hit;
 }
 
 } // namespace graphboard::runtime

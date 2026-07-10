@@ -112,19 +112,35 @@ HotSpotHolderState parseHotSpotHolderState(BinaryReader& reader);
 // uses the offsets here.) Pixel/phase data trails the blob header; its exact
 // framing is still being recovered, so the blob bytes are exposed by range.
 // -------------------------------------------------------------------------
+// One animation frame of a definition. The blob carries a frame table at
+// blob+0x6c with stride 0x4c; SpriteHolder::LButtonDown (@ 10008c80) computes
+// the hit rect from `frame = def + 0x6c + phase*0x4c`, reading width at
+// frame+0x14 and height at frame+0x18. For phase 0 that is blob+0x80/+0x84,
+// which is why the definition header's width/height agree with frames[0].
+struct SpriteFrame {
+    std::uint32_t width = 0;    // frame+0x14
+    std::uint32_t height = 0;   // frame+0x18
+};
+
 struct SpriteDefinition {
     std::uint32_t blobByteCount = 0;
     std::size_t blobOffset = 0;   // file offset of the blob's first byte
     std::string name;             // blob+0x04
-    std::uint32_t width = 0;      // blob+0x80
-    std::uint32_t height = 0;     // blob+0x84
+    std::uint32_t phaseCount = 0; // blob+0x00: number of valid frame records
+    std::uint32_t width = 0;      // blob+0x80 (== frames[0].width)
+    std::uint32_t height = 0;     // blob+0x84 (== frames[0].height)
+    std::vector<SpriteFrame> frames;   // phaseCount entries
 };
 
 struct SpriteInstance {
     std::uint32_t definitionIndex = 0;  // record+0x00 (index on disk)
     std::uint32_t field04 = 0;          // record+0x04 (mirrored to +0x18 on load)
-    std::int32_t posX = 0;              // record+0x08 (placement-like, observed)
-    std::int32_t posY = 0;              // record+0x0c (placement-like, observed)
+    std::int32_t posX = 0;              // record+0x08
+    std::int32_t posY = 0;              // record+0x0c
+    // Verified against RZECZKA.BDF (layers 0,8,8,1,2; visible 1,1,1,0,0).
+    std::int32_t layer = 0;             // record+0x18 ("deep"; mirrors +0x04)
+    std::int32_t phase = 0;             // record+0x5c (current animation frame)
+    std::int32_t visible = 0;           // record+0x88
 };
 
 struct SpriteHolderState {

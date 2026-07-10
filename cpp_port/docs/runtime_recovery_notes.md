@@ -155,20 +155,36 @@ recovered engine functions, not the JS approximation.
    `MouseMoveOut(id)` on transitions — all only if the page script defines the
    matching handler. Verified in `tests/runtime_page.cpp` (`testHotSpotCallbacks`)
    and against all 8 real files in `verify_scenes.ps1`. Still TODO: the same
-   direction for Sprite_Holder/MultiBitmap/Bitmap_Holder/etc. The blocking
-   questions here are now **answered** — see "Raw input routing" in
-   `docs/component_interfaces.md`: the board dispatches `LButtonDown(pt, deep,
-   handled)` one layer at a time, each holder tests only items on that layer,
-   scanning last→first, and the board stops at the first component that handles
-   it. Sprite click rects are the current phase's frame
-   (`def + 0x6c + phase*0x4c`, `w` at `+0x14`, `h` at `+0x18`) at the instance's
-   position. What remains is implementation: seed sprite instances into a
-   hit-testable list keyed by layer, then route clicks through the same
-   layer-descending walk `findHotSpotHit` now performs.
-   Playback-completion events (`Transparent_Video_Holder.TheEnd`,
-   `Sound_Holder.EndPlaySound`) need timer/duration simulation, not hit-testing,
-   and real asset effects (blitting frames, playing WAVs) remain out of scope
-   for a headless runtime.
+   direction is wired for **HotSpot_Holder and Sprite_Holder**, following the
+   recovered dispatch rule (see "How the board routes raw input" in
+   `docs/component_interfaces.md`): `Page::findHit` scans every clickable holder,
+   reverse-scanning items within each (so a later item wins an overlap) and
+   keeping the strictly-highest layer, which reproduces the board's
+   layer-descending `LButtonDown(pt, deep, handled)` walk including its
+   "earliest holder wins a tie" behaviour. Hotspots report their stored id
+   (record+0x18) and fire `LeftButtonClickOn`/`RightButtonClickOn`; sprites
+   report their instance index and fire `MouseClickOnDown` (Sprite_Holder
+   declares no right-click event, so a right click over one fires nothing). Both
+   fire edge-triggered `MouseMoveIn`/`MouseMoveOut`. A sprite's rect is the
+   **current phase's** frame (`def + 0x6c + phase*0x4c`, `w` at `+0x14`, `h` at
+   `+0x18`) at its live position, so `MoveTo`/`ChangePhase`/`ShowSprite` change
+   what is clickable. Verified on real data: `gbinspect ABECADLO.BDF --click
+   539,284` lands on letter sprite 3 and runs the real
+   `Sprite_Holder.MouseClickOnDown(3)` branch.
+
+   **Known gap (recovered but not implemented):** `SpriteHolder::LButtonDown`
+   refines a bounding-rect hit with a per-pixel transparency test — `frame+0x04`
+   is the transparent colour index, `frame+0x48` the pixel data, `frame+0x10` the
+   row width (stride `(w+3)&~3`) — gated on a per-frame flag; when the flag is
+   clear the rect alone is the hit. This port stops at the rect, so an irregular
+   sprite reports a hit in its transparent corners. Closing this needs the frame
+   pixel bytes, which the parser already knows how to locate.
+
+   Still TODO: MultiBitmap/Bitmap_Holder click callbacks (same mechanism, needs
+   their per-item rects). Playback-completion events
+   (`Transparent_Video_Holder.TheEnd`, `Sound_Holder.EndPlaySound`) need
+   timer/duration simulation, not hit-testing, and real asset effects (blitting
+   frames, playing WAVs) remain out of scope for a headless runtime.
 
    **Corrected 2026-07-10 (was a real bug):** hotspots are addressed by the
    record's stored id (`+0x18`), not their array index, both for the

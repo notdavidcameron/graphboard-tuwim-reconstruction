@@ -150,6 +150,8 @@ std::string readNulPaddedName(const std::vector<std::uint8_t>& buffer, std::size
 
 // Serialized CSpriteParam instance record size (SpriteHolder.dll).
 constexpr std::size_t kSpriteInstanceBytes = 0x8c;
+constexpr std::size_t kSpriteFrameTableOffset = 0x6c;  // within the definition blob
+constexpr std::size_t kSpriteFrameBytes = 0x4c;
 // Serialized MultiBitmap per-record metadata size.
 constexpr std::size_t kMultiBitmapMetadataBytes = 0xc0;
 // Serialized TVH holder-entry size and board-video header size.
@@ -177,8 +179,23 @@ SpriteHolderState parseSpriteHolderState(BinaryReader& reader) {
         const auto blob = reader.readBytes(definition.blobByteCount);
         if (blob.size() >= 0x88) {
             definition.name = readNulPaddedName(blob, 0x04, 0x20);
+            definition.phaseCount = readU32At(blob, 0x00);
             definition.width = readU32At(blob, 0x80);
             definition.height = readU32At(blob, 0x84);
+
+            // Frame table: blob+0x6c, stride 0x4c, width +0x14 / height +0x18.
+            // Trust phaseCount only as far as the blob actually reaches; the
+            // bytes past the last frame are pixel data, not frame records.
+            for (std::uint32_t phase = 0; phase < definition.phaseCount; ++phase) {
+                const std::size_t frame = kSpriteFrameTableOffset + phase * kSpriteFrameBytes;
+                if (frame + 0x1c > blob.size()) {
+                    break;
+                }
+                SpriteFrame f;
+                f.width = readU32At(blob, frame + 0x14);
+                f.height = readU32At(blob, frame + 0x18);
+                definition.frames.push_back(f);
+            }
         }
         state.definitions.push_back(std::move(definition));
     }
@@ -191,6 +208,9 @@ SpriteHolderState parseSpriteHolderState(BinaryReader& reader) {
         instance.field04 = readU32At(record, 0x04);
         instance.posX = static_cast<std::int32_t>(readU32At(record, 0x08));
         instance.posY = static_cast<std::int32_t>(readU32At(record, 0x0c));
+        instance.layer = static_cast<std::int32_t>(readU32At(record, 0x18));
+        instance.phase = static_cast<std::int32_t>(readU32At(record, 0x5c));
+        instance.visible = static_cast<std::int32_t>(readU32At(record, 0x88));
         state.instances.push_back(instance);
     }
 

@@ -425,6 +425,37 @@ instance `+0x08`/`+0x0c` are plain `int32` — confirmed against RZECZKA.BDF,
 where they hold sensible coordinates (707, 18, 710, 107, …) that would be
 denormal garbage if reinterpreted as floats.
 
+The frame table's length is `def+0x00`, the **phase count**. Verified on
+RZECZKA.BDF: definitions declaring 1, 2, 2, 1 and 13 phases have exactly that
+many well-formed frame records at `+0x6c` stride `0x4c` (the bytes after the
+last one are pixel data and decode as garbage). This supersedes the heuristic
+`infer_phase_count` in `graphboard_extract_assets.py`, which guesses the count
+from `blob_size / (width*height)` and assumes every phase shares one size — the
+table permits per-phase dimensions.
+
+Sprite instance fields used by the click path, all verified against
+RZECZKA.BDF (layers `0,8,8,1,2`; visible `1,1,1,0,0`):
+
+| offset | meaning |
+|--------|---------|
+| `+0x00` | definition index (a pointer once loaded) |
+| `+0x04` | layer, mirrored to `+0x18` on load |
+| `+0x08` / `+0x0c` | position x / y (`int32`) |
+| `+0x18` | layer ("deep") — the field `MinMaxDeep` scans |
+| `+0x5c` | current phase |
+| `+0x88` | visible flag |
+
+A sprite's script-visible id is simply its **instance index**: the loop counter
+`LButtonDown` counts down is handed straight to the callback. There is no stored
+id field as there is for hotspots.
+
+**Not yet implemented:** after a rect hit, `SpriteHolder::LButtonDown` runs a
+per-pixel transparency test — `frame+0x04` is the transparent colour index,
+`frame+0x48` the pixel data, `frame+0x10` the row width (stride `(w+3)&~3`) —
+gated on a per-frame flag; when that flag is clear the rect alone decides. So a
+faithful sprite hit test is pixel-accurate, and a rect-only port over-reports
+hits in an irregular sprite's transparent corners.
+
 ### Hotspots are addressed by a stored id, not their array index
 
 `HotSpotHolder::LButtonDown` fires the click callback with **record `+0x18`**,

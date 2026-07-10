@@ -18,12 +18,21 @@ namespace graphboard::runtime {
 // index-addressed (a Sprite_Holder holds many sprites, a HotSpot_Holder many
 // hotspots), so mutating methods like MoveTo(id, x, y) update per-index item
 // state; holder-wide effects (which sound is playing) go in `props`.
+// Static geometry of one placed sprite instance. Its live position, phase and
+// visibility are script-mutable and live in ComponentState::items; only the
+// layer and the per-phase frame sizes are fixed by the file.
+struct SpriteGeometry {
+    std::int32_t layer = 0;
+    std::vector<SpriteFrame> frames;   // indexed by phase
+};
+
 struct ComponentState {
     std::string displayName;               // e.g. "Sprite_Holder"
     HolderKind kind = HolderKind::Unknown;
     std::map<int, std::map<std::string, Value>> items;  // per-index item state
     std::map<std::string, Value> props;                 // holder-wide state
     std::vector<HotSpot> hotspots;         // HotSpot_Holder geometry (for hit tests)
+    std::vector<SpriteGeometry> sprites;   // Sprite_Holder geometry, by spriteID
 };
 
 // One host call made while executing script (builtin or component method).
@@ -106,13 +115,19 @@ private:
     void parse(BinaryReader& reader);
     ComponentState* resolve(const std::string& componentPath);
 
-    // Which HotSpot_Holder instance (by display name) and which hotspot id, if
-    // any, the point hits. `index` carries the record's stored id (+0x18).
-    struct HotSpotHit {
+    // The item a point lands on, across every clickable holder kind. `index` is
+    // whatever the engine hands the script for that kind: a HotSpot_Holder's
+    // stored id (record+0x18), or a Sprite_Holder's instance index.
+    struct Hit {
         std::string component;
-        int index = -1;   // hotspot id, or -1 for no hit
+        HolderKind kind = HolderKind::Unknown;
+        int index = -1;   // -1 for no hit
     };
-    HotSpotHit findHotSpotHit(int x, int y) const;
+    Hit findHit(int x, int y) const;
+
+    // Fire `event` on the hit component with the item's id, if the page defines
+    // the handler. No-op when nothing was hit.
+    void fireHitEvent(const Hit& hit, const char* event);
 
     std::string script_;
     std::vector<ComponentState> components_;
@@ -127,10 +142,9 @@ private:
     bool exited_ = false;
     std::uint32_t randomState_ = 0x12345678u;
 
-    // Last hovered HotSpot_Holder item, for MouseMoveIn/MouseMoveOut edge
-    // detection across successive mouseMove() calls.
-    int hoverHotSpotIndex_ = -1;
-    std::string hoverHotSpotComponent_;
+    // Last hovered item, for MouseMoveIn/MouseMoveOut edge detection across
+    // successive mouseMove() calls.
+    Hit hover_;
 };
 
 } // namespace graphboard::runtime

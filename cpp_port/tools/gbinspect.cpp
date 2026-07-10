@@ -132,10 +132,16 @@ json wrapperToJson(const ComponentWrapper& wrapper) {
 json spriteStateToJson(const graphboard::SpriteHolderState& state) {
     json definitions = json::array();
     for (const auto& definition : state.definitions) {
+        json frames = json::array();
+        for (const auto& frame : definition.frames) {
+            frames.push_back({{"width", frame.width}, {"height", frame.height}});
+        }
         definitions.push_back({
             {"name", t(definition.name)},
+            {"phaseCount", definition.phaseCount},
             {"width", definition.width},
             {"height", definition.height},
+            {"frames", frames},
             {"blobByteCount", definition.blobByteCount},
             {"blobOffset", definition.blobOffset},
         });
@@ -147,6 +153,9 @@ json spriteStateToJson(const graphboard::SpriteHolderState& state) {
             {"field04", instance.field04},
             {"posX", instance.posX},
             {"posY", instance.posY},
+            {"layer", instance.layer},
+            {"phase", instance.phase},
+            {"visible", instance.visible},
         });
     }
     return {

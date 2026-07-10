@@ -105,12 +105,30 @@ std::vector<std::uint8_t> buildSyntheticBdf(const std::string& script) {
         std::vector<std::uint8_t> blob(0x90, 0);
         const std::string n = "spr";
         for (std::size_t i = 0; i < n.size(); ++i) blob[0x04 + i] = static_cast<std::uint8_t>(n[i]);
-        blob[0x80] = 32;             // width
-        blob[0x84] = 16;             // height
+        blob[0x00] = 1;              // phaseCount -> one frame record at +0x6c
+        blob[0x80] = 32;             // frames[0].width  (== blob+0x6c+0x14)
+        blob[0x84] = 16;             // frames[0].height (== blob+0x6c+0x18)
         b.insert(b.end(), blob.begin(), blob.end());
     }
     {
-        std::vector<std::uint8_t> rec(0x8c, 0);  // instance: def index 0 at +0x00
+        // Instance: definition 0, at (400,400), layer 3, phase 0, visible.
+        // Layer 3 is above the hotspots (layer 1), so the sprite wins any
+        // overlap -- exercised by testCrossKindLayerPrecedence below. Its
+        // starting position is clear of both hotspot rects.
+        std::vector<std::uint8_t> rec(0x8c, 0);
+        auto put = [&rec](std::size_t off, std::int32_t v) {
+            const auto u = static_cast<std::uint32_t>(v);
+            rec[off] = static_cast<std::uint8_t>(u);
+            rec[off + 1] = static_cast<std::uint8_t>(u >> 8);
+            rec[off + 2] = static_cast<std::uint8_t>(u >> 16);
+            rec[off + 3] = static_cast<std::uint8_t>(u >> 24);
+        };
+        put(0x00, 0);    // definition index
+        put(0x08, 400);  // posX
+        put(0x0c, 400);  // posY
+        put(0x18, 3);    // layer
+        put(0x5c, 0);    // phase
+        put(0x88, 1);    // visible
         b.insert(b.end(), rec.begin(), rec.end());
     }
 
@@ -251,10 +269,105 @@ void testHotSpotCallbacks() {
     assert(item(sprite, 0, "phase").toInt() == 207);
 }
 
+const char* kSpriteCallbackScript = R"S(
+void OnOpenPage() {}
+
+void Sprite_Holder.MouseClickOnDown(int spriteID)
+{
+   Sprite_Holder.ChangePhase(0, spriteID + 50);
+}
+
+void Sprite_Holder.MouseMoveIn(int spriteID)
+{
+   Sprite_Holder.ChangePhase(0, spriteID + 60);
+}
+
+void Sprite_Holder.MouseMoveOut(int spriteID)
+{
+   Sprite_Holder.ChangePhase(0, spriteID + 70);
+}
+)S";
+
+// Sprites are addressed by instance index, hit-tested against the current
+// phase's frame rect at their live position, and (unlike hotspots) have no
+// right-click event.
+void testSpriteCallbacks() {
+    const auto bytes = buildSyntheticBdf(kSpriteCallbackScript);
+    BinaryReader reader(bytes);
+    auto page = Page::loadFromReader(reader, "synthetic-sprite");
+    const auto* sprite = page->component("Sprite_Holder");
+
+    // Seeded straight from the instance record: (400,400), visible, phase 0.
+    assert(item(sprite, 0, "x").toInt() == 400);
+    assert(item(sprite, 0, "visible").toInt() == 1);
+
+    // The sprite's rect is its 32x16 frame at (400,400) -> (432,416) inclusive.
+    page->lButtonDown(410, 405);
+    assert(item(sprite, 0, "phase").toInt() == 50);   // MouseClickOnDown(0)
+
+    // Just outside the frame: nothing fires, phase unchanged.
+    page->lButtonDown(433, 405);
+    assert(item(sprite, 0, "phase").toInt() == 50);
+
+    // Sprite_Holder declares no right-click event -> a right click over it
+    // fires nothing (the page-level OnRButtonDown is undefined here too).
+    page->rButtonDown(410, 405);
+    assert(item(sprite, 0, "phase").toInt() == 50);
+
+    // Hover in, then out to empty space.
+    page->mouseMove(410, 405);
+    assert(item(sprite, 0, "phase").toInt() == 60);   // MouseMoveIn(0)
+    page->mouseMove(410, 405);
+    assert(item(sprite, 0, "phase").toInt() == 60);   // no re-fire
+    page->mouseMove(150, 150);
+    assert(item(sprite, 0, "phase").toInt() == 70);   // MouseMoveOut(0)
+}
+
+const char* kPrecedenceScript = R"S(
+void OnOpenPage()
+{
+   Sprite_Holder.MoveTo(0, 50, 50);
+}
+
+void Sprite_Holder.MouseClickOnDown(int spriteID)
+{
+   Sprite_Holder.ChangePhase(0, 50);
+}
+
+void HotSpot_Holder.LeftButtonClickOn(int rectID)
+{
+   Sprite_Holder.ChangePhase(0, 99);
+}
+)S";
+
+// Cross-kind z-order: the board dispatches the topmost layer first, so a sprite
+// on layer 3 beats a hotspot on layer 1 wherever they overlap -- and the
+// hotspot still wins where the sprite's frame does not reach.
+void testCrossKindLayerPrecedence() {
+    const auto bytes = buildSyntheticBdf(kPrecedenceScript);
+    BinaryReader reader(bytes);
+    auto page = Page::loadFromReader(reader, "synthetic-precedence");
+    page->open();   // moves the sprite to (50,50) -> frame rect (50,50)-(82,66)
+
+    const auto* sprite = page->component("Sprite_Holder");
+
+    // (60,60) is inside both the sprite frame and hotspot id 5's (0,0)-(100,100).
+    // The sprite's layer 3 outranks the hotspot's layer 1.
+    page->lButtonDown(60, 60);
+    assert(item(sprite, 0, "phase").toInt() == 50);
+
+    // (90,90) is inside the hotspot but past the sprite's 32x16 frame, so the
+    // hotspot wins by default rather than by layer.
+    page->lButtonDown(90, 90);
+    assert(item(sprite, 0, "phase").toInt() == 99);
+}
+
 } // namespace
 
 int main() {
     testDriveSyntheticPage();
     testHotSpotCallbacks();
+    testSpriteCallbacks();
+    testCrossKindLayerPrecedence();
     return 0;
 }
