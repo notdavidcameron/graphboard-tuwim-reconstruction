@@ -13,6 +13,10 @@
 #include <filesystem>
 #include <iostream>
 #include <set>
+#include <sstream>
+#include <stdexcept>
+#include <string>
+#include <utility>
 #include <vector>
 
 #ifdef _WIN32
@@ -634,19 +638,12 @@ json valueToJson(const graphboard::runtime::Value& v) {
     return v.isInt() ? json(v.toInt()) : json(t(v.toString()));
 }
 
-// Drive a handler through the executable Page model (holders wired as stateful
-// components) and print the resulting page + component state as JSON.
-int drivePage(const std::filesystem::path& path, const std::string& handler) {
-    auto page = graphboard::runtime::Page::loadFromFile(path);
-    if (!page->hasHandler(handler)) {
-        std::cerr << "gbinspect: handler '" << handler << "' is not defined in this page\n";
-        return 1;
-    }
-    page->runEvent(handler, {});
-
+// Serialize a page's live component + page state (the shared body of --drive
+// and --interact output).
+json pageStateJson(graphboard::runtime::Page& page) {
     json components = json::array();
-    for (const auto& name : page->componentNames()) {
-        const auto* c = page->component(name);
+    for (const auto& name : page.componentNames()) {
+        const auto* c = page.component(name);
         json items = json::object();
         for (const auto& item : c->items) {
             json fields = json::object();
@@ -661,15 +658,74 @@ int drivePage(const std::filesystem::path& path, const std::string& handler) {
         }
         components.push_back({{"name", t(name)}, {"items", items}, {"props", props}});
     }
-
-    json out = {
-        {"handler", handler},
-        {"pendingPage", t(page->pendingPage())},
-        {"currentGroup", t(page->currentGroup())},
-        {"cursor", page->cursor()},
-        {"timerInterval", page->timerInterval()},
+    return {
+        {"pendingPage", t(page.pendingPage())},
+        {"currentGroup", t(page.currentGroup())},
+        {"cursor", page.cursor()},
+        {"timerInterval", page.timerInterval()},
         {"components", components},
     };
+}
+
+// Drive a handler through the executable Page model (holders wired as stateful
+// components) and print the resulting page + component state as JSON.
+int drivePage(const std::filesystem::path& path, const std::string& handler) {
+    auto page = graphboard::runtime::Page::loadFromFile(path);
+    if (!page->hasHandler(handler)) {
+        std::cerr << "gbinspect: handler '" << handler << "' is not defined in this page\n";
+        return 1;
+    }
+    page->runEvent(handler, {});
+
+    json out = pageStateJson(*page);
+    out["handler"] = handler;
+    std::cout << out.dump(2) << "\n";
+    return 0;
+}
+
+// One synthetic input event applied through the Page's raw-input entry points.
+struct InputEvent {
+    enum class Kind { Click, RClick, Move, Timer, Key } kind;
+    int a = 0;  // x, or key code for Key
+    int b = 0;  // y
+};
+
+// Open a real page (OnOpenPage) and replay a synthetic input sequence through
+// the runtime, exercising the component->script callback direction against real
+// game data. Prints the final page state plus the full host call log so fired
+// callbacks (e.g. HotSpot_Holder.LeftButtonClickOn) are visible.
+int interactPage(const std::filesystem::path& path, bool runOpen,
+                 const std::vector<InputEvent>& events) {
+    auto page = graphboard::runtime::Page::loadFromFile(path);
+    if (runOpen) {
+        page->open();
+    }
+    // Calls up to here are OnOpenPage's; anything after is attributable to the
+    // synthetic input events, so a consumer can slice calls[openCallCount:].
+    const std::size_t openCallCount = page->callLog().size();
+    for (const auto& ev : events) {
+        switch (ev.kind) {
+            case InputEvent::Kind::Click:  page->lButtonDown(ev.a, ev.b); break;
+            case InputEvent::Kind::RClick: page->rButtonDown(ev.a, ev.b); break;
+            case InputEvent::Kind::Move:   page->mouseMove(ev.a, ev.b); break;
+            case InputEvent::Kind::Timer:  page->timer(); break;
+            case InputEvent::Kind::Key:    page->keyDown(ev.a); break;
+        }
+    }
+
+    json calls = json::array();
+    for (const auto& rec : page->callLog()) {
+        json a = json::array();
+        for (const auto& v : rec.args) a.push_back(valueToJson(v));
+        json entry = {{"name", t(rec.name)}, {"args", a}};
+        if (!rec.builtin) entry["component"] = t(rec.component);
+        calls.push_back(entry);
+    }
+
+    json out = pageStateJson(*page);
+    out["opened"] = runOpen;
+    out["openCallCount"] = openCallCount;
+    out["calls"] = calls;
     std::cout << out.dump(2) << "\n";
     return 0;
 }
@@ -677,6 +733,25 @@ int drivePage(const std::filesystem::path& path, const std::string& handler) {
 bool isFlag(const std::filesystem::path& arg, const char* flag) {
     const auto s = arg.u8string();
     return std::string(s.begin(), s.end()) == flag;
+}
+
+std::string argToUtf8(const std::filesystem::path& arg) {
+    const auto s = arg.u8string();
+    return std::string(s.begin(), s.end());
+}
+
+// Parse "X,Y" (or "X Y") into a pair; throws on malformed input.
+std::pair<int, int> parseXY(const std::filesystem::path& arg) {
+    std::string s = argToUtf8(arg);
+    for (char& c : s) {
+        if (c == ',') c = ' ';
+    }
+    std::istringstream in(s);
+    int x = 0, y = 0;
+    if (!(in >> x >> y)) {
+        throw std::runtime_error("expected X,Y but got '" + s + "'");
+    }
+    return {x, y};
 }
 
 } // namespace
@@ -689,19 +764,47 @@ int main(int argc, char** argv) {
     std::filesystem::path file;
     std::string runTarget;
     std::string driveTarget;
-    for (std::size_t i = 1; i < args.size(); ++i) {
-        if (isFlag(args[i], "--run") && i + 1 < args.size()) {
-            const auto s = args[++i].u8string();
-            runTarget.assign(s.begin(), s.end());
-        } else if (isFlag(args[i], "--drive") && i + 1 < args.size()) {
-            const auto s = args[++i].u8string();
-            driveTarget.assign(s.begin(), s.end());
-        } else if (file.empty()) {
-            file = args[i];
+    std::vector<InputEvent> events;
+    bool interact = false;
+    bool runOpen = true;
+    try {
+        for (std::size_t i = 1; i < args.size(); ++i) {
+            if (isFlag(args[i], "--run") && i + 1 < args.size()) {
+                runTarget = argToUtf8(args[++i]);
+            } else if (isFlag(args[i], "--drive") && i + 1 < args.size()) {
+                driveTarget = argToUtf8(args[++i]);
+            } else if (isFlag(args[i], "--click") && i + 1 < args.size()) {
+                const auto [x, y] = parseXY(args[++i]);
+                events.push_back({InputEvent::Kind::Click, x, y});
+                interact = true;
+            } else if (isFlag(args[i], "--rclick") && i + 1 < args.size()) {
+                const auto [x, y] = parseXY(args[++i]);
+                events.push_back({InputEvent::Kind::RClick, x, y});
+                interact = true;
+            } else if (isFlag(args[i], "--move") && i + 1 < args.size()) {
+                const auto [x, y] = parseXY(args[++i]);
+                events.push_back({InputEvent::Kind::Move, x, y});
+                interact = true;
+            } else if (isFlag(args[i], "--timer")) {
+                events.push_back({InputEvent::Kind::Timer, 0, 0});
+                interact = true;
+            } else if (isFlag(args[i], "--key") && i + 1 < args.size()) {
+                events.push_back({InputEvent::Kind::Key, std::stoi(argToUtf8(args[++i])), 0});
+                interact = true;
+            } else if (isFlag(args[i], "--no-open")) {
+                runOpen = false;
+            } else if (file.empty()) {
+                file = args[i];
+            }
         }
+    } catch (const std::exception& ex) {
+        std::cerr << "gbinspect: bad argument: " << ex.what() << "\n";
+        return 2;
     }
     if (file.empty()) {
-        std::cerr << "usage: gbinspect <START.PRJ|PAGE.BDF> [--run <handler>] [--drive <handler>]\n";
+        std::cerr << "usage: gbinspect <START.PRJ|PAGE.BDF> [--run <handler>] [--drive <handler>]\n"
+                     "       gbinspect <PAGE.BDF> [--no-open] (--click X,Y | --rclick X,Y |\n"
+                     "                 --move X,Y | --timer | --key N)...\n";
         return 2;
     }
 
@@ -720,6 +823,13 @@ int main(int argc, char** argv) {
                 return 2;
             }
             return drivePage(file, driveTarget);
+        }
+        if (interact) {
+            if (ext != ".bdf") {
+                std::cerr << "gbinspect: input events require a .BDF page\n";
+                return 2;
+            }
+            return interactPage(file, runOpen, events);
         }
 
         auto reader = graphboard::BinaryReader::fromFile(file);

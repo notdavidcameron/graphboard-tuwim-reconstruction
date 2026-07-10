@@ -106,6 +106,13 @@ private:
     std::size_t pos_ = 0;
     Value returnValue_;
     int callDepth_ = 0;
+
+    // True only while OnOpenPage's own body runs: the page initializer, whose
+    // variable declarations the engine promotes to page-globals visible to
+    // every other handler (the scripts' own comment: "All variables definied on
+    // this function are global for this page"). Nested user-function calls reset
+    // it via runHandler so their locals stay local.
+    bool declareToGlobal_ = false;
 };
 
 } // namespace graphboard::runtime

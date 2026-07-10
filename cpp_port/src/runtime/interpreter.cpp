@@ -95,6 +95,12 @@ Value Interpreter::runHandler(const std::string& name, const std::vector<Value>&
         scopes_.back()[fn.params[i]] = i < args.size() ? args[i] : Value();
     }
 
+    // OnOpenPage is the page initializer: the variables it declares become
+    // page-globals (see declareToGlobal_). Save/restore around the run so a
+    // user function OnOpenPage calls still gets ordinary locals.
+    const bool savedDeclareToGlobal = declareToGlobal_;
+    declareToGlobal_ = (name == "OnOpenPage");
+
     const std::size_t savedPos = pos_;
     const Value savedReturn = returnValue_;
     returnValue_ = Value();
@@ -103,6 +109,7 @@ Value Interpreter::runHandler(const std::string& name, const std::vector<Value>&
 
     returnValue_ = savedReturn;
     pos_ = savedPos;
+    declareToGlobal_ = savedDeclareToGlobal;
     scopes_.pop_back();
     return result;
 }
@@ -141,7 +148,10 @@ void Interpreter::assign(const std::string& name, Value value) {
 }
 
 void Interpreter::declare(const std::string& name, Value value) {
-    scopes_.back()[name] = std::move(value);
+    // Inside OnOpenPage every declaration is a page-global (the engine's
+    // documented rule), so it survives for later event handlers/callbacks.
+    auto& scope = declareToGlobal_ ? scopes_.front() : scopes_.back();
+    scope[name] = std::move(value);
 }
 
 // ------------------------------------------------------------------ statements

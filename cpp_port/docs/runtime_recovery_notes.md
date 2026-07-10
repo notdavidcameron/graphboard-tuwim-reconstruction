@@ -165,17 +165,35 @@ recovered engine functions, not the JS approximation.
    `Sound_Holder.EndPlaySound`) need timer/duration simulation, not hit-testing,
    and real asset effects (blitting frames, playing WAVs) remain out of scope
    for a headless runtime.
-6. [DONE (headless drive)] Two drive modes: `gbinspect --run <handler>` prints
-   a raw call trace (recording Host); `gbinspect --drive <handler>` runs through
-   `Page` and prints live component + page state. Every scripted page drives
-   `OnOpenPage` with no hang (busiest ABECADLO = 89 calls: nested `while` loops
-   with `++` counters, a user function, `if/else`, `Random`, arrays as no-ops).
-   `gbinspect --drive` only runs a named handler with no args; it does not yet
-   expose `Page::lButtonDown`/`mouseMove` coordinates from the CLI, so the new
-   click/hover callback wiring above is exercised by the unit test, not by
-   `gbinspect` against real files. Next: extend the CLI to drive synthetic
-   clicks/timers on real pages, and run START.PRJ global-setup before opening
-   the first page.
+6. [DONE (headless drive + input)] Drive modes: `gbinspect --run <handler>`
+   prints a raw call trace (recording Host); `gbinspect --drive <handler>` runs
+   one handler through `Page` and prints live component + page state; and an
+   input mode opens the page (`OnOpenPage`) then replays a synthetic input
+   sequence — `--click X,Y`, `--rclick X,Y`, `--move X,Y`, `--timer`, `--key N`
+   (in the order given; `--no-open` skips the initial open) — printing the final
+   state plus the full host call log with an `openCallCount` marking where the
+   OnOpenPage calls end and the input-driven calls begin. Verified end-to-end on
+   real data: `gbinspect RZECZKA.BDF --click 481,280` opens the page, hits
+   HotSpot rect 3, runs `OnLButtonDown(481,280)`, then fires
+   `HotSpot_Holder.LeftButtonClickOn(3)`, whose body calls
+   `Transparent_Video_Holder.Play(3,0)` (TVH `playing` -> 3). Swept all 201
+   real BDFs with `--click --move --timer` under `timeout`: 0 hangs, 0 crashes
+   (only KOTEK2.BDF is refused — it is the documented misnamed NE executable).
+   Next: run the START.PRJ global-setup block before opening the first page, and
+   extend the component->script callback direction beyond HotSpot_Holder (needs
+   per-item click rects + a verified cross-kind z-order rule; see item 5).
+
+**Recovered engine semantics — OnOpenPage declares page-globals.** Every real
+page's `OnOpenPage` carries the comment *"All variables definied on this
+function are global for this page"*, and the guards in later handlers rely on
+it (e.g. RZECZKA's `LeftButtonClickOn` bails on `if(ready==0)`, where `ready`
+is declared `int ready=1;` in OnOpenPage). The interpreter models this: while
+OnOpenPage's own body runs, `declare` targets the global scope
+(`Interpreter::declareToGlobal_`); every other handler declares locals, and a
+user function called from OnOpenPage still gets ordinary locals (save/restore
+in `runHandler`). Without this the callback direction is untestable on real
+pages — the `ready`/`view`/`textMode` guards would all read 0. Covered by
+`tests/runtime_interpreter.cpp` (`testOnOpenPageGlobals`).
 
 **IMPORTANT (workflow):** always run `--run` under `timeout` and never in the
 background — a script bug that stalls a loop counter makes the recording Host

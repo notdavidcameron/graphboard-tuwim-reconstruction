@@ -206,6 +206,51 @@ void OnOpenPage()
            "Group.Sprite_Holder.ChangePhase(2,0) Debug(4) Debug(4) Debug(4) ");
 }
 
+// Recovered engine rule (the scripts' own comment): every variable declared in
+// OnOpenPage is a page-global visible to later handlers/callbacks. A variable
+// declared in another handler stays local, and a user function called from
+// OnOpenPage still gets ordinary locals (the promotion must not leak into it).
+void testOnOpenPageGlobals() {
+    const char* script = R"S(
+void init(int seed)
+{
+   int scratch=seed+1;    // must NOT become a global despite being reached
+   Debug(scratch);        // from inside OnOpenPage
+}
+
+void OnOpenPage()
+{
+   int ready=1;           // page-global per the engine
+   int guarded=0;
+   init(41);
+}
+
+void OnLButtonDown(int x,int y)
+{
+   int localOnly=7;       // stays local to this handler
+   if(ready==1)   Sound_Holder.PlayDSound(guarded);
+}
+)S";
+
+    RecordingHost host;
+    Interpreter interp(script, host);
+
+    interp.runHandler("OnOpenPage", {});
+    // OnOpenPage's declarations were promoted to page-globals...
+    assert(interp.hasGlobal("ready"));
+    assert(interp.getGlobal("ready").toInt() == 1);
+    assert(interp.hasGlobal("guarded"));
+    // ...but the user function's local did not leak into globals.
+    assert(!interp.hasGlobal("scratch"));
+    assert(host.trace() == "Debug(42) ");
+
+    // A later handler sees the promoted globals; its own decl stays local.
+    host.calls.clear();
+    interp.runHandler("OnLButtonDown", {Value::integer(0), Value::integer(0)});
+    assert(host.trace() == "Sound_Holder.PlayDSound(0) ");
+    assert(!interp.hasGlobal("localOnly"));
+}
+
 } // namespace
 
 int main() {
@@ -214,5 +259,6 @@ int main() {
     testClickLoadsMenu();
     testControlFlowAndUserFunctions();
     testIncrementLoops();
+    testOnOpenPageGlobals();
     return 0;
 }

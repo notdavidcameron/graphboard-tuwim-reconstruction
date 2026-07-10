@@ -75,6 +75,14 @@ Inspect files:
 .\cpp_port\build\gbinspect.exe "C:\path\to\MURZYNEK.BDF"
 ```
 
+Drive a page headless (opens `OnOpenPage`, then replays synthetic input and
+prints the resulting state + host call log). Input events apply in order:
+
+```powershell
+.\cpp_port\build\gbinspect.exe "C:\path\to\RZECZKA.BDF" --click 481,280
+.\cpp_port\build\gbinspect.exe "C:\path\to\RZECZKA.BDF" --move 100,100 --timer --key 27
+```
+
 ## Porting Policy
 
 - Prefer clear types and checked parsing over raw pointer arithmetic.
