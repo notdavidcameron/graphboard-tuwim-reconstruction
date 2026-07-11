@@ -53,7 +53,8 @@
             "width": 640,
             "height": 480
           },
-          "geometry_confidence": "serialized_entry"
+          "geometry_confidence": "serialized_entry",
+          "initially_visible": false
         },
         {
           "kind": "bitmap_holder_bmp",
@@ -70,7 +71,8 @@
             "width": 285,
             "height": 280
           },
-          "geometry_confidence": "serialized_entry"
+          "geometry_confidence": "serialized_entry",
+          "initially_visible": false
         }
       ],
       "bitmap_holder": {
@@ -88,6 +90,7 @@
             "height": 480,
             "right": 640,
             "bottom": 480,
+            "visible": false,
             "rect": {
               "x": 0,
               "y": 0,
@@ -106,6 +109,7 @@
             "height": 280,
             "right": 640,
             "bottom": 280,
+            "visible": false,
             "rect": {
               "x": 355,
               "y": 0,
@@ -576,6 +580,7 @@
             "x": 218,
             "y": 226,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 448022
@@ -587,6 +592,7 @@
             "x": 244,
             "y": 226,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 448162
@@ -598,6 +604,7 @@
             "x": 334,
             "y": 229,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 448302
@@ -609,6 +616,7 @@
             "x": 353,
             "y": 229,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 448442
@@ -620,6 +628,7 @@
             "x": 372,
             "y": 229,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 448582
@@ -631,6 +640,7 @@
             "x": 390,
             "y": 229,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 448722
@@ -642,6 +652,7 @@
             "x": 409,
             "y": 229,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 448862
@@ -653,6 +664,7 @@
             "x": 323,
             "y": 299,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 449002
@@ -696,7 +708,8 @@
         "width": 640,
         "height": 480
       },
-      "geometry_confidence": "serialized_entry"
+      "geometry_confidence": "serialized_entry",
+      "initially_visible": false
     },
     {
       "kind": "bitmap_holder_bmp",
@@ -713,7 +726,8 @@
         "width": 285,
         "height": 280
       },
-      "geometry_confidence": "serialized_entry"
+      "geometry_confidence": "serialized_entry",
+      "initially_visible": false
     },
     {
       "kind": "sprite_holder_png",

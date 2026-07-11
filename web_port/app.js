@@ -16,6 +16,18 @@ function cacheBustUrl(url) {
 
 window.GraphBoardCacheBustUrl = cacheBustUrl;
 
+function holderZIndex(namespace, logicalZ, componentOrder = 0, itemOrder = 0) {
+  const layer = Number(logicalZ) || 0;
+  const component = Math.max(0, Math.min(999, Number(componentOrder) || 0));
+  const item = Math.max(0, Math.min(99, Number(itemOrder) || 0));
+  // The board walks logical layers top-down. On a tie page components precede
+  // group components, earlier components win, and later holder records win.
+  const namespaceTie = namespace === "Group" ? 20000 : 60000;
+  return 10000000 + layer * 100000 + namespaceTie + (999 - component) * 100 + item;
+}
+
+window.GraphBoardZIndex = holderZIndex;
+
 const els = {
   summary: document.getElementById("summary"),
   select: document.getElementById("sceneSelect"),
@@ -147,8 +159,11 @@ function bindRuntimeEvents(element, component, runtimeId, namespace = component.
       if (component.type === "HotSpot_Holder") runtime.dispatchComponentEvent(component.type, "LeftButtonClickOn", runtimeId, [], namespace);
       else if (["Sprite_Holder", "Transparent_Video_Holder", "MultiBitmap", "Bitmap_Holder"].includes(component.type)) {
         const point = stagePointFromEvent(event);
-        const extra = component.type === "MultiBitmap" ? [point.x, point.y, Number(element.style.zIndex) || 0] : [];
+        const extra = component.type === "MultiBitmap" ? [point.x, point.y, Number(element.dataset.logicalZ) || 0] : [];
         runtime.dispatchComponentEvent(component.type, "MouseClickOnDown", runtimeId, extra, namespace);
+        if (["Sprite_Holder", "Bitmap_Holder"].includes(component.type)) {
+          runtime.beginPointerInteraction(element, component.type, runtimeId, namespace, point);
+        }
       }
     });
   });
@@ -161,7 +176,7 @@ function bindRuntimeEvents(element, component, runtimeId, namespace = component.
         if (runtime.puzzle.drops >= 3) runtime.executeHandler("Puzzle.GameOver", [runtimeId]);
       }
       if (component.type === "HotSpot_Holder") runtime.dispatchComponentEvent(component.type, "LeftButtonClickOnUp", runtimeId, [], namespace);
-      else if (["Sprite_Holder", "Transparent_Video_Holder", "MultiBitmap", "Bitmap_Holder"].includes(component.type)) {
+      else if (["Transparent_Video_Holder", "MultiBitmap"].includes(component.type)) {
         runtime.dispatchComponentEvent(component.type, "MouseClickOnUp", runtimeId, [], namespace);
       }
     });
@@ -210,7 +225,7 @@ function renderStage(scene) {
   for (const component of components) {
     const assets = component.assets || [];
     const hasUnknownGeometry = component.geometryConfidence === "unknown";
-    for (const asset of assets) {
+    for (const [assetIndex, asset] of assets.entries()) {
       if (!asset.url) continue;
       const rect = asset.rect || component.rect || { x: 0, y: 0, width: 1, height: 1 };
       const layerZ = Number.isFinite(Number(asset.z)) ? Number(asset.z) : Number(component.z ?? 0);
@@ -234,8 +249,11 @@ function renderStage(scene) {
       img.dataset.assetId = String(asset.id ?? "");
       img.dataset.runtimeId = String(runtimeIdFor(component, asset));
       if (component.type === "Sprite_Holder") img.dataset.phase = String(asset.initialPhase || 0);
+      if (component.type === "Sprite_Holder") img.dataset.draggable = asset.draggable ? "1" : "0";
       img.dataset.runtimeKey = `Page:${component.type}:${asset.id ?? ""}`;
       img.dataset.runtimeLookupKey = `Page:${component.type}:${runtimeIdFor(component, asset)}`;
+      img.dataset.componentOrder = String(component.index ?? 0);
+      img.dataset.itemOrder = String(assetIndex);
       if (
         component.type === "Sprite_Holder"
         && asset.kind === "sprite_holder_png"
@@ -248,7 +266,7 @@ function renderStage(scene) {
       img.style.top = `${rect.y}px`;
       img.style.width = `${asset.width || rect.width}px`;
       img.style.height = `${asset.height || rect.height}px`;
-      img.style.zIndex = String(1000 + layerZ * 1000 + assetOrder);
+      img.style.zIndex = String(holderZIndex("Page", layerZ, component.index, assetIndex));
       img.dataset.logicalZ = String(layerZ);
       img.dataset.baseZIndex = img.style.zIndex;
       const isPrimary = component.primaryAssetUrl === asset.url;
@@ -264,24 +282,27 @@ function renderStage(scene) {
         box.style.top = `${rect.y}px`;
         box.style.width = `${Math.max(rect.width, 18)}px`;
         box.style.height = `${Math.max(rect.height, 14)}px`;
-        box.style.zIndex = String(2000 + layerZ * 1000 + assetOrder);
+        box.style.zIndex = String(2147480000 + assetOrder);
         box.textContent = `${component.index}:${asset.id ?? ""}`;
         els.stage.appendChild(box);
       }
     }
 
     const hitboxes = component.hitboxes || [];
-    for (const hotspot of hitboxes) {
+    for (const [hotspotIndex, hotspot] of hitboxes.entries()) {
       const rect = hotspot.rect || { x: 0, y: 0, width: 1, height: 1 };
       const hitbox = document.createElement("button");
       hitbox.type = "button";
       hitbox.className = "hitbox";
       hitbox.dataset.runtimeNamespace = "Page";
+      hitbox.dataset.componentOrder = String(component.index ?? 0);
+      hitbox.dataset.itemOrder = String(hotspotIndex);
+      hitbox.dataset.logicalZ = String(Number(hotspot.layer ?? component.z ?? 0));
       hitbox.style.left = `${rect.x}px`;
       hitbox.style.top = `${rect.y}px`;
       hitbox.style.width = `${Math.max(rect.width, 8)}px`;
       hitbox.style.height = `${Math.max(rect.height, 8)}px`;
-      hitbox.style.zIndex = String(900000 + Number(hotspot.id || 0));
+      hitbox.style.zIndex = String(holderZIndex("Page", hotspot.layer ?? component.z, component.index, hotspotIndex));
       hitbox.dataset.baseZIndex = hitbox.style.zIndex;
       hitbox.title = `${component.type} ${hotspot.id}`;
       bindRuntimeEvents(hitbox, component, Number(hotspot.id || 0), "Page");
@@ -300,11 +321,14 @@ function renderStage(scene) {
       hitbox.type = "button";
       hitbox.className = "hitbox";
       hitbox.dataset.runtimeNamespace = "Page";
+      hitbox.dataset.componentOrder = String(component.index ?? 0);
+      hitbox.dataset.itemOrder = "0";
+      hitbox.dataset.logicalZ = String(Number(component.z ?? 0));
       hitbox.style.left = `${rect.x}px`;
       hitbox.style.top = `${rect.y}px`;
       hitbox.style.width = `${Math.max(rect.width, 8)}px`;
       hitbox.style.height = `${Math.max(rect.height, 8)}px`;
-      hitbox.style.zIndex = String(component.type === "HotSpot_Holder" ? 900 + (component.z ?? 0) : 1 + (component.z ?? 0));
+      hitbox.style.zIndex = String(holderZIndex("Page", component.z, component.index, 0));
       hitbox.dataset.baseZIndex = hitbox.style.zIndex;
       const runtimeId = runtimeIdFor(component);
       hitbox.title = `${component.type} ${runtimeId}`;
@@ -320,7 +344,7 @@ function renderStage(scene) {
       box.style.top = `${rect.y}px`;
       box.style.width = `${Math.max(rect.width, 24)}px`;
       box.style.height = `${Math.max(rect.height, 18)}px`;
-      box.style.zIndex = String(1000 + (component.z ?? 0));
+      box.style.zIndex = String(2147470000 + (component.index ?? 0));
       box.textContent = `${component.index}: ${component.type} (${component.geometryConfidence})`;
       els.stage.appendChild(box);
     }
@@ -429,20 +453,23 @@ async function boot() {
   els.stage.addEventListener("mousedown", (event) => {
     if (event.button !== 0) return;
     const point = stagePointFromEvent(event);
-    runtime.executeHandler("OnLButtonDown", [point.x, point.y]);
+    runtime.executeHandlerIfPresent("OnLButtonDown", [point.x, point.y]);
   }, true);
   els.stage.addEventListener("mouseup", (event) => {
     if (event.button !== 0) return;
     const point = stagePointFromEvent(event);
-    runtime.executeHandler("OnLButtonUp", [point.x, point.y]);
+    runtime.executeHandlerIfPresent("OnLButtonUp", [point.x, point.y]);
+    runtime.endPointerInteraction(point);
   }, true);
   els.stage.addEventListener("contextmenu", (event) => {
     event.preventDefault();
     const point = stagePointFromEvent(event);
-    runtime.executeHandler("OnRButtonDown", [point.x, point.y]);
+    runtime.executeHandlerIfPresent("OnRButtonDown", [point.x, point.y]);
   }, true);
   els.stage.addEventListener("mousemove", (event) => {
-    runtime.handleStagePointer(stagePointFromEvent(event));
+    const point = stagePointFromEvent(event);
+    runtime.updatePointerInteraction(point);
+    runtime.handleStagePointer(point);
   });
   els.stage.addEventListener("mouseleave", () => runtime.handleStagePointer(null));
   for (const input of [els.debug, els.unknown, els.background]) {

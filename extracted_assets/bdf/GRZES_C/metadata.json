@@ -1144,6 +1144,7 @@
             "x": 40,
             "y": -420,
             "z": 2,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 473931
@@ -1155,6 +1156,7 @@
             "x": 37,
             "y": 16,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 474071
@@ -1166,6 +1168,7 @@
             "x": 351,
             "y": 86,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 474211
@@ -1177,6 +1180,7 @@
             "x": 58,
             "y": 278,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 474351
@@ -1188,6 +1192,7 @@
             "x": 139,
             "y": 92,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 474491
@@ -1199,6 +1204,7 @@
             "x": 492,
             "y": 44,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 474631
@@ -1210,6 +1216,7 @@
             "x": 71,
             "y": 170,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 474771
@@ -1221,6 +1228,7 @@
             "x": 350,
             "y": 200,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 474911
@@ -1232,6 +1240,7 @@
             "x": 269,
             "y": 222,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 475051
@@ -1243,6 +1252,7 @@
             "x": 210,
             "y": 48,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 475191
@@ -1254,6 +1264,7 @@
             "x": 522,
             "y": 272,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 475331
@@ -1265,6 +1276,7 @@
             "x": 37,
             "y": 16,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 0,
             "record_offset": 475471
@@ -1276,6 +1288,7 @@
             "x": 351,
             "y": 86,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 0,
             "record_offset": 475611
@@ -1287,6 +1300,7 @@
             "x": 58,
             "y": 278,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 0,
             "record_offset": 475751
@@ -1298,6 +1312,7 @@
             "x": 139,
             "y": 92,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 0,
             "record_offset": 475891
@@ -1309,6 +1324,7 @@
             "x": 492,
             "y": 44,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 0,
             "record_offset": 476031
@@ -1320,6 +1336,7 @@
             "x": 71,
             "y": 170,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 0,
             "record_offset": 476171
@@ -1331,6 +1348,7 @@
             "x": 350,
             "y": 200,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 0,
             "record_offset": 476311
@@ -1342,6 +1360,7 @@
             "x": 269,
             "y": 222,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 0,
             "record_offset": 476451
@@ -1353,6 +1372,7 @@
             "x": 210,
             "y": 48,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 0,
             "record_offset": 476591
@@ -1364,6 +1384,7 @@
             "x": 522,
             "y": 272,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 0,
             "record_offset": 476731
@@ -1394,7 +1415,8 @@
             "width": 640,
             "height": 480
           },
-          "geometry_confidence": "serialized_entry"
+          "geometry_confidence": "serialized_entry",
+          "initially_visible": false
         }
       ],
       "bitmap_holder": {
@@ -1412,6 +1434,7 @@
             "height": 480,
             "right": 640,
             "bottom": 480,
+            "visible": false,
             "rect": {
               "x": 0,
               "y": 0,
@@ -2020,7 +2043,8 @@
         "width": 640,
         "height": 480
       },
-      "geometry_confidence": "serialized_entry"
+      "geometry_confidence": "serialized_entry",
+      "initially_visible": false
     }
   ],
   "script": {

@@ -1304,6 +1304,7 @@
             "x": 257,
             "y": 226,
             "z": 2,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 10831204
@@ -1315,6 +1316,7 @@
             "x": 521,
             "y": 268,
             "z": 2,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 10831344
@@ -1345,7 +1347,8 @@
             "width": 452,
             "height": 359
           },
-          "geometry_confidence": "serialized_entry"
+          "geometry_confidence": "serialized_entry",
+          "initially_visible": false
         }
       ],
       "bitmap_holder": {
@@ -1363,6 +1366,7 @@
             "height": 359,
             "right": 596,
             "bottom": 388,
+            "visible": false,
             "rect": {
               "x": 144,
               "y": 29,
@@ -1936,7 +1940,8 @@
         "width": 452,
         "height": 359
       },
-      "geometry_confidence": "serialized_entry"
+      "geometry_confidence": "serialized_entry",
+      "initially_visible": false
     },
     {
       "kind": "WAVE",

@@ -592,6 +592,7 @@ def expand_sprite_instances(meta_component: dict[str, Any], definition_assets: l
         initial_phase = int(instance.get("phase") or 0)
         sprite["initialPhase"] = initial_phase if 0 <= initial_phase < phase_count else 0
         sprite["initiallyVisible"] = bool(instance.get("visible"))
+        sprite["draggable"] = bool(instance.get("drag_enabled"))
         if isinstance(instance.get("z"), int):
             sprite["z"] = instance["z"]
         expanded.append(sprite)

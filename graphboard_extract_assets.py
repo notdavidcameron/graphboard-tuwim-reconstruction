@@ -1035,6 +1035,7 @@ def extract_sprite_holder_images(
         x = read_i32(data, record_offset + 0x08)[0]
         y = read_i32(data, record_offset + 0x0C)[0]
         layer = read_i32(data, record_offset + 0x18)[0]
+        drag_enabled = read_u32(data, record_offset + 0x1C)[0] == 1
         phase = read_i32(data, record_offset + 0x5C)[0]
         visible = read_i32(data, record_offset + 0x88)[0]
         instances.append(
@@ -1045,6 +1046,7 @@ def extract_sprite_holder_images(
                 "x": x,
                 "y": y,
                 "z": layer,
+                "drag_enabled": drag_enabled,
                 "phase": phase,
                 "visible": visible,
                 "record_offset": record_offset,
@@ -1096,6 +1098,7 @@ def extract_bitmap_holder_images(
         bottom = read_i32(data, offset + 0x18)[0]
         width = right - left
         height = bottom - top
+        visible = read_u32(data, offset + 4)[0] != 0
         name = data[offset + 0x38 : offset + 0x44].split(b"\x00", 1)[0].decode("cp1250", "replace")
         # `offset` points at the u32 blob-size prefix. The verified click/blit
         # paths address pixels at blob+0x80; the following 0x10 bytes are the
@@ -1113,6 +1116,7 @@ def extract_bitmap_holder_images(
             "height": height,
             "right": right,
             "bottom": bottom,
+            "visible": visible,
             "rect": {"x": left, "y": top, "width": width, "height": height},
         }
 
@@ -1132,6 +1136,7 @@ def extract_bitmap_holder_images(
                 "name": name,
                 "rect": frame["rect"],
                 "geometry_confidence": "serialized_entry",
+                "initially_visible": visible,
             }
             frame["bmp_output"] = str(bmp_path)
             outputs.append(output)

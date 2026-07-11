@@ -2,6 +2,11 @@ function graphBoardCacheBustUrl(url) {
   return window.GraphBoardCacheBustUrl ? window.GraphBoardCacheBustUrl(url) : url;
 }
 
+function graphBoardZIndex(namespace, logicalZ, componentOrder = 0, itemOrder = 0) {
+  if (window.GraphBoardZIndex) return window.GraphBoardZIndex(namespace, logicalZ, componentOrder, itemOrder);
+  return 10000000 + (Number(logicalZ) || 0) * 100000 + (namespace === "Group" ? 20000 : 60000) + (999 - (Number(componentOrder) || 0)) * 100 + (Number(itemOrder) || 0);
+}
+
 class GraphBoardRuntime {
   constructor(stage, logTarget) {
     this.stage = stage;
@@ -27,6 +32,9 @@ class GraphBoardRuntime {
     this.puzzle = { active: false, drops: 0 };
     this.panorama = { active: false, enabled: true, type: "", id: 0, layer: null, dx: 0, dy: 0, source: "" };
     this.panoramaTimer = null;
+    this.dragModes = new Map();
+    this.disabledDragItems = new Set();
+    this.pointerInteraction = null;
     this.userInputDepth = 0;
     this.trustedCallbackDepth = 0;
     this.handlerStack = [];
@@ -50,6 +58,9 @@ class GraphBoardRuntime {
     this.recorder = { file: "", hasContent: false, recording: false, playing: false };
     this.puzzle = { active: false, drops: 0 };
     this.panorama = { active: false, enabled: true, type: "", id: 0, layer: null, dx: 0, dy: 0, source: "" };
+    this.dragModes.clear();
+    this.disabledDragItems.clear();
+    this.pointerInteraction = null;
     this.userInputDepth = 0;
     this.trustedCallbackDepth = 0;
     this.handlerStack = [];
@@ -232,7 +243,13 @@ class GraphBoardRuntime {
       this.runUserInput(() => {
         if (type === "Puzzle") this.executeHandler("Puzzle.MouseStartDrag");
         if (type === "HotSpot_Holder") this.dispatchComponentEvent(type, "LeftButtonClickOn", id, [], namespace);
-        else if (["Sprite_Holder", "Transparent_Video_Holder", "MultiBitmap", "Bitmap_Holder"].includes(type)) this.dispatchComponentEvent(type, "MouseClickOnDown", id, [], namespace);
+        else if (["Sprite_Holder", "Transparent_Video_Holder", "MultiBitmap", "Bitmap_Holder"].includes(type)) {
+          this.dispatchComponentEvent(type, "MouseClickOnDown", id, [], namespace);
+          if (["Sprite_Holder", "Bitmap_Holder"].includes(type)) {
+            const rect = this.stage.getBoundingClientRect();
+            this.beginPointerInteraction(element, type, id, namespace, { x: event.clientX - rect.left, y: event.clientY - rect.top });
+          }
+        }
       });
     });
     element.addEventListener("mouseup", (event) => {
@@ -244,7 +261,7 @@ class GraphBoardRuntime {
             if (this.puzzle.drops >= 3) this.executeHandler("Puzzle.GameOver", [id]);
           }
           if (type === "HotSpot_Holder") this.dispatchComponentEvent(type, "LeftButtonClickOnUp", id, [], namespace);
-          else if (["Sprite_Holder", "Transparent_Video_Holder", "MultiBitmap", "Bitmap_Holder"].includes(type)) this.dispatchComponentEvent(type, "MouseClickOnUp", id, [], namespace);
+          else if (["Transparent_Video_Holder", "MultiBitmap"].includes(type)) this.dispatchComponentEvent(type, "MouseClickOnUp", id, [], namespace);
         });
       }
     });
@@ -310,7 +327,10 @@ class GraphBoardRuntime {
     layer.style.top = `${defaultRect.y}px`;
     layer.style.width = `${Math.max(8, defaultRect.width)}px`;
     layer.style.height = `${Math.max(8, defaultRect.height)}px`;
-    layer.style.zIndex = String(namespace === "Group" && type === "Sprite_Holder" ? 820000 + id : namespace === "Group" ? 600000 + id : 300000 + id);
+    layer.dataset.logicalZ = layer.dataset.logicalZ || "0";
+    layer.dataset.componentOrder = layer.dataset.componentOrder || "0";
+    layer.dataset.itemOrder = layer.dataset.itemOrder || String(id);
+    layer.style.zIndex = String(graphBoardZIndex(namespace, 0, 0, id));
     layer.dataset.baseZIndex = layer.style.zIndex;
     if (type === "Text_Holder") layer.textContent = "";
     this.bindRuntimeEvents(layer, type, id, namespace);
@@ -354,7 +374,7 @@ class GraphBoardRuntime {
     layer.dataset.videoState = "playing";
     if (!layer.dataset.baseZIndex) layer.dataset.baseZIndex = layer.style.zIndex || "";
     const baseZ = parseInt(layer.dataset.baseZIndex || layer.style.zIndex || "0", 10) || 0;
-    const animationLift = layer.dataset.runtimeNamespace === "Group" ? 50000 : 500000;
+    const animationLift = 1000;
     layer.style.zIndex = String(baseZ + animationLift);
     layer.classList.add("runtime-playing");
     layer.classList.remove("runtime-hidden");
@@ -391,7 +411,7 @@ class GraphBoardRuntime {
     layer.style.transition = "left 180ms linear, top 180ms linear";
     if (Number.isFinite(Number(z))) {
       layer.dataset.logicalZ = String(Number(z));
-      layer.style.zIndex = String((namespace === "Group" ? 600000 : 100000) + Number(z));
+      layer.style.zIndex = String(graphBoardZIndex(namespace, Number(z), Number(layer.dataset.componentOrder), Number(layer.dataset.itemOrder)));
     }
     // Real holder instances retain their serialized/show-hide visibility when
     // moved. Only synthetic placeholders need their first GotoXY to reveal
@@ -435,7 +455,7 @@ class GraphBoardRuntime {
     const layer = this.findLayer(type, id, namespace, true);
     if (layer && Number.isFinite(Number(z))) {
       layer.dataset.logicalZ = String(Number(z));
-      layer.style.zIndex = String((namespace === "Group" ? 600000 : 100000) + Number(z));
+      layer.style.zIndex = String(graphBoardZIndex(namespace, Number(z), Number(layer.dataset.componentOrder), Number(layer.dataset.itemOrder)));
     }
   }
 
@@ -544,6 +564,89 @@ class GraphBoardRuntime {
     this.startPanoramaMotion(dx, dy, 2, "edge");
   }
 
+  dragModeKey(namespace, type) {
+    return `${namespace}:${this.normalizeType(type)}`;
+  }
+
+  setComponentDrag(type, enabled, namespace = "Page") {
+    this.dragModes.set(this.dragModeKey(namespace, type), Boolean(enabled));
+    if (!enabled && this.pointerInteraction?.namespace === namespace && this.pointerInteraction?.type === this.normalizeType(type)) {
+      this.pointerInteraction = null;
+    }
+    this.log(`${namespace}.${this.normalizeType(type)} drag ${enabled ? "enabled" : "disabled"}`);
+  }
+
+  disableDragItem(type, id, namespace = "Page") {
+    this.disabledDragItems.add(this.key(namespace, this.normalizeType(type), id));
+    if (this.pointerInteraction?.namespace === namespace && this.pointerInteraction?.type === this.normalizeType(type) && this.pointerInteraction?.id === Number(id)) {
+      this.pointerInteraction.draggable = false;
+    }
+    this.log(`${namespace}.${this.normalizeType(type)} drag item ${id} disabled`);
+  }
+
+  beginPointerInteraction(element, type, id, namespace, point) {
+    const cleanType = this.normalizeType(type);
+    if (!element || !point || !["Sprite_Holder", "Bitmap_Holder"].includes(cleanType)) return;
+    const componentEnabled = this.dragModes.get(this.dragModeKey(namespace, cleanType)) === true;
+    const itemEnabled = !this.disabledDragItems.has(this.key(namespace, cleanType, id));
+    const serializedEnabled = cleanType === "Bitmap_Holder" || element.dataset.draggable === "1";
+    this.pointerInteraction = {
+      element,
+      type: cleanType,
+      id: Number(id),
+      namespace,
+      draggable: componentEnabled && itemEnabled && serializedEnabled,
+      startX: Number(point.x) || 0,
+      startY: Number(point.y) || 0,
+      originLeft: parseInt(element.style.left || "0", 10) || 0,
+      originTop: parseInt(element.style.top || "0", 10) || 0,
+      moved: false,
+    };
+  }
+
+  updatePointerInteraction(point) {
+    const state = this.pointerInteraction;
+    if (!state?.draggable || !state.element?.isConnected || !point) return false;
+    const left = state.originLeft + (Number(point.x) - state.startX);
+    const top = state.originTop + (Number(point.y) - state.startY);
+    state.element.style.transition = "none";
+    state.element.style.left = `${Math.round(left)}px`;
+    state.element.style.top = `${Math.round(top)}px`;
+    state.moved = state.moved || Math.abs(left - state.originLeft) >= 1 || Math.abs(top - state.originTop) >= 1;
+    return true;
+  }
+
+  endPointerInteraction(point = null) {
+    const state = this.pointerInteraction;
+    if (!state) return false;
+    if (point) this.updatePointerInteraction(point);
+    this.pointerInteraction = null;
+    this.runUserInput(() => {
+      this.dispatchComponentEvent(state.type, "MouseClickOnUp", state.id, [], state.namespace);
+      if (state.draggable && state.moved && state.element?.isConnected) {
+        const left = parseInt(state.element.style.left || "0", 10) || 0;
+        const top = parseInt(state.element.style.top || "0", 10) || 0;
+        const width = state.element.offsetWidth || parseInt(state.element.style.width || "0", 10) || 0;
+        const height = state.element.offsetHeight || parseInt(state.element.style.height || "0", 10) || 0;
+        this.dispatchComponentEvent(state.type, "MouseDrop", state.id, [left, top, left + width, top + height], state.namespace);
+      }
+    });
+    return true;
+  }
+
+  pointInHotspot(id, x, y, namespace = "Page") {
+    const selector = `[data-runtime-layer="1"][data-runtime-namespace="${namespace}"][data-component-type="HotSpot_Holder"][data-runtime-id="${Number(id)}"]`;
+    const stageRect = this.stage.getBoundingClientRect();
+    for (const layer of this.stage.querySelectorAll(selector)) {
+      if (layer.classList.contains("runtime-disabled")) continue;
+      const rect = layer.getBoundingClientRect();
+      const left = rect.left - stageRect.left;
+      const top = rect.top - stageRect.top;
+      if (Number(x) >= left && Number(x) < left + rect.width && Number(y) >= top && Number(y) < top + rect.height) return 1;
+    }
+    return 0;
+  }
+
   playAudio(type, id, namespace = "Page") {
     const audio = this.findAudio(type, id, namespace);
     if (!audio) {
@@ -612,9 +715,7 @@ class GraphBoardRuntime {
       this.log(`${namespace}.HotSpot ${id} ignored (${eventName})`);
       return;
     }
-    const names = namespace === "Group"
-      ? [`Group.${cleanType}.${eventName}`, `${cleanType}.${eventName}`]
-      : [`${cleanType}.${eventName}`, `Group.${cleanType}.${eventName}`];
+    const names = [namespace === "Group" ? `Group.${cleanType}.${eventName}` : `${cleanType}.${eventName}`];
     for (const name of names) {
       if (this.extractFunctionBody(this.scene?.script?.rawText || "", name)) {
         this.executeHandler(name, [id, ...extra]);
@@ -636,8 +737,9 @@ class GraphBoardRuntime {
       return undefined;
     }
     this.log(`run ${name}(${args.join(",")})`);
-    for (const [key, index] of Object.entries({ rectID: 0, videoID: 0, spriteID: 0, soundID: 0, textID: 0, puzzleID: 0, bitmapID: 0, x: 1, y: 2 })) {
-      if (args[index] !== undefined) this.variables.set(key, args[index]);
+    const parameterNames = this.extractFunctionParameters(script, name);
+    for (let index = 0; index < parameterNames.length; index += 1) {
+      if (args[index] !== undefined) this.variables.set(parameterNames[index], args[index]);
     }
     this.callDepth += 1;
     this.handlerStack.push(name);
@@ -654,6 +756,22 @@ class GraphBoardRuntime {
       this.handlerStack.pop();
       this.callDepth -= 1;
     }
+  }
+
+  executeHandlerIfPresent(name, args = []) {
+    if (!this.extractFunctionBody(this.scene?.script?.rawText || "", name)) return undefined;
+    return this.executeHandler(name, args);
+  }
+
+  extractFunctionParameters(script, name) {
+    const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const re = new RegExp(`(?:^|\\n)\\s*(?:(?:void|bool|int|CString|float|double|char|long|short|UINT|DWORD|BOOL|VOID)\\s+)?${escaped}\\s*\\(([^)]*)\\)\\s*\\{`, "im");
+    const match = re.exec(script);
+    if (!match || !match[1].trim()) return [];
+    return this.splitTopLevel(match[1], ",").map((parameter, index) => {
+      const identifiers = String(parameter).match(/[A-Za-z_][A-Za-z0-9_]*/g) || [];
+      return identifiers[identifiers.length - 1] || `arg${index}`;
+    });
   }
 
   extractFunctionBody(script, name) {
@@ -1218,8 +1336,9 @@ class GraphBoardRuntime {
       return;
     }
     this.group = group;
-    for (const component of group.components || []) {
-      for (const asset of component.assets || []) {
+    for (const [groupComponentIndex, component] of (group.components || []).entries()) {
+      const componentOrder = Number(component.index ?? groupComponentIndex);
+      for (const [assetIndex, asset] of (component.assets || []).entries()) {
         this.indexAsset("Group", component, asset);
         if (!asset.url) continue;
         const img = document.createElement("img");
@@ -1233,12 +1352,16 @@ class GraphBoardRuntime {
         img.dataset.runtimeNamespace = "Group";
         img.dataset.assetId = String(asset.id ?? "");
         img.dataset.runtimeId = String(asset.id ?? 0);
+        img.dataset.componentOrder = String(componentOrder);
+        img.dataset.itemOrder = String(assetIndex);
+        if (component.type === "Sprite_Holder") img.dataset.draggable = asset.draggable ? "1" : "0";
         const rect = asset.rect || component.rect || { x: 0, y: 0, width: asset.width || 1, height: asset.height || 1 };
         img.style.left = `${rect.x}px`;
         img.style.top = `${rect.y}px`;
         img.style.width = `${asset.width || rect.width}px`;
         img.style.height = `${asset.height || rect.height}px`;
-        img.style.zIndex = String(600000 + Number(asset.z ?? component.z ?? 0));
+        img.dataset.logicalZ = String(Number(asset.z ?? component.z ?? 0));
+        img.style.zIndex = String(graphBoardZIndex("Group", asset.z ?? component.z, componentOrder, assetIndex));
         img.dataset.baseZIndex = img.style.zIndex;
         this.bindRuntimeEvents(img, component.type, Number(asset.id ?? 0), "Group");
         this.stage.appendChild(img);
@@ -1255,13 +1378,16 @@ class GraphBoardRuntime {
         audio.dataset.durationSeconds = String(asset.durationSeconds || "");
         this.indexAudio(audio);
       }
-      for (const hotspot of component.hitboxes || []) {
+      for (const [hotspotIndex, hotspot] of (component.hitboxes || []).entries()) {
         const button = document.createElement("button");
         button.type = "button";
         button.className = "hitbox group-layer";
         button.dataset.componentType = "HotSpot_Holder";
         button.dataset.runtimeNamespace = "Group";
         button.dataset.runtimeId = String(hotspot.id);
+        button.dataset.componentOrder = String(componentOrder);
+        button.dataset.itemOrder = String(hotspotIndex);
+        button.dataset.logicalZ = String(Number(hotspot.layer ?? component.z ?? 0));
         const rect = { ...(hotspot.rect || { x: 0, y: 0, width: 1, height: 1 }) };
         const stageWidth = parseInt(this.stage.style.width || "640", 10) || 640;
         const stageHeight = parseInt(this.stage.style.height || "480", 10) || 480;
@@ -1279,7 +1405,7 @@ class GraphBoardRuntime {
         button.style.top = `${rect.y}px`;
         button.style.width = `${Math.max(8, rect.width)}px`;
         button.style.height = `${Math.max(8, rect.height)}px`;
-        button.style.zIndex = String(700000 + Number(hotspot.id || 0));
+        button.style.zIndex = String(graphBoardZIndex("Group", hotspot.layer ?? component.z, componentOrder, hotspotIndex));
         button.dataset.baseZIndex = button.style.zIndex;
         button.title = `Group HotSpot ${hotspot.id}`;
         this.bindRuntimeEvents(button, "HotSpot_Holder", Number(hotspot.id), "Group");
@@ -1324,7 +1450,11 @@ class GraphBoardRuntime {
     layer.style.top = `${Number(args[2] ?? 0) || 0}px`;
     layer.style.width = `${Math.max(80, Number(args[3] ?? 580) || 580)}px`;
     layer.style.height = `${Math.max(80, Number(args[4] ?? 480) || 480)}px`;
-    layer.style.zIndex = "500000";
+    if (!layer.dataset.baseZIndex) {
+      layer.dataset.logicalZ = layer.dataset.logicalZ || "0";
+      layer.style.zIndex = String(graphBoardZIndex("Page", Number(layer.dataset.logicalZ), Number(layer.dataset.componentOrder), Number(layer.dataset.itemOrder)));
+      layer.dataset.baseZIndex = layer.style.zIndex;
+    }
     if (asset?.url) {
       layer.style.backgroundImage = `url("${graphBoardCacheBustUrl(asset.url)}")`;
       layer.style.backgroundSize = asset.kind === "puzzle_fallback_background" ? `${asset.width || 640}px ${asset.height || 480}px` : "cover";
@@ -1464,11 +1594,19 @@ class GraphBoardRuntime {
         this.setLayerVisible(local.split(".")[0], Number(args[0]), false, namespace);
         break;
       case "Bitmap_Holder.EnableDrag":
+        this.setComponentDrag("Bitmap_Holder", true, namespace);
+        break;
       case "Bitmap_Holder.DisableDrag":
+        this.setComponentDrag("Bitmap_Holder", false, namespace);
+        break;
       case "Sprite_Holder.CompEnableDrag":
+        this.setComponentDrag("Sprite_Holder", true, namespace);
+        break;
       case "Sprite_Holder.CompDisableDrag":
+        this.setComponentDrag("Sprite_Holder", false, namespace);
+        break;
       case "Sprite_Holder.DisableDragMode":
-        this.log(`${namespace}.${local}(${args.join(",")})`);
+        this.disableDragItem("Sprite_Holder", Number(args[0]), namespace);
         break;
       case "Sprite_Holder.ShowSprite":
         this.setLayerVisible("Sprite_Holder", Number(args[0]), true, namespace);
@@ -1483,7 +1621,7 @@ class GraphBoardRuntime {
         const layer = this.findLayer("Sprite_Holder", Number(args[0]), namespace, true);
         this.setRef(args[1], parseInt(layer.style.left || "0", 10) || 0);
         this.setRef(args[2], parseInt(layer.style.top || "0", 10) || 0);
-        this.setRef(args[3], parseInt(layer.style.zIndex || "0", 10) || 0);
+        this.setRef(args[3], Number(layer.dataset.logicalZ) || 0);
         break;
       }
       case "Sprite_Holder.EnableTimers":
@@ -1509,9 +1647,12 @@ class GraphBoardRuntime {
           namespace
         );
         break;
-      case "HotSpot_Holder.PointInHotSpot":
-        this.setRef(args[3], 1);
+      case "HotSpot_Holder.PointInHotSpot": {
+        const result = this.pointInHotspot(Number(args[0]), Number(args[1]), Number(args[2]), namespace);
+        this.setRef(args[3], result);
+        this.log(`${namespace}.HotSpot_Holder.PointInHotSpot(${Number(args[0])},${Number(args[1])},${Number(args[2])})=${result}`);
         break;
+      }
       case "Text_Holder.ShowText":
         this.setLayerVisible("Text_Holder", Number(args[0]), true, namespace);
         break;

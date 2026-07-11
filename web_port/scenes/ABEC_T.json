@@ -292,6 +292,7 @@
           "offset": 6535,
           "name": "1atlodło",
           "id": 0,
+          "initiallyVisible": true,
           "rect": {
             "x": 0,
             "y": 0,
@@ -299,7 +300,6 @@
             "height": 480
           },
           "geometryConfidence": "serialized_entry",
-          "initiallyVisible": true,
           "z": -1
         },
         {
@@ -314,6 +314,7 @@
           "offset": 313883,
           "name": "rys1o 02",
           "id": 1,
+          "initiallyVisible": false,
           "rect": {
             "x": 375,
             "y": 149,
@@ -334,6 +335,7 @@
           "offset": 402739,
           "name": "rys2o 02",
           "id": 2,
+          "initiallyVisible": false,
           "rect": {
             "x": 192,
             "y": 297,
@@ -404,6 +406,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 1
         },
         {
@@ -442,6 +445,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 1
         },
         {
@@ -480,6 +484,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 1
         },
         {
@@ -518,6 +523,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 1
         },
         {
@@ -556,6 +562,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 1
         },
         {
@@ -594,6 +601,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 1
         },
         {
@@ -632,6 +640,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 1
         }
       ],

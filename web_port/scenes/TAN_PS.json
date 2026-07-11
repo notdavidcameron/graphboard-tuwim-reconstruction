@@ -52,6 +52,7 @@
           "offset": 310625,
           "name": "smyczek 0",
           "id": 0,
+          "initiallyVisible": true,
           "rect": {
             "x": 209,
             "y": 197,
@@ -72,6 +73,7 @@
           "offset": 387997,
           "name": "smyczek 0",
           "id": 1,
+          "initiallyVisible": true,
           "rect": {
             "x": 482,
             "y": 124,
@@ -92,6 +94,7 @@
           "offset": 419373,
           "name": "smyczek 0",
           "id": 2,
+          "initiallyVisible": true,
           "rect": {
             "x": 483,
             "y": 124,
@@ -112,6 +115,7 @@
           "offset": 444113,
           "name": "smyczek 0",
           "id": 3,
+          "initiallyVisible": true,
           "rect": {
             "x": 483,
             "y": 146,
@@ -132,6 +136,7 @@
           "offset": 471937,
           "name": "smyczek 0",
           "id": 4,
+          "initiallyVisible": true,
           "rect": {
             "x": 483,
             "y": 147,
@@ -152,6 +157,7 @@
           "offset": 493545,
           "name": "smyczek 0",
           "id": 5,
+          "initiallyVisible": true,
           "rect": {
             "x": 483,
             "y": 173,
@@ -172,6 +178,7 @@
           "offset": 516929,
           "name": "smyczek 0",
           "id": 6,
+          "initiallyVisible": true,
           "rect": {
             "x": 479,
             "y": 173,
@@ -192,6 +199,7 @@
           "offset": 536669,
           "name": "smyczek 0",
           "id": 7,
+          "initiallyVisible": true,
           "rect": {
             "x": 481,
             "y": 197,
@@ -212,6 +220,7 @@
           "offset": 556501,
           "name": "gwizd 02",
           "id": 8,
+          "initiallyVisible": true,
           "rect": {
             "x": 352,
             "y": 198,
@@ -232,6 +241,7 @@
           "offset": 590377,
           "name": "okrzyk 02",
           "id": 9,
+          "initiallyVisible": false,
           "rect": {
             "x": 375,
             "y": 204,
@@ -1112,6 +1122,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 0
         },
         {
@@ -1195,6 +1206,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 0
         },
         {
@@ -1543,6 +1555,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 0
         }
       ],

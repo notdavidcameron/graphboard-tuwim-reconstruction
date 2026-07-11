@@ -136,7 +136,8 @@
             "width": 640,
             "height": 480
           },
-          "geometry_confidence": "serialized_entry"
+          "geometry_confidence": "serialized_entry",
+          "initially_visible": false
         }
       ],
       "bitmap_holder": {
@@ -154,6 +155,7 @@
             "height": 480,
             "right": 640,
             "bottom": 480,
+            "visible": false,
             "rect": {
               "x": 0,
               "y": 0,
@@ -228,7 +230,8 @@
         "width": 640,
         "height": 480
       },
-      "geometry_confidence": "serialized_entry"
+      "geometry_confidence": "serialized_entry",
+      "initially_visible": false
     }
   ],
   "script": {

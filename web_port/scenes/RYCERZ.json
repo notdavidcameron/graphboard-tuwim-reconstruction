@@ -52,6 +52,7 @@
           "offset": 2445,
           "name": "tloSrodek",
           "id": 0,
+          "initiallyVisible": false,
           "rect": {
             "x": 129,
             "y": 0,
@@ -72,6 +73,7 @@
           "offset": 188833,
           "name": "rycerzSro",
           "id": 1,
+          "initiallyVisible": false,
           "rect": {
             "x": 129,
             "y": 0,
@@ -92,6 +94,7 @@
           "offset": 373301,
           "name": "topor02",
           "id": 2,
+          "initiallyVisible": false,
           "rect": {
             "x": 24,
             "y": 80,
@@ -112,6 +115,7 @@
           "offset": 391449,
           "name": "chustka 0",
           "id": 3,
+          "initiallyVisible": false,
           "rect": {
             "x": 24,
             "y": 200,
@@ -132,6 +136,7 @@
           "offset": 407077,
           "name": "kielich 0",
           "id": 4,
+          "initiallyVisible": false,
           "rect": {
             "x": 24,
             "y": 324,
@@ -152,6 +157,7 @@
           "offset": 422945,
           "name": "chelm02",
           "id": 5,
+          "initiallyVisible": false,
           "rect": {
             "x": 516,
             "y": 75,
@@ -172,6 +178,7 @@
           "offset": 435193,
           "name": "chelm02",
           "id": 6,
+          "initiallyVisible": false,
           "rect": {
             "x": 516,
             "y": 198,
@@ -192,6 +199,7 @@
           "offset": 447141,
           "name": "chelm02",
           "id": 7,
+          "initiallyVisible": false,
           "rect": {
             "x": 516,
             "y": 317,
@@ -212,6 +220,7 @@
           "offset": 460989,
           "name": "punkt 01",
           "id": 8,
+          "initiallyVisible": false,
           "rect": {
             "x": 180,
             "y": 449,
@@ -232,6 +241,7 @@
           "offset": 461837,
           "name": "punkt 02",
           "id": 9,
+          "initiallyVisible": false,
           "rect": {
             "x": 226,
             "y": 449,
@@ -252,6 +262,7 @@
           "offset": 462685,
           "name": "punkt 03",
           "id": 10,
+          "initiallyVisible": false,
           "rect": {
             "x": 273,
             "y": 449,
@@ -272,6 +283,7 @@
           "offset": 463805,
           "name": "punkt 04",
           "id": 11,
+          "initiallyVisible": false,
           "rect": {
             "x": 332,
             "y": 449,
@@ -292,6 +304,7 @@
           "offset": 464709,
           "name": "punkt 05",
           "id": 12,
+          "initiallyVisible": false,
           "rect": {
             "x": 387,
             "y": 450,
@@ -312,6 +325,7 @@
           "offset": 465433,
           "name": "punkt 06",
           "id": 13,
+          "initiallyVisible": false,
           "rect": {
             "x": 437,
             "y": 449,
@@ -527,6 +541,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 1
         },
         {
@@ -680,6 +695,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 1
         },
         {
@@ -738,6 +754,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 1
         },
         {
@@ -841,6 +858,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 1
         },
         {
@@ -1024,6 +1042,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 1
         },
         {
@@ -1067,6 +1086,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": false,
+          "draggable": false,
           "z": 2
         },
         {
@@ -1105,6 +1125,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 8
         },
         {
@@ -1143,6 +1164,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 8
         },
         {
@@ -1181,6 +1203,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 8
         },
         {
@@ -1219,6 +1242,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 8
         }
       ],

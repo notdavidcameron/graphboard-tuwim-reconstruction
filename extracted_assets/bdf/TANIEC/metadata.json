@@ -556,7 +556,8 @@
             "width": 640,
             "height": 480
           },
-          "geometry_confidence": "serialized_entry"
+          "geometry_confidence": "serialized_entry",
+          "initially_visible": false
         },
         {
           "kind": "bitmap_holder_bmp",
@@ -573,7 +574,8 @@
             "width": 640,
             "height": 480
           },
-          "geometry_confidence": "serialized_entry"
+          "geometry_confidence": "serialized_entry",
+          "initially_visible": false
         }
       ],
       "bitmap_holder": {
@@ -591,6 +593,7 @@
             "height": 480,
             "right": 640,
             "bottom": 480,
+            "visible": false,
             "rect": {
               "x": 0,
               "y": 0,
@@ -609,6 +612,7 @@
             "height": 480,
             "right": 640,
             "bottom": 480,
+            "visible": false,
             "rect": {
               "x": 0,
               "y": 0,
@@ -939,6 +943,7 @@
             "x": 444,
             "y": 246,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 0,
             "record_offset": 4379857
@@ -950,6 +955,7 @@
             "x": 704,
             "y": 20,
             "z": 8,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 4379997
@@ -961,6 +967,7 @@
             "x": 704,
             "y": 108,
             "z": 8,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 4380137
@@ -1238,7 +1245,8 @@
         "width": 640,
         "height": 480
       },
-      "geometry_confidence": "serialized_entry"
+      "geometry_confidence": "serialized_entry",
+      "initially_visible": false
     },
     {
       "kind": "bitmap_holder_bmp",
@@ -1255,7 +1263,8 @@
         "width": 640,
         "height": 480
       },
-      "geometry_confidence": "serialized_entry"
+      "geometry_confidence": "serialized_entry",
+      "initially_visible": false
     },
     {
       "kind": "sprite_holder_png",

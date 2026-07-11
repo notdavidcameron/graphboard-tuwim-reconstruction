@@ -52,6 +52,7 @@
           "offset": 310625,
           "name": "bęben 02",
           "id": 0,
+          "initiallyVisible": true,
           "rect": {
             "x": 84,
             "y": 283,
@@ -72,6 +73,7 @@
           "offset": 330501,
           "name": "bęben 02",
           "id": 1,
+          "initiallyVisible": true,
           "rect": {
             "x": 149,
             "y": 321,
@@ -92,6 +94,7 @@
           "offset": 362889,
           "name": "bęben 02",
           "id": 2,
+          "initiallyVisible": true,
           "rect": {
             "x": 291,
             "y": 286,
@@ -112,6 +115,7 @@
           "offset": 392617,
           "name": "bębenek 0",
           "id": 3,
+          "initiallyVisible": true,
           "rect": {
             "x": 353,
             "y": 209,
@@ -132,6 +136,7 @@
           "offset": 398085,
           "name": "tamtam 02",
           "id": 4,
+          "initiallyVisible": true,
           "rect": {
             "x": 421,
             "y": 177,
@@ -152,6 +157,7 @@
           "offset": 411085,
           "name": "tamtam 02",
           "id": 5,
+          "initiallyVisible": true,
           "rect": {
             "x": 525,
             "y": 175,
@@ -172,6 +178,7 @@
           "offset": 423773,
           "name": "talerz 02",
           "id": 6,
+          "initiallyVisible": true,
           "rect": {
             "x": 416,
             "y": 32,
@@ -192,6 +199,7 @@
           "offset": 432209,
           "name": "bęben 01",
           "id": 7,
+          "initiallyVisible": true,
           "rect": {
             "x": 84,
             "y": 283,
@@ -212,6 +220,7 @@
           "offset": 452085,
           "name": "bęben 01",
           "id": 8,
+          "initiallyVisible": true,
           "rect": {
             "x": 149,
             "y": 321,
@@ -232,6 +241,7 @@
           "offset": 484473,
           "name": "bęben 01",
           "id": 9,
+          "initiallyVisible": true,
           "rect": {
             "x": 291,
             "y": 286,
@@ -694,6 +704,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 0
         },
         {
@@ -737,6 +748,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 1
         }
       ],

@@ -99,6 +99,7 @@
           "offset": 712679,
           "name": "chłop",
           "id": 0,
+          "initiallyVisible": true,
           "rect": {
             "x": 542,
             "y": 192,
@@ -119,6 +120,7 @@
           "offset": 729327,
           "name": "szczebel ",
           "id": 1,
+          "initiallyVisible": true,
           "rect": {
             "x": 394,
             "y": 238,
@@ -139,6 +141,7 @@
           "offset": 731875,
           "name": "szczebel ",
           "id": 2,
+          "initiallyVisible": true,
           "rect": {
             "x": 416,
             "y": 238,
@@ -159,6 +162,7 @@
           "offset": 734423,
           "name": "wóz",
           "id": 3,
+          "initiallyVisible": true,
           "rect": {
             "x": 326,
             "y": 233,
@@ -179,6 +183,7 @@
           "offset": 781655,
           "name": "K0",
           "id": 4,
+          "initiallyVisible": true,
           "rect": {
             "x": 97,
             "y": 269,
@@ -199,6 +204,7 @@
           "offset": 794723,
           "name": "k1",
           "id": 5,
+          "initiallyVisible": true,
           "rect": {
             "x": 203,
             "y": 127,
@@ -219,6 +225,7 @@
           "offset": 857687,
           "name": "k2",
           "id": 6,
+          "initiallyVisible": true,
           "rect": {
             "x": 204,
             "y": 418,
@@ -239,6 +246,7 @@
           "offset": 878915,
           "name": "mroz1",
           "id": 7,
+          "initiallyVisible": false,
           "rect": {
             "x": 0,
             "y": 208,
@@ -479,6 +487,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 3
         },
         {
@@ -687,6 +696,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 3
         },
         {
@@ -730,6 +740,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 2
         }
       ],

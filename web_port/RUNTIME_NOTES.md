@@ -87,7 +87,7 @@ with Ghidra; see "How the board routes raw input" in `component_interfaces.md`):
 - Every callback fires **only if** the page script defines that top-level
   handler.
 
-## Current web-port checkpoint (v48)
+## Current web-port checkpoint (v55)
 
 - The exporter now consumes the recovered SpriteHolder definition/instance
   split. It emits 919 placed instances across the corpus with their saved
@@ -106,6 +106,25 @@ with Ghidra; see "How the board routes raw input" in `component_interfaces.md`):
   asset layers.
 - Script handler indexing accepts GraphBoard's untyped functions while
   excluding nested control-flow blocks (`if`, `while`, `switch`, and friends).
+- Sprite instance `+0x1c` drag flags now drive press/move/release behavior.
+  Component-wide drag enable/disable and per-item `DisableDragMode` are tracked,
+  with `MouseClickOnUp` followed by the recovered five-argument `MouseDrop`.
+  BitmapHolder's component-wide drag mode uses the same release callback shape.
+- `HotSpot_Holder.PointInHotSpot` now performs the recovered bottom-exclusive
+  live-rectangle query, and `Sprite_Holder.GetPosition` returns logical depth
+  rather than a browser CSS stacking value.
+- DOM stacking now follows the recovered input order: highest logical layer,
+  page before group on a tie, earlier component on a tie, and later record
+  within one holder. The former fixed hotspot/group z-index lifts are gone.
+- Component callbacks no longer fall through between page and group namespaces;
+  a page sprite event can only invoke `Sprite_Holder.*`, while a group event can
+  only invoke `Group.Sprite_Holder.*`.
+- BitmapHolder `blob+0x00` is exported as the persisted draw flag. Across the
+  corpus 106 bitmap records start visible and 97 start hidden; scripts retain
+  control through `ShowBitmap`/`HideBitmap`.
+- Handler arguments are bound from their declared parameter names rather than
+  a fixed id/x/y alias table. Five-argument sprite/bitmap drops therefore expose
+  their real `left/top/right/bottom` values to subsequent script expressions.
 
 ## Remaining divergences in `runtime.js`
 
@@ -146,7 +165,7 @@ raw input"). Key points for `runtime.js`:
   with a per-pixel transparency test — a click on a transparent pixel misses
   (confirmed in-game: transparent backgrounds do nothing). Sprite pixels:
   `blob+0xb8 + frame[0x48]`. **Bitmap pixels are at `blob+0x80`, NOT `+0x90`** —
-  reading `+0x90` shears every row 16 bytes. The v48 asset extractor now uses
+  reading `+0x90` shears every row 16 bytes. The v55 asset extractor now uses
   the verified `+0x80` base (see `component_interfaces.md`).
 - **Sprite drag** (`instance+0x1c == 1` → draggable; CUDA butterflies yes, DYZIO
   food no): down fires `MouseClickOnDown`, move follows at the grab offset with

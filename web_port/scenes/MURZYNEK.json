@@ -406,6 +406,7 @@
           "offset": 1863193,
           "name": "tło",
           "id": 0,
+          "initiallyVisible": true,
           "rect": {
             "x": 0,
             "y": 0,
@@ -413,7 +414,6 @@
             "height": 480
           },
           "geometryConfidence": "serialized_entry",
-          "initiallyVisible": true,
           "z": -1
         },
         {
@@ -428,6 +428,7 @@
           "offset": 2170541,
           "name": "zabawa 03",
           "id": 1,
+          "initiallyVisible": true,
           "rect": {
             "x": 7,
             "y": 233,
@@ -448,6 +449,7 @@
           "offset": 2224497,
           "name": "bęben 02",
           "id": 2,
+          "initiallyVisible": true,
           "rect": {
             "x": 16,
             "y": 369,
@@ -468,6 +470,7 @@
           "offset": 2232845,
           "name": "bęben 02",
           "id": 3,
+          "initiallyVisible": true,
           "rect": {
             "x": 84,
             "y": 360,
@@ -488,6 +491,7 @@
           "offset": 2238673,
           "name": "bębenek 0",
           "id": 4,
+          "initiallyVisible": true,
           "rect": {
             "x": 10,
             "y": 285,
@@ -508,6 +512,7 @@
           "offset": 2241173,
           "name": "tamtam 02",
           "id": 5,
+          "initiallyVisible": false,
           "rect": {
             "x": 46,
             "y": 233,
@@ -528,6 +533,7 @@
           "offset": 2248449,
           "name": "tamtam 02",
           "id": 6,
+          "initiallyVisible": true,
           "rect": {
             "x": 36,
             "y": 305,
@@ -548,6 +554,7 @@
           "offset": 2257181,
           "name": "tamtam 02",
           "id": 7,
+          "initiallyVisible": true,
           "rect": {
             "x": 112,
             "y": 294,
@@ -568,6 +575,7 @@
           "offset": 2261813,
           "name": "start 02",
           "id": 8,
+          "initiallyVisible": false,
           "rect": {
             "x": 203,
             "y": 366,
@@ -633,6 +641,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 3
         },
         {
@@ -681,6 +690,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 2
         },
         {
@@ -734,6 +744,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": false,
+          "draggable": false,
           "z": 0
         },
         {
@@ -807,6 +818,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": false,
+          "draggable": false,
           "z": 0
         },
         {
@@ -855,6 +867,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 2
         }
       ],

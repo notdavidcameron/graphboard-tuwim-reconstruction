@@ -532,6 +532,7 @@
           "offset": 3400855,
           "name": "taniec dz",
           "id": 0,
+          "initiallyVisible": true,
           "rect": {
             "x": 0,
             "y": 0,
@@ -539,7 +540,6 @@
             "height": 480
           },
           "geometryConfidence": "serialized_entry",
-          "initiallyVisible": true,
           "z": -1
         },
         {
@@ -554,6 +554,7 @@
           "offset": 3708203,
           "name": "taniec no",
           "id": 1,
+          "initiallyVisible": false,
           "rect": {
             "x": 0,
             "y": 0,
@@ -699,6 +700,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": false,
+          "draggable": false,
           "z": 0
         },
         {
@@ -737,6 +739,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 8
         },
         {
@@ -775,6 +778,7 @@
           "geometryConfidence": "serialized_instance",
           "initialPhase": 0,
           "initiallyVisible": true,
+          "draggable": false,
           "z": 8
         }
       ],

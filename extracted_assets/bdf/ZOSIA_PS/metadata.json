@@ -44,7 +44,8 @@
             "width": 142,
             "height": 137
           },
-          "geometry_confidence": "serialized_entry"
+          "geometry_confidence": "serialized_entry",
+          "initially_visible": true
         },
         {
           "kind": "bitmap_holder_bmp",
@@ -61,7 +62,8 @@
             "width": 207,
             "height": 155
           },
-          "geometry_confidence": "serialized_entry"
+          "geometry_confidence": "serialized_entry",
+          "initially_visible": true
         },
         {
           "kind": "bitmap_holder_bmp",
@@ -78,7 +80,8 @@
             "width": 204,
             "height": 145
           },
-          "geometry_confidence": "serialized_entry"
+          "geometry_confidence": "serialized_entry",
+          "initially_visible": true
         },
         {
           "kind": "bitmap_holder_bmp",
@@ -95,7 +98,8 @@
             "width": 74,
             "height": 70
           },
-          "geometry_confidence": "serialized_entry"
+          "geometry_confidence": "serialized_entry",
+          "initially_visible": true
         },
         {
           "kind": "bitmap_holder_bmp",
@@ -112,7 +116,8 @@
             "width": 105,
             "height": 119
           },
-          "geometry_confidence": "serialized_entry"
+          "geometry_confidence": "serialized_entry",
+          "initially_visible": true
         },
         {
           "kind": "bitmap_holder_bmp",
@@ -129,7 +134,8 @@
             "width": 106,
             "height": 116
           },
-          "geometry_confidence": "serialized_entry"
+          "geometry_confidence": "serialized_entry",
+          "initially_visible": true
         },
         {
           "kind": "bitmap_holder_bmp",
@@ -146,7 +152,8 @@
             "width": 145,
             "height": 56
           },
-          "geometry_confidence": "serialized_entry"
+          "geometry_confidence": "serialized_entry",
+          "initially_visible": true
         },
         {
           "kind": "bitmap_holder_bmp",
@@ -163,7 +170,8 @@
             "width": 142,
             "height": 137
           },
-          "geometry_confidence": "serialized_entry"
+          "geometry_confidence": "serialized_entry",
+          "initially_visible": true
         },
         {
           "kind": "bitmap_holder_bmp",
@@ -180,7 +188,8 @@
             "width": 207,
             "height": 155
           },
-          "geometry_confidence": "serialized_entry"
+          "geometry_confidence": "serialized_entry",
+          "initially_visible": true
         },
         {
           "kind": "bitmap_holder_bmp",
@@ -197,7 +206,8 @@
             "width": 204,
             "height": 145
           },
-          "geometry_confidence": "serialized_entry"
+          "geometry_confidence": "serialized_entry",
+          "initially_visible": true
         }
       ],
       "bitmap_holder": {
@@ -215,6 +225,7 @@
             "height": 137,
             "right": 226,
             "bottom": 420,
+            "visible": true,
             "rect": {
               "x": 84,
               "y": 283,
@@ -233,6 +244,7 @@
             "height": 155,
             "right": 356,
             "bottom": 476,
+            "visible": true,
             "rect": {
               "x": 149,
               "y": 321,
@@ -251,6 +263,7 @@
             "height": 145,
             "right": 495,
             "bottom": 431,
+            "visible": true,
             "rect": {
               "x": 291,
               "y": 286,
@@ -269,6 +282,7 @@
             "height": 70,
             "right": 427,
             "bottom": 279,
+            "visible": true,
             "rect": {
               "x": 353,
               "y": 209,
@@ -287,6 +301,7 @@
             "height": 119,
             "right": 526,
             "bottom": 296,
+            "visible": true,
             "rect": {
               "x": 421,
               "y": 177,
@@ -305,6 +320,7 @@
             "height": 116,
             "right": 631,
             "bottom": 291,
+            "visible": true,
             "rect": {
               "x": 525,
               "y": 175,
@@ -323,6 +339,7 @@
             "height": 56,
             "right": 561,
             "bottom": 88,
+            "visible": true,
             "rect": {
               "x": 416,
               "y": 32,
@@ -341,6 +358,7 @@
             "height": 137,
             "right": 226,
             "bottom": 420,
+            "visible": true,
             "rect": {
               "x": 84,
               "y": 283,
@@ -359,6 +377,7 @@
             "height": 155,
             "right": 356,
             "bottom": 476,
+            "visible": true,
             "rect": {
               "x": 149,
               "y": 321,
@@ -377,6 +396,7 @@
             "height": 145,
             "right": 495,
             "bottom": 431,
+            "visible": true,
             "rect": {
               "x": 291,
               "y": 286,
@@ -642,6 +662,7 @@
             "x": 482,
             "y": 324,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 11517669
@@ -653,6 +674,7 @@
             "x": 228,
             "y": 246,
             "z": 1,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 11517809
@@ -734,7 +756,8 @@
         "width": 142,
         "height": 137
       },
-      "geometry_confidence": "serialized_entry"
+      "geometry_confidence": "serialized_entry",
+      "initially_visible": true
     },
     {
       "kind": "bitmap_holder_bmp",
@@ -751,7 +774,8 @@
         "width": 207,
         "height": 155
       },
-      "geometry_confidence": "serialized_entry"
+      "geometry_confidence": "serialized_entry",
+      "initially_visible": true
     },
     {
       "kind": "bitmap_holder_bmp",
@@ -768,7 +792,8 @@
         "width": 204,
         "height": 145
       },
-      "geometry_confidence": "serialized_entry"
+      "geometry_confidence": "serialized_entry",
+      "initially_visible": true
     },
     {
       "kind": "bitmap_holder_bmp",
@@ -785,7 +810,8 @@
         "width": 74,
         "height": 70
       },
-      "geometry_confidence": "serialized_entry"
+      "geometry_confidence": "serialized_entry",
+      "initially_visible": true
     },
     {
       "kind": "bitmap_holder_bmp",
@@ -802,7 +828,8 @@
         "width": 105,
         "height": 119
       },
-      "geometry_confidence": "serialized_entry"
+      "geometry_confidence": "serialized_entry",
+      "initially_visible": true
     },
     {
       "kind": "bitmap_holder_bmp",
@@ -819,7 +846,8 @@
         "width": 106,
         "height": 116
       },
-      "geometry_confidence": "serialized_entry"
+      "geometry_confidence": "serialized_entry",
+      "initially_visible": true
     },
     {
       "kind": "bitmap_holder_bmp",
@@ -836,7 +864,8 @@
         "width": 145,
         "height": 56
       },
-      "geometry_confidence": "serialized_entry"
+      "geometry_confidence": "serialized_entry",
+      "initially_visible": true
     },
     {
       "kind": "bitmap_holder_bmp",
@@ -853,7 +882,8 @@
         "width": 142,
         "height": 137
       },
-      "geometry_confidence": "serialized_entry"
+      "geometry_confidence": "serialized_entry",
+      "initially_visible": true
     },
     {
       "kind": "bitmap_holder_bmp",
@@ -870,7 +900,8 @@
         "width": 207,
         "height": 155
       },
-      "geometry_confidence": "serialized_entry"
+      "geometry_confidence": "serialized_entry",
+      "initially_visible": true
     },
     {
       "kind": "bitmap_holder_bmp",
@@ -887,7 +918,8 @@
         "width": 204,
         "height": 145
       },
-      "geometry_confidence": "serialized_entry"
+      "geometry_confidence": "serialized_entry",
+      "initially_visible": true
     },
     {
       "kind": "WAVE",

@@ -44,7 +44,8 @@
             "width": 515,
             "height": 382
           },
-          "geometry_confidence": "serialized_entry"
+          "geometry_confidence": "serialized_entry",
+          "initially_visible": true
         }
       ],
       "bitmap_holder": {
@@ -62,6 +63,7 @@
             "height": 382,
             "right": 632,
             "bottom": 470,
+            "visible": true,
             "rect": {
               "x": 117,
               "y": 88,
@@ -1577,6 +1579,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2103444
@@ -1588,6 +1591,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2103584
@@ -1599,6 +1603,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2103724
@@ -1610,6 +1615,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2103864
@@ -1621,6 +1627,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2104004
@@ -1632,6 +1639,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2104144
@@ -1643,6 +1651,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2104284
@@ -1654,6 +1663,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2104424
@@ -1665,6 +1675,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2104564
@@ -1676,6 +1687,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2104704
@@ -1687,6 +1699,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2104844
@@ -1698,6 +1711,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2104984
@@ -1709,6 +1723,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2105124
@@ -1720,6 +1735,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2105264
@@ -1731,6 +1747,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2105404
@@ -1742,6 +1759,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2105544
@@ -1753,6 +1771,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2105684
@@ -1764,6 +1783,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2105824
@@ -1775,6 +1795,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2105964
@@ -1786,6 +1807,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2106104
@@ -1797,6 +1819,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2106244
@@ -1808,6 +1831,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2106384
@@ -1819,6 +1843,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2106524
@@ -1830,6 +1855,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2106664
@@ -1841,6 +1867,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2106804
@@ -1852,6 +1879,7 @@
             "x": 0,
             "y": 0,
             "z": 0,
+            "drag_enabled": false,
             "phase": 0,
             "visible": 1,
             "record_offset": 2106944
@@ -1905,7 +1933,8 @@
         "width": 515,
         "height": 382
       },
-      "geometry_confidence": "serialized_entry"
+      "geometry_confidence": "serialized_entry",
+      "initially_visible": true
     },
     {
       "kind": "WAVE",
