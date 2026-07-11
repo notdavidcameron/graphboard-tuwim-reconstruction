@@ -185,6 +185,13 @@ raw input"). Key points for `runtime.js`:
 - **The hover caption** (bottom-center poem title) is just
   `Text_Holder.SetText(0, "<title>")` from the hover handler — e.g. WYBORW's
   `HotSpot_Holder.MouseMoveIn` switches rectID to a title string.
+- **Rendering** (`cpp_port/src/render.cpp`): the C++ port now composites a page
+  to a PNG — background DIB (or solid palette fill) + visible sprites/bitmaps at
+  live position/phase/layer, page-palette coloured, per-item transparent. Useful
+  as a pixel-accurate reference to diff the web_port's DOM render against. One
+  gap on both sides: pages that apply a **runtime palette transition**
+  (`GraphBrdView_FadePaletteTransition`) need the remapped palette — with the
+  stored page palette, RYCERZ's brick renders blue instead of the game's red.
 
 ## Still unwired on both sides
 
