@@ -117,9 +117,17 @@ HotSpotHolderState parseHotSpotHolderState(BinaryReader& reader);
 // the hit rect from `frame = def + 0x6c + phase*0x4c`, reading width at
 // frame+0x14 and height at frame+0x18. For phase 0 that is blob+0x80/+0x84,
 // which is why the definition header's width/height agree with frames[0].
+//
+// A rect hit is refined per-pixel when the frame opts in (frame+0x08 != 0) and
+// the definition opts in (def+0x24 != 0): the click misses if the pixel under
+// it is the transparent colour (frame+0x04). `opaque`, when non-empty, is that
+// test precomputed: width*height, row-major top-down, 1 = opaque. Empty means
+// rect-only (the common case). Verified against CUDA.BDF's "motylek" (the mask
+// reconstructs the butterfly silhouette exactly).
 struct SpriteFrame {
     std::uint32_t width = 0;    // frame+0x14
     std::uint32_t height = 0;   // frame+0x18
+    std::vector<std::uint8_t> opaque;  // width*height, or empty for rect-only
 };
 
 struct SpriteDefinition {

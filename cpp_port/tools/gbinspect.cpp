@@ -134,7 +134,13 @@ json spriteStateToJson(const graphboard::SpriteHolderState& state) {
     for (const auto& definition : state.definitions) {
         json frames = json::array();
         for (const auto& frame : definition.frames) {
-            frames.push_back({{"width", frame.width}, {"height", frame.height}});
+            json f = {{"width", frame.width}, {"height", frame.height}};
+            if (!frame.opaque.empty()) {
+                std::size_t opaque = 0;
+                for (const auto v : frame.opaque) opaque += v;
+                f["opaquePixels"] = opaque;   // present only when a mask exists
+            }
+            frames.push_back(f);
         }
         definitions.push_back({
             {"name", t(definition.name)},

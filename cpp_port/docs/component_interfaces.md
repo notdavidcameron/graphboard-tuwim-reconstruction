@@ -449,12 +449,29 @@ A sprite's script-visible id is simply its **instance index**: the loop counter
 `LButtonDown` counts down is handed straight to the callback. There is no stored
 id field as there is for hotspots.
 
-**Not yet implemented:** after a rect hit, `SpriteHolder::LButtonDown` runs a
-per-pixel transparency test — `frame+0x04` is the transparent colour index,
-`frame+0x48` the pixel data, `frame+0x10` the row width (stride `(w+3)&~3`) —
-gated on a per-frame flag; when that flag is clear the rect alone decides. So a
-faithful sprite hit test is pixel-accurate, and a rect-only port over-reports
-hits in an irregular sprite's transparent corners.
+**Per-pixel transparency test.** After a rect hit, `SpriteHolder::LButtonDown`
+looks up the pixel under the click and treats a transparent pixel as a miss —
+this is what makes an irregular sprite (a butterfly, a rounded key) clickable
+only on its opaque body. It runs only when **both** the definition and the frame
+opt in: `def+0x24 != 0` **and** `frame+0x08 != 0`. That is 112 of the 913 sprite
+definitions in the title (e.g. CUDA's `motylek`, `klawisz`); the other 801 are
+rect-only. The lookup:
+
+```
+stride   = (frame[0x10] + 3) & ~3          // byte pitch; frame[0x10] is the row width
+pixels   = blob + 0xb8 + frame[0x48]        // start of this phase's pixel plane
+row      = height - 1 - (clickY - top)      // bottom-up storage
+byte     = pixels[row*stride + (clickX - left) + instance[0x54]*width]
+hit      = byte != frame[0x04]              // frame[0x04] is the transparent index
+```
+
+`instance+0x54` is a horizontal source offset, but it is 0 across every one of
+the 919 shipped instances, so the mask depends only on the definition. Two
+independent checks confirm the layout: rendering `motylek`'s mask draws the
+butterfly silhouette exactly (transparent corners, ~46% opaque), and the pixel
+plane it selects agrees with the asset extractor's `blob_end - width*height`
+reasoning (`0xb8 + frame[0x48]` lands at the end of the frame table, where the
+pixels begin).
 
 ### Hotspots are addressed by a stored id, not their array index
 

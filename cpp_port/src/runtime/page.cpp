@@ -288,6 +288,18 @@ Candidate topItemIn(const ComponentState& state, int x, int y) {
             const auto bottom = top + static_cast<std::int64_t>(frame.height);
             if (x < left || x > right || y < top || y > bottom) continue;
 
+            // Irregular sprites refine the rect with a per-pixel transparency
+            // mask (see SpriteFrame::opaque). A transparent pixel is a miss.
+            if (!frame.opaque.empty()) {
+                const auto cx = x - left;
+                const auto cy = y - top;
+                if (cx >= static_cast<std::int64_t>(frame.width) ||
+                    cy >= static_cast<std::int64_t>(frame.height) ||
+                    frame.opaque[static_cast<std::size_t>(cy) * frame.width + cx] == 0) {
+                    continue;
+                }
+            }
+
             if (best.index == -1 || geom.layer > best.layer) {
                 best.index = id;
                 best.layer = geom.layer;

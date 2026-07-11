@@ -323,6 +323,97 @@ void testSpriteCallbacks() {
     assert(item(sprite, 0, "phase").toInt() == 70);   // MouseMoveOut(0)
 }
 
+// A page with a single sprite whose frame carries a per-pixel transparency
+// mask: an 8x8 sprite transparent (index 30) everywhere except its left half,
+// with the pixel-test opt-ins set (def+0x24 and frame+0x08).
+std::vector<std::uint8_t> buildMaskedSpriteBdf(const std::string& script) {
+    const auto spriteClsid = Guid::fromString("B64F3336-5368-11D0-B445-008048EB5D40");
+    const std::uint32_t w = 8, h = 8, transp = 30;
+
+    std::vector<std::uint8_t> b;
+    putFixed(b, "YDP Board data file. Ver:1 test", 100);
+    putU32(b, 1);
+    putU32(b, 0); putU32(b, 0); putU32(b, 640); putU32(b, 480);
+    putU32(b, 0xffffffffu); putU32(b, 8);
+    putU32(b, 0);
+    putU8(b, 0);
+    putU32(b, 0);
+    putU32(b, 0);
+
+    putU32(b, 1);   // list version
+    putU32(b, 1);   // one component
+
+    putWrapper(b, spriteClsid, "Sprite_Holder");
+    putU32(b, 1);   // sprite private version
+    putU32(b, 1);   // definition count
+    putU32(b, 1);   // instance count
+
+    // Blob: header (0xb8) + frame table already inside it + 8x8 pixel plane.
+    const std::size_t pixels = 0xb8;               // frame[0x48] == 0
+    std::vector<std::uint8_t> blob(pixels + w * h, transp);
+    auto putBlob = [&blob](std::size_t off, std::uint32_t v) {
+        blob[off] = static_cast<std::uint8_t>(v);
+        blob[off + 1] = static_cast<std::uint8_t>(v >> 8);
+        blob[off + 2] = static_cast<std::uint8_t>(v >> 16);
+        blob[off + 3] = static_cast<std::uint8_t>(v >> 24);
+    };
+    putBlob(0x00, 1);        // phaseCount
+    putBlob(0x24, 1);        // def opts into the pixel test
+    putBlob(0x80, w);        // header width/height
+    putBlob(0x84, h);
+    putBlob(0x6c + 0x04, transp);  // frame transparent index
+    putBlob(0x6c + 0x08, 1);       // frame opts into the pixel test
+    putBlob(0x6c + 0x10, w);       // row width -> stride 8
+    putBlob(0x6c + 0x14, w);       // frame width/height
+    putBlob(0x6c + 0x18, h);
+    putBlob(0x6c + 0x48, 0);       // pixel offset (relative to blob+0xb8)
+    // Opaque only in the left half (cols 0..3); bottom-up storage.
+    for (std::uint32_t row = 0; row < h; ++row) {
+        const std::size_t src = pixels + (h - 1 - row) * w;
+        for (std::uint32_t col = 0; col < 4; ++col) blob[src + col] = 7;  // != transp
+    }
+    putU32(b, static_cast<std::uint32_t>(blob.size()));
+    b.insert(b.end(), blob.begin(), blob.end());
+
+    // Instance: definition 0 at (100,100), layer 0, phase 0, visible.
+    std::vector<std::uint8_t> rec(0x8c, 0);
+    auto putRec = [&rec](std::size_t off, std::int32_t v) {
+        const auto u = static_cast<std::uint32_t>(v);
+        rec[off] = static_cast<std::uint8_t>(u);
+        rec[off + 1] = static_cast<std::uint8_t>(u >> 8);
+        rec[off + 2] = static_cast<std::uint8_t>(u >> 16);
+        rec[off + 3] = static_cast<std::uint8_t>(u >> 24);
+    };
+    putRec(0x08, 100); putRec(0x0c, 100); putRec(0x88, 1);
+    b.insert(b.end(), rec.begin(), rec.end());
+
+    putU32(b, 1);
+    putArchiveString(b, script);
+    return b;
+}
+
+const char* kMaskScript = R"S(
+void OnOpenPage() {}
+void Sprite_Holder.MouseClickOnDown(int spriteID) { Sprite_Holder.ChangePhase(0, 1); }
+)S";
+
+// The rect is (100,100)-(108,108); only the left half is opaque. A click on the
+// opaque half hits; a click on the transparent half falls through the rect.
+void testSpritePixelMask() {
+    const auto bytes = buildMaskedSpriteBdf(kMaskScript);
+    BinaryReader reader(bytes);
+    auto page = Page::loadFromReader(reader, "synthetic-mask");
+    const auto* sprite = page->component("Sprite_Holder");
+
+    page->lButtonDown(101, 104);   // left half: opaque -> hit
+    assert(item(sprite, 0, "phase").toInt() == 1);
+
+    // Reset and click the transparent right half: no hit.
+    auto page2 = [&] { BinaryReader r(bytes); return Page::loadFromReader(r, "m2"); }();
+    page2->lButtonDown(106, 104);  // right half: transparent -> miss
+    assert(item(page2->component("Sprite_Holder"), 0, "phase").toInt() == 0);
+}
+
 const char* kPrecedenceScript = R"S(
 void OnOpenPage()
 {
@@ -368,6 +459,7 @@ int main() {
     testDriveSyntheticPage();
     testHotSpotCallbacks();
     testSpriteCallbacks();
+    testSpritePixelMask();
     testCrossKindLayerPrecedence();
     return 0;
 }

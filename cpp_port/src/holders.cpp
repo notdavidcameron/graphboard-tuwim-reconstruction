@@ -152,6 +152,7 @@ std::string readNulPaddedName(const std::vector<std::uint8_t>& buffer, std::size
 constexpr std::size_t kSpriteInstanceBytes = 0x8c;
 constexpr std::size_t kSpriteFrameTableOffset = 0x6c;  // within the definition blob
 constexpr std::size_t kSpriteFrameBytes = 0x4c;
+constexpr std::size_t kSpriteBlobPixelBase = 0xb8;     // frame[0x48] is relative to this
 // Serialized MultiBitmap per-record metadata size.
 constexpr std::size_t kMultiBitmapMetadataBytes = 0xc0;
 // Serialized TVH holder-entry size and board-video header size.
@@ -186,6 +187,16 @@ SpriteHolderState parseSpriteHolderState(BinaryReader& reader) {
             // Frame table: blob+0x6c, stride 0x4c, width +0x14 / height +0x18.
             // Trust phaseCount only as far as the blob actually reaches; the
             // bytes past the last frame are pixel data, not frame records.
+            //
+            // The per-pixel transparency test runs only when the definition
+            // (def+0x24) and the frame (frame+0x08) both opt in; then the mask
+            // is precomputed from the frame's pixels. Pixels for a phase start
+            // at blob+0xb8+frame[0x48], laid out bottom-up with byte pitch
+            // ((frame[0x10]+3)&~3), one index byte per pixel; a byte equal to
+            // frame[0x04] is transparent. (instance+0x54 would add a horizontal
+            // source offset, but it is 0 across every shipped sprite, so the
+            // mask is definition-level.)
+            const bool defWantsPixelTest = readU32At(blob, 0x24) != 0;
             for (std::uint32_t phase = 0; phase < definition.phaseCount; ++phase) {
                 const std::size_t frame = kSpriteFrameTableOffset + phase * kSpriteFrameBytes;
                 if (frame + 0x1c > blob.size()) {
@@ -194,7 +205,27 @@ SpriteHolderState parseSpriteHolderState(BinaryReader& reader) {
                 SpriteFrame f;
                 f.width = readU32At(blob, frame + 0x14);
                 f.height = readU32At(blob, frame + 0x18);
-                definition.frames.push_back(f);
+
+                const bool frameFits = frame + kSpriteFrameBytes <= blob.size();
+                const bool frameWantsPixelTest =
+                    frameFits && readU32At(blob, frame + 0x08) != 0;
+                if (defWantsPixelTest && frameWantsPixelTest && f.width > 0 && f.height > 0) {
+                    const std::uint32_t transparent = readU32At(blob, frame + 0x04);
+                    const std::size_t rowWidth = readU32At(blob, frame + 0x10);
+                    const std::size_t stride = (rowWidth + 3) & ~std::size_t{3};
+                    const std::size_t pixels = kSpriteBlobPixelBase + readU32At(blob, frame + 0x48);
+                    if (stride >= f.width && pixels + stride * f.height <= blob.size()) {
+                        f.opaque.assign(static_cast<std::size_t>(f.width) * f.height, 0);
+                        for (std::uint32_t row = 0; row < f.height; ++row) {
+                            const std::size_t src = pixels + (f.height - 1 - row) * stride;
+                            for (std::uint32_t col = 0; col < f.width; ++col) {
+                                f.opaque[row * f.width + col] =
+                                    blob[src + col] != transparent ? 1 : 0;
+                            }
+                        }
+                    }
+                }
+                definition.frames.push_back(std::move(f));
             }
         }
         state.definitions.push_back(std::move(definition));

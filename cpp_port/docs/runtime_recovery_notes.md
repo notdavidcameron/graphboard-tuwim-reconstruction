@@ -172,13 +172,19 @@ recovered engine functions, not the JS approximation.
    539,284` lands on letter sprite 3 and runs the real
    `Sprite_Holder.MouseClickOnDown(3)` branch.
 
-   **Known gap (recovered but not implemented):** `SpriteHolder::LButtonDown`
-   refines a bounding-rect hit with a per-pixel transparency test — `frame+0x04`
-   is the transparent colour index, `frame+0x48` the pixel data, `frame+0x10` the
-   row width (stride `(w+3)&~3`) — gated on a per-frame flag; when the flag is
-   clear the rect alone is the hit. This port stops at the rect, so an irregular
-   sprite reports a hit in its transparent corners. Closing this needs the frame
-   pixel bytes, which the parser already knows how to locate.
+   **Pixel-accurate sprite hits (done).** `SpriteHolder::LButtonDown` refines a
+   bounding-rect hit with a per-pixel transparency test, and it is now
+   implemented. The test runs only when the definition (`def+0x24`) and the frame
+   (`frame+0x08`) both opt in — 112 of the title's 913 sprite definitions, e.g.
+   CUDA's `motylek`/`klawisz`. When it runs, the pixel under the click is looked
+   up and a hit is suppressed if it is the transparent colour (`frame+0x04`).
+   Pixels for a phase start at `blob + 0xb8 + frame[0x48]`, laid out bottom-up
+   with byte pitch `(frame[0x10]+3)&~3`, one index byte per pixel; `instance+0x54`
+   would add a horizontal source offset but is 0 across all 919 shipped
+   instances, so the mask is precomputed per definition (`SpriteFrame::opaque`).
+   Verified two ways: reconstructing CUDA `motylek`'s mask draws the butterfly
+   silhouette exactly, and the C++ parser's opaque-pixel count matches an
+   independent Python reader for every masked CUDA definition.
 
    Still TODO: MultiBitmap/Bitmap_Holder click callbacks (same mechanism, needs
    their per-item rects). Playback-completion events
