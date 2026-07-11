@@ -328,6 +328,23 @@ recovered engine functions, not the JS approximation.
    (needs per-item click rects + a verified cross-kind z-order rule; see item 5),
    and model `.GRP` group loading (`LoadGroup`) as a second component namespace.
 
+9. [DONE] Visual render — the headless runtime now has a "head". A small
+   dependency-free PNG encoder (`image`) and `render` composite a page to a PNG:
+   the background (packed 8-bit DIB decoded with its RGBQUAD palette, or a solid
+   fill from the page palette when there is no DIB), then every visible sprite
+   and bitmap drawn at its **live** position/phase/layer (lowest layer first,
+   scene order breaking ties) with per-item transparency, coloured through the
+   page palette. `gbinspect PAGE.BDF --render out.png` opens the page and applies
+   any input/clock events first, so the render reflects driven state. Verified
+   visually: ABECADLO composites its wooden frame + chalkboard + scattered letter
+   blocks + title banner, and RYCERZ (no DIB background) composites its stone
+   frame + side-panel items + gem row with an empty centre (the knight is
+   hover-assembled, correctly absent before interaction). Rendered all 201 real
+   BDFs with no crash. Known gap: pages that apply a runtime palette transition
+   (`GraphBrdView_FadePaletteTransition`) render with the stored page palette, so
+   their hue can differ (RYCERZ's brick reads blue vs the game's red); the
+   compositing/geometry is correct, only the palette remap is unmodelled.
+
 **Recovered engine semantics — OnOpenPage declares page-globals.** Every real
 page's `OnOpenPage` carries the comment *"All variables definied on this
 function are global for this page"*, and the guards in later handlers rely on

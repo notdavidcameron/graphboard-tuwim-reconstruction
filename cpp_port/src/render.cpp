@@ -1,5 +1,6 @@
 #include "graphboard/render.hpp"
 
+#include <algorithm>
 #include <cstdint>
 
 namespace graphboard {
@@ -80,6 +81,88 @@ Image renderBackground(const std::vector<std::uint8_t>& bytes, const BdfHeader& 
         r = c + 2 < bytes.size() ? bytes[c + 2] : 0;
     }
     return Image(width, height, r, g, b);
+}
+
+namespace {
+
+using runtime::ComponentState;
+
+std::int64_t itemInt(const ComponentState& c, int id, const std::string& key) {
+    const auto ci = c.items.find(id);
+    if (ci == c.items.end()) return 0;
+    const auto ki = ci->second.find(key);
+    return ki == ci->second.end() ? 0 : ki->second.toInt();
+}
+
+// One blit request, resolved to a fixed rectangle of indexed pixels.
+struct Drawable {
+    std::int32_t layer = 0;
+    std::size_t order = 0;               // stable tie-break (scene order)
+    int x = 0, y = 0, w = 0, h = 0;
+    const std::vector<std::uint8_t>* pixels = nullptr;
+    std::uint8_t transparent = 0;
+};
+
+} // namespace
+
+Image renderPage(const runtime::Page& page, const std::vector<std::uint8_t>& bytes,
+                 const BdfHeader& header) {
+    Image img = renderBackground(bytes, header);
+
+    const bool havePalette =
+        header.paletteByteCount >= 1024 && header.paletteOffset + 1024 <= bytes.size();
+
+    std::vector<Drawable> draws;
+    std::size_t order = 0;
+    for (const auto& c : page.components()) {
+        if (c.kind == graphboard::HolderKind::SpriteHolder) {
+            for (const auto& [id, item] : c.items) {
+                if (itemInt(c, id, "visible") == 0) continue;
+                if (id < 0 || static_cast<std::size_t>(id) >= c.sprites.size()) continue;
+                const auto& geom = c.sprites[static_cast<std::size_t>(id)];
+                const auto phase = itemInt(c, id, "phase");
+                if (phase < 0 || phase >= static_cast<std::int64_t>(geom.frames.size())) continue;
+                const auto& f = geom.frames[static_cast<std::size_t>(phase)];
+                if (f.pixels.empty()) continue;
+                draws.push_back({geom.layer, order++, static_cast<int>(itemInt(c, id, "x")),
+                                 static_cast<int>(itemInt(c, id, "y")),
+                                 static_cast<int>(f.width), static_cast<int>(f.height),
+                                 &f.pixels, f.transparentIndex});
+            }
+        } else if (c.kind == graphboard::HolderKind::BitmapHolder) {
+            for (const auto& [id, item] : c.items) {
+                if (itemInt(c, id, "visible") == 0) continue;
+                if (id < 0 || static_cast<std::size_t>(id) >= c.bitmaps.size()) continue;
+                const auto& geom = c.bitmaps[static_cast<std::size_t>(id)];
+                if (geom.pixels.empty()) continue;
+                draws.push_back({geom.layer, order++, static_cast<int>(itemInt(c, id, "x")),
+                                 static_cast<int>(itemInt(c, id, "y")), geom.width, geom.height,
+                                 &geom.pixels, geom.transparentIndex});
+            }
+        }
+    }
+
+    // Lowest layer first; scene order breaks ties (the board draws page
+    // components in list order per layer).
+    std::stable_sort(draws.begin(), draws.end(), [](const Drawable& a, const Drawable& b) {
+        return a.layer != b.layer ? a.layer < b.layer : a.order < b.order;
+    });
+
+    for (const auto& d : draws) {
+        for (int row = 0; row < d.h; ++row) {
+            for (int col = 0; col < d.w; ++col) {
+                const std::uint8_t idx = (*d.pixels)[static_cast<std::size_t>(row) * d.w + col];
+                if (idx == d.transparent) continue;
+                std::uint8_t r = idx, g = idx, b = idx;
+                if (havePalette) {
+                    const std::size_t c = header.paletteOffset + static_cast<std::size_t>(idx) * 4;
+                    b = bytes[c + 0]; g = bytes[c + 1]; r = bytes[c + 2];
+                }
+                img.set(d.x + col, d.y + row, r, g, b);
+            }
+        }
+    }
+    return img;
 }
 
 } // namespace graphboard

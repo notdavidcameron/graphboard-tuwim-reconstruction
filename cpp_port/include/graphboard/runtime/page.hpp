@@ -35,6 +35,8 @@ struct BitmapGeometry {
     std::int32_t width = 0;
     std::int32_t height = 0;
     std::vector<std::uint8_t> opaque;  // width*height, or empty for rect-only
+    std::vector<std::uint8_t> pixels;  // indexed, top-down, for rendering
+    std::uint8_t transparentIndex = 0;
 };
 
 struct ComponentState {
@@ -129,6 +131,7 @@ public:
     // Queries.
     const ComponentState* component(const std::string& name) const;
     std::vector<std::string> componentNames() const;
+    const std::vector<ComponentState>& components() const { return components_; }
     const std::string& scriptText() const { return script_; }
     const std::vector<HostCallRecord>& callLog() const { return callLog_; }
 

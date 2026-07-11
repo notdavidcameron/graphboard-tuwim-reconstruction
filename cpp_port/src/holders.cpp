@@ -207,20 +207,30 @@ SpriteHolderState parseSpriteHolderState(BinaryReader& reader) {
                 f.height = readU32At(blob, frame + 0x18);
 
                 const bool frameFits = frame + kSpriteFrameBytes <= blob.size();
-                const bool frameWantsPixelTest =
-                    frameFits && readU32At(blob, frame + 0x08) != 0;
-                if (defWantsPixelTest && frameWantsPixelTest && f.width > 0 && f.height > 0) {
-                    const std::uint32_t transparent = readU32At(blob, frame + 0x04);
+                if (frameFits && f.width > 0 && f.height > 0) {
+                    f.transparentIndex = static_cast<std::uint8_t>(readU32At(blob, frame + 0x04));
                     const std::size_t rowWidth = readU32At(blob, frame + 0x10);
                     const std::size_t stride = (rowWidth + 3) & ~std::size_t{3};
                     const std::size_t pixels = kSpriteBlobPixelBase + readU32At(blob, frame + 0x48);
                     if (stride >= f.width && pixels + stride * f.height <= blob.size()) {
-                        f.opaque.assign(static_cast<std::size_t>(f.width) * f.height, 0);
+                        // Store the frame's pixels top-down for rendering; build
+                        // the hit-test opacity mask from them when the def+frame
+                        // both opt into the per-pixel test.
+                        const bool wantsMask =
+                            defWantsPixelTest && readU32At(blob, frame + 0x08) != 0;
+                        f.pixels.assign(static_cast<std::size_t>(f.width) * f.height, 0);
+                        if (wantsMask) {
+                            f.opaque.assign(static_cast<std::size_t>(f.width) * f.height, 0);
+                        }
                         for (std::uint32_t row = 0; row < f.height; ++row) {
                             const std::size_t src = pixels + (f.height - 1 - row) * stride;
                             for (std::uint32_t col = 0; col < f.width; ++col) {
-                                f.opaque[row * f.width + col] =
-                                    blob[src + col] != transparent ? 1 : 0;
+                                const std::uint8_t px = blob[src + col];
+                                f.pixels[row * f.width + col] = px;
+                                if (wantsMask) {
+                                    f.opaque[row * f.width + col] =
+                                        px != f.transparentIndex ? 1 : 0;
+                                }
                             }
                         }
                     }
@@ -487,21 +497,29 @@ BitmapHolderState parseBitmapHolderState(BinaryReader& reader) {
                 static_cast<std::uint64_t>(stride) * height ==
                     bitmap.blobByteCount - kBitmapHeaderBytes;
 
-            // Per-pixel transparency mask, when the record opts in (record+0x20
-            // and +0x28 both != 0; BitmapHolder_LButtonDown @ 10003f50). Same
-            // shape as sprites: pixels bottom-up from blob+0x80, transparent
-            // index at blob+0x04.
+            // Store pixels top-down for rendering; build the hit-test opacity
+            // mask from them when the record opts into the per-pixel test
+            // (record+0x20 and +0x28 both != 0; BitmapHolder_LButtonDown @
+            // 10003f50). Pixels are bottom-up from blob+0x80, transparent index
+            // at blob+0x04.
+            bitmap.transparentIndex = static_cast<std::uint8_t>(readU32At(blob, 0x04));
             const bool wantsPixelTest =
                 readU32At(blob, 0x20) != 0 && readU32At(blob, 0x28) != 0;
-            if (wantsPixelTest && width > 0 && height > 0 &&
+            if (width > 0 && height > 0 &&
                 kBitmapPixelBase + stride * height <= blob.size()) {
-                const std::uint32_t transparent = readU32At(blob, 0x04);
-                bitmap.opaque.assign(static_cast<std::size_t>(width) * height, 0);
+                bitmap.pixels.assign(static_cast<std::size_t>(width) * height, 0);
+                if (wantsPixelTest) {
+                    bitmap.opaque.assign(static_cast<std::size_t>(width) * height, 0);
+                }
                 for (std::uint32_t row = 0; row < height; ++row) {
                     const std::size_t src = kBitmapPixelBase + (height - 1 - row) * stride;
                     for (std::uint32_t col = 0; col < width; ++col) {
-                        bitmap.opaque[row * width + col] =
-                            blob[src + col] != transparent ? 1 : 0;
+                        const std::uint8_t px = blob[src + col];
+                        bitmap.pixels[row * width + col] = px;
+                        if (wantsPixelTest) {
+                            bitmap.opaque[row * width + col] =
+                                px != bitmap.transparentIndex ? 1 : 0;
+                        }
                     }
                 }
             }

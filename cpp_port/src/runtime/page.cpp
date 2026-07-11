@@ -83,11 +83,14 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
                 auto& item = state.items[static_cast<int>(i)];
                 item["x"] = Value::integer(bm.left);
                 item["y"] = Value::integer(bm.top);
+                item["visible"] = Value::integer(1);   // drawn until HideBitmap
                 BitmapGeometry geom;
                 geom.layer = bm.layer;
                 geom.width = bm.right - bm.left;
                 geom.height = bm.bottom - bm.top;
                 geom.opaque = bm.opaque;
+                geom.pixels = bm.pixels;
+                geom.transparentIndex = bm.transparentIndex;
                 state.bitmaps.push_back(std::move(geom));
             }
             break;

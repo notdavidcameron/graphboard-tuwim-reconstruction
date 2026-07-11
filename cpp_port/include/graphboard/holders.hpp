@@ -128,6 +128,10 @@ struct SpriteFrame {
     std::uint32_t width = 0;    // frame+0x14
     std::uint32_t height = 0;   // frame+0x18
     std::vector<std::uint8_t> opaque;  // width*height, or empty for rect-only
+    // Indexed pixels for rendering: width*height, row-major top-down. Colour
+    // comes from the page palette; `transparentIndex` (frame+0x04) is skipped.
+    std::vector<std::uint8_t> pixels;
+    std::uint8_t transparentIndex = 0;
 };
 
 struct SpriteDefinition {
@@ -368,6 +372,10 @@ struct BitmapHolderBitmap {
     // click on a transparent pixel misses. width*height, row-major top-down,
     // 1 = opaque; empty for rect-only bitmaps.
     std::vector<std::uint8_t> opaque;
+    // Indexed pixels for rendering: (right-left)*(bottom-top), row-major
+    // top-down. `transparentIndex` (blob+0x04) is skipped when compositing.
+    std::vector<std::uint8_t> pixels;
+    std::uint8_t transparentIndex = 0;
 };
 
 struct BitmapHolderState {

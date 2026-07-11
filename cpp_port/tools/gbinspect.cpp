@@ -950,7 +950,12 @@ int main(int argc, char** argv) {
             auto reader = graphboard::BinaryReader::fromFile(file);
             const auto bytes = reader.bytes();
             const auto header = graphboard::parseBdfHeader(reader);
-            const auto image = graphboard::renderBackground(bytes, header);
+            // Drive the page (open + any input/clock events) so the render shows
+            // the live scene, then composite it over the background.
+            auto page = graphboard::runtime::Page::loadFromFile(file);
+            page->open();
+            applyEvents(*page, events);
+            const auto image = graphboard::renderPage(*page, bytes, header);
             if (!graphboard::writePng(renderTarget, image)) {
                 std::cerr << "gbinspect: failed to write " << renderTarget << "\n";
                 return 1;
