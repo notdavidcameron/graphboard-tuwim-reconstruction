@@ -19,6 +19,8 @@ add_library(graphboard_core
     src/format.cpp
     src/component.cpp
     src/holders.cpp
+    src/image.cpp
+    src/render.cpp
     src/runtime/lexer.cpp
     src/runtime/script.cpp
     src/runtime/value.cpp
@@ -73,4 +75,10 @@ if(BUILD_TESTING)
     )
     target_link_libraries(graphboard_runtime_project_test PRIVATE graphboard_core)
     add_test(NAME runtime_project COMMAND graphboard_runtime_project_test)
+
+    add_executable(graphboard_image_test
+        tests/image.cpp
+    )
+    target_link_libraries(graphboard_image_test PRIVATE graphboard_core)
+    add_test(NAME image COMMAND graphboard_image_test)
 endif()

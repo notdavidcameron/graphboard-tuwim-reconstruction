@@ -25,6 +25,10 @@ public:
     std::size_t remaining() const;
     bool eof() const;
 
+    // The whole underlying buffer, for consumers (e.g. the renderer) that index
+    // absolute file offsets recorded during parsing.
+    const std::vector<std::uint8_t>& bytes() const { return bytes_; }
+
     void seek(std::size_t offset);
     void skip(std::size_t byteCount);
 

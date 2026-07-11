@@ -1,6 +1,8 @@
 #include "graphboard/component.hpp"
 #include "graphboard/format.hpp"
 #include "graphboard/holders.hpp"
+#include "graphboard/image.hpp"
+#include "graphboard/render.hpp"
 #include "graphboard/runtime/interpreter.hpp"
 #include "graphboard/runtime/page.hpp"
 #include "graphboard/runtime/project.hpp"
@@ -860,9 +862,12 @@ int main(int argc, char** argv) {
     bool runOpen = true;
     int followLimit = 0;
     std::string pageName;
+    std::string renderTarget;
     try {
         for (std::size_t i = 1; i < args.size(); ++i) {
-            if (isFlag(args[i], "--run") && i + 1 < args.size()) {
+            if (isFlag(args[i], "--render") && i + 1 < args.size()) {
+                renderTarget = argToUtf8(args[++i]);
+            } else if (isFlag(args[i], "--run") && i + 1 < args.size()) {
                 runTarget = argToUtf8(args[++i]);
             } else if (isFlag(args[i], "--drive") && i + 1 < args.size()) {
                 driveTarget = argToUtf8(args[++i]);
@@ -937,6 +942,23 @@ int main(int argc, char** argv) {
 
     try {
         const auto ext = lowerExtension(file);
+        if (!renderTarget.empty()) {
+            if (ext != ".bdf") {
+                std::cerr << "gbinspect: --render requires a .BDF page\n";
+                return 2;
+            }
+            auto reader = graphboard::BinaryReader::fromFile(file);
+            const auto bytes = reader.bytes();
+            const auto header = graphboard::parseBdfHeader(reader);
+            const auto image = graphboard::renderBackground(bytes, header);
+            if (!graphboard::writePng(renderTarget, image)) {
+                std::cerr << "gbinspect: failed to write " << renderTarget << "\n";
+                return 1;
+            }
+            std::cout << "{\"rendered\":\"" << renderTarget << "\",\"width\":" << image.width
+                      << ",\"height\":" << image.height << "}\n";
+            return 0;
+        }
         if (!runTarget.empty()) {
             if (ext != ".bdf") {
                 std::cerr << "gbinspect: --run requires a .BDF page\n";
