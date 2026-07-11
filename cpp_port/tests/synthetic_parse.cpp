@@ -234,8 +234,8 @@ void testHotSpotHolderState() {
     appendArchiveString(bytes, "prawo");
     appendHotSpotRecord(bytes, 1, 4, 47, 477, 3, 0);
     appendArchiveString(bytes, "lewo");
-    appendU32(bytes, 0x11);              // field1f0
-    appendU32(bytes, 0x22);              // field1c8
+    appendU32(bytes, 0x11);              // activeIndex
+    appendU32(bytes, 0x22);              // auxStateWord
 
     graphboard::BinaryReader reader(bytes);
     const auto state = graphboard::parseHotSpotHolderState(reader);
@@ -249,8 +249,8 @@ void testHotSpotHolderState() {
     assert(state.hotspots[0].name == "prawo");
     assert(state.hotspots[1].enabled == 0);
     assert(state.hotspots[1].name == "lewo");
-    assert(state.field1f0 == 0x11);
-    assert(state.field1c8 == 0x22);
+    assert(state.activeIndex == 0x11);
+    assert(state.auxStateWord == 0x22);
     assert(reader.eof());
 }
 
