@@ -499,6 +499,32 @@ void Page::rButtonDown(int x, int y) {
     fireHitEvent(hit, rightClickEventFor(hit.kind));
 }
 
+namespace {
+// Fire `event` on the first component of `kind` (by its display name), with the
+// given item id. A no-op if the page has no such component or handler.
+void fireKindEvent(Page& page, const std::vector<ComponentState>& components,
+                   HolderKind kind, const char* event, int id) {
+    for (const auto& c : components) {
+        if (c.kind == kind) {
+            page.runEvent(c.displayName + "." + event, {Value::integer(id)});
+            return;
+        }
+    }
+}
+} // namespace
+
+void Page::videoEnd(int id) {
+    fireKindEvent(*this, components_, HolderKind::TransparentVideoHolder, "TheEnd", id);
+}
+
+void Page::soundEnd(int id) {
+    fireKindEvent(*this, components_, HolderKind::SoundHolder, "EndPlaySound", id);
+}
+
+void Page::animationEnd(int id) {
+    fireKindEvent(*this, components_, HolderKind::SpriteHolder, "EndAnimation", id);
+}
+
 void Page::mouseMove(int x, int y) {
     // While dragging, the sprite follows the cursor (offset by the grab point)
     // and hover events are suppressed, mirroring the board's drag mode.

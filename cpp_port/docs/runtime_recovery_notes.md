@@ -231,6 +231,19 @@ recovered engine functions, not the JS approximation.
    `--down`/`--up`/`--drag X1,Y1,X2,Y2` input events. `GotoXY` now moves a sprite
    like `MoveTo` (it appears in the drop handler).
 
+   **Playback-completion callbacks (done).** The board fires a callback when a
+   clip finishes; headless, a driver delivers these explicitly through
+   `Page::videoEnd`/`soundEnd`/`animationEnd`, which fire
+   `Transparent_Video_Holder.TheEnd(id)` / `Sound_Holder.EndPlaySound(id)` /
+   `Sprite_Holder.EndAnimation(id)` on the first component of that kind, only if
+   the page defines the handler. This is the cutscene-advance mechanism: verified
+   on real data, `gbinspect INTRO.BDF --video-end 0 … --video-end 9` walks the
+   whole intro — `TheEnd(0..8)` chains `Play(1)…Play(9)`, then `TheEnd(9)`
+   FadeScreens and `LoadPage("wyborw.bdf")`. `gbinspect` gains
+   `--video-end`/`--sound-end`/`--anim-end N`. What is *not* modelled is the
+   timing that decides *when* a clip ends (frame duration / WAV length /
+   animation phase count) — the port takes the completion as an explicit event.
+
    Still TODO: MultiBitmap click callbacks — only 1 page uses them, and the
    callback is the 4-arg `MouseClickOnDown(id, x, y, deep)` where x/y are the
    bitmap's own position (not the mouse point), recovered in

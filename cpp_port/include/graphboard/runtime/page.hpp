@@ -60,10 +60,12 @@ struct HostCallRecord {
 // page state exactly as the script directs, so a scene can be driven headless
 // and its script-visible state asserted.
 //
-// This models the script->component direction (dispatch to stateful components)
-// and page/host builtins. The component->script callback direction (a hotspot
-// click or video-end firing Sprite_Holder.MouseClickOnDown, etc.) is exposed as
-// a hit-test query for now; wiring those callbacks is the next step.
+// This models both directions. Script->component: dispatch to stateful
+// components plus page/host builtins. Component->script: raw input (click/hover/
+// drag) hit-tests the holders and fires the matching callback, and playback
+// completion (video/sound/animation ending) is delivered through the *End
+// entry points below. Both only fire a callback the page actually defines, so a
+// scene can be driven headless and its script-visible state asserted.
 class Page : public Host {
 public:
     static std::unique_ptr<Page> loadFromFile(const std::filesystem::path& path);
@@ -89,6 +91,16 @@ public:
     void rButtonDown(int x, int y);
     void mouseMove(int x, int y);
     void keyDown(int key) { runEvent("OnKeyDown", {Value::integer(key)}); }
+
+    // Playback-completion callbacks (component->script). The board fires these
+    // when a clip finishes; headless, a driver delivers them explicitly. Each
+    // fires the recovered event on the first component of that kind, only if the
+    // page defines the handler. Video-end chains cutscenes
+    // (Transparent_Video_Holder.TheEnd(id) -> Play(id+1)); the others complete
+    // sounds and animations.
+    void videoEnd(int id);       // Transparent_Video_Holder.TheEnd(id)
+    void soundEnd(int id);       // Sound_Holder.EndPlaySound(id)
+    void animationEnd(int id);   // Sprite_Holder.EndAnimation(id)
 
     // Convenience: a full press -> move -> release drag of whatever is under the
     // start point. Fires MouseClickOnDown, drags a draggable sprite to (x1,y1),

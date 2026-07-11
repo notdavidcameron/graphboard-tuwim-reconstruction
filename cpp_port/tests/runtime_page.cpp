@@ -495,6 +495,36 @@ void testSpriteDrag() {
     assert(item(page->component("Sprite_Holder"), 0, "x").toInt() == 290);
 }
 
+const char* kCompletionScript = R"S(
+OnOpenPage()
+{
+   HotSpot_Holder.DisableHotSpot(0);
+}
+
+void Sprite_Holder.EndAnimation(int spriteID)
+{
+   Sprite_Holder.ChangePhase(0, spriteID + 30);
+}
+)S";
+
+// Playback-completion callbacks: animationEnd(id) fires Sprite_Holder.EndAnimation
+// on the page's Sprite_Holder, only if the handler is defined. (videoEnd/soundEnd
+// share the code path and are verified on real data -- INTRO's TheEnd chain.)
+void testCompletionEvents() {
+    const auto bytes = buildSyntheticBdf(kCompletionScript);
+    BinaryReader reader(bytes);
+    auto page = Page::loadFromReader(reader, "completion");
+    page->open();
+    const auto* sprite = page->component("Sprite_Holder");
+
+    page->animationEnd(4);   // -> Sprite_Holder.EndAnimation(4) -> ChangePhase(0,34)
+    assert(item(sprite, 0, "phase").toInt() == 34);
+
+    // A kind with no component / no handler is a safe no-op.
+    page->videoEnd(0);
+    page->soundEnd(0);
+}
+
 const char* kPrecedenceScript = R"S(
 void OnOpenPage()
 {
@@ -694,6 +724,7 @@ int main() {
     testSpriteCallbacks();
     testSpritePixelMask();
     testSpriteDrag();
+    testCompletionEvents();
     testCrossKindLayerPrecedence();
     testBitmapCallbacks();
     testBitmapPixelMask();

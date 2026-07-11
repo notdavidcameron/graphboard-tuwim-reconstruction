@@ -709,8 +709,11 @@ int drivePage(const std::filesystem::path& path, const std::string& handler) {
 
 // One synthetic input event applied through the Page's raw-input entry points.
 struct InputEvent {
-    enum class Kind { Click, Down, Up, RClick, Move, Drag, Timer, Key } kind;
-    int a = 0;  // x, key code for Key, or drag start-x
+    enum class Kind {
+        Click, Down, Up, RClick, Move, Drag, Timer, Key,
+        VideoEnd, SoundEnd, AnimEnd,
+    } kind;
+    int a = 0;  // x, key code for Key, item id for *End, or drag start-x
     int b = 0;  // y, or drag start-y
     int c = 0;  // drag end-x
     int d = 0;  // drag end-y
@@ -728,6 +731,9 @@ void applyEvents(graphboard::runtime::Page& page, const std::vector<InputEvent>&
             case InputEvent::Kind::Drag:   page.drag(ev.a, ev.b, ev.c, ev.d); break;
             case InputEvent::Kind::Timer:  page.timer(); break;
             case InputEvent::Kind::Key:    page.keyDown(ev.a); break;
+            case InputEvent::Kind::VideoEnd: page.videoEnd(ev.a); break;
+            case InputEvent::Kind::SoundEnd: page.soundEnd(ev.a); break;
+            case InputEvent::Kind::AnimEnd:  page.animationEnd(ev.a); break;
         }
     }
 }
@@ -883,6 +889,15 @@ int main(int argc, char** argv) {
                 interact = true;
             } else if (isFlag(args[i], "--timer")) {
                 events.push_back({InputEvent::Kind::Timer, 0, 0});
+                interact = true;
+            } else if (isFlag(args[i], "--video-end") && i + 1 < args.size()) {
+                events.push_back({InputEvent::Kind::VideoEnd, std::stoi(argToUtf8(args[++i]))});
+                interact = true;
+            } else if (isFlag(args[i], "--sound-end") && i + 1 < args.size()) {
+                events.push_back({InputEvent::Kind::SoundEnd, std::stoi(argToUtf8(args[++i]))});
+                interact = true;
+            } else if (isFlag(args[i], "--anim-end") && i + 1 < args.size()) {
+                events.push_back({InputEvent::Kind::AnimEnd, std::stoi(argToUtf8(args[++i]))});
                 interact = true;
             } else if (isFlag(args[i], "--key") && i + 1 < args.size()) {
                 events.push_back({InputEvent::Kind::Key, std::stoi(argToUtf8(args[++i])), 0});
