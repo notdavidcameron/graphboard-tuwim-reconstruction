@@ -441,6 +441,7 @@ BitmapHolderState parseBitmapHolderState(BinaryReader& reader) {
             bitmap.top = static_cast<std::int32_t>(readU32At(blob, 0x0c));
             bitmap.right = static_cast<std::int32_t>(readU32At(blob, 0x10));
             bitmap.bottom = static_cast<std::int32_t>(readU32At(blob, 0x14));
+            bitmap.layer = static_cast<std::int32_t>(readU32At(blob, 0x18));
             bitmap.name = readNulPaddedName(blob, 0x34, 12);
             bitmap.pixelOffset = bitmap.blobOffset + kBitmapHeaderBytes;
             const auto width = static_cast<std::uint32_t>(bitmap.right - bitmap.left);

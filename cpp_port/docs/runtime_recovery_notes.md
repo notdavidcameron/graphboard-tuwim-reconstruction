@@ -186,11 +186,35 @@ recovered engine functions, not the JS approximation.
    silhouette exactly, and the C++ parser's opaque-pixel count matches an
    independent Python reader for every masked CUDA definition.
 
-   Still TODO: MultiBitmap/Bitmap_Holder click callbacks (same mechanism, needs
-   their per-item rects). Playback-completion events
-   (`Transparent_Video_Holder.TheEnd`, `Sound_Holder.EndPlaySound`) need
-   timer/duration simulation, not hit-testing, and real asset effects (blitting
-   frames, playing WAVs) remain out of scope for a headless runtime.
+   **Bitmap_Holder (done).** Bitmaps are wired the same way, from
+   `BitmapHolder_LButtonDown_HitTestAndFireClick` (@ 10003f50): reverse scan,
+   `layer(record+0x18) == deep`, `PtInRect` (left/top inclusive, right/bottom
+   exclusive), and — unlike sprites/hotspots/multibitmap — **no visibility
+   gate**, so a bitmap is clickable whenever it is on the dispatched layer and
+   under the point. The callback is `MouseClickOnDown(index)` (single arg; the
+   record index, no stored id); hover fires `MouseMoveIn`/`MouseMoveOut`. There
+   is no right-click event. `MoveTo(id, x, y)` shifts the live top-left, so what
+   is clickable moves with it. Verified on real data: on ABEC_C (the alphabet
+   game) a full-screen background bitmap sits under scattered letter sprites;
+   clicking a gap fires `Bitmap_Holder.MouseClickOnDown(0)` (the "wrong answer"
+   buzzer branch), while clicking a letter is consumed by the sprite on the same
+   layer — the board's list-order tie-break, reproduced by `findHit`.
+
+   Still TODO: Bitmap_Holder/MultiBitmap **pixel-accurate** hits. Both refine a
+   rect hit with the same per-pixel test as sprites (43 of 203 bitmaps, 156 of
+   201 multibitmap records opt in). For bitmaps the pixel base is ambiguous —
+   `LButtonDown` indexes `record+0x80` but the serialized pixels sit at
+   `blob+0x90` (`pixelSizeConsistent` proves the plane fills `[+0x90, blobEnd)`),
+   a 16-byte discrepancy to resolve before implementing. MultiBitmap click
+   callbacks are also unwired: only 1 page uses them, and the callback is the
+   4-arg `MouseClickOnDown(id, x, y, deep)` where x/y are the bitmap's own
+   position (not the mouse point) — recovered in
+   `MultiBmp_LButtonDown_HitTestAndFireClick` (@ 100047a5) but low priority.
+
+   Playback-completion events (`Transparent_Video_Holder.TheEnd`,
+   `Sound_Holder.EndPlaySound`) need timer/duration simulation, not hit-testing,
+   and real asset effects (blitting frames, playing WAVs) remain out of scope
+   for a headless runtime.
 
    **Corrected 2026-07-10 (was a real bug):** hotspots are addressed by the
    record's stored id (`+0x18`), not their array index, both for the

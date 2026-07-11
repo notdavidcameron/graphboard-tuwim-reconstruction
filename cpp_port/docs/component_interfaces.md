@@ -393,6 +393,24 @@ whose layer field equals it:
 - `Sprite_Holder`: instance `+0x18` is the layer. (`MinMaxDeep` scans exactly
   this field for its min/max, which is what proves the field's meaning.)
 - `HotSpot_Holder`: record `+0x1c` is the layer.
+- `Bitmap_Holder`: record `+0x18` is the layer
+  (`BitmapHolder_LButtonDown_HitTestAndFireClick` @ 10003f50).
+- `MultiBitmap`: record `+0x18` is the layer
+  (`MultiBmp_LButtonDown_HitTestAndFireClick` @ 100047a5).
+
+Per-holder differences within that common frame, all read from the DLLs:
+
+| holder | rect edges | gate before the click | callback | id passed |
+|--------|-----------|-----------------------|----------|-----------|
+| HotSpot_Holder | all inclusive | `enabled` (+0x20) | `LeftButtonClickOn` / `RightButtonClickOn` | stored id (+0x18) |
+| Sprite_Holder | all inclusive | `visible` (+0x88) | `MouseClickOnDown` | instance index |
+| Bitmap_Holder | `PtInRect` (r/b exclusive) | *none* | `MouseClickOnDown` | record index |
+| MultiBitmap | `PtInRect` (r/b exclusive) | `shown` (+0x3c) | `MouseClickOnDown(id, x, y, deep)` | record index |
+
+`Bitmap_Holder` has no right-click event and no visibility gate in the click
+path. `MultiBitmap`'s callback is the only 4-arg one, and its `x`/`y` are the
+bitmap's own `left`/`top` (record +0x08/+0x0c), not the mouse point; `deep` is
+its layer.
 
 Since the document keeps the aggregate min/max layer, the board walks layers
 top-down and stops at the first component that sets `*handled` — so the highest

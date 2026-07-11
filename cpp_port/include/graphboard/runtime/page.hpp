@@ -26,6 +26,14 @@ struct SpriteGeometry {
     std::vector<SpriteFrame> frames;   // indexed by phase
 };
 
+// Static geometry of one Bitmap_Holder bitmap. Its top-left position is
+// script-mutable (MoveTo) and lives in items; the size and layer are fixed.
+struct BitmapGeometry {
+    std::int32_t layer = 0;
+    std::int32_t width = 0;
+    std::int32_t height = 0;
+};
+
 struct ComponentState {
     std::string displayName;               // e.g. "Sprite_Holder"
     HolderKind kind = HolderKind::Unknown;
@@ -33,6 +41,7 @@ struct ComponentState {
     std::map<std::string, Value> props;                 // holder-wide state
     std::vector<HotSpot> hotspots;         // HotSpot_Holder geometry (for hit tests)
     std::vector<SpriteGeometry> sprites;   // Sprite_Holder geometry, by spriteID
+    std::vector<BitmapGeometry> bitmaps;   // Bitmap_Holder geometry, by bitmapID
 };
 
 // One host call made while executing script (builtin or component method).

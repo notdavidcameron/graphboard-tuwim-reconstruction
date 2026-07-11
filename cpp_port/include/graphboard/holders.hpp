@@ -339,14 +339,21 @@ TextHolderState parseTextHolderState(BinaryReader& reader);
 //       u8  blob[blobByteCount]
 //
 // Blob fields (verified): rect left/top/right/bottom i32 at +0x08..+0x14,
-// name char[12] at +0x34, current-position copies at +0x40/+0x44 (load copies
-// +0x08/+0x0c over them), 8-bpp pixels from +0x90 with stride
-// ((right-left)+3 & ~3) and (bottom-top) rows.
+// layer ("deep") i32 at +0x18, name char[12] at +0x34, current-position copies
+// at +0x40/+0x44 (load copies +0x08/+0x0c over them), 8-bpp pixels from +0x90
+// with stride ((right-left)+3 & ~3) and (bottom-top) rows.
+//
+// The click path (BitmapHolder_LButtonDown_HitTestAndFireClick, @ 10003f50)
+// hit-tests by rect + layer only (no visibility gate) and fires
+// MouseClickOnDown(index). It can refine a rect hit with a per-pixel
+// transparency test when the record opts in (record+0x20 and +0x28 both != 0;
+// 43 of 203 bitmaps in the title) — not yet modelled here.
 // -------------------------------------------------------------------------
 struct BitmapHolderBitmap {
     std::uint32_t blobByteCount = 0;
     std::size_t blobOffset = 0;
     std::int32_t left = 0, top = 0, right = 0, bottom = 0;
+    std::int32_t layer = 0;           // blob+0x18 ("deep")
     std::string name;                 // blob+0x34
     std::size_t pixelOffset = 0;      // blobOffset + 0x90
     bool pixelSizeConsistent = false; // stride*(bottom-top) == blobByteCount-0x90

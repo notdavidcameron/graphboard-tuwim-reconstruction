@@ -54,7 +54,23 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
         case HolderKind::TransparentVideoHolder: parseTransparentVideoHolderState(reader); break;
         case HolderKind::SoundHolder: parseSoundHolderState(reader); break;
         case HolderKind::TextHolder: parseTextHolderState(reader); break;
-        case HolderKind::BitmapHolder: parseBitmapHolderState(reader); break;
+        case HolderKind::BitmapHolder: {
+            const auto bh = parseBitmapHolderState(reader);
+            // Bitmaps are addressed by index; the click path hit-tests by rect +
+            // layer with no visibility gate (BitmapHolder @ 10003f50).
+            for (std::size_t i = 0; i < bh.bitmaps.size(); ++i) {
+                const auto& bm = bh.bitmaps[i];
+                auto& item = state.items[static_cast<int>(i)];
+                item["x"] = Value::integer(bm.left);
+                item["y"] = Value::integer(bm.top);
+                BitmapGeometry geom;
+                geom.layer = bm.layer;
+                geom.width = bm.right - bm.left;
+                geom.height = bm.bottom - bm.top;
+                state.bitmaps.push_back(geom);
+            }
+            break;
+        }
         case HolderKind::Puzzle: parsePuzzleState(reader); break;
         case HolderKind::Recorder: parseRecorderState(reader); break;
         case HolderKind::VideoHolder: parseVideoHolderState(reader); break;
@@ -305,6 +321,23 @@ Candidate topItemIn(const ComponentState& state, int x, int y) {
                 best.layer = geom.layer;
             }
         }
+    } else if (state.kind == HolderKind::BitmapHolder) {
+        // BitmapHolder::LButtonDown @ 10003f50. Addressed by index, no
+        // visibility gate; the rect uses PtInRect (left/top inclusive,
+        // right/bottom exclusive) at the live top-left position.
+        for (std::size_t r = state.bitmaps.size(); r-- > 0;) {
+            const int id = static_cast<int>(r);
+            const auto& geom = state.bitmaps[r];
+            const auto left = itemInt(state, id, "x");
+            const auto top = itemInt(state, id, "y");
+            if (x < left || x >= left + geom.width || y < top || y >= top + geom.height) {
+                continue;
+            }
+            if (best.index == -1 || geom.layer > best.layer) {
+                best.index = id;
+                best.layer = geom.layer;
+            }
+        }
     }
     return best;
 }
@@ -373,6 +406,7 @@ const char* clickEventFor(HolderKind kind) {
     switch (kind) {
         case HolderKind::HotSpotHolder: return "LeftButtonClickOn";
         case HolderKind::SpriteHolder:  return "MouseClickOnDown";
+        case HolderKind::BitmapHolder:  return "MouseClickOnDown";
         default: return nullptr;
     }
 }
