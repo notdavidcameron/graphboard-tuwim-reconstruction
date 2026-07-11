@@ -16,12 +16,14 @@ recovery lives in the C++ port; this file summarizes the parts that bear on
     exact argument signatures.
 - `../cpp_port/docs/runtime_recovery_notes.md` — the engine lifecycle, the
   script-language shape, and the per-item status of the runtime port.
-- `../cpp_port/src/runtime/page.cpp` — a small, verified reference
-  implementation of the **component → script callback direction** for
-  `HotSpot_Holder` (see `Page::lButtonDown` / `rButtonDown` / `mouseMove`).
-  Unit-tested in `../cpp_port/tests/runtime_page.cpp` (`testHotSpotCallbacks`)
-  and regression-checked against real game files by
-  `../cpp_port/tools/verify_scenes.ps1`.
+- `../cpp_port/src/runtime/page.cpp` — a verified reference implementation of the
+  **component → script callback direction** for HotSpot_Holder, Sprite_Holder and
+  Bitmap_Holder: click, right-click, hover, pixel-accurate hit-testing, sprite
+  drag, and playback-completion (`Page::lButtonDown`/`lButtonUp`/`mouseMove`/
+  `drag`/`videoEnd`/`soundEnd`/`animationEnd`). Unit-tested in
+  `../cpp_port/tests/runtime_page.cpp` and regression-checked against real game
+  files by `../cpp_port/tools/verify_scenes.ps1`. Drive it with
+  `gbinspect PAGE.BDF --click X,Y | --drag X1,Y1,X2,Y2 | --video-end N | …`.
 
 ## The two-step input model (this is what the original board does)
 
@@ -64,14 +66,9 @@ with Ghidra; see "How the board routes raw input" in `component_interfaces.md`):
   This applies in both directions: the callback receives the id, and
   `EnableHotSpot(id)` / `DisableHotSpot(id)` match on it.
 
-  > **Confirmed bug in the current web_port.** `web_port/scenes/RZECZKA.json`
-  > emits `hitboxes` with ids `[0,1,2,3,4,5,6,7]` — the enumeration order — while
-  > the `.BDF` record's `+0x18` field holds `0,1,3,4,6,5,7,8`. `runtime.js` then
-  > dispatches `LeftButtonClickOn` with the index, so RZECZKA's third hotspot
-  > fires `rectID=2` (which its `switch` ignores) instead of `rectID=3`, and the
-  > fourth plays video 3 instead of video 4. The fix belongs in the scene
-  > exporter (`graphboard_export_scene.py`): emit the `+0x18` field as `id`.
-  > Every scene with non-contiguous ids is affected.
+  > **Fixed in web_port v41.** `graphboard_export_scene.py` now emits the stored
+  > `+0x18` id. RZECZKA exports `0,1,3,4,6,5,7,8`, matching the original
+  > callback and enable/disable addressing.
 - **Hit-test rule (click path):** a point hits when
   `left <= x <= right && top <= y <= bottom` — **inclusive on every edge** — and
   the hotspot is **enabled**. (The engine's separate *query* entry point,
@@ -90,52 +87,67 @@ with Ghidra; see "How the board routes raw input" in `component_interfaces.md`):
 - Every callback fires **only if** the page script defines that top-level
   handler.
 
-## Divergences worth checking in `runtime.js`
+## Remaining divergences in `runtime.js`
 
-Flagged from a read of `bindRuntimeEvents` (~L219–252) and
-`dispatchComponentEvent` (~L477); confirm before changing anything.
+The generic event-routing issues formerly listed here were fixed in v41:
+events are gated by holder type, MultiBitmap receives four arguments, and
+hotspot left/up/right/double-click callbacks use their recovered names.
 
-1. **`MouseClickOnDown` fired for every type on `mousedown` (L229).**
-   That event name is real for `Sprite_Holder`, `Transparent_Video_Holder`,
-   `MultiBitmap`, `Bitmap_Holder` — but **`HotSpot_Holder` has no
-   `MouseClickOnDown` event**. Its click event is `LeftButtonClickOn` (correctly
-   fired on `click` at L249). Firing `MouseClickOnDown` on a hotspot is a
-   no-op only because no such handler is ever defined; it's still the wrong
-   name. Consider gating the `mousedown → MouseClickOnDown` dispatch to the
-   holder kinds that actually declare it.
-
-2. **`MultiBitmap.MouseClickOnDown` has a 4-arg signature.**
-   `MouseClickOnDown(int bitmapID, int x, int y, int deep)` — not the bare
-   `(id)` the generic path passes. If any scene handles it, the extra args
-   matter.
-
-3. **Right-click component callbacks.** `app.js` dispatches the page-level
-   `OnRButtonDown`, but `bindRuntimeEvents` has no `contextmenu`/right-button
-   path, so `HotSpot_Holder.RightButtonClickOn` (and the sprite/video
-   right-click analogs, where they exist) never fire from a component. Add a
-   right-button branch if a scene needs it.
-
-4. **Unimplemented-but-real events.** These are in the recovered vocabulary and
+1. **Unimplemented-but-real events.** These are in the recovered vocabulary and
    may be referenced by scene scripts; grep the scenes before assuming they're
    unused: HotSpot `DBLClickOn` / `LeftButtonClickOnUp`; Sprite `MouseDrop`
    (5 args), `InPlace(id,x,y)`, `Crash(id,x,y,angle)`, `EndAnimation(id)`;
    Text `PlayMark(id,markNo)`, `EndOfSynchroText(id)`. Signatures are all in
    `component_interfaces.md`.
 
-## Not yet wired in the C++ reference either (so no ground-truth impl to copy)
+2. **Sprite animation timing.** v42 recovers each placed sprite's saved phase,
+   layer and visibility, so hidden sprites no longer leak onto the page. The
+   internal timing that advances an animated phase and fires `EndAnimation`
+   is still not reconstructed (the C++ port doesn't model it either — see below).
 
-The C++ port only wires the HotSpot direction so far. For the others the
-**names/signatures are recovered** (`component_interfaces.md`) but the firing
-geometry is not yet settled:
+## Now wired in the C++ reference (ground-truth impls to copy)
 
-- Sprite/Bitmap/MultiBitmap click & hover callbacks need per-item click rects
-  and a verified **cross-kind z-order** rule (nothing yet establishes whether a
-  hotspot or an overlapping sprite wins a click). The web_port sidesteps this
-  with DOM stacking + `z-index`, which is a reasonable browser approximation but
-  is not the recovered rule.
-- Playback-completion events (`Transparent_Video_Holder.TheEnd(videoID)`,
-  `Sound_Holder.EndPlaySound(soundID)`, `Text_Holder.EndOfSynchroText`) are
-  timer/duration-driven, not hit-tested. The web_port approximates these with
-  `setTimeout` (e.g. L1388/L1444); the real durations come from the asset
-  headers (board-video `frameDurationMs`/`frameCount`, WAV length) if exact
-  timing is ever needed.
+Everything below was recovered from the DLLs and implemented + verified in
+`cpp_port/src/runtime/page.cpp` since these notes were first written. The
+**cross-kind z-order question is answered**: the board dispatches raw mouse one
+layer at a time, topmost first, each holder testing only items on that layer and
+stopping at the first component that handles it. `Page::findHit` reproduces it by
+scanning all holders and keeping the strictly-highest layer (earliest holder wins
+a tie). Full per-holder table in `component_interfaces.md` ("How the board routes
+raw input"). Key points for `runtime.js`:
+
+- **Sprite_Holder**: click fires `MouseClickOnDown(index)` (instance index, no
+  stored id), hover `MouseMoveIn/Out`, all-edges-inclusive rect. **No right-click
+  event.**
+- **Bitmap_Holder**: click fires `MouseClickOnDown(index)`, hover in/out; rect is
+  `PtInRect` (**right/bottom exclusive**); **no visibility gate** and no
+  right-click event.
+- **Pixel-accurate hit-testing.** Irregular sprites/bitmaps refine a rect hit
+  with a per-pixel transparency test — a click on a transparent pixel misses
+  (confirmed in-game: transparent backgrounds do nothing). Sprite pixels:
+  `blob+0xb8 + frame[0x48]`. **Bitmap pixels are at `blob+0x80`, NOT `+0x90`** —
+  reading `+0x90` shears every row 16 bytes. `graphboard_export_scene.py` /
+  `graphboard_extract_assets.py` still read bitmaps at `+0x90`; fix both to
+  `+0x80` (see `component_interfaces.md`).
+- **Sprite drag** (`instance+0x1c == 1` → draggable; CUDA butterflies yes, DYZIO
+  food no): down fires `MouseClickOnDown`, move follows at the grab offset with
+  hover suppressed, up fires `MouseClickOnUp(id)` then
+  `MouseDrop(id, left, top, right, bottom)` with the final frame rect.
+- **Playback completion**: `Transparent_Video_Holder.TheEnd(id)`,
+  `Sound_Holder.EndPlaySound(id)`, `Sprite_Holder.EndAnimation(id)` fire on the
+  matching component when a clip ends. The C++ port takes the *event* explicitly
+  and does **not** model the *timing* (frame duration / WAV length / phase count)
+  — the web_port's `setTimeout` approximation (L1388/L1444) is still the only
+  timing model on either side. Durations if needed: board-video
+  `frameDurationMs`×`frameCount`, WAV length.
+- **The hover caption** (bottom-center poem title) is just
+  `Text_Holder.SetText(0, "<title>")` from the hover handler — e.g. WYBORW's
+  `HotSpot_Holder.MouseMoveIn` switches rectID to a title string.
+
+## Still unwired on both sides
+
+- MultiBitmap click callbacks (only 1 page uses them): 4-arg
+  `MouseClickOnDown(id, x, y, deep)` where x/y are the bitmap's own `left`/`top`,
+  recovered in `MultiBmp_LButtonDown_HitTestAndFireClick` (@ 100047a5).
+- Autonomous animation timing (the point above): what advances a phase and
+  decides when a clip ends.
