@@ -171,13 +171,17 @@ raw input"). Key points for `runtime.js`:
   food no): down fires `MouseClickOnDown`, move follows at the grab offset with
   hover suppressed, up fires `MouseClickOnUp(id)` then
   `MouseDrop(id, left, top, right, bottom)` with the final frame rect.
-- **Playback completion**: `Transparent_Video_Holder.TheEnd(id)`,
-  `Sound_Holder.EndPlaySound(id)`, `Sprite_Holder.EndAnimation(id)` fire on the
-  matching component when a clip ends. The C++ port takes the *event* explicitly
-  and does **not** model the *timing* (frame duration / WAV length / phase count)
-  — the web_port's `setTimeout` approximation (L1388/L1444) is still the only
-  timing model on either side. Durations if needed: board-video
-  `frameDurationMs`×`frameCount`, WAV length.
+- **Playback completion + timing**: `Transparent_Video_Holder.TheEnd(id)`,
+  `Sound_Holder.EndPlaySound(id)`, `Sprite_Holder.EndAnimation(id)` fire when a
+  clip ends. The C++ port now has a **duration-driven clock** (`advanceTime` /
+  `gbinspect --advance MS`), not `setTimeout` guesses: **video** duration is
+  `frameDurationMs × frameCount` and **sound** is the WAV length (data-chunk
+  bytes ÷ fmt byte-rate). `Play`/`PlayDSound` schedule the completion at
+  `now + duration`; a `TheEnd` that starts the next clip chains cutscenes
+  (INTRO's ten clips play through and `LoadPage` to the menu autonomously). The
+  web_port can replace its `setTimeout` L1388/L1444 with these exact durations.
+  Still open on both sides: **sprite animation timing** (the flying sprites are
+  positional movement, not phase cycling) and **group-namespace sounds**.
 - **The hover caption** (bottom-center poem title) is just
   `Text_Holder.SetText(0, "<title>")` from the hover handler — e.g. WYBORW's
   `HotSpot_Holder.MouseMoveIn` switches rectID to a title string.
