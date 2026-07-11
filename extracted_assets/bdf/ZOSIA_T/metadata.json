@@ -37,7 +37,50 @@
       "display_name": "Bitmap_Holder",
       "private_offset": 4035,
       "private_size": 307356,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\bitmap_holder\\01_Bitmap_Holder_000_1atloc dz_640x480.bmp",
+          "offset": 4175,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "1atloc dz",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 640,
+            "height": 480
+          },
+          "geometry_confidence": "serialized_entry"
+        }
+      ],
+      "bitmap_holder": {
+        "version": 1,
+        "declared_count": 1,
+        "parsed_count": 1,
+        "frames": [
+          {
+            "index": 0,
+            "name": "1atloc dz",
+            "record_offset": 4043,
+            "record_size": 307344,
+            "pixel_offset": 4175,
+            "width": 640,
+            "height": 480,
+            "right": 640,
+            "bottom": 480,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 640,
+              "height": 480
+            },
+            "bmp_output": "extracted_assets\\bdf\\ZOSIA_T\\bitmap_holder\\01_Bitmap_Holder_000_1atloc dz_640x480.bmp"
+          }
+        ]
+      }
     },
     {
       "index": 2,
@@ -46,7 +89,621 @@
       "display_name": "Sprite_Holder",
       "private_offset": 312925,
       "private_size": 120976,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_000_play 01_phase_00.png",
+          "offset": 313281,
+          "size": 1449,
+          "pixel_size": 1440,
+          "width": 24,
+          "height": 30,
+          "name": "play 01",
+          "id": 0,
+          "definition_id": 0,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_000_play 01_phase_00.png",
+              "size": 1449
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_000_play 01_phase_01.png",
+              "size": 1190
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_001_stop 01_phase_00.png",
+          "offset": 315121,
+          "size": 1287,
+          "pixel_size": 1512,
+          "width": 27,
+          "height": 28,
+          "name": "stop 01",
+          "id": 1,
+          "definition_id": 1,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_001_stop 01_phase_00.png",
+              "size": 1287
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_001_stop 01_phase_01.png",
+              "size": 1198
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_002_przew1_phase_00.png",
+          "offset": 317061,
+          "size": 1290,
+          "pixel_size": 756,
+          "width": 18,
+          "height": 21,
+          "name": "przew1",
+          "id": 2,
+          "definition_id": 2,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_002_przew1_phase_00.png",
+              "size": 1290
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_002_przew1_phase_01.png",
+              "size": 1025
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_003_przew2_phase_00.png",
+          "offset": 318245,
+          "size": 1130,
+          "pixel_size": 756,
+          "width": 18,
+          "height": 21,
+          "name": "przew2",
+          "id": 3,
+          "definition_id": 3,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_003_przew2_phase_00.png",
+              "size": 1130
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_003_przew2_phase_01.png",
+              "size": 1031
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_004_przew3_phase_00.png",
+          "offset": 319387,
+          "size": 1139,
+          "pixel_size": 798,
+          "width": 19,
+          "height": 21,
+          "name": "przew3",
+          "id": 4,
+          "definition_id": 4,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_004_przew3_phase_00.png",
+              "size": 1139
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_004_przew3_phase_01.png",
+              "size": 1050
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_005_przew4_phase_00.png",
+          "offset": 320575,
+          "size": 1320,
+          "pixel_size": 798,
+          "width": 19,
+          "height": 21,
+          "name": "przew4",
+          "id": 5,
+          "definition_id": 5,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_005_przew4_phase_00.png",
+              "size": 1320
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_005_przew4_phase_01.png",
+              "size": 1053
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_006_przew5_phase_00.png",
+          "offset": 321801,
+          "size": 1114,
+          "pixel_size": 756,
+          "width": 18,
+          "height": 21,
+          "name": "przew5",
+          "id": 6,
+          "definition_id": 6,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_006_przew5_phase_00.png",
+              "size": 1114
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_006_przew5_phase_01.png",
+              "size": 1034
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_00.png",
+          "offset": 323311,
+          "size": 3319,
+          "pixel_size": 109470,
+          "width": 89,
+          "height": 82,
+          "name": "mikrofon ",
+          "id": 7,
+          "definition_id": 7,
+          "phase_count": 15,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_00.png",
+              "size": 3319
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_01.png",
+              "size": 2160
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_02.png",
+              "size": 2224
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_03.png",
+              "size": 2418
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_04.png",
+              "size": 2576
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_05.png",
+              "size": 2727
+            },
+            {
+              "phase": 6,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_06.png",
+              "size": 2613
+            },
+            {
+              "phase": 7,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_07.png",
+              "size": 2470
+            },
+            {
+              "phase": 8,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_08.png",
+              "size": 2311
+            },
+            {
+              "phase": 9,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_09.png",
+              "size": 2175
+            },
+            {
+              "phase": 10,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_10.png",
+              "size": 1985
+            },
+            {
+              "phase": 11,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_11.png",
+              "size": 2153
+            },
+            {
+              "phase": 12,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_12.png",
+              "size": 1952
+            },
+            {
+              "phase": 13,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_13.png",
+              "size": 1481
+            },
+            {
+              "phase": 14,
+              "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_14.png",
+              "size": 1209
+            }
+          ]
+        }
+      ],
+      "sprite_holder": {
+        "version": 1,
+        "definition_count": 8,
+        "instance_count": 8,
+        "parsed_definitions": 8,
+        "parsed_instances": 8,
+        "definitions": [
+          {
+            "index": 0,
+            "name": "play 01",
+            "record_offset": 312937,
+            "blob_offset": 312941,
+            "blob_size": 1780,
+            "width": 24,
+            "height": 30,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_000_play 01_phase_00.png",
+                "size": 1449
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_000_play 01_phase_01.png",
+                "size": 1190
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "stop 01",
+            "record_offset": 314721,
+            "blob_offset": 314725,
+            "blob_size": 1908,
+            "width": 27,
+            "height": 28,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_001_stop 01_phase_00.png",
+                "size": 1287
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_001_stop 01_phase_01.png",
+                "size": 1198
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "przew1",
+            "record_offset": 316633,
+            "blob_offset": 316637,
+            "blob_size": 1180,
+            "width": 18,
+            "height": 21,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_002_przew1_phase_00.png",
+                "size": 1290
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_002_przew1_phase_01.png",
+                "size": 1025
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "name": "przew2",
+            "record_offset": 317817,
+            "blob_offset": 317821,
+            "blob_size": 1180,
+            "width": 18,
+            "height": 21,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_003_przew2_phase_00.png",
+                "size": 1130
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_003_przew2_phase_01.png",
+                "size": 1031
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "name": "przew3",
+            "record_offset": 319001,
+            "blob_offset": 319005,
+            "blob_size": 1180,
+            "width": 19,
+            "height": 21,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_004_przew3_phase_00.png",
+                "size": 1139
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_004_przew3_phase_01.png",
+                "size": 1050
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "name": "przew4",
+            "record_offset": 320185,
+            "blob_offset": 320189,
+            "blob_size": 1184,
+            "width": 19,
+            "height": 21,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_005_przew4_phase_00.png",
+                "size": 1320
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_005_przew4_phase_01.png",
+                "size": 1053
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "name": "przew5",
+            "record_offset": 321373,
+            "blob_offset": 321377,
+            "blob_size": 1180,
+            "width": 18,
+            "height": 21,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_006_przew5_phase_00.png",
+                "size": 1114
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_006_przew5_phase_01.png",
+                "size": 1034
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "name": "mikrofon ",
+            "record_offset": 322557,
+            "blob_offset": 322561,
+            "blob_size": 110220,
+            "width": 89,
+            "height": 82,
+            "phase_count": 15,
+            "phase_hint": 14,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_00.png",
+                "size": 3319
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_01.png",
+                "size": 2160
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_02.png",
+                "size": 2224
+              },
+              {
+                "phase": 3,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_03.png",
+                "size": 2418
+              },
+              {
+                "phase": 4,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_04.png",
+                "size": 2576
+              },
+              {
+                "phase": 5,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_05.png",
+                "size": 2727
+              },
+              {
+                "phase": 6,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_06.png",
+                "size": 2613
+              },
+              {
+                "phase": 7,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_07.png",
+                "size": 2470
+              },
+              {
+                "phase": 8,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_08.png",
+                "size": 2311
+              },
+              {
+                "phase": 9,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_09.png",
+                "size": 2175
+              },
+              {
+                "phase": 10,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_10.png",
+                "size": 1985
+              },
+              {
+                "phase": 11,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_11.png",
+                "size": 2153
+              },
+              {
+                "phase": 12,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_12.png",
+                "size": 1952
+              },
+              {
+                "phase": 13,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_13.png",
+                "size": 1481
+              },
+              {
+                "phase": 14,
+                "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_14.png",
+                "size": 1209
+              }
+            ]
+          }
+        ],
+        "instances": [
+          {
+            "index": 0,
+            "definition_id": 0,
+            "field04": 1,
+            "x": 42,
+            "y": 223,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 432781
+          },
+          {
+            "index": 1,
+            "definition_id": 1,
+            "field04": 1,
+            "x": 68,
+            "y": 225,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 432921
+          },
+          {
+            "index": 2,
+            "definition_id": 2,
+            "field04": 1,
+            "x": 120,
+            "y": 227,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 433061
+          },
+          {
+            "index": 3,
+            "definition_id": 3,
+            "field04": 1,
+            "x": 139,
+            "y": 227,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 433201
+          },
+          {
+            "index": 4,
+            "definition_id": 4,
+            "field04": 1,
+            "x": 157,
+            "y": 227,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 433341
+          },
+          {
+            "index": 5,
+            "definition_id": 5,
+            "field04": 1,
+            "x": 176,
+            "y": 227,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 433481
+          },
+          {
+            "index": 6,
+            "definition_id": 6,
+            "field04": 1,
+            "x": 194,
+            "y": 227,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 433621
+          },
+          {
+            "index": 7,
+            "definition_id": 7,
+            "field04": 1,
+            "x": 534,
+            "y": 24,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 433761
+          }
+        ]
+      }
     },
     {
       "index": 3,
@@ -61,13 +718,295 @@
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_T\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\ZOSIA_T\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_T\\script.txt",
+      "path": "extracted_assets\\bdf\\ZOSIA_T\\script.txt",
       "size": 8460
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\ZOSIA_T\\bitmap_holder\\01_Bitmap_Holder_000_1atloc dz_640x480.bmp",
+      "offset": 4175,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "1atloc dz",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 640,
+        "height": 480
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_000_play 01_phase_00.png",
+      "offset": 313281,
+      "size": 1449,
+      "pixel_size": 1440,
+      "width": 24,
+      "height": 30,
+      "name": "play 01",
+      "id": 0,
+      "definition_id": 0,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_000_play 01_phase_00.png",
+          "size": 1449
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_000_play 01_phase_01.png",
+          "size": 1190
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_001_stop 01_phase_00.png",
+      "offset": 315121,
+      "size": 1287,
+      "pixel_size": 1512,
+      "width": 27,
+      "height": 28,
+      "name": "stop 01",
+      "id": 1,
+      "definition_id": 1,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_001_stop 01_phase_00.png",
+          "size": 1287
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_001_stop 01_phase_01.png",
+          "size": 1198
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_002_przew1_phase_00.png",
+      "offset": 317061,
+      "size": 1290,
+      "pixel_size": 756,
+      "width": 18,
+      "height": 21,
+      "name": "przew1",
+      "id": 2,
+      "definition_id": 2,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_002_przew1_phase_00.png",
+          "size": 1290
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_002_przew1_phase_01.png",
+          "size": 1025
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_003_przew2_phase_00.png",
+      "offset": 318245,
+      "size": 1130,
+      "pixel_size": 756,
+      "width": 18,
+      "height": 21,
+      "name": "przew2",
+      "id": 3,
+      "definition_id": 3,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_003_przew2_phase_00.png",
+          "size": 1130
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_003_przew2_phase_01.png",
+          "size": 1031
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_004_przew3_phase_00.png",
+      "offset": 319387,
+      "size": 1139,
+      "pixel_size": 798,
+      "width": 19,
+      "height": 21,
+      "name": "przew3",
+      "id": 4,
+      "definition_id": 4,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_004_przew3_phase_00.png",
+          "size": 1139
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_004_przew3_phase_01.png",
+          "size": 1050
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_005_przew4_phase_00.png",
+      "offset": 320575,
+      "size": 1320,
+      "pixel_size": 798,
+      "width": 19,
+      "height": 21,
+      "name": "przew4",
+      "id": 5,
+      "definition_id": 5,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_005_przew4_phase_00.png",
+          "size": 1320
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_005_przew4_phase_01.png",
+          "size": 1053
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_006_przew5_phase_00.png",
+      "offset": 321801,
+      "size": 1114,
+      "pixel_size": 756,
+      "width": 18,
+      "height": 21,
+      "name": "przew5",
+      "id": 6,
+      "definition_id": 6,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_006_przew5_phase_00.png",
+          "size": 1114
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_006_przew5_phase_01.png",
+          "size": 1034
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_00.png",
+      "offset": 323311,
+      "size": 3319,
+      "pixel_size": 109470,
+      "width": 89,
+      "height": 82,
+      "name": "mikrofon ",
+      "id": 7,
+      "definition_id": 7,
+      "phase_count": 15,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_00.png",
+          "size": 3319
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_01.png",
+          "size": 2160
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_02.png",
+          "size": 2224
+        },
+        {
+          "phase": 3,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_03.png",
+          "size": 2418
+        },
+        {
+          "phase": 4,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_04.png",
+          "size": 2576
+        },
+        {
+          "phase": 5,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_05.png",
+          "size": 2727
+        },
+        {
+          "phase": 6,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_06.png",
+          "size": 2613
+        },
+        {
+          "phase": 7,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_07.png",
+          "size": 2470
+        },
+        {
+          "phase": 8,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_08.png",
+          "size": 2311
+        },
+        {
+          "phase": 9,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_09.png",
+          "size": 2175
+        },
+        {
+          "phase": 10,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_10.png",
+          "size": 1985
+        },
+        {
+          "phase": 11,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_11.png",
+          "size": 2153
+        },
+        {
+          "phase": 12,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_12.png",
+          "size": 1952
+        },
+        {
+          "phase": 13,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_13.png",
+          "size": 1481
+        },
+        {
+          "phase": 14,
+          "path": "extracted_assets\\bdf\\ZOSIA_T\\sprite_holder\\02_Sprite_Holder_007_mikrofon_phase_14.png",
+          "size": 1209
+        }
+      ]
     }
   ],
   "script": {

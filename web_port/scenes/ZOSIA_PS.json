@@ -24,22 +24,223 @@
       "namespace": "Page",
       "index": 0,
       "z": 0,
-      "visible": false,
+      "visible": true,
       "rect": {
         "x": 84,
-        "y": 283,
-        "width": 142,
-        "height": 137
+        "y": 32,
+        "width": 547,
+        "height": 444
       },
-      "geometryConfidence": "serialized_entry",
+      "geometryConfidence": "serialized_entries",
       "itemCount": null,
       "hitboxes": [],
       "sourceOffset": 309353,
-      "geometrySourceOffset": 310505,
+      "geometrySourceOffset": null,
       "privateOffset": 310485,
       "privateSize": 203584,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/bdf/ZOSIA_PS/bitmap_holder/00_Bitmap_Holder_000_b_ben 02_142x137.bmp",
+      "assets": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_000_b_ben 02_142x137.bmp",
+          "url": "../extracted_assets/bdf/ZOSIA_PS/bitmap_holder/00_Bitmap_Holder_000_b_ben 02_142x137.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 142,
+          "height": 137,
+          "frameCount": null,
+          "offset": 310625,
+          "name": "bęben 02",
+          "id": 0,
+          "rect": {
+            "x": 84,
+            "y": 283,
+            "width": 142,
+            "height": 137
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_001_b_ben 02_207x155.bmp",
+          "url": "../extracted_assets/bdf/ZOSIA_PS/bitmap_holder/00_Bitmap_Holder_001_b_ben 02_207x155.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 207,
+          "height": 155,
+          "frameCount": null,
+          "offset": 330501,
+          "name": "bęben 02",
+          "id": 1,
+          "rect": {
+            "x": 149,
+            "y": 321,
+            "width": 207,
+            "height": 155
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_002_b_ben 02_204x145.bmp",
+          "url": "../extracted_assets/bdf/ZOSIA_PS/bitmap_holder/00_Bitmap_Holder_002_b_ben 02_204x145.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 204,
+          "height": 145,
+          "frameCount": null,
+          "offset": 362889,
+          "name": "bęben 02",
+          "id": 2,
+          "rect": {
+            "x": 291,
+            "y": 286,
+            "width": 204,
+            "height": 145
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_003_b_benek 0_74x70.bmp",
+          "url": "../extracted_assets/bdf/ZOSIA_PS/bitmap_holder/00_Bitmap_Holder_003_b_benek 0_74x70.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 74,
+          "height": 70,
+          "frameCount": null,
+          "offset": 392617,
+          "name": "bębenek 0",
+          "id": 3,
+          "rect": {
+            "x": 353,
+            "y": 209,
+            "width": 74,
+            "height": 70
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_004_tamtam 02_105x119.bmp",
+          "url": "../extracted_assets/bdf/ZOSIA_PS/bitmap_holder/00_Bitmap_Holder_004_tamtam 02_105x119.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 105,
+          "height": 119,
+          "frameCount": null,
+          "offset": 398085,
+          "name": "tamtam 02",
+          "id": 4,
+          "rect": {
+            "x": 421,
+            "y": 177,
+            "width": 105,
+            "height": 119
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_005_tamtam 02_106x116.bmp",
+          "url": "../extracted_assets/bdf/ZOSIA_PS/bitmap_holder/00_Bitmap_Holder_005_tamtam 02_106x116.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 106,
+          "height": 116,
+          "frameCount": null,
+          "offset": 411085,
+          "name": "tamtam 02",
+          "id": 5,
+          "rect": {
+            "x": 525,
+            "y": 175,
+            "width": 106,
+            "height": 116
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_006_talerz 02_145x56.bmp",
+          "url": "../extracted_assets/bdf/ZOSIA_PS/bitmap_holder/00_Bitmap_Holder_006_talerz 02_145x56.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 145,
+          "height": 56,
+          "frameCount": null,
+          "offset": 423773,
+          "name": "talerz 02",
+          "id": 6,
+          "rect": {
+            "x": 416,
+            "y": 32,
+            "width": 145,
+            "height": 56
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_007_b_ben 01_142x137.bmp",
+          "url": "../extracted_assets/bdf/ZOSIA_PS/bitmap_holder/00_Bitmap_Holder_007_b_ben 01_142x137.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 142,
+          "height": 137,
+          "frameCount": null,
+          "offset": 432209,
+          "name": "bęben 01",
+          "id": 7,
+          "rect": {
+            "x": 84,
+            "y": 283,
+            "width": 142,
+            "height": 137
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_008_b_ben 01_207x155.bmp",
+          "url": "../extracted_assets/bdf/ZOSIA_PS/bitmap_holder/00_Bitmap_Holder_008_b_ben 01_207x155.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 207,
+          "height": 155,
+          "frameCount": null,
+          "offset": 452085,
+          "name": "bęben 01",
+          "id": 8,
+          "rect": {
+            "x": 149,
+            "y": 321,
+            "width": 207,
+            "height": 155
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_009_b_ben 01_204x145.bmp",
+          "url": "../extracted_assets/bdf/ZOSIA_PS/bitmap_holder/00_Bitmap_Holder_009_b_ben 01_204x145.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 204,
+          "height": 145,
+          "frameCount": null,
+          "offset": 484473,
+          "name": "bęben 01",
+          "id": 9,
+          "rect": {
+            "x": 291,
+            "y": 286,
+            "width": 204,
+            "height": 145
+          },
+          "geometryConfidence": "serialized_entry"
+        }
+      ],
       "audio": []
     },
     {
@@ -67,8 +268,18 @@
             "width": 88,
             "height": 126
           },
+          "name": "",
+          "layer": 1,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            180
+          ],
           "sourceOffset": 515185,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 25,
+          "auxState": 0
         },
         {
           "id": 1,
@@ -78,8 +289,18 @@
             "width": 152,
             "height": 145
           },
+          "name": "",
+          "layer": 1,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            180
+          ],
           "sourceOffset": 515286,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 25,
+          "auxState": 0
         },
         {
           "id": 2,
@@ -89,8 +310,18 @@
             "width": 103,
             "height": 141
           },
+          "name": "",
+          "layer": 1,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            180
+          ],
           "sourceOffset": 515387,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 25,
+          "auxState": 0
         },
         {
           "id": 3,
@@ -100,8 +331,18 @@
             "width": 60,
             "height": 69
           },
+          "name": "",
+          "layer": 1,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            180
+          ],
           "sourceOffset": 515488,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 25,
+          "auxState": 0
         },
         {
           "id": 4,
@@ -111,8 +352,18 @@
             "width": 102,
             "height": 104
           },
+          "name": "",
+          "layer": 1,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            180
+          ],
           "sourceOffset": 515589,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 25,
+          "auxState": 0
         },
         {
           "id": 5,
@@ -122,30 +373,60 @@
             "width": 93,
             "height": 106
           },
+          "name": "",
+          "layer": 1,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            180
+          ],
           "sourceOffset": 515690,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 25,
+          "auxState": 0
         },
         {
-          "id": 6,
+          "id": 7,
           "rect": {
             "x": 483,
             "y": 383,
             "width": 122,
             "height": 76
           },
+          "name": "",
+          "layer": 1,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            180
+          ],
           "sourceOffset": 515791,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 25,
+          "auxState": 0
         },
         {
-          "id": 7,
+          "id": 6,
           "rect": {
             "x": 420,
             "y": 35,
             "width": 139,
             "height": 53
           },
+          "name": "",
+          "layer": 1,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            180
+          ],
           "sourceOffset": 515892,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 25,
+          "auxState": 0
         },
         {
           "id": 8,
@@ -155,8 +436,18 @@
             "width": 89,
             "height": 61
           },
+          "name": "",
+          "layer": 1,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            180
+          ],
           "sourceOffset": 515993,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 25,
+          "auxState": 0
         }
       ],
       "sourceOffset": 514069,
@@ -193,7 +484,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_000_0007e392.wav",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_000_0007e392.wav",
           "url": "../extracted_assets/bdf/ZOSIA_PS/embedded/02_Sound_Holder_000_0007e392.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -203,7 +494,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_001_00080536.wav",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_001_00080536.wav",
           "url": "../extracted_assets/bdf/ZOSIA_PS/embedded/02_Sound_Holder_001_00080536.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -213,7 +504,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_002_000822ec.wav",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_002_000822ec.wav",
           "url": "../extracted_assets/bdf/ZOSIA_PS/embedded/02_Sound_Holder_002_000822ec.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -223,7 +514,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_003_000840d0.wav",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_003_000840d0.wav",
           "url": "../extracted_assets/bdf/ZOSIA_PS/embedded/02_Sound_Holder_003_000840d0.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -233,7 +524,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_004_00084fb2.wav",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_004_00084fb2.wav",
           "url": "../extracted_assets/bdf/ZOSIA_PS/embedded/02_Sound_Holder_004_00084fb2.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -243,7 +534,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_005_00085e10.wav",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_005_00085e10.wav",
           "url": "../extracted_assets/bdf/ZOSIA_PS/embedded/02_Sound_Holder_005_00085e10.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -253,7 +544,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_006_000877a2.wav",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_006_000877a2.wav",
           "url": "../extracted_assets/bdf/ZOSIA_PS/embedded/02_Sound_Holder_006_000877a2.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -263,7 +554,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_007_0008be72.wav",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_007_0008be72.wav",
           "url": "../extracted_assets/bdf/ZOSIA_PS/embedded/02_Sound_Holder_007_0008be72.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -273,7 +564,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_008_000918a2.wav",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_008_000918a2.wav",
           "url": "../extracted_assets/bdf/ZOSIA_PS/embedded/02_Sound_Holder_008_000918a2.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -309,7 +600,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\03_Text_Holder_000_00095950.wav",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\03_Text_Holder_000_00095950.wav",
           "url": "../extracted_assets/bdf/ZOSIA_PS/embedded/03_Text_Holder_000_00095950.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -319,7 +610,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\03_Text_Holder_001_00566de8.wav",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\03_Text_Holder_001_00566de8.wav",
           "url": "../extracted_assets/bdf/ZOSIA_PS/embedded/03_Text_Holder_001_00566de8.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -329,7 +620,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\03_Text_Holder_002_00a447be.wav",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\03_Text_Holder_002_00a447be.wav",
           "url": "../extracted_assets/bdf/ZOSIA_PS/embedded/03_Text_Holder_002_00a447be.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -345,23 +636,110 @@
       "sourceType": "Sprite_Holder",
       "namespace": "Page",
       "index": 4,
-      "z": 50,
+      "z": 0,
       "visible": true,
       "rect": {
-        "x": 0,
-        "y": 0,
-        "width": 48,
-        "height": 48
+        "x": 228,
+        "y": 246,
+        "width": 376,
+        "height": 207
       },
-      "geometryConfidence": "synthetic_items",
+      "geometryConfidence": "serialized_entries",
       "itemCount": 2,
       "hitboxes": [],
       "sourceOffset": 11450283,
       "geometrySourceOffset": null,
       "privateOffset": 11451817,
       "privateSize": 66132,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/bdf/ZOSIA_PS/sprite_holder/04_Sprite_Holder_000_marakas 0_phase_00.png",
+      "assets": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_000_marakas 0_phase_00.png",
+          "url": "../extracted_assets/bdf/ZOSIA_PS/sprite_holder/04_Sprite_Holder_000_marakas 0_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 122,
+          "height": 129,
+          "frameCount": null,
+          "offset": 11452431,
+          "name": "marakas 0",
+          "id": 0,
+          "definitionId": 0,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_000_marakas 0_phase_00.png",
+              "url": "../extracted_assets/bdf/ZOSIA_PS/sprite_holder/04_Sprite_Holder_000_marakas 0_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_000_marakas 0_phase_01.png",
+              "url": "../extracted_assets/bdf/ZOSIA_PS/sprite_holder/04_Sprite_Holder_000_marakas 0_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_000_marakas 0_phase_02.png",
+              "url": "../extracted_assets/bdf/ZOSIA_PS/sprite_holder/04_Sprite_Holder_000_marakas 0_phase_02.png"
+            }
+          ],
+          "phaseCount": 3,
+          "instanceOffset": 11517669,
+          "rect": {
+            "x": 482,
+            "y": 324,
+            "width": 122,
+            "height": 129
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek_phase_00.png",
+          "url": "../extracted_assets/bdf/ZOSIA_PS/sprite_holder/04_Sprite_Holder_001_dzwonek_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 90,
+          "height": 65,
+          "frameCount": null,
+          "offset": 11500119,
+          "name": "dzwonek ",
+          "id": 1,
+          "definitionId": 1,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek_phase_00.png",
+              "url": "../extracted_assets/bdf/ZOSIA_PS/sprite_holder/04_Sprite_Holder_001_dzwonek_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek_phase_01.png",
+              "url": "../extracted_assets/bdf/ZOSIA_PS/sprite_holder/04_Sprite_Holder_001_dzwonek_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek_phase_02.png",
+              "url": "../extracted_assets/bdf/ZOSIA_PS/sprite_holder/04_Sprite_Holder_001_dzwonek_phase_02.png"
+            }
+          ],
+          "phaseCount": 3,
+          "instanceOffset": 11517809,
+          "rect": {
+            "x": 228,
+            "y": 246,
+            "width": 90,
+            "height": 65
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 1
+        }
+      ],
       "audio": []
     },
     {
@@ -389,7 +767,7 @@
       "assets": [
         {
           "kind": "multibitmap_bmp",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\multibitmap\\05_MultiBitmap_000_zosia_b.bmp",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\multibitmap\\05_MultiBitmap_000_zosia_b.bmp",
           "url": "../extracted_assets/bdf/ZOSIA_PS/multibitmap/05_MultiBitmap_000_zosia_b.bmp",
           "stillPath": null,
           "stillUrl": null,
@@ -398,7 +776,8 @@
           "frameCount": null,
           "offset": 11518966,
           "name": "zosia_b",
-          "id": 0
+          "id": 0,
+          "initiallyVisible": false
         }
       ],
       "audio": []
@@ -411,10 +790,6 @@
       {
         "name": "OnOpenPage",
         "signature": "OnOpenPage()"
-      },
-      {
-        "name": "while",
-        "signature": "while(index < 128)"
       },
       {
         "name": "OnTimer",
@@ -437,20 +812,8 @@
         "signature": "UstawAktywnoscStrony(int nowaAkcja)"
       },
       {
-        "name": "switch",
-        "signature": "switch(nowaAkcja)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(akcja)"
-      },
-      {
         "name": "OnKeyDown",
         "signature": "OnKeyDown(UINT nChar)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(nChar)"
       },
       {
         "name": "OnKeyUp",
@@ -461,16 +824,12 @@
         "signature": "Muzyka(int nrRuchu)"
       },
       {
-        "name": "switch",
-        "signature": "switch(nrRuchu)"
-      },
-      {
         "name": "Sound_Holder.EndPlaySound",
         "signature": "Sound_Holder.EndPlaySound(int soundID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(soundID)"
+        "name": "HotSpot_Holder.LeftButtonClickOn",
+        "signature": "HotSpot_Holder.LeftButtonClickOn(int rectID)"
       },
       {
         "name": "HotSpot_Holder.MouseMoveIn",
@@ -509,48 +868,16 @@
         "signature": "Text_Holder.PlayMark(int textID,int markNo)"
       },
       {
-        "name": "if",
-        "signature": "if(textID == 3)"
-      },
-      {
-        "name": "if",
-        "signature": "if(maxRuchow > markNo)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseClickOnDown",
         "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(glosnosc.top)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(akcja)"
-      },
-      {
-        "name": "if",
-        "signature": "if(akcja == 0)"
       },
       {
         "name": "Group.Sprite_Holder.MouseClickOnUp",
         "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseMoveIn",
         "signature": "Group.Sprite_Holder.MouseMoveIn(int spriteID)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
       },
       {
         "name": "Group.Sprite_Holder.MouseMoveOut",
@@ -561,28 +888,8 @@
         "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
       },
       {
-        "name": "if",
-        "signature": "if(rectID==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbar)"
-      },
-      {
         "name": "Group.Sprite_Holder.InPlace",
         "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
-      },
-      {
-        "name": "if",
-        "signature": "if(spriteID==6)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==480)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarCase)"
       }
     ],
     "rawText": "//###########################################################################\n\n//Script code\n\n//###########################################################################\n\n\n\n\n\nOnOpenPage()\n\n{\n\n\t// Add your component and variables initialization code here\n\n\t// WARNING: All variables definied on this function are global for this page\n\n\n\n   /*int index = 32;\n\n   while( index < 128 )\n\n   {\n\n      Debug( \"%c, %d\", index, index );\n\n      index++;\n\n   }\n\n   return;*/\n\n\n\n\n\n   int stalaSciszania = -450;\n\n   int m_demo=0;\n\n\n\n   int keyDown = 0;\n\n\n\n      // 0 - stop - wszystko aktywne, widzoczny tekst piosenki\n\n      // 1 - piosenka\n\n      // 2 - melodia\n\n      // 3 - demo\n\n   int akcja = 0;\n\n\n\n      // Zmienna okreslajaca glosnosc odtwarzania dzwiekow.\n\n      // left  - wartosci od 0 do 2;      0 - najglosniej\n\n      // top   - kierunek sciszania 0 - cicho, 1 glosno\n\n   CRect glosnosc;\n\n   glosnosc.SetRect( 0, 0, 0, 0 );\n\n\n\n      // Aktualne polozenie reki na gryfie\n\n   int biezacyBeben = -1;\n\n\n\n\n\n\n\n\n\n\n\n   // DLA ROBERTA\n\n   // Do tej tablicy nalezy wpisac kolejne numery ruchow pingiwna\n\n   // 0 - beben 1\n\n   // 1 - beben 2\n\n   // 2 - beben 3\n\n   // 3 - bebenek\n\n   // 4 - tamtam1\n\n   // 5 - tamtam2\n\n   // 6 - talerz\n\n   // 7 - marakas\n\n   // 8 - dzwonek\n\n\n\n   int maxRuchow = 33;\n\n   int demo[ maxRuchow ];\n\n\n\n   demo[0]=0;\n\n   demo[1]=1;\n\n   demo[2]=2;\n\n   demo[3]=3;\n\n   demo[4]=4;\n\n   demo[5]=5;\n\n   demo[6]=6;\n\n   demo[7]=7;\n\n   demo[8]=8;\n\n   demo[9]=1;\n\n   demo[10]=4;\n\n   demo[11]=5;\n\n   demo[12]=6;\n\n   demo[13]=7;\n\n   demo[14]=1;\n\n   demo[15]=2;\n\n   demo[16]=3;\n\n   demo[17]=1;\n\n   demo[18]=0;\n\n   demo[19]=3;\n\n   demo[20]=4;\n\n   demo[21]=5;\n\n   demo[22]=6;\n\n   demo[23]=7;\n\n   demo[24]=8;\n\n   demo[25]=3;\n\n   demo[26]=4;\n\n   demo[27]=5;\n\n   demo[28]=6;\n\n   demo[29]=7;\n\n   demo[30]=6;\n\n   demo[31]=7;\n\n   demo[32]=2;\n\n\n\n\n\n   LoadGroup(\"g_pios.grp\");\n\n\n\n   int toolbar=0;\n\n   int toolbarCase=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n\n\n   SetCursor(0);\n\n   //SetTimer( 5000 );\n\n   FadeScreen(1,1000);\n\n}\n\n\n\n\n\nvoid OnTimer(void)\n\n{\n\n\t// Add your timer handler code here\n\n   SetTimer(0);\n\n   UstawAktywnoscStrony( 0 );\n\n   Group.Sound_Holder.PlayDSound(0);\n\n}\n\n\n\n\n\nvoid OnClosePage(void)\n\n{\n\n\t// Add your close page handler code here\n\n   FadeScreen(0,1000);\n\n   SetCursor(0);\n\n   CloseGroup();\n\n}\n\n\n\n\n\n\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid OnRButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   //Uruchomienie pomocy\n\n   UstawAktywnoscStrony( 0 );\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   SetTimer(0);\n\n}\n\n\n\n\n\n\n\nvoid OnLButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   Group.Sound_Holder.Stop(0);\n\n   SetTimer(0);\n\n}\n\n\n\n\n\n\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n// W zaleznosci od stanu biezacego i nowego jest ustawiana aktywnosc strony\n\n//\n\nvoid UstawAktywnoscStrony( int nowaAkcja )\n\n{\n\n   int leftOffset;\n\n   int upOffset;\n\n\n\n   switch( nowaAkcja )\n\n   {\n\n      case 0:   // stop\n\n\n\n            // Nalezy uaktywnic wszystkie przyciski na panelu\n\n         Group.Sprite_Holder.ChangePhase( 1, 0 );\n\n         Group.Sprite_Holder.ChangePhase( 2, 0 );\n\n         Group.Sprite_Holder.ChangePhase( 3, 0 );\n\n         m_demo=0;\n\n\n\n         switch( akcja )\n\n         {\n\n            case 2:\n\n\n\n                  // Jesli poprzednio byla odgrywana melodia\n\n                  // nalezy ukryc tekst melodi i pokazac tekst\n\n                  // piosenki przesuniety o offset melodi\n\n\n\n               Text_Holder.StopSynchroText( 2 );\n\n\n\n               DisableScreen();\n\n\n\n               Text_Holder.HideText( 2 );   // melodia\n\n               Text_Holder.GetTextOffsets( 2, &leftOffset, &upOffset );\n\n\n\n               Text_Holder.ShowText( 0 );   // piosenka\n\n               Text_Holder.SetTextOffsets( 0, leftOffset, upOffset );\n\n   \n\n               EnableScreen();\n\n               ShowBuffer();\n\n               break;\n\n\n\n            case 1:\n\n               Text_Holder.StopSynchroText( 0 );\n\n               break;\n\n\n\n            case 3:\n\n               Text_Holder.StopSynchroText( 3 );\n\n               break;\n\n         }\n\n         break;\n\n\n\n      case 1:   // piosenka\n\n         Group.Sprite_Holder.ChangePhase( 1, 1 );   // mruganie\n\n         Group.Sprite_Holder.ChangePhase( 2, 2 );\n\n         Group.Sprite_Holder.ChangePhase( 3, 2 );\n\n\n\n            // piosenka\n\n         Text_Holder.PlaySynchroText( 0 );\n\n         Text_Holder.SetSoundParameters( 0, (glosnosc.left*(stalaSciszania)), 0, 0 );\n\n\n\n         break;\n\n\n\n      case 2:   // melodia\n\n         Group.Sprite_Holder.ChangePhase( 1, 2 );   \n\n         Group.Sprite_Holder.ChangePhase( 2, 1 );   // mruganie\n\n         Group.Sprite_Holder.ChangePhase( 3, 2 );\n\n\n\n         DisableScreen();\n\n\n\n         Text_Holder.GetTextOffsets( 0, &leftOffset, &upOffset );\n\n         Text_Holder.HideText( 0 );   // piosenka\n\n\n\n         Text_Holder.ShowText( 2 );   // melodia\n\n         Text_Holder.SetTextOffsets( 2, leftOffset, upOffset );\n\n   \n\n         EnableScreen();\n\n         ShowBuffer();\n\n\n\n            // piosenka\n\n         Text_Holder.PlaySynchroText( 2 );\n\n         Text_Holder.SetSoundParameters( 2, (glosnosc.left*(stalaSciszania)), 0, 0 );\n\n         break;\n\n\n\n      case 3:   // demo\n\n         m_demo=1;\n\n         Group.Sprite_Holder.ChangePhase( 1, 2 );   \n\n         Group.Sprite_Holder.ChangePhase( 2, 2 );\n\n         Group.Sprite_Holder.ChangePhase( 3, 1 );   // mruganie\n\n\n\n            // piosenka\n\n         Text_Holder.PlaySynchroText( 3 );\n\n         Text_Holder.SetSoundParameters( 3, (glosnosc.left*(stalaSciszania)), 0, 0 );\n\n         break;\n\n   }\n\n\n\n   akcja = nowaAkcja;\n\n}\n\n\n\n\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid OnKeyDown(UINT nChar)\n\n{\n\n\t// Add your keyboard handler code here\n\n   Group.Sound_Holder.Stop(0);\n\n   SetTimer(0);\n\n\n\n      // Odgrywane jest demo - nic nie mozna robic na klawiaturze\n\n   if( akcja == 3 )\n\n      return;\n\n\n\n   if( nChar==keyDown ) return;\n\n   keyDown = nChar;\n\n\n\n   switch(nChar)\n\n   {                \n\n\n\n      case 122: // q - beben1\n\n      case 90:\n\n         Muzyka( 0 );\n\n         break;\n\n         \n\n      case 120:  // w - beben2\n\n      case 88:\n\n         Muzyka( 1 );\n\n         break;    \n\n\n\n      case 99:  // e - beben3\n\n      case 67:\n\n         Muzyka( 2 );\n\n         break;                                              \n\n\n\n      case 118: // r - bebenek\n\n      case 86:\n\n         Muzyka( 3 );\n\n         break;\n\n\n\n      case 109: // t - tamtam1\n\n      case 77:\n\n         Muzyka( 4 );\n\n         break;\n\n\n\n      case 44: // y - tamtam2\n\n         Muzyka( 5 );\n\n         break;\n\n\n\n      case 46: // u - talerz\n\n         Muzyka( 6 );\n\n         break;\n\n\n\n      case 47: // i - marakas\n\n         Muzyka( 7 );\n\n         break;\n\n\n\n      case 32:  // tab - dzwonek\n\n         Muzyka( 8 );\n\n         break;\n\n   }\n\n}\n\n\n\n\n\n\n\nvoid OnKeyUp(UINT nChar)\n\n{\n\n        //Add your command handler code here\n\n   keyDown = 0;\n\n}\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//   nrRuchu - wskazuje ktory ruch bedzie wykonany\n\n//      \n\n//\n\n// 0 - beben 1\n\n// 1 - beben 2\n\n// 2 - beben 3\n\n// 3 - bebenek\n\n// 4 - tamtam1\n\n// 5 - tamtam2\n\n// 6 - talerz\n\n// 7 - marakas\n\n// 8 - dzwonek\n\n//\n\nvoid Muzyka( int nrRuchu )\n\n\n\n{\n\n   if(m_demo)\n\n      Sound_Holder.PlayDSoundEx(nrRuchu,-10000,0,0);\n\n   else\n\n      Sound_Holder.PlayDSound( nrRuchu );\n\n\n\n      // Jelis dzwiek dotyczy skrzypiec to \n\n      // - nalezy ruszyc smyczkiem w przeciwym kierunku\n\n   switch( nrRuchu )\n\n   {\n\n      case 0:   // beben 1\n\n         Bitmap_Holder.HideBitmap( 1 );\n\n         Bitmap_Holder.HideBitmap( 2 );\n\n\n\n         Bitmap_Holder.ShowBitmap( nrRuchu );\n\n         break;\n\n\n\n      case 1:   // beben 2\n\n         Bitmap_Holder.HideBitmap( 0 );\n\n         Bitmap_Holder.HideBitmap( 2 );\n\n\n\n         Bitmap_Holder.ShowBitmap( nrRuchu );\n\n         break;\n\n\n\n      case 2:   // beben 3\n\n         Bitmap_Holder.HideBitmap( 1 );\n\n         Bitmap_Holder.HideBitmap( 0 );\n\n\n\n         Bitmap_Holder.ShowBitmap( nrRuchu );\n\n         break;\n\n\n\n      case 3:   // bebenek\n\n      case 4:   // tamtam1\n\n      case 5:   // tamtam2\n\n      case 6:\n\n         Bitmap_Holder.ShowBitmap( nrRuchu );\n\n         break;\n\n\n\n      case 7:\n\n         Sprite_Holder.ChangePhase( 0, 1 );\n\n         break;\n\n\n\n      case 8:\n\n         Sprite_Holder.ChangePhase( 1, 1 );\n\n         break;\n\n\n\n   }\n\n\n\n}\n\n\n\n\n\n\n\n///////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Sound_Holder.EndPlaySound(int soundID)\n\n{\n\n   switch( soundID )\n\n   {\n\n      case 7:\n\n         Sprite_Holder.ChangePhase( 0, 0 );         \n\n         break;\n\n\n\n      case 8:\n\n         Sprite_Holder.ChangePhase( 1, 0 );         \n\n         break;\n\n\n\n      default:\n\n         Bitmap_Holder.HideBitmap( soundID );\n\n         break;\n\n   }\n\n}\n\n\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nVOID HotSpot_Holder.LeftButtonClickOn(int rectID)\n\n{\n\n      // Jesli jest grane demo to nic nie rob.\n\n   if( akcja != 3 )\n\n      Muzyka( rectID );\n\n}\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n      // Jesli jest grane demo to nic nie rob.\n\n   if( akcja != 3 )\n\n      SetCursor(1);\n\n}\n\n\n\n\n\nvoid HotSpot_Holder.MouseMoveOut(int rectID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Text_Holder.EndOfSynchroText(int textID)\n\n{\n\n   UstawAktywnoscStrony( 0 );\n\n}\n\n\n\n\n\n/////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Text_Holder.ScrollTextUp(int textID)\n\n{\n\n   SetCursor (2);\n\n}\n\n\n\nvoid Text_Holder.ScrollTextDown(int textID)\n\n{\n\n   SetCursor(3);\n\n}\n\n\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Text_Holder.EndScrollText(int textID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\n\n\n\n\n/////////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Text_Holder.MouseMoveIn(int textID)\n\n{\n\n      \n\n}\n\n\n\nvoid Text_Holder.MouseMoveOut(int textID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\n\n\n\n\n\n\n/////////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Text_Holder.PlayMark(int textID,int markNo)\n\n{\n\n   Debug(\"%d\", textID);\n\n   if( textID == 3 )\n\n   {\n\n      if( maxRuchow > markNo )\n\n      {\n\n         Debug(\"%d\", demo[markNo] );\n\n         Muzyka(demo[markNo]);\n\n      }\n\n   }\n\n}\n\n\n\n\n\n\n\n\n\n\n\n/////////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Group.Sprite_Holder.MouseClickOnDown(int spriteID)\n\n{\n\n   switch( spriteID )\n\n   {\n\n      case 0:\n\n         Group.Sound_Holder.PlayDSound(1);\n\n         if( glosnosc.top )\n\n         {\n\n               // podglaszanie\n\n            glosnosc.left--;\n\n               \n\n            if( glosnosc.left <= 0 )\n\n               glosnosc.top = 0;\n\n         }\n\n         else\n\n         {\n\n               // sciszanie\n\n            glosnosc.left++;\n\n               \n\n            if( glosnosc.left >= 2 )\n\n               glosnosc.top = 1;\n\n         }\n\n\n\n         Group.Sprite_Holder.ChangePhase( 0, glosnosc.left );\n\n\n\n         switch( akcja )\n\n         {\n\n            case 1:\n\n               Text_Holder.SetSoundParameters( 0, glosnosc.left*(stalaSciszania), 0, 0 );\n\n               break;\n\n            case 2:\n\n               Text_Holder.SetSoundParameters( 2, glosnosc.left*(stalaSciszania), 0, 0 );\n\n               break;\n\n            case 3:\n\n               Text_Holder.SetSoundParameters( 3, glosnosc.left*(stalaSciszania), 0, 0 );\n\n               break;\n\n         }\n\n\n\n         break;\n\n\n\n      case 1:\n\n      case 2:\n\n      case 3:\n\n         if( akcja == 0 )\n\n         {\n\n            Group.Sound_Holder.PlayDSound(1);\n\n            UstawAktywnoscStrony( spriteID );\n\n         }\n\n         break;\n\n\n\n      case 4:   // stop\n\n         Group.Sound_Holder.PlayDSound(1);\n\n         Group.Sprite_Holder.ChangePhase( 4, 1 );\n\n         UstawAktywnoscStrony( 0 );\n\n         break;\n\n\n\n      case 5:   //klawiatura\n\n         Group.Sound_Holder.PlayDSound(1);\n\n         Group.Sprite_Holder.ChangePhase( 5, 1 );\n\n         MultiBitmap.ShowBitmap(0,0,0,3);\n\n         break;\n\n      case 7:   //toolbar\n\n         Group.Sound_Holder.PlayDSound(3);\n\n         Group.Sprite_Holder.ChangePhase(spriteID,1);   \n\n         break;\n\n      case 8:\n\n         Group.Sound_Holder.PlayDSound(4);\n\n         Group.Sprite_Holder.ChangePhase(spriteID,1);   \n\n         break;\n\n      case 9:\n\n      case 10:\n\n         Group.Sound_Holder.PlayDSound(5);\n\n         Group.Sprite_Holder.ChangePhase(spriteID,1);   \n\n         break;\n\n   }\n\n}\n\n\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnUp(int spriteID)\n\n{\n\n   switch( spriteID )\n\n   {\n\n      case 4:   // stop\n\n         Group.Sprite_Holder.ChangePhase( 4, 0 );\n\n         break;\n\n\n\n      case 5:   //klawiatura\n\n         Group.Sprite_Holder.ChangePhase( 5, 0 );\n\n         MultiBitmap.HideBitmap(0);\n\n         break;\n\n      case 7:\n\n      case 8:\n\n      case 9:\n\n      case 10:\n\n         Group.Sprite_Holder.DisableTimers();\n\n\n\n         Group.Sprite_Holder.GotoXY(6,640,0);\n\n         Group.Sprite_Holder.GotoXY(7,721,329);\n\n         Group.Sprite_Holder.GotoXY(8,717,404);\n\n         Group.Sprite_Holder.GotoXY(9,704,14);\n\n         Group.Sprite_Holder.GotoXY(10,744,14);\n\n\n\n         Group.Sprite_Holder.SynchronizeTimers();\n\n         Group.Sprite_Holder.EnableTimers();\n\n         Group.Sound_Holder.PlayDSound(2);\n\n         toolbar=0;\n\n         Group.HotSpot_Holder.DisableHotSpot(1);\n\n         toolbarCase=spriteID;\n\n\n\n         return;\n\n   }\n\n\n\n}\n\n\n\n\n\n/////////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Group.Sprite_Holder.MouseMoveIn(int spriteID)\n\n{\n\n   switch( spriteID )\n\n   {\n\n      case 1:\n\n      case 2:\n\n      case 3:\n\n         if( akcja != 0 ) return;\n\n         break;\n\n      case 6:\n\n         return;\n\n   }\n\n\n\n   SetCursor( 1 );\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseMoveOut(int spriteID)\n\n{\n\n   SetCursor( 0 );\n\n}\n\n\n\n \n\n\n\n\n\n//############################################################# T O O L B A R #######\n\n//#############################################################---------------#######\n\nvoid Group.HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n   if(rectID==0)\n\n   {\n\n      if(toolbar)   return;\n\n      Group.Sprite_Holder.DisableTimers();\n\n\n\n      Group.Sprite_Holder.GotoXY(6,480,0);\n\n      Group.Sprite_Holder.GotoXY(7,560,329);\n\n      Group.Sprite_Holder.GotoXY(8,557,404);\n\n      Group.Sprite_Holder.GotoXY(9,544,14);\n\n      Group.Sprite_Holder.GotoXY(10,584,14);\n\n\n\n      Group.Sprite_Holder.SynchronizeTimers();\n\n      Group.Sprite_Holder.EnableTimers();\n\n      Group.Sound_Holder.PlayDSound(2);\n\n      SetCursor(0);\n\n   }\n\n   else\n\n   {\n\n      if(toolbar)\n\n      {\n\n         Group.Sprite_Holder.DisableTimers();\n\n\n\n         Group.Sprite_Holder.GotoXY(6,640,0);\n\n         Group.Sprite_Holder.GotoXY(7,721,329);\n\n         Group.Sprite_Holder.GotoXY(8,717,404);\n\n         Group.Sprite_Holder.GotoXY(9,704,14);\n\n         Group.Sprite_Holder.GotoXY(10,744,14);\n\n\n\n         Group.Sprite_Holder.SynchronizeTimers();\n\n         Group.Sprite_Holder.EnableTimers();\n\n         Group.Sound_Holder.PlayDSound(2);\n\n         toolbar=0;\n\n      }\n\n      Group.HotSpot_Holder.DisableHotSpot(1);\n\n      toolbarCase=0;\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.InPlace(int spriteID,int x,int y)\n\n{\n\n   if(spriteID==6)\n\n   {\n\n      if(x==480)\n\n      {\n\n         toolbar=1;\n\n         Group.HotSpot_Holder.EnableHotSpot(1);\n\n         SetCursor(0);\n\n      }\n\n      else\n\n      {\n\n         SetCursor(0);\n\n         Group.Sprite_Holder.ChangePhase(7,0);\n\n         Group.Sprite_Holder.ChangePhase(8,0);\n\n         Group.Sprite_Holder.ChangePhase(9,0);\n\n         Group.Sprite_Holder.ChangePhase(10,0);\n\n         switch(toolbarCase)\n\n         {\n\n            case 9:\t//lewo\n\n               LoadPage(\"tan_ps.bdf\");\n\n               break;\n\n            case 10:\t//prawo\n\n               LoadPage(\"abec_ps.bdf\");\n\n               break;\n\n            case 7:   //do planszy glownej  \n\n               LoadPage( \"zosia.bdf\" );\n\n               break;\n\n            case 8:   //Plansza wyboru\n\n               LoadPage(\"Wyborw.bdf\");\n\n               break;\n\n         }\n\n      }\n\n   }\n\n}\n\n//#############################################################\n\n//############################################################# \n\n \n\n\n\n\n\n "

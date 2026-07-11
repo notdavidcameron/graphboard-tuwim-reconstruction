@@ -331,22 +331,44 @@
       "namespace": "Page",
       "index": 1,
       "z": 0,
-      "visible": false,
+      "visible": true,
       "rect": {
         "x": 0,
         "y": 0,
-        "width": 640,
-        "height": 480
+        "width": 1280,
+        "height": 196
       },
-      "geometryConfidence": "fallback_full_page",
+      "geometryConfidence": "serialized_entries",
       "itemCount": null,
       "hitboxes": [],
       "sourceOffset": 1607367,
       "geometrySourceOffset": null,
       "privateOffset": 1609489,
       "privateSize": 252432,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/bdf/MURZYNEK/panorama_holder/01_Panorama_Holder_000_panorama_1280x196.bmp",
+      "assets": [
+        {
+          "kind": "panorama_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURZYNEK\\panorama_holder\\01_Panorama_Holder_000_panorama_1280x196.bmp",
+          "url": "../extracted_assets/bdf/MURZYNEK/panorama_holder/01_Panorama_Holder_000_panorama_1280x196.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 1280,
+          "height": 196,
+          "frameCount": null,
+          "offset": 1610049,
+          "name": null,
+          "id": 0,
+          "initiallyVisible": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 196
+          },
+          "geometryConfidence": "serialized_entry"
+        }
+      ],
       "audio": []
     },
     {
@@ -381,10 +403,9 @@
           "width": 640,
           "height": 480,
           "frameCount": null,
-          "offset": 1863205,
+          "offset": 1863193,
           "name": "tło",
           "id": 0,
-          "initiallyVisible": true,
           "rect": {
             "x": 0,
             "y": 0,
@@ -392,7 +413,168 @@
             "height": 480
           },
           "geometryConfidence": "serialized_entry",
+          "initiallyVisible": true,
           "z": -1
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_001_zabawa 03_234x228.bmp",
+          "url": "../extracted_assets/bdf/MURZYNEK/bitmap_holder/02_Bitmap_Holder_001_zabawa 03_234x228.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 234,
+          "height": 228,
+          "frameCount": null,
+          "offset": 2170541,
+          "name": "zabawa 03",
+          "id": 1,
+          "rect": {
+            "x": 7,
+            "y": 233,
+            "width": 234,
+            "height": 228
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_002_b_ben 02_98x82.bmp",
+          "url": "../extracted_assets/bdf/MURZYNEK/bitmap_holder/02_Bitmap_Holder_002_b_ben 02_98x82.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 98,
+          "height": 82,
+          "frameCount": null,
+          "offset": 2224497,
+          "name": "bęben 02",
+          "id": 2,
+          "rect": {
+            "x": 16,
+            "y": 369,
+            "width": 98,
+            "height": 82
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_003_b_ben 02_77x71.bmp",
+          "url": "../extracted_assets/bdf/MURZYNEK/bitmap_holder/02_Bitmap_Holder_003_b_ben 02_77x71.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 77,
+          "height": 71,
+          "frameCount": null,
+          "offset": 2232845,
+          "name": "bęben 02",
+          "id": 3,
+          "rect": {
+            "x": 84,
+            "y": 360,
+            "width": 77,
+            "height": 71
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_004_b_benek 0_47x49.bmp",
+          "url": "../extracted_assets/bdf/MURZYNEK/bitmap_holder/02_Bitmap_Holder_004_b_benek 0_47x49.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 47,
+          "height": 49,
+          "frameCount": null,
+          "offset": 2238673,
+          "name": "bębenek 0",
+          "id": 4,
+          "rect": {
+            "x": 10,
+            "y": 285,
+            "width": 47,
+            "height": 49
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_005_tamtam 02_87x81.bmp",
+          "url": "../extracted_assets/bdf/MURZYNEK/bitmap_holder/02_Bitmap_Holder_005_tamtam 02_87x81.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 87,
+          "height": 81,
+          "frameCount": null,
+          "offset": 2241173,
+          "name": "tamtam 02",
+          "id": 5,
+          "rect": {
+            "x": 46,
+            "y": 233,
+            "width": 87,
+            "height": 81
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_006_tamtam 02_115x74.bmp",
+          "url": "../extracted_assets/bdf/MURZYNEK/bitmap_holder/02_Bitmap_Holder_006_tamtam 02_115x74.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 115,
+          "height": 74,
+          "frameCount": null,
+          "offset": 2248449,
+          "name": "tamtam 02",
+          "id": 6,
+          "rect": {
+            "x": 36,
+            "y": 305,
+            "width": 115,
+            "height": 74
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_007_tamtam 02_76x59.bmp",
+          "url": "../extracted_assets/bdf/MURZYNEK/bitmap_holder/02_Bitmap_Holder_007_tamtam 02_76x59.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 59,
+          "frameCount": null,
+          "offset": 2257181,
+          "name": "tamtam 02",
+          "id": 7,
+          "rect": {
+            "x": 112,
+            "y": 294,
+            "width": 76,
+            "height": 59
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_008_start 02_37x39.bmp",
+          "url": "../extracted_assets/bdf/MURZYNEK/bitmap_holder/02_Bitmap_Holder_008_start 02_37x39.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 37,
+          "height": 39,
+          "frameCount": null,
+          "offset": 2261813,
+          "name": "start 02",
+          "id": 8,
+          "rect": {
+            "x": 203,
+            "y": 366,
+            "width": 37,
+            "height": 39
+          },
+          "geometryConfidence": "serialized_entry"
         }
       ],
       "audio": []
@@ -403,15 +585,15 @@
       "sourceType": "Sprite_Holder",
       "namespace": "Page",
       "index": 3,
-      "z": 50,
+      "z": 0,
       "visible": true,
       "rect": {
-        "x": 0,
-        "y": 0,
-        "width": 48,
-        "height": 48
+        "x": 137,
+        "y": 102,
+        "width": 304,
+        "height": 291
       },
-      "geometryConfidence": "synthetic_items",
+      "geometryConfidence": "serialized_entries",
       "itemCount": 5,
       "hitboxes": [],
       "sourceOffset": 2263389,
@@ -429,9 +611,10 @@
           "width": 30,
           "height": 35,
           "frameCount": null,
-          "offset": 2265269,
+          "offset": 2265273,
           "name": "owoc 1",
           "id": 0,
+          "definitionId": 0,
           "phaseAssets": [
             {
               "phase": 0,
@@ -440,13 +623,17 @@
             }
           ],
           "phaseCount": 1,
+          "instanceOffset": 2341947,
           "rect": {
-            "x": 0,
-            "y": 50,
+            "x": 396,
+            "y": 121,
             "width": 30,
             "height": 35
           },
-          "geometryConfidence": "serialized_sprite"
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 3
         },
         {
           "kind": "sprite_holder_png",
@@ -457,52 +644,44 @@
           "width": 35,
           "height": 40,
           "frameCount": null,
-          "offset": 2271175,
+          "offset": 2266979,
           "name": "owoc 2",
           "id": 1,
+          "definitionId": 1,
           "phaseAssets": [
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_00.png",
               "url": "../extracted_assets/bdf/MURZYNEK/sprite_holder/03_Sprite_Holder_001_owoc 2_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_01.png",
+              "url": "../extracted_assets/bdf/MURZYNEK/sprite_holder/03_Sprite_Holder_001_owoc 2_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_02.png",
+              "url": "../extracted_assets/bdf/MURZYNEK/sprite_holder/03_Sprite_Holder_001_owoc 2_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_03.png",
+              "url": "../extracted_assets/bdf/MURZYNEK/sprite_holder/03_Sprite_Holder_001_owoc 2_phase_03.png"
             }
           ],
-          "phaseCount": 1,
+          "phaseCount": 4,
+          "instanceOffset": 2342087,
           "rect": {
-            "x": 0,
-            "y": 50,
+            "x": 406,
+            "y": 102,
             "width": 35,
             "height": 40
           },
-          "geometryConfidence": "serialized_sprite"
-        },
-        {
-          "kind": "sprite_holder_png",
-          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_00.png",
-          "url": "../extracted_assets/bdf/MURZYNEK/sprite_holder/03_Sprite_Holder_002_nie_phase_00.png",
-          "stillPath": null,
-          "stillUrl": null,
-          "width": 83,
-          "height": 52,
-          "frameCount": null,
-          "offset": 2307423,
-          "name": "nie",
-          "id": 2,
-          "phaseAssets": [
-            {
-              "phase": 0,
-              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_00.png",
-              "url": "../extracted_assets/bdf/MURZYNEK/sprite_holder/03_Sprite_Holder_002_nie_phase_00.png"
-            }
-          ],
-          "phaseCount": 1,
-          "rect": {
-            "x": 0,
-            "y": 100,
-            "width": 83,
-            "height": 52
-          },
-          "geometryConfidence": "serialized_sprite"
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 2
         },
         {
           "kind": "sprite_holder_png",
@@ -513,24 +692,122 @@
           "width": 83,
           "height": 59,
           "frameCount": null,
-          "offset": 2331654,
+          "offset": 2312070,
           "name": "tak",
-          "id": 3,
+          "id": 2,
+          "definitionId": 3,
           "phaseAssets": [
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_00.png",
               "url": "../extracted_assets/bdf/MURZYNEK/sprite_holder/03_Sprite_Holder_003_tak_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_01.png",
+              "url": "../extracted_assets/bdf/MURZYNEK/sprite_holder/03_Sprite_Holder_003_tak_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_02.png",
+              "url": "../extracted_assets/bdf/MURZYNEK/sprite_holder/03_Sprite_Holder_003_tak_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_03.png",
+              "url": "../extracted_assets/bdf/MURZYNEK/sprite_holder/03_Sprite_Holder_003_tak_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_04.png",
+              "url": "../extracted_assets/bdf/MURZYNEK/sprite_holder/03_Sprite_Holder_003_tak_phase_04.png"
             }
           ],
-          "phaseCount": 1,
+          "phaseCount": 5,
+          "instanceOffset": 2342227,
           "rect": {
-            "x": 0,
-            "y": 150,
+            "x": 137,
+            "y": 334,
             "width": 83,
             "height": 59
           },
-          "geometryConfidence": "serialized_sprite"
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": false,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_00.png",
+          "url": "../extracted_assets/bdf/MURZYNEK/sprite_holder/03_Sprite_Holder_002_nie_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 83,
+          "height": 52,
+          "frameCount": null,
+          "offset": 2272899,
+          "name": "nie",
+          "id": 3,
+          "definitionId": 2,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_00.png",
+              "url": "../extracted_assets/bdf/MURZYNEK/sprite_holder/03_Sprite_Holder_002_nie_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_01.png",
+              "url": "../extracted_assets/bdf/MURZYNEK/sprite_holder/03_Sprite_Holder_002_nie_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_02.png",
+              "url": "../extracted_assets/bdf/MURZYNEK/sprite_holder/03_Sprite_Holder_002_nie_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_03.png",
+              "url": "../extracted_assets/bdf/MURZYNEK/sprite_holder/03_Sprite_Holder_002_nie_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_04.png",
+              "url": "../extracted_assets/bdf/MURZYNEK/sprite_holder/03_Sprite_Holder_002_nie_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_05.png",
+              "url": "../extracted_assets/bdf/MURZYNEK/sprite_holder/03_Sprite_Holder_002_nie_phase_05.png"
+            },
+            {
+              "phase": 6,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_06.png",
+              "url": "../extracted_assets/bdf/MURZYNEK/sprite_holder/03_Sprite_Holder_002_nie_phase_06.png"
+            },
+            {
+              "phase": 7,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_07.png",
+              "url": "../extracted_assets/bdf/MURZYNEK/sprite_holder/03_Sprite_Holder_002_nie_phase_07.png"
+            },
+            {
+              "phase": 8,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_08.png",
+              "url": "../extracted_assets/bdf/MURZYNEK/sprite_holder/03_Sprite_Holder_002_nie_phase_08.png"
+            }
+          ],
+          "phaseCount": 9,
+          "instanceOffset": 2342367,
+          "rect": {
+            "x": 137,
+            "y": 337,
+            "width": 83,
+            "height": 52
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": false,
+          "z": 0
         },
         {
           "kind": "sprite_holder_png",
@@ -541,24 +818,44 @@
           "width": 24,
           "height": 51,
           "frameCount": null,
-          "offset": 2340719,
+          "offset": 2337051,
           "name": "usta 01",
           "id": 4,
+          "definitionId": 4,
           "phaseAssets": [
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_00.png",
               "url": "../extracted_assets/bdf/MURZYNEK/sprite_holder/03_Sprite_Holder_004_usta 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_01.png",
+              "url": "../extracted_assets/bdf/MURZYNEK/sprite_holder/03_Sprite_Holder_004_usta 01_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_02.png",
+              "url": "../extracted_assets/bdf/MURZYNEK/sprite_holder/03_Sprite_Holder_004_usta 01_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_03.png",
+              "url": "../extracted_assets/bdf/MURZYNEK/sprite_holder/03_Sprite_Holder_004_usta 01_phase_03.png"
             }
           ],
-          "phaseCount": 1,
+          "phaseCount": 4,
+          "instanceOffset": 2342507,
           "rect": {
-            "x": 0,
-            "y": 100,
+            "x": 280,
+            "y": 311,
             "width": 24,
             "height": 51
           },
-          "geometryConfidence": "serialized_sprite"
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 2
         }
       ],
       "audio": []
@@ -864,8 +1161,18 @@
             "width": 50,
             "height": 83
           },
+          "name": "",
+          "layer": 4,
+          "enabled": true,
+          "flags": [
+            186,
+            0,
+            255
+          ],
           "sourceOffset": 4189489,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 15,
+          "auxState": 0
         },
         {
           "id": 1,
@@ -875,8 +1182,18 @@
             "width": 97,
             "height": 59
           },
+          "name": "",
+          "layer": 4,
+          "enabled": true,
+          "flags": [
+            186,
+            0,
+            255
+          ],
           "sourceOffset": 4189590,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 15,
+          "auxState": 0
         },
         {
           "id": 2,
@@ -886,8 +1203,18 @@
             "width": 38,
             "height": 86
           },
+          "name": "",
+          "layer": 4,
+          "enabled": true,
+          "flags": [
+            186,
+            0,
+            255
+          ],
           "sourceOffset": 4189691,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 15,
+          "auxState": 0
         },
         {
           "id": 3,
@@ -897,8 +1224,18 @@
             "width": 54,
             "height": 35
           },
+          "name": "",
+          "layer": 4,
+          "enabled": true,
+          "flags": [
+            186,
+            0,
+            255
+          ],
           "sourceOffset": 4189792,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 15,
+          "auxState": 0
         },
         {
           "id": 4,
@@ -908,8 +1245,18 @@
             "width": 58,
             "height": 40
           },
+          "name": "",
+          "layer": 4,
+          "enabled": true,
+          "flags": [
+            186,
+            0,
+            255
+          ],
           "sourceOffset": 4189893,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 15,
+          "auxState": 0
         },
         {
           "id": 5,
@@ -919,8 +1266,18 @@
             "width": 79,
             "height": 78
           },
+          "name": "",
+          "layer": 4,
+          "enabled": true,
+          "flags": [
+            186,
+            0,
+            255
+          ],
           "sourceOffset": 4189994,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 15,
+          "auxState": 0
         },
         {
           "id": 6,
@@ -930,8 +1287,18 @@
             "width": 53,
             "height": 56
           },
+          "name": "",
+          "layer": 4,
+          "enabled": true,
+          "flags": [
+            186,
+            0,
+            255
+          ],
           "sourceOffset": 4190095,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 15,
+          "auxState": 0
         },
         {
           "id": 7,
@@ -941,8 +1308,18 @@
             "width": 88,
             "height": 43
           },
+          "name": "",
+          "layer": 7,
+          "enabled": true,
+          "flags": [
+            186,
+            0,
+            255
+          ],
           "sourceOffset": 4190196,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 15,
+          "auxState": 0
         },
         {
           "id": 8,
@@ -952,8 +1329,18 @@
             "width": 48,
             "height": 41
           },
+          "name": "",
+          "layer": 7,
+          "enabled": true,
+          "flags": [
+            186,
+            0,
+            255
+          ],
           "sourceOffset": 4190297,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 15,
+          "auxState": 0
         },
         {
           "id": 9,
@@ -963,8 +1350,18 @@
             "width": 43,
             "height": 34
           },
+          "name": "",
+          "layer": 7,
+          "enabled": true,
+          "flags": [
+            186,
+            0,
+            255
+          ],
           "sourceOffset": 4190398,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 15,
+          "auxState": 0
         },
         {
           "id": 10,
@@ -974,8 +1371,18 @@
             "width": 82,
             "height": 35
           },
+          "name": "",
+          "layer": 7,
+          "enabled": true,
+          "flags": [
+            186,
+            0,
+            255
+          ],
           "sourceOffset": 4190499,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 15,
+          "auxState": 0
         },
         {
           "id": 11,
@@ -985,8 +1392,18 @@
             "width": 92,
             "height": 38
           },
+          "name": "",
+          "layer": 7,
+          "enabled": true,
+          "flags": [
+            186,
+            0,
+            255
+          ],
           "sourceOffset": 4190600,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 15,
+          "auxState": 0
         },
         {
           "id": 12,
@@ -996,8 +1413,18 @@
             "width": 62,
             "height": 34
           },
+          "name": "",
+          "layer": 7,
+          "enabled": true,
+          "flags": [
+            186,
+            0,
+            255
+          ],
           "sourceOffset": 4190701,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 15,
+          "auxState": 0
         },
         {
           "id": 13,
@@ -1007,8 +1434,18 @@
             "width": 61,
             "height": 80
           },
+          "name": "",
+          "layer": 7,
+          "enabled": true,
+          "flags": [
+            186,
+            0,
+            255
+          ],
           "sourceOffset": 4190802,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 15,
+          "auxState": 0
         },
         {
           "id": 14,
@@ -1018,8 +1455,18 @@
             "width": 40,
             "height": 34
           },
+          "name": "",
+          "layer": 7,
+          "enabled": true,
+          "flags": [
+            186,
+            0,
+            255
+          ],
           "sourceOffset": 4190903,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 15,
+          "auxState": 0
         }
       ],
       "sourceOffset": 4188373,
@@ -1069,14 +1516,6 @@
         "signature": "OnTimer(void)"
       },
       {
-        "name": "switch",
-        "signature": "switch(error)"
-      },
-      {
-        "name": "if",
-        "signature": "if(step>=dlugosciFraz[fraza])"
-      },
-      {
         "name": "OnKeyDown",
         "signature": "OnKeyDown(UINT nChar)"
       },
@@ -1089,32 +1528,12 @@
         "signature": "SetTextMode()"
       },
       {
-        "name": "if",
-        "signature": "if(textMode==0)"
+        "name": "Sprite_Holder.MouseClickOnDown",
+        "signature": "Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(status_kokos)"
-      },
-      {
-        "name": "if",
-        "signature": "if(spriteID==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(spriteID==1)"
-      },
-      {
-        "name": "if",
-        "signature": "if(spriteID==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(y==390&&x==140)"
-      },
-      {
-        "name": "if",
-        "signature": "if(tamTam)"
+        "name": "Sprite_Holder.InPlace",
+        "signature": "Sprite_Holder.InPlace(int spriteID,int x,int y)"
       },
       {
         "name": "HotSpot_Holder.MouseMoveIn",
@@ -1129,14 +1548,6 @@
         "signature": "HotSpot_Holder.LeftButtonClickOn(int rectID)"
       },
       {
-        "name": "if",
-        "signature": "if(rectID<7)"
-      },
-      {
-        "name": "if",
-        "signature": "if(fraza>=0)"
-      },
-      {
         "name": "Sprite_Holder.MouseMoveIn",
         "signature": "Sprite_Holder.MouseMoveIn(int spriteID)"
       },
@@ -1149,40 +1560,8 @@
         "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(rectID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbar)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(txtHotSpotOn==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.InPlace",
         "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==480)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarCase)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==0)"
       },
       {
         "name": "Group.Sprite_Holder.MouseMoveIn",
@@ -1197,28 +1576,12 @@
         "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(spriteID==11)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseClickOnUp",
         "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.EndAnimation",
         "signature": "Group.Sprite_Holder.EndAnimation(int spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
       },
       {
         "name": "Text_Holder.ScrollTextUp",
@@ -1245,36 +1608,12 @@
         "signature": "Text_Holder.ClickOnText(int textID)"
       },
       {
-        "name": "if",
-        "signature": "if(playStatus)"
-      },
-      {
         "name": "Text_Holder.EndOfSynchroText",
         "signature": "Text_Holder.EndOfSynchroText(int textID)"
       },
       {
         "name": "Sound_Holder.EndPlaySound",
         "signature": "Sound_Holder.EndPlaySound(int soundID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(soundID==3 && textMode)"
-      },
-      {
-        "name": "if",
-        "signature": "if(soundID==18 || soundID==19)"
-      },
-      {
-        "name": "if",
-        "signature": "if(soundID==11)"
-      },
-      {
-        "name": "if",
-        "signature": "if(tamClick)"
-      },
-      {
-        "name": "if",
-        "signature": "if(soundID>11)"
       },
       {
         "name": "HotSpot_Holder.LeftButtonClickOnUp",
@@ -1297,6 +1636,6 @@
   },
   "warnings": [
     "Promoted full-page BitmapHolder asset as background fallback.",
-    "Recovered 8 TransparentVideoHolder asset rect(s) from serialized entries."
+    "Recovered 7 TransparentVideoHolder asset rect(s) from serialized entries."
   ]
 }

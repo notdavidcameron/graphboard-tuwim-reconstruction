@@ -24,22 +24,223 @@
       "namespace": "Page",
       "index": 0,
       "z": 0,
-      "visible": false,
+      "visible": true,
       "rect": {
-        "x": 182,
-        "y": 402,
-        "width": 68,
-        "height": 67
+        "x": 79,
+        "y": 21,
+        "width": 483,
+        "height": 460
       },
-      "geometryConfidence": "serialized_entry",
+      "geometryConfidence": "serialized_entries",
       "itemCount": null,
       "hitboxes": [],
       "sourceOffset": 309357,
-      "geometrySourceOffset": 310509,
+      "geometrySourceOffset": null,
       "privateOffset": 310489,
       "privateSize": 57312,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/bdf/KRAWIEC/bitmap_holder/00_Bitmap_Holder_000_guzik_68x67.bmp",
+      "assets": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_000_guzik_68x67.bmp",
+          "url": "../extracted_assets/bdf/KRAWIEC/bitmap_holder/00_Bitmap_Holder_000_guzik_68x67.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 68,
+          "height": 67,
+          "frameCount": null,
+          "offset": 310629,
+          "name": "guzik",
+          "id": 0,
+          "rect": {
+            "x": 182,
+            "y": 402,
+            "width": 68,
+            "height": 67
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_001_kieszen_66x64.bmp",
+          "url": "../extracted_assets/bdf/KRAWIEC/bitmap_holder/00_Bitmap_Holder_001_kieszen_66x64.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 66,
+          "height": 64,
+          "frameCount": null,
+          "offset": 315333,
+          "name": "kieszen",
+          "id": 1,
+          "rect": {
+            "x": 79,
+            "y": 402,
+            "width": 66,
+            "height": 64
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_002_kokarda_59x84.bmp",
+          "url": "../extracted_assets/bdf/KRAWIEC/bitmap_holder/00_Bitmap_Holder_002_kokarda_59x84.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 59,
+          "height": 84,
+          "frameCount": null,
+          "offset": 319833,
+          "name": "kokarda",
+          "id": 2,
+          "rect": {
+            "x": 395,
+            "y": 397,
+            "width": 59,
+            "height": 84
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_003_nogawki_66x65.bmp",
+          "url": "../extracted_assets/bdf/KRAWIEC/bitmap_holder/00_Bitmap_Holder_003_nogawki_66x65.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 66,
+          "height": 65,
+          "frameCount": null,
+          "offset": 325021,
+          "name": "nogawki",
+          "id": 3,
+          "rect": {
+            "x": 288,
+            "y": 403,
+            "width": 66,
+            "height": 65
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_004_rekaw_66x65.bmp",
+          "url": "../extracted_assets/bdf/KRAWIEC/bitmap_holder/00_Bitmap_Holder_004_rekaw_66x65.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 66,
+          "height": 65,
+          "frameCount": null,
+          "offset": 329589,
+          "name": "rekaw",
+          "id": 4,
+          "rect": {
+            "x": 496,
+            "y": 402,
+            "width": 66,
+            "height": 65
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_005_guzik02_24x25.bmp",
+          "url": "../extracted_assets/bdf/KRAWIEC/bitmap_holder/00_Bitmap_Holder_005_guzik02_24x25.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 24,
+          "height": 25,
+          "frameCount": null,
+          "offset": 334157,
+          "name": "guzik02",
+          "id": 5,
+          "rect": {
+            "x": 320,
+            "y": 152,
+            "width": 24,
+            "height": 25
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_006_kiesz02_77x96.bmp",
+          "url": "../extracted_assets/bdf/KRAWIEC/bitmap_holder/00_Bitmap_Holder_006_kiesz02_77x96.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 77,
+          "height": 96,
+          "frameCount": null,
+          "offset": 334905,
+          "name": "kiesz02",
+          "id": 6,
+          "rect": {
+            "x": 266,
+            "y": 252,
+            "width": 77,
+            "height": 96
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_007_kok02_67x87.bmp",
+          "url": "../extracted_assets/bdf/KRAWIEC/bitmap_holder/00_Bitmap_Holder_007_kok02_67x87.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 67,
+          "height": 87,
+          "frameCount": null,
+          "offset": 342733,
+          "name": "kok02",
+          "id": 7,
+          "rect": {
+            "x": 328,
+            "y": 21,
+            "width": 67,
+            "height": 87
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_008_nogawki 0_108x120.bmp",
+          "url": "../extracted_assets/bdf/KRAWIEC/bitmap_holder/00_Bitmap_Holder_008_nogawki 0_108x120.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 108,
+          "height": 120,
+          "frameCount": null,
+          "offset": 348797,
+          "name": "nogawki 0",
+          "id": 8,
+          "rect": {
+            "x": 144,
+            "y": 241,
+            "width": 108,
+            "height": 120
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_009_rekaw02_38x147.bmp",
+          "url": "../extracted_assets/bdf/KRAWIEC/bitmap_holder/00_Bitmap_Holder_009_rekaw02_38x147.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 38,
+          "height": 147,
+          "frameCount": null,
+          "offset": 361905,
+          "name": "rekaw02",
+          "id": 9,
+          "rect": {
+            "x": 117,
+            "y": 110,
+            "width": 38,
+            "height": 147
+          },
+          "geometryConfidence": "serialized_entry"
+        }
+      ],
       "audio": []
     },
     {
@@ -60,70 +261,130 @@
       "itemCount": null,
       "hitboxes": [
         {
-          "id": 0,
+          "id": 4,
           "rect": {
             "x": 84,
             "y": 94,
             "width": 76,
             "height": 186
           },
+          "name": "",
+          "layer": 0,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            255
+          ],
           "sourceOffset": 368917,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 6,
+          "auxState": 0
         },
         {
-          "id": 1,
+          "id": 3,
           "rect": {
             "x": 156,
             "y": 242,
             "width": 79,
             "height": 118
           },
+          "name": "",
+          "layer": 0,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            255
+          ],
           "sourceOffset": 369018,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 6,
+          "auxState": 0
         },
         {
-          "id": 2,
+          "id": 0,
           "rect": {
             "x": 305,
             "y": 125,
             "width": 78,
             "height": 84
           },
+          "name": "",
+          "layer": 0,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            255
+          ],
           "sourceOffset": 369119,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 6,
+          "auxState": 0
         },
         {
-          "id": 3,
+          "id": 1,
           "rect": {
             "x": 266,
             "y": 249,
             "width": 93,
             "height": 108
           },
+          "name": "",
+          "layer": 0,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            255
+          ],
           "sourceOffset": 369220,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 6,
+          "auxState": 0
         },
         {
-          "id": 4,
+          "id": 2,
           "rect": {
             "x": 309,
             "y": 6,
             "width": 82,
             "height": 89
           },
+          "name": "",
+          "layer": 0,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            255
+          ],
           "sourceOffset": 369321,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 6,
+          "auxState": 0
         },
         {
-          "id": 5,
+          "id": 10,
           "rect": {
             "x": 450,
             "y": 45,
             "width": 129,
             "height": 183
           },
+          "name": "",
+          "layer": 0,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            255
+          ],
           "sourceOffset": 369422,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 6,
+          "auxState": 0
         }
       ],
       "sourceOffset": 367801,
@@ -160,7 +421,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_000_0005a707.wav",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_000_0005a707.wav",
           "url": "../extracted_assets/bdf/KRAWIEC/embedded/02_Sound_Holder_000_0005a707.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -170,7 +431,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_001_00106c95.wav",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_001_00106c95.wav",
           "url": "../extracted_assets/bdf/KRAWIEC/embedded/02_Sound_Holder_001_00106c95.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -180,7 +441,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_002_0010b699.wav",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_002_0010b699.wav",
           "url": "../extracted_assets/bdf/KRAWIEC/embedded/02_Sound_Holder_002_0010b699.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -190,7 +451,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_003_00128c7d.wav",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_003_00128c7d.wav",
           "url": "../extracted_assets/bdf/KRAWIEC/embedded/02_Sound_Holder_003_00128c7d.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -200,7 +461,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_004_0013089f.wav",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_004_0013089f.wav",
           "url": "../extracted_assets/bdf/KRAWIEC/embedded/02_Sound_Holder_004_0013089f.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -210,7 +471,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_005_00169879.wav",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_005_00169879.wav",
           "url": "../extracted_assets/bdf/KRAWIEC/embedded/02_Sound_Holder_005_00169879.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -220,7 +481,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_006_00178925.wav",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_006_00178925.wav",
           "url": "../extracted_assets/bdf/KRAWIEC/embedded/02_Sound_Holder_006_00178925.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -265,16 +526,8 @@
         "signature": "OnOpenPage()"
       },
       {
-        "name": "if",
-        "signature": "if(IsProject()==0)"
-      },
-      {
         "name": "SetTextMode",
         "signature": "SetTextMode()"
-      },
-      {
-        "name": "if",
-        "signature": "if(textMode==0)"
       },
       {
         "name": "OnClosePage",
@@ -297,20 +550,8 @@
         "signature": "Bitmap_Holder.MouseDrop(int bitmapID,int left,int top,int right,int bottom)"
       },
       {
-        "name": "if",
-        "signature": "if(res)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(bitmapID)"
-      },
-      {
         "name": "HotSpot_Holder.LeftButtonClickOn",
         "signature": "HotSpot_Holder.LeftButtonClickOn(int rectID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(rectID==10)"
       },
       {
         "name": "HotSpot_Holder.MouseMoveIn",
@@ -325,40 +566,8 @@
         "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(rectID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbar)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(txtHotSpotOn==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.InPlace",
         "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==480)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarCase)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==0)"
       },
       {
         "name": "Group.Sprite_Holder.MouseMoveIn",
@@ -373,28 +582,12 @@
         "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(spriteID==11)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseClickOnUp",
         "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.EndAnimation",
         "signature": "Group.Sprite_Holder.EndAnimation(int spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
       },
       {
         "name": "Text_Holder.ScrollTextUp",
@@ -421,20 +614,12 @@
         "signature": "Text_Holder.ClickOnText(int textID)"
       },
       {
-        "name": "if",
-        "signature": "if(playStatus)"
-      },
-      {
         "name": "Text_Holder.EndOfSynchroText",
         "signature": "Text_Holder.EndOfSynchroText(int textID)"
       },
       {
         "name": "Sound_Holder.EndPlaySound",
         "signature": "Sound_Holder.EndPlaySound(int soundID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(soundID==5 && textMode)"
       },
       {
         "name": "OnTimer",

@@ -31,7 +31,9 @@ from graphboard_bdf_inspect import (
 
 
 def safe_name(name: str) -> str:
-    clean = re.sub(r"[^A-Za-z0-9._ -]+", "_", name).strip()
+    clean = re.sub(r"[^A-Za-z0-9._ -]+", "_", name).strip(" .")
+    if re.fullmatch(r"(?i)(con|prn|aux|nul|com[1-9]|lpt[1-9])", clean or ""):
+        clean = f"_{clean}"
     return clean or "unnamed"
 
 
@@ -753,6 +755,172 @@ def extract_multibitmap_frames(
     return {"version": version, "declared_count": declared_count, "parsed_count": len(frames), "frames": frames}, outputs
 
 
+def extract_panorama_images(
+    data: bytes,
+    private_start: int,
+    private_end: int,
+    component_name: str,
+    page_dir: Path,
+    palette: bytes,
+) -> tuple[dict, list[dict]]:
+    if private_start + 8 > private_end:
+        return {}, []
+    version = read_u32(data, private_start)[0]
+    declared_count = read_u32(data, private_start + 4)[0]
+    if version != 1 or declared_count <= 0 or declared_count > 32:
+        return {}, []
+
+    offset = private_start + 8
+    scenes = []
+    outputs = []
+    panorama_dir = page_dir / "panorama"
+    for index in range(declared_count):
+        if offset + 0x224 > private_end:
+            break
+        record_offset = offset
+        width = read_u32(data, record_offset + 0x04)[0]
+        height = read_u32(data, record_offset + 0x08)[0]
+        subimage_count = read_u32(data, record_offset + 0x150)[0]
+        region_count = read_u32(data, record_offset + 0x21C)[0]
+        pixel_offset = record_offset + 0x224
+        pixel_size = width * height
+        if not (0 < width <= 10000 and 0 < height <= 10000 and pixel_offset + pixel_size <= private_end):
+            break
+
+        bmp_path = panorama_dir / f"{component_name}_{index:03d}_panorama_{width}x{height}.bmp"
+        pixels = flip_indexed_rows(data[pixel_offset : pixel_offset + pixel_size], width, height)
+        write_indexed_bmp(bmp_path, pixels, width, height, palette)
+        output = {
+            "kind": "panorama_bmp",
+            "path": str(bmp_path),
+            "offset": pixel_offset,
+            "size": bmp_path.stat().st_size,
+            "pixel_size": pixel_size,
+            "width": width,
+            "height": height,
+            "rect": {"x": 0, "y": 0, "width": width, "height": height},
+            "geometry_confidence": "serialized_entry",
+            "initially_visible": False,
+        }
+        outputs.append(output)
+
+        offset = pixel_offset + pixel_size
+        parsed_subimages = 0
+        for _ in range(subimage_count):
+            if offset + 0x78 > private_end:
+                break
+            layer_width = read_u32(data, offset + 0x24)[0]
+            layer_height = read_u32(data, offset + 0x2C)[0]
+            layer_size = layer_width * layer_height
+            if layer_width > 10000 or layer_height > 10000 or offset + 0x78 + layer_size > private_end:
+                break
+            offset += 0x78 + layer_size
+            parsed_subimages += 1
+        if parsed_subimages != subimage_count or offset + region_count * 0x34 > private_end:
+            break
+        offset += region_count * 0x34
+        scenes.append(
+            {
+                "index": index,
+                "record_offset": record_offset,
+                "pixel_offset": pixel_offset,
+                "width": width,
+                "height": height,
+                "subimage_count": subimage_count,
+                "region_count": region_count,
+                "bmp_output": str(bmp_path),
+            }
+        )
+
+    return {"version": version, "declared_count": declared_count, "parsed_count": len(scenes), "scenes": scenes}, outputs
+
+
+def extract_panorama_holder_images(
+    data: bytes,
+    private_start: int,
+    private_end: int,
+    component_name: str,
+    page_dir: Path,
+) -> tuple[dict, list[dict]]:
+    if private_start + 8 > private_end:
+        return {}, []
+    version = read_u32(data, private_start)[0]
+    declared_count = read_u32(data, private_start + 4)[0]
+    if version != 0 or declared_count <= 0 or declared_count > 32:
+        return {}, []
+
+    offset = private_start + 8
+    scenes = []
+    outputs = []
+    panorama_dir = page_dir / "panorama_holder"
+    for index in range(declared_count):
+        if offset + 0x228 > private_end:
+            break
+        record_offset = offset
+        dib_size = read_u32(data, record_offset + 0x224)[0]
+        dib_offset = record_offset + 0x228
+        dib_end = dib_offset + dib_size
+        if dib_size < 40 or dib_end > private_end:
+            break
+        width = abs(read_i32(data, dib_offset + 4)[0])
+        height = abs(read_i32(data, dib_offset + 8)[0])
+        if not (0 < width <= 10000 and 0 < height <= 10000):
+            break
+
+        bmp_path = panorama_dir / f"{component_name}_{index:03d}_panorama_{width}x{height}.bmp"
+        write_bmp_from_dib(bmp_path, data[dib_offset:dib_end])
+        output = {
+            "kind": "panorama_holder_bmp",
+            "path": str(bmp_path),
+            "offset": dib_offset,
+            "size": bmp_path.stat().st_size,
+            "dib_size": dib_size,
+            "width": width,
+            "height": height,
+            "rect": {"x": 0, "y": 0, "width": width, "height": height},
+            "geometry_confidence": "serialized_entry",
+            "initially_visible": False,
+        }
+        outputs.append(output)
+
+        offset = dib_end
+        if offset + 4 > private_end:
+            break
+        subimage_count = read_u32(data, offset)[0]
+        offset += 4
+        parsed_subimages = 0
+        for _ in range(subimage_count):
+            if offset + 4 > private_end:
+                break
+            block_size = read_u32(data, offset)[0]
+            if offset + 4 + block_size > private_end:
+                break
+            offset += 4 + block_size
+            parsed_subimages += 1
+        if parsed_subimages != subimage_count or offset + 4 > private_end:
+            break
+        region_count = read_u32(data, offset)[0]
+        offset += 4
+        if offset + region_count * 0x48 > private_end:
+            break
+        offset += region_count * 0x48
+        scenes.append(
+            {
+                "index": index,
+                "record_offset": record_offset,
+                "dib_offset": dib_offset,
+                "dib_size": dib_size,
+                "width": width,
+                "height": height,
+                "subimage_count": subimage_count,
+                "region_count": region_count,
+                "bmp_output": str(bmp_path),
+            }
+        )
+
+    return {"version": version, "declared_count": declared_count, "parsed_count": len(scenes), "scenes": scenes}, outputs
+
+
 def extract_sprite_holder_images(
     data: bytes,
     private_start: int,
@@ -764,42 +932,63 @@ def extract_sprite_holder_images(
     if private_start + 12 > private_end:
         return {}, []
     version = read_u32(data, private_start)[0]
-    declared_count = read_u32(data, private_start + 4)[0]
-    offset = private_start + 8
-    frames = []
+    definition_count = read_u32(data, private_start + 4)[0]
+    instance_count = read_u32(data, private_start + 8)[0]
+    if version != 1 or definition_count < 0 or definition_count > 500 or instance_count < 0 or instance_count > 1000:
+        return {}, []
+    offset = private_start + 12
+    definitions = []
     outputs = []
     sprite_dir = page_dir / "sprite_holder"
 
-    for index in range(min(declared_count, 200)):
-        if offset + 0xE4 > private_end:
+    def infer_phase_count(blob_size: int, width: int, height: int) -> int:
+        pixel_unit = width * height
+        if pixel_unit <= 0:
+            return 0
+        max_count = min(64, blob_size // pixel_unit)
+        best_count = 0
+        best_remainder = blob_size
+        for count in range(max_count, 0, -1):
+            remainder = blob_size - pixel_unit * count
+            if 0x80 <= remainder <= 0x1200:
+                return count
+            if 0 <= remainder < best_remainder:
+                best_count = count
+                best_remainder = remainder
+        return best_count
+
+    for index in range(definition_count):
+        if offset + 4 > private_end:
             break
-        record_size = read_u32(data, offset + 4)[0]
-        record_end = offset + 4 + record_size
-        if record_size <= 0 or record_end > private_end:
+        blob_size = read_u32(data, offset)[0]
+        blob_start = offset + 4
+        blob_end = blob_start + blob_size
+        if blob_size <= 0 or blob_end > private_end:
             break
 
-        name = data[offset + 0x0C : offset + 0x2C].split(b"\x00", 1)[0].decode("cp1250", "replace")
-        x = read_i32(data, offset + 0x14)[0]
-        y = read_i32(data, offset + 0x94)[0]
-        width = read_u32(data, offset + 0x88)[0]
-        height = read_u32(data, offset + 0x8C)[0]
-        phase_count = read_u32(data, offset + 0xC0)[0]
-        if phase_count <= 0 or phase_count > 64:
-            phase_count = 1
+        name = data[blob_start + 0x04 : blob_start + 0x24].split(b"\x00", 1)[0].decode("cp1250", "replace")
+        width = read_u32(data, blob_start + 0x80)[0] if blob_start + 0x84 <= blob_end else 0
+        height = read_u32(data, blob_start + 0x84)[0] if blob_start + 0x88 <= blob_end else 0
+        phase_hint = read_u32(data, blob_start + 0xB8)[0] if blob_start + 0xBC <= blob_end else 0
+        phase_count = infer_phase_count(blob_size, width, height)
+        if phase_count <= 0 and 0 < phase_hint <= 64:
+            phase_count = phase_hint
         pixel_size = width * height * phase_count
-        pixel_offset = record_end - pixel_size
+        pixel_offset = blob_end - pixel_size
 
-        frame = {
+        definition = {
             "index": index,
             "name": name,
             "record_offset": offset,
-            "record_size": record_size,
+            "blob_offset": blob_start,
+            "blob_size": blob_size,
             "width": width,
             "height": height,
             "phase_count": phase_count,
+            "phase_hint": phase_hint,
         }
 
-        if 0 < width <= 2000 and 0 < height <= 2000 and pixel_offset >= offset and pixel_offset + pixel_size <= record_end:
+        if 0 < width <= 2000 and 0 < height <= 2000 and pixel_offset >= blob_start and pixel_offset + pixel_size <= blob_end:
             phase_outputs = []
             base = f"{component_name}_{index:03d}_{safe_name(name)}"
             for phase in range(phase_count):
@@ -825,18 +1014,52 @@ def extract_sprite_holder_images(
                 "height": height,
                 "name": name,
                 "id": index,
+                "definition_id": index,
                 "phase_count": phase_count,
                 "phase_outputs": phase_outputs,
-                "rect": {"x": 0 if width > 640 else x, "y": 0 if width > 640 else y, "width": width, "height": height},
-                "geometry_confidence": "serialized_sprite",
             }
-            frame["phase_outputs"] = phase_outputs
+            definition["phase_outputs"] = phase_outputs
             outputs.append(output)
 
-        frames.append(frame)
-        offset = record_end
+        definitions.append(definition)
+        offset = blob_end
 
-    return {"version": version, "declared_count": declared_count, "parsed_count": len(frames), "frames": frames}, outputs
+    instances = []
+    instance_record_size = 0x8C
+    for index in range(instance_count):
+        record_offset = offset + index * instance_record_size
+        if record_offset + instance_record_size > private_end:
+            break
+        definition_id = read_u32(data, record_offset)[0]
+        field04 = read_i32(data, record_offset + 0x04)[0]
+        x = read_i32(data, record_offset + 0x08)[0]
+        y = read_i32(data, record_offset + 0x0C)[0]
+        layer = read_i32(data, record_offset + 0x18)[0]
+        phase = read_i32(data, record_offset + 0x5C)[0]
+        visible = read_i32(data, record_offset + 0x88)[0]
+        instances.append(
+            {
+                "index": index,
+                "definition_id": definition_id,
+                "field04": field04,
+                "x": x,
+                "y": y,
+                "z": layer,
+                "phase": phase,
+                "visible": visible,
+                "record_offset": record_offset,
+            }
+        )
+
+    return {
+        "version": version,
+        "definition_count": definition_count,
+        "instance_count": instance_count,
+        "parsed_definitions": len(definitions),
+        "parsed_instances": len(instances),
+        "definitions": definitions,
+        "instances": instances,
+    }, outputs
 
 
 def extract_bitmap_holder_images(
@@ -869,11 +1092,17 @@ def extract_bitmap_holder_images(
 
         left = read_i32(data, offset + 0x0C)[0]
         top = read_i32(data, offset + 0x10)[0]
-        width = read_i32(data, offset + 0x14)[0]
-        height = read_i32(data, offset + 0x18)[0]
-        name = data[offset + 0x38 : offset + 0x58].split(b"\x00", 1)[0].decode("cp1250", "replace")
-        pixel_offset = offset + 0x90
-        pixel_size = width * height
+        right = read_i32(data, offset + 0x14)[0]
+        bottom = read_i32(data, offset + 0x18)[0]
+        width = right - left
+        height = bottom - top
+        name = data[offset + 0x38 : offset + 0x44].split(b"\x00", 1)[0].decode("cp1250", "replace")
+        # `offset` points at the u32 blob-size prefix. The verified click/blit
+        # paths address pixels at blob+0x80; the following 0x10 bytes are the
+        # trailer after the pixel plane, not part of the header.
+        pixel_offset = offset + 4 + 0x80
+        row_stride = (width + 3) & ~3
+        pixel_size = row_stride * height
         frame = {
             "index": index,
             "name": name,
@@ -882,12 +1111,15 @@ def extract_bitmap_holder_images(
             "pixel_offset": pixel_offset,
             "width": width,
             "height": height,
+            "right": right,
+            "bottom": bottom,
             "rect": {"x": left, "y": top, "width": width, "height": height},
         }
 
         if 0 < width <= 2000 and 0 < height <= 2000 and pixel_offset + pixel_size <= record_end:
             bmp_path = bitmap_dir / f"{component_name}_{index:03d}_{safe_name(name)}_{width}x{height}.bmp"
             pixels = data[pixel_offset : pixel_offset + pixel_size]
+            pixels = flip_indexed_rows(pixels, row_stride, height)
             write_indexed_bmp(bmp_path, pixels, width, height, palette)
             output = {
                 "kind": "bitmap_holder_bmp",
@@ -900,7 +1132,6 @@ def extract_bitmap_holder_images(
                 "name": name,
                 "rect": frame["rect"],
                 "geometry_confidence": "serialized_entry",
-                "initially_visible": False,
             }
             frame["bmp_output"] = str(bmp_path)
             outputs.append(output)
@@ -1039,6 +1270,35 @@ def extract_bdf(path: Path, out_dir: Path, include_raw: bool = False) -> dict:
                     component_meta["embedded"].append(output)
                     metadata["outputs"].append(output)
 
+        if wrapper["display_name"] == "Panorama":
+            panorama, panorama_outputs = extract_panorama_images(
+                data,
+                private_start,
+                private_end,
+                component_name,
+                page_dir,
+                data[header["palette_offset"] : header["palette_offset"] + header["palette_size"]],
+            )
+            if panorama:
+                component_meta["panorama"] = panorama
+                for output in panorama_outputs:
+                    component_meta["embedded"].append(output)
+                    metadata["outputs"].append(output)
+
+        if wrapper["display_name"] == "Panorama_Holder":
+            panorama_holder, panorama_holder_outputs = extract_panorama_holder_images(
+                data,
+                private_start,
+                private_end,
+                component_name,
+                page_dir,
+            )
+            if panorama_holder:
+                component_meta["panorama_holder"] = panorama_holder
+                for output in panorama_holder_outputs:
+                    component_meta["embedded"].append(output)
+                    metadata["outputs"].append(output)
+
         if include_raw and private_end > private_start:
             raw_path = page_dir / "private_raw" / f"{component_name}.bin"
             mkdir(raw_path.parent)
@@ -1163,7 +1423,14 @@ def extract_folder(
             manifest["skipped"].append({"source": str(path), "reason": "not a YDP Board data file"})
             continue
         try:
-            meta = extract_bdf(path, out_dir, include_raw=include_raw)
+            try:
+                meta = extract_bdf(path, out_dir, include_raw=include_raw)
+            except OSError:
+                # Large Windows corpus runs have occasionally produced a
+                # transient EINVAL while replacing an already-generated asset;
+                # the same page succeeds immediately in isolation. Retry the
+                # page once, while still surfacing persistent path errors.
+                meta = extract_bdf(path, out_dir, include_raw=include_raw)
             manifest["bdf"].append(
                 {
                     "source": str(path),

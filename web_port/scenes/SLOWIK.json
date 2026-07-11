@@ -23,23 +23,1259 @@
       "sourceType": "Sprite_Holder",
       "namespace": "Page",
       "index": 0,
-      "z": 50,
+      "z": 1,
       "visible": true,
       "rect": {
-        "x": 0,
-        "y": 0,
-        "width": 48,
-        "height": 48
+        "x": 207,
+        "y": 16,
+        "width": 579,
+        "height": 378
       },
-      "geometryConfidence": "synthetic_items",
+      "geometryConfidence": "serialized_entries",
       "itemCount": 20,
       "hitboxes": [],
       "sourceOffset": 309357,
       "geometrySourceOffset": null,
       "privateOffset": 310891,
       "privateSize": 1070620,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_00.png",
+      "assets": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_00.png",
+          "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 157,
+          "height": 117,
+          "frameCount": null,
+          "offset": 322548,
+          "name": "li01",
+          "id": 0,
+          "definitionId": 0,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_00.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_01.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_02.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_03.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_04.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_05.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_05.png"
+            },
+            {
+              "phase": 6,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_06.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_06.png"
+            },
+            {
+              "phase": 7,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_07.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_07.png"
+            },
+            {
+              "phase": 8,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_08.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_08.png"
+            },
+            {
+              "phase": 9,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_09.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_09.png"
+            },
+            {
+              "phase": 10,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_10.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_10.png"
+            },
+            {
+              "phase": 11,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_11.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_11.png"
+            },
+            {
+              "phase": 12,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_12.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_12.png"
+            },
+            {
+              "phase": 13,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_13.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_13.png"
+            },
+            {
+              "phase": 14,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_14.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_14.png"
+            },
+            {
+              "phase": 15,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_15.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_15.png"
+            },
+            {
+              "phase": 16,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_16.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_16.png"
+            },
+            {
+              "phase": 17,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_17.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_17.png"
+            },
+            {
+              "phase": 18,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_18.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_18.png"
+            },
+            {
+              "phase": 19,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_19.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_19.png"
+            },
+            {
+              "phase": 20,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_20.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_20.png"
+            },
+            {
+              "phase": 21,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_21.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_21.png"
+            },
+            {
+              "phase": 22,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_22.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_22.png"
+            },
+            {
+              "phase": 23,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_23.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_23.png"
+            },
+            {
+              "phase": 24,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_24.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_24.png"
+            },
+            {
+              "phase": 25,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_25.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_25.png"
+            },
+            {
+              "phase": 26,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_000_li01_phase_26.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_000_li01_phase_26.png"
+            }
+          ],
+          "phaseCount": 27,
+          "instanceOffset": 1378711,
+          "rect": {
+            "x": 207,
+            "y": 277,
+            "width": 157,
+            "height": 117
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_001_li01_phase_00.png",
+          "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_001_li01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 93,
+          "height": 65,
+          "frameCount": null,
+          "offset": 823776,
+          "name": "li01",
+          "id": 1,
+          "definitionId": 1,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_001_li01_phase_00.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_001_li01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_001_li01_phase_01.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_001_li01_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_001_li01_phase_02.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_001_li01_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_001_li01_phase_03.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_001_li01_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_001_li01_phase_04.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_001_li01_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_001_li01_phase_05.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_001_li01_phase_05.png"
+            },
+            {
+              "phase": 6,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_001_li01_phase_06.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_001_li01_phase_06.png"
+            },
+            {
+              "phase": 7,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_001_li01_phase_07.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_001_li01_phase_07.png"
+            },
+            {
+              "phase": 8,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_001_li01_phase_08.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_001_li01_phase_08.png"
+            },
+            {
+              "phase": 9,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_001_li01_phase_09.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_001_li01_phase_09.png"
+            },
+            {
+              "phase": 10,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_001_li01_phase_10.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_001_li01_phase_10.png"
+            },
+            {
+              "phase": 11,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_001_li01_phase_11.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_001_li01_phase_11.png"
+            },
+            {
+              "phase": 12,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_001_li01_phase_12.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_001_li01_phase_12.png"
+            },
+            {
+              "phase": 13,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_001_li01_phase_13.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_001_li01_phase_13.png"
+            },
+            {
+              "phase": 14,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_001_li01_phase_14.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_001_li01_phase_14.png"
+            },
+            {
+              "phase": 15,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_001_li01_phase_15.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_001_li01_phase_15.png"
+            },
+            {
+              "phase": 16,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_001_li01_phase_16.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_001_li01_phase_16.png"
+            },
+            {
+              "phase": 17,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_001_li01_phase_17.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_001_li01_phase_17.png"
+            },
+            {
+              "phase": 18,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_001_li01_phase_18.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_001_li01_phase_18.png"
+            }
+          ],
+          "phaseCount": 19,
+          "instanceOffset": 1378851,
+          "rect": {
+            "x": 426,
+            "y": 282,
+            "width": 93,
+            "height": 65
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_002_li01_phase_00.png",
+          "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_002_li01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 70,
+          "height": 67,
+          "frameCount": null,
+          "offset": 938887,
+          "name": "li01",
+          "id": 2,
+          "definitionId": 2,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_002_li01_phase_00.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_002_li01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_002_li01_phase_01.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_002_li01_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_002_li01_phase_02.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_002_li01_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_002_li01_phase_03.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_002_li01_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_002_li01_phase_04.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_002_li01_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_002_li01_phase_05.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_002_li01_phase_05.png"
+            },
+            {
+              "phase": 6,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_002_li01_phase_06.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_002_li01_phase_06.png"
+            },
+            {
+              "phase": 7,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_002_li01_phase_07.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_002_li01_phase_07.png"
+            },
+            {
+              "phase": 8,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_002_li01_phase_08.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_002_li01_phase_08.png"
+            },
+            {
+              "phase": 9,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_002_li01_phase_09.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_002_li01_phase_09.png"
+            },
+            {
+              "phase": 10,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_002_li01_phase_10.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_002_li01_phase_10.png"
+            },
+            {
+              "phase": 11,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_002_li01_phase_11.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_002_li01_phase_11.png"
+            },
+            {
+              "phase": 12,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_002_li01_phase_12.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_002_li01_phase_12.png"
+            },
+            {
+              "phase": 13,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_002_li01_phase_13.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_002_li01_phase_13.png"
+            },
+            {
+              "phase": 14,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_002_li01_phase_14.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_002_li01_phase_14.png"
+            },
+            {
+              "phase": 15,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_002_li01_phase_15.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_002_li01_phase_15.png"
+            },
+            {
+              "phase": 16,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_002_li01_phase_16.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_002_li01_phase_16.png"
+            },
+            {
+              "phase": 17,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_002_li01_phase_17.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_002_li01_phase_17.png"
+            },
+            {
+              "phase": 18,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_002_li01_phase_18.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_002_li01_phase_18.png"
+            },
+            {
+              "phase": 19,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_002_li01_phase_19.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_002_li01_phase_19.png"
+            },
+            {
+              "phase": 20,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_002_li01_phase_20.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_002_li01_phase_20.png"
+            },
+            {
+              "phase": 21,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_002_li01_phase_21.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_002_li01_phase_21.png"
+            },
+            {
+              "phase": 22,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_002_li01_phase_22.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_002_li01_phase_22.png"
+            },
+            {
+              "phase": 23,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_002_li01_phase_23.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_002_li01_phase_23.png"
+            }
+          ],
+          "phaseCount": 24,
+          "instanceOffset": 1378991,
+          "rect": {
+            "x": 523,
+            "y": 265,
+            "width": 70,
+            "height": 67
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_003_li01_phase_00.png",
+          "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_003_li01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 63,
+          "height": 93,
+          "frameCount": null,
+          "offset": 1055450,
+          "name": "li01",
+          "id": 3,
+          "definitionId": 3,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_003_li01_phase_00.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_003_li01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_003_li01_phase_01.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_003_li01_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_003_li01_phase_02.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_003_li01_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_003_li01_phase_03.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_003_li01_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_003_li01_phase_04.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_003_li01_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_003_li01_phase_05.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_003_li01_phase_05.png"
+            },
+            {
+              "phase": 6,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_003_li01_phase_06.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_003_li01_phase_06.png"
+            },
+            {
+              "phase": 7,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_003_li01_phase_07.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_003_li01_phase_07.png"
+            },
+            {
+              "phase": 8,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_003_li01_phase_08.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_003_li01_phase_08.png"
+            },
+            {
+              "phase": 9,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_003_li01_phase_09.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_003_li01_phase_09.png"
+            },
+            {
+              "phase": 10,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_003_li01_phase_10.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_003_li01_phase_10.png"
+            },
+            {
+              "phase": 11,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_003_li01_phase_11.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_003_li01_phase_11.png"
+            },
+            {
+              "phase": 12,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_003_li01_phase_12.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_003_li01_phase_12.png"
+            },
+            {
+              "phase": 13,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_003_li01_phase_13.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_003_li01_phase_13.png"
+            },
+            {
+              "phase": 14,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_003_li01_phase_14.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_003_li01_phase_14.png"
+            },
+            {
+              "phase": 15,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_003_li01_phase_15.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_003_li01_phase_15.png"
+            },
+            {
+              "phase": 16,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_003_li01_phase_16.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_003_li01_phase_16.png"
+            },
+            {
+              "phase": 17,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_003_li01_phase_17.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_003_li01_phase_17.png"
+            },
+            {
+              "phase": 18,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_003_li01_phase_18.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_003_li01_phase_18.png"
+            },
+            {
+              "phase": 19,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_003_li01_phase_19.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_003_li01_phase_19.png"
+            },
+            {
+              "phase": 20,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_003_li01_phase_20.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_003_li01_phase_20.png"
+            },
+            {
+              "phase": 21,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_003_li01_phase_21.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_003_li01_phase_21.png"
+            },
+            {
+              "phase": 22,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_003_li01_phase_22.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_003_li01_phase_22.png"
+            }
+          ],
+          "phaseCount": 23,
+          "instanceOffset": 1379131,
+          "rect": {
+            "x": 557,
+            "y": 174,
+            "width": 63,
+            "height": 93
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_004_zegar 01_phase_00.png",
+          "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_004_zegar 01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 183,
+          "height": 186,
+          "frameCount": null,
+          "offset": 1190923,
+          "name": "zegar 01",
+          "id": 4,
+          "definitionId": 4,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_004_zegar 01_phase_00.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_004_zegar 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_004_zegar 01_phase_01.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_004_zegar 01_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1379271,
+          "rect": {
+            "x": 346,
+            "y": 94,
+            "width": 183,
+            "height": 186
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_005_1_phase_00.png",
+          "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_005_1_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 12,
+          "height": 25,
+          "frameCount": null,
+          "offset": 1259343,
+          "name": "1",
+          "id": 5,
+          "definitionId": 5,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_005_1_phase_00.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_005_1_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_005_1_phase_01.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_005_1_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1379411,
+          "rect": {
+            "x": 466,
+            "y": 117,
+            "width": 12,
+            "height": 25
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_006_2_phase_00.png",
+          "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_006_2_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 21,
+          "height": 25,
+          "frameCount": null,
+          "offset": 1260437,
+          "name": "2",
+          "id": 6,
+          "definitionId": 6,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_006_2_phase_00.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_006_2_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_006_2_phase_01.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_006_2_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1379551,
+          "rect": {
+            "x": 486,
+            "y": 142,
+            "width": 21,
+            "height": 25
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_007_3_phase_00.png",
+          "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_007_3_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 20,
+          "height": 24,
+          "frameCount": null,
+          "offset": 1261831,
+          "name": "3",
+          "id": 7,
+          "definitionId": 7,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_007_3_phase_00.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_007_3_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_007_3_phase_01.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_007_3_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1379691,
+          "rect": {
+            "x": 497,
+            "y": 177,
+            "width": 20,
+            "height": 24
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_008_4_phase_00.png",
+          "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_008_4_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 20,
+          "height": 23,
+          "frameCount": null,
+          "offset": 1263135,
+          "name": "4",
+          "id": 8,
+          "definitionId": 8,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_008_4_phase_00.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_008_4_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_008_4_phase_01.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_008_4_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1379831,
+          "rect": {
+            "x": 485,
+            "y": 212,
+            "width": 20,
+            "height": 23
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_009_5_phase_00.png",
+          "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_009_5_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 20,
+          "height": 25,
+          "frameCount": null,
+          "offset": 1264399,
+          "name": "5",
+          "id": 9,
+          "definitionId": 9,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_009_5_phase_00.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_009_5_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_009_5_phase_01.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_009_5_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1379971,
+          "rect": {
+            "x": 460,
+            "y": 235,
+            "width": 20,
+            "height": 25
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_010_6_phase_00.png",
+          "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_010_6_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 21,
+          "height": 24,
+          "frameCount": null,
+          "offset": 1265887,
+          "name": "6",
+          "id": 10,
+          "definitionId": 10,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_010_6_phase_00.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_010_6_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_010_6_phase_01.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_010_6_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1380111,
+          "rect": {
+            "x": 426,
+            "y": 244,
+            "width": 21,
+            "height": 24
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_011_7_phase_00.png",
+          "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_011_7_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 21,
+          "height": 25,
+          "frameCount": null,
+          "offset": 1267389,
+          "name": "7",
+          "id": 11,
+          "definitionId": 11,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_011_7_phase_00.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_011_7_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_011_7_phase_01.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_011_7_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1380251,
+          "rect": {
+            "x": 393,
+            "y": 234,
+            "width": 21,
+            "height": 25
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_012_8_phase_00.png",
+          "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_012_8_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 20,
+          "height": 24,
+          "frameCount": null,
+          "offset": 1268783,
+          "name": "8",
+          "id": 12,
+          "definitionId": 12,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_012_8_phase_00.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_012_8_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_012_8_phase_01.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_012_8_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1380391,
+          "rect": {
+            "x": 369,
+            "y": 211,
+            "width": 20,
+            "height": 24
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_013_9_phase_00.png",
+          "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_013_9_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 22,
+          "height": 26,
+          "frameCount": null,
+          "offset": 1270191,
+          "name": "9",
+          "id": 13,
+          "definitionId": 13,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_013_9_phase_00.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_013_9_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_013_9_phase_01.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_013_9_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1380531,
+          "rect": {
+            "x": 357,
+            "y": 177,
+            "width": 22,
+            "height": 26
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_014_10_phase_00.png",
+          "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_014_10_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 31,
+          "height": 26,
+          "frameCount": null,
+          "offset": 1271731,
+          "name": "10",
+          "id": 14,
+          "definitionId": 14,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_014_10_phase_00.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_014_10_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_014_10_phase_01.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_014_10_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1380671,
+          "rect": {
+            "x": 366,
+            "y": 143,
+            "width": 31,
+            "height": 26
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_015_11_phase_00.png",
+          "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_015_11_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 24,
+          "height": 25,
+          "frameCount": null,
+          "offset": 1273687,
+          "name": "11",
+          "id": 15,
+          "definitionId": 15,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_015_11_phase_00.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_015_11_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_015_11_phase_01.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_015_11_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1380811,
+          "rect": {
+            "x": 392,
+            "y": 117,
+            "width": 24,
+            "height": 25
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_016_12_phase_00.png",
+          "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_016_12_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 32,
+          "height": 27,
+          "frameCount": null,
+          "offset": 1275231,
+          "name": "12",
+          "id": 16,
+          "definitionId": 16,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_016_12_phase_00.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_016_12_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_016_12_phase_01.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_016_12_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1380951,
+          "rect": {
+            "x": 422,
+            "y": 107,
+            "width": 32,
+            "height": 27
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_017_wskaz12_phase_00.png",
+          "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_017_wskaz12_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 80,
+          "height": 80,
+          "frameCount": null,
+          "offset": 1278063,
+          "name": "wskaz12",
+          "id": 17,
+          "definitionId": 17,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_017_wskaz12_phase_00.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_017_wskaz12_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_017_wskaz12_phase_01.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_017_wskaz12_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_017_wskaz12_phase_02.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_017_wskaz12_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_017_wskaz12_phase_03.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_017_wskaz12_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_017_wskaz12_phase_04.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_017_wskaz12_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_017_wskaz12_phase_05.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_017_wskaz12_phase_05.png"
+            },
+            {
+              "phase": 6,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_017_wskaz12_phase_06.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_017_wskaz12_phase_06.png"
+            },
+            {
+              "phase": 7,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_017_wskaz12_phase_07.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_017_wskaz12_phase_07.png"
+            },
+            {
+              "phase": 8,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_017_wskaz12_phase_08.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_017_wskaz12_phase_08.png"
+            },
+            {
+              "phase": 9,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_017_wskaz12_phase_09.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_017_wskaz12_phase_09.png"
+            },
+            {
+              "phase": 10,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_017_wskaz12_phase_10.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_017_wskaz12_phase_10.png"
+            },
+            {
+              "phase": 11,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_017_wskaz12_phase_11.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_017_wskaz12_phase_11.png"
+            }
+          ],
+          "phaseCount": 12,
+          "instanceOffset": 1381091,
+          "rect": {
+            "x": 397,
+            "y": 149,
+            "width": 80,
+            "height": 80
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_018_s_owik 01_phase_00.png",
+          "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_018_s_owik 01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 84,
+          "height": 75,
+          "frameCount": null,
+          "offset": 1355207,
+          "name": "słowik 01",
+          "id": 18,
+          "definitionId": 18,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_018_s_owik 01_phase_00.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_018_s_owik 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_018_s_owik 01_phase_01.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_018_s_owik 01_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1381231,
+          "rect": {
+            "x": 702,
+            "y": 16,
+            "width": 84,
+            "height": 75
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_019_s_owik 01_phase_00.png",
+          "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_019_s_owik 01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 78,
+          "height": 66,
+          "frameCount": null,
+          "offset": 1368415,
+          "name": "słowik 01",
+          "id": 19,
+          "definitionId": 19,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_019_s_owik 01_phase_00.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_019_s_owik 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SLOWIK\\sprite_holder\\00_Sprite_Holder_019_s_owik 01_phase_01.png",
+              "url": "../extracted_assets/bdf/SLOWIK/sprite_holder/00_Sprite_Holder_019_s_owik 01_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1381371,
+          "rect": {
+            "x": 707,
+            "y": 108,
+            "width": 78,
+            "height": 66
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 8
+        }
+      ],
       "audio": []
     },
     {
@@ -67,9 +1303,9 @@
       "assets": [
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\animations\\01_Transparent_Video_Holder_000_00151929_board_video_38x72.gif",
+          "path": "extracted_assets\\bdf\\SLOWIK\\animations\\01_Transparent_Video_Holder_000_00151929_board_video_38x72.gif",
           "url": "../extracted_assets/bdf/SLOWIK/animations/01_Transparent_Video_Holder_000_00151929_board_video_38x72.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\animations\\01_Transparent_Video_Holder_000_00151929_board_video_38x72_still.png",
+          "stillPath": "extracted_assets\\bdf\\SLOWIK\\animations\\01_Transparent_Video_Holder_000_00151929_board_video_38x72_still.png",
           "stillUrl": "../extracted_assets/bdf/SLOWIK/animations/01_Transparent_Video_Holder_000_00151929_board_video_38x72_still.png",
           "width": 38,
           "height": 72,
@@ -97,9 +1333,9 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\animations\\01_Transparent_Video_Holder_002_0016d1dd_board_video_143x117.gif",
+          "path": "extracted_assets\\bdf\\SLOWIK\\animations\\01_Transparent_Video_Holder_002_0016d1dd_board_video_143x117.gif",
           "url": "../extracted_assets/bdf/SLOWIK/animations/01_Transparent_Video_Holder_002_0016d1dd_board_video_143x117.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\animations\\01_Transparent_Video_Holder_002_0016d1dd_board_video_143x117_still.png",
+          "stillPath": "extracted_assets\\bdf\\SLOWIK\\animations\\01_Transparent_Video_Holder_002_0016d1dd_board_video_143x117_still.png",
           "stillUrl": "../extracted_assets/bdf/SLOWIK/animations/01_Transparent_Video_Holder_002_0016d1dd_board_video_143x117_still.png",
           "width": 143,
           "height": 117,
@@ -129,7 +1365,7 @@
       "audio": [
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\01_Transparent_Video_Holder_000_00151929_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\01_Transparent_Video_Holder_000_00151929_board_video_audio.wav",
           "url": "../extracted_assets/bdf/SLOWIK/embedded/01_Transparent_Video_Holder_000_00151929_board_video_audio.wav",
           "durationSeconds": 2.0,
           "sampleRate": 22050,
@@ -139,7 +1375,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\01_Transparent_Video_Holder_002_0016d1dd_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\01_Transparent_Video_Holder_002_0016d1dd_board_video_audio.wav",
           "url": "../extracted_assets/bdf/SLOWIK/embedded/01_Transparent_Video_Holder_002_0016d1dd_board_video_audio.wav",
           "durationSeconds": 3.0,
           "sampleRate": 22050,
@@ -175,7 +1411,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_000_001b358b.wav",
+          "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_000_001b358b.wav",
           "url": "../extracted_assets/bdf/SLOWIK/embedded/02_Sound_Holder_000_001b358b.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -185,7 +1421,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_001_001c0f19.wav",
+          "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_001_001c0f19.wav",
           "url": "../extracted_assets/bdf/SLOWIK/embedded/02_Sound_Holder_001_001c0f19.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -195,7 +1431,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_002_001cf1bb.wav",
+          "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_002_001cf1bb.wav",
           "url": "../extracted_assets/bdf/SLOWIK/embedded/02_Sound_Holder_002_001cf1bb.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -205,7 +1441,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_003_001db867.wav",
+          "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_003_001db867.wav",
           "url": "../extracted_assets/bdf/SLOWIK/embedded/02_Sound_Holder_003_001db867.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -215,7 +1451,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_004_001e8e4b.wav",
+          "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_004_001e8e4b.wav",
           "url": "../extracted_assets/bdf/SLOWIK/embedded/02_Sound_Holder_004_001e8e4b.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -225,7 +1461,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_005_001f6991.wav",
+          "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_005_001f6991.wav",
           "url": "../extracted_assets/bdf/SLOWIK/embedded/02_Sound_Holder_005_001f6991.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -235,7 +1471,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_006_0020453b.wav",
+          "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_006_0020453b.wav",
           "url": "../extracted_assets/bdf/SLOWIK/embedded/02_Sound_Holder_006_0020453b.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -245,7 +1481,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_007_002124c5.wav",
+          "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_007_002124c5.wav",
           "url": "../extracted_assets/bdf/SLOWIK/embedded/02_Sound_Holder_007_002124c5.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -255,7 +1491,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_008_0021e557.wav",
+          "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_008_0021e557.wav",
           "url": "../extracted_assets/bdf/SLOWIK/embedded/02_Sound_Holder_008_0021e557.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -265,7 +1501,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_009_0022afe7.wav",
+          "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_009_0022afe7.wav",
           "url": "../extracted_assets/bdf/SLOWIK/embedded/02_Sound_Holder_009_0022afe7.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -275,7 +1511,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_010_0023677d.wav",
+          "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_010_0023677d.wav",
           "url": "../extracted_assets/bdf/SLOWIK/embedded/02_Sound_Holder_010_0023677d.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -285,7 +1521,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_011_002427d7.wav",
+          "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_011_002427d7.wav",
           "url": "../extracted_assets/bdf/SLOWIK/embedded/02_Sound_Holder_011_002427d7.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -295,7 +1531,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_012_00250175.wav",
+          "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_012_00250175.wav",
           "url": "../extracted_assets/bdf/SLOWIK/embedded/02_Sound_Holder_012_00250175.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -305,7 +1541,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_013_00266be7.wav",
+          "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_013_00266be7.wav",
           "url": "../extracted_assets/bdf/SLOWIK/embedded/02_Sound_Holder_013_00266be7.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -315,7 +1551,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_014_002abc75.wav",
+          "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_014_002abc75.wav",
           "url": "../extracted_assets/bdf/SLOWIK/embedded/02_Sound_Holder_014_002abc75.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -325,7 +1561,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_015_002b45bb.wav",
+          "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_015_002b45bb.wav",
           "url": "../extracted_assets/bdf/SLOWIK/embedded/02_Sound_Holder_015_002b45bb.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -335,7 +1571,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_016_002bc2bf.wav",
+          "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_016_002bc2bf.wav",
           "url": "../extracted_assets/bdf/SLOWIK/embedded/02_Sound_Holder_016_002bc2bf.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -345,7 +1581,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_017_002c67d3.wav",
+          "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_017_002c67d3.wav",
           "url": "../extracted_assets/bdf/SLOWIK/embedded/02_Sound_Holder_017_002c67d3.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -355,7 +1591,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_018_002cff29.wav",
+          "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_018_002cff29.wav",
           "url": "../extracted_assets/bdf/SLOWIK/embedded/02_Sound_Holder_018_002cff29.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -365,7 +1601,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_019_002d90c5.wav",
+          "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_019_002d90c5.wav",
           "url": "../extracted_assets/bdf/SLOWIK/embedded/02_Sound_Holder_019_002d90c5.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -375,7 +1611,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_020_002e4bb5.wav",
+          "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_020_002e4bb5.wav",
           "url": "../extracted_assets/bdf/SLOWIK/embedded/02_Sound_Holder_020_002e4bb5.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -385,7 +1621,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_021_002e5fa3.wav",
+          "path": "extracted_assets\\bdf\\SLOWIK\\embedded\\02_Sound_Holder_021_002e5fa3.wav",
           "url": "../extracted_assets/bdf/SLOWIK/embedded/02_Sound_Holder_021_002e5fa3.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -445,8 +1681,18 @@
             "width": 632,
             "height": 474
           },
+          "name": "",
+          "layer": 0,
+          "enabled": true,
+          "flags": [
+            215,
+            0,
+            255
+          ],
           "sourceOffset": 3294929,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 1,
+          "auxState": 0
         }
       ],
       "sourceOffset": 3293813,
@@ -467,10 +1713,6 @@
         "signature": "OnOpenPage()"
       },
       {
-        "name": "if",
-        "signature": "if(IsProject()==0)"
-      },
-      {
         "name": "OnClosePage",
         "signature": "OnClosePage(void)"
       },
@@ -479,20 +1721,8 @@
         "signature": "SetTextMode(void)"
       },
       {
-        "name": "if",
-        "signature": "if(textMode)"
-      },
-      {
         "name": "Sprite_Holder.MouseClickOnDown",
         "signature": "Sprite_Holder.MouseClickOnDown(int spriteID)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(zegar==0)"
       },
       {
         "name": "Transparent_Video_Holder.MouseClickOnDown",
@@ -503,20 +1733,8 @@
         "signature": "HotSpot_Holder.LeftButtonClickOn(int rectID)"
       },
       {
-        "name": "if",
-        "signature": "if(zegar)"
-      },
-      {
         "name": "Sound_Holder.EndPlaySound",
         "signature": "Sound_Holder.EndPlaySound(int soundID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(soundID==12)"
-      },
-      {
-        "name": "if",
-        "signature": "if(textMode)"
       },
       {
         "name": "Sprite_Holder.MouseMoveIn",
@@ -539,56 +1757,12 @@
         "signature": "Transparent_Video_Holder.TheEnd(int videoID)"
       },
       {
-        "name": "if",
-        "signature": "if(videoID==0)"
-      },
-      {
         "name": "Group.HotSpot_Holder.MouseMoveIn",
         "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(rectID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbar)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarPhase)"
-      },
-      {
-        "name": "if",
-        "signature": "if(txtHotSpotOn==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.InPlace",
         "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==480)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarCase)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(puzzleNo)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(puzzleNo)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==0)"
       },
       {
         "name": "Group.Sprite_Holder.MouseMoveIn",
@@ -603,28 +1777,12 @@
         "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(spriteID==11)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseClickOnUp",
         "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(toolbarPhase)"
-      },
-      {
         "name": "Group.Sprite_Holder.EndAnimation",
         "signature": "Group.Sprite_Holder.EndAnimation(int spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
       },
       {
         "name": "Text_Holder.ScrollTextUp",
@@ -649,10 +1807,6 @@
       {
         "name": "Text_Holder.ClickOnText",
         "signature": "Text_Holder.ClickOnText(int textID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(playStatus)"
       },
       {
         "name": "Text_Holder.EndOfSynchroText",

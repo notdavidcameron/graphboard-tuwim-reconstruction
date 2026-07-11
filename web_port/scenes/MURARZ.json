@@ -24,22 +24,263 @@
       "namespace": "Page",
       "index": 0,
       "z": 0,
-      "visible": false,
+      "visible": true,
       "rect": {
         "x": 62,
-        "y": 424,
-        "width": 72,
-        "height": 50
+        "y": 43,
+        "width": 513,
+        "height": 432
       },
-      "geometryConfidence": "serialized_entry",
+      "geometryConfidence": "serialized_entries",
       "itemCount": null,
       "hitboxes": [],
       "sourceOffset": 309353,
-      "geometrySourceOffset": 310505,
+      "geometrySourceOffset": null,
       "privateOffset": 310485,
       "privateSize": 42636,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/bdf/MURARZ/bitmap_holder/00_Bitmap_Holder_000_ceg1k_72x50.bmp",
+      "assets": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURARZ\\bitmap_holder\\00_Bitmap_Holder_000_ceg1k_72x50.bmp",
+          "url": "../extracted_assets/bdf/MURARZ/bitmap_holder/00_Bitmap_Holder_000_ceg1k_72x50.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 72,
+          "height": 50,
+          "frameCount": null,
+          "offset": 310625,
+          "name": "ceg1k",
+          "id": 0,
+          "rect": {
+            "x": 62,
+            "y": 424,
+            "width": 72,
+            "height": 50
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURARZ\\bitmap_holder\\00_Bitmap_Holder_001_ceg2zen_70x50.bmp",
+          "url": "../extracted_assets/bdf/MURARZ/bitmap_holder/00_Bitmap_Holder_001_ceg2zen_70x50.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 70,
+          "height": 50,
+          "frameCount": null,
+          "offset": 314373,
+          "name": "ceg2zen",
+          "id": 1,
+          "rect": {
+            "x": 147,
+            "y": 415,
+            "width": 70,
+            "height": 50
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURARZ\\bitmap_holder\\00_Bitmap_Holder_002_ceg3rda_57x32.bmp",
+          "url": "../extracted_assets/bdf/MURARZ/bitmap_holder/00_Bitmap_Holder_002_ceg3rda_57x32.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 57,
+          "height": 32,
+          "frameCount": null,
+          "offset": 318121,
+          "name": "ceg3rda",
+          "id": 2,
+          "rect": {
+            "x": 235,
+            "y": 405,
+            "width": 57,
+            "height": 32
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURARZ\\bitmap_holder\\00_Bitmap_Holder_003_ceg4wki_97x48.bmp",
+          "url": "../extracted_assets/bdf/MURARZ/bitmap_holder/00_Bitmap_Holder_003_ceg4wki_97x48.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 97,
+          "height": 48,
+          "frameCount": null,
+          "offset": 320189,
+          "name": "ceg4wki",
+          "id": 3,
+          "rect": {
+            "x": 269,
+            "y": 427,
+            "width": 97,
+            "height": 48
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURARZ\\bitmap_holder\\00_Bitmap_Holder_004_ceg5w_62x44.bmp",
+          "url": "../extracted_assets/bdf/MURARZ/bitmap_holder/00_Bitmap_Holder_004_ceg5w_62x44.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 62,
+          "height": 44,
+          "frameCount": null,
+          "offset": 325137,
+          "name": "ceg5w",
+          "id": 4,
+          "rect": {
+            "x": 386,
+            "y": 419,
+            "width": 62,
+            "height": 44
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURARZ\\bitmap_holder\\00_Bitmap_Holder_005_ceg6k02_102x25.bmp",
+          "url": "../extracted_assets/bdf/MURARZ/bitmap_holder/00_Bitmap_Holder_005_ceg6k02_102x25.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 102,
+          "height": 25,
+          "frameCount": null,
+          "offset": 328101,
+          "name": "ceg6k02",
+          "id": 5,
+          "rect": {
+            "x": 467,
+            "y": 412,
+            "width": 102,
+            "height": 25
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURARZ\\bitmap_holder\\00_Bitmap_Holder_006_dziura02_73x49.bmp",
+          "url": "../extracted_assets/bdf/MURARZ/bitmap_holder/00_Bitmap_Holder_006_dziura02_73x49.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 73,
+          "height": 49,
+          "frameCount": null,
+          "offset": 330849,
+          "name": "dziura02",
+          "id": 6,
+          "rect": {
+            "x": 213,
+            "y": 105,
+            "width": 73,
+            "height": 49
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURARZ\\bitmap_holder\\00_Bitmap_Holder_007_dziura02_69x53.bmp",
+          "url": "../extracted_assets/bdf/MURARZ/bitmap_holder/00_Bitmap_Holder_007_dziura02_69x53.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 69,
+          "height": 53,
+          "frameCount": null,
+          "offset": 334721,
+          "name": "dziura02",
+          "id": 7,
+          "rect": {
+            "x": 380,
+            "y": 335,
+            "width": 69,
+            "height": 53
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURARZ\\bitmap_holder\\00_Bitmap_Holder_008_dziura020_65x42.bmp",
+          "url": "../extracted_assets/bdf/MURARZ/bitmap_holder/00_Bitmap_Holder_008_dziura020_65x42.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 65,
+          "height": 42,
+          "frameCount": null,
+          "offset": 338685,
+          "name": "dziura020",
+          "id": 8,
+          "rect": {
+            "x": 510,
+            "y": 240,
+            "width": 65,
+            "height": 42
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURARZ\\bitmap_holder\\00_Bitmap_Holder_009_dziura02_101x51.bmp",
+          "url": "../extracted_assets/bdf/MURARZ/bitmap_holder/00_Bitmap_Holder_009_dziura02_101x51.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 101,
+          "height": 51,
+          "frameCount": null,
+          "offset": 341689,
+          "name": "dziura02",
+          "id": 9,
+          "rect": {
+            "x": 308,
+            "y": 43,
+            "width": 101,
+            "height": 51
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURARZ\\bitmap_holder\\00_Bitmap_Holder_010_dziura02_64x47.bmp",
+          "url": "../extracted_assets/bdf/MURARZ/bitmap_holder/00_Bitmap_Holder_010_dziura02_64x47.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 64,
+          "height": 47,
+          "frameCount": null,
+          "offset": 347141,
+          "name": "dziura02",
+          "id": 10,
+          "rect": {
+            "x": 406,
+            "y": 102,
+            "width": 64,
+            "height": 47
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURARZ\\bitmap_holder\\00_Bitmap_Holder_011_dziura02_104x27.bmp",
+          "url": "../extracted_assets/bdf/MURARZ/bitmap_holder/00_Bitmap_Holder_011_dziura02_104x27.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 104,
+          "height": 27,
+          "frameCount": null,
+          "offset": 350297,
+          "name": "dziura02",
+          "id": 11,
+          "rect": {
+            "x": 163,
+            "y": 252,
+            "width": 104,
+            "height": 27
+          },
+          "geometryConfidence": "serialized_entry"
+        }
+      ],
       "audio": []
     },
     {
@@ -60,81 +301,151 @@
       "itemCount": null,
       "hitboxes": [
         {
-          "id": 0,
+          "id": 4,
           "rect": {
             "x": 391,
             "y": 96,
             "width": 86,
             "height": 55
           },
+          "name": "",
+          "layer": 0,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            255
+          ],
           "sourceOffset": 354237,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 7,
+          "auxState": 0
         },
         {
-          "id": 1,
+          "id": 3,
           "rect": {
             "x": 300,
             "y": 39,
             "width": 108,
             "height": 56
           },
+          "name": "",
+          "layer": 0,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            255
+          ],
           "sourceOffset": 354338,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 7,
+          "auxState": 0
         },
         {
-          "id": 2,
+          "id": 0,
           "rect": {
             "x": 212,
             "y": 98,
             "width": 77,
             "height": 62
           },
+          "name": "",
+          "layer": 0,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            255
+          ],
           "sourceOffset": 354439,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 7,
+          "auxState": 0
         },
         {
-          "id": 3,
+          "id": 1,
           "rect": {
             "x": 367,
             "y": 335,
             "width": 93,
             "height": 55
           },
+          "name": "",
+          "layer": 0,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            255
+          ],
           "sourceOffset": 354540,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 7,
+          "auxState": 0
         },
         {
-          "id": 4,
+          "id": 2,
           "rect": {
             "x": 501,
             "y": 237,
             "width": 76,
             "height": 47
           },
+          "name": "",
+          "layer": 0,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            255
+          ],
           "sourceOffset": 354641,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 7,
+          "auxState": 0
         },
         {
-          "id": 5,
+          "id": 10,
           "rect": {
             "x": 479,
             "y": 45,
             "width": 101,
             "height": 105
           },
+          "name": "",
+          "layer": 0,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            255
+          ],
           "sourceOffset": 354742,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 7,
+          "auxState": 0
         },
         {
-          "id": 6,
+          "id": 5,
           "rect": {
             "x": 155,
             "y": 243,
             "width": 119,
             "height": 44
           },
+          "name": "",
+          "layer": 1,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            255
+          ],
           "sourceOffset": 354843,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 7,
+          "auxState": 0
         }
       ],
       "sourceOffset": 353121,
@@ -171,7 +482,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_000_00056e14.wav",
+          "path": "extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_000_00056e14.wav",
           "url": "../extracted_assets/bdf/MURARZ/embedded/02_Sound_Holder_000_00056e14.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -181,7 +492,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_001_001033a2.wav",
+          "path": "extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_001_001033a2.wav",
           "url": "../extracted_assets/bdf/MURARZ/embedded/02_Sound_Holder_001_001033a2.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -191,7 +502,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_002_00109d30.wav",
+          "path": "extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_002_00109d30.wav",
           "url": "../extracted_assets/bdf/MURARZ/embedded/02_Sound_Holder_002_00109d30.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -201,7 +512,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_003_0010f6be.wav",
+          "path": "extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_003_0010f6be.wav",
           "url": "../extracted_assets/bdf/MURARZ/embedded/02_Sound_Holder_003_0010f6be.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -211,7 +522,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_004_0012cca2.wav",
+          "path": "extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_004_0012cca2.wav",
           "url": "../extracted_assets/bdf/MURARZ/embedded/02_Sound_Holder_004_0012cca2.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -221,7 +532,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_005_001660c2.wav",
+          "path": "extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_005_001660c2.wav",
           "url": "../extracted_assets/bdf/MURARZ/embedded/02_Sound_Holder_005_001660c2.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -231,7 +542,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_006_0017516e.wav",
+          "path": "extracted_assets\\bdf\\MURARZ\\embedded\\02_Sound_Holder_006_0017516e.wav",
           "url": "../extracted_assets/bdf/MURARZ/embedded/02_Sound_Holder_006_0017516e.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -276,16 +587,8 @@
         "signature": "OnOpenPage()"
       },
       {
-        "name": "if",
-        "signature": "if(IsProject()==0)"
-      },
-      {
         "name": "SetTextMode",
         "signature": "SetTextMode()"
-      },
-      {
-        "name": "if",
-        "signature": "if(textMode==0)"
       },
       {
         "name": "OnClosePage",
@@ -308,20 +611,8 @@
         "signature": "Bitmap_Holder.MouseDrop(int bitmapID,int left,int top,int right,int bottom)"
       },
       {
-        "name": "if",
-        "signature": "if(res)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(bitmapID)"
-      },
-      {
         "name": "HotSpot_Holder.LeftButtonClickOn",
         "signature": "HotSpot_Holder.LeftButtonClickOn(int rectID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(textMode==0 && rectID==10)"
       },
       {
         "name": "HotSpot_Holder.MouseMoveIn",
@@ -336,40 +627,8 @@
         "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(rectID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbar)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(txtHotSpotOn==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.InPlace",
         "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==480)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarCase)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==0)"
       },
       {
         "name": "Group.Sprite_Holder.MouseMoveIn",
@@ -384,28 +643,12 @@
         "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(spriteID==11)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseClickOnUp",
         "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.EndAnimation",
         "signature": "Group.Sprite_Holder.EndAnimation(int spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
       },
       {
         "name": "Text_Holder.ScrollTextUp",
@@ -432,20 +675,12 @@
         "signature": "Text_Holder.ClickOnText(int textID)"
       },
       {
-        "name": "if",
-        "signature": "if(playStatus)"
-      },
-      {
         "name": "Text_Holder.EndOfSynchroText",
         "signature": "Text_Holder.EndOfSynchroText(int textID)"
       },
       {
         "name": "Sound_Holder.EndPlaySound",
         "signature": "Sound_Holder.EndPlaySound(int soundID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(soundID==5 && textMode)"
       },
       {
         "name": "OnTimer",

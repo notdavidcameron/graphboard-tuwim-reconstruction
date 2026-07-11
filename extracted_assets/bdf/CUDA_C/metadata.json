@@ -28,7 +28,1348 @@
       "display_name": "Sprite_Holder",
       "private_offset": 2707,
       "private_size": 474008,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_000_dobry_phase_00.png",
+          "offset": 2987,
+          "size": 114652,
+          "pixel_size": 235200,
+          "width": 560,
+          "height": 420,
+          "name": "dobry",
+          "id": 0,
+          "definition_id": 0,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_000_dobry_phase_00.png",
+              "size": 114652
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_001_cycki 01_phase_00.png",
+          "offset": 238645,
+          "size": 1273,
+          "pixel_size": 1386,
+          "width": 21,
+          "height": 22,
+          "name": "cycki 01",
+          "id": 1,
+          "definition_id": 1,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_001_cycki 01_phase_00.png",
+              "size": 1273
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_001_cycki 01_phase_01.png",
+              "size": 1295
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_001_cycki 01_phase_02.png",
+              "size": 1032
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_002_kolor_s_phase_00.png",
+          "offset": 240375,
+          "size": 3778,
+          "pixel_size": 16632,
+          "width": 84,
+          "height": 66,
+          "name": "kolor_s",
+          "id": 2,
+          "definition_id": 2,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_002_kolor_s_phase_00.png",
+              "size": 3778
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_002_kolor_s_phase_01.png",
+              "size": 4144
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_002_kolor_s_phase_02.png",
+              "size": 3586
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_003_k_wka_s_phase_00.png",
+          "offset": 257571,
+          "size": 2669,
+          "pixel_size": 9648,
+          "width": 67,
+          "height": 48,
+          "name": "kówka_s",
+          "id": 3,
+          "definition_id": 3,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_003_k_wka_s_phase_00.png",
+              "size": 2669
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_003_k_wka_s_phase_01.png",
+              "size": 2619
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_003_k_wka_s_phase_02.png",
+              "size": 2414
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_004_motyle_s_phase_00.png",
+          "offset": 267563,
+          "size": 3095,
+          "pixel_size": 12036,
+          "width": 68,
+          "height": 59,
+          "name": "motyle_s",
+          "id": 4,
+          "definition_id": 4,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_004_motyle_s_phase_00.png",
+              "size": 3095
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_004_motyle_s_phase_01.png",
+              "size": 3196
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_004_motyle_s_phase_02.png",
+              "size": 2596
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_005_muu_s_phase_00.png",
+          "offset": 280318,
+          "size": 3099,
+          "pixel_size": 11925,
+          "width": 53,
+          "height": 75,
+          "name": "muu_s",
+          "id": 5,
+          "definition_id": 5,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_005_muu_s_phase_00.png",
+              "size": 3099
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_005_muu_s_phase_01.png",
+              "size": 3046
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_005_muu_s_phase_02.png",
+              "size": 2845
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_006_nozki_s_phase_00.png",
+          "offset": 292671,
+          "size": 1618,
+          "pixel_size": 3612,
+          "width": 43,
+          "height": 28,
+          "name": "nozki_s",
+          "id": 6,
+          "definition_id": 6,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_006_nozki_s_phase_00.png",
+              "size": 1618
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_006_nozki_s_phase_01.png",
+              "size": 1585
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_006_nozki_s_phase_02.png",
+              "size": 1401
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_007_plamka_s_phase_00.png",
+          "offset": 296681,
+          "size": 1402,
+          "pixel_size": 2106,
+          "width": 26,
+          "height": 27,
+          "name": "plamka_s",
+          "id": 7,
+          "definition_id": 7,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_007_plamka_s_phase_00.png",
+              "size": 1402
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_007_plamka_s_phase_01.png",
+              "size": 1458
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_007_plamka_s_phase_02.png",
+              "size": 1177
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_008_ptaszek_s_phase_00.png",
+          "offset": 299131,
+          "size": 2291,
+          "pixel_size": 6192,
+          "width": 48,
+          "height": 43,
+          "name": "ptaszek_s",
+          "id": 8,
+          "definition_id": 8,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_008_ptaszek_s_phase_00.png",
+              "size": 2291
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_008_ptaszek_s_phase_01.png",
+              "size": 2166
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_008_ptaszek_s_phase_02.png",
+              "size": 1669
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_009_rogi_s_phase_00.png",
+          "offset": 305667,
+          "size": 1692,
+          "pixel_size": 4212,
+          "width": 52,
+          "height": 27,
+          "name": "rogi_s",
+          "id": 9,
+          "definition_id": 9,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_009_rogi_s_phase_00.png",
+              "size": 1692
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_009_rogi_s_phase_01.png",
+              "size": 1693
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_009_rogi_s_phase_02.png",
+              "size": 1461
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_010_slonko_s_phase_00.png",
+          "offset": 310523,
+          "size": 12291,
+          "pixel_size": 67500,
+          "width": 150,
+          "height": 150,
+          "name": "slonko_s",
+          "id": 10,
+          "definition_id": 10,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_010_slonko_s_phase_00.png",
+              "size": 12291
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_010_slonko_s_phase_01.png",
+              "size": 12127
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_010_slonko_s_phase_02.png",
+              "size": 11723
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_011_cycki_s_phase_00.png",
+          "offset": 378387,
+          "size": 2000,
+          "pixel_size": 3432,
+          "width": 39,
+          "height": 44,
+          "name": "cycki_s",
+          "id": 11,
+          "definition_id": 11,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_011_cycki_s_phase_00.png",
+              "size": 2000
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_011_cycki_s_phase_01.png",
+              "size": 1640
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_012_kolor_s_phase_00.png",
+          "offset": 382087,
+          "size": 4073,
+          "pixel_size": 11088,
+          "width": 84,
+          "height": 66,
+          "name": "kolor_s",
+          "id": 12,
+          "definition_id": 12,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_012_kolor_s_phase_00.png",
+              "size": 4073
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_012_kolor_s_phase_01.png",
+              "size": 3560
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_013_k_wka_s_phase_00.png",
+          "offset": 393539,
+          "size": 2610,
+          "pixel_size": 6432,
+          "width": 67,
+          "height": 48,
+          "name": "kówka_s",
+          "id": 13,
+          "definition_id": 13,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_013_k_wka_s_phase_00.png",
+              "size": 2610
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_013_k_wka_s_phase_01.png",
+              "size": 2300
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_014_motylek_s_phase_00.png",
+          "offset": 400239,
+          "size": 3104,
+          "pixel_size": 8024,
+          "width": 68,
+          "height": 59,
+          "name": "motylek_s",
+          "id": 14,
+          "definition_id": 14,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_014_motylek_s_phase_00.png",
+              "size": 3104
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_014_motylek_s_phase_01.png",
+              "size": 2390
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_015_muu_s_phase_00.png",
+          "offset": 408681,
+          "size": 2895,
+          "pixel_size": 7950,
+          "width": 53,
+          "height": 75,
+          "name": "muu_s",
+          "id": 15,
+          "definition_id": 15,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_015_muu_s_phase_00.png",
+              "size": 2895
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_015_muu_s_phase_01.png",
+              "size": 2686
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_016_n_ki_s_phase_00.png",
+          "offset": 416955,
+          "size": 1573,
+          "pixel_size": 2408,
+          "width": 43,
+          "height": 28,
+          "name": "nóżki_s",
+          "id": 16,
+          "definition_id": 16,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_016_n_ki_s_phase_00.png",
+              "size": 1573
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_016_n_ki_s_phase_01.png",
+              "size": 1383
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_017_plamka_s_phase_00.png",
+          "offset": 419631,
+          "size": 1489,
+          "pixel_size": 1404,
+          "width": 26,
+          "height": 27,
+          "name": "plamka_s",
+          "id": 17,
+          "definition_id": 17,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_017_plamka_s_phase_00.png",
+              "size": 1489
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_017_plamka_s_phase_01.png",
+              "size": 1189
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_018_ptaszek_s_phase_00.png",
+          "offset": 421303,
+          "size": 2089,
+          "pixel_size": 4128,
+          "width": 48,
+          "height": 43,
+          "name": "ptaszek_s",
+          "id": 18,
+          "definition_id": 18,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_018_ptaszek_s_phase_00.png",
+              "size": 2089
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_018_ptaszek_s_phase_01.png",
+              "size": 1539
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_019_rogi_s_phase_00.png",
+          "offset": 425699,
+          "size": 1664,
+          "pixel_size": 2808,
+          "width": 52,
+          "height": 27,
+          "name": "rogi_s",
+          "id": 19,
+          "definition_id": 19,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_019_rogi_s_phase_00.png",
+              "size": 1664
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_019_rogi_s_phase_01.png",
+              "size": 1436
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_020_s_onko_s_phase_00.png",
+          "offset": 428775,
+          "size": 12362,
+          "pixel_size": 45000,
+          "width": 150,
+          "height": 150,
+          "name": "słonko_s",
+          "id": 20,
+          "definition_id": 20,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_020_s_onko_s_phase_00.png",
+              "size": 12362
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_020_s_onko_s_phase_01.png",
+              "size": 11747
+            }
+          ]
+        }
+      ],
+      "sprite_holder": {
+        "version": 1,
+        "definition_count": 21,
+        "instance_count": 21,
+        "parsed_definitions": 21,
+        "parsed_instances": 21,
+        "definitions": [
+          {
+            "index": 0,
+            "name": "dobry",
+            "record_offset": 2719,
+            "blob_offset": 2723,
+            "blob_size": 235464,
+            "width": 560,
+            "height": 420,
+            "phase_count": 1,
+            "phase_hint": 1414811262,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_000_dobry_phase_00.png",
+                "size": 114652
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "cycki 01",
+            "record_offset": 238187,
+            "blob_offset": 238191,
+            "blob_size": 1840,
+            "width": 21,
+            "height": 22,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_001_cycki 01_phase_00.png",
+                "size": 1273
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_001_cycki 01_phase_01.png",
+                "size": 1295
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_001_cycki 01_phase_02.png",
+                "size": 1032
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "kolor_s",
+            "record_offset": 240031,
+            "blob_offset": 240035,
+            "blob_size": 16972,
+            "width": 84,
+            "height": 66,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_002_kolor_s_phase_00.png",
+                "size": 3778
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_002_kolor_s_phase_01.png",
+                "size": 4144
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_002_kolor_s_phase_02.png",
+                "size": 3586
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "name": "kówka_s",
+            "record_offset": 257007,
+            "blob_offset": 257011,
+            "blob_size": 10208,
+            "width": 67,
+            "height": 48,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_003_k_wka_s_phase_00.png",
+                "size": 2669
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_003_k_wka_s_phase_01.png",
+                "size": 2619
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_003_k_wka_s_phase_02.png",
+                "size": 2414
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "name": "motyle_s",
+            "record_offset": 267219,
+            "blob_offset": 267223,
+            "blob_size": 12376,
+            "width": 68,
+            "height": 59,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_004_motyle_s_phase_00.png",
+                "size": 3095
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_004_motyle_s_phase_01.png",
+                "size": 3196
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_004_motyle_s_phase_02.png",
+                "size": 2596
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "name": "muu_s",
+            "record_offset": 279599,
+            "blob_offset": 279603,
+            "blob_size": 12640,
+            "width": 53,
+            "height": 75,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_005_muu_s_phase_00.png",
+                "size": 3099
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_005_muu_s_phase_01.png",
+                "size": 3046
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_005_muu_s_phase_02.png",
+                "size": 2845
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "name": "nozki_s",
+            "record_offset": 292243,
+            "blob_offset": 292247,
+            "blob_size": 4036,
+            "width": 43,
+            "height": 28,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_006_nozki_s_phase_00.png",
+                "size": 1618
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_006_nozki_s_phase_01.png",
+                "size": 1585
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_006_nozki_s_phase_02.png",
+                "size": 1401
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "name": "plamka_s",
+            "record_offset": 296283,
+            "blob_offset": 296287,
+            "blob_size": 2500,
+            "width": 26,
+            "height": 27,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_007_plamka_s_phase_00.png",
+                "size": 1402
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_007_plamka_s_phase_01.png",
+                "size": 1458
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_007_plamka_s_phase_02.png",
+                "size": 1177
+              }
+            ]
+          },
+          {
+            "index": 8,
+            "name": "ptaszek_s",
+            "record_offset": 298787,
+            "blob_offset": 298791,
+            "blob_size": 6532,
+            "width": 48,
+            "height": 43,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_008_ptaszek_s_phase_00.png",
+                "size": 2291
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_008_ptaszek_s_phase_01.png",
+                "size": 2166
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_008_ptaszek_s_phase_02.png",
+                "size": 1669
+              }
+            ]
+          },
+          {
+            "index": 9,
+            "name": "rogi_s",
+            "record_offset": 305323,
+            "blob_offset": 305327,
+            "blob_size": 4552,
+            "width": 52,
+            "height": 27,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_009_rogi_s_phase_00.png",
+                "size": 1692
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_009_rogi_s_phase_01.png",
+                "size": 1693
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_009_rogi_s_phase_02.png",
+                "size": 1461
+              }
+            ]
+          },
+          {
+            "index": 10,
+            "name": "slonko_s",
+            "record_offset": 309879,
+            "blob_offset": 309883,
+            "blob_size": 68140,
+            "width": 150,
+            "height": 150,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_010_slonko_s_phase_00.png",
+                "size": 12291
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_010_slonko_s_phase_01.png",
+                "size": 12127
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_010_slonko_s_phase_02.png",
+                "size": 11723
+              }
+            ]
+          },
+          {
+            "index": 11,
+            "name": "cycki_s",
+            "record_offset": 378023,
+            "blob_offset": 378027,
+            "blob_size": 3792,
+            "width": 39,
+            "height": 44,
+            "phase_count": 2,
+            "phase_hint": 2410908083,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_011_cycki_s_phase_00.png",
+                "size": 2000
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_011_cycki_s_phase_01.png",
+                "size": 1640
+              }
+            ]
+          },
+          {
+            "index": 12,
+            "name": "kolor_s",
+            "record_offset": 381819,
+            "blob_offset": 381823,
+            "blob_size": 11352,
+            "width": 84,
+            "height": 66,
+            "phase_count": 2,
+            "phase_hint": 1417248895,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_012_kolor_s_phase_00.png",
+                "size": 4073
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_012_kolor_s_phase_01.png",
+                "size": 3560
+              }
+            ]
+          },
+          {
+            "index": 13,
+            "name": "kówka_s",
+            "record_offset": 393175,
+            "blob_offset": 393179,
+            "blob_size": 6792,
+            "width": 67,
+            "height": 48,
+            "phase_count": 2,
+            "phase_hint": 2410516397,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_013_k_wka_s_phase_00.png",
+                "size": 2610
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_013_k_wka_s_phase_01.png",
+                "size": 2300
+              }
+            ]
+          },
+          {
+            "index": 14,
+            "name": "motylek_s",
+            "record_offset": 399971,
+            "blob_offset": 399975,
+            "blob_size": 8288,
+            "width": 68,
+            "height": 59,
+            "phase_count": 2,
+            "phase_hint": 1417565269,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_014_motylek_s_phase_00.png",
+                "size": 3104
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_014_motylek_s_phase_01.png",
+                "size": 2390
+              }
+            ]
+          },
+          {
+            "index": 15,
+            "name": "muu_s",
+            "record_offset": 408263,
+            "blob_offset": 408267,
+            "blob_size": 8364,
+            "width": 53,
+            "height": 75,
+            "phase_count": 2,
+            "phase_hint": 2408157065,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_015_muu_s_phase_00.png",
+                "size": 2895
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_015_muu_s_phase_01.png",
+                "size": 2686
+              }
+            ]
+          },
+          {
+            "index": 16,
+            "name": "nóżki_s",
+            "record_offset": 416631,
+            "blob_offset": 416635,
+            "blob_size": 2728,
+            "width": 43,
+            "height": 28,
+            "phase_count": 2,
+            "phase_hint": 2914235315,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_016_n_ki_s_phase_00.png",
+                "size": 1573
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_016_n_ki_s_phase_01.png",
+                "size": 1383
+              }
+            ]
+          },
+          {
+            "index": 17,
+            "name": "plamka_s",
+            "record_offset": 419363,
+            "blob_offset": 419367,
+            "blob_size": 1668,
+            "width": 26,
+            "height": 27,
+            "phase_count": 2,
+            "phase_hint": 1529480746,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_017_plamka_s_phase_00.png",
+                "size": 1489
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_017_plamka_s_phase_01.png",
+                "size": 1189
+              }
+            ]
+          },
+          {
+            "index": 18,
+            "name": "ptaszek_s",
+            "record_offset": 421035,
+            "blob_offset": 421039,
+            "blob_size": 4392,
+            "width": 48,
+            "height": 43,
+            "phase_count": 2,
+            "phase_hint": 3486559183,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_018_ptaszek_s_phase_00.png",
+                "size": 2089
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_018_ptaszek_s_phase_01.png",
+                "size": 1539
+              }
+            ]
+          },
+          {
+            "index": 19,
+            "name": "rogi_s",
+            "record_offset": 425431,
+            "blob_offset": 425435,
+            "blob_size": 3072,
+            "width": 52,
+            "height": 27,
+            "phase_count": 2,
+            "phase_hint": 1701143909,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_019_rogi_s_phase_00.png",
+                "size": 1664
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_019_rogi_s_phase_01.png",
+                "size": 1436
+              }
+            ]
+          },
+          {
+            "index": 20,
+            "name": "słonko_s",
+            "record_offset": 428507,
+            "blob_offset": 428511,
+            "blob_size": 45264,
+            "width": 150,
+            "height": 150,
+            "phase_count": 2,
+            "phase_hint": 2307484553,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_020_s_onko_s_phase_00.png",
+                "size": 12362
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_020_s_onko_s_phase_01.png",
+                "size": 11747
+              }
+            ]
+          }
+        ],
+        "instances": [
+          {
+            "index": 0,
+            "definition_id": 0,
+            "field04": 2,
+            "x": 40,
+            "y": -420,
+            "z": 2,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 473775
+          },
+          {
+            "index": 1,
+            "definition_id": 1,
+            "field04": 1,
+            "x": 212,
+            "y": 165,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 473915
+          },
+          {
+            "index": 2,
+            "definition_id": 2,
+            "field04": 1,
+            "x": 495,
+            "y": 182,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 474055
+          },
+          {
+            "index": 3,
+            "definition_id": 3,
+            "field04": 1,
+            "x": 333,
+            "y": 149,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 474195
+          },
+          {
+            "index": 4,
+            "definition_id": 4,
+            "field04": 1,
+            "x": 75,
+            "y": 197,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 474335
+          },
+          {
+            "index": 5,
+            "definition_id": 5,
+            "field04": 1,
+            "x": 105,
+            "y": 97,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 474475
+          },
+          {
+            "index": 6,
+            "definition_id": 6,
+            "field04": 1,
+            "x": 259,
+            "y": 78,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 474615
+          },
+          {
+            "index": 7,
+            "definition_id": 7,
+            "field04": 1,
+            "x": 393,
+            "y": 356,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 474755
+          },
+          {
+            "index": 8,
+            "definition_id": 8,
+            "field04": 1,
+            "x": 223,
+            "y": 220,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 474895
+          },
+          {
+            "index": 9,
+            "definition_id": 9,
+            "field04": 1,
+            "x": 235,
+            "y": 14,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 475035
+          },
+          {
+            "index": 10,
+            "definition_id": 10,
+            "field04": 1,
+            "x": 423,
+            "y": 10,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 475175
+          },
+          {
+            "index": 11,
+            "definition_id": 11,
+            "field04": 1,
+            "x": 216,
+            "y": 158,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 475315
+          },
+          {
+            "index": 12,
+            "definition_id": 12,
+            "field04": 1,
+            "x": 495,
+            "y": 182,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 475455
+          },
+          {
+            "index": 13,
+            "definition_id": 13,
+            "field04": 1,
+            "x": 333,
+            "y": 149,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 475595
+          },
+          {
+            "index": 14,
+            "definition_id": 14,
+            "field04": 1,
+            "x": 75,
+            "y": 197,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 475735
+          },
+          {
+            "index": 15,
+            "definition_id": 15,
+            "field04": 1,
+            "x": 105,
+            "y": 97,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 475875
+          },
+          {
+            "index": 16,
+            "definition_id": 16,
+            "field04": 1,
+            "x": 259,
+            "y": 78,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 476015
+          },
+          {
+            "index": 17,
+            "definition_id": 17,
+            "field04": 1,
+            "x": 393,
+            "y": 356,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 476155
+          },
+          {
+            "index": 18,
+            "definition_id": 18,
+            "field04": 1,
+            "x": 223,
+            "y": 220,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 476295
+          },
+          {
+            "index": 19,
+            "definition_id": 19,
+            "field04": 1,
+            "x": 235,
+            "y": 14,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 476435
+          },
+          {
+            "index": 20,
+            "definition_id": 20,
+            "field04": 1,
+            "x": 423,
+            "y": 10,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 476575
+          }
+        ]
+      }
     },
     {
       "index": 1,
@@ -37,19 +1378,649 @@
       "display_name": "Bitmap_Holder",
       "private_offset": 477847,
       "private_size": 307356,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\CUDA_C\\bitmap_holder\\01_Bitmap_Holder_000_cuda i dz_640x480.bmp",
+          "offset": 477987,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "cuda i dz",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 640,
+            "height": 480
+          },
+          "geometry_confidence": "serialized_entry"
+        }
+      ],
+      "bitmap_holder": {
+        "version": 1,
+        "declared_count": 1,
+        "parsed_count": 1,
+        "frames": [
+          {
+            "index": 0,
+            "name": "cuda i dz",
+            "record_offset": 477855,
+            "record_size": 307344,
+            "pixel_offset": 477987,
+            "width": 640,
+            "height": 480,
+            "right": 640,
+            "bottom": 480,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 640,
+              "height": 480
+            },
+            "bmp_output": "extracted_assets\\bdf\\CUDA_C\\bitmap_holder\\01_Bitmap_Holder_000_cuda i dz_640x480.bmp"
+          }
+        ]
+      }
     }
   ],
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_C\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\CUDA_C\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_C\\script.txt",
+      "path": "extracted_assets\\bdf\\CUDA_C\\script.txt",
       "size": 7997
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_000_dobry_phase_00.png",
+      "offset": 2987,
+      "size": 114652,
+      "pixel_size": 235200,
+      "width": 560,
+      "height": 420,
+      "name": "dobry",
+      "id": 0,
+      "definition_id": 0,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_000_dobry_phase_00.png",
+          "size": 114652
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_001_cycki 01_phase_00.png",
+      "offset": 238645,
+      "size": 1273,
+      "pixel_size": 1386,
+      "width": 21,
+      "height": 22,
+      "name": "cycki 01",
+      "id": 1,
+      "definition_id": 1,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_001_cycki 01_phase_00.png",
+          "size": 1273
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_001_cycki 01_phase_01.png",
+          "size": 1295
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_001_cycki 01_phase_02.png",
+          "size": 1032
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_002_kolor_s_phase_00.png",
+      "offset": 240375,
+      "size": 3778,
+      "pixel_size": 16632,
+      "width": 84,
+      "height": 66,
+      "name": "kolor_s",
+      "id": 2,
+      "definition_id": 2,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_002_kolor_s_phase_00.png",
+          "size": 3778
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_002_kolor_s_phase_01.png",
+          "size": 4144
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_002_kolor_s_phase_02.png",
+          "size": 3586
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_003_k_wka_s_phase_00.png",
+      "offset": 257571,
+      "size": 2669,
+      "pixel_size": 9648,
+      "width": 67,
+      "height": 48,
+      "name": "kówka_s",
+      "id": 3,
+      "definition_id": 3,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_003_k_wka_s_phase_00.png",
+          "size": 2669
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_003_k_wka_s_phase_01.png",
+          "size": 2619
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_003_k_wka_s_phase_02.png",
+          "size": 2414
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_004_motyle_s_phase_00.png",
+      "offset": 267563,
+      "size": 3095,
+      "pixel_size": 12036,
+      "width": 68,
+      "height": 59,
+      "name": "motyle_s",
+      "id": 4,
+      "definition_id": 4,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_004_motyle_s_phase_00.png",
+          "size": 3095
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_004_motyle_s_phase_01.png",
+          "size": 3196
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_004_motyle_s_phase_02.png",
+          "size": 2596
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_005_muu_s_phase_00.png",
+      "offset": 280318,
+      "size": 3099,
+      "pixel_size": 11925,
+      "width": 53,
+      "height": 75,
+      "name": "muu_s",
+      "id": 5,
+      "definition_id": 5,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_005_muu_s_phase_00.png",
+          "size": 3099
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_005_muu_s_phase_01.png",
+          "size": 3046
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_005_muu_s_phase_02.png",
+          "size": 2845
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_006_nozki_s_phase_00.png",
+      "offset": 292671,
+      "size": 1618,
+      "pixel_size": 3612,
+      "width": 43,
+      "height": 28,
+      "name": "nozki_s",
+      "id": 6,
+      "definition_id": 6,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_006_nozki_s_phase_00.png",
+          "size": 1618
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_006_nozki_s_phase_01.png",
+          "size": 1585
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_006_nozki_s_phase_02.png",
+          "size": 1401
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_007_plamka_s_phase_00.png",
+      "offset": 296681,
+      "size": 1402,
+      "pixel_size": 2106,
+      "width": 26,
+      "height": 27,
+      "name": "plamka_s",
+      "id": 7,
+      "definition_id": 7,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_007_plamka_s_phase_00.png",
+          "size": 1402
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_007_plamka_s_phase_01.png",
+          "size": 1458
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_007_plamka_s_phase_02.png",
+          "size": 1177
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_008_ptaszek_s_phase_00.png",
+      "offset": 299131,
+      "size": 2291,
+      "pixel_size": 6192,
+      "width": 48,
+      "height": 43,
+      "name": "ptaszek_s",
+      "id": 8,
+      "definition_id": 8,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_008_ptaszek_s_phase_00.png",
+          "size": 2291
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_008_ptaszek_s_phase_01.png",
+          "size": 2166
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_008_ptaszek_s_phase_02.png",
+          "size": 1669
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_009_rogi_s_phase_00.png",
+      "offset": 305667,
+      "size": 1692,
+      "pixel_size": 4212,
+      "width": 52,
+      "height": 27,
+      "name": "rogi_s",
+      "id": 9,
+      "definition_id": 9,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_009_rogi_s_phase_00.png",
+          "size": 1692
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_009_rogi_s_phase_01.png",
+          "size": 1693
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_009_rogi_s_phase_02.png",
+          "size": 1461
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_010_slonko_s_phase_00.png",
+      "offset": 310523,
+      "size": 12291,
+      "pixel_size": 67500,
+      "width": 150,
+      "height": 150,
+      "name": "slonko_s",
+      "id": 10,
+      "definition_id": 10,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_010_slonko_s_phase_00.png",
+          "size": 12291
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_010_slonko_s_phase_01.png",
+          "size": 12127
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_010_slonko_s_phase_02.png",
+          "size": 11723
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_011_cycki_s_phase_00.png",
+      "offset": 378387,
+      "size": 2000,
+      "pixel_size": 3432,
+      "width": 39,
+      "height": 44,
+      "name": "cycki_s",
+      "id": 11,
+      "definition_id": 11,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_011_cycki_s_phase_00.png",
+          "size": 2000
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_011_cycki_s_phase_01.png",
+          "size": 1640
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_012_kolor_s_phase_00.png",
+      "offset": 382087,
+      "size": 4073,
+      "pixel_size": 11088,
+      "width": 84,
+      "height": 66,
+      "name": "kolor_s",
+      "id": 12,
+      "definition_id": 12,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_012_kolor_s_phase_00.png",
+          "size": 4073
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_012_kolor_s_phase_01.png",
+          "size": 3560
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_013_k_wka_s_phase_00.png",
+      "offset": 393539,
+      "size": 2610,
+      "pixel_size": 6432,
+      "width": 67,
+      "height": 48,
+      "name": "kówka_s",
+      "id": 13,
+      "definition_id": 13,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_013_k_wka_s_phase_00.png",
+          "size": 2610
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_013_k_wka_s_phase_01.png",
+          "size": 2300
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_014_motylek_s_phase_00.png",
+      "offset": 400239,
+      "size": 3104,
+      "pixel_size": 8024,
+      "width": 68,
+      "height": 59,
+      "name": "motylek_s",
+      "id": 14,
+      "definition_id": 14,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_014_motylek_s_phase_00.png",
+          "size": 3104
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_014_motylek_s_phase_01.png",
+          "size": 2390
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_015_muu_s_phase_00.png",
+      "offset": 408681,
+      "size": 2895,
+      "pixel_size": 7950,
+      "width": 53,
+      "height": 75,
+      "name": "muu_s",
+      "id": 15,
+      "definition_id": 15,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_015_muu_s_phase_00.png",
+          "size": 2895
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_015_muu_s_phase_01.png",
+          "size": 2686
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_016_n_ki_s_phase_00.png",
+      "offset": 416955,
+      "size": 1573,
+      "pixel_size": 2408,
+      "width": 43,
+      "height": 28,
+      "name": "nóżki_s",
+      "id": 16,
+      "definition_id": 16,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_016_n_ki_s_phase_00.png",
+          "size": 1573
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_016_n_ki_s_phase_01.png",
+          "size": 1383
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_017_plamka_s_phase_00.png",
+      "offset": 419631,
+      "size": 1489,
+      "pixel_size": 1404,
+      "width": 26,
+      "height": 27,
+      "name": "plamka_s",
+      "id": 17,
+      "definition_id": 17,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_017_plamka_s_phase_00.png",
+          "size": 1489
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_017_plamka_s_phase_01.png",
+          "size": 1189
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_018_ptaszek_s_phase_00.png",
+      "offset": 421303,
+      "size": 2089,
+      "pixel_size": 4128,
+      "width": 48,
+      "height": 43,
+      "name": "ptaszek_s",
+      "id": 18,
+      "definition_id": 18,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_018_ptaszek_s_phase_00.png",
+          "size": 2089
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_018_ptaszek_s_phase_01.png",
+          "size": 1539
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_019_rogi_s_phase_00.png",
+      "offset": 425699,
+      "size": 1664,
+      "pixel_size": 2808,
+      "width": 52,
+      "height": 27,
+      "name": "rogi_s",
+      "id": 19,
+      "definition_id": 19,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_019_rogi_s_phase_00.png",
+          "size": 1664
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_019_rogi_s_phase_01.png",
+          "size": 1436
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_020_s_onko_s_phase_00.png",
+      "offset": 428775,
+      "size": 12362,
+      "pixel_size": 45000,
+      "width": 150,
+      "height": 150,
+      "name": "słonko_s",
+      "id": 20,
+      "definition_id": 20,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_020_s_onko_s_phase_00.png",
+          "size": 12362
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_C\\sprite_holder\\00_Sprite_Holder_020_s_onko_s_phase_01.png",
+          "size": 11747
+        }
+      ]
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\CUDA_C\\bitmap_holder\\01_Bitmap_Holder_000_cuda i dz_640x480.bmp",
+      "offset": 477987,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "cuda i dz",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 640,
+        "height": 480
+      },
+      "geometry_confidence": "serialized_entry"
     }
   ],
   "script": {

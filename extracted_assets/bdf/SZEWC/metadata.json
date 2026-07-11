@@ -37,7 +37,413 @@
       "display_name": "Sprite_Holder",
       "private_offset": 312718,
       "private_size": 172324,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_000_bu501_phase_00.png",
+          "offset": 313378,
+          "size": 6252,
+          "pixel_size": 31692,
+          "width": 139,
+          "height": 76,
+          "name": "bu501",
+          "id": 0,
+          "definition_id": 0,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_000_bu501_phase_00.png",
+              "size": 6252
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_000_bu501_phase_01.png",
+              "size": 2998
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_000_bu501_phase_02.png",
+              "size": 6120
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_001_Sprite 1_phase_00.png",
+          "offset": 345490,
+          "size": 5304,
+          "pixel_size": 27144,
+          "width": 116,
+          "height": 78,
+          "name": "Sprite 1",
+          "id": 1,
+          "definition_id": 1,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_001_Sprite 1_phase_00.png",
+              "size": 5304
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_001_Sprite 1_phase_01.png",
+              "size": 2164
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_001_Sprite 1_phase_02.png",
+              "size": 5237
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_002_bu101_phase_00.png",
+          "offset": 373510,
+          "size": 5661,
+          "pixel_size": 31464,
+          "width": 138,
+          "height": 76,
+          "name": "bu101",
+          "id": 2,
+          "definition_id": 2,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_002_bu101_phase_00.png",
+              "size": 5661
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_002_bu101_phase_01.png",
+              "size": 2731
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_002_bu101_phase_02.png",
+              "size": 5927
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_003_obcasy_phase_00.png",
+          "offset": 405334,
+          "size": 7820,
+          "pixel_size": 13156,
+          "width": 143,
+          "height": 92,
+          "name": "obcasy",
+          "id": 3,
+          "definition_id": 3,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_003_obcasy_phase_00.png",
+              "size": 7820
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_004_bu201_phase_00.png",
+          "offset": 419396,
+          "size": 6318,
+          "pixel_size": 32562,
+          "width": 134,
+          "height": 81,
+          "name": "bu201",
+          "id": 4,
+          "definition_id": 4,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_004_bu201_phase_00.png",
+              "size": 6318
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_004_bu201_phase_01.png",
+              "size": 3070
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_004_bu201_phase_02.png",
+              "size": 6244
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_005_bu401_phase_00.png",
+          "offset": 452846,
+          "size": 6123,
+          "pixel_size": 31356,
+          "width": 134,
+          "height": 78,
+          "name": "bu401",
+          "id": 5,
+          "definition_id": 5,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_005_bu401_phase_00.png",
+              "size": 6123
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_005_bu401_phase_01.png",
+              "size": 2188
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_005_bu401_phase_02.png",
+              "size": 5998
+            }
+          ]
+        }
+      ],
+      "sprite_holder": {
+        "version": 1,
+        "definition_count": 6,
+        "instance_count": 6,
+        "parsed_definitions": 6,
+        "parsed_instances": 6,
+        "definitions": [
+          {
+            "index": 0,
+            "name": "bu501",
+            "record_offset": 312730,
+            "blob_offset": 312734,
+            "blob_size": 32336,
+            "width": 139,
+            "height": 76,
+            "phase_count": 3,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_000_bu501_phase_00.png",
+                "size": 6252
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_000_bu501_phase_01.png",
+                "size": 2998
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_000_bu501_phase_02.png",
+                "size": 6120
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "Sprite 1",
+            "record_offset": 345070,
+            "blob_offset": 345074,
+            "blob_size": 27560,
+            "width": 116,
+            "height": 78,
+            "phase_count": 3,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_001_Sprite 1_phase_00.png",
+                "size": 5304
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_001_Sprite 1_phase_01.png",
+                "size": 2164
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_001_Sprite 1_phase_02.png",
+                "size": 5237
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "bu101",
+            "record_offset": 372634,
+            "blob_offset": 372638,
+            "blob_size": 32336,
+            "width": 138,
+            "height": 76,
+            "phase_count": 3,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_002_bu101_phase_00.png",
+                "size": 5661
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_002_bu101_phase_01.png",
+                "size": 2731
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_002_bu101_phase_02.png",
+                "size": 5927
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "name": "obcasy",
+            "record_offset": 404974,
+            "blob_offset": 404978,
+            "blob_size": 13512,
+            "width": 143,
+            "height": 92,
+            "phase_count": 1,
+            "phase_hint": 2155446137,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_003_obcasy_phase_00.png",
+                "size": 7820
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "name": "bu201",
+            "record_offset": 418490,
+            "blob_offset": 418494,
+            "blob_size": 33464,
+            "width": 134,
+            "height": 81,
+            "phase_count": 3,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_004_bu201_phase_00.png",
+                "size": 6318
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_004_bu201_phase_01.png",
+                "size": 3070
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_004_bu201_phase_02.png",
+                "size": 6244
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "name": "bu401",
+            "record_offset": 451958,
+            "blob_offset": 451962,
+            "blob_size": 32240,
+            "width": 134,
+            "height": 78,
+            "phase_count": 3,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_005_bu401_phase_00.png",
+                "size": 6123
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_005_bu401_phase_01.png",
+                "size": 2188
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_005_bu401_phase_02.png",
+                "size": 5998
+              }
+            ]
+          }
+        ],
+        "instances": [
+          {
+            "index": 0,
+            "definition_id": 2,
+            "field04": 1,
+            "x": 28,
+            "y": 57,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 484202
+          },
+          {
+            "index": 1,
+            "definition_id": 1,
+            "field04": 1,
+            "x": 43,
+            "y": 163,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 484342
+          },
+          {
+            "index": 2,
+            "definition_id": 0,
+            "field04": 1,
+            "x": 43,
+            "y": 265,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 484482
+          },
+          {
+            "index": 3,
+            "definition_id": 4,
+            "field04": 1,
+            "x": 182,
+            "y": 57,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 484622
+          },
+          {
+            "index": 4,
+            "definition_id": 5,
+            "field04": 1,
+            "x": 182,
+            "y": 163,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 484762
+          },
+          {
+            "index": 5,
+            "definition_id": 3,
+            "field04": 1,
+            "x": 182,
+            "y": 250,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 484902
+          }
+        ]
+      }
     },
     {
       "index": 2,
@@ -49,49 +455,49 @@
       "embedded": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_000_00076a3e.wav",
+          "path": "extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_000_00076a3e.wav",
           "offset": 485950,
           "size": 705838,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_001_00122fcc.wav",
+          "path": "extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_001_00122fcc.wav",
           "offset": 1191884,
           "size": 8002,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_002_00124f6e.wav",
+          "path": "extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_002_00124f6e.wav",
           "offset": 1199982,
           "size": 6918,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_003_00126ad4.wav",
+          "path": "extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_003_00126ad4.wav",
           "offset": 1206996,
           "size": 125598,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_004_001455d2.wav",
+          "path": "extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_004_001455d2.wav",
           "offset": 1332690,
           "size": 219506,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_005_0017afa4.wav",
+          "path": "extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_005_0017afa4.wav",
           "offset": 1552292,
           "size": 61516,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_006_0018a050.wav",
+          "path": "extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_006_0018a050.wav",
           "offset": 1613904,
           "size": 106706,
           "extension": ".wav"
@@ -111,57 +517,227 @@
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SZEWC\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\SZEWC\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "dib",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SZEWC\\background.dib",
+      "path": "extracted_assets\\bdf\\SZEWC\\background.dib",
       "size": 308180
     },
     {
       "kind": "bmp",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SZEWC\\background.bmp",
+      "path": "extracted_assets\\bdf\\SZEWC\\background.bmp",
       "size": 308194
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SZEWC\\script.txt",
+      "path": "extracted_assets\\bdf\\SZEWC\\script.txt",
       "size": 14870
     },
     {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_000_bu501_phase_00.png",
+      "offset": 313378,
+      "size": 6252,
+      "pixel_size": 31692,
+      "width": 139,
+      "height": 76,
+      "name": "bu501",
+      "id": 0,
+      "definition_id": 0,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_000_bu501_phase_00.png",
+          "size": 6252
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_000_bu501_phase_01.png",
+          "size": 2998
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_000_bu501_phase_02.png",
+          "size": 6120
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_001_Sprite 1_phase_00.png",
+      "offset": 345490,
+      "size": 5304,
+      "pixel_size": 27144,
+      "width": 116,
+      "height": 78,
+      "name": "Sprite 1",
+      "id": 1,
+      "definition_id": 1,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_001_Sprite 1_phase_00.png",
+          "size": 5304
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_001_Sprite 1_phase_01.png",
+          "size": 2164
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_001_Sprite 1_phase_02.png",
+          "size": 5237
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_002_bu101_phase_00.png",
+      "offset": 373510,
+      "size": 5661,
+      "pixel_size": 31464,
+      "width": 138,
+      "height": 76,
+      "name": "bu101",
+      "id": 2,
+      "definition_id": 2,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_002_bu101_phase_00.png",
+          "size": 5661
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_002_bu101_phase_01.png",
+          "size": 2731
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_002_bu101_phase_02.png",
+          "size": 5927
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_003_obcasy_phase_00.png",
+      "offset": 405334,
+      "size": 7820,
+      "pixel_size": 13156,
+      "width": 143,
+      "height": 92,
+      "name": "obcasy",
+      "id": 3,
+      "definition_id": 3,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_003_obcasy_phase_00.png",
+          "size": 7820
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_004_bu201_phase_00.png",
+      "offset": 419396,
+      "size": 6318,
+      "pixel_size": 32562,
+      "width": 134,
+      "height": 81,
+      "name": "bu201",
+      "id": 4,
+      "definition_id": 4,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_004_bu201_phase_00.png",
+          "size": 6318
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_004_bu201_phase_01.png",
+          "size": 3070
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_004_bu201_phase_02.png",
+          "size": 6244
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_005_bu401_phase_00.png",
+      "offset": 452846,
+      "size": 6123,
+      "pixel_size": 31356,
+      "width": 134,
+      "height": 78,
+      "name": "bu401",
+      "id": 5,
+      "definition_id": 5,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_005_bu401_phase_00.png",
+          "size": 6123
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_005_bu401_phase_01.png",
+          "size": 2188
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\SZEWC\\sprite_holder\\01_Sprite_Holder_005_bu401_phase_02.png",
+          "size": 5998
+        }
+      ]
+    },
+    {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_000_00076a3e.wav",
+      "path": "extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_000_00076a3e.wav",
       "size": 705838
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_001_00122fcc.wav",
+      "path": "extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_001_00122fcc.wav",
       "size": 8002
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_002_00124f6e.wav",
+      "path": "extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_002_00124f6e.wav",
       "size": 6918
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_003_00126ad4.wav",
+      "path": "extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_003_00126ad4.wav",
       "size": 125598
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_004_001455d2.wav",
+      "path": "extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_004_001455d2.wav",
       "size": 219506
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_005_0017afa4.wav",
+      "path": "extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_005_0017afa4.wav",
       "size": 61516
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_006_0018a050.wav",
+      "path": "extracted_assets\\bdf\\SZEWC\\embedded\\02_Sound_Holder_006_0018a050.wav",
       "size": 106706
     }
   ],

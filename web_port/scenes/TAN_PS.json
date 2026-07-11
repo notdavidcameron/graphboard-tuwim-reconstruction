@@ -24,22 +24,223 @@
       "namespace": "Page",
       "index": 0,
       "z": 0,
-      "visible": false,
+      "visible": true,
       "rect": {
         "x": 209,
-        "y": 197,
-        "width": 389,
-        "height": 197
+        "y": 124,
+        "width": 420,
+        "height": 270
       },
-      "geometryConfidence": "serialized_entry",
+      "geometryConfidence": "serialized_entries",
       "itemCount": null,
       "hitboxes": [],
       "sourceOffset": 309353,
-      "geometrySourceOffset": 310505,
+      "geometrySourceOffset": null,
       "privateOffset": 310485,
       "privateSize": 283556,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/bdf/TAN_PS/bitmap_holder/00_Bitmap_Holder_000_smyczek 0_389x197.bmp",
+      "assets": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TAN_PS\\bitmap_holder\\00_Bitmap_Holder_000_smyczek 0_389x197.bmp",
+          "url": "../extracted_assets/bdf/TAN_PS/bitmap_holder/00_Bitmap_Holder_000_smyczek 0_389x197.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 389,
+          "height": 197,
+          "frameCount": null,
+          "offset": 310625,
+          "name": "smyczek 0",
+          "id": 0,
+          "rect": {
+            "x": 209,
+            "y": 197,
+            "width": 389,
+            "height": 197
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TAN_PS\\bitmap_holder\\00_Bitmap_Holder_001_smyczek 0_147x211.bmp",
+          "url": "../extracted_assets/bdf/TAN_PS/bitmap_holder/00_Bitmap_Holder_001_smyczek 0_147x211.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 147,
+          "height": 211,
+          "frameCount": null,
+          "offset": 387997,
+          "name": "smyczek 0",
+          "id": 1,
+          "rect": {
+            "x": 482,
+            "y": 124,
+            "width": 147,
+            "height": 211
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TAN_PS\\bitmap_holder\\00_Bitmap_Holder_002_smyczek 0_116x212.bmp",
+          "url": "../extracted_assets/bdf/TAN_PS/bitmap_holder/00_Bitmap_Holder_002_smyczek 0_116x212.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 116,
+          "height": 212,
+          "frameCount": null,
+          "offset": 419373,
+          "name": "smyczek 0",
+          "id": 2,
+          "rect": {
+            "x": 483,
+            "y": 124,
+            "width": 116,
+            "height": 212
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TAN_PS\\bitmap_holder\\00_Bitmap_Holder_003_smyczek 0_146x187.bmp",
+          "url": "../extracted_assets/bdf/TAN_PS/bitmap_holder/00_Bitmap_Holder_003_smyczek 0_146x187.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 146,
+          "height": 187,
+          "frameCount": null,
+          "offset": 444113,
+          "name": "smyczek 0",
+          "id": 3,
+          "rect": {
+            "x": 483,
+            "y": 146,
+            "width": 146,
+            "height": 187
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TAN_PS\\bitmap_holder\\00_Bitmap_Holder_004_smyczek 0_116x185.bmp",
+          "url": "../extracted_assets/bdf/TAN_PS/bitmap_holder/00_Bitmap_Holder_004_smyczek 0_116x185.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 116,
+          "height": 185,
+          "frameCount": null,
+          "offset": 471937,
+          "name": "smyczek 0",
+          "id": 4,
+          "rect": {
+            "x": 483,
+            "y": 147,
+            "width": 116,
+            "height": 185
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TAN_PS\\bitmap_holder\\00_Bitmap_Holder_005_smyczek 0_146x157.bmp",
+          "url": "../extracted_assets/bdf/TAN_PS/bitmap_holder/00_Bitmap_Holder_005_smyczek 0_146x157.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 146,
+          "height": 157,
+          "frameCount": null,
+          "offset": 493545,
+          "name": "smyczek 0",
+          "id": 5,
+          "rect": {
+            "x": 483,
+            "y": 173,
+            "width": 146,
+            "height": 157
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TAN_PS\\bitmap_holder\\00_Bitmap_Holder_006_smyczek 0_122x158.bmp",
+          "url": "../extracted_assets/bdf/TAN_PS/bitmap_holder/00_Bitmap_Holder_006_smyczek 0_122x158.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 122,
+          "height": 158,
+          "frameCount": null,
+          "offset": 516929,
+          "name": "smyczek 0",
+          "id": 6,
+          "rect": {
+            "x": 479,
+            "y": 173,
+            "width": 122,
+            "height": 158
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TAN_PS\\bitmap_holder\\00_Bitmap_Holder_007_smyczek 0_148x133.bmp",
+          "url": "../extracted_assets/bdf/TAN_PS/bitmap_holder/00_Bitmap_Holder_007_smyczek 0_148x133.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 148,
+          "height": 133,
+          "frameCount": null,
+          "offset": 536669,
+          "name": "smyczek 0",
+          "id": 7,
+          "rect": {
+            "x": 481,
+            "y": 197,
+            "width": 148,
+            "height": 133
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TAN_PS\\bitmap_holder\\00_Bitmap_Holder_008_gwizd 02_246x136.bmp",
+          "url": "../extracted_assets/bdf/TAN_PS/bitmap_holder/00_Bitmap_Holder_008_gwizd 02_246x136.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 246,
+          "height": 136,
+          "frameCount": null,
+          "offset": 556501,
+          "name": "gwizd 02",
+          "id": 8,
+          "rect": {
+            "x": 352,
+            "y": 198,
+            "width": 246,
+            "height": 136
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TAN_PS\\bitmap_holder\\00_Bitmap_Holder_009_okrzyk 02_64x57.bmp",
+          "url": "../extracted_assets/bdf/TAN_PS/bitmap_holder/00_Bitmap_Holder_009_okrzyk 02_64x57.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 64,
+          "height": 57,
+          "frameCount": null,
+          "offset": 590377,
+          "name": "okrzyk 02",
+          "id": 9,
+          "rect": {
+            "x": 375,
+            "y": 204,
+            "width": 64,
+            "height": 57
+          },
+          "geometryConfidence": "serialized_entry"
+        }
+      ],
       "audio": []
     },
     {
@@ -67,19 +268,39 @@
             "width": 56,
             "height": 44
           },
+          "name": "",
+          "layer": 2,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            180
+          ],
           "sourceOffset": 595157,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 17,
+          "auxState": 0
         },
         {
-          "id": 1,
+          "id": 3,
           "rect": {
             "x": 503,
             "y": 219,
             "width": 61,
             "height": 42
           },
+          "name": "",
+          "layer": 2,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            180
+          ],
           "sourceOffset": 595258,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 17,
+          "auxState": 0
         },
         {
           "id": 2,
@@ -89,19 +310,39 @@
             "width": 57,
             "height": 41
           },
+          "name": "",
+          "layer": 2,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            180
+          ],
           "sourceOffset": 595359,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 17,
+          "auxState": 0
         },
         {
-          "id": 3,
+          "id": 1,
           "rect": {
             "x": 512,
             "y": 138,
             "width": 57,
             "height": 44
           },
+          "name": "",
+          "layer": 2,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            180
+          ],
           "sourceOffset": 595460,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 17,
+          "auxState": 0
         },
         {
           "id": 4,
@@ -111,8 +352,18 @@
             "width": 59,
             "height": 37
           },
+          "name": "",
+          "layer": 2,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            180
+          ],
           "sourceOffset": 595561,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 17,
+          "auxState": 0
         },
         {
           "id": 5,
@@ -122,8 +373,18 @@
             "width": 61,
             "height": 39
           },
+          "name": "",
+          "layer": 2,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            180
+          ],
           "sourceOffset": 595662,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 17,
+          "auxState": 0
         },
         {
           "id": 6,
@@ -133,8 +394,18 @@
             "width": 59,
             "height": 35
           },
+          "name": "",
+          "layer": 2,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            180
+          ],
           "sourceOffset": 595763,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 17,
+          "auxState": 0
         },
         {
           "id": 7,
@@ -144,8 +415,18 @@
             "width": 60,
             "height": 37
           },
+          "name": "",
+          "layer": 2,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            180
+          ],
           "sourceOffset": 595864,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 17,
+          "auxState": 0
         },
         {
           "id": 8,
@@ -155,8 +436,18 @@
             "width": 128,
             "height": 75
           },
+          "name": "",
+          "layer": 2,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            180
+          ],
           "sourceOffset": 595965,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 17,
+          "auxState": 0
         },
         {
           "id": 9,
@@ -166,8 +457,18 @@
             "width": 93,
             "height": 60
           },
+          "name": "",
+          "layer": 2,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            180
+          ],
           "sourceOffset": 596066,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 17,
+          "auxState": 0
         },
         {
           "id": 10,
@@ -177,8 +478,18 @@
             "width": 50,
             "height": 146
           },
+          "name": "",
+          "layer": 2,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            180
+          ],
           "sourceOffset": 596167,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 17,
+          "auxState": 0
         },
         {
           "id": 11,
@@ -188,8 +499,18 @@
             "width": 139,
             "height": 161
           },
+          "name": "",
+          "layer": 8,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            180
+          ],
           "sourceOffset": 596268,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 17,
+          "auxState": 0
         }
       ],
       "sourceOffset": 594041,
@@ -226,7 +547,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_000_00091d25.wav",
+          "path": "extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_000_00091d25.wav",
           "url": "../extracted_assets/bdf/TAN_PS/embedded/02_Sound_Holder_000_00091d25.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -236,7 +557,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_001_000983d7.wav",
+          "path": "extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_001_000983d7.wav",
           "url": "../extracted_assets/bdf/TAN_PS/embedded/02_Sound_Holder_001_000983d7.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -246,7 +567,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_002_0009d059.wav",
+          "path": "extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_002_0009d059.wav",
           "url": "../extracted_assets/bdf/TAN_PS/embedded/02_Sound_Holder_002_0009d059.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -256,7 +577,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_003_000a227f.wav",
+          "path": "extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_003_000a227f.wav",
           "url": "../extracted_assets/bdf/TAN_PS/embedded/02_Sound_Holder_003_000a227f.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -266,7 +587,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_004_000a7413.wav",
+          "path": "extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_004_000a7413.wav",
           "url": "../extracted_assets/bdf/TAN_PS/embedded/02_Sound_Holder_004_000a7413.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -276,7 +597,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_005_000ac6a1.wav",
+          "path": "extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_005_000ac6a1.wav",
           "url": "../extracted_assets/bdf/TAN_PS/embedded/02_Sound_Holder_005_000ac6a1.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -286,7 +607,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_006_000b111b.wav",
+          "path": "extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_006_000b111b.wav",
           "url": "../extracted_assets/bdf/TAN_PS/embedded/02_Sound_Holder_006_000b111b.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -296,7 +617,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_007_000b6001.wav",
+          "path": "extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_007_000b6001.wav",
           "url": "../extracted_assets/bdf/TAN_PS/embedded/02_Sound_Holder_007_000b6001.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -306,7 +627,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_008_000bb421.wav",
+          "path": "extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_008_000bb421.wav",
           "url": "../extracted_assets/bdf/TAN_PS/embedded/02_Sound_Holder_008_000bb421.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -316,7 +637,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_009_000bb81d.wav",
+          "path": "extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_009_000bb81d.wav",
           "url": "../extracted_assets/bdf/TAN_PS/embedded/02_Sound_Holder_009_000bb81d.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -326,7 +647,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_010_000bbd05.wav",
+          "path": "extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_010_000bbd05.wav",
           "url": "../extracted_assets/bdf/TAN_PS/embedded/02_Sound_Holder_010_000bbd05.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -336,7 +657,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_011_000bc2f7.wav",
+          "path": "extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_011_000bc2f7.wav",
           "url": "../extracted_assets/bdf/TAN_PS/embedded/02_Sound_Holder_011_000bc2f7.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -346,7 +667,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_012_000c0ba9.wav",
+          "path": "extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_012_000c0ba9.wav",
           "url": "../extracted_assets/bdf/TAN_PS/embedded/02_Sound_Holder_012_000c0ba9.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -356,7 +677,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_013_000c47d7.wav",
+          "path": "extracted_assets\\bdf\\TAN_PS\\embedded\\02_Sound_Holder_013_000c47d7.wav",
           "url": "../extracted_assets/bdf/TAN_PS/embedded/02_Sound_Holder_013_000c47d7.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -392,7 +713,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\03_Text_Holder_000_000d0915.wav",
+          "path": "extracted_assets\\bdf\\TAN_PS\\embedded\\03_Text_Holder_000_000d0915.wav",
           "url": "../extracted_assets/bdf/TAN_PS/embedded/03_Text_Holder_000_000d0915.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -402,7 +723,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\03_Text_Holder_001_00565209.wav",
+          "path": "extracted_assets\\bdf\\TAN_PS\\embedded\\03_Text_Holder_001_00565209.wav",
           "url": "../extracted_assets/bdf/TAN_PS/embedded/03_Text_Holder_001_00565209.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -412,7 +733,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\embedded\\03_Text_Holder_002_00a1ced6.wav",
+          "path": "extracted_assets\\bdf\\TAN_PS\\embedded\\03_Text_Holder_002_00a1ced6.wav",
           "url": "../extracted_assets/bdf/TAN_PS/embedded/03_Text_Holder_002_00a1ced6.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -428,23 +749,803 @@
       "sourceType": "Sprite_Holder",
       "namespace": "Page",
       "index": 4,
-      "z": 50,
+      "z": 0,
       "visible": true,
       "rect": {
-        "x": 0,
+        "x": 240,
         "y": 0,
-        "width": 48,
-        "height": 48
+        "width": 359,
+        "height": 393
       },
-      "geometryConfidence": "synthetic_items",
+      "geometryConfidence": "serialized_entries",
       "itemCount": 3,
       "hitboxes": [],
       "sourceOffset": 11492851,
       "geometrySourceOffset": null,
       "privateOffset": 11494385,
       "privateSize": 317652,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_00.png",
+      "assets": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_00.png",
+          "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 19,
+          "height": 25,
+          "frameCount": null,
+          "offset": 11724041,
+          "name": "instrumen",
+          "id": 0,
+          "definitionId": 0,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_00.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_01.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_02.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_03.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_04.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_05.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_05.png"
+            },
+            {
+              "phase": 6,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_06.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_06.png"
+            },
+            {
+              "phase": 7,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_07.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_07.png"
+            },
+            {
+              "phase": 8,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_08.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_08.png"
+            },
+            {
+              "phase": 9,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_09.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_09.png"
+            },
+            {
+              "phase": 10,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_10.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_10.png"
+            },
+            {
+              "phase": 11,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_11.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_11.png"
+            },
+            {
+              "phase": 12,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_12.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_12.png"
+            },
+            {
+              "phase": 13,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_13.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_13.png"
+            },
+            {
+              "phase": 14,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_14.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_14.png"
+            },
+            {
+              "phase": 15,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_15.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_15.png"
+            },
+            {
+              "phase": 16,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_16.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_16.png"
+            },
+            {
+              "phase": 17,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_17.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_17.png"
+            },
+            {
+              "phase": 18,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_18.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_18.png"
+            },
+            {
+              "phase": 19,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_19.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_19.png"
+            },
+            {
+              "phase": 20,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_20.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_20.png"
+            },
+            {
+              "phase": 21,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_21.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_21.png"
+            },
+            {
+              "phase": 22,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_22.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_22.png"
+            },
+            {
+              "phase": 23,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_23.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_23.png"
+            },
+            {
+              "phase": 24,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_24.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_24.png"
+            },
+            {
+              "phase": 25,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_25.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_25.png"
+            },
+            {
+              "phase": 26,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_26.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_26.png"
+            },
+            {
+              "phase": 27,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_27.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_27.png"
+            },
+            {
+              "phase": 28,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_28.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_28.png"
+            },
+            {
+              "phase": 29,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_29.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_29.png"
+            },
+            {
+              "phase": 30,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_30.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_30.png"
+            },
+            {
+              "phase": 31,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_31.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_31.png"
+            },
+            {
+              "phase": 32,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_32.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_32.png"
+            },
+            {
+              "phase": 33,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_33.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_33.png"
+            },
+            {
+              "phase": 34,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_34.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_34.png"
+            },
+            {
+              "phase": 35,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_35.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_35.png"
+            },
+            {
+              "phase": 36,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_36.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_36.png"
+            },
+            {
+              "phase": 37,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_37.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_37.png"
+            },
+            {
+              "phase": 38,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_38.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_38.png"
+            },
+            {
+              "phase": 39,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_39.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_39.png"
+            },
+            {
+              "phase": 40,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_40.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_40.png"
+            },
+            {
+              "phase": 41,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_41.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_41.png"
+            },
+            {
+              "phase": 42,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_42.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_42.png"
+            },
+            {
+              "phase": 43,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_43.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_43.png"
+            },
+            {
+              "phase": 44,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_44.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_44.png"
+            },
+            {
+              "phase": 45,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_45.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_45.png"
+            },
+            {
+              "phase": 46,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_46.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_46.png"
+            },
+            {
+              "phase": 47,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_47.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_47.png"
+            },
+            {
+              "phase": 48,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_48.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_48.png"
+            },
+            {
+              "phase": 49,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_49.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_49.png"
+            },
+            {
+              "phase": 50,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_50.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_50.png"
+            },
+            {
+              "phase": 51,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_51.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_51.png"
+            },
+            {
+              "phase": 52,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_52.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_52.png"
+            },
+            {
+              "phase": 53,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_53.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_53.png"
+            },
+            {
+              "phase": 54,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_54.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_54.png"
+            },
+            {
+              "phase": 55,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_55.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_55.png"
+            },
+            {
+              "phase": 56,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_56.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_56.png"
+            },
+            {
+              "phase": 57,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_57.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_57.png"
+            },
+            {
+              "phase": 58,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_58.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_58.png"
+            },
+            {
+              "phase": 59,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_59.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_59.png"
+            },
+            {
+              "phase": 60,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_60.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_60.png"
+            },
+            {
+              "phase": 61,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_61.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_61.png"
+            },
+            {
+              "phase": 62,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_62.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_62.png"
+            },
+            {
+              "phase": 63,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_000_instrumen_phase_63.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_000_instrumen_phase_63.png"
+            }
+          ],
+          "phaseCount": 64,
+          "instanceOffset": 11811617,
+          "rect": {
+            "x": 450,
+            "y": 0,
+            "width": 19,
+            "height": 25
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek 0_phase_00.png",
+          "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_001_dzwonek 0_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 19,
+          "height": 25,
+          "frameCount": null,
+          "offset": 11754860,
+          "name": "dzwonek 0",
+          "id": 1,
+          "definitionId": 1,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek 0_phase_00.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_001_dzwonek 0_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek 0_phase_01.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_001_dzwonek 0_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek 0_phase_02.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_001_dzwonek 0_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek 0_phase_03.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_001_dzwonek 0_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek 0_phase_04.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_001_dzwonek 0_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek 0_phase_05.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_001_dzwonek 0_phase_05.png"
+            },
+            {
+              "phase": 6,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek 0_phase_06.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_001_dzwonek 0_phase_06.png"
+            },
+            {
+              "phase": 7,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek 0_phase_07.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_001_dzwonek 0_phase_07.png"
+            },
+            {
+              "phase": 8,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek 0_phase_08.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_001_dzwonek 0_phase_08.png"
+            },
+            {
+              "phase": 9,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek 0_phase_09.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_001_dzwonek 0_phase_09.png"
+            },
+            {
+              "phase": 10,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek 0_phase_10.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_001_dzwonek 0_phase_10.png"
+            }
+          ],
+          "phaseCount": 11,
+          "instanceOffset": 11811757,
+          "rect": {
+            "x": 580,
+            "y": 14,
+            "width": 19,
+            "height": 25
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_00.png",
+          "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 19,
+          "height": 25,
+          "frameCount": null,
+          "offset": 11781217,
+          "name": "but",
+          "id": 2,
+          "definitionId": 2,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_00.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_01.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_02.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_03.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_04.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_05.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_05.png"
+            },
+            {
+              "phase": 6,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_06.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_06.png"
+            },
+            {
+              "phase": 7,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_07.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_07.png"
+            },
+            {
+              "phase": 8,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_08.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_08.png"
+            },
+            {
+              "phase": 9,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_09.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_09.png"
+            },
+            {
+              "phase": 10,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_10.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_10.png"
+            },
+            {
+              "phase": 11,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_11.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_11.png"
+            },
+            {
+              "phase": 12,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_12.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_12.png"
+            },
+            {
+              "phase": 13,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_13.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_13.png"
+            },
+            {
+              "phase": 14,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_14.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_14.png"
+            },
+            {
+              "phase": 15,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_15.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_15.png"
+            },
+            {
+              "phase": 16,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_16.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_16.png"
+            },
+            {
+              "phase": 17,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_17.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_17.png"
+            },
+            {
+              "phase": 18,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_18.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_18.png"
+            },
+            {
+              "phase": 19,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_19.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_19.png"
+            },
+            {
+              "phase": 20,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_20.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_20.png"
+            },
+            {
+              "phase": 21,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_21.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_21.png"
+            },
+            {
+              "phase": 22,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_22.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_22.png"
+            },
+            {
+              "phase": 23,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_23.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_23.png"
+            },
+            {
+              "phase": 24,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_24.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_24.png"
+            },
+            {
+              "phase": 25,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_25.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_25.png"
+            },
+            {
+              "phase": 26,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_26.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_26.png"
+            },
+            {
+              "phase": 27,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_27.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_27.png"
+            },
+            {
+              "phase": 28,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_28.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_28.png"
+            },
+            {
+              "phase": 29,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_29.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_29.png"
+            },
+            {
+              "phase": 30,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_30.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_30.png"
+            },
+            {
+              "phase": 31,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_31.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_31.png"
+            },
+            {
+              "phase": 32,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_32.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_32.png"
+            },
+            {
+              "phase": 33,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_33.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_33.png"
+            },
+            {
+              "phase": 34,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_34.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_34.png"
+            },
+            {
+              "phase": 35,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_35.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_35.png"
+            },
+            {
+              "phase": 36,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_36.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_36.png"
+            },
+            {
+              "phase": 37,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_37.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_37.png"
+            },
+            {
+              "phase": 38,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_38.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_38.png"
+            },
+            {
+              "phase": 39,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_39.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_39.png"
+            },
+            {
+              "phase": 40,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_40.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_40.png"
+            },
+            {
+              "phase": 41,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_41.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_41.png"
+            },
+            {
+              "phase": 42,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_42.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_42.png"
+            },
+            {
+              "phase": 43,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_43.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_43.png"
+            },
+            {
+              "phase": 44,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_44.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_44.png"
+            },
+            {
+              "phase": 45,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_45.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_45.png"
+            },
+            {
+              "phase": 46,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_46.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_46.png"
+            },
+            {
+              "phase": 47,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_47.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_47.png"
+            },
+            {
+              "phase": 48,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_48.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_48.png"
+            },
+            {
+              "phase": 49,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_49.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_49.png"
+            },
+            {
+              "phase": 50,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_50.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_50.png"
+            },
+            {
+              "phase": 51,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_51.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_51.png"
+            },
+            {
+              "phase": 52,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_52.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_52.png"
+            },
+            {
+              "phase": 53,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_53.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_53.png"
+            },
+            {
+              "phase": 54,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_54.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_54.png"
+            },
+            {
+              "phase": 55,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_55.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_55.png"
+            },
+            {
+              "phase": 56,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_56.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_56.png"
+            },
+            {
+              "phase": 57,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_57.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_57.png"
+            },
+            {
+              "phase": 58,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_58.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_58.png"
+            },
+            {
+              "phase": 59,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_59.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_59.png"
+            },
+            {
+              "phase": 60,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_60.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_60.png"
+            },
+            {
+              "phase": 61,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_61.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_61.png"
+            },
+            {
+              "phase": 62,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_62.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_62.png"
+            },
+            {
+              "phase": 63,
+              "path": "extracted_assets\\bdf\\TAN_PS\\sprite_holder\\04_Sprite_Holder_002_but_phase_63.png",
+              "url": "../extracted_assets/bdf/TAN_PS/sprite_holder/04_Sprite_Holder_002_but_phase_63.png"
+            }
+          ],
+          "phaseCount": 64,
+          "instanceOffset": 11811897,
+          "rect": {
+            "x": 240,
+            "y": 368,
+            "width": 19,
+            "height": 25
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        }
+      ],
       "audio": []
     },
     {
@@ -472,7 +1573,7 @@
       "assets": [
         {
           "kind": "multibitmap_bmp",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TAN_PS\\multibitmap\\05_MultiBitmap_000_taniec_b1.bmp",
+          "path": "extracted_assets\\bdf\\TAN_PS\\multibitmap\\05_MultiBitmap_000_taniec_b1.bmp",
           "url": "../extracted_assets/bdf/TAN_PS/multibitmap/05_MultiBitmap_000_taniec_b1.bmp",
           "stillPath": null,
           "stillUrl": null,
@@ -481,7 +1582,8 @@
           "frameCount": null,
           "offset": 11813054,
           "name": "taniec_b1",
-          "id": 0
+          "id": 0,
+          "initiallyVisible": false
         }
       ],
       "audio": []
@@ -494,10 +1596,6 @@
       {
         "name": "OnOpenPage",
         "signature": "OnOpenPage()"
-      },
-      {
-        "name": "while",
-        "signature": "while(index < 128)"
       },
       {
         "name": "OnTimer",
@@ -520,20 +1618,8 @@
         "signature": "UstawAktywnoscStrony(int nowaAkcja)"
       },
       {
-        "name": "switch",
-        "signature": "switch(nowaAkcja)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(akcja)"
-      },
-      {
         "name": "OnKeyDown",
         "signature": "OnKeyDown(UINT nChar)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(nChar)"
       },
       {
         "name": "OnKeyUp",
@@ -544,24 +1630,12 @@
         "signature": "Muzyka(int nrRuchu, int dzwiek)"
       },
       {
-        "name": "if",
-        "signature": "if(nrRuchu < 8)"
-      },
-      {
-        "name": "if",
-        "signature": "if(smyczek)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(nrRuchu)"
-      },
-      {
         "name": "Sound_Holder.EndPlaySound",
         "signature": "Sound_Holder.EndPlaySound(int soundID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(soundID)"
+        "name": "HotSpot_Holder.LeftButtonClickOn",
+        "signature": "HotSpot_Holder.LeftButtonClickOn(int rectID)"
       },
       {
         "name": "HotSpot_Holder.MouseMoveIn",
@@ -600,48 +1674,16 @@
         "signature": "Text_Holder.PlayMark(int textID,int markNo)"
       },
       {
-        "name": "if",
-        "signature": "if(textID == 3)"
-      },
-      {
-        "name": "if",
-        "signature": "if(maxRuchow > markNo)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseClickOnDown",
         "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(glosnosc.top)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(akcja)"
-      },
-      {
-        "name": "if",
-        "signature": "if(akcja == 0)"
       },
       {
         "name": "Group.Sprite_Holder.MouseClickOnUp",
         "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseMoveIn",
         "signature": "Group.Sprite_Holder.MouseMoveIn(int spriteID)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
       },
       {
         "name": "Group.Sprite_Holder.MouseMoveOut",
@@ -652,28 +1694,8 @@
         "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
       },
       {
-        "name": "if",
-        "signature": "if(rectID==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbar)"
-      },
-      {
         "name": "Group.Sprite_Holder.InPlace",
         "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
-      },
-      {
-        "name": "if",
-        "signature": "if(spriteID==6)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==480)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarCase)"
       }
     ],
     "rawText": "//###########################################################################\n\n//Script code\n\n//###########################################################################\n\n\n\n\n\nOnOpenPage()\n\n{\n\n\t// Add your component and variables initialization code here\n\n\t// WARNING: All variables definied on this function are global for this page\n\n\n\n\n\n   /*int index = 32;\n\n   while( index < 128 )\n\n   {\n\n      Debug( \"%c, %d\", index, index );\n\n      index++;\n\n   }\n\n   return;*/\n\n\n\n   int stalaSciszania = -450;\n\n\n\n\n\n   int keyDown = 0;\n\n\n\n      // 0 - stop - wszystko aktywne, widzoczny tekst piosenki\n\n      // 1 - piosenka\n\n      // 2 - melodia\n\n      // 3 - demo\n\n   int akcja = 0;\n\n\n\n      // Zmienna okreslajaca glosnosc odtwarzania dzwiekow.\n\n      // left  - wartosci od 0 do 2;      0 - najglosniej\n\n      // top   - kierunek sciszania 0 - cicho, 1 glosno\n\n   CRect glosnosc;\n\n   glosnosc.SetRect( 0, 0, 0, 0 );\n\n\n\n      // Aktualne polozenie reki na gryfie\n\n   int biezaceSkrzypce = 0;\n\n\n\n      // 0 - smyczek z lewej ( naszej )\n\n      // 1 - smyczek z prawej (naszej)\n\n   int smyczek = 0;\n\n\n\n\n\n\n\n\n\n\n\n\n\n   // DLA ROBERTA\n\n   // Do tej tablicy nalezy wpisac kolejne numery ruchow pingiwna\n\n   // 0 - skrzypce1  - sound 0 \n\n   // 1 - skrzypce2  - sound 1\n\n   // 2 - skrzypce3  - sound 2\n\n   // 3 - skrzypce4  - sound 3\n\n   // 4 - skrzypce1  - sound 4 \n\n   // 5 - skrzypce2  - sound 5\n\n   // 6 - skrzypce3  - sound 6\n\n   // 7 - skrzypce4  - sound 7\n\n   // 8 - but        - sound 8, 9, 10\n\n   // 9 - instrument - sound 11\n\n   // 10 - gwizd     - sound 12\n\n   // 11 - ryk       - sound 13\n\n\n\n   int maxRuchow =49;\n\n   int demo[ maxRuchow ];\n\n\n\n    demo[0]=0;\n\n    demo[1]=8;\n\n    demo[2]=8;\n\n    demo[3]=0;\n\n    demo[4]=8;\n\n    demo[5]=8;\n\n    demo[6]=0;\n\n    demo[7]=8;\n\n    demo[8]=8;\n\n    demo[9]=0;\n\n    demo[10]=11;\n\n    demo[11]=3;\n\n    demo[12]=0;\n\n    demo[13]=8;\n\n    demo[14]=8;\n\n    demo[15]=0;\n\n    demo[16]=8;\n\n    demo[17]=0;\n\n    demo[18]=4;\n\n    demo[19]=10;\n\n    demo[20]=10;\n\n    demo[21]=0;\n\n    demo[22]=8;\n\n    demo[23]=0;\n\n    demo[24]=0;\n\n    demo[25]=9;\n\n    demo[26]=9;\n\n    demo[27]=0;\n\n    demo[28]=9;\n\n    demo[29]=0;\n\n    demo[30]=0;\n\n    demo[31]=9;\n\n    demo[32]=9;\n\n    demo[33]=0;\n\n    demo[34]=9;\n\n    demo[35]=0;\n\n    demo[36]=0;\n\n    demo[37]=9;\n\n    demo[38]=9;\n\n    demo[39]=0;\n\n    demo[40]=9;\n\n    demo[41]=0;\n\n    demo[42]=0;\n\n    demo[43]=9;\n\n    demo[44]=0;\n\n    demo[45]=0;\n\n    demo[46]=0;\n\n    demo[47]=9;\n\n\n\n\n\n\n\n   LoadGroup(\"g_pios.grp\");\n\n\n\n   int toolbar=0;\n\n   int toolbarCase=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n\n\n   SetCursor(0);\n\n   //SetTimer( 5000 );\n\n   FadeScreen(1,1000);\n\n}\n\n\n\n\n\nvoid OnTimer(void)\n\n{\n\n\t// Add your timer handler code here\n\n   SetTimer(0);\n\n   UstawAktywnoscStrony( 0 );\n\n   Group.Sound_Holder.PlayDSound(0);\n\n}\n\n\n\n\n\nvoid OnClosePage(void)\n\n{\n\n\t// Add your close page handler code here\n\n   FadeScreen(0,1000);\n\n   SetCursor(0);\n\n   CloseGroup();\n\n}\n\n\n\n\n\n\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid OnRButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   //Uruchomienie pomocy\n\n   UstawAktywnoscStrony( 0 );\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   SetTimer(0);\n\n}\n\n\n\n\n\n\n\nvoid OnLButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   Group.Sound_Holder.Stop(0);\n\n   SetTimer(0);\n\n}\n\n\n\n\n\n\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n// W zaleznosci od stanu biezacego i nowego jest ustawiana aktywnosc strony\n\n//\n\nvoid UstawAktywnoscStrony( int nowaAkcja )\n\n{\n\n   int leftOffset;\n\n   int upOffset;\n\n\n\n   switch( nowaAkcja )\n\n   {\n\n      case 0:   // stop\n\n\n\n            // Nalezy uaktywnic wszystkie przyciski na panelu\n\n         Group.Sprite_Holder.ChangePhase( 1, 0 );\n\n         Group.Sprite_Holder.ChangePhase( 2, 0 );\n\n         Group.Sprite_Holder.ChangePhase( 3, 0 );\n\n\n\n\n\n         switch( akcja )\n\n         {\n\n            case 2:\n\n\n\n                  // Jesli poprzednio byla odgrywana melodia\n\n                  // nalezy ukryc tekst melodi i pokazac tekst\n\n                  // piosenki przesuniety o offset melodi\n\n\n\n               Text_Holder.StopSynchroText( 2 );\n\n\n\n               DisableScreen();\n\n\n\n               Text_Holder.HideText( 2 );   // melodia\n\n               Text_Holder.GetTextOffsets( 2, &leftOffset, &upOffset );\n\n\n\n               Text_Holder.ShowText( 0 );   // piosenka\n\n               Text_Holder.SetTextOffsets( 0, leftOffset, upOffset );\n\n   \n\n               EnableScreen();\n\n               ShowBuffer();\n\n               break;\n\n\n\n            case 1:\n\n               Text_Holder.StopSynchroText( 0 );\n\n               break;\n\n\n\n            case 3:\n\n               Text_Holder.StopSynchroText( 3 );\n\n               break;\n\n         }\n\n         break;\n\n\n\n      case 1:   // piosenka\n\n         Group.Sprite_Holder.ChangePhase( 1, 1 );   // mruganie\n\n         Group.Sprite_Holder.ChangePhase( 2, 2 );\n\n         Group.Sprite_Holder.ChangePhase( 3, 2 );\n\n\n\n            // piosenka\n\n         Text_Holder.PlaySynchroText( 0 );\n\n         Text_Holder.SetSoundParameters( 0, (glosnosc.left*(stalaSciszania)), 0, 0 );\n\n\n\n         break;\n\n\n\n      case 2:   // melodia\n\n         Group.Sprite_Holder.ChangePhase( 1, 2 );   \n\n         Group.Sprite_Holder.ChangePhase( 2, 1 );   // mruganie\n\n         Group.Sprite_Holder.ChangePhase( 3, 2 );\n\n\n\n         DisableScreen();\n\n\n\n         Text_Holder.GetTextOffsets( 0, &leftOffset, &upOffset );\n\n         Text_Holder.HideText( 0 );   // piosenka\n\n\n\n         Text_Holder.ShowText( 2 );   // melodia\n\n         Text_Holder.SetTextOffsets( 2, leftOffset, upOffset );\n\n   \n\n         EnableScreen();\n\n         ShowBuffer();\n\n\n\n            // piosenka\n\n         Text_Holder.PlaySynchroText( 2 );\n\n         Text_Holder.SetSoundParameters( 2, (glosnosc.left*(stalaSciszania)), 0, 0 );\n\n         break;\n\n\n\n      case 3:   // demo\n\n         Group.Sprite_Holder.ChangePhase( 1, 2 );   \n\n         Group.Sprite_Holder.ChangePhase( 2, 2 );\n\n         Group.Sprite_Holder.ChangePhase( 3, 1 );   // mruganie\n\n\n\n            // piosenka\n\n         Text_Holder.PlaySynchroText( 3 );\n\n         Text_Holder.SetSoundParameters( 3, (glosnosc.left*(stalaSciszania)), 0, 0 );\n\n         break;\n\n   }\n\n\n\n   akcja = nowaAkcja;\n\n}\n\n\n\n\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid OnKeyDown(UINT nChar)\n\n{\n\n\t// Add your keyboard handler code here\n\n   Group.Sound_Holder.Stop(0);\n\n   SetTimer(0);\n\n\n\n      // Odgrywane jest demo - nic nie mozna robic na klawiaturze\n\n   if( akcja == 3 )\n\n      return;\n\n\n\n   if( nChar==keyDown ) return;\n\n   keyDown = nChar;\n\n\n\n   switch(nChar)\n\n   {                \n\n      case 109: // q - skrzypce 0 \n\n      case 77:\n\n         Muzyka( 0, 1 );\n\n         break;\n\n         \n\n      case 44: // w - skrzypce 1\n\n         Muzyka( 1, 1 );\n\n         break;    \n\n\n\n      case 46:  // e - skrzypce 2\n\n         Muzyka( 2, 1 );\n\n         break;                                              \n\n\n\n      case 47: // r - skrzypce 3\n\n         Muzyka( 3, 1 );\n\n         break;\n\n\n\n      case 107: // t - skrzypce 4\n\n      case 75:\n\n         Muzyka( 4, 1 );\n\n         break;\n\n\n\n      case 108: // y - skrzypce 5\n\n      case 76:\n\n         Muzyka( 5, 1 );\n\n         break;\n\n\n\n      case 59: // u - skrzypce 6\n\n         Muzyka( 6, 1 );\n\n         break;\n\n\n\n      case 39: // i - skrzypce 7\n\n         Muzyka( 7, 1 );\n\n         break;\n\n\n\n      case 120:  // tab - tupniecie\n\n      case 88:\n\n         Muzyka( 8, 1 );\n\n         break;\n\n\n\n      case 122: // spacja - instrument\n\n      case 90:\n\n         Muzyka( 9, 1 );\n\n         break;\n\n\n\n      case 97: // o - gwizd\n\n      case 65:\n\n         Muzyka( 10, 1 );\n\n         break;\n\n\n\n      case 115: // p - gwizd\n\n      case 83:\n\n         Muzyka( 11, 1 );\n\n         break;\n\n   }\n\n}\n\n\n\n\n\n\n\nvoid OnKeyUp(UINT nChar)\n\n{\n\n        //Add your command handler code here\n\n   keyDown = 0;\n\n}\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//   nrRuchu - wskazuje ktory ruch bedzie wykonany\n\n//      \n\n//\n\n// 0 - skrzypce1  - sound 0 \n\n// 1 - skrzypce2  - sound 1\n\n// 2 - skrzypce3  - sound 2\n\n// 3 - skrzypce4  - sound 3\n\n// 4 - skrzypce1  - sound 4 \n\n// 5 - skrzypce2  - sound 5\n\n// 6 - skrzypce3  - sound 6\n\n// 7 - skrzypce4  - sound 7\n\n// 8 - but        - sound 8, 9, 10\n\n// 9 - instrument - sound 11\n\n// 10 - gwizd     - sound 12\n\n// 11 - ryk       - sound 13\n\n// \n\nvoid Muzyka( int nrRuchu, int dzwiek )\n\n{\n\n      // Jelis dzwiek dotyczy skrzypiec to \n\n      // - nalezy ruszyc smyczkiem w przeciwym kierunku\n\n   if( nrRuchu < 8 )\n\n   {\n\n      Sound_Holder.PlayDSound( nrRuchu );\n\n      if( dzwiek == 0 )\n\n         Sound_Holder.SetPlayDSoundParameters( nrRuchu, -10000, 0, 0 );\n\n\n\n\n\n      Bitmap_Holder.HideBitmap(8);\n\n\n\n      if( smyczek )\n\n      {\n\n            // smyczek z prawej\n\n         Bitmap_Holder.HideBitmap(0);\n\n         smyczek = 0;\n\n      }\n\n      else\n\n      {\n\n         smyczek = 1;\n\n         Bitmap_Holder.ShowBitmap(0);\n\n      }\n\n   }\n\n\n\n\n\n   switch( nrRuchu )\n\n   {\n\n      case 0:   // skrzypce\n\n      case 1:\n\n      case 2:\n\n      case 3:\n\n      case 4:\n\n      case 5:\n\n      case 6:\n\n         Bitmap_Holder.ShowBitmap( nrRuchu+1 );\n\n\n\n         if( (biezaceSkrzypce>-1) && (biezaceSkrzypce!=nrRuchu) )\n\n            Bitmap_Holder.HideBitmap(biezaceSkrzypce+1);\n\n\n\n         biezaceSkrzypce = nrRuchu;\n\n         break;\n\n\n\n      case 7:\n\n         Bitmap_Holder.HideBitmap(biezaceSkrzypce+1);\n\n         break;\n\n\n\n      case 8:   // tupniecie\n\n         Bitmap_Holder.HideBitmap(0);\n\n         smyczek = 0;\n\n\n\n         Sprite_Holder.ChangePhase( 2, 1 );\n\n         int tupniecie = Random(8,10);\n\n         Sound_Holder.PlayDSound( tupniecie );\n\n         if( dzwiek == 0 )\n\n            Sound_Holder.SetPlayDSoundParameters( tupniecie, -10000, 0, 0 );\n\n         break;\n\n\n\n      case 9:\n\n         Bitmap_Holder.HideBitmap(8);\n\n         Bitmap_Holder.HideBitmap(0);\n\n         smyczek = 0;\n\n\n\n         Bitmap_Holder.HideBitmap(biezaceSkrzypce+1);\n\n         Sprite_Holder.ChangePhase( 0, 1 );\n\n         Sprite_Holder.ChangePhase( 1, 1 );\n\n         Sound_Holder.PlayDSound( 11 );\n\n         if( dzwiek == 0 )\n\n            Sound_Holder.SetPlayDSoundParameters( 11, -10000, 0, 0 );\n\n         break;\n\n\n\n      case 10:   // gwizd\n\n         Bitmap_Holder.HideBitmap(biezaceSkrzypce+1);\n\n         Bitmap_Holder.HideBitmap( 9 );   // jak gwizd to nie ryk\n\n         Sprite_Holder.ChangePhase( 0, 0 );\n\n         Bitmap_Holder.ShowBitmap( 8 );\n\n         Sound_Holder.PlayDSound( 12 );\n\n         if( dzwiek == 0 )\n\n            Sound_Holder.SetPlayDSoundParameters( 12, -10000, 0, 0 );\n\n         break;\n\n\n\n      case 11:   // ryk\n\n         Bitmap_Holder.HideBitmap( 8 ); // jak ryk to nie gwizd\n\n         Bitmap_Holder.ShowBitmap( 9 );\n\n         Sound_Holder.PlayDSound( 13 );\n\n         if( dzwiek == 0 )\n\n            Sound_Holder.SetPlayDSoundParameters( 13, -10000, 0, 0 );\n\n         break;\n\n   }\n\n}\n\n\n\n\n\n\n\n/////////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Sound_Holder.EndPlaySound(int soundID)\n\n{\n\n   switch( soundID )\n\n   {\n\n      case 8:\n\n      case 9:\n\n      case 10:\n\n         Sprite_Holder.ChangePhase( 2, 0 );\n\n         break;\n\n\n\n      case 11:\n\n         Sprite_Holder.ChangePhase( 0, 0 );\n\n         Sprite_Holder.ChangePhase( 1, 0 );\n\n         break\n\n\n\n      case 12:\n\n         Bitmap_Holder.HideBitmap(8);\n\n         break;\n\n\n\n      case 13:\n\n         Bitmap_Holder.HideBitmap(9);\n\n         break;\n\n         \n\n      default:\n\n         break;\n\n   }\n\n}\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nVOID HotSpot_Holder.LeftButtonClickOn(int rectID)\n\n{\n\n      // Jesli jest grane demo to nic nie rob.\n\n   if( akcja != 3 )\n\n      Muzyka( rectID, 1 );\n\n}\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n      // Jesli jest grane demo to nic nie rob.\n\n   if( akcja != 3 )\n\n      SetCursor(1);\n\n}\n\n\n\n\n\nvoid HotSpot_Holder.MouseMoveOut(int rectID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Text_Holder.EndOfSynchroText(int textID)\n\n{\n\n   UstawAktywnoscStrony( 0 );\n\n}\n\n\n\n\n\n/////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Text_Holder.ScrollTextUp(int textID)\n\n{\n\n   SetCursor (2);\n\n}\n\n\n\nvoid Text_Holder.ScrollTextDown(int textID)\n\n{\n\n   SetCursor(3);\n\n}\n\n\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Text_Holder.EndScrollText(int textID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\n\n\n\n\n/////////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Text_Holder.MouseMoveIn(int textID)\n\n{\n\n      \n\n}\n\n\n\nvoid Text_Holder.MouseMoveOut(int textID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\n\n\n\n\n\n\n/////////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Text_Holder.PlayMark(int textID,int markNo)\n\n{\n\n   if( textID == 3 )\n\n   {\n\n      if( maxRuchow > markNo )\n\n      {\n\n         Muzyka(demo[markNo], 0 );\n\n      }\n\n   }\n\n}\n\n\n\n\n\n\n\n\n\n\n\n/////////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Group.Sprite_Holder.MouseClickOnDown(int spriteID)\n\n{\n\n   switch( spriteID )\n\n   {\n\n      case 0:\n\n         Group.Sound_Holder.PlayDSound(1);\n\n         if( glosnosc.top )\n\n         {\n\n               // podglaszanie\n\n            glosnosc.left--;\n\n               \n\n            if( glosnosc.left <= 0 )\n\n               glosnosc.top = 0;\n\n         }\n\n         else\n\n         {\n\n               // sciszanie\n\n            glosnosc.left++;\n\n               \n\n            if( glosnosc.left >= 2 )\n\n               glosnosc.top = 1;\n\n         }\n\n\n\n         Group.Sprite_Holder.ChangePhase( 0, glosnosc.left );\n\n\n\n         switch( akcja )\n\n         {\n\n            case 1:\n\n               Text_Holder.SetSoundParameters( 0, glosnosc.left*(stalaSciszania), 0, 0 );\n\n               break;\n\n            case 2:\n\n               Text_Holder.SetSoundParameters( 2, glosnosc.left*(stalaSciszania), 0, 0 );\n\n               break;\n\n            case 3:\n\n               Text_Holder.SetSoundParameters( 3, glosnosc.left*(stalaSciszania), 0, 0 );\n\n               break;\n\n         }\n\n\n\n         break;\n\n\n\n      case 1:\n\n      case 2:\n\n      case 3:\n\n         if( akcja == 0 )\n\n         {\n\n            Group.Sound_Holder.PlayDSound(1);\n\n            UstawAktywnoscStrony( spriteID );\n\n         }\n\n         break;\n\n\n\n      case 4:   // stop\n\n         Group.Sound_Holder.PlayDSound(1);\n\n         Group.Sprite_Holder.ChangePhase( 4, 1 );\n\n         UstawAktywnoscStrony( 0 );\n\n         break;\n\n\n\n      case 5:   //klawiatura\n\n         Group.Sound_Holder.PlayDSound(1);\n\n         Group.Sprite_Holder.ChangePhase( 5, 1 );\n\n         MultiBitmap.ShowBitmap(0,0,0,0);\n\n         break;\n\n      case 7:   //toolbar\n\n         Group.Sound_Holder.PlayDSound(3);\n\n         Group.Sprite_Holder.ChangePhase(spriteID,1);   \n\n         break;\n\n      case 8:\n\n         Group.Sound_Holder.PlayDSound(4);\n\n         Group.Sprite_Holder.ChangePhase(spriteID,1);   \n\n         break;\n\n      case 9:\n\n      case 10:\n\n         Group.Sound_Holder.PlayDSound(5);\n\n         Group.Sprite_Holder.ChangePhase(spriteID,1);   \n\n         break;\n\n   }\n\n}\n\n\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnUp(int spriteID)\n\n{\n\n   switch( spriteID )\n\n   {\n\n      case 4:   // stop\n\n         Group.Sprite_Holder.ChangePhase( 4, 0 );\n\n         break;\n\n\n\n      case 5:   //klawiatura\n\n         Group.Sprite_Holder.ChangePhase( 5, 0 );\n\n         MultiBitmap.HideBitmap(0);\n\n         break;\n\n      case 7:\n\n      case 8:\n\n      case 9:\n\n      case 10:\n\n         Group.Sprite_Holder.DisableTimers();\n\n\n\n         Group.Sprite_Holder.GotoXY(6,640,0);\n\n         Group.Sprite_Holder.GotoXY(7,721,329);\n\n         Group.Sprite_Holder.GotoXY(8,717,404);\n\n         Group.Sprite_Holder.GotoXY(9,704,14);\n\n         Group.Sprite_Holder.GotoXY(10,744,14);\n\n\n\n         Group.Sprite_Holder.SynchronizeTimers();\n\n         Group.Sprite_Holder.EnableTimers();\n\n         Group.Sound_Holder.PlayDSound(2);\n\n         toolbar=0;\n\n         Group.HotSpot_Holder.DisableHotSpot(1);\n\n         toolbarCase=spriteID;\n\n\n\n         return;\n\n   }\n\n\n\n}\n\n\n\n\n\n/////////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Group.Sprite_Holder.MouseMoveIn(int spriteID)\n\n{\n\n   switch( spriteID )\n\n   {\n\n      case 1:\n\n      case 2:\n\n      case 3:\n\n         if( akcja != 0 ) return;\n\n         break;\n\n      case 6:\n\n         return;\n\n   }\n\n\n\n   SetCursor( 1 );\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseMoveOut(int spriteID)\n\n{\n\n   SetCursor( 0 );\n\n}\n\n\n\n \n\n\n\n\n\n//############################################################# T O O L B A R #######\n\n//#############################################################---------------#######\n\nvoid Group.HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n   if(rectID==0)\n\n   {\n\n      if(toolbar)   return;\n\n      Group.Sprite_Holder.DisableTimers();\n\n\n\n      Group.Sprite_Holder.GotoXY(6,480,0);\n\n      Group.Sprite_Holder.GotoXY(7,560,329);\n\n      Group.Sprite_Holder.GotoXY(8,557,404);\n\n      Group.Sprite_Holder.GotoXY(9,544,14);\n\n      Group.Sprite_Holder.GotoXY(10,584,14);\n\n\n\n      Group.Sprite_Holder.SynchronizeTimers();\n\n      Group.Sprite_Holder.EnableTimers();\n\n      Group.Sound_Holder.PlayDSound(2);\n\n      SetCursor(0);\n\n   }\n\n   else\n\n   {\n\n      if(toolbar)\n\n      {\n\n         Group.Sprite_Holder.DisableTimers();\n\n\n\n         Group.Sprite_Holder.GotoXY(6,640,0);\n\n         Group.Sprite_Holder.GotoXY(7,721,329);\n\n         Group.Sprite_Holder.GotoXY(8,717,404);\n\n         Group.Sprite_Holder.GotoXY(9,704,14);\n\n         Group.Sprite_Holder.GotoXY(10,744,14);\n\n\n\n         Group.Sprite_Holder.SynchronizeTimers();\n\n         Group.Sprite_Holder.EnableTimers();\n\n         Group.Sound_Holder.PlayDSound(2);\n\n         toolbar=0;\n\n      }\n\n      Group.HotSpot_Holder.DisableHotSpot(1);\n\n      toolbarCase=0;\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.InPlace(int spriteID,int x,int y)\n\n{\n\n   if(spriteID==6)\n\n   {\n\n      if(x==480)\n\n      {\n\n         toolbar=1;\n\n         Group.HotSpot_Holder.EnableHotSpot(1);\n\n         SetCursor(0);\n\n      }\n\n      else\n\n      {\n\n         SetCursor(0);\n\n         Group.Sprite_Holder.ChangePhase(7,0);\n\n         Group.Sprite_Holder.ChangePhase(8,0);\n\n         Group.Sprite_Holder.ChangePhase(9,0);\n\n         Group.Sprite_Holder.ChangePhase(10,0);\n\n         switch(toolbarCase)\n\n         {\n\n            case 9:\t//lewo\n\n               LoadPage(\"cuda_ps1.bdf\");\n\n               break;\n\n            case 10:\t//prawo\n\n               LoadPage(\"zosia_ps.bdf\");\n\n               break;\n\n            case 7:   //do planszy glownej   \n\n               LoadPage( \"taniec.bdf\" );\n\n               break;\n\n            case 8:   //Plansza wyboru\n\n               LoadPage(\"Wyborw.bdf\");\n\n               break;\n\n         }\n\n      }\n\n   }\n\n}\n\n//#############################################################\n\n//############################################################# \n\n \n\n\n\n\n\n "

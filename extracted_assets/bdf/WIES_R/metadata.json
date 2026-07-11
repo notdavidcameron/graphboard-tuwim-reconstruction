@@ -46,7 +46,50 @@
       "display_name": "Bitmap_Holder",
       "private_offset": 350715,
       "private_size": 1236,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\WIES_R\\bitmap_holder\\02_Bitmap_Holder_000_czas 01_70x15.bmp",
+          "offset": 350855,
+          "size": 2158,
+          "pixel_size": 1080,
+          "width": 70,
+          "height": 15,
+          "name": "czas 01",
+          "rect": {
+            "x": 544,
+            "y": 430,
+            "width": 70,
+            "height": 15
+          },
+          "geometry_confidence": "serialized_entry"
+        }
+      ],
+      "bitmap_holder": {
+        "version": 1,
+        "declared_count": 1,
+        "parsed_count": 1,
+        "frames": [
+          {
+            "index": 0,
+            "name": "czas 01",
+            "record_offset": 350723,
+            "record_size": 1224,
+            "pixel_offset": 350855,
+            "width": 70,
+            "height": 15,
+            "right": 614,
+            "bottom": 445,
+            "rect": {
+              "x": 544,
+              "y": 430,
+              "width": 70,
+              "height": 15
+            },
+            "bmp_output": "extracted_assets\\bdf\\WIES_R\\bitmap_holder\\02_Bitmap_Holder_000_czas 01_70x15.bmp"
+          }
+        ]
+      }
     },
     {
       "index": 3,
@@ -58,7 +101,7 @@
       "embedded": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES_R\\embedded\\03_Sound_Holder_000_0005625b.wav",
+          "path": "extracted_assets\\bdf\\WIES_R\\embedded\\03_Sound_Holder_000_0005625b.wav",
           "offset": 352859,
           "size": 38340,
           "extension": ".wav"
@@ -69,27 +112,44 @@
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES_R\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\WIES_R\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "dib",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES_R\\background.dib",
+      "path": "extracted_assets\\bdf\\WIES_R\\background.dib",
       "size": 308180
     },
     {
       "kind": "bmp",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES_R\\background.bmp",
+      "path": "extracted_assets\\bdf\\WIES_R\\background.bmp",
       "size": 308194
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES_R\\script.txt",
+      "path": "extracted_assets\\bdf\\WIES_R\\script.txt",
       "size": 22173
     },
     {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\WIES_R\\bitmap_holder\\02_Bitmap_Holder_000_czas 01_70x15.bmp",
+      "offset": 350855,
+      "size": 2158,
+      "pixel_size": 1080,
+      "width": 70,
+      "height": 15,
+      "name": "czas 01",
+      "rect": {
+        "x": 544,
+        "y": 430,
+        "width": 70,
+        "height": 15
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES_R\\embedded\\03_Sound_Holder_000_0005625b.wav",
+      "path": "extracted_assets\\bdf\\WIES_R\\embedded\\03_Sound_Holder_000_0005625b.wav",
       "size": 38340
     }
   ],

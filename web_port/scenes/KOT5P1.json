@@ -38,17 +38,17 @@
       "geometrySourceOffset": null,
       "privateOffset": 2257,
       "privateSize": 252520,
-      "primaryAssetUrl": "../extracted_assets/bdf/KOTEK_R/background.bmp",
+      "primaryAssetUrl": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_000_zabawa _0_phase_00.png",
       "assets": [
         {
           "kind": "puzzle_fallback_background",
-          "path": "extracted_assets\\bdf\\KOTEK_R\\background.bmp",
-          "url": "../extracted_assets/bdf/KOTEK_R/background.bmp",
-          "width": 640,
-          "height": 480,
+          "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_000_zabawa _0_phase_00.png",
+          "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_000_zabawa _0_phase_00.png",
+          "width": 160,
+          "height": 160,
           "frameCount": null,
           "offset": null,
-          "name": "KOTEK_R",
+          "name": "sprite_holder",
           "id": 0,
           "geometryConfidence": "fallback"
         }
@@ -81,7 +81,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOT5P1\\embedded\\01_Sound_Holder_000_0003e6c5.wav",
+          "path": "extracted_assets\\bdf\\KOT5P1\\embedded\\01_Sound_Holder_000_0003e6c5.wav",
           "url": "../extracted_assets/bdf/KOT5P1/embedded/01_Sound_Holder_000_0003e6c5.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -91,7 +91,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOT5P1\\embedded\\01_Sound_Holder_001_00040095.wav",
+          "path": "extracted_assets\\bdf\\KOT5P1\\embedded\\01_Sound_Holder_001_00040095.wav",
           "url": "../extracted_assets/bdf/KOT5P1/embedded/01_Sound_Holder_001_00040095.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -101,7 +101,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOT5P1\\embedded\\01_Sound_Holder_002_000416d5.wav",
+          "path": "extracted_assets\\bdf\\KOT5P1\\embedded\\01_Sound_Holder_002_000416d5.wav",
           "url": "../extracted_assets/bdf/KOT5P1/embedded/01_Sound_Holder_002_000416d5.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -111,7 +111,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOT5P1\\embedded\\01_Sound_Holder_003_00042589.wav",
+          "path": "extracted_assets\\bdf\\KOT5P1\\embedded\\01_Sound_Holder_003_00042589.wav",
           "url": "../extracted_assets/bdf/KOT5P1/embedded/01_Sound_Holder_003_00042589.wav",
           "durationSeconds": null,
           "sampleRate": null,

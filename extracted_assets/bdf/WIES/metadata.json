@@ -28,7 +28,42 @@
       "display_name": "Panorama",
       "private_offset": 2763,
       "private_size": 4582880,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "panorama_bmp",
+          "path": "extracted_assets\\bdf\\WIES\\panorama\\00_Panorama_000_panorama_1280x960.bmp",
+          "offset": 3319,
+          "size": 1229878,
+          "pixel_size": 1228800,
+          "width": 1280,
+          "height": 960,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 960
+          },
+          "geometry_confidence": "serialized_entry",
+          "initially_visible": false
+        }
+      ],
+      "panorama": {
+        "version": 1,
+        "declared_count": 1,
+        "parsed_count": 1,
+        "scenes": [
+          {
+            "index": 0,
+            "record_offset": 2771,
+            "pixel_offset": 3319,
+            "width": 1280,
+            "height": 960,
+            "subimage_count": 13,
+            "region_count": 0,
+            "bmp_output": "extracted_assets\\bdf\\WIES\\panorama\\00_Panorama_000_panorama_1280x960.bmp"
+          }
+        ]
+      }
     },
     {
       "index": 1,
@@ -49,112 +84,112 @@
       "embedded": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_000_004635e5.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_000_004635e5.wav",
           "offset": 4601317,
           "size": 38340,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_001_0046cc09.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_001_0046cc09.wav",
           "offset": 4639753,
           "size": 35764,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_002_0047581d.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_002_0047581d.wav",
           "offset": 4675613,
           "size": 139336,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_003_004978c5.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_003_004978c5.wav",
           "offset": 4815045,
           "size": 44482,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_004_004a26e7.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_004_004a26e7.wav",
           "offset": 4859623,
           "size": 10518,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_005_004a505d.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_005_004a505d.wav",
           "offset": 4870237,
           "size": 75306,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_006_004b76e7.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_006_004b76e7.wav",
           "offset": 4945639,
           "size": 73910,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_007_004c97fd.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_007_004c97fd.wav",
           "offset": 5019645,
           "size": 47982,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_008_004d53cb.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_008_004d53cb.wav",
           "offset": 5067723,
           "size": 57936,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_009_004e367b.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_009_004e367b.wav",
           "offset": 5125755,
           "size": 86334,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_010_004f8819.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_010_004f8819.wav",
           "offset": 5212185,
           "size": 76126,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_011_0050b1d7.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_011_0050b1d7.wav",
           "offset": 5288407,
           "size": 37534,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_012_005144d5.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_012_005144d5.wav",
           "offset": 5326037,
           "size": 101534,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_013_0052d1d3.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_013_0052d1d3.wav",
           "offset": 5427667,
           "size": 82238,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_014_00541371.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_014_00541371.wav",
           "offset": 5510001,
           "size": 606252,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_015_005d53fd.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_015_005d53fd.wav",
           "offset": 6116349,
           "size": 281594,
           "extension": ".wav"
@@ -168,99 +203,464 @@
       "display_name": "Sprite_Holder",
       "private_offset": 6399569,
       "private_size": 43308,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_000_wie_ 01_phase_00.png",
+          "offset": 6400309,
+          "size": 4299,
+          "pixel_size": 9856,
+          "width": 77,
+          "height": 64,
+          "name": "wieś 01",
+          "id": 0,
+          "definition_id": 0,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_000_wie_ 01_phase_00.png",
+              "size": 4299
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_000_wie_ 01_phase_01.png",
+              "size": 4162
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_001_wie_ 01_phase_00.png",
+          "offset": 6410509,
+          "size": 4895,
+          "pixel_size": 13104,
+          "width": 84,
+          "height": 78,
+          "name": "wieś 01",
+          "id": 1,
+          "definition_id": 1,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_001_wie_ 01_phase_00.png",
+              "size": 4895
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_001_wie_ 01_phase_01.png",
+              "size": 4786
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_002_wie_ 01_phase_00.png",
+          "offset": 6424065,
+          "size": 3572,
+          "pixel_size": 7668,
+          "width": 71,
+          "height": 54,
+          "name": "wieś 01",
+          "id": 2,
+          "definition_id": 2,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_002_wie_ 01_phase_00.png",
+              "size": 3572
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_002_wie_ 01_phase_01.png",
+              "size": 3498
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_003_wie_ 01_phase_00.png",
+          "offset": 6432461,
+          "size": 4231,
+          "pixel_size": 9856,
+          "width": 77,
+          "height": 64,
+          "name": "wieś 01",
+          "id": 3,
+          "definition_id": 3,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_003_wie_ 01_phase_00.png",
+              "size": 4231
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_003_wie_ 01_phase_01.png",
+              "size": 4047
+            }
+          ]
+        }
+      ],
+      "sprite_holder": {
+        "version": 1,
+        "definition_count": 4,
+        "instance_count": 4,
+        "parsed_definitions": 4,
+        "parsed_instances": 4,
+        "definitions": [
+          {
+            "index": 0,
+            "name": "wieś 01",
+            "record_offset": 6399581,
+            "blob_offset": 6399585,
+            "blob_size": 10580,
+            "width": 77,
+            "height": 64,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_000_wie_ 01_phase_00.png",
+                "size": 4299
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_000_wie_ 01_phase_01.png",
+                "size": 4162
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "wieś 01",
+            "record_offset": 6410165,
+            "blob_offset": 6410169,
+            "blob_size": 13444,
+            "width": 84,
+            "height": 78,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_001_wie_ 01_phase_00.png",
+                "size": 4895
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_001_wie_ 01_phase_01.png",
+                "size": 4786
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "wieś 01",
+            "record_offset": 6423613,
+            "blob_offset": 6423617,
+            "blob_size": 8116,
+            "width": 71,
+            "height": 54,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_002_wie_ 01_phase_00.png",
+                "size": 3572
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_002_wie_ 01_phase_01.png",
+                "size": 3498
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "name": "wieś 01",
+            "record_offset": 6431733,
+            "blob_offset": 6431737,
+            "blob_size": 10580,
+            "width": 77,
+            "height": 64,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_003_wie_ 01_phase_00.png",
+                "size": 4231
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_003_wie_ 01_phase_01.png",
+                "size": 4047
+              }
+            ]
+          }
+        ],
+        "instances": [
+          {
+            "index": 0,
+            "definition_id": 0,
+            "field04": 8,
+            "x": 714,
+            "y": 18,
+            "z": 8,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 6442317
+          },
+          {
+            "index": 1,
+            "definition_id": 1,
+            "field04": 8,
+            "x": 703,
+            "y": 93,
+            "z": 8,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 6442457
+          },
+          {
+            "index": 2,
+            "definition_id": 2,
+            "field04": 8,
+            "x": 715,
+            "y": 179,
+            "z": 8,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 6442597
+          },
+          {
+            "index": 3,
+            "definition_id": 3,
+            "field04": 8,
+            "x": 712,
+            "y": 262,
+            "z": 8,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 6442737
+          }
+        ]
+      }
     }
   ],
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\WIES\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\script.txt",
+      "path": "extracted_assets\\bdf\\WIES\\script.txt",
       "size": 17157
     },
     {
+      "kind": "panorama_bmp",
+      "path": "extracted_assets\\bdf\\WIES\\panorama\\00_Panorama_000_panorama_1280x960.bmp",
+      "offset": 3319,
+      "size": 1229878,
+      "pixel_size": 1228800,
+      "width": 1280,
+      "height": 960,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 960
+      },
+      "geometry_confidence": "serialized_entry",
+      "initially_visible": false
+    },
+    {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_000_004635e5.wav",
+      "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_000_004635e5.wav",
       "size": 38340
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_001_0046cc09.wav",
+      "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_001_0046cc09.wav",
       "size": 35764
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_002_0047581d.wav",
+      "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_002_0047581d.wav",
       "size": 139336
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_003_004978c5.wav",
+      "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_003_004978c5.wav",
       "size": 44482
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_004_004a26e7.wav",
+      "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_004_004a26e7.wav",
       "size": 10518
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_005_004a505d.wav",
+      "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_005_004a505d.wav",
       "size": 75306
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_006_004b76e7.wav",
+      "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_006_004b76e7.wav",
       "size": 73910
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_007_004c97fd.wav",
+      "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_007_004c97fd.wav",
       "size": 47982
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_008_004d53cb.wav",
+      "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_008_004d53cb.wav",
       "size": 57936
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_009_004e367b.wav",
+      "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_009_004e367b.wav",
       "size": 86334
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_010_004f8819.wav",
+      "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_010_004f8819.wav",
       "size": 76126
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_011_0050b1d7.wav",
+      "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_011_0050b1d7.wav",
       "size": 37534
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_012_005144d5.wav",
+      "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_012_005144d5.wav",
       "size": 101534
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_013_0052d1d3.wav",
+      "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_013_0052d1d3.wav",
       "size": 82238
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_014_00541371.wav",
+      "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_014_00541371.wav",
       "size": 606252
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_015_005d53fd.wav",
+      "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_015_005d53fd.wav",
       "size": 281594
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_000_wie_ 01_phase_00.png",
+      "offset": 6400309,
+      "size": 4299,
+      "pixel_size": 9856,
+      "width": 77,
+      "height": 64,
+      "name": "wieś 01",
+      "id": 0,
+      "definition_id": 0,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_000_wie_ 01_phase_00.png",
+          "size": 4299
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_000_wie_ 01_phase_01.png",
+          "size": 4162
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_001_wie_ 01_phase_00.png",
+      "offset": 6410509,
+      "size": 4895,
+      "pixel_size": 13104,
+      "width": 84,
+      "height": 78,
+      "name": "wieś 01",
+      "id": 1,
+      "definition_id": 1,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_001_wie_ 01_phase_00.png",
+          "size": 4895
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_001_wie_ 01_phase_01.png",
+          "size": 4786
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_002_wie_ 01_phase_00.png",
+      "offset": 6424065,
+      "size": 3572,
+      "pixel_size": 7668,
+      "width": 71,
+      "height": 54,
+      "name": "wieś 01",
+      "id": 2,
+      "definition_id": 2,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_002_wie_ 01_phase_00.png",
+          "size": 3572
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_002_wie_ 01_phase_01.png",
+          "size": 3498
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_003_wie_ 01_phase_00.png",
+      "offset": 6432461,
+      "size": 4231,
+      "pixel_size": 9856,
+      "width": 77,
+      "height": 64,
+      "name": "wieś 01",
+      "id": 3,
+      "definition_id": 3,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_003_wie_ 01_phase_00.png",
+          "size": 4231
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_003_wie_ 01_phase_01.png",
+          "size": 4047
+        }
+      ]
     }
   ],
   "script": {

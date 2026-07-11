@@ -24,22 +24,303 @@
       "namespace": "Page",
       "index": 0,
       "z": 0,
-      "visible": false,
+      "visible": true,
       "rect": {
-        "x": 129,
+        "x": 24,
         "y": 0,
-        "width": 386,
+        "width": 589,
         "height": 480
       },
-      "geometryConfidence": "serialized_entry",
+      "geometryConfidence": "serialized_entries",
       "itemCount": null,
       "hitboxes": [],
       "sourceOffset": 1173,
-      "geometrySourceOffset": 2325,
+      "geometrySourceOffset": null,
       "privateOffset": 2305,
       "privateSize": 463684,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/bdf/RYCERZ/bitmap_holder/00_Bitmap_Holder_000_tloSrodek_386x480.bmp",
+      "assets": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\RYCERZ\\bitmap_holder\\00_Bitmap_Holder_000_tloSrodek_386x480.bmp",
+          "url": "../extracted_assets/bdf/RYCERZ/bitmap_holder/00_Bitmap_Holder_000_tloSrodek_386x480.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 386,
+          "height": 480,
+          "frameCount": null,
+          "offset": 2445,
+          "name": "tloSrodek",
+          "id": 0,
+          "rect": {
+            "x": 129,
+            "y": 0,
+            "width": 386,
+            "height": 480
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\RYCERZ\\bitmap_holder\\00_Bitmap_Holder_001_rycerzSro_382x480.bmp",
+          "url": "../extracted_assets/bdf/RYCERZ/bitmap_holder/00_Bitmap_Holder_001_rycerzSro_382x480.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 382,
+          "height": 480,
+          "frameCount": null,
+          "offset": 188833,
+          "name": "rycerzSro",
+          "id": 1,
+          "rect": {
+            "x": 129,
+            "y": 0,
+            "width": 382,
+            "height": 480
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\RYCERZ\\bitmap_holder\\00_Bitmap_Holder_002_topor02_118x150.bmp",
+          "url": "../extracted_assets/bdf/RYCERZ/bitmap_holder/00_Bitmap_Holder_002_topor02_118x150.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 118,
+          "height": 150,
+          "frameCount": null,
+          "offset": 373301,
+          "name": "topor02",
+          "id": 2,
+          "rect": {
+            "x": 24,
+            "y": 80,
+            "width": 118,
+            "height": 150
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\RYCERZ\\bitmap_holder\\00_Bitmap_Holder_003_chustka 0_118x129.bmp",
+          "url": "../extracted_assets/bdf/RYCERZ/bitmap_holder/00_Bitmap_Holder_003_chustka 0_118x129.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 118,
+          "height": 129,
+          "frameCount": null,
+          "offset": 391449,
+          "name": "chustka 0",
+          "id": 3,
+          "rect": {
+            "x": 24,
+            "y": 200,
+            "width": 118,
+            "height": 129
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\RYCERZ\\bitmap_holder\\00_Bitmap_Holder_004_kielich 0_118x131.bmp",
+          "url": "../extracted_assets/bdf/RYCERZ/bitmap_holder/00_Bitmap_Holder_004_kielich 0_118x131.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 118,
+          "height": 131,
+          "frameCount": null,
+          "offset": 407077,
+          "name": "kielich 0",
+          "id": 4,
+          "rect": {
+            "x": 24,
+            "y": 324,
+            "width": 118,
+            "height": 131
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\RYCERZ\\bitmap_holder\\00_Bitmap_Holder_005_chelm02_97x121.bmp",
+          "url": "../extracted_assets/bdf/RYCERZ/bitmap_holder/00_Bitmap_Holder_005_chelm02_97x121.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 97,
+          "height": 121,
+          "frameCount": null,
+          "offset": 422945,
+          "name": "chelm02",
+          "id": 5,
+          "rect": {
+            "x": 516,
+            "y": 75,
+            "width": 97,
+            "height": 121
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\RYCERZ\\bitmap_holder\\00_Bitmap_Holder_006_chelm02_97x118.bmp",
+          "url": "../extracted_assets/bdf/RYCERZ/bitmap_holder/00_Bitmap_Holder_006_chelm02_97x118.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 97,
+          "height": 118,
+          "frameCount": null,
+          "offset": 435193,
+          "name": "chelm02",
+          "id": 6,
+          "rect": {
+            "x": 516,
+            "y": 198,
+            "width": 97,
+            "height": 118
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\RYCERZ\\bitmap_holder\\00_Bitmap_Holder_007_chelm02_97x137.bmp",
+          "url": "../extracted_assets/bdf/RYCERZ/bitmap_holder/00_Bitmap_Holder_007_chelm02_97x137.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 97,
+          "height": 137,
+          "frameCount": null,
+          "offset": 447141,
+          "name": "chelm02",
+          "id": 7,
+          "rect": {
+            "x": 516,
+            "y": 317,
+            "width": 97,
+            "height": 137
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\RYCERZ\\bitmap_holder\\00_Bitmap_Holder_008_punkt 01_25x25.bmp",
+          "url": "../extracted_assets/bdf/RYCERZ/bitmap_holder/00_Bitmap_Holder_008_punkt 01_25x25.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 25,
+          "height": 25,
+          "frameCount": null,
+          "offset": 460989,
+          "name": "punkt 01",
+          "id": 8,
+          "rect": {
+            "x": 180,
+            "y": 449,
+            "width": 25,
+            "height": 25
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\RYCERZ\\bitmap_holder\\00_Bitmap_Holder_009_punkt 02_26x25.bmp",
+          "url": "../extracted_assets/bdf/RYCERZ/bitmap_holder/00_Bitmap_Holder_009_punkt 02_26x25.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 26,
+          "height": 25,
+          "frameCount": null,
+          "offset": 461837,
+          "name": "punkt 02",
+          "id": 9,
+          "rect": {
+            "x": 226,
+            "y": 449,
+            "width": 26,
+            "height": 25
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\RYCERZ\\bitmap_holder\\00_Bitmap_Holder_010_punkt 03_36x27.bmp",
+          "url": "../extracted_assets/bdf/RYCERZ/bitmap_holder/00_Bitmap_Holder_010_punkt 03_36x27.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 36,
+          "height": 27,
+          "frameCount": null,
+          "offset": 462685,
+          "name": "punkt 03",
+          "id": 10,
+          "rect": {
+            "x": 273,
+            "y": 449,
+            "width": 36,
+            "height": 27
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\RYCERZ\\bitmap_holder\\00_Bitmap_Holder_011_punkt 04_28x27.bmp",
+          "url": "../extracted_assets/bdf/RYCERZ/bitmap_holder/00_Bitmap_Holder_011_punkt 04_28x27.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 28,
+          "height": 27,
+          "frameCount": null,
+          "offset": 463805,
+          "name": "punkt 04",
+          "id": 11,
+          "rect": {
+            "x": 332,
+            "y": 449,
+            "width": 28,
+            "height": 27
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\RYCERZ\\bitmap_holder\\00_Bitmap_Holder_012_punkt 05_24x24.bmp",
+          "url": "../extracted_assets/bdf/RYCERZ/bitmap_holder/00_Bitmap_Holder_012_punkt 05_24x24.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 24,
+          "height": 24,
+          "frameCount": null,
+          "offset": 464709,
+          "name": "punkt 05",
+          "id": 12,
+          "rect": {
+            "x": 387,
+            "y": 450,
+            "width": 24,
+            "height": 24
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\RYCERZ\\bitmap_holder\\00_Bitmap_Holder_013_punkt 06_20x27.bmp",
+          "url": "../extracted_assets/bdf/RYCERZ/bitmap_holder/00_Bitmap_Holder_013_punkt 06_20x27.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 20,
+          "height": 27,
+          "frameCount": null,
+          "offset": 465433,
+          "name": "punkt 06",
+          "id": 13,
+          "rect": {
+            "x": 437,
+            "y": 449,
+            "width": 20,
+            "height": 27
+          },
+          "geometryConfidence": "serialized_entry"
+        }
+      ],
       "audio": []
     },
     {
@@ -48,23 +329,899 @@
       "sourceType": "Sprite_Holder",
       "namespace": "Page",
       "index": 1,
-      "z": 50,
+      "z": 1,
       "visible": true,
       "rect": {
-        "x": 0,
-        "y": 0,
-        "width": 48,
-        "height": 48
+        "x": 145,
+        "y": 12,
+        "width": 645,
+        "height": 439
       },
-      "geometryConfidence": "synthetic_items",
+      "geometryConfidence": "serialized_entries",
       "itemCount": 10,
       "hitboxes": [],
       "sourceOffset": 465989,
       "geometrySourceOffset": null,
       "privateOffset": 467523,
       "privateSize": 812856,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_00.png",
+      "assets": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_00.png",
+          "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 61,
+          "height": 48,
+          "frameCount": null,
+          "offset": 841455,
+          "name": "dama ",
+          "id": 0,
+          "definitionId": 2,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_00.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_01.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_02.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_03.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_04.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_05.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_05.png"
+            },
+            {
+              "phase": 6,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_06.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_06.png"
+            },
+            {
+              "phase": 7,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_07.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_07.png"
+            },
+            {
+              "phase": 8,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_08.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_08.png"
+            },
+            {
+              "phase": 9,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_09.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_09.png"
+            },
+            {
+              "phase": 10,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_10.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_10.png"
+            },
+            {
+              "phase": 11,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_11.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_11.png"
+            },
+            {
+              "phase": 12,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_12.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_12.png"
+            },
+            {
+              "phase": 13,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_13.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_13.png"
+            },
+            {
+              "phase": 14,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_14.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_14.png"
+            },
+            {
+              "phase": 15,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_15.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_15.png"
+            },
+            {
+              "phase": 16,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_16.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_16.png"
+            },
+            {
+              "phase": 17,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_17.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_17.png"
+            },
+            {
+              "phase": 18,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_18.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_18.png"
+            },
+            {
+              "phase": 19,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_19.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_19.png"
+            },
+            {
+              "phase": 20,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_20.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_20.png"
+            },
+            {
+              "phase": 21,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_21.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_21.png"
+            },
+            {
+              "phase": 22,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_22.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_22.png"
+            },
+            {
+              "phase": 23,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_23.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_23.png"
+            },
+            {
+              "phase": 24,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_24.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_24.png"
+            },
+            {
+              "phase": 25,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_25.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_25.png"
+            },
+            {
+              "phase": 26,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_26.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_26.png"
+            },
+            {
+              "phase": 27,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_27.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_27.png"
+            },
+            {
+              "phase": 28,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_28.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_28.png"
+            },
+            {
+              "phase": 29,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_29.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_29.png"
+            },
+            {
+              "phase": 30,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_002_dama_phase_30.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_002_dama_phase_30.png"
+            }
+          ],
+          "phaseCount": 31,
+          "instanceOffset": 1278979,
+          "rect": {
+            "x": 424,
+            "y": 242,
+            "width": 61,
+            "height": 48
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_00.png",
+          "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 41,
+          "height": 44,
+          "frameCount": null,
+          "offset": 932699,
+          "name": "dama ",
+          "id": 1,
+          "definitionId": 3,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_00.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_01.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_02.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_03.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_04.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_05.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_05.png"
+            },
+            {
+              "phase": 6,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_06.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_06.png"
+            },
+            {
+              "phase": 7,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_07.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_07.png"
+            },
+            {
+              "phase": 8,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_08.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_08.png"
+            },
+            {
+              "phase": 9,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_09.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_09.png"
+            },
+            {
+              "phase": 10,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_10.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_10.png"
+            },
+            {
+              "phase": 11,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_11.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_11.png"
+            },
+            {
+              "phase": 12,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_12.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_12.png"
+            },
+            {
+              "phase": 13,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_13.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_13.png"
+            },
+            {
+              "phase": 14,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_14.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_14.png"
+            },
+            {
+              "phase": 15,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_15.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_15.png"
+            },
+            {
+              "phase": 16,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_16.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_16.png"
+            },
+            {
+              "phase": 17,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_17.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_17.png"
+            },
+            {
+              "phase": 18,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_18.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_18.png"
+            },
+            {
+              "phase": 19,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_19.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_19.png"
+            },
+            {
+              "phase": 20,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_20.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_20.png"
+            },
+            {
+              "phase": 21,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_21.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_21.png"
+            },
+            {
+              "phase": 22,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_22.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_22.png"
+            },
+            {
+              "phase": 23,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_23.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_23.png"
+            },
+            {
+              "phase": 24,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_003_dama_phase_24.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_003_dama_phase_24.png"
+            }
+          ],
+          "phaseCount": 25,
+          "instanceOffset": 1279119,
+          "rect": {
+            "x": 425,
+            "y": 317,
+            "width": 41,
+            "height": 44
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_000_flaga_phase_00.png",
+          "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_000_flaga_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 62,
+          "height": 34,
+          "frameCount": null,
+          "offset": 467803,
+          "name": "flaga ",
+          "id": 2,
+          "definitionId": 0,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_000_flaga_phase_00.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_000_flaga_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_000_flaga_phase_01.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_000_flaga_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_000_flaga_phase_02.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_000_flaga_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_000_flaga_phase_03.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_000_flaga_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_000_flaga_phase_04.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_000_flaga_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_000_flaga_phase_05.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_000_flaga_phase_05.png"
+            }
+          ],
+          "phaseCount": 6,
+          "instanceOffset": 1279259,
+          "rect": {
+            "x": 145,
+            "y": 19,
+            "width": 62,
+            "height": 34
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_004_flaga_phase_00.png",
+          "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_004_flaga_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 54,
+          "height": 59,
+          "frameCount": null,
+          "offset": 978261,
+          "name": "flaga ",
+          "id": 3,
+          "definitionId": 4,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_004_flaga_phase_00.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_004_flaga_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_004_flaga_phase_01.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_004_flaga_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_004_flaga_phase_02.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_004_flaga_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_004_flaga_phase_03.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_004_flaga_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_004_flaga_phase_04.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_004_flaga_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_004_flaga_phase_05.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_004_flaga_phase_05.png"
+            },
+            {
+              "phase": 6,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_004_flaga_phase_06.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_004_flaga_phase_06.png"
+            },
+            {
+              "phase": 7,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_004_flaga_phase_07.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_004_flaga_phase_07.png"
+            },
+            {
+              "phase": 8,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_004_flaga_phase_08.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_004_flaga_phase_08.png"
+            },
+            {
+              "phase": 9,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_004_flaga_phase_09.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_004_flaga_phase_09.png"
+            },
+            {
+              "phase": 10,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_004_flaga_phase_10.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_004_flaga_phase_10.png"
+            },
+            {
+              "phase": 11,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_004_flaga_phase_11.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_004_flaga_phase_11.png"
+            },
+            {
+              "phase": 12,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_004_flaga_phase_12.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_004_flaga_phase_12.png"
+            },
+            {
+              "phase": 13,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_004_flaga_phase_13.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_004_flaga_phase_13.png"
+            },
+            {
+              "phase": 14,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_004_flaga_phase_14.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_004_flaga_phase_14.png"
+            }
+          ],
+          "phaseCount": 15,
+          "instanceOffset": 1279399,
+          "rect": {
+            "x": 385,
+            "y": 63,
+            "width": 54,
+            "height": 59
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_00.png",
+          "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 82,
+          "height": 81,
+          "frameCount": null,
+          "offset": 1026557,
+          "name": "tr",
+          "id": 4,
+          "definitionId": 5,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_00.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_01.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_02.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_03.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_04.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_05.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_05.png"
+            },
+            {
+              "phase": 6,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_06.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_06.png"
+            },
+            {
+              "phase": 7,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_07.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_07.png"
+            },
+            {
+              "phase": 8,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_08.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_08.png"
+            },
+            {
+              "phase": 9,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_09.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_09.png"
+            },
+            {
+              "phase": 10,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_10.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_10.png"
+            },
+            {
+              "phase": 11,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_11.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_11.png"
+            },
+            {
+              "phase": 12,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_12.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_12.png"
+            },
+            {
+              "phase": 13,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_13.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_13.png"
+            },
+            {
+              "phase": 14,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_14.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_14.png"
+            },
+            {
+              "phase": 15,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_15.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_15.png"
+            },
+            {
+              "phase": 16,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_16.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_16.png"
+            },
+            {
+              "phase": 17,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_17.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_17.png"
+            },
+            {
+              "phase": 18,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_18.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_18.png"
+            },
+            {
+              "phase": 19,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_19.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_19.png"
+            },
+            {
+              "phase": 20,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_20.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_20.png"
+            },
+            {
+              "phase": 21,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_21.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_21.png"
+            },
+            {
+              "phase": 22,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_22.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_22.png"
+            },
+            {
+              "phase": 23,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_23.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_23.png"
+            },
+            {
+              "phase": 24,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_24.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_24.png"
+            },
+            {
+              "phase": 25,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_25.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_25.png"
+            },
+            {
+              "phase": 26,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_26.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_26.png"
+            },
+            {
+              "phase": 27,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_27.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_27.png"
+            },
+            {
+              "phase": 28,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_28.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_28.png"
+            },
+            {
+              "phase": 29,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_29.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_29.png"
+            },
+            {
+              "phase": 30,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_005_tr_phase_30.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_005_tr_phase_30.png"
+            }
+          ],
+          "phaseCount": 31,
+          "instanceOffset": 1279539,
+          "rect": {
+            "x": 272,
+            "y": 153,
+            "width": 82,
+            "height": 81
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_001_test 01_phase_00.png",
+          "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_001_test 01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 297,
+          "height": 400,
+          "frameCount": null,
+          "offset": 484471,
+          "name": "test 01",
+          "id": 5,
+          "definitionId": 1,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_001_test 01_phase_00.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_001_test 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_001_test 01_phase_01.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_001_test 01_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_001_test 01_phase_02.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_001_test 01_phase_02.png"
+            }
+          ],
+          "phaseCount": 3,
+          "instanceOffset": 1279679,
+          "rect": {
+            "x": 185,
+            "y": 51,
+            "width": 297,
+            "height": 400
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": false,
+          "z": 2
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_006_rycerz 01_phase_00.png",
+          "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_006_rycerz 01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 80,
+          "height": 66,
+          "frameCount": null,
+          "offset": 1232803,
+          "name": "rycerz 01",
+          "id": 6,
+          "definitionId": 6,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_006_rycerz 01_phase_00.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_006_rycerz 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_006_rycerz 01_phase_01.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_006_rycerz 01_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1279819,
+          "rect": {
+            "x": 706,
+            "y": 12,
+            "width": 80,
+            "height": 66
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_007_rycerz 01_phase_00.png",
+          "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_007_rycerz 01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 78,
+          "height": 60,
+          "frameCount": null,
+          "offset": 1243947,
+          "name": "rycerz 01",
+          "id": 7,
+          "definitionId": 7,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_007_rycerz 01_phase_00.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_007_rycerz 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_007_rycerz 01_phase_01.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_007_rycerz 01_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1279959,
+          "rect": {
+            "x": 706,
+            "y": 85,
+            "width": 78,
+            "height": 60
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_008_rycerz 01_phase_00.png",
+          "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_008_rycerz 01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 87,
+          "height": 78,
+          "frameCount": null,
+          "offset": 1253807,
+          "name": "rycerz 01",
+          "id": 8,
+          "definitionId": 8,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_008_rycerz 01_phase_00.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_008_rycerz 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_008_rycerz 01_phase_01.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_008_rycerz 01_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1280099,
+          "rect": {
+            "x": 703,
+            "y": 156,
+            "width": 87,
+            "height": 78
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_009_rycerz 01_phase_00.png",
+          "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_009_rycerz 01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 81,
+          "height": 67,
+          "frameCount": null,
+          "offset": 1268125,
+          "name": "rycerz 01",
+          "id": 9,
+          "definitionId": 9,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_009_rycerz 01_phase_00.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_009_rycerz 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RYCERZ\\sprite_holder\\01_Sprite_Holder_009_rycerz 01_phase_01.png",
+              "url": "../extracted_assets/bdf/RYCERZ/sprite_holder/01_Sprite_Holder_009_rycerz 01_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1280239,
+          "rect": {
+            "x": 709,
+            "y": 259,
+            "width": 81,
+            "height": 67
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 8
+        }
+      ],
       "audio": []
     },
     {
@@ -78,7 +1235,7 @@
       "rect": {
         "x": 0,
         "y": 0,
-        "width": 436,
+        "width": 640,
         "height": 480
       },
       "geometryConfidence": "serialized_entries",
@@ -88,18 +1245,18 @@
       "geometrySourceOffset": null,
       "privateOffset": 1281553,
       "privateSize": 2341937,
-      "primaryAssetUrl": "../extracted_assets/bdf/RYCERZ/animations/02_Transparent_Video_Holder_000_00234ba3_board_video_143x480.gif",
+      "primaryAssetUrl": "../extracted_assets/bdf/RYCERZ/animations/02_Transparent_Video_Holder_000_00138e1d_board_video_230x38.gif",
       "assets": [
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\animations\\02_Transparent_Video_Holder_000_00234ba3_board_video_143x480.gif",
-          "url": "../extracted_assets/bdf/RYCERZ/animations/02_Transparent_Video_Holder_000_00234ba3_board_video_143x480.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\animations\\02_Transparent_Video_Holder_000_00234ba3_board_video_143x480_still.png",
-          "stillUrl": "../extracted_assets/bdf/RYCERZ/animations/02_Transparent_Video_Holder_000_00234ba3_board_video_143x480_still.png",
-          "width": 143,
-          "height": 480,
-          "frameCount": 14,
-          "offset": 2313123,
+          "path": "extracted_assets\\bdf\\RYCERZ\\animations\\02_Transparent_Video_Holder_000_00138e1d_board_video_230x38.gif",
+          "url": "../extracted_assets/bdf/RYCERZ/animations/02_Transparent_Video_Holder_000_00138e1d_board_video_230x38.gif",
+          "stillPath": "extracted_assets\\bdf\\RYCERZ\\animations\\02_Transparent_Video_Holder_000_00138e1d_board_video_230x38_still.png",
+          "stillUrl": "../extracted_assets/bdf/RYCERZ/animations/02_Transparent_Video_Holder_000_00138e1d_board_video_230x38_still.png",
+          "width": 230,
+          "height": 38,
+          "frameCount": 198,
+          "offset": 1281565,
           "name": null,
           "id": 0,
           "rect": {
@@ -122,14 +1279,14 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\animations\\02_Transparent_Video_Holder_002_002d0dc6_board_video_144x480.gif",
-          "url": "../extracted_assets/bdf/RYCERZ/animations/02_Transparent_Video_Holder_002_002d0dc6_board_video_144x480.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\animations\\02_Transparent_Video_Holder_002_002d0dc6_board_video_144x480_still.png",
-          "stillUrl": "../extracted_assets/bdf/RYCERZ/animations/02_Transparent_Video_Holder_002_002d0dc6_board_video_144x480_still.png",
-          "width": 144,
+          "path": "extracted_assets\\bdf\\RYCERZ\\animations\\02_Transparent_Video_Holder_002_00234ba3_board_video_143x480.gif",
+          "url": "../extracted_assets/bdf/RYCERZ/animations/02_Transparent_Video_Holder_002_00234ba3_board_video_143x480.gif",
+          "stillPath": "extracted_assets\\bdf\\RYCERZ\\animations\\02_Transparent_Video_Holder_002_00234ba3_board_video_143x480_still.png",
+          "stillUrl": "../extracted_assets/bdf/RYCERZ/animations/02_Transparent_Video_Holder_002_00234ba3_board_video_143x480_still.png",
+          "width": 143,
           "height": 480,
           "frameCount": 14,
-          "offset": 2952646,
+          "offset": 2313123,
           "name": null,
           "id": 2,
           "rect": {
@@ -149,28 +1306,58 @@
             "height": 480
           },
           "originalZ": 0
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "extracted_assets\\bdf\\RYCERZ\\animations\\02_Transparent_Video_Holder_004_002d0dc6_board_video_144x480.gif",
+          "url": "../extracted_assets/bdf/RYCERZ/animations/02_Transparent_Video_Holder_004_002d0dc6_board_video_144x480.gif",
+          "stillPath": "extracted_assets\\bdf\\RYCERZ\\animations\\02_Transparent_Video_Holder_004_002d0dc6_board_video_144x480_still.png",
+          "stillUrl": "../extracted_assets/bdf/RYCERZ/animations/02_Transparent_Video_Holder_004_002d0dc6_board_video_144x480_still.png",
+          "width": 144,
+          "height": 480,
+          "frameCount": 14,
+          "offset": 2952646,
+          "name": null,
+          "id": 4,
+          "rect": {
+            "x": 496,
+            "y": 0,
+            "width": 144,
+            "height": 480
+          },
+          "z": 0,
+          "geometryConfidence": "serialized_entry",
+          "entryOffset": 3552986,
+          "streamOffset": 2952646,
+          "originalRect": {
+            "x": 496,
+            "y": 0,
+            "width": 144,
+            "height": 480
+          },
+          "originalZ": 0
         }
       ],
       "audio": [
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\02_Transparent_Video_Holder_000_00234ba3_board_video_audio.wav",
-          "url": "../extracted_assets/bdf/RYCERZ/embedded/02_Transparent_Video_Holder_000_00234ba3_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\02_Transparent_Video_Holder_002_00234ba3_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/RYCERZ/embedded/02_Transparent_Video_Holder_002_00234ba3_board_video_audio.wav",
           "durationSeconds": 3.0,
           "sampleRate": 22050,
           "channels": 1,
           "offset": 2313123,
-          "id": 0
+          "id": 2
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\02_Transparent_Video_Holder_002_002d0dc6_board_video_audio.wav",
-          "url": "../extracted_assets/bdf/RYCERZ/embedded/02_Transparent_Video_Holder_002_002d0dc6_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\02_Transparent_Video_Holder_004_002d0dc6_board_video_audio.wav",
+          "url": "../extracted_assets/bdf/RYCERZ/embedded/02_Transparent_Video_Holder_004_002d0dc6_board_video_audio.wav",
           "durationSeconds": 3.0,
           "sampleRate": 22050,
           "channels": 1,
           "offset": 2952646,
-          "id": 2
+          "id": 4
         }
       ]
     },
@@ -192,92 +1379,172 @@
       "itemCount": null,
       "hitboxes": [
         {
-          "id": 0,
+          "id": 2,
           "rect": {
             "x": 40,
             "y": 88,
             "width": 85,
             "height": 105
           },
+          "name": "",
+          "layer": 3,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            210
+          ],
           "sourceOffset": 3624606,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 8,
+          "auxState": 0
         },
         {
-          "id": 1,
+          "id": 3,
           "rect": {
             "x": 38,
             "y": 201,
             "width": 85,
             "height": 109
           },
+          "name": "",
+          "layer": 3,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            210
+          ],
           "sourceOffset": 3624707,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 8,
+          "auxState": 0
         },
         {
-          "id": 2,
+          "id": 4,
           "rect": {
             "x": 37,
             "y": 319,
             "width": 87,
             "height": 103
           },
+          "name": "",
+          "layer": 3,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            210
+          ],
           "sourceOffset": 3624808,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 8,
+          "auxState": 0
         },
         {
-          "id": 3,
+          "id": 5,
           "rect": {
             "x": 524,
             "y": 77,
             "width": 80,
             "height": 108
           },
+          "name": "",
+          "layer": 3,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            210
+          ],
           "sourceOffset": 3624909,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 8,
+          "auxState": 0
         },
         {
-          "id": 4,
+          "id": 6,
           "rect": {
             "x": 525,
             "y": 201,
             "width": 80,
             "height": 106
           },
+          "name": "",
+          "layer": 3,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            210
+          ],
           "sourceOffset": 3625010,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 8,
+          "auxState": 0
         },
         {
-          "id": 5,
+          "id": 7,
           "rect": {
             "x": 523,
             "y": 321,
             "width": 82,
             "height": 123
           },
+          "name": "",
+          "layer": 3,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            210
+          ],
           "sourceOffset": 3625111,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 8,
+          "auxState": 0
         },
         {
-          "id": 6,
+          "id": 10,
           "rect": {
             "x": 44,
             "y": 10,
             "width": 87,
             "height": 459
           },
+          "name": "",
+          "layer": 4,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            210
+          ],
           "sourceOffset": 3625212,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 8,
+          "auxState": 0
         },
         {
-          "id": 7,
+          "id": 11,
           "rect": {
             "x": 497,
             "y": 6,
             "width": 90,
             "height": 467
           },
+          "name": "",
+          "layer": 4,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            210
+          ],
           "sourceOffset": 3625313,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 8,
+          "auxState": 0
         }
       ],
       "sourceOffset": 3623490,
@@ -314,7 +1581,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_000_0037555a.wav",
+          "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_000_0037555a.wav",
           "url": "../extracted_assets/bdf/RYCERZ/embedded/04_Sound_Holder_000_0037555a.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -324,7 +1591,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_001_0038bf1a.wav",
+          "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_001_0038bf1a.wav",
           "url": "../extracted_assets/bdf/RYCERZ/embedded/04_Sound_Holder_001_0038bf1a.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -334,7 +1601,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_002_003c3c10.wav",
+          "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_002_003c3c10.wav",
           "url": "../extracted_assets/bdf/RYCERZ/embedded/04_Sound_Holder_002_003c3c10.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -344,7 +1611,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_003_0048ed14.wav",
+          "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_003_0048ed14.wav",
           "url": "../extracted_assets/bdf/RYCERZ/embedded/04_Sound_Holder_003_0048ed14.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -354,7 +1621,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_004_0059349e.wav",
+          "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_004_0059349e.wav",
           "url": "../extracted_assets/bdf/RYCERZ/embedded/04_Sound_Holder_004_0059349e.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -364,7 +1631,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_005_00704442.wav",
+          "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_005_00704442.wav",
           "url": "../extracted_assets/bdf/RYCERZ/embedded/04_Sound_Holder_005_00704442.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -374,7 +1641,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_006_0070b6e4.wav",
+          "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_006_0070b6e4.wav",
           "url": "../extracted_assets/bdf/RYCERZ/embedded/04_Sound_Holder_006_0070b6e4.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -384,7 +1651,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_007_0075a74e.wav",
+          "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_007_0075a74e.wav",
           "url": "../extracted_assets/bdf/RYCERZ/embedded/04_Sound_Holder_007_0075a74e.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -394,7 +1661,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_008_0079a8c0.wav",
+          "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_008_0079a8c0.wav",
           "url": "../extracted_assets/bdf/RYCERZ/embedded/04_Sound_Holder_008_0079a8c0.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -404,7 +1671,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_009_007a7edc.wav",
+          "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_009_007a7edc.wav",
           "url": "../extracted_assets/bdf/RYCERZ/embedded/04_Sound_Holder_009_007a7edc.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -414,7 +1681,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_010_007b9e26.wav",
+          "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_010_007b9e26.wav",
           "url": "../extracted_assets/bdf/RYCERZ/embedded/04_Sound_Holder_010_007b9e26.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -424,7 +1691,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_011_007e4372.wav",
+          "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_011_007e4372.wav",
           "url": "../extracted_assets/bdf/RYCERZ/embedded/04_Sound_Holder_011_007e4372.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -434,7 +1701,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_012_007ed638.wav",
+          "path": "extracted_assets\\bdf\\RYCERZ\\embedded\\04_Sound_Holder_012_007ed638.wav",
           "url": "../extracted_assets/bdf/RYCERZ/embedded/04_Sound_Holder_012_007ed638.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -479,10 +1746,6 @@
         "signature": "OnOpenPage()"
       },
       {
-        "name": "if",
-        "signature": "if(IsProject()==0)"
-      },
-      {
         "name": "OnClosePage",
         "signature": "OnClosePage(void)"
       },
@@ -491,20 +1754,8 @@
         "signature": "SetTextMode(void)"
       },
       {
-        "name": "if",
-        "signature": "if(textMode)"
-      },
-      {
         "name": "Transparent_Video_Holder.TheEnd",
         "signature": "Transparent_Video_Holder.TheEnd(int videoID)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(videoID)"
-      },
-      {
-        "name": "while",
-        "signature": "while(tmp<global4)"
       },
       {
         "name": "HotSpot_Holder.MouseMoveIn",
@@ -519,28 +1770,8 @@
         "signature": "HotSpot_Holder.LeftButtonClickOn(int rectID)"
       },
       {
-        "name": "if",
-        "signature": "if(rectID<5)"
-      },
-      {
-        "name": "if",
-        "signature": "if(rectID>9)"
-      },
-      {
-        "name": "if",
-        "signature": "if(wysuw==0)"
-      },
-      {
         "name": "Sprite_Holder.MouseMoveIn",
         "signature": "Sprite_Holder.MouseMoveIn(int spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(spriteID<5)"
-      },
-      {
-        "name": "if",
-        "signature": "if(spriteID==5)"
       },
       {
         "name": "Sprite_Holder.MouseMoveOut",
@@ -551,64 +1782,12 @@
         "signature": "Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(spriteID==5)"
-      },
-      {
-        "name": "if",
-        "signature": "if(textMode==0 && right)"
-      },
-      {
-        "name": "if",
-        "signature": "if(textMode==0)"
-      },
-      {
         "name": "Group.HotSpot_Holder.MouseMoveIn",
         "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(rectID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbar)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarPhase)"
-      },
-      {
-        "name": "if",
-        "signature": "if(txtHotSpotOn==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.InPlace",
         "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==480)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarCase)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(puzzleNo)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(puzzleNo)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==0)"
       },
       {
         "name": "Group.Sprite_Holder.MouseMoveIn",
@@ -623,28 +1802,12 @@
         "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(spriteID==11)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseClickOnUp",
         "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(toolbarPhase)"
-      },
-      {
         "name": "Group.Sprite_Holder.EndAnimation",
         "signature": "Group.Sprite_Holder.EndAnimation(int spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
       },
       {
         "name": "Text_Holder.ScrollTextUp",
@@ -671,20 +1834,12 @@
         "signature": "Text_Holder.ClickOnText(int textID)"
       },
       {
-        "name": "if",
-        "signature": "if(playStatus)"
-      },
-      {
         "name": "Text_Holder.EndOfSynchroText",
         "signature": "Text_Holder.EndOfSynchroText(int textID)"
       },
       {
         "name": "Sound_Holder.EndPlaySound",
         "signature": "Sound_Holder.EndPlaySound(int soundID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(soundID==0 && textMode)"
       },
       {
         "name": "Sprite_Holder.MouseClickOnUp",
@@ -706,6 +1861,6 @@
     "rawText": "//###########################################################################\n\n//Script code\n\n//###########################################################################\n\n\n\n\n\nOnOpenPage()\n\n{\n\n\t// Add your component and variables initialization code here\n\n\t// WARNING: All variables defined on this function are global for this page\n\n   if(IsProject()==0)   \n\n   {\n\n//      int textMode=0;\n\n      int global1;\n\n      int global2;\n\n      int global3;\n\n      int global4;\n\n      CString parentWnd;\n\n   }\n\n   int textMode=0;\n\n   parentWnd.SetString(\"rycerz.bdf\");\n\n\n\n   int wysuw=0;\n\n   int left=0;\n\n   int right=0;\n\n   int phase=0;\n\n\n\n   if(global3==789)   //wracamy z bitwy\n\n      phase=3;\n\n   else\n\n   {\n\n      global1=5;      //numer rycerza (-5)\n\n      global2=1;      //numer dzwieku (-2)\n\n      global4=0;      //ilosc zabitych tatarzynow\n\n   }\n\n\n\n   HotSpot_Holder.DisableHotSpot(2);\n\n   HotSpot_Holder.DisableHotSpot(3);\n\n   HotSpot_Holder.DisableHotSpot(4);\n\n   HotSpot_Holder.DisableHotSpot(5);\n\n   HotSpot_Holder.DisableHotSpot(6);\n\n   HotSpot_Holder.DisableHotSpot(7);\n\n\n\n   LoadGroup(\"Cursors.grp\");\n\n   SetCursor(0);\n\n\n\n//#############################################################################\n\n   int toolbar=0;\n\n   int toolbarCase=0;\n\n   int toolbarPhase=0;\n\n   int txtHotSpotOn=0;\n\n   int playStatus=0;\n\n   int puzzleNo=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n//############################################################################\n\n\n\n   if(global3!=789)\n\n      Sound_Holder.PlayDSound(1);\n\n   else\n\n      Bitmap_Holder.ShowBitmap(1);\n\n\n\n   SetTextMode();\n\n   FadeScreen(1,1000);\n\n\n\n   if(global3==789)   //wracamy z bitwy\n\n   {\n\n     Transparent_Video_Holder.Play(1,0);\n\n     HotSpot_Holder.DisableHotSpot(11);\n\n     HotSpot_Holder.DisableHotSpot(10);\n\n   }\n\n//   else\n\n//      SetTimer(5000);\n\n}\n\n\n\n\n\nvoid OnClosePage(void)\n\n{\n\n\t// Add your close page handler code here\n\n   global3=0;\n\n}\n\n\n\n\n\nvoid SetTextMode(void)\n\n{\n\n   if(textMode)\n\n   {\n\n      playStatus = 1;\n\n      Sound_Holder.SetPlayDSoundParameters(global2,-1000,0,0);\n\n      Sound_Holder.PlayDSound(0);\n\n      Text_Holder.SetTextOffsets(0,0,0);\n\n      Text_Holder.DisableMouse(0);\n\n      Text_Holder.ShowText(0);\n\n      Transparent_Video_Holder.Stop();\n\n   }\n\n   else\n\n   {\n\n      playStatus = 0;\n\n      Text_Holder.HideText(0);\n\n      Text_Holder.StopSynchroText(0);\n\n      Sound_Holder.SetPlayDSoundParameters(global2,0,0,0);\n\n      if(left==0 && right==0)\n\n         Transparent_Video_Holder.Play(0,0);\n\n   }\n\n}\n\n \n\nvoid Transparent_Video_Holder.TheEnd(int videoID)\n\n{\n\n   if(textMode)   return;\n\n   switch(videoID)\n\n   {\n\n      case 1:\n\n         wysuw=0;\n\n         left=1; \n\n         HotSpot_Holder.EnableHotSpot(2);\n\n         HotSpot_Holder.EnableHotSpot(3);\n\n         HotSpot_Holder.EnableHotSpot(4);\n\n         switch(global2)   //dzwiek\n\n         {\n\n            case 1:\n\n               global2=2;\n\n            case 2:\n\n               Bitmap_Holder.ShowBitmap(3);\n\n               Bitmap_Holder.ShowBitmap(4);\n\n               break;\n\n            case 3:\n\n               Bitmap_Holder.ShowBitmap(2);\n\n               Bitmap_Holder.ShowBitmap(4);\n\n               break;\n\n            case 4:\n\n               Bitmap_Holder.ShowBitmap(2);\n\n               Bitmap_Holder.ShowBitmap(3);\n\n               break;\n\n         }\n\n         Sound_Holder.PlayDSound(global2);\n\n         if(global3==789)   //wracamy z bitwy\n\n         {\n\n            Transparent_Video_Holder.Play(2,0);\n\n            Sprite_Holder.HideSprite(0);\n\n            Sprite_Holder.HideSprite(1);\n\n            Sprite_Holder.HideSprite(2);\n\n            Sprite_Holder.HideSprite(3);\n\n            Sprite_Holder.HideSprite(4);\n\n         }\n\n         break;\n\n      case 2:\n\n         wysuw=0;\n\n         right=1; \n\n         DisableScreen();\n\n\n\n         Bitmap_Holder.ShowBitmap(1);\n\n         Sprite_Holder.HideSprite(0);\n\n         Sprite_Holder.HideSprite(1);\n\n         Sprite_Holder.HideSprite(2);\n\n         Sprite_Holder.HideSprite(3);\n\n         Sprite_Holder.HideSprite(4);\n\n\n\n         HotSpot_Holder.EnableHotSpot(5);\n\n         HotSpot_Holder.EnableHotSpot(6);\n\n         HotSpot_Holder.EnableHotSpot(7);\n\n\n\n         Sprite_Holder.ShowSprite(5);\n\n         Sprite_Holder.ChangePhase(5,global1-5);\n\n         Bitmap_Holder.ShowBitmap(global1);\n\n\n\n         int tmp=0;\n\n         while(tmp<global4)\n\n         {\n\n            Bitmap_Holder.ShowBitmap(tmp+8);\n\n            tmp++;\n\n         }\n\n         EnableScreen();\n\n         ShowBuffer();\n\n         break;\n\n   }\n\n}\n\n\n\n \n\nvoid HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n   if(textMode==0)   SetCursor(1);\n\n}\n\n\n\n \n\nvoid HotSpot_Holder.MouseMoveOut(int rectID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\n\n\nvoid HotSpot_Holder.LeftButtonClickOn(int rectID)\n\n{\n\n   if(textMode) return;\n\n\n\n   if(rectID<5)\n\n   {\n\n      if(left==0 || rectID==global2)   return;\n\n      Bitmap_Holder.HideBitmap(rectID);\n\n      Bitmap_Holder.ShowBitmap(global2);\n\n      Sound_Holder.Stop(global2);\n\n      global2=rectID;   \n\n      Sound_Holder.PlayDSound(global2);\n\n   }\n\n   else\n\n   {\n\n      if(rectID>9)\n\n      {\n\n         if(wysuw==0)\n\n         {\n\n            if(rectID==10)  Sound_Holder.StopAll();\n\n            HotSpot_Holder.DisableHotSpot(rectID);\n\n            Transparent_Video_Holder.Play(rectID-9,0);\n\n            wysuw=1;\n\n         }\n\n      }\n\n      else\n\n      {\n\n         if(right==0 || global1==rectID)   return;\n\n         Sound_Holder.PlayDSound(5);\n\n         Bitmap_Holder.HideBitmap(global1);\n\n         Bitmap_Holder.ShowBitmap(rectID);\n\n         global1=rectID;   \n\n         Sprite_Holder.ChangePhase(5,global1-5);\n\n         Sprite_Holder.ShowSprite(5);\n\n      }\n\n   }\n\n}\n\n\n\n \n\nvoid Sprite_Holder.MouseMoveIn(int spriteID)\n\n{\n\n   if(textMode) return;\n\n   if(spriteID<5)\n\n   {\n\n      if(right==0)   SetCursor(1);\n\n   }\n\n   else\n\n   {\n\n      if(spriteID==5)\n\n      {\n\n         if(right && textMode==0)   SetCursor(1);\n\n      }\n\n      else\n\n      {\n\n         if(spriteID>5)    SetCursor(1);\n\n      }\n\n   }\n\n}\n\n\n\n \n\nvoid Sprite_Holder.MouseMoveOut(int spriteID)\n\n{\n\n   if(textMode==0) SetCursor(0);\n\n}\n\n\n\n \n\nvoid Sprite_Holder.MouseClickOnDown(int spriteID)\n\n{\n\n   if(spriteID==5)\n\n   {\n\n      if(textMode==0 && right)\n\n      {\n\n         Sound_Holder.PlayDSound(11);\n\n         FadeScreen(0,1000);\n\n         LoadPage(\"Rycerz1.bdf\");   \n\n      }\n\n   }\n\n   else\n\n   {\n\n      if(spriteID>5)   //toolbar\n\n      {\n\n         Sprite_Holder.ChangePhase(spriteID,1);\n\n         Group.Sound_Holder.PlayDSound(12);\n\n      }\n\n      else\n\n      {\n\n         if(textMode==0)    \n\n         {\n\n            Sprite_Holder.ChangePhase(spriteID,1);\n\n            Sound_Holder.PlayDSound(spriteID+6);\n\n         }\n\n      }\n\n   }\n\n}\n\n\n\n\n\n//############################################################# T O O L B A R #######\n\n//#############################################################---------------#######\n\nvoid Group.HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n   switch(rectID)\n\n   {\n\n      case 0:\n\n         Group.HotSpot_Holder.DisableHotSpot(0);\n\n         Group.Sprite_Holder.DisableTimers();\n\n\n\n         Group.Sprite_Holder.GotoXY(0,480,0);\n\n         Group.Sprite_Holder.GotoXY(2,544,14);\n\n         Group.Sprite_Holder.GotoXY(3,584,14);\n\n         Group.Sprite_Holder.GotoXY(4,515,84);\n\n         Group.Sprite_Holder.GotoXY(5,559,210);\n\n         Group.Sprite_Holder.GotoXY(6,558,282);\n\n         Group.Sprite_Holder.GotoXY(7,557,404);\n\n   \n\n         Group.Sprite_Holder.SynchronizeTimers();\n\n         Group.Sprite_Holder.EnableTimers();\n\n         Group.Sound_Holder.PlayDSound(0);\n\n         break;\n\n      case 1:\n\n         if(toolbar)\n\n         {\n\n            Group.Sprite_Holder.DisableTimers();\n\n            Sprite_Holder.DisableTimers();\n\n            Group.Sprite_Holder.GotoXY(0,640,0);\n\n            Group.Sprite_Holder.GotoXY(7,717,404);\n\n  \n\n            switch(toolbarPhase)\n\n            {\n\n               case 0:\n\n                  Group.Sprite_Holder.GotoXY(2,704,14);\n\n                  Group.Sprite_Holder.GotoXY(3,744,14);\n\n                  Group.Sprite_Holder.GotoXY(4,675,84);\n\n                  Group.Sprite_Holder.GotoXY(5,719,210);\n\n                  Group.Sprite_Holder.GotoXY(6,718,282);\n\n                  break;\n\n               case 1:\n\n                  Sprite_Holder.GotoXY(6,706,12);\n\n                  Sprite_Holder.GotoXY(7,706,85);\n\n                  Sprite_Holder.GotoXY(8,703,156);\n\n                  Sprite_Holder.GotoXY(9,709,259);\n\n                  break;\n\n               case 2:\n\n                  Group.Sprite_Holder.GotoXY(8,693,22);\n\n                  Group.Sprite_Holder.GotoXY(9,708,156);\n\n                  break;\n\n            }\n\n            Group.Sprite_Holder.SynchronizeTimers();\n\n            Sprite_Holder.SynchronizeTimers();\n\n            Sprite_Holder.EnableTimers();\n\n            Group.Sprite_Holder.EnableTimers();\n\n            Group.Sound_Holder.PlayDSound(0);\n\n            toolbar=0;\n\n            toolbarPhase=0;\n\n         }\n\n         else\n\n         {\n\n            Group.Sprite_Holder.GotoXY(11,-56,-70);\n\n            if(toolbarCase!=11)  Group.Sound_Holder.PlayDSound(2);\n\n            SetCursor(0);\n\n         }\n\n         txtHotSpotOn=0;\n\n         Group.HotSpot_Holder.DisableHotSpot(1);\n\n         Group.HotSpot_Holder.EnableHotSpot(0);\n\n         toolbarCase=0;\n\n         break;\n\n      case 2:\n\n         if(txtHotSpotOn==0)   \n\n         {\n\n            Group.Sprite_Holder.GotoXY(11,0,0);\n\n            Group.Sound_Holder.PlayDSound(3);\n\n         }\n\n         break;\n\n   }\n\n}\n\n\n\n\n\nvoid Group.Sprite_Holder.InPlace(int spriteID,int x,int y)\n\n{\n\n   switch(spriteID)\n\n   {\n\n      case 0:\n\n         if(x==480)\n\n         {\n\n            toolbar=1;\n\n            Group.HotSpot_Holder.EnableHotSpot(1);\n\n            SetCursor(1);\n\n         }\n\n         else\n\n         {\n\n            SetCursor(0);\n\n            Group.Sprite_Holder.ChangePhase(2,0);\n\n            Group.Sprite_Holder.ChangePhase(3,0);\n\n            Group.Sprite_Holder.ChangePhase(4,0);\n\n            Group.Sprite_Holder.ChangePhase(5,0);\n\n            Group.Sprite_Holder.ChangePhase(6,0);\n\n            Group.Sprite_Holder.ChangePhase(7,0);\n\n            Group.Sprite_Holder.ChangePhase(8,0);\n\n            Group.Sprite_Holder.ChangePhase(9,0);\n\n            \n\n            switch(toolbarCase)\n\n            {\n\n               case 2:   //lewo   \n\n                  FadeScreen(0,1000);\n\n                  LoadPage(\"radio.bdf\");\n\n                  break;\n\n               case 3:   //prawo\n\n                  FadeScreen(0,1000);\n\n                  LoadPage(\"rzeczka.bdf\");\n\n                  break;\n\n               case 4:   //recytacja\n\n                  FadeScreen(0,1000);\n\n                  LoadPage(\"rycerz_r.bdf\");\n\n                  break;\n\n               case 5:   //roznice\n\n                  FadeScreen(0,1000);\n\n                  LoadPage(\"rycerz_c.bdf\");\n\n                  break;\n\n               case 6:   //puzzle\n\n                  Group.Sprite_Holder.DisableTimers();\n\n                  Sprite_Holder.DisableTimers();\n\n\n\n                  Group.Sprite_Holder.GotoXY(0,480,0);\n\n                  Sprite_Holder.GotoXY(6,546,12);\n\n                  Sprite_Holder.GotoXY(7,546,85);\n\n                  Sprite_Holder.GotoXY(8,543,156);\n\n                  Sprite_Holder.GotoXY(9,549,259);\n\n                  Group.Sprite_Holder.GotoXY(7,557,404);\n\n\n\n                  Group.Sprite_Holder.SynchronizeTimers();\n\n                  Group.Sprite_Holder.EnableTimers();\n\n                  Sprite_Holder.SynchronizeTimers();\n\n                  Sprite_Holder.EnableTimers();\n\n                  Group.Sound_Holder.PlayDSound(0);\n\n                  toolbarPhase=1;\n\n                  break;\n\n               case 7:   //Plansza wyboru\n\n                  FadeScreen(0,1000);\n\n                  LoadPage(\"Wyborw.bdf\");\n\n                  break;\n\n               case 8:   //puzzle trudne\n\n                  FadeScreen(0,1000);\n\n                  switch(puzzleNo)\n\n                  {\n\n                     case 6:\n\n                        LoadPage(\"ryce1p1.bdf\");\n\n                        break;\n\n                     case 7:\n\n                        LoadPage(\"ryce2p1.bdf\");\n\n                        break;\n\n                     case 8:\n\n                        LoadPage(\"ryce3p1.bdf\");\n\n                        break;\n\n                     case 9:\n\n                        LoadPage(\"ryce4p1.bdf\");\n\n                        break;\n\n                  }\n\n                  break;\n\n               case 9:   //puzzle latwe\n\n                  FadeScreen(0,1000);\n\n                  switch(puzzleNo)\n\n                  {\n\n                     case 6:\n\n                        LoadPage(\"ryce1p2.bdf\");\n\n                        break;\n\n                     case 7:\n\n                        LoadPage(\"ryce2p2.bdf\");\n\n                        break;\n\n                     case 8:\n\n                        LoadPage(\"ryce3p2.bdf\");\n\n                        break;\n\n                     case 9:\n\n                        LoadPage(\"ryce4p2.bdf\");\n\n                        break;\n\n                  }\n\n                  break;\n\n               case 16:\n\n               case 17:\n\n               case 18:\n\n               case 19:\n\n                  Sprite_Holder.ChangePhase(6,0);\n\n                  Sprite_Holder.ChangePhase(7,0);\n\n                  Sprite_Holder.ChangePhase(8,0);\n\n                  Sprite_Holder.ChangePhase(9,0);\n\n\n\n                  Group.Sprite_Holder.DisableTimers();\n\n\n\n                  Group.Sprite_Holder.GotoXY(0,480,0);\n\n\n\n                  Group.Sprite_Holder.GotoXY(8,533,22);\n\n                  Group.Sprite_Holder.GotoXY(9,548,156);\n\n                  Group.Sprite_Holder.GotoXY(7,557,404);\n\n\n\n                  Group.Sprite_Holder.SynchronizeTimers();\n\n                  Group.Sprite_Holder.EnableTimers();\n\n                  Group.Sound_Holder.PlayDSound(0);\n\n                  toolbarPhase=2;\n\n                  break;\n\n            }\n\n         }\n\n         break;\n\n      case 11:\n\n         if(x==0)\n\n         {\n\n            Group.HotSpot_Holder.EnableHotSpot(1);\n\n            txtHotSpotOn=1;\n\n            SetCursor(1);\n\n         }\n\n         break;\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseMoveIn(int spriteID)\n\n{\n\n   if(spriteID && toolbar)\n\n      SetCursor(1);\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseMoveOut(int spriteID)\n\n{\n\n   if(spriteID)\n\n      SetCursor(0);\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnDown(int spriteID)\n\n{\n\n   if(spriteID==0)   return;\n\n   if(spriteID==11)\n\n   {\n\n      Group.Sprite_Holder.GotoXY(11,-56,-70);\n\n      Group.Sound_Holder.PlayDSound(2);\t\n\n      toolbarCase=spriteID;\n\n      SetCursor(0);\n\n      if(textMode)    textMode=0;\n\n      else            textMode=1;\n\n      SetTextMode();\n\n   }\n\n   else\n\n   {\n\n      Group.HotSpot_Holder.DisableHotSpot(1);\n\n      Group.Sprite_Holder.ChangePhase(spriteID,1);\n\n      switch(spriteID)\t\n\n      {\n\n         case 2:   //lewo\n\n         case 3:   //prawo \n\n            Group.Sound_Holder.PlayDSound(4);\n\n            break;\n\n         case 4:   //recytacja\n\n            Group.Sound_Holder.PlayDSound(5);\n\n            break;\n\n         case 5:   //roznice\n\n            Group.Sound_Holder.PlayDSound(6);\n\n            break;\n\n         case 6:   //puzzle\n\n            Group.Sound_Holder.PlayDSound(7);\n\n            break;\n\n         case 7:   //plansza glowna\n\n            Group.Sound_Holder.PlayDSound(8);\n\n            break;\n\n         case 8:   //puzzle latwe\n\n            Group.Sound_Holder.PlayDSound(9);\n\n            break;\n\n         case 9:   //puzzle trudne\n\n            Group.Sound_Holder.PlayDSound(10);\n\n            break;\n\n         case 10:  //parent window\n\n            Group.Sound_Holder.PlayDSound(4);\n\n            break;\n\n      }\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnUp(int spriteID)\n\n{\n\n   if(spriteID==0 || spriteID==5 || spriteID==6 || spriteID==8 || spriteID==9 || spriteID==11)   return;\n\n\n\n   Group.Sprite_Holder.DisableTimers();\n\n   Sprite_Holder.DisableTimers();\n\n\n\n   Group.Sprite_Holder.GotoXY(0,640,0);\n\n   Group.Sprite_Holder.GotoXY(7,717,404);\n\n\n\n   switch(toolbarPhase)\n\n   {\n\n      case 0:\n\n         Group.Sprite_Holder.GotoXY(2,704,14);\n\n         Group.Sprite_Holder.GotoXY(3,744,14);\n\n         Group.Sprite_Holder.GotoXY(4,675,84);\n\n         Group.Sprite_Holder.GotoXY(5,719,210);\n\n         Group.Sprite_Holder.GotoXY(6,718,282);\n\n         break;\n\n      case 1:\n\n         Sprite_Holder.GotoXY(6,706,12);\n\n         Sprite_Holder.GotoXY(7,706,85);\n\n         Sprite_Holder.GotoXY(8,703,156);\n\n         Sprite_Holder.GotoXY(9,709,259);\n\n         break;\n\n      case 2:\n\n         Group.Sprite_Holder.GotoXY(8,693,22);\n\n         Group.Sprite_Holder.GotoXY(9,708,156);\n\n         toolbarPhase=0;\n\n         break;\n\n   }\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Sprite_Holder.EnableTimers();\n\n   Sprite_Holder.SynchronizeTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID;\n\n}\n\n\n\nvoid Group.Sprite_Holder.EndAnimation(int spriteID)\n\n{\n\n   if(spriteID!=5 && spriteID!=6 && spriteID!=8 && spriteID!=9)   return;\n\n\n\n   Group.Sprite_Holder.ChangePhase(spriteID,2);\n\n\n\n   Group.Sprite_Holder.DisableTimers();\n\n\n\n   if(toolbarPhase==0)\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(2,704,14);\n\n      Group.Sprite_Holder.GotoXY(3,744,14);\n\n      Group.Sprite_Holder.GotoXY(4,675,84);\n\n      Group.Sprite_Holder.GotoXY(5,719,210);\n\n      Group.Sprite_Holder.GotoXY(6,718,282);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n   }\n\n   else\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(8,693,22);\n\n      Group.Sprite_Holder.GotoXY(9,708,156);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n      toolbarPhase=0;\n\n   }\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID;\n\n}\n\n//#############################################################\n\n//############################################################# \n\n\n\n\n\n\n\n\n\n\n\n \n\nvoid Text_Holder.ScrollTextUp(int textID)\n\n{\n\n   SetCursor(3);\n\n}\n\n\n\n \n\nvoid Text_Holder.ScrollTextDown(int textID)\n\n{\n\n   SetCursor(4);\n\n}\n\n\n\n \n\nvoid Text_Holder.EndScrollText(int textID)\n\n{\n\n   if(playStatus)  SetCursor(2);\n\n   else            SetCursor(5);\n\n}\n\n\n\n \n\nvoid Text_Holder.MouseMoveIn(int textID)\n\n{\n\n   if(playStatus)\n\n      SetCursor(2);\n\n   else\n\n      SetCursor(5);\n\n}\n\n\n\n \n\nvoid Text_Holder.MouseMoveOut(int textID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\n \n\nvoid Text_Holder.ClickOnText(int textID)\n\n{\n\n   if(playStatus)\n\n   {\n\n      playStatus=0;\n\n      Sound_Holder.Stop(0);\n\n      Text_Holder.StopSynchroText(0);\n\n      Sound_Holder.SetPlayDSoundParameters(global2,0,0,0);\n\n      SetCursor(5);\n\n   }\n\n   else\n\n   {\n\n      playStatus=1;\n\n      Sound_Holder.SetPlayDSoundParameters(global2,-1000,0,0);\n\n      Text_Holder.PlaySynchroText(0);\n\n      SetCursor(2);\n\n   }\n\n}\n\n\n\n \n\nvoid Text_Holder.EndOfSynchroText(int textID)\n\n{\n\n   if(playStatus)\n\n      SetCursor(5);\n\n   else\n\n      SetCursor(0);\n\n   playStatus=0;\n\n   Sound_Holder.SetPlayDSoundParameters(global2,0,0,0);\n\n}\n\n\n\n \n\nvoid Sound_Holder.EndPlaySound(int soundID)\n\n{\n\n   if(soundID==0 && textMode)\n\n   { \n\n      playStatus=1;\n\n      Text_Holder.EnableMouse(0);\n\n      Text_Holder.PlaySynchroText(0);\n\n   }\n\n}\n\n\n\n\n\n//######################################################## \n\n\n\n\n\nvoid Sprite_Holder.MouseClickOnUp(int spriteID)\n\n{\n\n   if(spriteID<6)   return;\n\n\n\n   Group.Sprite_Holder.DisableTimers();\n\n   Sprite_Holder.DisableTimers();\n\n\n\n   Group.Sprite_Holder.GotoXY(0,640,0);\n\n\n\n   Sprite_Holder.GotoXY(6,706,12);\n\n   Sprite_Holder.GotoXY(7,706,85);\n\n   Sprite_Holder.GotoXY(8,703,156);\n\n   Sprite_Holder.GotoXY(9,709,259);\n\n   Group.Sprite_Holder.GotoXY(7,717,404);\n\n\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Sprite_Holder.SynchronizeTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n   Sprite_Holder.EnableTimers();\n\n\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID+10;\n\n   puzzleNo=spriteID;\n\n}\n\n//########################################################\n\n\n\n \n\n \n\nvoid OnTimer(void)\n\n{\n\n        //Add your command handler code here\n\n   SetTimer(0);\n\n   Sound_Holder.PlayDSound(12);\n\n}\n\n \n\nvoid OnLButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   SetTimer(0);\n\n   Sound_Holder.Stop(12);\n\n}\n\n \n\nvoid OnRButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   Sound_Holder.PlayDSound(12);\n\n}\n\n "
   },
   "warnings": [
-    "Recovered 2 TransparentVideoHolder asset rect(s) from serialized entries."
+    "Recovered 3 TransparentVideoHolder asset rect(s) from serialized entries."
   ]
 }

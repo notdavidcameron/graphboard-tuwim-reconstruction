@@ -81,7 +81,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZP1\\embedded\\01_Sound_Holder_000_0003e6c5.wav",
+          "path": "extracted_assets\\bdf\\MURARZP1\\embedded\\01_Sound_Holder_000_0003e6c5.wav",
           "url": "../extracted_assets/bdf/MURARZP1/embedded/01_Sound_Holder_000_0003e6c5.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -91,7 +91,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZP1\\embedded\\01_Sound_Holder_001_00040095.wav",
+          "path": "extracted_assets\\bdf\\MURARZP1\\embedded\\01_Sound_Holder_001_00040095.wav",
           "url": "../extracted_assets/bdf/MURARZP1/embedded/01_Sound_Holder_001_00040095.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -101,7 +101,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZP1\\embedded\\01_Sound_Holder_002_000416d5.wav",
+          "path": "extracted_assets\\bdf\\MURARZP1\\embedded\\01_Sound_Holder_002_000416d5.wav",
           "url": "../extracted_assets/bdf/MURARZP1/embedded/01_Sound_Holder_002_000416d5.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -111,7 +111,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURARZP1\\embedded\\01_Sound_Holder_003_00042589.wav",
+          "path": "extracted_assets\\bdf\\MURARZP1\\embedded\\01_Sound_Holder_003_00042589.wav",
           "url": "../extracted_assets/bdf/MURARZP1/embedded/01_Sound_Holder_003_00042589.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -129,10 +129,6 @@
       {
         "name": "OnOpenPage",
         "signature": "OnOpenPage()"
-      },
-      {
-        "name": "if",
-        "signature": "if(IsProject()==0)"
       },
       {
         "name": "OnLButtonDown",
@@ -179,28 +175,8 @@
         "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
       },
       {
-        "name": "if",
-        "signature": "if(rectID==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbar)"
-      },
-      {
         "name": "Group.Sprite_Holder.InPlace",
         "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
-      },
-      {
-        "name": "if",
-        "signature": "if(spriteID==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==480)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarCase)"
       },
       {
         "name": "Group.Sprite_Holder.MouseMoveIn",
@@ -215,20 +191,8 @@
         "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(showBmp)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseClickOnUp",
         "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(spriteID==5)"
       },
       {
         "name": "Puzzle.EndShowBitmap",

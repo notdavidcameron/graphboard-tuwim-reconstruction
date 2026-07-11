@@ -531,7 +531,43 @@
       "display_name": "Panorama_Holder",
       "private_offset": 1609489,
       "private_size": 252432,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "panorama_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURZYNEK\\panorama_holder\\01_Panorama_Holder_000_panorama_1280x196.bmp",
+          "offset": 1610049,
+          "size": 251878,
+          "dib_size": 251864,
+          "width": 1280,
+          "height": 196,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 196
+          },
+          "geometry_confidence": "serialized_entry",
+          "initially_visible": false
+        }
+      ],
+      "panorama_holder": {
+        "version": 0,
+        "declared_count": 1,
+        "parsed_count": 1,
+        "scenes": [
+          {
+            "index": 0,
+            "record_offset": 1609497,
+            "dib_offset": 1610049,
+            "dib_size": 251864,
+            "width": 1280,
+            "height": 196,
+            "subimage_count": 0,
+            "region_count": 0,
+            "bmp_output": "extracted_assets\\bdf\\MURZYNEK\\panorama_holder\\01_Panorama_Holder_000_panorama_1280x196.bmp"
+          }
+        ]
+      }
     },
     {
       "index": 2,
@@ -544,7 +580,7 @@
         {
           "kind": "bitmap_holder_bmp",
           "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_000_t_o_640x480.bmp",
-          "offset": 1863205,
+          "offset": 1863193,
           "size": 308278,
           "pixel_size": 307200,
           "width": 640,
@@ -556,8 +592,143 @@
             "width": 640,
             "height": 480
           },
-          "geometry_confidence": "serialized_entry",
-          "initially_visible": false
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_001_zabawa 03_234x228.bmp",
+          "offset": 2170541,
+          "size": 54886,
+          "pixel_size": 53808,
+          "width": 234,
+          "height": 228,
+          "name": "zabawa 03",
+          "rect": {
+            "x": 7,
+            "y": 233,
+            "width": 234,
+            "height": 228
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_002_b_ben 02_98x82.bmp",
+          "offset": 2224497,
+          "size": 9278,
+          "pixel_size": 8200,
+          "width": 98,
+          "height": 82,
+          "name": "bęben 02",
+          "rect": {
+            "x": 16,
+            "y": 369,
+            "width": 98,
+            "height": 82
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_003_b_ben 02_77x71.bmp",
+          "offset": 2232845,
+          "size": 6758,
+          "pixel_size": 5680,
+          "width": 77,
+          "height": 71,
+          "name": "bęben 02",
+          "rect": {
+            "x": 84,
+            "y": 360,
+            "width": 77,
+            "height": 71
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_004_b_benek 0_47x49.bmp",
+          "offset": 2238673,
+          "size": 3430,
+          "pixel_size": 2352,
+          "width": 47,
+          "height": 49,
+          "name": "bębenek 0",
+          "rect": {
+            "x": 10,
+            "y": 285,
+            "width": 47,
+            "height": 49
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_005_tamtam 02_87x81.bmp",
+          "offset": 2241173,
+          "size": 8206,
+          "pixel_size": 7128,
+          "width": 87,
+          "height": 81,
+          "name": "tamtam 02",
+          "rect": {
+            "x": 46,
+            "y": 233,
+            "width": 87,
+            "height": 81
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_006_tamtam 02_115x74.bmp",
+          "offset": 2248449,
+          "size": 9662,
+          "pixel_size": 8584,
+          "width": 115,
+          "height": 74,
+          "name": "tamtam 02",
+          "rect": {
+            "x": 36,
+            "y": 305,
+            "width": 115,
+            "height": 74
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_007_tamtam 02_76x59.bmp",
+          "offset": 2257181,
+          "size": 5562,
+          "pixel_size": 4484,
+          "width": 76,
+          "height": 59,
+          "name": "tamtam 02",
+          "rect": {
+            "x": 112,
+            "y": 294,
+            "width": 76,
+            "height": 59
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_008_start 02_37x39.bmp",
+          "offset": 2261813,
+          "size": 2638,
+          "pixel_size": 1560,
+          "width": 37,
+          "height": 39,
+          "name": "start 02",
+          "rect": {
+            "x": 203,
+            "y": 366,
+            "width": 37,
+            "height": 39
+          },
+          "geometry_confidence": "serialized_entry"
         }
       ],
       "bitmap_holder": {
@@ -570,9 +741,11 @@
             "name": "tło",
             "record_offset": 1863061,
             "record_size": 307344,
-            "pixel_offset": 1863205,
+            "pixel_offset": 1863193,
             "width": 640,
             "height": 480,
+            "right": 640,
+            "bottom": 480,
             "rect": {
               "x": 0,
               "y": 0,
@@ -586,120 +759,144 @@
             "name": "zabawa 03",
             "record_offset": 2170409,
             "record_size": 53952,
-            "pixel_offset": 2170553,
-            "width": 241,
-            "height": 461,
+            "pixel_offset": 2170541,
+            "width": 234,
+            "height": 228,
+            "right": 241,
+            "bottom": 461,
             "rect": {
               "x": 7,
               "y": 233,
-              "width": 241,
-              "height": 461
-            }
+              "width": 234,
+              "height": 228
+            },
+            "bmp_output": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_001_zabawa 03_234x228.bmp"
           },
           {
             "index": 2,
             "name": "bęben 02",
             "record_offset": 2224365,
             "record_size": 8344,
-            "pixel_offset": 2224509,
-            "width": 114,
-            "height": 451,
+            "pixel_offset": 2224497,
+            "width": 98,
+            "height": 82,
+            "right": 114,
+            "bottom": 451,
             "rect": {
               "x": 16,
               "y": 369,
-              "width": 114,
-              "height": 451
-            }
+              "width": 98,
+              "height": 82
+            },
+            "bmp_output": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_002_b_ben 02_98x82.bmp"
           },
           {
             "index": 3,
             "name": "bęben 02",
             "record_offset": 2232713,
             "record_size": 5824,
-            "pixel_offset": 2232857,
-            "width": 161,
-            "height": 431,
+            "pixel_offset": 2232845,
+            "width": 77,
+            "height": 71,
+            "right": 161,
+            "bottom": 431,
             "rect": {
               "x": 84,
               "y": 360,
-              "width": 161,
-              "height": 431
-            }
+              "width": 77,
+              "height": 71
+            },
+            "bmp_output": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_003_b_ben 02_77x71.bmp"
           },
           {
             "index": 4,
             "name": "bębenek 0",
             "record_offset": 2238541,
             "record_size": 2496,
-            "pixel_offset": 2238685,
-            "width": 57,
-            "height": 334,
+            "pixel_offset": 2238673,
+            "width": 47,
+            "height": 49,
+            "right": 57,
+            "bottom": 334,
             "rect": {
               "x": 10,
               "y": 285,
-              "width": 57,
-              "height": 334
-            }
+              "width": 47,
+              "height": 49
+            },
+            "bmp_output": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_004_b_benek 0_47x49.bmp"
           },
           {
             "index": 5,
             "name": "tamtam 02",
             "record_offset": 2241041,
             "record_size": 7272,
-            "pixel_offset": 2241185,
-            "width": 133,
-            "height": 314,
+            "pixel_offset": 2241173,
+            "width": 87,
+            "height": 81,
+            "right": 133,
+            "bottom": 314,
             "rect": {
               "x": 46,
               "y": 233,
-              "width": 133,
-              "height": 314
-            }
+              "width": 87,
+              "height": 81
+            },
+            "bmp_output": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_005_tamtam 02_87x81.bmp"
           },
           {
             "index": 6,
             "name": "tamtam 02",
             "record_offset": 2248317,
             "record_size": 8728,
-            "pixel_offset": 2248461,
-            "width": 151,
-            "height": 379,
+            "pixel_offset": 2248449,
+            "width": 115,
+            "height": 74,
+            "right": 151,
+            "bottom": 379,
             "rect": {
               "x": 36,
               "y": 305,
-              "width": 151,
-              "height": 379
-            }
+              "width": 115,
+              "height": 74
+            },
+            "bmp_output": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_006_tamtam 02_115x74.bmp"
           },
           {
             "index": 7,
             "name": "tamtam 02",
             "record_offset": 2257049,
             "record_size": 4628,
-            "pixel_offset": 2257193,
-            "width": 188,
-            "height": 353,
+            "pixel_offset": 2257181,
+            "width": 76,
+            "height": 59,
+            "right": 188,
+            "bottom": 353,
             "rect": {
               "x": 112,
               "y": 294,
-              "width": 188,
-              "height": 353
-            }
+              "width": 76,
+              "height": 59
+            },
+            "bmp_output": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_007_tamtam 02_76x59.bmp"
           },
           {
             "index": 8,
             "name": "start 02",
             "record_offset": 2261681,
             "record_size": 1704,
-            "pixel_offset": 2261825,
-            "width": 240,
-            "height": 405,
+            "pixel_offset": 2261813,
+            "width": 37,
+            "height": 39,
+            "right": 240,
+            "bottom": 405,
             "rect": {
               "x": 203,
               "y": 366,
-              "width": 240,
-              "height": 405
-            }
+              "width": 37,
+              "height": 39
+            },
+            "bmp_output": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_008_start 02_37x39.bmp"
           }
         ]
       }
@@ -715,218 +912,437 @@
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_000_owoc 1_phase_00.png",
-          "offset": 2265269,
-          "size": 1323,
+          "offset": 2265273,
+          "size": 1291,
           "pixel_size": 1050,
           "width": 30,
           "height": 35,
           "name": "owoc 1",
           "id": 0,
+          "definition_id": 0,
           "phase_count": 1,
           "phase_outputs": [
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_000_owoc 1_phase_00.png",
-              "size": 1323
+              "size": 1291
             }
-          ],
-          "rect": {
-            "x": 0,
-            "y": 50,
-            "width": 30,
-            "height": 35
-          },
-          "geometry_confidence": "serialized_sprite"
+          ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_00.png",
-          "offset": 2271175,
+          "offset": 2266979,
           "size": 1341,
-          "pixel_size": 1400,
+          "pixel_size": 5600,
           "width": 35,
           "height": 40,
           "name": "owoc 2",
           "id": 1,
-          "phase_count": 1,
+          "definition_id": 1,
+          "phase_count": 4,
           "phase_outputs": [
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_00.png",
               "size": 1341
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_01.png",
+              "size": 1341
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_02.png",
+              "size": 1356
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_03.png",
+              "size": 1353
             }
-          ],
-          "rect": {
-            "x": 0,
-            "y": 50,
-            "width": 35,
-            "height": 40
-          },
-          "geometry_confidence": "serialized_sprite"
+          ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_00.png",
-          "offset": 2307423,
-          "size": 1275,
-          "pixel_size": 4316,
+          "offset": 2272899,
+          "size": 1588,
+          "pixel_size": 38844,
           "width": 83,
           "height": 52,
           "name": "nie",
           "id": 2,
-          "phase_count": 1,
+          "definition_id": 2,
+          "phase_count": 9,
           "phase_outputs": [
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_00.png",
-              "size": 1275
+              "size": 1588
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_01.png",
+              "size": 1785
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_02.png",
+              "size": 2091
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_03.png",
+              "size": 2160
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_04.png",
+              "size": 2124
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_05.png",
+              "size": 2157
+            },
+            {
+              "phase": 6,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_06.png",
+              "size": 2209
+            },
+            {
+              "phase": 7,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_07.png",
+              "size": 1698
+            },
+            {
+              "phase": 8,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_08.png",
+              "size": 1282
             }
-          ],
-          "rect": {
-            "x": 0,
-            "y": 100,
-            "width": 83,
-            "height": 52
-          },
-          "geometry_confidence": "serialized_sprite"
+          ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_00.png",
-          "offset": 2331654,
-          "size": 1584,
-          "pixel_size": 4897,
+          "offset": 2312070,
+          "size": 1599,
+          "pixel_size": 24485,
           "width": 83,
           "height": 59,
           "name": "tak",
           "id": 3,
-          "phase_count": 1,
+          "definition_id": 3,
+          "phase_count": 5,
           "phase_outputs": [
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_00.png",
-              "size": 1584
+              "size": 1599
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_01.png",
+              "size": 1971
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_02.png",
+              "size": 2468
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_03.png",
+              "size": 2492
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_04.png",
+              "size": 1587
             }
-          ],
-          "rect": {
-            "x": 0,
-            "y": 150,
-            "width": 83,
-            "height": 59
-          },
-          "geometry_confidence": "serialized_sprite"
+          ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_00.png",
-          "offset": 2340719,
-          "size": 1382,
-          "pixel_size": 1224,
+          "offset": 2337051,
+          "size": 1484,
+          "pixel_size": 4896,
           "width": 24,
           "height": 51,
           "name": "usta 01",
           "id": 4,
-          "phase_count": 1,
+          "definition_id": 4,
+          "phase_count": 4,
           "phase_outputs": [
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_00.png",
-              "size": 1382
+              "size": 1484
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_01.png",
+              "size": 1484
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_02.png",
+              "size": 1487
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_03.png",
+              "size": 1388
             }
-          ],
-          "rect": {
-            "x": 0,
-            "y": 100,
-            "width": 24,
-            "height": 51
-          },
-          "geometry_confidence": "serialized_sprite"
+          ]
         }
       ],
       "sprite_holder": {
         "version": 1,
-        "declared_count": 5,
-        "parsed_count": 5,
-        "frames": [
+        "definition_count": 5,
+        "instance_count": 5,
+        "parsed_definitions": 5,
+        "parsed_instances": 5,
+        "definitions": [
           {
             "index": 0,
             "name": "owoc 1",
-            "record_offset": 2264931,
-            "record_size": 1384,
+            "record_offset": 2264935,
+            "blob_offset": 2264939,
+            "blob_size": 1384,
             "width": 30,
             "height": 35,
             "phase_count": 1,
+            "phase_hint": 505290270,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_000_owoc 1_phase_00.png",
-                "size": 1323
+                "size": 1291
               }
             ]
           },
           {
             "index": 1,
             "name": "owoc 2",
-            "record_offset": 2266319,
-            "record_size": 6252,
+            "record_offset": 2266323,
+            "blob_offset": 2266327,
+            "blob_size": 6252,
             "width": 35,
             "height": 40,
-            "phase_count": 1,
+            "phase_count": 4,
+            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_00.png",
                 "size": 1341
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_01.png",
+                "size": 1341
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_02.png",
+                "size": 1356
+              },
+              {
+                "phase": 3,
+                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_03.png",
+                "size": 1353
               }
             ]
           },
           {
             "index": 2,
             "name": "nie",
-            "record_offset": 2272575,
-            "record_size": 39160,
+            "record_offset": 2272579,
+            "blob_offset": 2272583,
+            "blob_size": 39160,
             "width": 83,
             "height": 52,
-            "phase_count": 1,
+            "phase_count": 9,
+            "phase_hint": 505290270,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_00.png",
-                "size": 1275
+                "size": 1588
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_01.png",
+                "size": 1785
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_02.png",
+                "size": 2091
+              },
+              {
+                "phase": 3,
+                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_03.png",
+                "size": 2160
+              },
+              {
+                "phase": 4,
+                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_04.png",
+                "size": 2124
+              },
+              {
+                "phase": 5,
+                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_05.png",
+                "size": 2157
+              },
+              {
+                "phase": 6,
+                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_06.png",
+                "size": 2209
+              },
+              {
+                "phase": 7,
+                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_07.png",
+                "size": 1698
+              },
+              {
+                "phase": 8,
+                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_08.png",
+                "size": 1282
               }
             ]
           },
           {
             "index": 3,
             "name": "tak",
-            "record_offset": 2311739,
-            "record_size": 24808,
+            "record_offset": 2311743,
+            "blob_offset": 2311747,
+            "blob_size": 24808,
             "width": 83,
             "height": 59,
-            "phase_count": 1,
+            "phase_count": 5,
+            "phase_hint": 505290270,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_00.png",
-                "size": 1584
+                "size": 1599
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_01.png",
+                "size": 1971
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_02.png",
+                "size": 2468
+              },
+              {
+                "phase": 3,
+                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_03.png",
+                "size": 2492
+              },
+              {
+                "phase": 4,
+                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_04.png",
+                "size": 1587
               }
             ]
           },
           {
             "index": 4,
             "name": "usta 01",
-            "record_offset": 2336551,
-            "record_size": 5388,
+            "record_offset": 2336555,
+            "blob_offset": 2336559,
+            "blob_size": 5388,
             "width": 24,
             "height": 51,
-            "phase_count": 1,
+            "phase_count": 4,
+            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_00.png",
-                "size": 1382
+                "size": 1484
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_01.png",
+                "size": 1484
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_02.png",
+                "size": 1487
+              },
+              {
+                "phase": 3,
+                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_03.png",
+                "size": 1388
               }
             ]
+          }
+        ],
+        "instances": [
+          {
+            "index": 0,
+            "definition_id": 0,
+            "field04": 3,
+            "x": 396,
+            "y": 121,
+            "z": 3,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 2341947
+          },
+          {
+            "index": 1,
+            "definition_id": 1,
+            "field04": 2,
+            "x": 406,
+            "y": 102,
+            "z": 2,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 2342087
+          },
+          {
+            "index": 2,
+            "definition_id": 3,
+            "field04": 0,
+            "x": 137,
+            "y": 334,
+            "z": 0,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 2342227
+          },
+          {
+            "index": 3,
+            "definition_id": 2,
+            "field04": 0,
+            "x": 137,
+            "y": 337,
+            "z": 0,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 2342367
+          },
+          {
+            "index": 4,
+            "definition_id": 4,
+            "field04": 2,
+            "x": 280,
+            "y": 311,
+            "z": 2,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 2342507
           }
         ]
       }
@@ -1329,9 +1745,26 @@
       "delay_centiseconds": 10
     },
     {
+      "kind": "panorama_holder_bmp",
+      "path": "extracted_assets\\bdf\\MURZYNEK\\panorama_holder\\01_Panorama_Holder_000_panorama_1280x196.bmp",
+      "offset": 1610049,
+      "size": 251878,
+      "dib_size": 251864,
+      "width": 1280,
+      "height": 196,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 196
+      },
+      "geometry_confidence": "serialized_entry",
+      "initially_visible": false
+    },
+    {
       "kind": "bitmap_holder_bmp",
       "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_000_t_o_640x480.bmp",
-      "offset": 1863205,
+      "offset": 1863193,
       "size": 308278,
       "pixel_size": 307200,
       "width": 640,
@@ -1343,138 +1776,333 @@
         "width": 640,
         "height": 480
       },
-      "geometry_confidence": "serialized_entry",
-      "initially_visible": false
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_001_zabawa 03_234x228.bmp",
+      "offset": 2170541,
+      "size": 54886,
+      "pixel_size": 53808,
+      "width": 234,
+      "height": 228,
+      "name": "zabawa 03",
+      "rect": {
+        "x": 7,
+        "y": 233,
+        "width": 234,
+        "height": 228
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_002_b_ben 02_98x82.bmp",
+      "offset": 2224497,
+      "size": 9278,
+      "pixel_size": 8200,
+      "width": 98,
+      "height": 82,
+      "name": "bęben 02",
+      "rect": {
+        "x": 16,
+        "y": 369,
+        "width": 98,
+        "height": 82
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_003_b_ben 02_77x71.bmp",
+      "offset": 2232845,
+      "size": 6758,
+      "pixel_size": 5680,
+      "width": 77,
+      "height": 71,
+      "name": "bęben 02",
+      "rect": {
+        "x": 84,
+        "y": 360,
+        "width": 77,
+        "height": 71
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_004_b_benek 0_47x49.bmp",
+      "offset": 2238673,
+      "size": 3430,
+      "pixel_size": 2352,
+      "width": 47,
+      "height": 49,
+      "name": "bębenek 0",
+      "rect": {
+        "x": 10,
+        "y": 285,
+        "width": 47,
+        "height": 49
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_005_tamtam 02_87x81.bmp",
+      "offset": 2241173,
+      "size": 8206,
+      "pixel_size": 7128,
+      "width": 87,
+      "height": 81,
+      "name": "tamtam 02",
+      "rect": {
+        "x": 46,
+        "y": 233,
+        "width": 87,
+        "height": 81
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_006_tamtam 02_115x74.bmp",
+      "offset": 2248449,
+      "size": 9662,
+      "pixel_size": 8584,
+      "width": 115,
+      "height": 74,
+      "name": "tamtam 02",
+      "rect": {
+        "x": 36,
+        "y": 305,
+        "width": 115,
+        "height": 74
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_007_tamtam 02_76x59.bmp",
+      "offset": 2257181,
+      "size": 5562,
+      "pixel_size": 4484,
+      "width": 76,
+      "height": 59,
+      "name": "tamtam 02",
+      "rect": {
+        "x": 112,
+        "y": 294,
+        "width": 76,
+        "height": 59
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\MURZYNEK\\bitmap_holder\\02_Bitmap_Holder_008_start 02_37x39.bmp",
+      "offset": 2261813,
+      "size": 2638,
+      "pixel_size": 1560,
+      "width": 37,
+      "height": 39,
+      "name": "start 02",
+      "rect": {
+        "x": 203,
+        "y": 366,
+        "width": 37,
+        "height": 39
+      },
+      "geometry_confidence": "serialized_entry"
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_000_owoc 1_phase_00.png",
-      "offset": 2265269,
-      "size": 1323,
+      "offset": 2265273,
+      "size": 1291,
       "pixel_size": 1050,
       "width": 30,
       "height": 35,
       "name": "owoc 1",
       "id": 0,
+      "definition_id": 0,
       "phase_count": 1,
       "phase_outputs": [
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_000_owoc 1_phase_00.png",
-          "size": 1323
+          "size": 1291
         }
-      ],
-      "rect": {
-        "x": 0,
-        "y": 50,
-        "width": 30,
-        "height": 35
-      },
-      "geometry_confidence": "serialized_sprite"
+      ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_00.png",
-      "offset": 2271175,
+      "offset": 2266979,
       "size": 1341,
-      "pixel_size": 1400,
+      "pixel_size": 5600,
       "width": 35,
       "height": 40,
       "name": "owoc 2",
       "id": 1,
-      "phase_count": 1,
+      "definition_id": 1,
+      "phase_count": 4,
       "phase_outputs": [
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_00.png",
           "size": 1341
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_01.png",
+          "size": 1341
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_02.png",
+          "size": 1356
+        },
+        {
+          "phase": 3,
+          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_03.png",
+          "size": 1353
         }
-      ],
-      "rect": {
-        "x": 0,
-        "y": 50,
-        "width": 35,
-        "height": 40
-      },
-      "geometry_confidence": "serialized_sprite"
+      ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_00.png",
-      "offset": 2307423,
-      "size": 1275,
-      "pixel_size": 4316,
+      "offset": 2272899,
+      "size": 1588,
+      "pixel_size": 38844,
       "width": 83,
       "height": 52,
       "name": "nie",
       "id": 2,
-      "phase_count": 1,
+      "definition_id": 2,
+      "phase_count": 9,
       "phase_outputs": [
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_00.png",
-          "size": 1275
+          "size": 1588
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_01.png",
+          "size": 1785
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_02.png",
+          "size": 2091
+        },
+        {
+          "phase": 3,
+          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_03.png",
+          "size": 2160
+        },
+        {
+          "phase": 4,
+          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_04.png",
+          "size": 2124
+        },
+        {
+          "phase": 5,
+          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_05.png",
+          "size": 2157
+        },
+        {
+          "phase": 6,
+          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_06.png",
+          "size": 2209
+        },
+        {
+          "phase": 7,
+          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_07.png",
+          "size": 1698
+        },
+        {
+          "phase": 8,
+          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_08.png",
+          "size": 1282
         }
-      ],
-      "rect": {
-        "x": 0,
-        "y": 100,
-        "width": 83,
-        "height": 52
-      },
-      "geometry_confidence": "serialized_sprite"
+      ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_00.png",
-      "offset": 2331654,
-      "size": 1584,
-      "pixel_size": 4897,
+      "offset": 2312070,
+      "size": 1599,
+      "pixel_size": 24485,
       "width": 83,
       "height": 59,
       "name": "tak",
       "id": 3,
-      "phase_count": 1,
+      "definition_id": 3,
+      "phase_count": 5,
       "phase_outputs": [
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_00.png",
-          "size": 1584
+          "size": 1599
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_01.png",
+          "size": 1971
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_02.png",
+          "size": 2468
+        },
+        {
+          "phase": 3,
+          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_03.png",
+          "size": 2492
+        },
+        {
+          "phase": 4,
+          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_04.png",
+          "size": 1587
         }
-      ],
-      "rect": {
-        "x": 0,
-        "y": 150,
-        "width": 83,
-        "height": 59
-      },
-      "geometry_confidence": "serialized_sprite"
+      ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_00.png",
-      "offset": 2340719,
-      "size": 1382,
-      "pixel_size": 1224,
+      "offset": 2337051,
+      "size": 1484,
+      "pixel_size": 4896,
       "width": 24,
       "height": 51,
       "name": "usta 01",
       "id": 4,
-      "phase_count": 1,
+      "definition_id": 4,
+      "phase_count": 4,
       "phase_outputs": [
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_00.png",
-          "size": 1382
+          "size": 1484
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_01.png",
+          "size": 1484
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_02.png",
+          "size": 1487
+        },
+        {
+          "phase": 3,
+          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_03.png",
+          "size": 1388
         }
-      ],
-      "rect": {
-        "x": 0,
-        "y": 100,
-        "width": 24,
-        "height": 51
-      },
-      "geometry_confidence": "serialized_sprite"
+      ]
     },
     {
       "kind": "WAVE",

@@ -23,23 +23,1271 @@
       "sourceType": "Sprite_Holder",
       "namespace": "Page",
       "index": 0,
-      "z": 50,
+      "z": 0,
       "visible": true,
       "rect": {
-        "x": 0,
+        "x": -100,
         "y": 0,
-        "width": 48,
-        "height": 48
+        "width": 892,
+        "height": 480
       },
-      "geometryConfidence": "synthetic_items",
+      "geometryConfidence": "serialized_entries",
       "itemCount": 24,
       "hitboxes": [],
       "sourceOffset": 1173,
       "geometrySourceOffset": null,
       "privateOffset": 2707,
       "privateSize": 2174104,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_000_zabawa _0_phase_00.png",
+      "assets": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_000_zabawa _0_phase_00.png",
+          "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_000_zabawa _0_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 160,
+          "height": 160,
+          "frameCount": null,
+          "offset": 3291,
+          "name": "zabawa #0",
+          "id": 0,
+          "definitionId": 0,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_000_zabawa _0_phase_00.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_000_zabawa _0_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_000_zabawa _0_phase_01.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_000_zabawa _0_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_000_zabawa _0_phase_02.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_000_zabawa _0_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_000_zabawa _0_phase_03.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_000_zabawa _0_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_000_zabawa _0_phase_04.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_000_zabawa _0_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_000_zabawa _0_phase_05.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_000_zabawa _0_phase_05.png"
+            }
+          ],
+          "phaseCount": 6,
+          "instanceOffset": 2173451,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 160,
+            "height": 160
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_001_zabawa _0_phase_00.png",
+          "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_001_zabawa _0_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 160,
+          "height": 160,
+          "frameCount": null,
+          "offset": 157539,
+          "name": "zabawa #0",
+          "id": 1,
+          "definitionId": 1,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_001_zabawa _0_phase_00.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_001_zabawa _0_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_001_zabawa _0_phase_01.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_001_zabawa _0_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_001_zabawa _0_phase_02.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_001_zabawa _0_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_001_zabawa _0_phase_03.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_001_zabawa _0_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_001_zabawa _0_phase_04.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_001_zabawa _0_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_001_zabawa _0_phase_05.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_001_zabawa _0_phase_05.png"
+            }
+          ],
+          "phaseCount": 6,
+          "instanceOffset": 2173591,
+          "rect": {
+            "x": 160,
+            "y": 0,
+            "width": 160,
+            "height": 160
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_002_zabawa _0_phase_00.png",
+          "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_002_zabawa _0_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 160,
+          "height": 160,
+          "frameCount": null,
+          "offset": 311787,
+          "name": "zabawa #0",
+          "id": 2,
+          "definitionId": 2,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_002_zabawa _0_phase_00.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_002_zabawa _0_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_002_zabawa _0_phase_01.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_002_zabawa _0_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_002_zabawa _0_phase_02.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_002_zabawa _0_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_002_zabawa _0_phase_03.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_002_zabawa _0_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_002_zabawa _0_phase_04.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_002_zabawa _0_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_002_zabawa _0_phase_05.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_002_zabawa _0_phase_05.png"
+            }
+          ],
+          "phaseCount": 6,
+          "instanceOffset": 2173731,
+          "rect": {
+            "x": 320,
+            "y": 0,
+            "width": 160,
+            "height": 160
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_003_zabawa _0_phase_00.png",
+          "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_003_zabawa _0_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 160,
+          "height": 160,
+          "frameCount": null,
+          "offset": 466035,
+          "name": "zabawa #0",
+          "id": 3,
+          "definitionId": 3,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_003_zabawa _0_phase_00.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_003_zabawa _0_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_003_zabawa _0_phase_01.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_003_zabawa _0_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_003_zabawa _0_phase_02.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_003_zabawa _0_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_003_zabawa _0_phase_03.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_003_zabawa _0_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_003_zabawa _0_phase_04.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_003_zabawa _0_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_003_zabawa _0_phase_05.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_003_zabawa _0_phase_05.png"
+            }
+          ],
+          "phaseCount": 6,
+          "instanceOffset": 2173871,
+          "rect": {
+            "x": 480,
+            "y": 0,
+            "width": 160,
+            "height": 160
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_004_zabawa _0_phase_00.png",
+          "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_004_zabawa _0_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 160,
+          "height": 160,
+          "frameCount": null,
+          "offset": 620283,
+          "name": "zabawa #0",
+          "id": 4,
+          "definitionId": 4,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_004_zabawa _0_phase_00.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_004_zabawa _0_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_004_zabawa _0_phase_01.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_004_zabawa _0_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_004_zabawa _0_phase_02.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_004_zabawa _0_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_004_zabawa _0_phase_03.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_004_zabawa _0_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_004_zabawa _0_phase_04.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_004_zabawa _0_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_004_zabawa _0_phase_05.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_004_zabawa _0_phase_05.png"
+            }
+          ],
+          "phaseCount": 6,
+          "instanceOffset": 2174011,
+          "rect": {
+            "x": 0,
+            "y": 160,
+            "width": 160,
+            "height": 160
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_005_zabawa _0_phase_00.png",
+          "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_005_zabawa _0_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 160,
+          "height": 160,
+          "frameCount": null,
+          "offset": 774531,
+          "name": "zabawa #0",
+          "id": 5,
+          "definitionId": 5,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_005_zabawa _0_phase_00.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_005_zabawa _0_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_005_zabawa _0_phase_01.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_005_zabawa _0_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_005_zabawa _0_phase_02.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_005_zabawa _0_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_005_zabawa _0_phase_03.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_005_zabawa _0_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_005_zabawa _0_phase_04.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_005_zabawa _0_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_005_zabawa _0_phase_05.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_005_zabawa _0_phase_05.png"
+            }
+          ],
+          "phaseCount": 6,
+          "instanceOffset": 2174151,
+          "rect": {
+            "x": 160,
+            "y": 160,
+            "width": 160,
+            "height": 160
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_006_zabawa _0_phase_00.png",
+          "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_006_zabawa _0_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 160,
+          "height": 160,
+          "frameCount": null,
+          "offset": 928779,
+          "name": "zabawa #0",
+          "id": 6,
+          "definitionId": 6,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_006_zabawa _0_phase_00.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_006_zabawa _0_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_006_zabawa _0_phase_01.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_006_zabawa _0_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_006_zabawa _0_phase_02.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_006_zabawa _0_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_006_zabawa _0_phase_03.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_006_zabawa _0_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_006_zabawa _0_phase_04.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_006_zabawa _0_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_006_zabawa _0_phase_05.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_006_zabawa _0_phase_05.png"
+            }
+          ],
+          "phaseCount": 6,
+          "instanceOffset": 2174291,
+          "rect": {
+            "x": 320,
+            "y": 160,
+            "width": 160,
+            "height": 160
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_007_zabawa _0_phase_00.png",
+          "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_007_zabawa _0_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 160,
+          "height": 160,
+          "frameCount": null,
+          "offset": 1083027,
+          "name": "zabawa #0",
+          "id": 7,
+          "definitionId": 7,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_007_zabawa _0_phase_00.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_007_zabawa _0_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_007_zabawa _0_phase_01.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_007_zabawa _0_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_007_zabawa _0_phase_02.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_007_zabawa _0_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_007_zabawa _0_phase_03.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_007_zabawa _0_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_007_zabawa _0_phase_04.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_007_zabawa _0_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_007_zabawa _0_phase_05.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_007_zabawa _0_phase_05.png"
+            }
+          ],
+          "phaseCount": 6,
+          "instanceOffset": 2174431,
+          "rect": {
+            "x": 480,
+            "y": 160,
+            "width": 160,
+            "height": 160
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_008_zabawa _0_phase_00.png",
+          "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_008_zabawa _0_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 160,
+          "height": 160,
+          "frameCount": null,
+          "offset": 1237275,
+          "name": "zabawa #0",
+          "id": 8,
+          "definitionId": 8,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_008_zabawa _0_phase_00.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_008_zabawa _0_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_008_zabawa _0_phase_01.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_008_zabawa _0_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_008_zabawa _0_phase_02.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_008_zabawa _0_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_008_zabawa _0_phase_03.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_008_zabawa _0_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_008_zabawa _0_phase_04.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_008_zabawa _0_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_008_zabawa _0_phase_05.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_008_zabawa _0_phase_05.png"
+            }
+          ],
+          "phaseCount": 6,
+          "instanceOffset": 2174571,
+          "rect": {
+            "x": 0,
+            "y": 320,
+            "width": 160,
+            "height": 160
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_009_zabawa _0_phase_00.png",
+          "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_009_zabawa _0_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 160,
+          "height": 160,
+          "frameCount": null,
+          "offset": 1391523,
+          "name": "zabawa #0",
+          "id": 9,
+          "definitionId": 9,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_009_zabawa _0_phase_00.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_009_zabawa _0_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_009_zabawa _0_phase_01.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_009_zabawa _0_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_009_zabawa _0_phase_02.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_009_zabawa _0_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_009_zabawa _0_phase_03.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_009_zabawa _0_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_009_zabawa _0_phase_04.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_009_zabawa _0_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_009_zabawa _0_phase_05.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_009_zabawa _0_phase_05.png"
+            }
+          ],
+          "phaseCount": 6,
+          "instanceOffset": 2174711,
+          "rect": {
+            "x": 160,
+            "y": 320,
+            "width": 160,
+            "height": 160
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_010_zabawa _0_phase_00.png",
+          "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_010_zabawa _0_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 160,
+          "height": 160,
+          "frameCount": null,
+          "offset": 1545771,
+          "name": "zabawa #0",
+          "id": 10,
+          "definitionId": 10,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_010_zabawa _0_phase_00.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_010_zabawa _0_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_010_zabawa _0_phase_01.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_010_zabawa _0_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_010_zabawa _0_phase_02.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_010_zabawa _0_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_010_zabawa _0_phase_03.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_010_zabawa _0_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_010_zabawa _0_phase_04.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_010_zabawa _0_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_010_zabawa _0_phase_05.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_010_zabawa _0_phase_05.png"
+            }
+          ],
+          "phaseCount": 6,
+          "instanceOffset": 2174851,
+          "rect": {
+            "x": 320,
+            "y": 320,
+            "width": 160,
+            "height": 160
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_011_zabawa _0_phase_00.png",
+          "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_011_zabawa _0_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 160,
+          "height": 160,
+          "frameCount": null,
+          "offset": 1700019,
+          "name": "zabawa #0",
+          "id": 11,
+          "definitionId": 11,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_011_zabawa _0_phase_00.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_011_zabawa _0_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_011_zabawa _0_phase_01.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_011_zabawa _0_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_011_zabawa _0_phase_02.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_011_zabawa _0_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_011_zabawa _0_phase_03.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_011_zabawa _0_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_011_zabawa _0_phase_04.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_011_zabawa _0_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_011_zabawa _0_phase_05.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_011_zabawa _0_phase_05.png"
+            }
+          ],
+          "phaseCount": 6,
+          "instanceOffset": 2174991,
+          "rect": {
+            "x": 480,
+            "y": 320,
+            "width": 160,
+            "height": 160
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_012_glowka_phase_00.png",
+          "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_012_glowka_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 93,
+          "height": 78,
+          "frameCount": null,
+          "offset": 1853965,
+          "name": "glowka",
+          "id": 12,
+          "definitionId": 12,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_012_glowka_phase_00.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_012_glowka_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_012_glowka_phase_01.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_012_glowka_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_012_glowka_phase_02.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_012_glowka_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_012_glowka_phase_03.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_012_glowka_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_012_glowka_phase_04.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_012_glowka_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_012_glowka_phase_05.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_012_glowka_phase_05.png"
+            },
+            {
+              "phase": 6,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_012_glowka_phase_06.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_012_glowka_phase_06.png"
+            }
+          ],
+          "phaseCount": 7,
+          "instanceOffset": 2175131,
+          "rect": {
+            "x": 274,
+            "y": 288,
+            "width": 93,
+            "height": 78
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": false,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_013_ogonek_phase_00.png",
+          "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_013_ogonek_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 46,
+          "height": 39,
+          "frameCount": null,
+          "offset": 1905089,
+          "name": "ogonek ",
+          "id": 13,
+          "definitionId": 13,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_013_ogonek_phase_00.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_013_ogonek_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_013_ogonek_phase_01.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_013_ogonek_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_013_ogonek_phase_02.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_013_ogonek_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_013_ogonek_phase_03.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_013_ogonek_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_013_ogonek_phase_04.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_013_ogonek_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_013_ogonek_phase_05.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_013_ogonek_phase_05.png"
+            },
+            {
+              "phase": 6,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_013_ogonek_phase_06.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_013_ogonek_phase_06.png"
+            }
+          ],
+          "phaseCount": 7,
+          "instanceOffset": 2175271,
+          "rect": {
+            "x": 333,
+            "y": 373,
+            "width": 46,
+            "height": 39
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": false,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_014_gwiazdka_phase_00.png",
+          "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_014_gwiazdka_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 108,
+          "height": 116,
+          "frameCount": null,
+          "offset": 1917915,
+          "name": "gwiazdka ",
+          "id": 14,
+          "definitionId": 14,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_014_gwiazdka_phase_00.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_014_gwiazdka_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_014_gwiazdka_phase_01.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_014_gwiazdka_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 2175411,
+          "rect": {
+            "x": 160,
+            "y": 27,
+            "width": 108,
+            "height": 116
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": false,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_015_plot_phase_00.png",
+          "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_015_plot_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 80,
+          "height": 270,
+          "frameCount": null,
+          "offset": 1943239,
+          "name": "plot ",
+          "id": 15,
+          "definitionId": 15,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_015_plot_phase_00.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_015_plot_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_015_plot_phase_01.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_015_plot_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_015_plot_phase_02.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_015_plot_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_015_plot_phase_03.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_015_plot_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_015_plot_phase_04.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_015_plot_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_015_plot_phase_05.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_015_plot_phase_05.png"
+            }
+          ],
+          "phaseCount": 6,
+          "instanceOffset": 2175551,
+          "rect": {
+            "x": 373,
+            "y": 152,
+            "width": 80,
+            "height": 270
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": false,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_016_poduszki_phase_00.png",
+          "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_016_poduszki_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 89,
+          "height": 50,
+          "frameCount": null,
+          "offset": 2073257,
+          "name": "poduszki ",
+          "id": 16,
+          "definitionId": 16,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_016_poduszki_phase_00.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_016_poduszki_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_016_poduszki_phase_01.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_016_poduszki_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_016_poduszki_phase_02.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_016_poduszki_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_016_poduszki_phase_03.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_016_poduszki_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_016_poduszki_phase_04.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_016_poduszki_phase_04.png"
+            }
+          ],
+          "phaseCount": 5,
+          "instanceOffset": 2175691,
+          "rect": {
+            "x": 274,
+            "y": 293,
+            "width": 89,
+            "height": 50
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": false,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_017_pokoj_phase_00.png",
+          "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_017_pokoj_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 50,
+          "height": 85,
+          "frameCount": null,
+          "offset": 2095945,
+          "name": "pokoj ",
+          "id": 17,
+          "definitionId": 17,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_017_pokoj_phase_00.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_017_pokoj_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_017_pokoj_phase_01.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_017_pokoj_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_017_pokoj_phase_02.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_017_pokoj_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_017_pokoj_phase_03.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_017_pokoj_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_017_pokoj_phase_04.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_017_pokoj_phase_04.png"
+            }
+          ],
+          "phaseCount": 5,
+          "instanceOffset": 2175831,
+          "rect": {
+            "x": 105,
+            "y": 76,
+            "width": 50,
+            "height": 85
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": false,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_018_myszka_phase_00.png",
+          "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_018_myszka_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 92,
+          "height": 27,
+          "frameCount": null,
+          "offset": 2117463,
+          "name": "myszka",
+          "id": 18,
+          "definitionId": 18,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_018_myszka_phase_00.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_018_myszka_phase_00.png"
+            }
+          ],
+          "phaseCount": 1,
+          "instanceOffset": 2175971,
+          "rect": {
+            "x": -100,
+            "y": 250,
+            "width": 92,
+            "height": 27
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 2
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_019_kotek 01_phase_00.png",
+          "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_019_kotek 01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 81,
+          "height": 66,
+          "frameCount": null,
+          "offset": 2120687,
+          "name": "kotek 01",
+          "id": 19,
+          "definitionId": 19,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_019_kotek 01_phase_00.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_019_kotek 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_019_kotek 01_phase_01.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_019_kotek 01_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 2176111,
+          "rect": {
+            "x": 710,
+            "y": 8,
+            "width": 81,
+            "height": 66
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_020_kotek 01_phase_00.png",
+          "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_020_kotek 01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 78,
+          "height": 64,
+          "frameCount": null,
+          "offset": 2131979,
+          "name": "kotek 01",
+          "id": 20,
+          "definitionId": 20,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_020_kotek 01_phase_00.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_020_kotek 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_020_kotek 01_phase_01.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_020_kotek 01_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 2176251,
+          "rect": {
+            "x": 701,
+            "y": 66,
+            "width": 78,
+            "height": 64
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_021_kotek 01_phase_00.png",
+          "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_021_kotek 01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 73,
+          "height": 56,
+          "frameCount": null,
+          "offset": 2142643,
+          "name": "kotek 01",
+          "id": 21,
+          "definitionId": 21,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_021_kotek 01_phase_00.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_021_kotek 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_021_kotek 01_phase_01.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_021_kotek 01_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 2176391,
+          "rect": {
+            "x": 715,
+            "y": 140,
+            "width": 73,
+            "height": 56
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_022_kotek 01_phase_00.png",
+          "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_022_kotek 01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 87,
+          "height": 72,
+          "frameCount": null,
+          "offset": 2151307,
+          "name": "kotek 01",
+          "id": 22,
+          "definitionId": 22,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_022_kotek 01_phase_00.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_022_kotek 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_022_kotek 01_phase_01.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_022_kotek 01_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 2176531,
+          "rect": {
+            "x": 705,
+            "y": 195,
+            "width": 87,
+            "height": 72
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_023_kotek 01_phase_00.png",
+          "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_023_kotek 01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 61,
+          "frameCount": null,
+          "offset": 2164179,
+          "name": "kotek 01",
+          "id": 23,
+          "definitionId": 23,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_023_kotek 01_phase_00.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_023_kotek 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\KOTEK\\sprite_holder\\00_Sprite_Holder_023_kotek 01_phase_01.png",
+              "url": "../extracted_assets/bdf/KOTEK/sprite_holder/00_Sprite_Holder_023_kotek 01_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 2176671,
+          "rect": {
+            "x": 714,
+            "y": 269,
+            "width": 76,
+            "height": 61
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 8
+        }
+      ],
       "audio": []
     },
     {
@@ -68,7 +1316,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_000_00213ab7.wav",
+          "path": "extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_000_00213ab7.wav",
           "url": "../extracted_assets/bdf/KOTEK/embedded/01_Sound_Holder_000_00213ab7.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -78,7 +1326,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_001_002c7cfb.wav",
+          "path": "extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_001_002c7cfb.wav",
           "url": "../extracted_assets/bdf/KOTEK/embedded/01_Sound_Holder_001_002c7cfb.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -88,7 +1336,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_002_00374c77.wav",
+          "path": "extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_002_00374c77.wav",
           "url": "../extracted_assets/bdf/KOTEK/embedded/01_Sound_Holder_002_00374c77.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -98,7 +1346,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_003_0046ac7b.wav",
+          "path": "extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_003_0046ac7b.wav",
           "url": "../extracted_assets/bdf/KOTEK/embedded/01_Sound_Holder_003_0046ac7b.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -108,7 +1356,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_004_005a8b47.wav",
+          "path": "extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_004_005a8b47.wav",
           "url": "../extracted_assets/bdf/KOTEK/embedded/01_Sound_Holder_004_005a8b47.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -118,7 +1366,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_005_005cabb3.wav",
+          "path": "extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_005_005cabb3.wav",
           "url": "../extracted_assets/bdf/KOTEK/embedded/01_Sound_Holder_005_005cabb3.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -128,7 +1376,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_006_0068c241.wav",
+          "path": "extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_006_0068c241.wav",
           "url": "../extracted_assets/bdf/KOTEK/embedded/01_Sound_Holder_006_0068c241.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -138,7 +1386,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_007_006b1dbb.wav",
+          "path": "extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_007_006b1dbb.wav",
           "url": "../extracted_assets/bdf/KOTEK/embedded/01_Sound_Holder_007_006b1dbb.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -148,7 +1396,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_008_006b3dc7.wav",
+          "path": "extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_008_006b3dc7.wav",
           "url": "../extracted_assets/bdf/KOTEK/embedded/01_Sound_Holder_008_006b3dc7.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -158,7 +1406,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_009_006bd679.wav",
+          "path": "extracted_assets\\bdf\\KOTEK\\embedded\\01_Sound_Holder_009_006bd679.wav",
           "url": "../extracted_assets/bdf/KOTEK/embedded/01_Sound_Holder_009_006bd679.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -215,48 +1463,8 @@
         "signature": "SetTextMode()"
       },
       {
-        "name": "if",
-        "signature": "if(textMode==0)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(tryb)"
-      },
-      {
-        "name": "if",
-        "signature": "if(spriteID<12)"
-      },
-      {
-        "name": "if",
-        "signature": "if(tryb<6)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(tryb)"
-      },
-      {
-        "name": "if",
-        "signature": "if((status[0]==0)&&(status[1]==1)&&(status[2]==3)&&(status[3]==4)&&(status[4]==2)&&\n\n     (status[5]==5)&&(status[6]==5)&&(status[7]==4)&&(status[8]==2)&&(status[9]==1)&&\n\n     (status[10]==3)&&(status[11]==0))"
-      },
-      {
-        "name": "if",
-        "signature": "if((status[0]==1)&&(status[1]==0)&&(status[2]==5)&&(status[3]==2)&&(status[4]==3)&&\n\n     (status[5]==4)&&(status[6]==4)&&(status[7]==5)&&(status[8]==0)&&(status[9]==3)&&\n\n     (status[10]==2)&&(status[11]==1))"
-      },
-      {
-        "name": "if",
-        "signature": "if((status[0]==4)&&(status[1]==3)&&(status[2]==1)&&(status[3]==5)&&(status[4]==0)&&\n\n     (status[5]==2)&&(status[6]==2)&&(status[7]==1)&&(status[8]==4)&&(status[9]==0)&&\n\n     (status[10]==5)&&(status[11]==3))"
-      },
-      {
-        "name": "if",
-        "signature": "if((status[0]==2)&&(status[1]==5)&&(status[2]==4)&&(status[3]==3)&&(status[4]==1)&&\n\n     (status[5]==0)&&(status[6]==3)&&(status[7]==0)&&(status[8]==1)&&(status[9]==2)&&\n\n     (status[10]==4)&&(status[11]==5))"
-      },
-      {
-        "name": "if",
-        "signature": "if((status[0]==3)&&(status[1]==4)&&(status[2]==2)&&(status[3]==0)&&(status[4]==5)&&\n\n     (status[5]==1)&&(status[6]==1)&&(status[7]==2)&&(status[8]==3)&&(status[9]==5)&&\n\n     (status[10]==0)&&(status[11]==4))"
-      },
-      {
-        "name": "if",
-        "signature": "if((status[0]==5)&&(status[1]==2)&&(status[2]==0)&&(status[3]==1)&&(status[4]==4)&&\n\n     (status[5]==3)&&(status[6]==0)&&(status[7]==3)&&(status[8]==5)&&(status[9]==4)&&\n\n     (status[10]==1)&&(status[11]==2))"
+        "name": "Sprite_Holder.MouseClickOnDown",
+        "signature": "Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
         "name": "Sprite_Holder.MouseMoveIn",
@@ -271,48 +1479,8 @@
         "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(rectID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbar)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarPhase)"
-      },
-      {
-        "name": "if",
-        "signature": "if(txtHotSpotOn==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.InPlace",
         "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==480)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarCase)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(puzzleNo)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(puzzleNo)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==0)"
       },
       {
         "name": "Group.Sprite_Holder.MouseMoveIn",
@@ -327,28 +1495,12 @@
         "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(spriteID==11)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseClickOnUp",
         "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(toolbarPhase)"
-      },
-      {
         "name": "Group.Sprite_Holder.EndAnimation",
         "signature": "Group.Sprite_Holder.EndAnimation(int spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
       },
       {
         "name": "Text_Holder.ScrollTextUp",
@@ -375,10 +1527,6 @@
         "signature": "Text_Holder.ClickOnText(int textID)"
       },
       {
-        "name": "if",
-        "signature": "if(playStatus)"
-      },
-      {
         "name": "Text_Holder.EndOfSynchroText",
         "signature": "Text_Holder.EndOfSynchroText(int textID)"
       },
@@ -387,20 +1535,12 @@
         "signature": "Sound_Holder.EndPlaySound(int soundID)"
       },
       {
-        "name": "if",
-        "signature": "if(soundID==8 && textMode)"
-      },
-      {
         "name": "Sprite_Holder.MouseClickOnUp",
         "signature": "Sprite_Holder.MouseClickOnUp(int spriteID)"
       },
       {
         "name": "OnLButtonDown",
         "signature": "OnLButtonDown(int x,int y)"
-      },
-      {
-        "name": "if",
-        "signature": "if(help)"
       },
       {
         "name": "OnRButtonDown",

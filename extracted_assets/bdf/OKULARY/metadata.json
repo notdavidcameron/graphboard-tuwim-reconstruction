@@ -28,7 +28,42 @@
       "display_name": "Panorama",
       "private_offset": 2763,
       "private_size": 964900,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "panorama_bmp",
+          "path": "extracted_assets\\bdf\\OKULARY\\panorama\\00_Panorama_000_panorama_1224x480.bmp",
+          "offset": 3319,
+          "size": 588598,
+          "pixel_size": 587520,
+          "width": 1224,
+          "height": 480,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1224,
+            "height": 480
+          },
+          "geometry_confidence": "serialized_entry",
+          "initially_visible": false
+        }
+      ],
+      "panorama": {
+        "version": 1,
+        "declared_count": 1,
+        "parsed_count": 1,
+        "scenes": [
+          {
+            "index": 0,
+            "record_offset": 2771,
+            "pixel_offset": 3319,
+            "width": 1224,
+            "height": 480,
+            "subimage_count": 19,
+            "region_count": 0,
+            "bmp_output": "extracted_assets\\bdf\\OKULARY\\panorama\\00_Panorama_000_panorama_1224x480.bmp"
+          }
+        ]
+      }
     },
     {
       "index": 1,
@@ -49,161 +84,161 @@
       "embedded": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_000_000f0706.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_000_000f0706.wav",
           "offset": 984838,
           "size": 26940,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_001_000f70a2.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_001_000f70a2.wav",
           "offset": 1011874,
           "size": 23192,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_002_000fcb9a.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_002_000fcb9a.wav",
           "offset": 1035162,
           "size": 12110,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_003_000ffb48.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_003_000ffb48.wav",
           "offset": 1047368,
           "size": 35532,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_004_00108674.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_004_00108674.wav",
           "offset": 1082996,
           "size": 15910,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_005_0010c4fa.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_005_0010c4fa.wav",
           "offset": 1099002,
           "size": 26574,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_006_00112d28.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_006_00112d28.wav",
           "offset": 1125672,
           "size": 24832,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_007_00118e88.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_007_00118e88.wav",
           "offset": 1150600,
           "size": 26304,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_008_0011f5a8.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_008_0011f5a8.wav",
           "offset": 1177000,
           "size": 31850,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_009_00127272.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_009_00127272.wav",
           "offset": 1208946,
           "size": 25336,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_010_0012d5ca.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_010_0012d5ca.wav",
           "offset": 1234378,
           "size": 29518,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_011_00134978.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_011_00134978.wav",
           "offset": 1263992,
           "size": 12360,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_012_00137a20.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_012_00137a20.wav",
           "offset": 1276448,
           "size": 44840,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_013_001429a8.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_013_001429a8.wav",
           "offset": 1321384,
           "size": 154394,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_014_00168522.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_014_00168522.wav",
           "offset": 1475874,
           "size": 234524,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_015_001a199e.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_015_001a199e.wav",
           "offset": 1710494,
           "size": 48538,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_016_001ad798.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_016_001ad798.wav",
           "offset": 1759128,
           "size": 40540,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_017_001b7654.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_017_001b7654.wav",
           "offset": 1799764,
           "size": 31680,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_018_001bf274.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_018_001bf274.wav",
           "offset": 1831540,
           "size": 21000,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_019_001c44dc.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_019_001c44dc.wav",
           "offset": 1852636,
           "size": 42330,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_020_001cea96.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_020_001cea96.wav",
           "offset": 1895062,
           "size": 872874,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_021_002a3ca0.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_021_002a3ca0.wav",
           "offset": 2768032,
           "size": 99810,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_022_002bc2e2.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_022_002bc2e2.wav",
           "offset": 2867938,
           "size": 385020,
           "extension": ".wav"
@@ -217,134 +252,400 @@
       "display_name": "Sprite_Holder",
       "private_offset": 3254584,
       "private_size": 127740,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_000_okulary 0_phase_00.png",
+          "offset": 3255220,
+          "size": 4508,
+          "pixel_size": 11480,
+          "width": 82,
+          "height": 70,
+          "name": "okulary 0",
+          "id": 0,
+          "definition_id": 0,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_000_okulary 0_phase_00.png",
+              "size": 4508
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_000_okulary 0_phase_01.png",
+              "size": 4279
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_001_okulary 0_phase_00.png",
+          "offset": 3267044,
+          "size": 4091,
+          "pixel_size": 10184,
+          "width": 76,
+          "height": 67,
+          "name": "okulary 0",
+          "id": 1,
+          "definition_id": 1,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_001_okulary 0_phase_00.png",
+              "size": 4091
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_001_okulary 0_phase_01.png",
+              "size": 3902
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_002_lusterko_phase_00.png",
+          "offset": 3277917,
+          "size": 34213,
+          "pixel_size": 103987,
+          "width": 247,
+          "height": 421,
+          "name": "lusterko",
+          "id": 2,
+          "definition_id": 2,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_002_lusterko_phase_00.png",
+              "size": 34213
+            }
+          ]
+        }
+      ],
+      "sprite_holder": {
+        "version": 1,
+        "definition_count": 3,
+        "instance_count": 3,
+        "parsed_definitions": 3,
+        "parsed_instances": 3,
+        "definitions": [
+          {
+            "index": 0,
+            "name": "okulary 0",
+            "record_offset": 3254596,
+            "blob_offset": 3254600,
+            "blob_size": 12100,
+            "width": 82,
+            "height": 70,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_000_okulary 0_phase_00.png",
+                "size": 4508
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_000_okulary 0_phase_01.png",
+                "size": 4279
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "okulary 0",
+            "record_offset": 3266700,
+            "blob_offset": 3266704,
+            "blob_size": 10524,
+            "width": 76,
+            "height": 67,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_001_okulary 0_phase_00.png",
+                "size": 4091
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_001_okulary 0_phase_01.png",
+                "size": 3902
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "lusterko",
+            "record_offset": 3277228,
+            "blob_offset": 3277232,
+            "blob_size": 104672,
+            "width": 247,
+            "height": 421,
+            "phase_count": 1,
+            "phase_hint": 505290270,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_002_lusterko_phase_00.png",
+                "size": 34213
+              }
+            ]
+          }
+        ],
+        "instances": [
+          {
+            "index": 0,
+            "definition_id": 0,
+            "field04": 8,
+            "x": 703,
+            "y": 18,
+            "z": 8,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 3381904
+          },
+          {
+            "index": 1,
+            "definition_id": 1,
+            "field04": 8,
+            "x": 709,
+            "y": 108,
+            "z": 8,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 3382044
+          },
+          {
+            "index": 2,
+            "definition_id": 2,
+            "field04": 1,
+            "x": 150,
+            "y": 25,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 3382184
+          }
+        ]
+      }
     }
   ],
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\OKULARY\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\script.txt",
+      "path": "extracted_assets\\bdf\\OKULARY\\script.txt",
       "size": 17278
     },
     {
+      "kind": "panorama_bmp",
+      "path": "extracted_assets\\bdf\\OKULARY\\panorama\\00_Panorama_000_panorama_1224x480.bmp",
+      "offset": 3319,
+      "size": 588598,
+      "pixel_size": 587520,
+      "width": 1224,
+      "height": 480,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 1224,
+        "height": 480
+      },
+      "geometry_confidence": "serialized_entry",
+      "initially_visible": false
+    },
+    {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_000_000f0706.wav",
+      "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_000_000f0706.wav",
       "size": 26940
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_001_000f70a2.wav",
+      "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_001_000f70a2.wav",
       "size": 23192
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_002_000fcb9a.wav",
+      "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_002_000fcb9a.wav",
       "size": 12110
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_003_000ffb48.wav",
+      "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_003_000ffb48.wav",
       "size": 35532
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_004_00108674.wav",
+      "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_004_00108674.wav",
       "size": 15910
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_005_0010c4fa.wav",
+      "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_005_0010c4fa.wav",
       "size": 26574
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_006_00112d28.wav",
+      "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_006_00112d28.wav",
       "size": 24832
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_007_00118e88.wav",
+      "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_007_00118e88.wav",
       "size": 26304
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_008_0011f5a8.wav",
+      "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_008_0011f5a8.wav",
       "size": 31850
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_009_00127272.wav",
+      "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_009_00127272.wav",
       "size": 25336
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_010_0012d5ca.wav",
+      "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_010_0012d5ca.wav",
       "size": 29518
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_011_00134978.wav",
+      "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_011_00134978.wav",
       "size": 12360
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_012_00137a20.wav",
+      "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_012_00137a20.wav",
       "size": 44840
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_013_001429a8.wav",
+      "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_013_001429a8.wav",
       "size": 154394
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_014_00168522.wav",
+      "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_014_00168522.wav",
       "size": 234524
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_015_001a199e.wav",
+      "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_015_001a199e.wav",
       "size": 48538
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_016_001ad798.wav",
+      "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_016_001ad798.wav",
       "size": 40540
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_017_001b7654.wav",
+      "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_017_001b7654.wav",
       "size": 31680
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_018_001bf274.wav",
+      "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_018_001bf274.wav",
       "size": 21000
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_019_001c44dc.wav",
+      "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_019_001c44dc.wav",
       "size": 42330
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_020_001cea96.wav",
+      "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_020_001cea96.wav",
       "size": 872874
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_021_002a3ca0.wav",
+      "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_021_002a3ca0.wav",
       "size": 99810
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_022_002bc2e2.wav",
+      "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_022_002bc2e2.wav",
       "size": 385020
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_000_okulary 0_phase_00.png",
+      "offset": 3255220,
+      "size": 4508,
+      "pixel_size": 11480,
+      "width": 82,
+      "height": 70,
+      "name": "okulary 0",
+      "id": 0,
+      "definition_id": 0,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_000_okulary 0_phase_00.png",
+          "size": 4508
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_000_okulary 0_phase_01.png",
+          "size": 4279
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_001_okulary 0_phase_00.png",
+      "offset": 3267044,
+      "size": 4091,
+      "pixel_size": 10184,
+      "width": 76,
+      "height": 67,
+      "name": "okulary 0",
+      "id": 1,
+      "definition_id": 1,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_001_okulary 0_phase_00.png",
+          "size": 4091
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_001_okulary 0_phase_01.png",
+          "size": 3902
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_002_lusterko_phase_00.png",
+      "offset": 3277917,
+      "size": 34213,
+      "pixel_size": 103987,
+      "width": 247,
+      "height": 421,
+      "name": "lusterko",
+      "id": 2,
+      "definition_id": 2,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_002_lusterko_phase_00.png",
+          "size": 34213
+        }
+      ]
     }
   ],
   "script": {

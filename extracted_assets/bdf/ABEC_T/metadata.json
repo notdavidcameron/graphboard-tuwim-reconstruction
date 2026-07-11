@@ -46,7 +46,120 @@
       "display_name": "Bitmap_Holder",
       "private_offset": 6395,
       "private_size": 443940,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\ABEC_T\\bitmap_holder\\02_Bitmap_Holder_000_1atlod_o_640x480.bmp",
+          "offset": 6535,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "1atlodło",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 640,
+            "height": 480
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\ABEC_T\\bitmap_holder\\02_Bitmap_Holder_001_rys1o 02_265x331.bmp",
+          "offset": 313883,
+          "size": 89786,
+          "pixel_size": 88708,
+          "width": 265,
+          "height": 331,
+          "name": "rys1o 02",
+          "rect": {
+            "x": 375,
+            "y": 149,
+            "width": 265,
+            "height": 331
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\ABEC_T\\bitmap_holder\\02_Bitmap_Holder_002_rys2o 02_258x183.bmp",
+          "offset": 402739,
+          "size": 48658,
+          "pixel_size": 47580,
+          "width": 258,
+          "height": 183,
+          "name": "rys2o 02",
+          "rect": {
+            "x": 192,
+            "y": 297,
+            "width": 258,
+            "height": 183
+          },
+          "geometry_confidence": "serialized_entry"
+        }
+      ],
+      "bitmap_holder": {
+        "version": 1,
+        "declared_count": 3,
+        "parsed_count": 3,
+        "frames": [
+          {
+            "index": 0,
+            "name": "1atlodło",
+            "record_offset": 6403,
+            "record_size": 307344,
+            "pixel_offset": 6535,
+            "width": 640,
+            "height": 480,
+            "right": 640,
+            "bottom": 480,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 640,
+              "height": 480
+            },
+            "bmp_output": "extracted_assets\\bdf\\ABEC_T\\bitmap_holder\\02_Bitmap_Holder_000_1atlod_o_640x480.bmp"
+          },
+          {
+            "index": 1,
+            "name": "rys1o 02",
+            "record_offset": 313751,
+            "record_size": 88852,
+            "pixel_offset": 313883,
+            "width": 265,
+            "height": 331,
+            "right": 640,
+            "bottom": 480,
+            "rect": {
+              "x": 375,
+              "y": 149,
+              "width": 265,
+              "height": 331
+            },
+            "bmp_output": "extracted_assets\\bdf\\ABEC_T\\bitmap_holder\\02_Bitmap_Holder_001_rys1o 02_265x331.bmp"
+          },
+          {
+            "index": 2,
+            "name": "rys2o 02",
+            "record_offset": 402607,
+            "record_size": 47724,
+            "pixel_offset": 402739,
+            "width": 258,
+            "height": 183,
+            "right": 450,
+            "bottom": 480,
+            "rect": {
+              "x": 192,
+              "y": 297,
+              "width": 258,
+              "height": 183
+            },
+            "bmp_output": "extracted_assets\\bdf\\ABEC_T\\bitmap_holder\\02_Bitmap_Holder_002_rys2o 02_258x183.bmp"
+          }
+        ]
+      }
     },
     {
       "index": 3,
@@ -55,19 +168,670 @@
       "display_name": "Sprite_Holder",
       "private_offset": 451869,
       "private_size": 10836,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_000_play 01_phase_00.png",
+          "offset": 452399,
+          "size": 1334,
+          "pixel_size": 1450,
+          "width": 25,
+          "height": 29,
+          "name": "play 01",
+          "id": 0,
+          "definition_id": 0,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_000_play 01_phase_00.png",
+              "size": 1334
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_000_play 01_phase_01.png",
+              "size": 1191
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_001_stop 01_phase_00.png",
+          "offset": 454249,
+          "size": 1342,
+          "pixel_size": 1512,
+          "width": 27,
+          "height": 28,
+          "name": "stop 01",
+          "id": 1,
+          "definition_id": 1,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_001_stop 01_phase_00.png",
+              "size": 1342
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_001_stop 01_phase_01.png",
+              "size": 1175
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_002_przew1_phase_00.png",
+          "offset": 456147,
+          "size": 1176,
+          "pixel_size": 798,
+          "width": 19,
+          "height": 21,
+          "name": "przew1",
+          "id": 2,
+          "definition_id": 2,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_002_przew1_phase_00.png",
+              "size": 1176
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_002_przew1_phase_01.png",
+              "size": 1056
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_003_przew2_phase_00.png",
+          "offset": 457377,
+          "size": 1189,
+          "pixel_size": 792,
+          "width": 18,
+          "height": 22,
+          "name": "przew2",
+          "id": 3,
+          "definition_id": 3,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_003_przew2_phase_00.png",
+              "size": 1189
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_003_przew2_phase_01.png",
+              "size": 1070
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_004_przew3_phase_00.png",
+          "offset": 458555,
+          "size": 1187,
+          "pixel_size": 798,
+          "width": 19,
+          "height": 21,
+          "name": "przew3",
+          "id": 4,
+          "definition_id": 4,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_004_przew3_phase_00.png",
+              "size": 1187
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_004_przew3_phase_01.png",
+              "size": 1068
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_005_przew4_phase_00.png",
+          "offset": 459739,
+          "size": 1187,
+          "pixel_size": 798,
+          "width": 19,
+          "height": 21,
+          "name": "przew4",
+          "id": 5,
+          "definition_id": 5,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_005_przew4_phase_00.png",
+              "size": 1187
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_005_przew4_phase_01.png",
+              "size": 1068
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_006_przew5_phase_00.png",
+          "offset": 460897,
+          "size": 1212,
+          "pixel_size": 828,
+          "width": 18,
+          "height": 23,
+          "name": "przew5",
+          "id": 6,
+          "definition_id": 6,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_006_przew5_phase_00.png",
+              "size": 1212
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_006_przew5_phase_01.png",
+              "size": 1205
+            }
+          ]
+        }
+      ],
+      "sprite_holder": {
+        "version": 1,
+        "definition_count": 7,
+        "instance_count": 7,
+        "parsed_definitions": 7,
+        "parsed_instances": 7,
+        "definitions": [
+          {
+            "index": 0,
+            "name": "play 01",
+            "record_offset": 451881,
+            "blob_offset": 451885,
+            "blob_size": 1964,
+            "width": 25,
+            "height": 29,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_000_play 01_phase_00.png",
+                "size": 1334
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_000_play 01_phase_01.png",
+                "size": 1191
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "stop 01",
+            "record_offset": 453849,
+            "blob_offset": 453853,
+            "blob_size": 1908,
+            "width": 27,
+            "height": 28,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_001_stop 01_phase_00.png",
+                "size": 1342
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_001_stop 01_phase_01.png",
+                "size": 1175
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "przew1",
+            "record_offset": 455761,
+            "blob_offset": 455765,
+            "blob_size": 1180,
+            "width": 19,
+            "height": 21,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_002_przew1_phase_00.png",
+                "size": 1176
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_002_przew1_phase_01.png",
+                "size": 1056
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "name": "przew2",
+            "record_offset": 456945,
+            "blob_offset": 456949,
+            "blob_size": 1220,
+            "width": 18,
+            "height": 22,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_003_przew2_phase_00.png",
+                "size": 1189
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_003_przew2_phase_01.png",
+                "size": 1070
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "name": "przew3",
+            "record_offset": 458169,
+            "blob_offset": 458173,
+            "blob_size": 1180,
+            "width": 19,
+            "height": 21,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_004_przew3_phase_00.png",
+                "size": 1187
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_004_przew3_phase_01.png",
+                "size": 1068
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "name": "przew4",
+            "record_offset": 459353,
+            "blob_offset": 459357,
+            "blob_size": 1180,
+            "width": 19,
+            "height": 21,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_005_przew4_phase_00.png",
+                "size": 1187
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_005_przew4_phase_01.png",
+                "size": 1068
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "name": "przew5",
+            "record_offset": 460537,
+            "blob_offset": 460541,
+            "blob_size": 1184,
+            "width": 18,
+            "height": 23,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_006_przew5_phase_00.png",
+                "size": 1212
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_006_przew5_phase_01.png",
+                "size": 1205
+              }
+            ]
+          }
+        ],
+        "instances": [
+          {
+            "index": 0,
+            "definition_id": 0,
+            "field04": 1,
+            "x": 214,
+            "y": 351,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 461725
+          },
+          {
+            "index": 1,
+            "definition_id": 1,
+            "field04": 1,
+            "x": 240,
+            "y": 349,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 461865
+          },
+          {
+            "index": 2,
+            "definition_id": 2,
+            "field04": 1,
+            "x": 320,
+            "y": 351,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 462005
+          },
+          {
+            "index": 3,
+            "definition_id": 3,
+            "field04": 1,
+            "x": 339,
+            "y": 349,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 462145
+          },
+          {
+            "index": 4,
+            "definition_id": 4,
+            "field04": 1,
+            "x": 357,
+            "y": 349,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 462285
+          },
+          {
+            "index": 5,
+            "definition_id": 5,
+            "field04": 1,
+            "x": 376,
+            "y": 348,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 462425
+          },
+          {
+            "index": 6,
+            "definition_id": 6,
+            "field04": 1,
+            "x": 395,
+            "y": 346,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 462565
+          }
+        ]
+      }
     }
   ],
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ABEC_T\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\ABEC_T\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ABEC_T\\script.txt",
+      "path": "extracted_assets\\bdf\\ABEC_T\\script.txt",
       "size": 8580
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\ABEC_T\\bitmap_holder\\02_Bitmap_Holder_000_1atlod_o_640x480.bmp",
+      "offset": 6535,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "1atlodło",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 640,
+        "height": 480
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\ABEC_T\\bitmap_holder\\02_Bitmap_Holder_001_rys1o 02_265x331.bmp",
+      "offset": 313883,
+      "size": 89786,
+      "pixel_size": 88708,
+      "width": 265,
+      "height": 331,
+      "name": "rys1o 02",
+      "rect": {
+        "x": 375,
+        "y": 149,
+        "width": 265,
+        "height": 331
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\ABEC_T\\bitmap_holder\\02_Bitmap_Holder_002_rys2o 02_258x183.bmp",
+      "offset": 402739,
+      "size": 48658,
+      "pixel_size": 47580,
+      "width": 258,
+      "height": 183,
+      "name": "rys2o 02",
+      "rect": {
+        "x": 192,
+        "y": 297,
+        "width": 258,
+        "height": 183
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_000_play 01_phase_00.png",
+      "offset": 452399,
+      "size": 1334,
+      "pixel_size": 1450,
+      "width": 25,
+      "height": 29,
+      "name": "play 01",
+      "id": 0,
+      "definition_id": 0,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_000_play 01_phase_00.png",
+          "size": 1334
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_000_play 01_phase_01.png",
+          "size": 1191
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_001_stop 01_phase_00.png",
+      "offset": 454249,
+      "size": 1342,
+      "pixel_size": 1512,
+      "width": 27,
+      "height": 28,
+      "name": "stop 01",
+      "id": 1,
+      "definition_id": 1,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_001_stop 01_phase_00.png",
+          "size": 1342
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_001_stop 01_phase_01.png",
+          "size": 1175
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_002_przew1_phase_00.png",
+      "offset": 456147,
+      "size": 1176,
+      "pixel_size": 798,
+      "width": 19,
+      "height": 21,
+      "name": "przew1",
+      "id": 2,
+      "definition_id": 2,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_002_przew1_phase_00.png",
+          "size": 1176
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_002_przew1_phase_01.png",
+          "size": 1056
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_003_przew2_phase_00.png",
+      "offset": 457377,
+      "size": 1189,
+      "pixel_size": 792,
+      "width": 18,
+      "height": 22,
+      "name": "przew2",
+      "id": 3,
+      "definition_id": 3,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_003_przew2_phase_00.png",
+          "size": 1189
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_003_przew2_phase_01.png",
+          "size": 1070
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_004_przew3_phase_00.png",
+      "offset": 458555,
+      "size": 1187,
+      "pixel_size": 798,
+      "width": 19,
+      "height": 21,
+      "name": "przew3",
+      "id": 4,
+      "definition_id": 4,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_004_przew3_phase_00.png",
+          "size": 1187
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_004_przew3_phase_01.png",
+          "size": 1068
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_005_przew4_phase_00.png",
+      "offset": 459739,
+      "size": 1187,
+      "pixel_size": 798,
+      "width": 19,
+      "height": 21,
+      "name": "przew4",
+      "id": 5,
+      "definition_id": 5,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_005_przew4_phase_00.png",
+          "size": 1187
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_005_przew4_phase_01.png",
+          "size": 1068
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_006_przew5_phase_00.png",
+      "offset": 460897,
+      "size": 1212,
+      "pixel_size": 828,
+      "width": 18,
+      "height": 23,
+      "name": "przew5",
+      "id": 6,
+      "definition_id": 6,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_006_przew5_phase_00.png",
+          "size": 1212
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\ABEC_T\\sprite_holder\\03_Sprite_Holder_006_przew5_phase_01.png",
+          "size": 1205
+        }
+      ]
     }
   ],
   "script": {

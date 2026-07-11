@@ -24,22 +24,183 @@
       "namespace": "Page",
       "index": 0,
       "z": 0,
-      "visible": false,
+      "visible": true,
       "rect": {
-        "x": 21,
-        "y": 396,
-        "width": 202,
-        "height": 57
+        "x": 9,
+        "y": 59,
+        "width": 602,
+        "height": 399
       },
-      "geometryConfidence": "serialized_entry",
+      "geometryConfidence": "serialized_entries",
       "itemCount": null,
       "hitboxes": [],
       "sourceOffset": 309357,
-      "geometrySourceOffset": 310509,
+      "geometrySourceOffset": null,
       "privateOffset": 310489,
       "privateSize": 53464,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/bdf/PIEKARZ/bitmap_holder/00_Bitmap_Holder_000_bagietka_202x57.bmp",
+      "assets": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_000_bagietka_202x57.bmp",
+          "url": "../extracted_assets/bdf/PIEKARZ/bitmap_holder/00_Bitmap_Holder_000_bagietka_202x57.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 202,
+          "height": 57,
+          "frameCount": null,
+          "offset": 310629,
+          "name": "bagietka",
+          "id": 0,
+          "rect": {
+            "x": 21,
+            "y": 396,
+            "width": 202,
+            "height": 57
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_001_bulka_62x46.bmp",
+          "url": "../extracted_assets/bdf/PIEKARZ/bitmap_holder/00_Bitmap_Holder_001_bulka_62x46.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 62,
+          "height": 46,
+          "frameCount": null,
+          "offset": 322405,
+          "name": "bulka",
+          "id": 1,
+          "rect": {
+            "x": 77,
+            "y": 404,
+            "width": 62,
+            "height": 46
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_002_chleb01_149x71.bmp",
+          "url": "../extracted_assets/bdf/PIEKARZ/bitmap_holder/00_Bitmap_Holder_002_chleb01_149x71.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 149,
+          "height": 71,
+          "frameCount": null,
+          "offset": 325497,
+          "name": "chleb01",
+          "id": 2,
+          "rect": {
+            "x": 56,
+            "y": 387,
+            "width": 149,
+            "height": 71
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_003_rogal01_68x65.bmp",
+          "url": "../extracted_assets/bdf/PIEKARZ/bitmap_holder/00_Bitmap_Holder_003_rogal01_68x65.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 68,
+          "height": 65,
+          "frameCount": null,
+          "offset": 336437,
+          "name": "rogal01",
+          "id": 3,
+          "rect": {
+            "x": 78,
+            "y": 392,
+            "width": 68,
+            "height": 65
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_004_bagi02_45x140.bmp",
+          "url": "../extracted_assets/bdf/PIEKARZ/bitmap_holder/00_Bitmap_Holder_004_bagi02_45x140.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 45,
+          "height": 140,
+          "frameCount": null,
+          "offset": 341005,
+          "name": "bagi02",
+          "id": 4,
+          "rect": {
+            "x": 312,
+            "y": 59,
+            "width": 45,
+            "height": 140
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_005_bulka02_63x46.bmp",
+          "url": "../extracted_assets/bdf/PIEKARZ/bitmap_holder/00_Bitmap_Holder_005_bulka02_63x46.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 63,
+          "height": 46,
+          "frameCount": null,
+          "offset": 347873,
+          "name": "bulka02",
+          "id": 5,
+          "rect": {
+            "x": 170,
+            "y": 189,
+            "width": 63,
+            "height": 46
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_006_chleb02_122x71.bmp",
+          "url": "../extracted_assets/bdf/PIEKARZ/bitmap_holder/00_Bitmap_Holder_006_chleb02_122x71.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 122,
+          "height": 71,
+          "frameCount": null,
+          "offset": 350965,
+          "name": "chleb02",
+          "id": 6,
+          "rect": {
+            "x": 489,
+            "y": 212,
+            "width": 122,
+            "height": 71
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_007_rogal02_59x67.bmp",
+          "url": "../extracted_assets/bdf/PIEKARZ/bitmap_holder/00_Bitmap_Holder_007_rogal02_59x67.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 59,
+          "height": 67,
+          "frameCount": null,
+          "offset": 359917,
+          "name": "rogal02",
+          "id": 7,
+          "rect": {
+            "x": 9,
+            "y": 88,
+            "width": 59,
+            "height": 67
+          },
+          "geometryConfidence": "serialized_entry"
+        }
+      ],
       "audio": []
     },
     {
@@ -67,8 +228,18 @@
             "width": 135,
             "height": 129
           },
+          "name": "",
+          "layer": 0,
+          "enabled": true,
+          "flags": [
+            213,
+            0,
+            255
+          ],
           "sourceOffset": 365069,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 5,
+          "auxState": 0
         },
         {
           "id": 1,
@@ -78,8 +249,18 @@
             "width": 143,
             "height": 75
           },
+          "name": "",
+          "layer": 0,
+          "enabled": true,
+          "flags": [
+            213,
+            0,
+            255
+          ],
           "sourceOffset": 365170,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 5,
+          "auxState": 0
         },
         {
           "id": 2,
@@ -89,8 +270,18 @@
             "width": 296,
             "height": 135
           },
+          "name": "",
+          "layer": 0,
+          "enabled": true,
+          "flags": [
+            213,
+            0,
+            255
+          ],
           "sourceOffset": 365271,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 5,
+          "auxState": 0
         },
         {
           "id": 3,
@@ -100,19 +291,39 @@
             "width": 102,
             "height": 72
           },
+          "name": "",
+          "layer": 0,
+          "enabled": true,
+          "flags": [
+            213,
+            0,
+            255
+          ],
           "sourceOffset": 365372,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 5,
+          "auxState": 0
         },
         {
-          "id": 4,
+          "id": 0,
           "rect": {
             "x": 426,
             "y": 3,
             "width": 136,
             "height": 207
           },
+          "name": "",
+          "layer": 0,
+          "enabled": true,
+          "flags": [
+            213,
+            0,
+            255
+          ],
           "sourceOffset": 365473,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 5,
+          "auxState": 0
         }
       ],
       "sourceOffset": 363953,
@@ -149,7 +360,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_000_0005979a.wav",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_000_0005979a.wav",
           "url": "../extracted_assets/bdf/PIEKARZ/embedded/02_Sound_Holder_000_0005979a.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -159,7 +370,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_001_00105d28.wav",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_001_00105d28.wav",
           "url": "../extracted_assets/bdf/PIEKARZ/embedded/02_Sound_Holder_001_00105d28.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -169,7 +380,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_002_00107cca.wav",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_002_00107cca.wav",
           "url": "../extracted_assets/bdf/PIEKARZ/embedded/02_Sound_Holder_002_00107cca.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -179,7 +390,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_003_0010bbb0.wav",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_003_0010bbb0.wav",
           "url": "../extracted_assets/bdf/PIEKARZ/embedded/02_Sound_Holder_003_0010bbb0.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -189,7 +400,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_004_00129194.wav",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_004_00129194.wav",
           "url": "../extracted_assets/bdf/PIEKARZ/embedded/02_Sound_Holder_004_00129194.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -199,7 +410,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_005_001614a4.wav",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_005_001614a4.wav",
           "url": "../extracted_assets/bdf/PIEKARZ/embedded/02_Sound_Holder_005_001614a4.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -209,7 +420,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_006_00170550.wav",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_006_00170550.wav",
           "url": "../extracted_assets/bdf/PIEKARZ/embedded/02_Sound_Holder_006_00170550.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -254,16 +465,8 @@
         "signature": "OnOpenPage()"
       },
       {
-        "name": "if",
-        "signature": "if(IsProject()==0)"
-      },
-      {
         "name": "SetTextMode",
         "signature": "SetTextMode()"
-      },
-      {
-        "name": "if",
-        "signature": "if(textMode==0)"
       },
       {
         "name": "OnClosePage",
@@ -276,26 +479,6 @@
       {
         "name": "Bitmap_Holder.MouseDrop",
         "signature": "Bitmap_Holder.MouseDrop(int bitmapID,int left,int top,int right,int bottom)"
-      },
-      {
-        "name": "if",
-        "signature": "if(res)"
-      },
-      {
-        "name": "if",
-        "signature": "if(ppp[curP])"
-      },
-      {
-        "name": "while",
-        "signature": "while(ttt<4)"
-      },
-      {
-        "name": "if",
-        "signature": "if(ppp[curP]==0)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(bitmapID)"
       },
       {
         "name": "HotSpot_Holder.MouseMoveIn",
@@ -318,40 +501,12 @@
         "signature": "HotSpot_Holder.LeftButtonClickOn(int rectID)"
       },
       {
-        "name": "if",
-        "signature": "if(rectID==0 && textMode==0)"
-      },
-      {
         "name": "Group.HotSpot_Holder.MouseMoveIn",
         "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
       },
       {
-        "name": "if",
-        "signature": "if(rectID==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbar)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.InPlace",
         "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
-      },
-      {
-        "name": "if",
-        "signature": "if(spriteID==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==480)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarCase)"
       },
       {
         "name": "Group.Sprite_Holder.MouseMoveIn",
@@ -366,64 +521,20 @@
         "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseClickOnUp",
         "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
       },
       {
         "name": "Group.Sprite_Holder.EndAnimation",
         "signature": "Group.Sprite_Holder.EndAnimation(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
-      },
-      {
         "name": "Group.HotSpot_Holder.MouseMoveIn",
         "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(rectID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbar)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(txtHotSpotOn==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.InPlace",
         "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==480)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarCase)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==0)"
       },
       {
         "name": "Group.Sprite_Holder.MouseMoveIn",
@@ -438,28 +549,12 @@
         "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(spriteID==11)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseClickOnUp",
         "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.EndAnimation",
         "signature": "Group.Sprite_Holder.EndAnimation(int spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
       },
       {
         "name": "Text_Holder.ScrollTextUp",
@@ -486,20 +581,12 @@
         "signature": "Text_Holder.ClickOnText(int textID)"
       },
       {
-        "name": "if",
-        "signature": "if(playStatus)"
-      },
-      {
         "name": "Text_Holder.EndOfSynchroText",
         "signature": "Text_Holder.EndOfSynchroText(int textID)"
       },
       {
         "name": "Sound_Holder.EndPlaySound",
         "signature": "Sound_Holder.EndPlaySound(int soundID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(soundID==5 && textMode)"
       },
       {
         "name": "OnTimer",

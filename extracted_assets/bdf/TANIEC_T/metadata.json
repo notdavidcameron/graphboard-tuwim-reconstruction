@@ -37,7 +37,50 @@
       "display_name": "Bitmap_Holder",
       "private_offset": 3934,
       "private_size": 307356,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TANIEC_T\\bitmap_holder\\01_Bitmap_Holder_000_1atloc dz_640x480.bmp",
+          "offset": 4074,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "1atloc dz",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 640,
+            "height": 480
+          },
+          "geometry_confidence": "serialized_entry"
+        }
+      ],
+      "bitmap_holder": {
+        "version": 1,
+        "declared_count": 1,
+        "parsed_count": 1,
+        "frames": [
+          {
+            "index": 0,
+            "name": "1atloc dz",
+            "record_offset": 3942,
+            "record_size": 307344,
+            "pixel_offset": 4074,
+            "width": 640,
+            "height": 480,
+            "right": 640,
+            "bottom": 480,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 640,
+              "height": 480
+            },
+            "bmp_output": "extracted_assets\\bdf\\TANIEC_T\\bitmap_holder\\01_Bitmap_Holder_000_1atloc dz_640x480.bmp"
+          }
+        ]
+      }
     },
     {
       "index": 2,
@@ -46,7 +89,551 @@
       "display_name": "Sprite_Holder",
       "private_offset": 312824,
       "private_size": 236020,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_000_play 01_phase_00.png",
+          "offset": 313360,
+          "size": 1343,
+          "pixel_size": 1500,
+          "width": 25,
+          "height": 30,
+          "name": "play 01",
+          "id": 0,
+          "definition_id": 0,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_000_play 01_phase_00.png",
+              "size": 1343
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_000_play 01_phase_01.png",
+              "size": 1184
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_001_stop 01_phase_00.png",
+          "offset": 315372,
+          "size": 1426,
+          "pixel_size": 1624,
+          "width": 29,
+          "height": 28,
+          "name": "stop 01",
+          "id": 1,
+          "definition_id": 1,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_001_stop 01_phase_00.png",
+              "size": 1426
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_001_stop 01_phase_01.png",
+              "size": 1194
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_002_przew1_phase_00.png",
+          "offset": 317392,
+          "size": 1143,
+          "pixel_size": 836,
+          "width": 19,
+          "height": 22,
+          "name": "przew1",
+          "id": 2,
+          "definition_id": 2,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_002_przew1_phase_00.png",
+              "size": 1143
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_002_przew1_phase_01.png",
+              "size": 1046
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_003_przew2_phase_00.png",
+          "offset": 318660,
+          "size": 1163,
+          "pixel_size": 792,
+          "width": 18,
+          "height": 22,
+          "name": "przew2",
+          "id": 3,
+          "definition_id": 3,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_003_przew2_phase_00.png",
+              "size": 1163
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_003_przew2_phase_01.png",
+              "size": 1044
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_004_przew3_phase_00.png",
+          "offset": 319840,
+          "size": 1167,
+          "pixel_size": 836,
+          "width": 19,
+          "height": 22,
+          "name": "przew3",
+          "id": 4,
+          "definition_id": 4,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_004_przew3_phase_00.png",
+              "size": 1167
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_004_przew3_phase_01.png",
+              "size": 1041
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_005_przew4_phase_00.png",
+          "offset": 321064,
+          "size": 1117,
+          "pixel_size": 836,
+          "width": 19,
+          "height": 22,
+          "name": "przew4",
+          "id": 5,
+          "definition_id": 5,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_005_przew4_phase_00.png",
+              "size": 1117
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_005_przew4_phase_01.png",
+              "size": 1026
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_006_przew5_phase_00.png",
+          "offset": 322288,
+          "size": 1113,
+          "pixel_size": 836,
+          "width": 19,
+          "height": 22,
+          "name": "przew5",
+          "id": 6,
+          "definition_id": 6,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_006_przew5_phase_00.png",
+              "size": 1113
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_006_przew5_phase_01.png",
+              "size": 1023
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_00.png",
+          "offset": 324492,
+          "size": 6762,
+          "pixel_size": 223232,
+          "width": 109,
+          "height": 256,
+          "name": "miotła ",
+          "id": 7,
+          "definition_id": 7,
+          "phase_count": 8,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_00.png",
+              "size": 6762
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_01.png",
+              "size": 5294
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_02.png",
+              "size": 4639
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_03.png",
+              "size": 4040
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_04.png",
+              "size": 3590
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_05.png",
+              "size": 3132
+            },
+            {
+              "phase": 6,
+              "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_06.png",
+              "size": 3040
+            },
+            {
+              "phase": 7,
+              "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_07.png",
+              "size": 2980
+            }
+          ]
+        }
+      ],
+      "sprite_holder": {
+        "version": 1,
+        "definition_count": 8,
+        "instance_count": 8,
+        "parsed_definitions": 8,
+        "parsed_instances": 8,
+        "definitions": [
+          {
+            "index": 0,
+            "name": "play 01",
+            "record_offset": 312836,
+            "blob_offset": 312840,
+            "blob_size": 2020,
+            "width": 25,
+            "height": 30,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_000_play 01_phase_00.png",
+                "size": 1343
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_000_play 01_phase_01.png",
+                "size": 1184
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "stop 01",
+            "record_offset": 314860,
+            "blob_offset": 314864,
+            "blob_size": 2132,
+            "width": 29,
+            "height": 28,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_001_stop 01_phase_00.png",
+                "size": 1426
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_001_stop 01_phase_01.png",
+                "size": 1194
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "przew1",
+            "record_offset": 316996,
+            "blob_offset": 317000,
+            "blob_size": 1228,
+            "width": 19,
+            "height": 22,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_002_przew1_phase_00.png",
+                "size": 1143
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_002_przew1_phase_01.png",
+                "size": 1046
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "name": "przew2",
+            "record_offset": 318228,
+            "blob_offset": 318232,
+            "blob_size": 1220,
+            "width": 18,
+            "height": 22,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_003_przew2_phase_00.png",
+                "size": 1163
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_003_przew2_phase_01.png",
+                "size": 1044
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "name": "przew3",
+            "record_offset": 319452,
+            "blob_offset": 319456,
+            "blob_size": 1220,
+            "width": 19,
+            "height": 22,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_004_przew3_phase_00.png",
+                "size": 1167
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_004_przew3_phase_01.png",
+                "size": 1041
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "name": "przew4",
+            "record_offset": 320676,
+            "blob_offset": 320680,
+            "blob_size": 1220,
+            "width": 19,
+            "height": 22,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_005_przew4_phase_00.png",
+                "size": 1117
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_005_przew4_phase_01.png",
+                "size": 1026
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "name": "przew5",
+            "record_offset": 321900,
+            "blob_offset": 321904,
+            "blob_size": 1220,
+            "width": 19,
+            "height": 22,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_006_przew5_phase_00.png",
+                "size": 1113
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_006_przew5_phase_01.png",
+                "size": 1023
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "name": "miotła ",
+            "record_offset": 323124,
+            "blob_offset": 323128,
+            "blob_size": 224596,
+            "width": 109,
+            "height": 256,
+            "phase_count": 8,
+            "phase_hint": 7,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_00.png",
+                "size": 6762
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_01.png",
+                "size": 5294
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_02.png",
+                "size": 4639
+              },
+              {
+                "phase": 3,
+                "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_03.png",
+                "size": 4040
+              },
+              {
+                "phase": 4,
+                "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_04.png",
+                "size": 3590
+              },
+              {
+                "phase": 5,
+                "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_05.png",
+                "size": 3132
+              },
+              {
+                "phase": 6,
+                "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_06.png",
+                "size": 3040
+              },
+              {
+                "phase": 7,
+                "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_07.png",
+                "size": 2980
+              }
+            ]
+          }
+        ],
+        "instances": [
+          {
+            "index": 0,
+            "definition_id": 0,
+            "field04": 1,
+            "x": 334,
+            "y": 432,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 547724
+          },
+          {
+            "index": 1,
+            "definition_id": 1,
+            "field04": 1,
+            "x": 359,
+            "y": 434,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 547864
+          },
+          {
+            "index": 2,
+            "definition_id": 2,
+            "field04": 1,
+            "x": 462,
+            "y": 437,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 548004
+          },
+          {
+            "index": 3,
+            "definition_id": 3,
+            "field04": 1,
+            "x": 481,
+            "y": 437,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 548144
+          },
+          {
+            "index": 4,
+            "definition_id": 4,
+            "field04": 1,
+            "x": 499,
+            "y": 437,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 548284
+          },
+          {
+            "index": 5,
+            "definition_id": 5,
+            "field04": 1,
+            "x": 518,
+            "y": 437,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 548424
+          },
+          {
+            "index": 6,
+            "definition_id": 6,
+            "field04": 1,
+            "x": 537,
+            "y": 437,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 548564
+          },
+          {
+            "index": 7,
+            "definition_id": 7,
+            "field04": 2,
+            "x": 210,
+            "y": 219,
+            "z": 2,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 548704
+          }
+        ]
+      }
     },
     {
       "index": 3,
@@ -61,13 +648,260 @@
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC_T\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\TANIEC_T\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TANIEC_T\\script.txt",
+      "path": "extracted_assets\\bdf\\TANIEC_T\\script.txt",
       "size": 8465
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\TANIEC_T\\bitmap_holder\\01_Bitmap_Holder_000_1atloc dz_640x480.bmp",
+      "offset": 4074,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "1atloc dz",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 640,
+        "height": 480
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_000_play 01_phase_00.png",
+      "offset": 313360,
+      "size": 1343,
+      "pixel_size": 1500,
+      "width": 25,
+      "height": 30,
+      "name": "play 01",
+      "id": 0,
+      "definition_id": 0,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_000_play 01_phase_00.png",
+          "size": 1343
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_000_play 01_phase_01.png",
+          "size": 1184
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_001_stop 01_phase_00.png",
+      "offset": 315372,
+      "size": 1426,
+      "pixel_size": 1624,
+      "width": 29,
+      "height": 28,
+      "name": "stop 01",
+      "id": 1,
+      "definition_id": 1,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_001_stop 01_phase_00.png",
+          "size": 1426
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_001_stop 01_phase_01.png",
+          "size": 1194
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_002_przew1_phase_00.png",
+      "offset": 317392,
+      "size": 1143,
+      "pixel_size": 836,
+      "width": 19,
+      "height": 22,
+      "name": "przew1",
+      "id": 2,
+      "definition_id": 2,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_002_przew1_phase_00.png",
+          "size": 1143
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_002_przew1_phase_01.png",
+          "size": 1046
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_003_przew2_phase_00.png",
+      "offset": 318660,
+      "size": 1163,
+      "pixel_size": 792,
+      "width": 18,
+      "height": 22,
+      "name": "przew2",
+      "id": 3,
+      "definition_id": 3,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_003_przew2_phase_00.png",
+          "size": 1163
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_003_przew2_phase_01.png",
+          "size": 1044
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_004_przew3_phase_00.png",
+      "offset": 319840,
+      "size": 1167,
+      "pixel_size": 836,
+      "width": 19,
+      "height": 22,
+      "name": "przew3",
+      "id": 4,
+      "definition_id": 4,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_004_przew3_phase_00.png",
+          "size": 1167
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_004_przew3_phase_01.png",
+          "size": 1041
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_005_przew4_phase_00.png",
+      "offset": 321064,
+      "size": 1117,
+      "pixel_size": 836,
+      "width": 19,
+      "height": 22,
+      "name": "przew4",
+      "id": 5,
+      "definition_id": 5,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_005_przew4_phase_00.png",
+          "size": 1117
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_005_przew4_phase_01.png",
+          "size": 1026
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_006_przew5_phase_00.png",
+      "offset": 322288,
+      "size": 1113,
+      "pixel_size": 836,
+      "width": 19,
+      "height": 22,
+      "name": "przew5",
+      "id": 6,
+      "definition_id": 6,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_006_przew5_phase_00.png",
+          "size": 1113
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_006_przew5_phase_01.png",
+          "size": 1023
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_00.png",
+      "offset": 324492,
+      "size": 6762,
+      "pixel_size": 223232,
+      "width": 109,
+      "height": 256,
+      "name": "miotła ",
+      "id": 7,
+      "definition_id": 7,
+      "phase_count": 8,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_00.png",
+          "size": 6762
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_01.png",
+          "size": 5294
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_02.png",
+          "size": 4639
+        },
+        {
+          "phase": 3,
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_03.png",
+          "size": 4040
+        },
+        {
+          "phase": 4,
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_04.png",
+          "size": 3590
+        },
+        {
+          "phase": 5,
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_05.png",
+          "size": 3132
+        },
+        {
+          "phase": 6,
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_06.png",
+          "size": 3040
+        },
+        {
+          "phase": 7,
+          "path": "extracted_assets\\bdf\\TANIEC_T\\sprite_holder\\02_Sprite_Holder_007_miot_a_phase_07.png",
+          "size": 2980
+        }
+      ]
     }
   ],
   "script": {

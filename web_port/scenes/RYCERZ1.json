@@ -24,22 +24,44 @@
       "namespace": "Page",
       "index": 0,
       "z": 0,
-      "visible": false,
+      "visible": true,
       "rect": {
         "x": 0,
         "y": 0,
-        "width": 640,
+        "width": 1920,
         "height": 480
       },
-      "geometryConfidence": "fallback_full_page",
+      "geometryConfidence": "serialized_entries",
       "itemCount": null,
       "hitboxes": [],
       "sourceOffset": 1173,
       "geometrySourceOffset": null,
       "privateOffset": 2763,
       "privateSize": 1545460,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/bdf/RYCERZ1/panorama/00_Panorama_000_panorama_1920x480.bmp",
+      "assets": [
+        {
+          "kind": "panorama_bmp",
+          "path": "extracted_assets\\bdf\\RYCERZ1\\panorama\\00_Panorama_000_panorama_1920x480.bmp",
+          "url": "../extracted_assets/bdf/RYCERZ1/panorama/00_Panorama_000_panorama_1920x480.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 1920,
+          "height": 480,
+          "frameCount": null,
+          "offset": 3319,
+          "name": null,
+          "id": 0,
+          "initiallyVisible": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 480
+          },
+          "geometryConfidence": "serialized_entry"
+        }
+      ],
       "audio": []
     },
     {
@@ -67,8 +89,18 @@
             "width": 52,
             "height": 62
           },
+          "name": "",
+          "layer": 8,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            255
+          ],
           "sourceOffset": 1549339,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 1,
+          "auxState": 0
         }
       ],
       "sourceOffset": 1548223,
@@ -105,7 +137,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\embedded\\02_Sound_Holder_000_0017a814.wav",
+          "path": "extracted_assets\\bdf\\RYCERZ1\\embedded\\02_Sound_Holder_000_0017a814.wav",
           "url": "../extracted_assets/bdf/RYCERZ1/embedded/02_Sound_Holder_000_0017a814.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -115,7 +147,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\embedded\\02_Sound_Holder_001_001825aa.wav",
+          "path": "extracted_assets\\bdf\\RYCERZ1\\embedded\\02_Sound_Holder_001_001825aa.wav",
           "url": "../extracted_assets/bdf/RYCERZ1/embedded/02_Sound_Holder_001_001825aa.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -125,7 +157,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\embedded\\02_Sound_Holder_002_001a7a54.wav",
+          "path": "extracted_assets\\bdf\\RYCERZ1\\embedded\\02_Sound_Holder_002_001a7a54.wav",
           "url": "../extracted_assets/bdf/RYCERZ1/embedded/02_Sound_Holder_002_001a7a54.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -135,7 +167,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\embedded\\02_Sound_Holder_003_001b0d1a.wav",
+          "path": "extracted_assets\\bdf\\RYCERZ1\\embedded\\02_Sound_Holder_003_001b0d1a.wav",
           "url": "../extracted_assets/bdf/RYCERZ1/embedded/02_Sound_Holder_003_001b0d1a.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -145,7 +177,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\embedded\\02_Sound_Holder_004_001f664c.wav",
+          "path": "extracted_assets\\bdf\\RYCERZ1\\embedded\\02_Sound_Holder_004_001f664c.wav",
           "url": "../extracted_assets/bdf/RYCERZ1/embedded/02_Sound_Holder_004_001f664c.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -155,7 +187,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\embedded\\02_Sound_Holder_005_0023fe20.wav",
+          "path": "extracted_assets\\bdf\\RYCERZ1\\embedded\\02_Sound_Holder_005_0023fe20.wav",
           "url": "../extracted_assets/bdf/RYCERZ1/embedded/02_Sound_Holder_005_0023fe20.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -190,7 +222,7 @@
       "assets": [
         {
           "kind": "multibitmap_bmp",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_000_wizjer 1.bmp",
+          "path": "extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_000_wizjer 1.bmp",
           "url": "../extracted_assets/bdf/RYCERZ1/multibitmap/03_MultiBitmap_000_wizjer 1.bmp",
           "stillPath": null,
           "stillUrl": null,
@@ -199,11 +231,12 @@
           "frameCount": null,
           "offset": 2832941,
           "name": "wizjer 1",
-          "id": 0
+          "id": 0,
+          "initiallyVisible": false
         },
         {
           "kind": "multibitmap_bmp",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_001_wizjer 2.bmp",
+          "path": "extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_001_wizjer 2.bmp",
           "url": "../extracted_assets/bdf/RYCERZ1/multibitmap/03_MultiBitmap_001_wizjer 2.bmp",
           "stillPath": null,
           "stillUrl": null,
@@ -212,11 +245,12 @@
           "frameCount": null,
           "offset": 3140337,
           "name": "wizjer 2",
-          "id": 1
+          "id": 1,
+          "initiallyVisible": false
         },
         {
           "kind": "multibitmap_bmp",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_002_wizjer 3.bmp",
+          "path": "extracted_assets\\bdf\\RYCERZ1\\multibitmap\\03_MultiBitmap_002_wizjer 3.bmp",
           "url": "../extracted_assets/bdf/RYCERZ1/multibitmap/03_MultiBitmap_002_wizjer 3.bmp",
           "stillPath": null,
           "stillUrl": null,
@@ -225,20 +259,8 @@
           "frameCount": null,
           "offset": 3447733,
           "name": "wizjer 3",
-          "id": 2
-        },
-        {
-          "kind": "multibitmap_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ1\\animations\\03_MultiBitmap_wizjer 1_640x480.gif",
-          "url": "../extracted_assets/bdf/RYCERZ1/animations/03_MultiBitmap_wizjer 1_640x480.gif",
-          "stillPath": null,
-          "stillUrl": null,
-          "width": 640,
-          "height": 480,
-          "frameCount": 3,
-          "offset": null,
-          "name": null,
-          "id": null
+          "id": 2,
+          "initiallyVisible": false
         }
       ],
       "audio": []
@@ -253,20 +275,12 @@
         "signature": "OnOpenPage()"
       },
       {
-        "name": "if",
-        "signature": "if(IsProject()==0)"
-      },
-      {
         "name": "OnClosePage",
         "signature": "OnClosePage(void)"
       },
       {
         "name": "Panorama.SpriteMouseMoveIn",
         "signature": "Panorama.SpriteMouseMoveIn(int panoramaNo,int spriteNo)"
-      },
-      {
-        "name": "if",
-        "signature": "if(hitTable[spriteNo]==0)"
       },
       {
         "name": "Panorama.SpriteMouseMoveOut",
@@ -285,68 +299,20 @@
         "signature": "HotSpot_Holder.LeftButtonClickOn(int rectID)"
       },
       {
-        "name": "while",
-        "signature": "while(tmp<6)"
-      },
-      {
         "name": "Panorama.ClickOnSprite",
         "signature": "Panorama.ClickOnSprite(int panoramaNo,int spriteNo)"
-      },
-      {
-        "name": "if",
-        "signature": "if(hitTable[spriteNo]==0)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteNo)"
-      },
-      {
-        "name": "while",
-        "signature": "while(xx<6)"
-      },
-      {
-        "name": "if",
-        "signature": "if(xx==6)"
       },
       {
         "name": "OnTimer",
         "signature": "OnTimer(void)"
       },
       {
-        "name": "if",
-        "signature": "if(hitTable[spr]==0)"
-      },
-      {
         "name": "Group.HotSpot_Holder.MouseMoveIn",
         "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
       },
       {
-        "name": "if",
-        "signature": "if(rectID==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbar)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.InPlace",
         "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
-      },
-      {
-        "name": "if",
-        "signature": "if(spriteID==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==480)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarCase)"
       },
       {
         "name": "Group.Sprite_Holder.MouseMoveIn",
@@ -361,24 +327,12 @@
         "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseClickOnUp",
         "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.EndAnimation",
         "signature": "Group.Sprite_Holder.EndAnimation(int spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
       },
       {
         "name": "Panorama.ZoomIn",

@@ -28,7 +28,1328 @@
       "display_name": "Sprite_Holder",
       "private_offset": 2707,
       "private_size": 337176,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_000_murzynek_phase_00.png",
+          "offset": 2987,
+          "size": 106650,
+          "pixel_size": 235200,
+          "width": 560,
+          "height": 420,
+          "name": "murzynek",
+          "id": 0,
+          "definition_id": 0,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_000_murzynek_phase_00.png",
+              "size": 106650
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_001_brans_phase_00.png",
+          "offset": 238518,
+          "size": 1452,
+          "pixel_size": 2205,
+          "width": 35,
+          "height": 21,
+          "name": "brans",
+          "id": 1,
+          "definition_id": 1,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_001_brans_phase_00.png",
+              "size": 1452
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_001_brans_phase_01.png",
+              "size": 1433
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_001_brans_phase_02.png",
+              "size": 1345
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_002_chatka_phase_00.png",
+          "offset": 241053,
+          "size": 1429,
+          "pixel_size": 3162,
+          "width": 34,
+          "height": 31,
+          "name": "chatka",
+          "id": 2,
+          "definition_id": 2,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_002_chatka_phase_00.png",
+              "size": 1429
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_002_chatka_phase_01.png",
+              "size": 1634
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_002_chatka_phase_02.png",
+              "size": 1528
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_003_dzban_phase_00.png",
+          "offset": 244483,
+          "size": 1363,
+          "pixel_size": 1680,
+          "width": 20,
+          "height": 28,
+          "name": "dzban",
+          "id": 3,
+          "definition_id": 3,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_003_dzban_phase_00.png",
+              "size": 1363
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_003_dzban_phase_01.png",
+              "size": 1322
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_003_dzban_phase_02.png",
+              "size": 1341
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_004_kokos_phase_00.png",
+          "offset": 246576,
+          "size": 1521,
+          "pixel_size": 2523,
+          "width": 29,
+          "height": 29,
+          "name": "kokos",
+          "id": 4,
+          "definition_id": 4,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_004_kokos_phase_00.png",
+              "size": 1521
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_004_kokos_phase_01.png",
+              "size": 1457
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_004_kokos_phase_02.png",
+              "size": 1358
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_005_kolczyk_phase_00.png",
+          "offset": 249367,
+          "size": 1238,
+          "pixel_size": 1440,
+          "width": 20,
+          "height": 24,
+          "name": "kolczyk",
+          "id": 5,
+          "definition_id": 5,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_005_kolczyk_phase_00.png",
+              "size": 1238
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_005_kolczyk_phase_01.png",
+              "size": 1261
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_005_kolczyk_phase_02.png",
+              "size": 1393
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_006_kosc_phase_00.png",
+          "offset": 251151,
+          "size": 2000,
+          "pixel_size": 4800,
+          "width": 64,
+          "height": 25,
+          "name": "kosc",
+          "id": 6,
+          "definition_id": 6,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_006_kosc_phase_00.png",
+              "size": 2000
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_006_kosc_phase_01.png",
+              "size": 1858
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_006_kosc_phase_02.png",
+              "size": 1578
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_007_piersc_phase_00.png",
+          "offset": 256479,
+          "size": 1952,
+          "pixel_size": 5148,
+          "width": 33,
+          "height": 52,
+          "name": "piersc",
+          "id": 7,
+          "definition_id": 7,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_007_piersc_phase_00.png",
+              "size": 1952
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_007_piersc_phase_01.png",
+              "size": 1998
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_007_piersc_phase_02.png",
+              "size": 1958
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_008_ptak_phase_00.png",
+          "offset": 266219,
+          "size": 3540,
+          "pixel_size": 10416,
+          "width": 93,
+          "height": 56,
+          "name": "ptak",
+          "id": 8,
+          "definition_id": 8,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_008_ptak_phase_00.png",
+              "size": 3540
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_008_ptak_phase_01.png",
+              "size": 3186
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_009_slonce_phase_00.png",
+          "offset": 277122,
+          "size": 3559,
+          "pixel_size": 16425,
+          "width": 75,
+          "height": 73,
+          "name": "slonce",
+          "id": 9,
+          "definition_id": 9,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_009_slonce_phase_00.png",
+              "size": 3559
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_009_slonce_phase_01.png",
+              "size": 3483
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_009_slonce_phase_02.png",
+              "size": 3378
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_010_usta_phase_00.png",
+          "offset": 294581,
+          "size": 1484,
+          "pixel_size": 1890,
+          "width": 21,
+          "height": 45,
+          "name": "usta",
+          "id": 10,
+          "definition_id": 10,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_010_usta_phase_00.png",
+              "size": 1484
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_010_usta_phase_01.png",
+              "size": 1336
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_011_branzolet_phase_00.png",
+          "offset": 296781,
+          "size": 1274,
+          "pixel_size": 1470,
+          "width": 35,
+          "height": 21,
+          "name": "branzolet",
+          "id": 11,
+          "definition_id": 11,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_011_branzolet_phase_00.png",
+              "size": 1274
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_011_branzolet_phase_01.png",
+              "size": 1183
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_012_chatka_s_phase_00.png",
+          "offset": 298519,
+          "size": 1624,
+          "pixel_size": 2108,
+          "width": 34,
+          "height": 31,
+          "name": "chatka_s",
+          "id": 12,
+          "definition_id": 12,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_012_chatka_s_phase_00.png",
+              "size": 1624
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_012_chatka_s_phase_01.png",
+              "size": 1334
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_013_dzbanek_s_phase_00.png",
+          "offset": 300907,
+          "size": 1325,
+          "pixel_size": 1120,
+          "width": 20,
+          "height": 28,
+          "name": "dzbanek_s",
+          "id": 13,
+          "definition_id": 13,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_013_dzbanek_s_phase_00.png",
+              "size": 1325
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_013_dzbanek_s_phase_01.png",
+              "size": 1124
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_014_kokos_s_phase_00.png",
+          "offset": 302353,
+          "size": 1410,
+          "pixel_size": 1682,
+          "width": 29,
+          "height": 29,
+          "name": "kokos_s",
+          "id": 14,
+          "definition_id": 14,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_014_kokos_s_phase_00.png",
+              "size": 1410
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_014_kokos_s_phase_01.png",
+              "size": 1328
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_015_kolczyk_s_phase_00.png",
+          "offset": 304303,
+          "size": 1273,
+          "pixel_size": 960,
+          "width": 20,
+          "height": 24,
+          "name": "kolczyk_s",
+          "id": 15,
+          "definition_id": 15,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_015_kolczyk_s_phase_00.png",
+              "size": 1273
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_015_kolczyk_s_phase_01.png",
+              "size": 1118
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_016_kosc_s_phase_00.png",
+          "offset": 305531,
+          "size": 1716,
+          "pixel_size": 3200,
+          "width": 64,
+          "height": 25,
+          "name": "kosc_s",
+          "id": 16,
+          "definition_id": 16,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_016_kosc_s_phase_00.png",
+              "size": 1716
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_016_kosc_s_phase_01.png",
+              "size": 1510
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_017_pierscien_phase_00.png",
+          "offset": 309103,
+          "size": 1859,
+          "pixel_size": 3432,
+          "width": 33,
+          "height": 52,
+          "name": "pierscien",
+          "id": 17,
+          "definition_id": 17,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_017_pierscien_phase_00.png",
+              "size": 1859
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_017_pierscien_phase_01.png",
+              "size": 1833
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_018_ptak_phase_00.png",
+          "offset": 312915,
+          "size": 3248,
+          "pixel_size": 10416,
+          "width": 93,
+          "height": 56,
+          "name": "ptak ",
+          "id": 18,
+          "definition_id": 18,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_018_ptak_phase_00.png",
+              "size": 3248
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_018_ptak_phase_01.png",
+              "size": 2839
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_019_slonce_s_phase_00.png",
+          "offset": 323745,
+          "size": 3481,
+          "pixel_size": 10950,
+          "width": 75,
+          "height": 73,
+          "name": "slonce_s",
+          "id": 19,
+          "definition_id": 19,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_019_slonce_s_phase_00.png",
+              "size": 3481
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_019_slonce_s_phase_01.png",
+              "size": 3125
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_020_usta_phase_00.png",
+          "offset": 335053,
+          "size": 1390,
+          "pixel_size": 1890,
+          "width": 21,
+          "height": 45,
+          "name": "usta ",
+          "id": 20,
+          "definition_id": 20,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_020_usta_phase_00.png",
+              "size": 1390
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_020_usta_phase_01.png",
+              "size": 1297
+            }
+          ]
+        }
+      ],
+      "sprite_holder": {
+        "version": 1,
+        "definition_count": 21,
+        "instance_count": 21,
+        "parsed_definitions": 21,
+        "parsed_instances": 21,
+        "definitions": [
+          {
+            "index": 0,
+            "name": "murzynek",
+            "record_offset": 2719,
+            "blob_offset": 2723,
+            "blob_size": 235464,
+            "width": 560,
+            "height": 420,
+            "phase_count": 1,
+            "phase_hint": 2730926790,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_000_murzynek_phase_00.png",
+                "size": 106650
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "brans",
+            "record_offset": 238187,
+            "blob_offset": 238191,
+            "blob_size": 2532,
+            "width": 35,
+            "height": 21,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_001_brans_phase_00.png",
+                "size": 1452
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_001_brans_phase_01.png",
+                "size": 1433
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_001_brans_phase_02.png",
+                "size": 1345
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "chatka",
+            "record_offset": 240723,
+            "blob_offset": 240727,
+            "blob_size": 3488,
+            "width": 34,
+            "height": 31,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_002_chatka_phase_00.png",
+                "size": 1429
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_002_chatka_phase_01.png",
+                "size": 1634
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_002_chatka_phase_02.png",
+                "size": 1528
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "name": "dzban",
+            "record_offset": 244215,
+            "blob_offset": 244219,
+            "blob_size": 1944,
+            "width": 20,
+            "height": 28,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_003_dzban_phase_00.png",
+                "size": 1363
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_003_dzban_phase_01.png",
+                "size": 1322
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_003_dzban_phase_02.png",
+                "size": 1341
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "name": "kokos",
+            "record_offset": 246163,
+            "blob_offset": 246167,
+            "blob_size": 2932,
+            "width": 29,
+            "height": 29,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_004_kokos_phase_00.png",
+                "size": 1521
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_004_kokos_phase_01.png",
+                "size": 1457
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_004_kokos_phase_02.png",
+                "size": 1358
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "name": "kolczyk",
+            "record_offset": 249099,
+            "blob_offset": 249103,
+            "blob_size": 1704,
+            "width": 20,
+            "height": 24,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_005_kolczyk_phase_00.png",
+                "size": 1238
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_005_kolczyk_phase_01.png",
+                "size": 1261
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_005_kolczyk_phase_02.png",
+                "size": 1393
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "name": "kosc",
+            "record_offset": 250807,
+            "blob_offset": 250811,
+            "blob_size": 5140,
+            "width": 64,
+            "height": 25,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_006_kosc_phase_00.png",
+                "size": 2000
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_006_kosc_phase_01.png",
+                "size": 1858
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_006_kosc_phase_02.png",
+                "size": 1578
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "name": "piersc",
+            "record_offset": 255951,
+            "blob_offset": 255955,
+            "blob_size": 5672,
+            "width": 33,
+            "height": 52,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_007_piersc_phase_00.png",
+                "size": 1952
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_007_piersc_phase_01.png",
+                "size": 1998
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_007_piersc_phase_02.png",
+                "size": 1958
+              }
+            ]
+          },
+          {
+            "index": 8,
+            "name": "ptak",
+            "record_offset": 261627,
+            "blob_offset": 261631,
+            "blob_size": 15004,
+            "width": 93,
+            "height": 56,
+            "phase_count": 2,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_008_ptak_phase_00.png",
+                "size": 3540
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_008_ptak_phase_01.png",
+                "size": 3186
+              }
+            ]
+          },
+          {
+            "index": 9,
+            "name": "slonce",
+            "record_offset": 276635,
+            "blob_offset": 276639,
+            "blob_size": 16908,
+            "width": 75,
+            "height": 73,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_009_slonce_phase_00.png",
+                "size": 3559
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_009_slonce_phase_01.png",
+                "size": 3483
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_009_slonce_phase_02.png",
+                "size": 3378
+              }
+            ]
+          },
+          {
+            "index": 10,
+            "name": "usta",
+            "record_offset": 293547,
+            "blob_offset": 293551,
+            "blob_size": 2920,
+            "width": 21,
+            "height": 45,
+            "phase_count": 2,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_010_usta_phase_00.png",
+                "size": 1484
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_010_usta_phase_01.png",
+                "size": 1336
+              }
+            ]
+          },
+          {
+            "index": 11,
+            "name": "branzolet",
+            "record_offset": 296471,
+            "blob_offset": 296475,
+            "blob_size": 1776,
+            "width": 35,
+            "height": 21,
+            "phase_count": 2,
+            "phase_hint": 3676983259,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_011_branzolet_phase_00.png",
+                "size": 1274
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_011_branzolet_phase_01.png",
+                "size": 1183
+              }
+            ]
+          },
+          {
+            "index": 12,
+            "name": "chatka_s",
+            "record_offset": 298251,
+            "blob_offset": 298255,
+            "blob_size": 2372,
+            "width": 34,
+            "height": 31,
+            "phase_count": 2,
+            "phase_hint": 2162271354,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_012_chatka_s_phase_00.png",
+                "size": 1624
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_012_chatka_s_phase_01.png",
+                "size": 1334
+              }
+            ]
+          },
+          {
+            "index": 13,
+            "name": "dzbanek_s",
+            "record_offset": 300627,
+            "blob_offset": 300631,
+            "blob_size": 1396,
+            "width": 20,
+            "height": 28,
+            "phase_count": 2,
+            "phase_hint": 2040439973,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_013_dzbanek_s_phase_00.png",
+                "size": 1325
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_013_dzbanek_s_phase_01.png",
+                "size": 1124
+              }
+            ]
+          },
+          {
+            "index": 14,
+            "name": "kokos_s",
+            "record_offset": 302027,
+            "blob_offset": 302031,
+            "blob_size": 2004,
+            "width": 29,
+            "height": 29,
+            "phase_count": 2,
+            "phase_hint": 2307482761,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_014_kokos_s_phase_00.png",
+                "size": 1410
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_014_kokos_s_phase_01.png",
+                "size": 1328
+              }
+            ]
+          },
+          {
+            "index": 15,
+            "name": "kolczyk_s",
+            "record_offset": 304035,
+            "blob_offset": 304039,
+            "blob_size": 1224,
+            "width": 20,
+            "height": 24,
+            "phase_count": 2,
+            "phase_hint": 1936871021,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_015_kolczyk_s_phase_00.png",
+                "size": 1273
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_015_kolczyk_s_phase_01.png",
+                "size": 1118
+              }
+            ]
+          },
+          {
+            "index": 16,
+            "name": "kosc_s",
+            "record_offset": 305263,
+            "blob_offset": 305267,
+            "blob_size": 3464,
+            "width": 64,
+            "height": 25,
+            "phase_count": 2,
+            "phase_hint": 2158329978,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_016_kosc_s_phase_00.png",
+                "size": 1716
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_016_kosc_s_phase_01.png",
+                "size": 1510
+              }
+            ]
+          },
+          {
+            "index": 17,
+            "name": "pierscien",
+            "record_offset": 308731,
+            "blob_offset": 308735,
+            "blob_size": 3800,
+            "width": 33,
+            "height": 52,
+            "phase_count": 2,
+            "phase_hint": 1210339200,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_017_pierscien_phase_00.png",
+                "size": 1859
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_017_pierscien_phase_01.png",
+                "size": 1833
+              }
+            ]
+          },
+          {
+            "index": 18,
+            "name": "ptak ",
+            "record_offset": 312535,
+            "blob_offset": 312539,
+            "blob_size": 10792,
+            "width": 93,
+            "height": 56,
+            "phase_count": 2,
+            "phase_hint": 2730926754,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_018_ptak_phase_00.png",
+                "size": 3248
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_018_ptak_phase_01.png",
+                "size": 2839
+              }
+            ]
+          },
+          {
+            "index": 19,
+            "name": "slonce_s",
+            "record_offset": 323331,
+            "blob_offset": 323335,
+            "blob_size": 11360,
+            "width": 75,
+            "height": 73,
+            "phase_count": 2,
+            "phase_hint": 1602772837,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_019_slonce_s_phase_00.png",
+                "size": 3481
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_019_slonce_s_phase_01.png",
+                "size": 3125
+              }
+            ]
+          },
+          {
+            "index": 20,
+            "name": "usta ",
+            "record_offset": 334695,
+            "blob_offset": 334699,
+            "blob_size": 2244,
+            "width": 21,
+            "height": 45,
+            "phase_count": 2,
+            "phase_hint": 1210328100,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_020_usta_phase_00.png",
+                "size": 1390
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_020_usta_phase_01.png",
+                "size": 1297
+              }
+            ]
+          }
+        ],
+        "instances": [
+          {
+            "index": 0,
+            "definition_id": 0,
+            "field04": 2,
+            "x": 40,
+            "y": -420,
+            "z": 2,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 336943
+          },
+          {
+            "index": 1,
+            "definition_id": 1,
+            "field04": 1,
+            "x": 472,
+            "y": 231,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 337083
+          },
+          {
+            "index": 2,
+            "definition_id": 2,
+            "field04": 1,
+            "x": 474,
+            "y": 86,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 337223
+          },
+          {
+            "index": 3,
+            "definition_id": 3,
+            "field04": 1,
+            "x": 445,
+            "y": 276,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 337363
+          },
+          {
+            "index": 4,
+            "definition_id": 4,
+            "field04": 1,
+            "x": 389,
+            "y": 114,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 337503
+          },
+          {
+            "index": 5,
+            "definition_id": 5,
+            "field04": 1,
+            "x": 559,
+            "y": 198,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 337643
+          },
+          {
+            "index": 6,
+            "definition_id": 6,
+            "field04": 1,
+            "x": 495,
+            "y": 139,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 337783
+          },
+          {
+            "index": 7,
+            "definition_id": 7,
+            "field04": 1,
+            "x": 552,
+            "y": 242,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 337923
+          },
+          {
+            "index": 8,
+            "definition_id": 8,
+            "field04": 1,
+            "x": 253,
+            "y": 188,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 338063
+          },
+          {
+            "index": 9,
+            "definition_id": 9,
+            "field04": 1,
+            "x": 165,
+            "y": 39,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 338203
+          },
+          {
+            "index": 10,
+            "definition_id": 10,
+            "field04": 1,
+            "x": 283,
+            "y": 272,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 338343
+          },
+          {
+            "index": 11,
+            "definition_id": 11,
+            "field04": 1,
+            "x": 472,
+            "y": 231,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 338483
+          },
+          {
+            "index": 12,
+            "definition_id": 12,
+            "field04": 1,
+            "x": 474,
+            "y": 86,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 338623
+          },
+          {
+            "index": 13,
+            "definition_id": 13,
+            "field04": 1,
+            "x": 445,
+            "y": 276,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 338763
+          },
+          {
+            "index": 14,
+            "definition_id": 14,
+            "field04": 1,
+            "x": 389,
+            "y": 114,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 338903
+          },
+          {
+            "index": 15,
+            "definition_id": 15,
+            "field04": 1,
+            "x": 559,
+            "y": 198,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 339043
+          },
+          {
+            "index": 16,
+            "definition_id": 16,
+            "field04": 1,
+            "x": 495,
+            "y": 139,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 339183
+          },
+          {
+            "index": 17,
+            "definition_id": 17,
+            "field04": 1,
+            "x": 552,
+            "y": 242,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 339323
+          },
+          {
+            "index": 18,
+            "definition_id": 18,
+            "field04": 1,
+            "x": 253,
+            "y": 188,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 339463
+          },
+          {
+            "index": 19,
+            "definition_id": 19,
+            "field04": 1,
+            "x": 165,
+            "y": 39,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 339603
+          },
+          {
+            "index": 20,
+            "definition_id": 20,
+            "field04": 1,
+            "x": 283,
+            "y": 272,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 339743
+          }
+        ]
+      }
     },
     {
       "index": 1,
@@ -37,19 +1358,639 @@
       "display_name": "Bitmap_Holder",
       "private_offset": 341015,
       "private_size": 307356,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MURZ_C\\bitmap_holder\\01_Bitmap_Holder_000_testynekz_640x480.bmp",
+          "offset": 341155,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "testynekz",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 640,
+            "height": 480
+          },
+          "geometry_confidence": "serialized_entry"
+        }
+      ],
+      "bitmap_holder": {
+        "version": 1,
+        "declared_count": 1,
+        "parsed_count": 1,
+        "frames": [
+          {
+            "index": 0,
+            "name": "testynekz",
+            "record_offset": 341023,
+            "record_size": 307344,
+            "pixel_offset": 341155,
+            "width": 640,
+            "height": 480,
+            "right": 640,
+            "bottom": 480,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 640,
+              "height": 480
+            },
+            "bmp_output": "extracted_assets\\bdf\\MURZ_C\\bitmap_holder\\01_Bitmap_Holder_000_testynekz_640x480.bmp"
+          }
+        ]
+      }
     }
   ],
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZ_C\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\MURZ_C\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MURZ_C\\script.txt",
+      "path": "extracted_assets\\bdf\\MURZ_C\\script.txt",
       "size": 7854
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_000_murzynek_phase_00.png",
+      "offset": 2987,
+      "size": 106650,
+      "pixel_size": 235200,
+      "width": 560,
+      "height": 420,
+      "name": "murzynek",
+      "id": 0,
+      "definition_id": 0,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_000_murzynek_phase_00.png",
+          "size": 106650
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_001_brans_phase_00.png",
+      "offset": 238518,
+      "size": 1452,
+      "pixel_size": 2205,
+      "width": 35,
+      "height": 21,
+      "name": "brans",
+      "id": 1,
+      "definition_id": 1,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_001_brans_phase_00.png",
+          "size": 1452
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_001_brans_phase_01.png",
+          "size": 1433
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_001_brans_phase_02.png",
+          "size": 1345
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_002_chatka_phase_00.png",
+      "offset": 241053,
+      "size": 1429,
+      "pixel_size": 3162,
+      "width": 34,
+      "height": 31,
+      "name": "chatka",
+      "id": 2,
+      "definition_id": 2,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_002_chatka_phase_00.png",
+          "size": 1429
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_002_chatka_phase_01.png",
+          "size": 1634
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_002_chatka_phase_02.png",
+          "size": 1528
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_003_dzban_phase_00.png",
+      "offset": 244483,
+      "size": 1363,
+      "pixel_size": 1680,
+      "width": 20,
+      "height": 28,
+      "name": "dzban",
+      "id": 3,
+      "definition_id": 3,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_003_dzban_phase_00.png",
+          "size": 1363
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_003_dzban_phase_01.png",
+          "size": 1322
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_003_dzban_phase_02.png",
+          "size": 1341
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_004_kokos_phase_00.png",
+      "offset": 246576,
+      "size": 1521,
+      "pixel_size": 2523,
+      "width": 29,
+      "height": 29,
+      "name": "kokos",
+      "id": 4,
+      "definition_id": 4,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_004_kokos_phase_00.png",
+          "size": 1521
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_004_kokos_phase_01.png",
+          "size": 1457
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_004_kokos_phase_02.png",
+          "size": 1358
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_005_kolczyk_phase_00.png",
+      "offset": 249367,
+      "size": 1238,
+      "pixel_size": 1440,
+      "width": 20,
+      "height": 24,
+      "name": "kolczyk",
+      "id": 5,
+      "definition_id": 5,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_005_kolczyk_phase_00.png",
+          "size": 1238
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_005_kolczyk_phase_01.png",
+          "size": 1261
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_005_kolczyk_phase_02.png",
+          "size": 1393
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_006_kosc_phase_00.png",
+      "offset": 251151,
+      "size": 2000,
+      "pixel_size": 4800,
+      "width": 64,
+      "height": 25,
+      "name": "kosc",
+      "id": 6,
+      "definition_id": 6,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_006_kosc_phase_00.png",
+          "size": 2000
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_006_kosc_phase_01.png",
+          "size": 1858
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_006_kosc_phase_02.png",
+          "size": 1578
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_007_piersc_phase_00.png",
+      "offset": 256479,
+      "size": 1952,
+      "pixel_size": 5148,
+      "width": 33,
+      "height": 52,
+      "name": "piersc",
+      "id": 7,
+      "definition_id": 7,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_007_piersc_phase_00.png",
+          "size": 1952
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_007_piersc_phase_01.png",
+          "size": 1998
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_007_piersc_phase_02.png",
+          "size": 1958
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_008_ptak_phase_00.png",
+      "offset": 266219,
+      "size": 3540,
+      "pixel_size": 10416,
+      "width": 93,
+      "height": 56,
+      "name": "ptak",
+      "id": 8,
+      "definition_id": 8,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_008_ptak_phase_00.png",
+          "size": 3540
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_008_ptak_phase_01.png",
+          "size": 3186
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_009_slonce_phase_00.png",
+      "offset": 277122,
+      "size": 3559,
+      "pixel_size": 16425,
+      "width": 75,
+      "height": 73,
+      "name": "slonce",
+      "id": 9,
+      "definition_id": 9,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_009_slonce_phase_00.png",
+          "size": 3559
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_009_slonce_phase_01.png",
+          "size": 3483
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_009_slonce_phase_02.png",
+          "size": 3378
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_010_usta_phase_00.png",
+      "offset": 294581,
+      "size": 1484,
+      "pixel_size": 1890,
+      "width": 21,
+      "height": 45,
+      "name": "usta",
+      "id": 10,
+      "definition_id": 10,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_010_usta_phase_00.png",
+          "size": 1484
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_010_usta_phase_01.png",
+          "size": 1336
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_011_branzolet_phase_00.png",
+      "offset": 296781,
+      "size": 1274,
+      "pixel_size": 1470,
+      "width": 35,
+      "height": 21,
+      "name": "branzolet",
+      "id": 11,
+      "definition_id": 11,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_011_branzolet_phase_00.png",
+          "size": 1274
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_011_branzolet_phase_01.png",
+          "size": 1183
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_012_chatka_s_phase_00.png",
+      "offset": 298519,
+      "size": 1624,
+      "pixel_size": 2108,
+      "width": 34,
+      "height": 31,
+      "name": "chatka_s",
+      "id": 12,
+      "definition_id": 12,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_012_chatka_s_phase_00.png",
+          "size": 1624
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_012_chatka_s_phase_01.png",
+          "size": 1334
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_013_dzbanek_s_phase_00.png",
+      "offset": 300907,
+      "size": 1325,
+      "pixel_size": 1120,
+      "width": 20,
+      "height": 28,
+      "name": "dzbanek_s",
+      "id": 13,
+      "definition_id": 13,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_013_dzbanek_s_phase_00.png",
+          "size": 1325
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_013_dzbanek_s_phase_01.png",
+          "size": 1124
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_014_kokos_s_phase_00.png",
+      "offset": 302353,
+      "size": 1410,
+      "pixel_size": 1682,
+      "width": 29,
+      "height": 29,
+      "name": "kokos_s",
+      "id": 14,
+      "definition_id": 14,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_014_kokos_s_phase_00.png",
+          "size": 1410
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_014_kokos_s_phase_01.png",
+          "size": 1328
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_015_kolczyk_s_phase_00.png",
+      "offset": 304303,
+      "size": 1273,
+      "pixel_size": 960,
+      "width": 20,
+      "height": 24,
+      "name": "kolczyk_s",
+      "id": 15,
+      "definition_id": 15,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_015_kolczyk_s_phase_00.png",
+          "size": 1273
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_015_kolczyk_s_phase_01.png",
+          "size": 1118
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_016_kosc_s_phase_00.png",
+      "offset": 305531,
+      "size": 1716,
+      "pixel_size": 3200,
+      "width": 64,
+      "height": 25,
+      "name": "kosc_s",
+      "id": 16,
+      "definition_id": 16,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_016_kosc_s_phase_00.png",
+          "size": 1716
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_016_kosc_s_phase_01.png",
+          "size": 1510
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_017_pierscien_phase_00.png",
+      "offset": 309103,
+      "size": 1859,
+      "pixel_size": 3432,
+      "width": 33,
+      "height": 52,
+      "name": "pierscien",
+      "id": 17,
+      "definition_id": 17,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_017_pierscien_phase_00.png",
+          "size": 1859
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_017_pierscien_phase_01.png",
+          "size": 1833
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_018_ptak_phase_00.png",
+      "offset": 312915,
+      "size": 3248,
+      "pixel_size": 10416,
+      "width": 93,
+      "height": 56,
+      "name": "ptak ",
+      "id": 18,
+      "definition_id": 18,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_018_ptak_phase_00.png",
+          "size": 3248
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_018_ptak_phase_01.png",
+          "size": 2839
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_019_slonce_s_phase_00.png",
+      "offset": 323745,
+      "size": 3481,
+      "pixel_size": 10950,
+      "width": 75,
+      "height": 73,
+      "name": "slonce_s",
+      "id": 19,
+      "definition_id": 19,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_019_slonce_s_phase_00.png",
+          "size": 3481
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_019_slonce_s_phase_01.png",
+          "size": 3125
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_020_usta_phase_00.png",
+      "offset": 335053,
+      "size": 1390,
+      "pixel_size": 1890,
+      "width": 21,
+      "height": 45,
+      "name": "usta ",
+      "id": 20,
+      "definition_id": 20,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_020_usta_phase_00.png",
+          "size": 1390
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MURZ_C\\sprite_holder\\00_Sprite_Holder_020_usta_phase_01.png",
+          "size": 1297
+        }
+      ]
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\MURZ_C\\bitmap_holder\\01_Bitmap_Holder_000_testynekz_640x480.bmp",
+      "offset": 341155,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "testynekz",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 640,
+        "height": 480
+      },
+      "geometry_confidence": "serialized_entry"
     }
   ],
   "script": {

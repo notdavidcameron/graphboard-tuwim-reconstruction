@@ -40,7 +40,7 @@
       "embedded": [
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\embedded\\01_Transparent_Video_Holder_000_0004c28d_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\THEEND\\embedded\\01_Transparent_Video_Holder_000_0004c28d_board_video_audio.wav",
           "offset": 311949,
           "size": 837944,
           "pcm_size": 837900,
@@ -52,11 +52,11 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\animations\\01_Transparent_Video_Holder_000_0004c28d_board_video_300x125.gif",
-          "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\animations\\01_Transparent_Video_Holder_000_0004c28d_board_video_300x125_still.png",
+          "path": "extracted_assets\\bdf\\THEEND\\animations\\01_Transparent_Video_Holder_000_0004c28d_board_video_300x125.gif",
+          "still_path": "extracted_assets\\bdf\\THEEND\\animations\\01_Transparent_Video_Holder_000_0004c28d_board_video_300x125_still.png",
           "offset": 311949,
           "size": 14693661,
-          "still_size": 1044,
+          "still_size": 1303,
           "frame_count": 345,
           "width": 300,
           "height": 125,
@@ -85,11 +85,11 @@
           "audio_record_count": 19,
           "video_record_count": 345,
           "stop_reason": "next_stream",
-          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\embedded\\01_Transparent_Video_Holder_000_0004c28d_board_video_audio.wav",
+          "audio_output": "extracted_assets\\bdf\\THEEND\\embedded\\01_Transparent_Video_Holder_000_0004c28d_board_video_audio.wav",
           "audio_pcm_size": 837900,
           "duration_seconds": 19.0,
-          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\animations\\01_Transparent_Video_Holder_000_0004c28d_board_video_300x125.gif",
-          "still_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\animations\\01_Transparent_Video_Holder_000_0004c28d_board_video_300x125_still.png",
+          "video_output": "extracted_assets\\bdf\\THEEND\\animations\\01_Transparent_Video_Holder_000_0004c28d_board_video_300x125.gif",
+          "still_output": "extracted_assets\\bdf\\THEEND\\animations\\01_Transparent_Video_Holder_000_0004c28d_board_video_300x125_still.png",
           "transparent_index": 0
         },
         {
@@ -120,33 +120,76 @@
       "display_name": "Bitmap_Holder",
       "private_offset": 1414076,
       "private_size": 307356,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\THEEND\\bitmap_holder\\02_Bitmap_Holder_000_TuwimBlac_640x480.bmp",
+          "offset": 1414216,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "TuwimBlac",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 640,
+            "height": 480
+          },
+          "geometry_confidence": "serialized_entry"
+        }
+      ],
+      "bitmap_holder": {
+        "version": 1,
+        "declared_count": 1,
+        "parsed_count": 1,
+        "frames": [
+          {
+            "index": 0,
+            "name": "TuwimBlac",
+            "record_offset": 1414084,
+            "record_size": 307344,
+            "pixel_offset": 1414216,
+            "width": 640,
+            "height": 480,
+            "right": 640,
+            "bottom": 480,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 640,
+              "height": 480
+            },
+            "bmp_output": "extracted_assets\\bdf\\THEEND\\bitmap_holder\\02_Bitmap_Holder_000_TuwimBlac_640x480.bmp"
+          }
+        ]
+      }
     }
   ],
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\THEEND\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "dib",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\background.dib",
+      "path": "extracted_assets\\bdf\\THEEND\\background.dib",
       "size": 308264
     },
     {
       "kind": "bmp",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\background.bmp",
+      "path": "extracted_assets\\bdf\\THEEND\\background.bmp",
       "size": 308278
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\script.txt",
+      "path": "extracted_assets\\bdf\\THEEND\\script.txt",
       "size": 1449
     },
     {
       "kind": "board_video_pcm_wave",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\embedded\\01_Transparent_Video_Holder_000_0004c28d_board_video_audio.wav",
+      "path": "extracted_assets\\bdf\\THEEND\\embedded\\01_Transparent_Video_Holder_000_0004c28d_board_video_audio.wav",
       "offset": 311949,
       "size": 837944,
       "pcm_size": 837900,
@@ -158,17 +201,34 @@
     },
     {
       "kind": "board_video_gif",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\animations\\01_Transparent_Video_Holder_000_0004c28d_board_video_300x125.gif",
-      "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\animations\\01_Transparent_Video_Holder_000_0004c28d_board_video_300x125_still.png",
+      "path": "extracted_assets\\bdf\\THEEND\\animations\\01_Transparent_Video_Holder_000_0004c28d_board_video_300x125.gif",
+      "still_path": "extracted_assets\\bdf\\THEEND\\animations\\01_Transparent_Video_Holder_000_0004c28d_board_video_300x125_still.png",
       "offset": 311949,
       "size": 14693661,
-      "still_size": 1044,
+      "still_size": 1303,
       "frame_count": 345,
       "width": 300,
       "height": 125,
       "transparent_index": 0,
       "header_transparent_index": 0,
       "delay_centiseconds": 10
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\THEEND\\bitmap_holder\\02_Bitmap_Holder_000_TuwimBlac_640x480.bmp",
+      "offset": 1414216,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "TuwimBlac",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 640,
+        "height": 480
+      },
+      "geometry_confidence": "serialized_entry"
     }
   ],
   "script": {

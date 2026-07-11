@@ -42,7 +42,7 @@
       "assets": [
         {
           "kind": "multibitmap_bmp",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_000_niebo 01.bmp",
+          "path": "extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_000_niebo 01.bmp",
           "url": "../extracted_assets/bdf/SLON/multibitmap/00_MultiBitmap_000_niebo 01.bmp",
           "stillPath": null,
           "stillUrl": null,
@@ -51,11 +51,12 @@
           "frameCount": null,
           "offset": 2190,
           "name": "niebo 01",
-          "id": 0
+          "id": 0,
+          "initiallyVisible": false
         },
         {
           "kind": "multibitmap_bmp",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_001_niebo 02.bmp",
+          "path": "extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_001_niebo 02.bmp",
           "url": "../extracted_assets/bdf/SLON/multibitmap/00_MultiBitmap_001_niebo 02.bmp",
           "stillPath": null,
           "stillUrl": null,
@@ -64,11 +65,12 @@
           "frameCount": null,
           "offset": 88146,
           "name": "niebo 02",
-          "id": 1
+          "id": 1,
+          "initiallyVisible": false
         },
         {
           "kind": "multibitmap_bmp",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_002_niebo 03.bmp",
+          "path": "extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_002_niebo 03.bmp",
           "url": "../extracted_assets/bdf/SLON/multibitmap/00_MultiBitmap_002_niebo 03.bmp",
           "stillPath": null,
           "stillUrl": null,
@@ -77,11 +79,12 @@
           "frameCount": null,
           "offset": 174102,
           "name": "niebo 03",
-          "id": 2
+          "id": 2,
+          "initiallyVisible": false
         },
         {
           "kind": "multibitmap_bmp",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_003_niebo 04.bmp",
+          "path": "extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_003_niebo 04.bmp",
           "url": "../extracted_assets/bdf/SLON/multibitmap/00_MultiBitmap_003_niebo 04.bmp",
           "stillPath": null,
           "stillUrl": null,
@@ -90,11 +93,12 @@
           "frameCount": null,
           "offset": 260058,
           "name": "niebo 04",
-          "id": 3
+          "id": 3,
+          "initiallyVisible": false
         },
         {
           "kind": "multibitmap_bmp",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_004_niebo 05.bmp",
+          "path": "extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_004_niebo 05.bmp",
           "url": "../extracted_assets/bdf/SLON/multibitmap/00_MultiBitmap_004_niebo 05.bmp",
           "stillPath": null,
           "stillUrl": null,
@@ -103,11 +107,12 @@
           "frameCount": null,
           "offset": 346014,
           "name": "niebo 05",
-          "id": 4
+          "id": 4,
+          "initiallyVisible": false
         },
         {
           "kind": "multibitmap_bmp",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_005_niebo 06.bmp",
+          "path": "extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_005_niebo 06.bmp",
           "url": "../extracted_assets/bdf/SLON/multibitmap/00_MultiBitmap_005_niebo 06.bmp",
           "stillPath": null,
           "stillUrl": null,
@@ -116,11 +121,12 @@
           "frameCount": null,
           "offset": 431970,
           "name": "niebo 06",
-          "id": 5
+          "id": 5,
+          "initiallyVisible": false
         },
         {
           "kind": "multibitmap_bmp",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_119_srodek 06.bmp",
+          "path": "extracted_assets\\bdf\\SLON\\multibitmap\\00_MultiBitmap_119_srodek 06.bmp",
           "url": "../extracted_assets/bdf/SLON/multibitmap/00_MultiBitmap_119_srodek 06.bmp",
           "stillPath": null,
           "stillUrl": null,
@@ -129,20 +135,8 @@
           "frameCount": null,
           "offset": 2856458,
           "name": "srodek 06",
-          "id": 119
-        },
-        {
-          "kind": "multibitmap_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\animations\\00_MultiBitmap_niebo 01_640x134.gif",
-          "url": "../extracted_assets/bdf/SLON/animations/00_MultiBitmap_niebo 01_640x134.gif",
-          "stillPath": null,
-          "stillUrl": null,
-          "width": 640,
-          "height": 134,
-          "frameCount": 6,
-          "offset": null,
-          "name": null,
-          "id": null
+          "id": 119,
+          "initiallyVisible": false
         }
       ],
       "audio": []
@@ -178,23 +172,176 @@
       "sourceType": "Sprite_Holder",
       "namespace": "Page",
       "index": 2,
-      "z": 50,
+      "z": 8,
       "visible": true,
       "rect": {
-        "x": 0,
-        "y": 0,
-        "width": 48,
-        "height": 48
+        "x": 706,
+        "y": 16,
+        "width": 83,
+        "height": 309
       },
-      "geometryConfidence": "synthetic_items",
+      "geometryConfidence": "serialized_entries",
       "itemCount": 4,
       "hitboxes": [],
       "sourceOffset": 3009347,
       "geometrySourceOffset": null,
       "privateOffset": 3010881,
       "privateSize": 43972,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/bdf/SLON/sprite_holder/02_Sprite_Holder_000_s_o_ 01_phase_00.png",
+      "assets": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_000_s_o_ 01_phase_00.png",
+          "url": "../extracted_assets/bdf/SLON/sprite_holder/02_Sprite_Holder_000_s_o_ 01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 77,
+          "height": 67,
+          "frameCount": null,
+          "offset": 3011639,
+          "name": "słoń 01",
+          "id": 0,
+          "definitionId": 0,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_000_s_o_ 01_phase_00.png",
+              "url": "../extracted_assets/bdf/SLON/sprite_holder/02_Sprite_Holder_000_s_o_ 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_000_s_o_ 01_phase_01.png",
+              "url": "../extracted_assets/bdf/SLON/sprite_holder/02_Sprite_Holder_000_s_o_ 01_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 3054293,
+          "rect": {
+            "x": 706,
+            "y": 16,
+            "width": 77,
+            "height": 67
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_001_s_o_ 01_phase_00.png",
+          "url": "../extracted_assets/bdf/SLON/sprite_holder/02_Sprite_Holder_001_s_o_ 01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 67,
+          "frameCount": null,
+          "offset": 3022301,
+          "name": "słoń 01",
+          "id": 1,
+          "definitionId": 1,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_001_s_o_ 01_phase_00.png",
+              "url": "../extracted_assets/bdf/SLON/sprite_holder/02_Sprite_Holder_001_s_o_ 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_001_s_o_ 01_phase_01.png",
+              "url": "../extracted_assets/bdf/SLON/sprite_holder/02_Sprite_Holder_001_s_o_ 01_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 3054433,
+          "rect": {
+            "x": 708,
+            "y": 97,
+            "width": 76,
+            "height": 67
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_002_s_o_ 01_phase_00.png",
+          "url": "../extracted_assets/bdf/SLON/sprite_holder/02_Sprite_Holder_002_s_o_ 01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 78,
+          "height": 66,
+          "frameCount": null,
+          "offset": 3033093,
+          "name": "słoń 01",
+          "id": 2,
+          "definitionId": 2,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_002_s_o_ 01_phase_00.png",
+              "url": "../extracted_assets/bdf/SLON/sprite_holder/02_Sprite_Holder_002_s_o_ 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_002_s_o_ 01_phase_01.png",
+              "url": "../extracted_assets/bdf/SLON/sprite_holder/02_Sprite_Holder_002_s_o_ 01_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 3054573,
+          "rect": {
+            "x": 709,
+            "y": 178,
+            "width": 78,
+            "height": 66
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_003_s_o_ 01_phase_00.png",
+          "url": "../extracted_assets/bdf/SLON/sprite_holder/02_Sprite_Holder_003_s_o_ 01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 77,
+          "height": 66,
+          "frameCount": null,
+          "offset": 3044129,
+          "name": "słoń 01",
+          "id": 3,
+          "definitionId": 3,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_003_s_o_ 01_phase_00.png",
+              "url": "../extracted_assets/bdf/SLON/sprite_holder/02_Sprite_Holder_003_s_o_ 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_003_s_o_ 01_phase_01.png",
+              "url": "../extracted_assets/bdf/SLON/sprite_holder/02_Sprite_Holder_003_s_o_ 01_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 3054713,
+          "rect": {
+            "x": 712,
+            "y": 259,
+            "width": 77,
+            "height": 66
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 8
+        }
+      ],
       "audio": []
     },
     {
@@ -223,7 +370,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\embedded\\03_Sound_Holder_000_002ea091.wav",
+          "path": "extracted_assets\\bdf\\SLON\\embedded\\03_Sound_Holder_000_002ea091.wav",
           "url": "../extracted_assets/bdf/SLON/embedded/03_Sound_Holder_000_002ea091.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -233,7 +380,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\embedded\\03_Sound_Holder_001_00304109.wav",
+          "path": "extracted_assets\\bdf\\SLON\\embedded\\03_Sound_Holder_001_00304109.wav",
           "url": "../extracted_assets/bdf/SLON/embedded/03_Sound_Holder_001_00304109.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -243,7 +390,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\embedded\\03_Sound_Holder_002_0030c885.wav",
+          "path": "extracted_assets\\bdf\\SLON\\embedded\\03_Sound_Holder_002_0030c885.wav",
           "url": "../extracted_assets/bdf/SLON/embedded/03_Sound_Holder_002_0030c885.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -253,7 +400,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\embedded\\03_Sound_Holder_003_00316085.wav",
+          "path": "extracted_assets\\bdf\\SLON\\embedded\\03_Sound_Holder_003_00316085.wav",
           "url": "../extracted_assets/bdf/SLON/embedded/03_Sound_Holder_003_00316085.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -263,7 +410,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\SLON\\embedded\\03_Sound_Holder_004_00359659.wav",
+          "path": "extracted_assets\\bdf\\SLON\\embedded\\03_Sound_Holder_004_00359659.wav",
           "url": "../extracted_assets/bdf/SLON/embedded/03_Sound_Holder_004_00359659.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -291,59 +438,109 @@
       "itemCount": null,
       "hitboxes": [
         {
-          "id": 0,
+          "id": 5,
           "rect": {
             "x": 39,
             "y": 381,
             "width": 69,
             "height": 55
           },
+          "name": "",
+          "layer": 5,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            255
+          ],
           "sourceOffset": 3850819,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 5,
+          "auxState": 0
         },
         {
-          "id": 1,
+          "id": 4,
           "rect": {
             "x": 157,
             "y": 364,
             "width": 77,
             "height": 63
           },
+          "name": "",
+          "layer": 5,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            255
+          ],
           "sourceOffset": 3850920,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 5,
+          "auxState": 0
         },
         {
-          "id": 2,
+          "id": 3,
           "rect": {
             "x": 247,
             "y": 359,
             "width": 71,
             "height": 57
           },
+          "name": "",
+          "layer": 5,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            255
+          ],
           "sourceOffset": 3851021,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 5,
+          "auxState": 0
         },
         {
-          "id": 3,
+          "id": 2,
           "rect": {
             "x": 394,
             "y": 363,
             "width": 73,
             "height": 62
           },
+          "name": "",
+          "layer": 5,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            255
+          ],
           "sourceOffset": 3851122,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 5,
+          "auxState": 0
         },
         {
-          "id": 4,
+          "id": 1,
           "rect": {
             "x": 530,
             "y": 325,
             "width": 69,
             "height": 57
           },
+          "name": "",
+          "layer": 5,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            255
+          ],
           "sourceOffset": 3851223,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 5,
+          "auxState": 0
         }
       ],
       "sourceOffset": 3849703,
@@ -372,16 +569,8 @@
         "signature": "SetTextMode(void)"
       },
       {
-        "name": "if",
-        "signature": "if(textMode)"
-      },
-      {
         "name": "MultiBitmap.MouseClickOnDown",
         "signature": "MultiBitmap.MouseClickOnDown(int bitmapID,int x,int y,int deep)"
-      },
-      {
-        "name": "if",
-        "signature": "if(bitmapID!=oldId)"
       },
       {
         "name": "HotSpot_Holder.LeftButtonClickOn",
@@ -392,48 +581,8 @@
         "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(rectID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbar)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarPhase)"
-      },
-      {
-        "name": "if",
-        "signature": "if(txtHotSpotOn==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.InPlace",
         "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==480)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarCase)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(puzzleNo)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(puzzleNo)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==0)"
       },
       {
         "name": "Group.Sprite_Holder.MouseMoveIn",
@@ -448,28 +597,12 @@
         "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(spriteID==11)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseClickOnUp",
         "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(toolbarPhase)"
-      },
-      {
         "name": "Group.Sprite_Holder.EndAnimation",
         "signature": "Group.Sprite_Holder.EndAnimation(int spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
       },
       {
         "name": "Text_Holder.ScrollTextUp",
@@ -496,20 +629,12 @@
         "signature": "Text_Holder.ClickOnText(int textID)"
       },
       {
-        "name": "if",
-        "signature": "if(playStatus)"
-      },
-      {
         "name": "Text_Holder.EndOfSynchroText",
         "signature": "Text_Holder.EndOfSynchroText(int textID)"
       },
       {
         "name": "Sound_Holder.EndPlaySound",
         "signature": "Sound_Holder.EndPlaySound(int soundID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(soundID==0 && textMode)"
       },
       {
         "name": "Sprite_Holder.MouseMoveIn",

@@ -28,7 +28,1148 @@
       "display_name": "Sprite_Holder",
       "private_offset": 2707,
       "private_size": 441376,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_000_dobry_phase_00.png",
+          "offset": 2987,
+          "size": 104930,
+          "pixel_size": 235200,
+          "width": 560,
+          "height": 420,
+          "name": "dobry",
+          "id": 0,
+          "definition_id": 0,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_000_dobry_phase_00.png",
+              "size": 104930
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_001_broszka 0_phase_00.png",
+          "offset": 238455,
+          "size": 1106,
+          "pixel_size": 360,
+          "width": 24,
+          "height": 15,
+          "name": "broszka 0",
+          "id": 1,
+          "definition_id": 1,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_001_broszka 0_phase_00.png",
+              "size": 1106
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_002_chustka 0_phase_00.png",
+          "offset": 239299,
+          "size": 4332,
+          "pixel_size": 9288,
+          "width": 86,
+          "height": 108,
+          "name": "chustka 0",
+          "id": 2,
+          "definition_id": 2,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_002_chustka 0_phase_00.png",
+              "size": 4332
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_003_he_m 01_phase_00.png",
+          "offset": 249122,
+          "size": 4099,
+          "pixel_size": 6141,
+          "width": 69,
+          "height": 89,
+          "name": "hełm 01",
+          "id": 3,
+          "definition_id": 3,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_003_he_m 01_phase_00.png",
+              "size": 4099
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_004_kask 01_phase_00.png",
+          "offset": 255531,
+          "size": 3546,
+          "pixel_size": 4992,
+          "width": 64,
+          "height": 78,
+          "name": "kask 01",
+          "id": 4,
+          "definition_id": 4,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_004_kask 01_phase_00.png",
+              "size": 3546
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_005_kielich 0_phase_00.png",
+          "offset": 260791,
+          "size": 3310,
+          "pixel_size": 6720,
+          "width": 64,
+          "height": 105,
+          "name": "kielich 0",
+          "id": 5,
+          "definition_id": 5,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_005_kielich 0_phase_00.png",
+              "size": 3310
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_006_klejnot 0_phase_00.png",
+          "offset": 267806,
+          "size": 1126,
+          "pixel_size": 621,
+          "width": 23,
+          "height": 27,
+          "name": "klejnot 0",
+          "id": 6,
+          "definition_id": 6,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_006_klejnot 0_phase_00.png",
+              "size": 1126
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_007_pier_cie__phase_00.png",
+          "offset": 268695,
+          "size": 1385,
+          "pixel_size": 812,
+          "width": 28,
+          "height": 29,
+          "name": "pierścień",
+          "id": 7,
+          "definition_id": 7,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_007_pier_cie__phase_00.png",
+              "size": 1385
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_008_szafir 01_phase_00.png",
+          "offset": 269817,
+          "size": 1148,
+          "pixel_size": 630,
+          "width": 30,
+          "height": 21,
+          "name": "szafir 01",
+          "id": 8,
+          "definition_id": 8,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_008_szafir 01_phase_00.png",
+              "size": 1148
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_009_tarcza 01_phase_00.png",
+          "offset": 270715,
+          "size": 13054,
+          "pixel_size": 25920,
+          "width": 160,
+          "height": 162,
+          "name": "tarcza 01",
+          "id": 9,
+          "definition_id": 9,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_009_tarcza 01_phase_00.png",
+              "size": 13054
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_010_top_r 01_phase_00.png",
+          "offset": 296903,
+          "size": 4760,
+          "pixel_size": 10120,
+          "width": 88,
+          "height": 115,
+          "name": "topór 01",
+          "id": 10,
+          "definition_id": 10,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_010_top_r 01_phase_00.png",
+              "size": 4760
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_011_broszka_phase_00.png",
+          "offset": 307291,
+          "size": 1166,
+          "pixel_size": 720,
+          "width": 24,
+          "height": 15,
+          "name": "broszka ",
+          "id": 11,
+          "definition_id": 11,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_011_broszka_phase_00.png",
+              "size": 1166
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_011_broszka_phase_01.png",
+              "size": 1031
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_012_chustka_phase_00.png",
+          "offset": 308279,
+          "size": 3322,
+          "pixel_size": 18576,
+          "width": 86,
+          "height": 108,
+          "name": "chustka ",
+          "id": 12,
+          "definition_id": 12,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_012_chustka_phase_00.png",
+              "size": 3322
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_012_chustka_phase_01.png",
+              "size": 4136
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_013_he_m_phase_00.png",
+          "offset": 327301,
+          "size": 4155,
+          "pixel_size": 12282,
+          "width": 69,
+          "height": 89,
+          "name": "hełm ",
+          "id": 13,
+          "definition_id": 13,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_013_he_m_phase_00.png",
+              "size": 4155
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_013_he_m_phase_01.png",
+              "size": 3304
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_014_kask_phase_00.png",
+          "offset": 339851,
+          "size": 3529,
+          "pixel_size": 9984,
+          "width": 64,
+          "height": 78,
+          "name": "kask ",
+          "id": 14,
+          "definition_id": 14,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_014_kask_phase_00.png",
+              "size": 3529
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_014_kask_phase_01.png",
+              "size": 3382
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_015_kielich_phase_00.png",
+          "offset": 350103,
+          "size": 2863,
+          "pixel_size": 13440,
+          "width": 64,
+          "height": 105,
+          "name": "kielich ",
+          "id": 15,
+          "definition_id": 15,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_015_kielich_phase_00.png",
+              "size": 2863
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_015_kielich_phase_01.png",
+              "size": 3790
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_016_klejnot_phase_00.png",
+          "offset": 363865,
+          "size": 1313,
+          "pixel_size": 1242,
+          "width": 23,
+          "height": 27,
+          "name": "klejnot ",
+          "id": 16,
+          "definition_id": 16,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_016_klejnot_phase_00.png",
+              "size": 1313
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_016_klejnot_phase_01.png",
+              "size": 1158
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_017_pier_cie__phase_00.png",
+          "offset": 365375,
+          "size": 1383,
+          "pixel_size": 1624,
+          "width": 28,
+          "height": 29,
+          "name": "pierścień",
+          "id": 17,
+          "definition_id": 17,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_017_pier_cie__phase_00.png",
+              "size": 1383
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_017_pier_cie__phase_01.png",
+              "size": 1339
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_018_szafir_phase_00.png",
+          "offset": 367267,
+          "size": 1237,
+          "pixel_size": 1260,
+          "width": 30,
+          "height": 21,
+          "name": "szafir ",
+          "id": 18,
+          "definition_id": 18,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_018_szafir_phase_00.png",
+              "size": 1237
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_018_szafir_phase_01.png",
+              "size": 1102
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_019_tarcza_phase_00.png",
+          "offset": 368795,
+          "size": 12268,
+          "pixel_size": 51840,
+          "width": 160,
+          "height": 162,
+          "name": "tarcza ",
+          "id": 19,
+          "definition_id": 19,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_019_tarcza_phase_00.png",
+              "size": 12268
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_019_tarcza_phase_01.png",
+              "size": 12528
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_020_top_r_phase_00.png",
+          "offset": 420903,
+          "size": 3452,
+          "pixel_size": 20240,
+          "width": 88,
+          "height": 115,
+          "name": "topór ",
+          "id": 20,
+          "definition_id": 20,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_020_top_r_phase_00.png",
+              "size": 3452
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_020_top_r_phase_01.png",
+              "size": 4738
+            }
+          ]
+        }
+      ],
+      "sprite_holder": {
+        "version": 1,
+        "definition_count": 21,
+        "instance_count": 21,
+        "parsed_definitions": 21,
+        "parsed_instances": 21,
+        "definitions": [
+          {
+            "index": 0,
+            "name": "dobry",
+            "record_offset": 2719,
+            "blob_offset": 2723,
+            "blob_size": 235464,
+            "width": 560,
+            "height": 420,
+            "phase_count": 1,
+            "phase_hint": 3643070937,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_000_dobry_phase_00.png",
+                "size": 104930
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "broszka 0",
+            "record_offset": 238187,
+            "blob_offset": 238191,
+            "blob_size": 624,
+            "width": 24,
+            "height": 15,
+            "phase_count": 1,
+            "phase_hint": 2035240490,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_001_broszka 0_phase_00.png",
+                "size": 1106
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "chustka 0",
+            "record_offset": 238815,
+            "blob_offset": 238819,
+            "blob_size": 9768,
+            "width": 86,
+            "height": 108,
+            "phase_count": 1,
+            "phase_hint": 2368548,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_002_chustka 0_phase_00.png",
+                "size": 4332
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "name": "hełm 01",
+            "record_offset": 248587,
+            "blob_offset": 248591,
+            "blob_size": 6672,
+            "width": 69,
+            "height": 89,
+            "phase_count": 1,
+            "phase_hint": 2041305066,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_003_he_m 01_phase_00.png",
+                "size": 4099
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "name": "kask 01",
+            "record_offset": 255263,
+            "blob_offset": 255267,
+            "blob_size": 5256,
+            "width": 64,
+            "height": 78,
+            "phase_count": 1,
+            "phase_hint": 606357540,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_004_kask 01_phase_00.png",
+                "size": 3546
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "name": "kielich 0",
+            "record_offset": 260523,
+            "blob_offset": 260527,
+            "blob_size": 6984,
+            "width": 64,
+            "height": 105,
+            "phase_count": 1,
+            "phase_hint": 1210328100,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_005_kielich 0_phase_00.png",
+                "size": 3310
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "name": "klejnot 0",
+            "record_offset": 267511,
+            "blob_offset": 267515,
+            "blob_size": 912,
+            "width": 23,
+            "height": 27,
+            "phase_count": 1,
+            "phase_hint": 707022372,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_006_klejnot 0_phase_00.png",
+                "size": 1126
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "name": "pierścień",
+            "record_offset": 268427,
+            "blob_offset": 268431,
+            "blob_size": 1076,
+            "width": 28,
+            "height": 29,
+            "phase_count": 1,
+            "phase_hint": 606348324,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_007_pier_cie__phase_00.png",
+                "size": 1385
+              }
+            ]
+          },
+          {
+            "index": 8,
+            "name": "szafir 01",
+            "record_offset": 269507,
+            "blob_offset": 269511,
+            "blob_size": 936,
+            "width": 30,
+            "height": 21,
+            "phase_count": 1,
+            "phase_hint": 1339742756,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_008_szafir 01_phase_00.png",
+                "size": 1148
+              }
+            ]
+          },
+          {
+            "index": 9,
+            "name": "tarcza 01",
+            "record_offset": 270447,
+            "blob_offset": 270451,
+            "blob_size": 26184,
+            "width": 160,
+            "height": 162,
+            "phase_count": 1,
+            "phase_hint": 608707620,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_009_tarcza 01_phase_00.png",
+                "size": 13054
+              }
+            ]
+          },
+          {
+            "index": 10,
+            "name": "topór 01",
+            "record_offset": 296635,
+            "blob_offset": 296639,
+            "blob_size": 10384,
+            "width": 88,
+            "height": 115,
+            "phase_count": 1,
+            "phase_hint": 606348324,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_010_top_r 01_phase_00.png",
+                "size": 4760
+              }
+            ]
+          },
+          {
+            "index": 11,
+            "name": "broszka ",
+            "record_offset": 307023,
+            "blob_offset": 307027,
+            "blob_size": 984,
+            "width": 24,
+            "height": 15,
+            "phase_count": 2,
+            "phase_hint": 2037599786,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_011_broszka_phase_00.png",
+                "size": 1166
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_011_broszka_phase_01.png",
+                "size": 1031
+              }
+            ]
+          },
+          {
+            "index": 12,
+            "name": "chustka ",
+            "record_offset": 308011,
+            "blob_offset": 308015,
+            "blob_size": 18840,
+            "width": 86,
+            "height": 108,
+            "phase_count": 2,
+            "phase_hint": 2368548,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_012_chustka_phase_00.png",
+                "size": 3322
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_012_chustka_phase_01.png",
+                "size": 4136
+              }
+            ]
+          },
+          {
+            "index": 13,
+            "name": "hełm ",
+            "record_offset": 326855,
+            "blob_offset": 326859,
+            "blob_size": 12724,
+            "width": 69,
+            "height": 89,
+            "phase_count": 2,
+            "phase_hint": 2041305047,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_013_he_m_phase_00.png",
+                "size": 4155
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_013_he_m_phase_01.png",
+                "size": 3304
+              }
+            ]
+          },
+          {
+            "index": 14,
+            "name": "kask ",
+            "record_offset": 339583,
+            "blob_offset": 339587,
+            "blob_size": 10248,
+            "width": 64,
+            "height": 78,
+            "phase_count": 2,
+            "phase_hint": 606357540,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_014_kask_phase_00.png",
+                "size": 3529
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_014_kask_phase_01.png",
+                "size": 3382
+              }
+            ]
+          },
+          {
+            "index": 15,
+            "name": "kielich ",
+            "record_offset": 349835,
+            "blob_offset": 349839,
+            "blob_size": 13704,
+            "width": 64,
+            "height": 105,
+            "phase_count": 2,
+            "phase_hint": 606357540,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_015_kielich_phase_00.png",
+                "size": 2863
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_015_kielich_phase_01.png",
+                "size": 3790
+              }
+            ]
+          },
+          {
+            "index": 16,
+            "name": "klejnot ",
+            "record_offset": 363543,
+            "blob_offset": 363547,
+            "blob_size": 1560,
+            "width": 23,
+            "height": 27,
+            "phase_count": 2,
+            "phase_hint": 707022372,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_016_klejnot_phase_00.png",
+                "size": 1313
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_016_klejnot_phase_01.png",
+                "size": 1158
+              }
+            ]
+          },
+          {
+            "index": 17,
+            "name": "pierścień",
+            "record_offset": 365107,
+            "blob_offset": 365111,
+            "blob_size": 1888,
+            "width": 28,
+            "height": 29,
+            "phase_count": 2,
+            "phase_hint": 606394916,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_017_pier_cie__phase_00.png",
+                "size": 1383
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_017_pier_cie__phase_01.png",
+                "size": 1339
+              }
+            ]
+          },
+          {
+            "index": 18,
+            "name": "szafir ",
+            "record_offset": 366999,
+            "blob_offset": 367003,
+            "blob_size": 1524,
+            "width": 30,
+            "height": 21,
+            "phase_count": 2,
+            "phase_hint": 1330174682,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_018_szafir_phase_00.png",
+                "size": 1237
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_018_szafir_phase_01.png",
+                "size": 1102
+              }
+            ]
+          },
+          {
+            "index": 19,
+            "name": "tarcza ",
+            "record_offset": 368527,
+            "blob_offset": 368531,
+            "blob_size": 52104,
+            "width": 160,
+            "height": 162,
+            "phase_count": 2,
+            "phase_hint": 608707620,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_019_tarcza_phase_00.png",
+                "size": 12268
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_019_tarcza_phase_01.png",
+                "size": 12528
+              }
+            ]
+          },
+          {
+            "index": 20,
+            "name": "topór ",
+            "record_offset": 420635,
+            "blob_offset": 420639,
+            "blob_size": 20504,
+            "width": 88,
+            "height": 115,
+            "phase_count": 2,
+            "phase_hint": 606348324,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_020_top_r_phase_00.png",
+                "size": 3452
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_020_top_r_phase_01.png",
+                "size": 4738
+              }
+            ]
+          }
+        ],
+        "instances": [
+          {
+            "index": 0,
+            "definition_id": 0,
+            "field04": 2,
+            "x": 40,
+            "y": -420,
+            "z": 2,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 441143
+          },
+          {
+            "index": 1,
+            "definition_id": 1,
+            "field04": 1,
+            "x": 472,
+            "y": 231,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 441283
+          },
+          {
+            "index": 2,
+            "definition_id": 2,
+            "field04": 1,
+            "x": 474,
+            "y": 86,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 441423
+          },
+          {
+            "index": 3,
+            "definition_id": 3,
+            "field04": 1,
+            "x": 445,
+            "y": 276,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 441563
+          },
+          {
+            "index": 4,
+            "definition_id": 4,
+            "field04": 1,
+            "x": 389,
+            "y": 114,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 441703
+          },
+          {
+            "index": 5,
+            "definition_id": 5,
+            "field04": 1,
+            "x": 559,
+            "y": 198,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 441843
+          },
+          {
+            "index": 6,
+            "definition_id": 6,
+            "field04": 1,
+            "x": 495,
+            "y": 139,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 441983
+          },
+          {
+            "index": 7,
+            "definition_id": 7,
+            "field04": 1,
+            "x": 552,
+            "y": 242,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 442123
+          },
+          {
+            "index": 8,
+            "definition_id": 8,
+            "field04": 1,
+            "x": 250,
+            "y": 185,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 442263
+          },
+          {
+            "index": 9,
+            "definition_id": 9,
+            "field04": 1,
+            "x": 165,
+            "y": 39,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 442403
+          },
+          {
+            "index": 10,
+            "definition_id": 10,
+            "field04": 1,
+            "x": 280,
+            "y": 272,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 442543
+          },
+          {
+            "index": 11,
+            "definition_id": 11,
+            "field04": 1,
+            "x": 472,
+            "y": 231,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 442683
+          },
+          {
+            "index": 12,
+            "definition_id": 12,
+            "field04": 1,
+            "x": 474,
+            "y": 86,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 442823
+          },
+          {
+            "index": 13,
+            "definition_id": 13,
+            "field04": 1,
+            "x": 445,
+            "y": 276,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 442963
+          },
+          {
+            "index": 14,
+            "definition_id": 14,
+            "field04": 1,
+            "x": 389,
+            "y": 114,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 443103
+          },
+          {
+            "index": 15,
+            "definition_id": 15,
+            "field04": 1,
+            "x": 559,
+            "y": 198,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 443243
+          },
+          {
+            "index": 16,
+            "definition_id": 16,
+            "field04": 1,
+            "x": 495,
+            "y": 139,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 443383
+          },
+          {
+            "index": 17,
+            "definition_id": 17,
+            "field04": 1,
+            "x": 552,
+            "y": 242,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 443523
+          },
+          {
+            "index": 18,
+            "definition_id": 18,
+            "field04": 1,
+            "x": 250,
+            "y": 185,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 443663
+          },
+          {
+            "index": 19,
+            "definition_id": 19,
+            "field04": 1,
+            "x": 165,
+            "y": 39,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 443803
+          },
+          {
+            "index": 20,
+            "definition_id": 20,
+            "field04": 1,
+            "x": 280,
+            "y": 272,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 443943
+          }
+        ]
+      }
     },
     {
       "index": 1,
@@ -37,19 +1178,549 @@
       "display_name": "Bitmap_Holder",
       "private_offset": 445215,
       "private_size": 307356,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\bitmap_holder\\01_Bitmap_Holder_000_rycerzekw_640x480.bmp",
+          "offset": 445355,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "rycerzekw",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 640,
+            "height": 480
+          },
+          "geometry_confidence": "serialized_entry"
+        }
+      ],
+      "bitmap_holder": {
+        "version": 1,
+        "declared_count": 1,
+        "parsed_count": 1,
+        "frames": [
+          {
+            "index": 0,
+            "name": "rycerzekw",
+            "record_offset": 445223,
+            "record_size": 307344,
+            "pixel_offset": 445355,
+            "width": 640,
+            "height": 480,
+            "right": 640,
+            "bottom": 480,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 640,
+              "height": 480
+            },
+            "bmp_output": "extracted_assets\\bdf\\RYCERZ_C\\bitmap_holder\\01_Bitmap_Holder_000_rycerzekw_640x480.bmp"
+          }
+        ]
+      }
     }
   ],
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ_C\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\RYCERZ_C\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ_C\\script.txt",
+      "path": "extracted_assets\\bdf\\RYCERZ_C\\script.txt",
       "size": 8745
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_000_dobry_phase_00.png",
+      "offset": 2987,
+      "size": 104930,
+      "pixel_size": 235200,
+      "width": 560,
+      "height": 420,
+      "name": "dobry",
+      "id": 0,
+      "definition_id": 0,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_000_dobry_phase_00.png",
+          "size": 104930
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_001_broszka 0_phase_00.png",
+      "offset": 238455,
+      "size": 1106,
+      "pixel_size": 360,
+      "width": 24,
+      "height": 15,
+      "name": "broszka 0",
+      "id": 1,
+      "definition_id": 1,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_001_broszka 0_phase_00.png",
+          "size": 1106
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_002_chustka 0_phase_00.png",
+      "offset": 239299,
+      "size": 4332,
+      "pixel_size": 9288,
+      "width": 86,
+      "height": 108,
+      "name": "chustka 0",
+      "id": 2,
+      "definition_id": 2,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_002_chustka 0_phase_00.png",
+          "size": 4332
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_003_he_m 01_phase_00.png",
+      "offset": 249122,
+      "size": 4099,
+      "pixel_size": 6141,
+      "width": 69,
+      "height": 89,
+      "name": "hełm 01",
+      "id": 3,
+      "definition_id": 3,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_003_he_m 01_phase_00.png",
+          "size": 4099
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_004_kask 01_phase_00.png",
+      "offset": 255531,
+      "size": 3546,
+      "pixel_size": 4992,
+      "width": 64,
+      "height": 78,
+      "name": "kask 01",
+      "id": 4,
+      "definition_id": 4,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_004_kask 01_phase_00.png",
+          "size": 3546
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_005_kielich 0_phase_00.png",
+      "offset": 260791,
+      "size": 3310,
+      "pixel_size": 6720,
+      "width": 64,
+      "height": 105,
+      "name": "kielich 0",
+      "id": 5,
+      "definition_id": 5,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_005_kielich 0_phase_00.png",
+          "size": 3310
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_006_klejnot 0_phase_00.png",
+      "offset": 267806,
+      "size": 1126,
+      "pixel_size": 621,
+      "width": 23,
+      "height": 27,
+      "name": "klejnot 0",
+      "id": 6,
+      "definition_id": 6,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_006_klejnot 0_phase_00.png",
+          "size": 1126
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_007_pier_cie__phase_00.png",
+      "offset": 268695,
+      "size": 1385,
+      "pixel_size": 812,
+      "width": 28,
+      "height": 29,
+      "name": "pierścień",
+      "id": 7,
+      "definition_id": 7,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_007_pier_cie__phase_00.png",
+          "size": 1385
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_008_szafir 01_phase_00.png",
+      "offset": 269817,
+      "size": 1148,
+      "pixel_size": 630,
+      "width": 30,
+      "height": 21,
+      "name": "szafir 01",
+      "id": 8,
+      "definition_id": 8,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_008_szafir 01_phase_00.png",
+          "size": 1148
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_009_tarcza 01_phase_00.png",
+      "offset": 270715,
+      "size": 13054,
+      "pixel_size": 25920,
+      "width": 160,
+      "height": 162,
+      "name": "tarcza 01",
+      "id": 9,
+      "definition_id": 9,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_009_tarcza 01_phase_00.png",
+          "size": 13054
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_010_top_r 01_phase_00.png",
+      "offset": 296903,
+      "size": 4760,
+      "pixel_size": 10120,
+      "width": 88,
+      "height": 115,
+      "name": "topór 01",
+      "id": 10,
+      "definition_id": 10,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_010_top_r 01_phase_00.png",
+          "size": 4760
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_011_broszka_phase_00.png",
+      "offset": 307291,
+      "size": 1166,
+      "pixel_size": 720,
+      "width": 24,
+      "height": 15,
+      "name": "broszka ",
+      "id": 11,
+      "definition_id": 11,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_011_broszka_phase_00.png",
+          "size": 1166
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_011_broszka_phase_01.png",
+          "size": 1031
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_012_chustka_phase_00.png",
+      "offset": 308279,
+      "size": 3322,
+      "pixel_size": 18576,
+      "width": 86,
+      "height": 108,
+      "name": "chustka ",
+      "id": 12,
+      "definition_id": 12,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_012_chustka_phase_00.png",
+          "size": 3322
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_012_chustka_phase_01.png",
+          "size": 4136
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_013_he_m_phase_00.png",
+      "offset": 327301,
+      "size": 4155,
+      "pixel_size": 12282,
+      "width": 69,
+      "height": 89,
+      "name": "hełm ",
+      "id": 13,
+      "definition_id": 13,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_013_he_m_phase_00.png",
+          "size": 4155
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_013_he_m_phase_01.png",
+          "size": 3304
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_014_kask_phase_00.png",
+      "offset": 339851,
+      "size": 3529,
+      "pixel_size": 9984,
+      "width": 64,
+      "height": 78,
+      "name": "kask ",
+      "id": 14,
+      "definition_id": 14,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_014_kask_phase_00.png",
+          "size": 3529
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_014_kask_phase_01.png",
+          "size": 3382
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_015_kielich_phase_00.png",
+      "offset": 350103,
+      "size": 2863,
+      "pixel_size": 13440,
+      "width": 64,
+      "height": 105,
+      "name": "kielich ",
+      "id": 15,
+      "definition_id": 15,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_015_kielich_phase_00.png",
+          "size": 2863
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_015_kielich_phase_01.png",
+          "size": 3790
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_016_klejnot_phase_00.png",
+      "offset": 363865,
+      "size": 1313,
+      "pixel_size": 1242,
+      "width": 23,
+      "height": 27,
+      "name": "klejnot ",
+      "id": 16,
+      "definition_id": 16,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_016_klejnot_phase_00.png",
+          "size": 1313
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_016_klejnot_phase_01.png",
+          "size": 1158
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_017_pier_cie__phase_00.png",
+      "offset": 365375,
+      "size": 1383,
+      "pixel_size": 1624,
+      "width": 28,
+      "height": 29,
+      "name": "pierścień",
+      "id": 17,
+      "definition_id": 17,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_017_pier_cie__phase_00.png",
+          "size": 1383
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_017_pier_cie__phase_01.png",
+          "size": 1339
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_018_szafir_phase_00.png",
+      "offset": 367267,
+      "size": 1237,
+      "pixel_size": 1260,
+      "width": 30,
+      "height": 21,
+      "name": "szafir ",
+      "id": 18,
+      "definition_id": 18,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_018_szafir_phase_00.png",
+          "size": 1237
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_018_szafir_phase_01.png",
+          "size": 1102
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_019_tarcza_phase_00.png",
+      "offset": 368795,
+      "size": 12268,
+      "pixel_size": 51840,
+      "width": 160,
+      "height": 162,
+      "name": "tarcza ",
+      "id": 19,
+      "definition_id": 19,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_019_tarcza_phase_00.png",
+          "size": 12268
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_019_tarcza_phase_01.png",
+          "size": 12528
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_020_top_r_phase_00.png",
+      "offset": 420903,
+      "size": 3452,
+      "pixel_size": 20240,
+      "width": 88,
+      "height": 115,
+      "name": "topór ",
+      "id": 20,
+      "definition_id": 20,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_020_top_r_phase_00.png",
+          "size": 3452
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RYCERZ_C\\sprite_holder\\00_Sprite_Holder_020_top_r_phase_01.png",
+          "size": 4738
+        }
+      ]
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\RYCERZ_C\\bitmap_holder\\01_Bitmap_Holder_000_rycerzekw_640x480.bmp",
+      "offset": 445355,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "rycerzekw",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 640,
+        "height": 480
+      },
+      "geometry_confidence": "serialized_entry"
     }
   ],
   "script": {

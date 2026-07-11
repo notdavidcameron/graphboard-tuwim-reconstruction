@@ -38,17 +38,17 @@
       "geometrySourceOffset": null,
       "privateOffset": 2257,
       "privateSize": 252520,
-      "primaryAssetUrl": "../extracted_assets/bdf/OKUL_R/background.bmp",
+      "primaryAssetUrl": "../extracted_assets/bdf/OKULARY/panorama/00_Panorama_000_panorama_1224x480.bmp",
       "assets": [
         {
           "kind": "puzzle_fallback_background",
-          "path": "extracted_assets\\bdf\\OKUL_R\\background.bmp",
-          "url": "../extracted_assets/bdf/OKUL_R/background.bmp",
-          "width": 640,
+          "path": "extracted_assets\\bdf\\OKULARY\\panorama\\00_Panorama_000_panorama_1224x480.bmp",
+          "url": "../extracted_assets/bdf/OKULARY/panorama/00_Panorama_000_panorama_1224x480.bmp",
+          "width": 1224,
           "height": 480,
           "frameCount": null,
           "offset": null,
-          "name": "OKUL_R",
+          "name": "panorama",
           "id": 0,
           "geometryConfidence": "fallback"
         }
@@ -81,7 +81,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKUL1P1\\embedded\\01_Sound_Holder_000_0003e6c5.wav",
+          "path": "extracted_assets\\bdf\\OKUL1P1\\embedded\\01_Sound_Holder_000_0003e6c5.wav",
           "url": "../extracted_assets/bdf/OKUL1P1/embedded/01_Sound_Holder_000_0003e6c5.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -91,7 +91,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKUL1P1\\embedded\\01_Sound_Holder_001_00040095.wav",
+          "path": "extracted_assets\\bdf\\OKUL1P1\\embedded\\01_Sound_Holder_001_00040095.wav",
           "url": "../extracted_assets/bdf/OKUL1P1/embedded/01_Sound_Holder_001_00040095.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -101,7 +101,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKUL1P1\\embedded\\01_Sound_Holder_002_000416d5.wav",
+          "path": "extracted_assets\\bdf\\OKUL1P1\\embedded\\01_Sound_Holder_002_000416d5.wav",
           "url": "../extracted_assets/bdf/OKUL1P1/embedded/01_Sound_Holder_002_000416d5.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -111,7 +111,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKUL1P1\\embedded\\01_Sound_Holder_003_00042589.wav",
+          "path": "extracted_assets\\bdf\\OKUL1P1\\embedded\\01_Sound_Holder_003_00042589.wav",
           "url": "../extracted_assets/bdf/OKUL1P1/embedded/01_Sound_Holder_003_00042589.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -175,28 +175,8 @@
         "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
       },
       {
-        "name": "if",
-        "signature": "if(rectID==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbar)"
-      },
-      {
         "name": "Group.Sprite_Holder.InPlace",
         "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
-      },
-      {
-        "name": "if",
-        "signature": "if(spriteID==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==480)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarCase)"
       },
       {
         "name": "Group.Sprite_Holder.MouseMoveIn",
@@ -211,20 +191,8 @@
         "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(showBmp)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseClickOnUp",
         "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(spriteID==5)"
       },
       {
         "name": "Puzzle.EndShowBitmap",

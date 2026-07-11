@@ -24,22 +24,343 @@
       "namespace": "Page",
       "index": 0,
       "z": 0,
-      "visible": false,
+      "visible": true,
       "rect": {
-        "x": 275,
+        "x": 0,
         "y": 0,
-        "width": 144,
+        "width": 640,
         "height": 480
       },
-      "geometryConfidence": "serialized_entry",
+      "geometryConfidence": "serialized_entries",
       "itemCount": null,
       "hitboxes": [],
       "sourceOffset": 1173,
-      "geometrySourceOffset": 2325,
+      "geometrySourceOffset": null,
       "privateOffset": 2305,
       "privateSize": 488044,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/bdf/TRALALA/bitmap_holder/00_Bitmap_Holder_000_tralalins_144x480.bmp",
+      "assets": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TRALALA\\bitmap_holder\\00_Bitmap_Holder_000_tralalins_144x480.bmp",
+          "url": "../extracted_assets/bdf/TRALALA/bitmap_holder/00_Bitmap_Holder_000_tralalins_144x480.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 144,
+          "height": 480,
+          "frameCount": null,
+          "offset": 2445,
+          "name": "tralalins",
+          "id": 0,
+          "rect": {
+            "x": 275,
+            "y": 0,
+            "width": 144,
+            "height": 480
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TRALALA\\bitmap_holder\\00_Bitmap_Holder_001_zona_242x416.bmp",
+          "url": "../extracted_assets/bdf/TRALALA/bitmap_holder/00_Bitmap_Holder_001_zona_242x416.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 242,
+          "height": 416,
+          "frameCount": null,
+          "offset": 71713,
+          "name": "zona",
+          "id": 1,
+          "rect": {
+            "x": 0,
+            "y": 64,
+            "width": 242,
+            "height": 416
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TRALALA\\bitmap_holder\\00_Bitmap_Holder_002_corka_105x225.bmp",
+          "url": "../extracted_assets/bdf/TRALALA/bitmap_holder/00_Bitmap_Holder_002_corka_105x225.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 105,
+          "height": 225,
+          "frameCount": null,
+          "offset": 173365,
+          "name": "corka",
+          "id": 2,
+          "rect": {
+            "x": 365,
+            "y": 255,
+            "width": 105,
+            "height": 225
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TRALALA\\bitmap_holder\\00_Bitmap_Holder_003_synek 02_78x74.bmp",
+          "url": "../extracted_assets/bdf/TRALALA/bitmap_holder/00_Bitmap_Holder_003_synek 02_78x74.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 78,
+          "height": 74,
+          "frameCount": null,
+          "offset": 197813,
+          "name": "synek 02",
+          "id": 3,
+          "rect": {
+            "x": 72,
+            "y": 0,
+            "width": 78,
+            "height": 74
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TRALALA\\bitmap_holder\\00_Bitmap_Holder_004_piesek_02_83x124.bmp",
+          "url": "../extracted_assets/bdf/TRALALA/bitmap_holder/00_Bitmap_Holder_004_piesek_02_83x124.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 83,
+          "height": 124,
+          "frameCount": null,
+          "offset": 203881,
+          "name": "piesek#02",
+          "id": 4,
+          "rect": {
+            "x": 557,
+            "y": 327,
+            "width": 83,
+            "height": 124
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TRALALA\\bitmap_holder\\00_Bitmap_Holder_005_kotek 02_75x97.bmp",
+          "url": "../extracted_assets/bdf/TRALALA/bitmap_holder/00_Bitmap_Holder_005_kotek 02_75x97.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 75,
+          "height": 97,
+          "frameCount": null,
+          "offset": 214445,
+          "name": "kotek 02",
+          "id": 5,
+          "rect": {
+            "x": 450,
+            "y": 323,
+            "width": 75,
+            "height": 97
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TRALALA\\bitmap_holder\\00_Bitmap_Holder_006_papuga 02_59x129.bmp",
+          "url": "../extracted_assets/bdf/TRALALA/bitmap_holder/00_Bitmap_Holder_006_papuga 02_59x129.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 59,
+          "height": 129,
+          "frameCount": null,
+          "offset": 221965,
+          "name": "papuga 02",
+          "id": 6,
+          "rect": {
+            "x": 4,
+            "y": 118,
+            "width": 59,
+            "height": 129
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TRALALA\\bitmap_holder\\00_Bitmap_Holder_007_szofer 02_140x415.bmp",
+          "url": "../extracted_assets/bdf/TRALALA/bitmap_holder/00_Bitmap_Holder_007_szofer 02_140x415.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 140,
+          "height": 415,
+          "frameCount": null,
+          "offset": 229853,
+          "name": "szofer 02",
+          "id": 7,
+          "rect": {
+            "x": 385,
+            "y": 0,
+            "width": 140,
+            "height": 415
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TRALALA\\bitmap_holder\\00_Bitmap_Holder_008_kucharka_200x381.bmp",
+          "url": "../extracted_assets/bdf/TRALALA/bitmap_holder/00_Bitmap_Holder_008_kucharka_200x381.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 200,
+          "height": 381,
+          "frameCount": null,
+          "offset": 288101,
+          "name": "kucharka ",
+          "id": 8,
+          "rect": {
+            "x": 188,
+            "y": 99,
+            "width": 200,
+            "height": 381
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TRALALA\\bitmap_holder\\00_Bitmap_Holder_009_pokojowka_187x457.bmp",
+          "url": "../extracted_assets/bdf/TRALALA/bitmap_holder/00_Bitmap_Holder_009_pokojowka_187x457.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 187,
+          "height": 457,
+          "frameCount": null,
+          "offset": 364449,
+          "name": "pokojowka",
+          "id": 9,
+          "rect": {
+            "x": 453,
+            "y": 0,
+            "width": 187,
+            "height": 457
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TRALALA\\bitmap_holder\\00_Bitmap_Holder_010_gazeciarz_58x76.bmp",
+          "url": "../extracted_assets/bdf/TRALALA/bitmap_holder/00_Bitmap_Holder_010_gazeciarz_58x76.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 58,
+          "height": 76,
+          "frameCount": null,
+          "offset": 450513,
+          "name": "gazeciarz",
+          "id": 10,
+          "rect": {
+            "x": 147,
+            "y": 0,
+            "width": 58,
+            "height": 76
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TRALALA\\bitmap_holder\\00_Bitmap_Holder_011_sklepikar_103x106.bmp",
+          "url": "../extracted_assets/bdf/TRALALA/bitmap_holder/00_Bitmap_Holder_011_sklepikar_103x106.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 103,
+          "height": 106,
+          "frameCount": null,
+          "offset": 455221,
+          "name": "sklepikar",
+          "id": 11,
+          "rect": {
+            "x": 204,
+            "y": 0,
+            "width": 103,
+            "height": 106
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TRALALA\\bitmap_holder\\00_Bitmap_Holder_012_policjant_81x114.bmp",
+          "url": "../extracted_assets/bdf/TRALALA/bitmap_holder/00_Bitmap_Holder_012_policjant_81x114.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 81,
+          "height": 114,
+          "frameCount": null,
+          "offset": 466393,
+          "name": "policjant",
+          "id": 12,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 81,
+            "height": 114
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TRALALA\\bitmap_holder\\00_Bitmap_Holder_013_adwokat 0_65x80.bmp",
+          "url": "../extracted_assets/bdf/TRALALA/bitmap_holder/00_Bitmap_Holder_013_adwokat 0_65x80.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 65,
+          "height": 80,
+          "frameCount": null,
+          "offset": 476117,
+          "name": "adwokat 0",
+          "id": 13,
+          "rect": {
+            "x": 2,
+            "y": 245,
+            "width": 65,
+            "height": 80
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TRALALA\\bitmap_holder\\00_Bitmap_Holder_014_doktor 02_63x65.bmp",
+          "url": "../extracted_assets/bdf/TRALALA/bitmap_holder/00_Bitmap_Holder_014_doktor 02_63x65.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 63,
+          "height": 65,
+          "frameCount": null,
+          "offset": 481705,
+          "name": "doktor 02",
+          "id": 14,
+          "rect": {
+            "x": 572,
+            "y": 280,
+            "width": 63,
+            "height": 65
+          },
+          "geometryConfidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\TRALALA\\bitmap_holder\\00_Bitmap_Holder_015_myszka 02_106x40.bmp",
+          "url": "../extracted_assets/bdf/TRALALA/bitmap_holder/00_Bitmap_Holder_015_myszka 02_106x40.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 106,
+          "height": 40,
+          "frameCount": null,
+          "offset": 486013,
+          "name": "myszka 02",
+          "id": 15,
+          "rect": {
+            "x": 464,
+            "y": 430,
+            "width": 106,
+            "height": 40
+          },
+          "geometryConfidence": "serialized_entry"
+        }
+      ],
       "audio": []
     },
     {
@@ -67,9 +388,9 @@
       "assets": [
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_000_0007800f_board_video_46x42.gif",
+          "path": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_000_0007800f_board_video_46x42.gif",
           "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_000_0007800f_board_video_46x42.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_000_0007800f_board_video_46x42_still.png",
+          "stillPath": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_000_0007800f_board_video_46x42_still.png",
           "stillUrl": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_000_0007800f_board_video_46x42_still.png",
           "width": 46,
           "height": 42,
@@ -97,9 +418,9 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_002_0008fad0_board_video_241x142.gif",
+          "path": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_002_0008fad0_board_video_241x142.gif",
           "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_002_0008fad0_board_video_241x142.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_002_0008fad0_board_video_241x142_still.png",
+          "stillPath": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_002_0008fad0_board_video_241x142_still.png",
           "stillUrl": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_002_0008fad0_board_video_241x142_still.png",
           "width": 241,
           "height": 142,
@@ -127,9 +448,9 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_004_000c0f89_board_video_155x285.gif",
+          "path": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_004_000c0f89_board_video_155x285.gif",
           "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_004_000c0f89_board_video_155x285.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_004_000c0f89_board_video_155x285_still.png",
+          "stillPath": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_004_000c0f89_board_video_155x285_still.png",
           "stillUrl": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_004_000c0f89_board_video_155x285_still.png",
           "width": 155,
           "height": 285,
@@ -157,9 +478,9 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_006_000fe084_board_video_78x73.gif",
+          "path": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_006_000fe084_board_video_78x73.gif",
           "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_006_000fe084_board_video_78x73.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_006_000fe084_board_video_78x73_still.png",
+          "stillPath": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_006_000fe084_board_video_78x73_still.png",
           "stillUrl": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_006_000fe084_board_video_78x73_still.png",
           "width": 78,
           "height": 73,
@@ -187,9 +508,9 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_008_00118596_board_video_83x124.gif",
+          "path": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_008_00118596_board_video_83x124.gif",
           "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_008_00118596_board_video_83x124.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_008_00118596_board_video_83x124_still.png",
+          "stillPath": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_008_00118596_board_video_83x124_still.png",
           "stillUrl": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_008_00118596_board_video_83x124_still.png",
           "width": 83,
           "height": 124,
@@ -217,9 +538,9 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_010_001389a4_board_video_69x111.gif",
+          "path": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_010_001389a4_board_video_69x111.gif",
           "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_010_001389a4_board_video_69x111.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_010_001389a4_board_video_69x111_still.png",
+          "stillPath": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_010_001389a4_board_video_69x111_still.png",
           "stillUrl": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_010_001389a4_board_video_69x111_still.png",
           "width": 69,
           "height": 111,
@@ -247,9 +568,9 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_012_0017d509_board_video_71x137.gif",
+          "path": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_012_0017d509_board_video_71x137.gif",
           "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_012_0017d509_board_video_71x137.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_012_0017d509_board_video_71x137_still.png",
+          "stillPath": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_012_0017d509_board_video_71x137_still.png",
           "stillUrl": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_012_0017d509_board_video_71x137_still.png",
           "width": 71,
           "height": 137,
@@ -277,9 +598,9 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_014_001ae918_board_video_133x112.gif",
+          "path": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_014_001ae918_board_video_133x112.gif",
           "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_014_001ae918_board_video_133x112.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_014_001ae918_board_video_133x112_still.png",
+          "stillPath": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_014_001ae918_board_video_133x112_still.png",
           "stillUrl": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_014_001ae918_board_video_133x112_still.png",
           "width": 133,
           "height": 112,
@@ -307,9 +628,9 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_016_001d0952_board_video_57x36.gif",
+          "path": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_016_001d0952_board_video_57x36.gif",
           "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_016_001d0952_board_video_57x36.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_016_001d0952_board_video_57x36_still.png",
+          "stillPath": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_016_001d0952_board_video_57x36_still.png",
           "stillUrl": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_016_001d0952_board_video_57x36_still.png",
           "width": 57,
           "height": 36,
@@ -337,9 +658,9 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_018_001e7ee0_board_video_136x162.gif",
+          "path": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_018_001e7ee0_board_video_136x162.gif",
           "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_018_001e7ee0_board_video_136x162.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_018_001e7ee0_board_video_136x162_still.png",
+          "stillPath": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_018_001e7ee0_board_video_136x162_still.png",
           "stillUrl": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_018_001e7ee0_board_video_136x162_still.png",
           "width": 136,
           "height": 162,
@@ -367,9 +688,9 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_020_00234de4_board_video_59x78.gif",
+          "path": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_020_00234de4_board_video_59x78.gif",
           "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_020_00234de4_board_video_59x78.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_020_00234de4_board_video_59x78_still.png",
+          "stillPath": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_020_00234de4_board_video_59x78_still.png",
           "stillUrl": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_020_00234de4_board_video_59x78_still.png",
           "width": 59,
           "height": 78,
@@ -397,9 +718,9 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_022_002500f7_board_video_102x111.gif",
+          "path": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_022_002500f7_board_video_102x111.gif",
           "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_022_002500f7_board_video_102x111.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_022_002500f7_board_video_102x111_still.png",
+          "stillPath": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_022_002500f7_board_video_102x111_still.png",
           "stillUrl": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_022_002500f7_board_video_102x111_still.png",
           "width": 102,
           "height": 111,
@@ -427,9 +748,9 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_024_002a4aa3_board_video_83x114.gif",
+          "path": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_024_002a4aa3_board_video_83x114.gif",
           "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_024_002a4aa3_board_video_83x114.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_024_002a4aa3_board_video_83x114_still.png",
+          "stillPath": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_024_002a4aa3_board_video_83x114_still.png",
           "stillUrl": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_024_002a4aa3_board_video_83x114_still.png",
           "width": 83,
           "height": 114,
@@ -457,9 +778,9 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_026_002c57ac_board_video_30x18.gif",
+          "path": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_026_002c57ac_board_video_30x18.gif",
           "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_026_002c57ac_board_video_30x18.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_026_002c57ac_board_video_30x18_still.png",
+          "stillPath": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_026_002c57ac_board_video_30x18_still.png",
           "stillUrl": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_026_002c57ac_board_video_30x18_still.png",
           "width": 30,
           "height": 18,
@@ -487,9 +808,9 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_028_002dc3ce_board_video_65x67.gif",
+          "path": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_028_002dc3ce_board_video_65x67.gif",
           "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_028_002dc3ce_board_video_65x67.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_028_002dc3ce_board_video_65x67_still.png",
+          "stillPath": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_028_002dc3ce_board_video_65x67_still.png",
           "stillUrl": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_028_002dc3ce_board_video_65x67_still.png",
           "width": 65,
           "height": 67,
@@ -517,9 +838,9 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_030_002f5f1d_board_video_297x56.gif",
+          "path": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_030_002f5f1d_board_video_297x56.gif",
           "url": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_030_002f5f1d_board_video_297x56.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_030_002f5f1d_board_video_297x56_still.png",
+          "stillPath": "extracted_assets\\bdf\\TRALALA\\animations\\01_Transparent_Video_Holder_030_002f5f1d_board_video_297x56_still.png",
           "stillUrl": "../extracted_assets/bdf/TRALALA/animations/01_Transparent_Video_Holder_030_002f5f1d_board_video_297x56_still.png",
           "width": 297,
           "height": 56,
@@ -549,7 +870,7 @@
       "audio": [
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_000_0007800f_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_000_0007800f_board_video_audio.wav",
           "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_000_0007800f_board_video_audio.wav",
           "durationSeconds": 2.0,
           "sampleRate": 22050,
@@ -559,7 +880,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_002_0008fad0_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_002_0008fad0_board_video_audio.wav",
           "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_002_0008fad0_board_video_audio.wav",
           "durationSeconds": 2.0,
           "sampleRate": 22050,
@@ -569,7 +890,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_004_000c0f89_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_004_000c0f89_board_video_audio.wav",
           "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_004_000c0f89_board_video_audio.wav",
           "durationSeconds": 2.0,
           "sampleRate": 22050,
@@ -579,7 +900,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_006_000fe084_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_006_000fe084_board_video_audio.wav",
           "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_006_000fe084_board_video_audio.wav",
           "durationSeconds": 2.0,
           "sampleRate": 22050,
@@ -589,7 +910,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_008_00118596_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_008_00118596_board_video_audio.wav",
           "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_008_00118596_board_video_audio.wav",
           "durationSeconds": 2.0,
           "sampleRate": 22050,
@@ -599,7 +920,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_010_001389a4_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_010_001389a4_board_video_audio.wav",
           "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_010_001389a4_board_video_audio.wav",
           "durationSeconds": 4.0,
           "sampleRate": 22050,
@@ -609,7 +930,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_012_0017d509_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_012_0017d509_board_video_audio.wav",
           "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_012_0017d509_board_video_audio.wav",
           "durationSeconds": 3.0,
           "sampleRate": 22050,
@@ -619,7 +940,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_014_001ae918_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_014_001ae918_board_video_audio.wav",
           "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_014_001ae918_board_video_audio.wav",
           "durationSeconds": 2.0,
           "sampleRate": 22050,
@@ -629,7 +950,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_016_001d0952_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_016_001d0952_board_video_audio.wav",
           "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_016_001d0952_board_video_audio.wav",
           "durationSeconds": 2.0,
           "sampleRate": 22050,
@@ -639,7 +960,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_018_001e7ee0_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_018_001e7ee0_board_video_audio.wav",
           "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_018_001e7ee0_board_video_audio.wav",
           "durationSeconds": 3.0,
           "sampleRate": 22050,
@@ -649,7 +970,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_020_00234de4_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_020_00234de4_board_video_audio.wav",
           "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_020_00234de4_board_video_audio.wav",
           "durationSeconds": 2.0,
           "sampleRate": 22050,
@@ -659,7 +980,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_022_002500f7_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_022_002500f7_board_video_audio.wav",
           "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_022_002500f7_board_video_audio.wav",
           "durationSeconds": 4.0,
           "sampleRate": 22050,
@@ -669,7 +990,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_024_002a4aa3_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_024_002a4aa3_board_video_audio.wav",
           "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_024_002a4aa3_board_video_audio.wav",
           "durationSeconds": 2.0,
           "sampleRate": 22050,
@@ -679,7 +1000,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_026_002c57ac_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_026_002c57ac_board_video_audio.wav",
           "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_026_002c57ac_board_video_audio.wav",
           "durationSeconds": 2.0,
           "sampleRate": 22050,
@@ -689,7 +1010,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_028_002dc3ce_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_028_002dc3ce_board_video_audio.wav",
           "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_028_002dc3ce_board_video_audio.wav",
           "durationSeconds": 2.0,
           "sampleRate": 22050,
@@ -699,7 +1020,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_030_002f5f1d_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\TRALALA\\embedded\\01_Transparent_Video_Holder_030_002f5f1d_board_video_audio.wav",
           "url": "../extracted_assets/bdf/TRALALA/embedded/01_Transparent_Video_Holder_030_002f5f1d_board_video_audio.wav",
           "durationSeconds": 4.0,
           "sampleRate": 22050,
@@ -734,8 +1055,18 @@
             "width": 86,
             "height": 110
           },
+          "name": "",
+          "layer": 5,
+          "enabled": true,
+          "flags": [
+            41,
+            0,
+            255
+          ],
           "sourceOffset": 3424713,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 16,
+          "auxState": 0
         },
         {
           "id": 1,
@@ -745,8 +1076,18 @@
             "width": 242,
             "height": 176
           },
+          "name": "",
+          "layer": 5,
+          "enabled": true,
+          "flags": [
+            41,
+            0,
+            255
+          ],
           "sourceOffset": 3424814,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 16,
+          "auxState": 0
         },
         {
           "id": 2,
@@ -756,8 +1097,18 @@
             "width": 65,
             "height": 70
           },
+          "name": "",
+          "layer": 5,
+          "enabled": true,
+          "flags": [
+            41,
+            0,
+            255
+          ],
           "sourceOffset": 3424915,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 16,
+          "auxState": 0
         },
         {
           "id": 3,
@@ -767,8 +1118,18 @@
             "width": 71,
             "height": 59
           },
+          "name": "",
+          "layer": 5,
+          "enabled": true,
+          "flags": [
+            41,
+            0,
+            255
+          ],
           "sourceOffset": 3425016,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 16,
+          "auxState": 0
         },
         {
           "id": 4,
@@ -778,8 +1139,18 @@
             "width": 74,
             "height": 74
           },
+          "name": "",
+          "layer": 5,
+          "enabled": true,
+          "flags": [
+            41,
+            0,
+            255
+          ],
           "sourceOffset": 3425117,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 16,
+          "auxState": 0
         },
         {
           "id": 5,
@@ -789,8 +1160,18 @@
             "width": 61,
             "height": 82
           },
+          "name": "",
+          "layer": 5,
+          "enabled": true,
+          "flags": [
+            41,
+            0,
+            255
+          ],
           "sourceOffset": 3425218,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 16,
+          "auxState": 0
         },
         {
           "id": 6,
@@ -800,8 +1181,18 @@
             "width": 54,
             "height": 118
           },
+          "name": "",
+          "layer": 5,
+          "enabled": true,
+          "flags": [
+            41,
+            0,
+            255
+          ],
           "sourceOffset": 3425319,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 16,
+          "auxState": 0
         },
         {
           "id": 7,
@@ -811,8 +1202,18 @@
             "width": 106,
             "height": 92
           },
+          "name": "",
+          "layer": 5,
+          "enabled": true,
+          "flags": [
+            41,
+            0,
+            255
+          ],
           "sourceOffset": 3425420,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 16,
+          "auxState": 0
         },
         {
           "id": 8,
@@ -822,8 +1223,18 @@
             "width": 67,
             "height": 48
           },
+          "name": "",
+          "layer": 5,
+          "enabled": true,
+          "flags": [
+            41,
+            0,
+            255
+          ],
           "sourceOffset": 3425521,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 16,
+          "auxState": 0
         },
         {
           "id": 9,
@@ -833,8 +1244,18 @@
             "width": 88,
             "height": 101
           },
+          "name": "",
+          "layer": 5,
+          "enabled": true,
+          "flags": [
+            41,
+            0,
+            255
+          ],
           "sourceOffset": 3425622,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 16,
+          "auxState": 0
         },
         {
           "id": 10,
@@ -844,8 +1265,18 @@
             "width": 50,
             "height": 57
           },
+          "name": "",
+          "layer": 5,
+          "enabled": true,
+          "flags": [
+            41,
+            0,
+            255
+          ],
           "sourceOffset": 3425723,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 16,
+          "auxState": 0
         },
         {
           "id": 11,
@@ -855,8 +1286,18 @@
             "width": 93,
             "height": 86
           },
+          "name": "",
+          "layer": 5,
+          "enabled": true,
+          "flags": [
+            41,
+            0,
+            255
+          ],
           "sourceOffset": 3425824,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 16,
+          "auxState": 0
         },
         {
           "id": 12,
@@ -866,41 +1307,81 @@
             "width": 60,
             "height": 102
           },
+          "name": "",
+          "layer": 5,
+          "enabled": true,
+          "flags": [
+            41,
+            0,
+            255
+          ],
           "sourceOffset": 3425925,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 16,
+          "auxState": 0
         },
         {
-          "id": 13,
+          "id": 15,
           "rect": {
             "x": 475,
             "y": 430,
             "width": 89,
             "height": 36
           },
+          "name": "",
+          "layer": 5,
+          "enabled": true,
+          "flags": [
+            41,
+            0,
+            255
+          ],
           "sourceOffset": 3426026,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 16,
+          "auxState": 0
         },
         {
-          "id": 14,
+          "id": 13,
           "rect": {
             "x": 17,
             "y": 289,
             "width": 40,
             "height": 35
           },
+          "name": "",
+          "layer": 5,
+          "enabled": true,
+          "flags": [
+            41,
+            0,
+            255
+          ],
           "sourceOffset": 3426127,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 16,
+          "auxState": 0
         },
         {
-          "id": 15,
+          "id": 14,
           "rect": {
             "x": 569,
             "y": 280,
             "width": 70,
             "height": 46
           },
+          "name": "",
+          "layer": 6,
+          "enabled": true,
+          "flags": [
+            41,
+            0,
+            255
+          ],
           "sourceOffset": 3426228,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 16,
+          "auxState": 0
         }
       ],
       "sourceOffset": 3423597,
@@ -962,7 +1443,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\04_Sound_Holder_000_0034928d.wav",
+          "path": "extracted_assets\\bdf\\TRALALA\\embedded\\04_Sound_Holder_000_0034928d.wav",
           "url": "../extracted_assets/bdf/TRALALA/embedded/04_Sound_Holder_000_0034928d.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -972,7 +1453,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\TRALALA\\embedded\\04_Sound_Holder_001_00366275.wav",
+          "path": "extracted_assets\\bdf\\TRALALA\\embedded\\04_Sound_Holder_001_00366275.wav",
           "url": "../extracted_assets/bdf/TRALALA/embedded/04_Sound_Holder_001_00366275.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -1000,18 +1481,6 @@
         "signature": "SetTextMode()"
       },
       {
-        "name": "if",
-        "signature": "if(textMode==0)"
-      },
-      {
-        "name": "while",
-        "signature": "while(index < 16)"
-      },
-      {
-        "name": "while",
-        "signature": "while(index < 16)"
-      },
-      {
         "name": "HotSpot_Holder.LeftButtonClickOn",
         "signature": "HotSpot_Holder.LeftButtonClickOn(int rectID)"
       },
@@ -1028,10 +1497,6 @@
         "signature": "Text_Holder.PlayMark(int textID,int markNo)"
       },
       {
-        "name": "switch",
-        "signature": "switch(markNo)"
-      },
-      {
         "name": "Text_Holder.EndOfSynchroText",
         "signature": "Text_Holder.EndOfSynchroText(int textID)"
       },
@@ -1040,40 +1505,8 @@
         "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(rectID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbar)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(txtHotSpotOn==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.InPlace",
         "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==480)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarCase)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==0)"
       },
       {
         "name": "Group.Sprite_Holder.MouseMoveIn",
@@ -1088,28 +1521,12 @@
         "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(spriteID==11)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseClickOnUp",
         "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.EndAnimation",
         "signature": "Group.Sprite_Holder.EndAnimation(int spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
       },
       {
         "name": "Text_Holder.ScrollTextUp",
@@ -1136,16 +1553,8 @@
         "signature": "Text_Holder.ClickOnText(int textID)"
       },
       {
-        "name": "if",
-        "signature": "if(playStatus)"
-      },
-      {
         "name": "Sound_Holder.EndPlaySound",
         "signature": "Sound_Holder.EndPlaySound(int soundID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(soundID==0 && textMode)"
       },
       {
         "name": "OnLButtonDown",

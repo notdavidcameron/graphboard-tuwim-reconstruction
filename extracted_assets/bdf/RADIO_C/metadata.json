@@ -28,7 +28,1148 @@
       "display_name": "Sprite_Holder",
       "private_offset": 2707,
       "private_size": 315484,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_000_dobry_phase_00.png",
+          "offset": 2987,
+          "size": 135747,
+          "pixel_size": 235200,
+          "width": 560,
+          "height": 420,
+          "name": "dobry",
+          "id": 0,
+          "definition_id": 0,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_000_dobry_phase_00.png",
+              "size": 135747
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_001_czerwony_phase_00.png",
+          "offset": 238521,
+          "size": 1584,
+          "pixel_size": 1254,
+          "width": 38,
+          "height": 33,
+          "name": "czerwony ",
+          "id": 1,
+          "definition_id": 1,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_001_czerwony_phase_00.png",
+              "size": 1584
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_002_domek 01_phase_00.png",
+          "offset": 240217,
+          "size": 4021,
+          "pixel_size": 5742,
+          "width": 66,
+          "height": 87,
+          "name": "domek 01",
+          "id": 2,
+          "definition_id": 2,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_002_domek 01_phase_00.png",
+              "size": 4021
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_003_fioletowy_phase_00.png",
+          "offset": 246265,
+          "size": 1898,
+          "pixel_size": 1634,
+          "width": 43,
+          "height": 38,
+          "name": "fioletowy",
+          "id": 3,
+          "definition_id": 3,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_003_fioletowy_phase_00.png",
+              "size": 1898
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_004_kakadu 01_phase_00.png",
+          "offset": 248167,
+          "size": 1878,
+          "pixel_size": 1680,
+          "width": 40,
+          "height": 42,
+          "name": "kakadu 01",
+          "id": 4,
+          "definition_id": 4,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_004_kakadu 01_phase_00.png",
+              "size": 1878
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_005_kruk 01_phase_00.png",
+          "offset": 250253,
+          "size": 2550,
+          "pixel_size": 2990,
+          "width": 65,
+          "height": 46,
+          "name": "kruk 01",
+          "id": 5,
+          "definition_id": 5,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_005_kruk 01_phase_00.png",
+              "size": 2550
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_006_mewa 01_phase_00.png",
+          "offset": 253627,
+          "size": 2297,
+          "pixel_size": 2436,
+          "width": 42,
+          "height": 58,
+          "name": "mewa 01",
+          "id": 6,
+          "definition_id": 6,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_006_mewa 01_phase_00.png",
+              "size": 2297
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_007_papuga 01_phase_00.png",
+          "offset": 256427,
+          "size": 2491,
+          "pixel_size": 2592,
+          "width": 54,
+          "height": 48,
+          "name": "papuga 01",
+          "id": 7,
+          "definition_id": 7,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_007_papuga 01_phase_00.png",
+              "size": 2491
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_008_s_owik 01_phase_00.png",
+          "offset": 259325,
+          "size": 1773,
+          "pixel_size": 1482,
+          "width": 39,
+          "height": 38,
+          "name": "słowik 01",
+          "id": 8,
+          "definition_id": 8,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_008_s_owik 01_phase_00.png",
+              "size": 1773
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_009_tukan 01_phase_00.png",
+          "offset": 261246,
+          "size": 2526,
+          "pixel_size": 3021,
+          "width": 53,
+          "height": 57,
+          "name": "tukan 01",
+          "id": 9,
+          "definition_id": 9,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_009_tukan 01_phase_00.png",
+              "size": 2526
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_010__ty 01_phase_00.png",
+          "offset": 264535,
+          "size": 1253,
+          "pixel_size": 672,
+          "width": 28,
+          "height": 24,
+          "name": "żółty 01",
+          "id": 10,
+          "definition_id": 10,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_010__ty 01_phase_00.png",
+              "size": 1253
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_011_czerwony_phase_00.png",
+          "offset": 265475,
+          "size": 1511,
+          "pixel_size": 2508,
+          "width": 38,
+          "height": 33,
+          "name": "czerwony ",
+          "id": 11,
+          "definition_id": 11,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_011_czerwony_phase_00.png",
+              "size": 1511
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_011_czerwony_phase_01.png",
+              "size": 1400
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_012_domek_phase_00.png",
+          "offset": 268251,
+          "size": 4036,
+          "pixel_size": 11484,
+          "width": 66,
+          "height": 87,
+          "name": "domek ",
+          "id": 12,
+          "definition_id": 12,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_012_domek_phase_00.png",
+              "size": 4036
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_012_domek_phase_01.png",
+              "size": 3571
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_013_fioletowy_phase_00.png",
+          "offset": 280079,
+          "size": 1935,
+          "pixel_size": 3268,
+          "width": 43,
+          "height": 38,
+          "name": "fioletowy",
+          "id": 13,
+          "definition_id": 13,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_013_fioletowy_phase_00.png",
+              "size": 1935
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_013_fioletowy_phase_01.png",
+              "size": 1689
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_014_kakadu_phase_00.png",
+          "offset": 283615,
+          "size": 1861,
+          "pixel_size": 3360,
+          "width": 40,
+          "height": 42,
+          "name": "kakadu ",
+          "id": 14,
+          "definition_id": 14,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_014_kakadu_phase_00.png",
+              "size": 1861
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_014_kakadu_phase_01.png",
+              "size": 1702
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_015_kruk_phase_00.png",
+          "offset": 287335,
+          "size": 2318,
+          "pixel_size": 5980,
+          "width": 65,
+          "height": 46,
+          "name": "kruk ",
+          "id": 15,
+          "definition_id": 15,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_015_kruk_phase_00.png",
+              "size": 2318
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_015_kruk_phase_01.png",
+              "size": 2109
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_016_mewa_phase_00.png",
+          "offset": 293583,
+          "size": 2142,
+          "pixel_size": 4872,
+          "width": 42,
+          "height": 58,
+          "name": "mewa ",
+          "id": 16,
+          "definition_id": 16,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_016_mewa_phase_00.png",
+              "size": 2142
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_016_mewa_phase_01.png",
+              "size": 2021
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_017_papuga_phase_00.png",
+          "offset": 298723,
+          "size": 2470,
+          "pixel_size": 5184,
+          "width": 54,
+          "height": 48,
+          "name": "papuga ",
+          "id": 17,
+          "definition_id": 17,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_017_papuga_phase_00.png",
+              "size": 2470
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_017_papuga_phase_01.png",
+              "size": 2297
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_018_s_owik_phase_00.png",
+          "offset": 304251,
+          "size": 1830,
+          "pixel_size": 2964,
+          "width": 39,
+          "height": 38,
+          "name": "słowik ",
+          "id": 18,
+          "definition_id": 18,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_018_s_owik_phase_00.png",
+              "size": 1830
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_018_s_owik_phase_01.png",
+              "size": 1583
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_019_tukan_phase_00.png",
+          "offset": 307597,
+          "size": 2352,
+          "pixel_size": 6042,
+          "width": 53,
+          "height": 57,
+          "name": "tukan ",
+          "id": 19,
+          "definition_id": 19,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_019_tukan_phase_00.png",
+              "size": 2352
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_019_tukan_phase_01.png",
+              "size": 2289
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_020__ty_phase_00.png",
+          "offset": 313907,
+          "size": 1372,
+          "pixel_size": 1344,
+          "width": 28,
+          "height": 24,
+          "name": "żółty ",
+          "id": 20,
+          "definition_id": 20,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_020__ty_phase_00.png",
+              "size": 1372
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_020__ty_phase_01.png",
+              "size": 1316
+            }
+          ]
+        }
+      ],
+      "sprite_holder": {
+        "version": 1,
+        "definition_count": 21,
+        "instance_count": 21,
+        "parsed_definitions": 21,
+        "parsed_instances": 21,
+        "definitions": [
+          {
+            "index": 0,
+            "name": "dobry",
+            "record_offset": 2719,
+            "blob_offset": 2723,
+            "blob_size": 235464,
+            "width": 560,
+            "height": 420,
+            "phase_count": 1,
+            "phase_hint": 3658221098,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_000_dobry_phase_00.png",
+                "size": 135747
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "czerwony ",
+            "record_offset": 238187,
+            "blob_offset": 238191,
+            "blob_size": 1584,
+            "width": 38,
+            "height": 33,
+            "phase_count": 1,
+            "phase_hint": 1431983152,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_001_czerwony_phase_00.png",
+                "size": 1584
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "domek 01",
+            "record_offset": 239775,
+            "blob_offset": 239779,
+            "blob_size": 6180,
+            "width": 66,
+            "height": 87,
+            "phase_count": 1,
+            "phase_hint": 1532648282,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_002_domek 01_phase_00.png",
+                "size": 4021
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "name": "fioletowy",
+            "record_offset": 245959,
+            "blob_offset": 245963,
+            "blob_size": 1936,
+            "width": 43,
+            "height": 38,
+            "phase_count": 1,
+            "phase_hint": 1518305152,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_003_fioletowy_phase_00.png",
+                "size": 1898
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "name": "kakadu 01",
+            "record_offset": 247899,
+            "blob_offset": 247903,
+            "blob_size": 1944,
+            "width": 40,
+            "height": 42,
+            "phase_count": 1,
+            "phase_hint": 811237210,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_004_kakadu 01_phase_00.png",
+                "size": 1878
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "name": "kruk 01",
+            "record_offset": 249847,
+            "blob_offset": 249851,
+            "blob_size": 3392,
+            "width": 65,
+            "height": 46,
+            "phase_count": 1,
+            "phase_hint": 1541364701,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_005_kruk 01_phase_00.png",
+                "size": 2550
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "name": "mewa 01",
+            "record_offset": 253243,
+            "blob_offset": 253247,
+            "blob_size": 2816,
+            "width": 42,
+            "height": 58,
+            "phase_count": 1,
+            "phase_hint": 1429287385,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_006_mewa 01_phase_00.png",
+                "size": 2297
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "name": "papuga 01",
+            "record_offset": 256063,
+            "blob_offset": 256067,
+            "blob_size": 2952,
+            "width": 54,
+            "height": 48,
+            "phase_count": 1,
+            "phase_hint": 2846457732,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_007_papuga 01_phase_00.png",
+                "size": 2491
+              }
+            ]
+          },
+          {
+            "index": 8,
+            "name": "słowik 01",
+            "record_offset": 259019,
+            "blob_offset": 259023,
+            "blob_size": 1784,
+            "width": 39,
+            "height": 38,
+            "phase_count": 1,
+            "phase_hint": 2276165426,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_008_s_owik 01_phase_00.png",
+                "size": 1773
+              }
+            ]
+          },
+          {
+            "index": 9,
+            "name": "tukan 01",
+            "record_offset": 260807,
+            "blob_offset": 260811,
+            "blob_size": 3456,
+            "width": 53,
+            "height": 57,
+            "phase_count": 1,
+            "phase_hint": 907161648,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_009_tukan 01_phase_00.png",
+                "size": 2526
+              }
+            ]
+          },
+          {
+            "index": 10,
+            "name": "żółty 01",
+            "record_offset": 264267,
+            "blob_offset": 264271,
+            "blob_size": 936,
+            "width": 28,
+            "height": 24,
+            "phase_count": 1,
+            "phase_hint": 2880100864,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_010__ty 01_phase_00.png",
+                "size": 1253
+              }
+            ]
+          },
+          {
+            "index": 11,
+            "name": "czerwony ",
+            "record_offset": 265207,
+            "blob_offset": 265211,
+            "blob_size": 2772,
+            "width": 38,
+            "height": 33,
+            "phase_count": 2,
+            "phase_hint": 1431983152,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_011_czerwony_phase_00.png",
+                "size": 1511
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_011_czerwony_phase_01.png",
+                "size": 1400
+              }
+            ]
+          },
+          {
+            "index": 12,
+            "name": "domek ",
+            "record_offset": 267983,
+            "blob_offset": 267987,
+            "blob_size": 11748,
+            "width": 66,
+            "height": 87,
+            "phase_count": 2,
+            "phase_hint": 1515936347,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_012_domek_phase_00.png",
+                "size": 4036
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_012_domek_phase_01.png",
+                "size": 3571
+              }
+            ]
+          },
+          {
+            "index": 13,
+            "name": "fioletowy",
+            "record_offset": 279735,
+            "blob_offset": 279739,
+            "blob_size": 3608,
+            "width": 43,
+            "height": 38,
+            "phase_count": 2,
+            "phase_hint": 1515945856,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_013_fioletowy_phase_00.png",
+                "size": 1935
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_013_fioletowy_phase_01.png",
+                "size": 1689
+              }
+            ]
+          },
+          {
+            "index": 14,
+            "name": "kakadu ",
+            "record_offset": 283347,
+            "blob_offset": 283351,
+            "blob_size": 3624,
+            "width": 40,
+            "height": 42,
+            "phase_count": 2,
+            "phase_hint": 811227994,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_014_kakadu_phase_00.png",
+                "size": 1861
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_014_kakadu_phase_01.png",
+                "size": 1702
+              }
+            ]
+          },
+          {
+            "index": 15,
+            "name": "kruk ",
+            "record_offset": 286975,
+            "blob_offset": 286979,
+            "blob_size": 6336,
+            "width": 65,
+            "height": 46,
+            "phase_count": 2,
+            "phase_hint": 1532713950,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_015_kruk_phase_00.png",
+                "size": 2318
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_015_kruk_phase_01.png",
+                "size": 2109
+              }
+            ]
+          },
+          {
+            "index": 16,
+            "name": "mewa ",
+            "record_offset": 293315,
+            "blob_offset": 293319,
+            "blob_size": 5136,
+            "width": 42,
+            "height": 58,
+            "phase_count": 2,
+            "phase_hint": 1429287385,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_016_mewa_phase_00.png",
+                "size": 2142
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_016_mewa_phase_01.png",
+                "size": 2021
+              }
+            ]
+          },
+          {
+            "index": 17,
+            "name": "papuga ",
+            "record_offset": 298455,
+            "blob_offset": 298459,
+            "blob_size": 5448,
+            "width": 54,
+            "height": 48,
+            "phase_count": 2,
+            "phase_hint": 2846457732,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_017_papuga_phase_00.png",
+                "size": 2470
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_017_papuga_phase_01.png",
+                "size": 2297
+              }
+            ]
+          },
+          {
+            "index": 18,
+            "name": "słowik ",
+            "record_offset": 303907,
+            "blob_offset": 303911,
+            "blob_size": 3304,
+            "width": 39,
+            "height": 38,
+            "phase_count": 2,
+            "phase_hint": 2276165426,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_018_s_owik_phase_00.png",
+                "size": 1830
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_018_s_owik_phase_01.png",
+                "size": 1583
+              }
+            ]
+          },
+          {
+            "index": 19,
+            "name": "tukan ",
+            "record_offset": 307215,
+            "blob_offset": 307219,
+            "blob_size": 6420,
+            "width": 53,
+            "height": 57,
+            "phase_count": 2,
+            "phase_hint": 907161648,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_019_tukan_phase_00.png",
+                "size": 2352
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_019_tukan_phase_01.png",
+                "size": 2289
+              }
+            ]
+          },
+          {
+            "index": 20,
+            "name": "żółty ",
+            "record_offset": 313639,
+            "blob_offset": 313643,
+            "blob_size": 1608,
+            "width": 28,
+            "height": 24,
+            "phase_count": 2,
+            "phase_hint": 2863389184,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_020__ty_phase_00.png",
+                "size": 1372
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_020__ty_phase_01.png",
+                "size": 1316
+              }
+            ]
+          }
+        ],
+        "instances": [
+          {
+            "index": 0,
+            "definition_id": 0,
+            "field04": 2,
+            "x": 40,
+            "y": -420,
+            "z": 2,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 315251
+          },
+          {
+            "index": 1,
+            "definition_id": 1,
+            "field04": 1,
+            "x": 472,
+            "y": 231,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 315391
+          },
+          {
+            "index": 2,
+            "definition_id": 2,
+            "field04": 1,
+            "x": 474,
+            "y": 86,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 315531
+          },
+          {
+            "index": 3,
+            "definition_id": 3,
+            "field04": 1,
+            "x": 445,
+            "y": 276,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 315671
+          },
+          {
+            "index": 4,
+            "definition_id": 4,
+            "field04": 1,
+            "x": 389,
+            "y": 114,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 315811
+          },
+          {
+            "index": 5,
+            "definition_id": 5,
+            "field04": 1,
+            "x": 559,
+            "y": 198,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 315951
+          },
+          {
+            "index": 6,
+            "definition_id": 6,
+            "field04": 1,
+            "x": 495,
+            "y": 139,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 316091
+          },
+          {
+            "index": 7,
+            "definition_id": 7,
+            "field04": 1,
+            "x": 552,
+            "y": 242,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 316231
+          },
+          {
+            "index": 8,
+            "definition_id": 8,
+            "field04": 1,
+            "x": 250,
+            "y": 185,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 316371
+          },
+          {
+            "index": 9,
+            "definition_id": 9,
+            "field04": 1,
+            "x": 165,
+            "y": 39,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 316511
+          },
+          {
+            "index": 10,
+            "definition_id": 10,
+            "field04": 1,
+            "x": 280,
+            "y": 272,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 316651
+          },
+          {
+            "index": 11,
+            "definition_id": 11,
+            "field04": 1,
+            "x": 472,
+            "y": 231,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 316791
+          },
+          {
+            "index": 12,
+            "definition_id": 12,
+            "field04": 1,
+            "x": 474,
+            "y": 86,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 316931
+          },
+          {
+            "index": 13,
+            "definition_id": 13,
+            "field04": 1,
+            "x": 445,
+            "y": 276,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 317071
+          },
+          {
+            "index": 14,
+            "definition_id": 14,
+            "field04": 1,
+            "x": 389,
+            "y": 114,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 317211
+          },
+          {
+            "index": 15,
+            "definition_id": 15,
+            "field04": 1,
+            "x": 559,
+            "y": 198,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 317351
+          },
+          {
+            "index": 16,
+            "definition_id": 16,
+            "field04": 1,
+            "x": 495,
+            "y": 139,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 317491
+          },
+          {
+            "index": 17,
+            "definition_id": 17,
+            "field04": 1,
+            "x": 552,
+            "y": 242,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 317631
+          },
+          {
+            "index": 18,
+            "definition_id": 18,
+            "field04": 1,
+            "x": 250,
+            "y": 185,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 317771
+          },
+          {
+            "index": 19,
+            "definition_id": 19,
+            "field04": 1,
+            "x": 165,
+            "y": 39,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 317911
+          },
+          {
+            "index": 20,
+            "definition_id": 20,
+            "field04": 1,
+            "x": 280,
+            "y": 272,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 318051
+          }
+        ]
+      }
     },
     {
       "index": 1,
@@ -37,19 +1178,549 @@
       "display_name": "Bitmap_Holder",
       "private_offset": 319323,
       "private_size": 307356,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\RADIO_C\\bitmap_holder\\01_Bitmap_Holder_000_radionekw_640x480.bmp",
+          "offset": 319463,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "radionekw",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 640,
+            "height": 480
+          },
+          "geometry_confidence": "serialized_entry"
+        }
+      ],
+      "bitmap_holder": {
+        "version": 1,
+        "declared_count": 1,
+        "parsed_count": 1,
+        "frames": [
+          {
+            "index": 0,
+            "name": "radionekw",
+            "record_offset": 319331,
+            "record_size": 307344,
+            "pixel_offset": 319463,
+            "width": 640,
+            "height": 480,
+            "right": 640,
+            "bottom": 480,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 640,
+              "height": 480
+            },
+            "bmp_output": "extracted_assets\\bdf\\RADIO_C\\bitmap_holder\\01_Bitmap_Holder_000_radionekw_640x480.bmp"
+          }
+        ]
+      }
     }
   ],
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RADIO_C\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\RADIO_C\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RADIO_C\\script.txt",
+      "path": "extracted_assets\\bdf\\RADIO_C\\script.txt",
       "size": 8808
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_000_dobry_phase_00.png",
+      "offset": 2987,
+      "size": 135747,
+      "pixel_size": 235200,
+      "width": 560,
+      "height": 420,
+      "name": "dobry",
+      "id": 0,
+      "definition_id": 0,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_000_dobry_phase_00.png",
+          "size": 135747
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_001_czerwony_phase_00.png",
+      "offset": 238521,
+      "size": 1584,
+      "pixel_size": 1254,
+      "width": 38,
+      "height": 33,
+      "name": "czerwony ",
+      "id": 1,
+      "definition_id": 1,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_001_czerwony_phase_00.png",
+          "size": 1584
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_002_domek 01_phase_00.png",
+      "offset": 240217,
+      "size": 4021,
+      "pixel_size": 5742,
+      "width": 66,
+      "height": 87,
+      "name": "domek 01",
+      "id": 2,
+      "definition_id": 2,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_002_domek 01_phase_00.png",
+          "size": 4021
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_003_fioletowy_phase_00.png",
+      "offset": 246265,
+      "size": 1898,
+      "pixel_size": 1634,
+      "width": 43,
+      "height": 38,
+      "name": "fioletowy",
+      "id": 3,
+      "definition_id": 3,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_003_fioletowy_phase_00.png",
+          "size": 1898
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_004_kakadu 01_phase_00.png",
+      "offset": 248167,
+      "size": 1878,
+      "pixel_size": 1680,
+      "width": 40,
+      "height": 42,
+      "name": "kakadu 01",
+      "id": 4,
+      "definition_id": 4,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_004_kakadu 01_phase_00.png",
+          "size": 1878
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_005_kruk 01_phase_00.png",
+      "offset": 250253,
+      "size": 2550,
+      "pixel_size": 2990,
+      "width": 65,
+      "height": 46,
+      "name": "kruk 01",
+      "id": 5,
+      "definition_id": 5,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_005_kruk 01_phase_00.png",
+          "size": 2550
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_006_mewa 01_phase_00.png",
+      "offset": 253627,
+      "size": 2297,
+      "pixel_size": 2436,
+      "width": 42,
+      "height": 58,
+      "name": "mewa 01",
+      "id": 6,
+      "definition_id": 6,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_006_mewa 01_phase_00.png",
+          "size": 2297
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_007_papuga 01_phase_00.png",
+      "offset": 256427,
+      "size": 2491,
+      "pixel_size": 2592,
+      "width": 54,
+      "height": 48,
+      "name": "papuga 01",
+      "id": 7,
+      "definition_id": 7,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_007_papuga 01_phase_00.png",
+          "size": 2491
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_008_s_owik 01_phase_00.png",
+      "offset": 259325,
+      "size": 1773,
+      "pixel_size": 1482,
+      "width": 39,
+      "height": 38,
+      "name": "słowik 01",
+      "id": 8,
+      "definition_id": 8,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_008_s_owik 01_phase_00.png",
+          "size": 1773
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_009_tukan 01_phase_00.png",
+      "offset": 261246,
+      "size": 2526,
+      "pixel_size": 3021,
+      "width": 53,
+      "height": 57,
+      "name": "tukan 01",
+      "id": 9,
+      "definition_id": 9,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_009_tukan 01_phase_00.png",
+          "size": 2526
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_010__ty 01_phase_00.png",
+      "offset": 264535,
+      "size": 1253,
+      "pixel_size": 672,
+      "width": 28,
+      "height": 24,
+      "name": "żółty 01",
+      "id": 10,
+      "definition_id": 10,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_010__ty 01_phase_00.png",
+          "size": 1253
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_011_czerwony_phase_00.png",
+      "offset": 265475,
+      "size": 1511,
+      "pixel_size": 2508,
+      "width": 38,
+      "height": 33,
+      "name": "czerwony ",
+      "id": 11,
+      "definition_id": 11,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_011_czerwony_phase_00.png",
+          "size": 1511
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_011_czerwony_phase_01.png",
+          "size": 1400
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_012_domek_phase_00.png",
+      "offset": 268251,
+      "size": 4036,
+      "pixel_size": 11484,
+      "width": 66,
+      "height": 87,
+      "name": "domek ",
+      "id": 12,
+      "definition_id": 12,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_012_domek_phase_00.png",
+          "size": 4036
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_012_domek_phase_01.png",
+          "size": 3571
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_013_fioletowy_phase_00.png",
+      "offset": 280079,
+      "size": 1935,
+      "pixel_size": 3268,
+      "width": 43,
+      "height": 38,
+      "name": "fioletowy",
+      "id": 13,
+      "definition_id": 13,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_013_fioletowy_phase_00.png",
+          "size": 1935
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_013_fioletowy_phase_01.png",
+          "size": 1689
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_014_kakadu_phase_00.png",
+      "offset": 283615,
+      "size": 1861,
+      "pixel_size": 3360,
+      "width": 40,
+      "height": 42,
+      "name": "kakadu ",
+      "id": 14,
+      "definition_id": 14,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_014_kakadu_phase_00.png",
+          "size": 1861
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_014_kakadu_phase_01.png",
+          "size": 1702
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_015_kruk_phase_00.png",
+      "offset": 287335,
+      "size": 2318,
+      "pixel_size": 5980,
+      "width": 65,
+      "height": 46,
+      "name": "kruk ",
+      "id": 15,
+      "definition_id": 15,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_015_kruk_phase_00.png",
+          "size": 2318
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_015_kruk_phase_01.png",
+          "size": 2109
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_016_mewa_phase_00.png",
+      "offset": 293583,
+      "size": 2142,
+      "pixel_size": 4872,
+      "width": 42,
+      "height": 58,
+      "name": "mewa ",
+      "id": 16,
+      "definition_id": 16,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_016_mewa_phase_00.png",
+          "size": 2142
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_016_mewa_phase_01.png",
+          "size": 2021
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_017_papuga_phase_00.png",
+      "offset": 298723,
+      "size": 2470,
+      "pixel_size": 5184,
+      "width": 54,
+      "height": 48,
+      "name": "papuga ",
+      "id": 17,
+      "definition_id": 17,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_017_papuga_phase_00.png",
+          "size": 2470
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_017_papuga_phase_01.png",
+          "size": 2297
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_018_s_owik_phase_00.png",
+      "offset": 304251,
+      "size": 1830,
+      "pixel_size": 2964,
+      "width": 39,
+      "height": 38,
+      "name": "słowik ",
+      "id": 18,
+      "definition_id": 18,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_018_s_owik_phase_00.png",
+          "size": 1830
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_018_s_owik_phase_01.png",
+          "size": 1583
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_019_tukan_phase_00.png",
+      "offset": 307597,
+      "size": 2352,
+      "pixel_size": 6042,
+      "width": 53,
+      "height": 57,
+      "name": "tukan ",
+      "id": 19,
+      "definition_id": 19,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_019_tukan_phase_00.png",
+          "size": 2352
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_019_tukan_phase_01.png",
+          "size": 2289
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_020__ty_phase_00.png",
+      "offset": 313907,
+      "size": 1372,
+      "pixel_size": 1344,
+      "width": 28,
+      "height": 24,
+      "name": "żółty ",
+      "id": 20,
+      "definition_id": 20,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_020__ty_phase_00.png",
+          "size": 1372
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RADIO_C\\sprite_holder\\00_Sprite_Holder_020__ty_phase_01.png",
+          "size": 1316
+        }
+      ]
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\RADIO_C\\bitmap_holder\\01_Bitmap_Holder_000_radionekw_640x480.bmp",
+      "offset": 319463,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "radionekw",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 640,
+        "height": 480
+      },
+      "geometry_confidence": "serialized_entry"
     }
   ],
   "script": {

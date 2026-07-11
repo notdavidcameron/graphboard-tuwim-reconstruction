@@ -315,8 +315,8 @@ repeat hotspotCount:
                                     // +0x00/+0x04/+0x08/+0x0c, i32 layer +0x1c,
                                     // i32 enabled +0x20; +0x10 name ptr stale
   CString name
-u32 field1f0                        // holder +0x1f0 (active/selected index)
-u32 field1c8                        // holder +0x1c8
+u32 activeIndex                     // holder +0x1f0 (active/selected index)
+u32 auxStateWord                    // holder +0x1c8
 ```
 
 These are the real hit-test rectangles used by

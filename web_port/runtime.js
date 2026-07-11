@@ -25,12 +25,16 @@ class GraphBoardRuntime {
     this.returnValue = undefined;
     this.recorder = { file: "", hasContent: false, recording: false, playing: false };
     this.puzzle = { active: false, drops: 0 };
+    this.panorama = { active: false, enabled: true, type: "", id: 0, layer: null, dx: 0, dy: 0, source: "" };
+    this.panoramaTimer = null;
     this.userInputDepth = 0;
     this.trustedCallbackDepth = 0;
     this.handlerStack = [];
   }
 
   reset(scene) {
+    if (this.panoramaTimer) clearInterval(this.panoramaTimer);
+    this.panoramaTimer = null;
     this.clearTimers();
     this.clearVideoTimers();
     this.scene = scene;
@@ -45,6 +49,7 @@ class GraphBoardRuntime {
     this.screenEnabled = true;
     this.recorder = { file: "", hasContent: false, recording: false, playing: false };
     this.puzzle = { active: false, drops: 0 };
+    this.panorama = { active: false, enabled: true, type: "", id: 0, layer: null, dx: 0, dy: 0, source: "" };
     this.userInputDepth = 0;
     this.trustedCallbackDepth = 0;
     this.handlerStack = [];
@@ -223,12 +228,12 @@ class GraphBoardRuntime {
     element.addEventListener("mouseenter", () => this.dispatchComponentEvent(type, "MouseMoveIn", id, [], namespace));
     element.addEventListener("mouseleave", () => this.dispatchComponentEvent(type, "MouseMoveOut", id, [], namespace));
     element.addEventListener("mousedown", (event) => {
-      if (event.button === 0) {
-        this.runUserInput(() => {
-          if (type === "Puzzle") this.executeHandler("Puzzle.MouseStartDrag");
-          this.dispatchComponentEvent(type, "MouseClickOnDown", id, [], namespace);
-        });
-      }
+      if (event.button !== 0) return;
+      this.runUserInput(() => {
+        if (type === "Puzzle") this.executeHandler("Puzzle.MouseStartDrag");
+        if (type === "HotSpot_Holder") this.dispatchComponentEvent(type, "LeftButtonClickOn", id, [], namespace);
+        else if (["Sprite_Holder", "Transparent_Video_Holder", "MultiBitmap", "Bitmap_Holder"].includes(type)) this.dispatchComponentEvent(type, "MouseClickOnDown", id, [], namespace);
+      });
     });
     element.addEventListener("mouseup", (event) => {
       if (event.button === 0) {
@@ -238,7 +243,8 @@ class GraphBoardRuntime {
             this.executeHandler("Puzzle.MouseDrop");
             if (this.puzzle.drops >= 3) this.executeHandler("Puzzle.GameOver", [id]);
           }
-          this.dispatchComponentEvent(type, "MouseClickOnUp", id, [], namespace);
+          if (type === "HotSpot_Holder") this.dispatchComponentEvent(type, "LeftButtonClickOnUp", id, [], namespace);
+          else if (["Sprite_Holder", "Transparent_Video_Holder", "MultiBitmap", "Bitmap_Holder"].includes(type)) this.dispatchComponentEvent(type, "MouseClickOnUp", id, [], namespace);
         });
       }
     });
@@ -246,8 +252,15 @@ class GraphBoardRuntime {
       event.stopPropagation();
       this.runUserInput(() => {
         if (type === "Text_Holder") this.dispatchComponentEvent(type, "ClickOnText", id, [], namespace);
-        if (type === "HotSpot_Holder") this.dispatchComponentEvent(type, "LeftButtonClickOn", id, [], namespace);
+        if (type === "Video_Holder") this.dispatchComponentEvent(type, "MouseClickOn", id, [], namespace);
       });
+    });
+    element.addEventListener("dblclick", () => {
+      if (type === "HotSpot_Holder") this.runUserInput(() => this.dispatchComponentEvent(type, "DBLClickOn", id, [], namespace));
+    });
+    element.addEventListener("contextmenu", (event) => {
+      event.preventDefault();
+      if (type === "HotSpot_Holder") this.runUserInput(() => this.dispatchComponentEvent(type, "RightButtonClickOn", id, [], namespace));
     });
   }
 
@@ -298,6 +311,7 @@ class GraphBoardRuntime {
     layer.style.width = `${Math.max(8, defaultRect.width)}px`;
     layer.style.height = `${Math.max(8, defaultRect.height)}px`;
     layer.style.zIndex = String(namespace === "Group" && type === "Sprite_Holder" ? 820000 + id : namespace === "Group" ? 600000 + id : 300000 + id);
+    layer.dataset.baseZIndex = layer.style.zIndex;
     if (type === "Text_Holder") layer.textContent = "";
     this.bindRuntimeEvents(layer, type, id, namespace);
     this.stage.appendChild(layer);
@@ -338,6 +352,10 @@ class GraphBoardRuntime {
     const src = layer.dataset.originalSrc || layer.getAttribute("src");
     layer.dataset.originalSrc = src || "";
     layer.dataset.videoState = "playing";
+    if (!layer.dataset.baseZIndex) layer.dataset.baseZIndex = layer.style.zIndex || "";
+    const baseZ = parseInt(layer.dataset.baseZIndex || layer.style.zIndex || "0", 10) || 0;
+    const animationLift = layer.dataset.runtimeNamespace === "Group" ? 50000 : 500000;
+    layer.style.zIndex = String(baseZ + animationLift);
     layer.classList.add("runtime-playing");
     layer.classList.remove("runtime-hidden");
     if (src) {
@@ -371,8 +389,16 @@ class GraphBoardRuntime {
     layer.style.left = `${Number(x) || 0}px`;
     layer.style.top = `${Number(y) || 0}px`;
     layer.style.transition = "left 180ms linear, top 180ms linear";
-    if (Number.isFinite(Number(z))) layer.style.zIndex = String((namespace === "Group" ? 600000 : 100000) + Number(z));
-    if (layer.dataset.suppressVisual !== "1") layer.classList.remove("runtime-hidden");
+    if (Number.isFinite(Number(z))) {
+      layer.dataset.logicalZ = String(Number(z));
+      layer.style.zIndex = String((namespace === "Group" ? 600000 : 100000) + Number(z));
+    }
+    // Real holder instances retain their serialized/show-hide visibility when
+    // moved. Only synthetic placeholders need their first GotoXY to reveal
+    // them (notably the reconstructed group toolbar).
+    if (layer.dataset.synthetic === "1" && layer.dataset.suppressVisual !== "1") {
+      layer.classList.remove("runtime-hidden");
+    }
     this.log(`${namespace}.${type}.move(${id},${x},${y}${Number.isFinite(Number(z)) ? `,${z}` : ""})`);
 
     const prefix = namespace === "Group" ? "Group." : "";
@@ -407,7 +433,115 @@ class GraphBoardRuntime {
 
   setDeep(type, id, z, namespace = "Page") {
     const layer = this.findLayer(type, id, namespace, true);
-    if (layer && Number.isFinite(Number(z))) layer.style.zIndex = String((namespace === "Group" ? 600000 : 100000) + Number(z));
+    if (layer && Number.isFinite(Number(z))) {
+      layer.dataset.logicalZ = String(Number(z));
+      layer.style.zIndex = String((namespace === "Group" ? 600000 : 100000) + Number(z));
+    }
+  }
+
+  panoramaHandler(eventName, args = []) {
+    if (!this.panorama.active) return;
+    const name = `${this.panorama.type}.${eventName}`;
+    if (this.extractFunctionBody(this.scene?.script?.rawText || "", name)) this.executeHandler(name, args);
+  }
+
+  stopPanoramaMotion(emitEnd = false) {
+    if (this.panoramaTimer) clearInterval(this.panoramaTimer);
+    this.panoramaTimer = null;
+    const movedHorizontally = this.panorama.dx !== 0;
+    const movedVertically = this.panorama.dy !== 0;
+    this.panorama.dx = 0;
+    this.panorama.dy = 0;
+    if (!emitEnd || !this.panorama.active) return;
+    if (this.panorama.type === "Panorama_Holder") {
+      this.panoramaHandler("MoveEnd", [this.panorama.id]);
+    } else {
+      if (movedHorizontally) this.panoramaHandler("HorMoveEnd");
+      if (movedVertically) this.panoramaHandler("VertMoveEnd");
+    }
+  }
+
+  startPanoramaMotion(dx, dy, speed = 1, source = "edge") {
+    if (!this.panorama.active || !this.panorama.enabled || !this.panorama.layer) return;
+    const nextDx = Math.sign(Number(dx) || 0);
+    const nextDy = Math.sign(Number(dy) || 0);
+    if (this.panorama.dx === nextDx && this.panorama.dy === nextDy && this.panoramaTimer) return;
+    this.stopPanoramaMotion(false);
+    this.panorama.dx = nextDx;
+    this.panorama.dy = nextDy;
+    this.panorama.source = source;
+    if (!nextDx && !nextDy) return;
+
+    if (nextDx > 0) this.panoramaHandler("MoveLeft", [this.panorama.id]);
+    if (nextDx < 0) this.panoramaHandler("MoveRight", [this.panorama.id]);
+    if (nextDy > 0) this.panoramaHandler("MoveTop", [this.panorama.id]);
+    if (nextDy < 0) this.panoramaHandler("MoveBottom", [this.panorama.id]);
+
+    const step = Math.max(3, Math.min(24, Math.abs(Number(speed) || 1) * 3));
+    this.panoramaTimer = setInterval(() => {
+      const layer = this.panorama.layer;
+      if (!layer?.isConnected || !this.panorama.enabled) {
+        this.stopPanoramaMotion(false);
+        return;
+      }
+      const stageWidth = this.stage.clientWidth || 640;
+      const stageHeight = this.stage.clientHeight || 480;
+      const layerWidth = layer.offsetWidth || parseInt(layer.style.width || "0", 10) || stageWidth;
+      const layerHeight = layer.offsetHeight || parseInt(layer.style.height || "0", 10) || stageHeight;
+      const minLeft = Math.min(0, stageWidth - layerWidth);
+      const minTop = Math.min(0, stageHeight - layerHeight);
+      const oldLeft = parseInt(layer.style.left || "0", 10) || 0;
+      const oldTop = parseInt(layer.style.top || "0", 10) || 0;
+      const left = Math.max(minLeft, Math.min(0, oldLeft + this.panorama.dx * step));
+      const top = Math.max(minTop, Math.min(0, oldTop + this.panorama.dy * step));
+      layer.style.transition = "none";
+      layer.style.left = `${left}px`;
+      layer.style.top = `${top}px`;
+      if (left === oldLeft && top === oldTop) this.stopPanoramaMotion(true);
+    }, 30);
+  }
+
+  openPanorama(type, id) {
+    this.stopPanoramaMotion(false);
+    const cleanType = this.normalizeType(type);
+    const layer = this.findLayer(cleanType, id, "Page");
+    this.panorama = { active: Boolean(layer), enabled: true, type: cleanType, id: Number(id) || 0, layer, dx: 0, dy: 0, source: "" };
+    if (layer) {
+      layer.classList.remove("runtime-hidden");
+      layer.style.left = layer.style.left || "0px";
+      layer.style.top = layer.style.top || "0px";
+    }
+    this.log(`${cleanType}.OpenPanorama(${id})${layer ? "" : " missing layer"}`);
+  }
+
+  setPanoramaAxis(axis, value, scale) {
+    const layer = this.panorama.layer;
+    if (!layer) return;
+    const stageSize = axis === "x" ? (this.stage.clientWidth || 640) : (this.stage.clientHeight || 480);
+    const layerSize = axis === "x"
+      ? (layer.offsetWidth || parseInt(layer.style.width || "0", 10) || stageSize)
+      : (layer.offsetHeight || parseInt(layer.style.height || "0", 10) || stageSize);
+    const travel = Math.max(0, layerSize - stageSize);
+    const fraction = Math.max(0, Math.min(1, Number(value || 0) / scale));
+    layer.style[axis === "x" ? "left" : "top"] = `${-Math.round(travel * fraction)}px`;
+  }
+
+  handleStagePointer(point) {
+    if (!this.panorama.active || !this.panorama.enabled) return;
+    if (!point) {
+      if (this.panorama.source === "edge") this.stopPanoramaMotion(false);
+      return;
+    }
+    const edge = 42;
+    const width = this.stage.clientWidth || 640;
+    const height = this.stage.clientHeight || 480;
+    const dx = point.x <= edge ? 1 : point.x >= width - edge ? -1 : 0;
+    const dy = point.y <= edge ? 1 : point.y >= height - edge ? -1 : 0;
+    if (!dx && !dy) {
+      if (this.panorama.source === "edge") this.stopPanoramaMotion(false);
+      return;
+    }
+    this.startPanoramaMotion(dx, dy, 2, "edge");
   }
 
   playAudio(type, id, namespace = "Page") {
@@ -523,8 +657,9 @@ class GraphBoardRuntime {
   }
 
   extractFunctionBody(script, name) {
+    if (/^(?:if|else|while|switch|for|do)$/i.test(name)) return "";
     const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    const re = new RegExp(`(?:^|\\n)\\s*(?:(?:void|int|CString|float|double|char|long|UINT)\\s+)?${escaped}\\s*\\([^)]*\\)\\s*\\{`, "m");
+    const re = new RegExp(`(?:^|\\n)\\s*(?:(?:void|bool|int|CString|float|double|char|long|short|UINT|DWORD|BOOL|VOID)\\s+)?${escaped}\\s*\\([^)]*\\)\\s*\\{`, "im");
     const match = re.exec(script);
     if (!match) return "";
     let depth = 1;
@@ -1104,6 +1239,7 @@ class GraphBoardRuntime {
         img.style.width = `${asset.width || rect.width}px`;
         img.style.height = `${asset.height || rect.height}px`;
         img.style.zIndex = String(600000 + Number(asset.z ?? component.z ?? 0));
+        img.dataset.baseZIndex = img.style.zIndex;
         this.bindRuntimeEvents(img, component.type, Number(asset.id ?? 0), "Group");
         this.stage.appendChild(img);
         this.indexLayer(img);
@@ -1144,6 +1280,7 @@ class GraphBoardRuntime {
         button.style.width = `${Math.max(8, rect.width)}px`;
         button.style.height = `${Math.max(8, rect.height)}px`;
         button.style.zIndex = String(700000 + Number(hotspot.id || 0));
+        button.dataset.baseZIndex = button.style.zIndex;
         button.title = `Group HotSpot ${hotspot.id}`;
         this.bindRuntimeEvents(button, "HotSpot_Holder", Number(hotspot.id), "Group");
         this.stage.appendChild(button);
@@ -1190,8 +1327,8 @@ class GraphBoardRuntime {
     layer.style.zIndex = "500000";
     if (asset?.url) {
       layer.style.backgroundImage = `url("${graphBoardCacheBustUrl(asset.url)}")`;
-      layer.style.backgroundSize = "cover";
-      layer.style.backgroundPosition = "center";
+      layer.style.backgroundSize = asset.kind === "puzzle_fallback_background" ? `${asset.width || 640}px ${asset.height || 480}px` : "cover";
+      layer.style.backgroundPosition = asset.kind === "puzzle_fallback_background" ? "left top" : "center";
       let image = layer.querySelector?.("img.puzzle-image");
       if (!image) {
         image = document.createElement("img");
@@ -1200,6 +1337,14 @@ class GraphBoardRuntime {
         layer.appendChild(image);
       }
       image.src = graphBoardCacheBustUrl(asset.url);
+      image.classList.toggle("puzzle-image-native", asset.kind === "puzzle_fallback_background");
+      if (asset.kind === "puzzle_fallback_background") {
+        image.style.width = `${asset.width || 640}px`;
+        image.style.height = `${asset.height || 480}px`;
+      } else {
+        image.style.width = "";
+        image.style.height = "";
+      }
     }
     layer.classList.remove("runtime-hidden");
     this.bindRuntimeEvents(layer, "Puzzle", 0, "Page");
@@ -1257,6 +1402,7 @@ class GraphBoardRuntime {
         this.log("DisableScreen()");
         break;
       case "Sound_Holder.PlayDSound":
+      case "Sound_Holder.PlayDSoundEx":
         this.playAudio("Sound_Holder", Number(args[0]), namespace);
         break;
       case "Sound_Holder.Stop":
@@ -1293,6 +1439,12 @@ class GraphBoardRuntime {
       case "Sprite_Holder.SetDeep":
         this.setDeep(local.split(".")[0], Number(args[0]), Number(args[1]), namespace);
         break;
+      case "Transparent_Video_Holder.GetDeep": {
+        const layer = this.findLayer("Transparent_Video_Holder", Number(args[0]), namespace);
+        const logicalZ = Number(layer?.dataset.logicalZ);
+        this.setRef(args[1], Number.isFinite(logicalZ) ? logicalZ : 0);
+        break;
+      }
       case "MultiBitmap.ShowBitmap":
       case "Bitmap_Holder.ShowBitmap":
         if (args.length >= 3) {
@@ -1386,6 +1538,59 @@ class GraphBoardRuntime {
       case "Text_Holder.GetTextOffsets":
         this.setRef(args[1], 0);
         this.setRef(args[2], 0);
+        break;
+      case "Panorama.OpenPanorama":
+      case "Panorama_Holder.OpenPanorama":
+        this.openPanorama(local.split(".")[0], Number(args[0]) || 0);
+        break;
+      case "Panorama.ClosePanorama":
+      case "Panorama_Holder.ClosePanorama":
+        this.stopPanoramaMotion(false);
+        this.setLayerVisible(local.split(".")[0], Number(args[0]) || 0, false, namespace);
+        this.panorama.active = false;
+        break;
+      case "Panorama.Enable":
+        this.panorama.enabled = true;
+        break;
+      case "Panorama.Disable":
+        this.panorama.enabled = false;
+        this.stopPanoramaMotion(false);
+        break;
+      case "Panorama.SetHorAngle":
+      case "Panorama_Holder.SetHorizontalAngle":
+        this.setPanoramaAxis("x", Number(args[0]) || 0, 360);
+        break;
+      case "Panorama.SetVertOffset":
+        this.setPanoramaAxis("y", Number(args[0]) || 0, 2000);
+        break;
+      case "Panorama_Holder.SetVerticalAngle":
+        this.setPanoramaAxis("y", Number(args[0]) || 0, 360);
+        break;
+      case "Panorama_Holder.GoLeft":
+        this.startPanoramaMotion(1, 0, Number(args[0]) || 1, "program");
+        break;
+      case "Panorama_Holder.GoRight":
+        this.startPanoramaMotion(-1, 0, Number(args[0]) || 1, "program");
+        break;
+      case "Panorama_Holder.GoTop":
+        this.startPanoramaMotion(0, 1, Number(args[0]) || 1, "program");
+        break;
+      case "Panorama_Holder.GoBottom":
+        this.startPanoramaMotion(0, -1, Number(args[0]) || 1, "program");
+        break;
+      case "Panorama_Holder.Stop":
+        this.stopPanoramaMotion(true);
+        break;
+      case "Panorama.SetZoom":
+      case "Panorama_Holder.SetZoom":
+      case "Panorama.RemoveSprite":
+      case "Panorama.ResetSprite":
+      case "Panorama.StartSpriteAnimation":
+      case "Panorama_Holder.ShowSprite":
+      case "Panorama_Holder.HideSprite":
+      case "Panorama_Holder.ResetSprite":
+      case "Panorama_Holder.StartSpriteAnimation":
+        this.log(`${namespace}.${local}(${args.join(",")})`);
         break;
       case "Puzzle.OpenPuzzle":
       case "Puzzle.Mix":

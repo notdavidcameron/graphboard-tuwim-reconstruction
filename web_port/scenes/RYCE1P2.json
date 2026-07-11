@@ -38,17 +38,17 @@
       "geometrySourceOffset": null,
       "privateOffset": 2257,
       "privateSize": 237764,
-      "primaryAssetUrl": "../extracted_assets/bdf/RYCERZ/animations/02_Transparent_Video_Holder_002_002d0dc6_board_video_144x480.gif",
+      "primaryAssetUrl": "../extracted_assets/bdf/RYCERZ/bitmap_holder/00_Bitmap_Holder_000_tloSrodek_386x480.bmp",
       "assets": [
         {
           "kind": "puzzle_fallback_background",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCERZ\\animations\\02_Transparent_Video_Holder_002_002d0dc6_board_video_144x480.gif",
-          "url": "../extracted_assets/bdf/RYCERZ/animations/02_Transparent_Video_Holder_002_002d0dc6_board_video_144x480.gif",
-          "width": 144,
+          "path": "extracted_assets\\bdf\\RYCERZ\\bitmap_holder\\00_Bitmap_Holder_000_tloSrodek_386x480.bmp",
+          "url": "../extracted_assets/bdf/RYCERZ/bitmap_holder/00_Bitmap_Holder_000_tloSrodek_386x480.bmp",
+          "width": 386,
           "height": 480,
           "frameCount": null,
           "offset": null,
-          "name": "animations",
+          "name": "bitmap_holder",
           "id": 0,
           "geometryConfidence": "fallback"
         }
@@ -81,7 +81,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCE1P2\\embedded\\01_Sound_Holder_000_0003ad21.wav",
+          "path": "extracted_assets\\bdf\\RYCE1P2\\embedded\\01_Sound_Holder_000_0003ad21.wav",
           "url": "../extracted_assets/bdf/RYCE1P2/embedded/01_Sound_Holder_000_0003ad21.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -91,7 +91,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCE1P2\\embedded\\01_Sound_Holder_001_0003cfb3.wav",
+          "path": "extracted_assets\\bdf\\RYCE1P2\\embedded\\01_Sound_Holder_001_0003cfb3.wav",
           "url": "../extracted_assets/bdf/RYCE1P2/embedded/01_Sound_Holder_001_0003cfb3.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -101,7 +101,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCE1P2\\embedded\\01_Sound_Holder_002_0003e6a7.wav",
+          "path": "extracted_assets\\bdf\\RYCE1P2\\embedded\\01_Sound_Holder_002_0003e6a7.wav",
           "url": "../extracted_assets/bdf/RYCE1P2/embedded/01_Sound_Holder_002_0003e6a7.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -111,7 +111,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RYCE1P2\\embedded\\01_Sound_Holder_003_00040eb5.wav",
+          "path": "extracted_assets\\bdf\\RYCE1P2\\embedded\\01_Sound_Holder_003_00040eb5.wav",
           "url": "../extracted_assets/bdf/RYCE1P2/embedded/01_Sound_Holder_003_00040eb5.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -175,28 +175,8 @@
         "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
       },
       {
-        "name": "if",
-        "signature": "if(rectID==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbar)"
-      },
-      {
         "name": "Group.Sprite_Holder.InPlace",
         "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
-      },
-      {
-        "name": "if",
-        "signature": "if(spriteID==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==480)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarCase)"
       },
       {
         "name": "Group.Sprite_Holder.MouseMoveIn",
@@ -211,20 +191,8 @@
         "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(showBmp)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseClickOnUp",
         "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(spriteID==5)"
       },
       {
         "name": "Puzzle.EndShowBitmap",

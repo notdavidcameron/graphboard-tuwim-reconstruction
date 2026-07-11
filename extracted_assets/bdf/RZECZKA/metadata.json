@@ -614,218 +614,407 @@
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_000_rzeczka_phase_00.png",
-          "offset": 5867142,
-          "size": 305961,
+          "offset": 5867146,
+          "size": 305985,
           "pixel_size": 614400,
           "width": 1280,
           "height": 480,
           "name": "rzeczka",
           "id": 0,
+          "definition_id": 0,
           "phase_count": 1,
           "phase_outputs": [
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_000_rzeczka_phase_00.png",
-              "size": 305961
+              "size": 305985
             }
-          ],
-          "rect": {
-            "x": 0,
-            "y": 0,
-            "width": 1280,
-            "height": 480
-          },
-          "geometry_confidence": "serialized_sprite"
+          ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_001_rzeczka 0_phase_00.png",
-          "offset": 6486547,
-          "size": 3624,
-          "pixel_size": 4307,
+          "offset": 6482244,
+          "size": 3839,
+          "pixel_size": 8614,
           "width": 73,
           "height": 59,
           "name": "rzeczka 0",
           "id": 1,
-          "phase_count": 1,
+          "definition_id": 1,
+          "phase_count": 2,
           "phase_outputs": [
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_001_rzeczka 0_phase_00.png",
-              "size": 3624
+              "size": 3839
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_001_rzeczka 0_phase_01.png",
+              "size": 3612
             }
-          ],
-          "rect": {
-            "x": 48,
-            "y": 10,
-            "width": 73,
-            "height": 59
-          },
-          "geometry_confidence": "serialized_sprite"
+          ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_002_rzeczka 0_phase_00.png",
-          "offset": 6496112,
-          "size": 3903,
-          "pixel_size": 4662,
+          "offset": 6491454,
+          "size": 4029,
+          "pixel_size": 9324,
           "width": 74,
           "height": 63,
           "name": "rzeczka 0",
           "id": 2,
-          "phase_count": 1,
+          "definition_id": 2,
+          "phase_count": 2,
           "phase_outputs": [
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_002_rzeczka 0_phase_00.png",
-              "size": 3903
+              "size": 4029
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_002_rzeczka 0_phase_01.png",
+              "size": 3900
             }
-          ],
-          "rect": {
-            "x": 48,
-            "y": 10,
-            "width": 74,
-            "height": 63
-          },
-          "geometry_confidence": "serialized_sprite"
+          ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_003_migotanie_phase_00.png",
-          "offset": 6501794,
-          "size": 1545,
-          "pixel_size": 828,
+          "offset": 6500970,
+          "size": 1564,
+          "pixel_size": 1656,
           "width": 36,
           "height": 23,
           "name": "migotanie",
           "id": 3,
-          "phase_count": 1,
+          "definition_id": 3,
+          "phase_count": 2,
           "phase_outputs": [
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_003_migotanie_phase_00.png",
-              "size": 1545
+              "size": 1564
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_003_migotanie_phase_01.png",
+              "size": 1549
             }
-          ],
-          "rect": {
-            "x": 101,
-            "y": 100,
-            "width": 36,
-            "height": 23
-          },
-          "geometry_confidence": "serialized_sprite"
+          ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_00.png",
-          "offset": 6555710,
-          "size": 3872,
-          "pixel_size": 4332,
+          "offset": 6503730,
+          "size": 3845,
+          "pixel_size": 56316,
           "width": 76,
           "height": 57,
           "name": "przycisk ",
           "id": 4,
-          "phase_count": 1,
+          "definition_id": 4,
+          "phase_count": 13,
           "phase_outputs": [
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_00.png",
-              "size": 3872
+              "size": 3845
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_01.png",
+              "size": 3842
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_02.png",
+              "size": 3838
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_03.png",
+              "size": 3894
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_04.png",
+              "size": 3919
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_05.png",
+              "size": 3928
+            },
+            {
+              "phase": 6,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_06.png",
+              "size": 3902
+            },
+            {
+              "phase": 7,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_07.png",
+              "size": 3876
+            },
+            {
+              "phase": 8,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_08.png",
+              "size": 3848
+            },
+            {
+              "phase": 9,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_09.png",
+              "size": 3853
+            },
+            {
+              "phase": 10,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_10.png",
+              "size": 3863
+            },
+            {
+              "phase": 11,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_11.png",
+              "size": 3877
+            },
+            {
+              "phase": 12,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_12.png",
+              "size": 3887
             }
-          ],
-          "rect": {
-            "x": 32,
-            "y": 100,
-            "width": 76,
-            "height": 57
-          },
-          "geometry_confidence": "serialized_sprite"
+          ]
         }
       ],
       "sprite_holder": {
         "version": 1,
-        "declared_count": 5,
-        "parsed_count": 5,
-        "frames": [
+        "definition_count": 5,
+        "instance_count": 5,
+        "parsed_definitions": 5,
+        "parsed_instances": 5,
+        "definitions": [
           {
             "index": 0,
             "name": "rzeczka",
-            "record_offset": 5866874,
-            "record_size": 614664,
+            "record_offset": 5866878,
+            "blob_offset": 5866882,
+            "blob_size": 614664,
             "width": 1280,
             "height": 480,
             "phase_count": 1,
+            "phase_hint": 735962598,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_000_rzeczka_phase_00.png",
-                "size": 305961
+                "size": 305985
               }
             ]
           },
           {
             "index": 1,
             "name": "rzeczka 0",
-            "record_offset": 6481542,
-            "record_size": 9308,
+            "record_offset": 6481546,
+            "blob_offset": 6481550,
+            "blob_size": 9308,
             "width": 73,
             "height": 59,
-            "phase_count": 1,
+            "phase_count": 2,
+            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_001_rzeczka 0_phase_00.png",
-                "size": 3624
+                "size": 3839
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_001_rzeczka 0_phase_01.png",
+                "size": 3612
               }
             ]
           },
           {
             "index": 2,
             "name": "rzeczka 0",
-            "record_offset": 6490854,
-            "record_size": 9916,
+            "record_offset": 6490858,
+            "blob_offset": 6490862,
+            "blob_size": 9916,
             "width": 74,
             "height": 63,
-            "phase_count": 1,
+            "phase_count": 2,
+            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_002_rzeczka 0_phase_00.png",
-                "size": 3903
+                "size": 4029
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_002_rzeczka 0_phase_01.png",
+                "size": 3900
               }
             ]
           },
           {
             "index": 3,
             "name": "migotanie",
-            "record_offset": 6500774,
-            "record_size": 1844,
+            "record_offset": 6500778,
+            "blob_offset": 6500782,
+            "blob_size": 1844,
             "width": 36,
             "height": 23,
-            "phase_count": 1,
+            "phase_count": 2,
+            "phase_hint": 2759874273,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_003_migotanie_phase_00.png",
-                "size": 1545
+                "size": 1564
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_003_migotanie_phase_01.png",
+                "size": 1549
               }
             ]
           },
           {
             "index": 4,
             "name": "przycisk ",
-            "record_offset": 6502622,
-            "record_size": 57416,
+            "record_offset": 6502626,
+            "blob_offset": 6502630,
+            "blob_size": 57416,
             "width": 76,
             "height": 57,
-            "phase_count": 1,
+            "phase_count": 13,
+            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_00.png",
-                "size": 3872
+                "size": 3845
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_01.png",
+                "size": 3842
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_02.png",
+                "size": 3838
+              },
+              {
+                "phase": 3,
+                "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_03.png",
+                "size": 3894
+              },
+              {
+                "phase": 4,
+                "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_04.png",
+                "size": 3919
+              },
+              {
+                "phase": 5,
+                "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_05.png",
+                "size": 3928
+              },
+              {
+                "phase": 6,
+                "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_06.png",
+                "size": 3902
+              },
+              {
+                "phase": 7,
+                "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_07.png",
+                "size": 3876
+              },
+              {
+                "phase": 8,
+                "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_08.png",
+                "size": 3848
+              },
+              {
+                "phase": 9,
+                "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_09.png",
+                "size": 3853
+              },
+              {
+                "phase": 10,
+                "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_10.png",
+                "size": 3863
+              },
+              {
+                "phase": 11,
+                "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_11.png",
+                "size": 3877
+              },
+              {
+                "phase": 12,
+                "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_12.png",
+                "size": 3887
               }
             ]
+          }
+        ],
+        "instances": [
+          {
+            "index": 0,
+            "definition_id": 0,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 6560046
+          },
+          {
+            "index": 1,
+            "definition_id": 1,
+            "field04": 8,
+            "x": 707,
+            "y": 18,
+            "z": 8,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 6560186
+          },
+          {
+            "index": 2,
+            "definition_id": 2,
+            "field04": 8,
+            "x": 710,
+            "y": 107,
+            "z": 8,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 6560326
+          },
+          {
+            "index": 3,
+            "definition_id": 3,
+            "field04": 1,
+            "x": 360,
+            "y": 418,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 6560466
+          },
+          {
+            "index": 4,
+            "definition_id": 4,
+            "field04": 2,
+            "x": 339,
+            "y": 410,
+            "z": 2,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 6560606
           }
         ]
       }
@@ -1596,132 +1785,177 @@
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_000_rzeczka_phase_00.png",
-      "offset": 5867142,
-      "size": 305961,
+      "offset": 5867146,
+      "size": 305985,
       "pixel_size": 614400,
       "width": 1280,
       "height": 480,
       "name": "rzeczka",
       "id": 0,
+      "definition_id": 0,
       "phase_count": 1,
       "phase_outputs": [
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_000_rzeczka_phase_00.png",
-          "size": 305961
+          "size": 305985
         }
-      ],
-      "rect": {
-        "x": 0,
-        "y": 0,
-        "width": 1280,
-        "height": 480
-      },
-      "geometry_confidence": "serialized_sprite"
+      ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_001_rzeczka 0_phase_00.png",
-      "offset": 6486547,
-      "size": 3624,
-      "pixel_size": 4307,
+      "offset": 6482244,
+      "size": 3839,
+      "pixel_size": 8614,
       "width": 73,
       "height": 59,
       "name": "rzeczka 0",
       "id": 1,
-      "phase_count": 1,
+      "definition_id": 1,
+      "phase_count": 2,
       "phase_outputs": [
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_001_rzeczka 0_phase_00.png",
-          "size": 3624
+          "size": 3839
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_001_rzeczka 0_phase_01.png",
+          "size": 3612
         }
-      ],
-      "rect": {
-        "x": 48,
-        "y": 10,
-        "width": 73,
-        "height": 59
-      },
-      "geometry_confidence": "serialized_sprite"
+      ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_002_rzeczka 0_phase_00.png",
-      "offset": 6496112,
-      "size": 3903,
-      "pixel_size": 4662,
+      "offset": 6491454,
+      "size": 4029,
+      "pixel_size": 9324,
       "width": 74,
       "height": 63,
       "name": "rzeczka 0",
       "id": 2,
-      "phase_count": 1,
+      "definition_id": 2,
+      "phase_count": 2,
       "phase_outputs": [
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_002_rzeczka 0_phase_00.png",
-          "size": 3903
+          "size": 4029
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_002_rzeczka 0_phase_01.png",
+          "size": 3900
         }
-      ],
-      "rect": {
-        "x": 48,
-        "y": 10,
-        "width": 74,
-        "height": 63
-      },
-      "geometry_confidence": "serialized_sprite"
+      ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_003_migotanie_phase_00.png",
-      "offset": 6501794,
-      "size": 1545,
-      "pixel_size": 828,
+      "offset": 6500970,
+      "size": 1564,
+      "pixel_size": 1656,
       "width": 36,
       "height": 23,
       "name": "migotanie",
       "id": 3,
-      "phase_count": 1,
+      "definition_id": 3,
+      "phase_count": 2,
       "phase_outputs": [
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_003_migotanie_phase_00.png",
-          "size": 1545
+          "size": 1564
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_003_migotanie_phase_01.png",
+          "size": 1549
         }
-      ],
-      "rect": {
-        "x": 101,
-        "y": 100,
-        "width": 36,
-        "height": 23
-      },
-      "geometry_confidence": "serialized_sprite"
+      ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_00.png",
-      "offset": 6555710,
-      "size": 3872,
-      "pixel_size": 4332,
+      "offset": 6503730,
+      "size": 3845,
+      "pixel_size": 56316,
       "width": 76,
       "height": 57,
       "name": "przycisk ",
       "id": 4,
-      "phase_count": 1,
+      "definition_id": 4,
+      "phase_count": 13,
       "phase_outputs": [
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_00.png",
-          "size": 3872
+          "size": 3845
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_01.png",
+          "size": 3842
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_02.png",
+          "size": 3838
+        },
+        {
+          "phase": 3,
+          "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_03.png",
+          "size": 3894
+        },
+        {
+          "phase": 4,
+          "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_04.png",
+          "size": 3919
+        },
+        {
+          "phase": 5,
+          "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_05.png",
+          "size": 3928
+        },
+        {
+          "phase": 6,
+          "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_06.png",
+          "size": 3902
+        },
+        {
+          "phase": 7,
+          "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_07.png",
+          "size": 3876
+        },
+        {
+          "phase": 8,
+          "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_08.png",
+          "size": 3848
+        },
+        {
+          "phase": 9,
+          "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_09.png",
+          "size": 3853
+        },
+        {
+          "phase": 10,
+          "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_10.png",
+          "size": 3863
+        },
+        {
+          "phase": 11,
+          "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_11.png",
+          "size": 3877
+        },
+        {
+          "phase": 12,
+          "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_12.png",
+          "size": 3887
         }
-      ],
-      "rect": {
-        "x": 32,
-        "y": 100,
-        "width": 76,
-        "height": 57
-      },
-      "geometry_confidence": "serialized_sprite"
+      ]
     },
     {
       "kind": "WAVE",

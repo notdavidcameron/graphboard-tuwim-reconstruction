@@ -28,7 +28,365 @@
       "display_name": "Bitmap_Holder",
       "private_offset": 310485,
       "private_size": 203584,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_000_b_ben 02_142x137.bmp",
+          "offset": 310625,
+          "size": 20806,
+          "pixel_size": 19728,
+          "width": 142,
+          "height": 137,
+          "name": "bęben 02",
+          "rect": {
+            "x": 84,
+            "y": 283,
+            "width": 142,
+            "height": 137
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_001_b_ben 02_207x155.bmp",
+          "offset": 330501,
+          "size": 33318,
+          "pixel_size": 32240,
+          "width": 207,
+          "height": 155,
+          "name": "bęben 02",
+          "rect": {
+            "x": 149,
+            "y": 321,
+            "width": 207,
+            "height": 155
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_002_b_ben 02_204x145.bmp",
+          "offset": 362889,
+          "size": 30658,
+          "pixel_size": 29580,
+          "width": 204,
+          "height": 145,
+          "name": "bęben 02",
+          "rect": {
+            "x": 291,
+            "y": 286,
+            "width": 204,
+            "height": 145
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_003_b_benek 0_74x70.bmp",
+          "offset": 392617,
+          "size": 6398,
+          "pixel_size": 5320,
+          "width": 74,
+          "height": 70,
+          "name": "bębenek 0",
+          "rect": {
+            "x": 353,
+            "y": 209,
+            "width": 74,
+            "height": 70
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_004_tamtam 02_105x119.bmp",
+          "offset": 398085,
+          "size": 13930,
+          "pixel_size": 12852,
+          "width": 105,
+          "height": 119,
+          "name": "tamtam 02",
+          "rect": {
+            "x": 421,
+            "y": 177,
+            "width": 105,
+            "height": 119
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_005_tamtam 02_106x116.bmp",
+          "offset": 411085,
+          "size": 13606,
+          "pixel_size": 12528,
+          "width": 106,
+          "height": 116,
+          "name": "tamtam 02",
+          "rect": {
+            "x": 525,
+            "y": 175,
+            "width": 106,
+            "height": 116
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_006_talerz 02_145x56.bmp",
+          "offset": 423773,
+          "size": 9366,
+          "pixel_size": 8288,
+          "width": 145,
+          "height": 56,
+          "name": "talerz 02",
+          "rect": {
+            "x": 416,
+            "y": 32,
+            "width": 145,
+            "height": 56
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_007_b_ben 01_142x137.bmp",
+          "offset": 432209,
+          "size": 20806,
+          "pixel_size": 19728,
+          "width": 142,
+          "height": 137,
+          "name": "bęben 01",
+          "rect": {
+            "x": 84,
+            "y": 283,
+            "width": 142,
+            "height": 137
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_008_b_ben 01_207x155.bmp",
+          "offset": 452085,
+          "size": 33318,
+          "pixel_size": 32240,
+          "width": 207,
+          "height": 155,
+          "name": "bęben 01",
+          "rect": {
+            "x": 149,
+            "y": 321,
+            "width": 207,
+            "height": 155
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_009_b_ben 01_204x145.bmp",
+          "offset": 484473,
+          "size": 30658,
+          "pixel_size": 29580,
+          "width": 204,
+          "height": 145,
+          "name": "bęben 01",
+          "rect": {
+            "x": 291,
+            "y": 286,
+            "width": 204,
+            "height": 145
+          },
+          "geometry_confidence": "serialized_entry"
+        }
+      ],
+      "bitmap_holder": {
+        "version": 1,
+        "declared_count": 10,
+        "parsed_count": 10,
+        "frames": [
+          {
+            "index": 0,
+            "name": "bęben 02",
+            "record_offset": 310493,
+            "record_size": 19872,
+            "pixel_offset": 310625,
+            "width": 142,
+            "height": 137,
+            "right": 226,
+            "bottom": 420,
+            "rect": {
+              "x": 84,
+              "y": 283,
+              "width": 142,
+              "height": 137
+            },
+            "bmp_output": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_000_b_ben 02_142x137.bmp"
+          },
+          {
+            "index": 1,
+            "name": "bęben 02",
+            "record_offset": 330369,
+            "record_size": 32384,
+            "pixel_offset": 330501,
+            "width": 207,
+            "height": 155,
+            "right": 356,
+            "bottom": 476,
+            "rect": {
+              "x": 149,
+              "y": 321,
+              "width": 207,
+              "height": 155
+            },
+            "bmp_output": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_001_b_ben 02_207x155.bmp"
+          },
+          {
+            "index": 2,
+            "name": "bęben 02",
+            "record_offset": 362757,
+            "record_size": 29724,
+            "pixel_offset": 362889,
+            "width": 204,
+            "height": 145,
+            "right": 495,
+            "bottom": 431,
+            "rect": {
+              "x": 291,
+              "y": 286,
+              "width": 204,
+              "height": 145
+            },
+            "bmp_output": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_002_b_ben 02_204x145.bmp"
+          },
+          {
+            "index": 3,
+            "name": "bębenek 0",
+            "record_offset": 392485,
+            "record_size": 5464,
+            "pixel_offset": 392617,
+            "width": 74,
+            "height": 70,
+            "right": 427,
+            "bottom": 279,
+            "rect": {
+              "x": 353,
+              "y": 209,
+              "width": 74,
+              "height": 70
+            },
+            "bmp_output": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_003_b_benek 0_74x70.bmp"
+          },
+          {
+            "index": 4,
+            "name": "tamtam 02",
+            "record_offset": 397953,
+            "record_size": 12996,
+            "pixel_offset": 398085,
+            "width": 105,
+            "height": 119,
+            "right": 526,
+            "bottom": 296,
+            "rect": {
+              "x": 421,
+              "y": 177,
+              "width": 105,
+              "height": 119
+            },
+            "bmp_output": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_004_tamtam 02_105x119.bmp"
+          },
+          {
+            "index": 5,
+            "name": "tamtam 02",
+            "record_offset": 410953,
+            "record_size": 12684,
+            "pixel_offset": 411085,
+            "width": 106,
+            "height": 116,
+            "right": 631,
+            "bottom": 291,
+            "rect": {
+              "x": 525,
+              "y": 175,
+              "width": 106,
+              "height": 116
+            },
+            "bmp_output": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_005_tamtam 02_106x116.bmp"
+          },
+          {
+            "index": 6,
+            "name": "talerz 02",
+            "record_offset": 423641,
+            "record_size": 8432,
+            "pixel_offset": 423773,
+            "width": 145,
+            "height": 56,
+            "right": 561,
+            "bottom": 88,
+            "rect": {
+              "x": 416,
+              "y": 32,
+              "width": 145,
+              "height": 56
+            },
+            "bmp_output": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_006_talerz 02_145x56.bmp"
+          },
+          {
+            "index": 7,
+            "name": "bęben 01",
+            "record_offset": 432077,
+            "record_size": 19872,
+            "pixel_offset": 432209,
+            "width": 142,
+            "height": 137,
+            "right": 226,
+            "bottom": 420,
+            "rect": {
+              "x": 84,
+              "y": 283,
+              "width": 142,
+              "height": 137
+            },
+            "bmp_output": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_007_b_ben 01_142x137.bmp"
+          },
+          {
+            "index": 8,
+            "name": "bęben 01",
+            "record_offset": 451953,
+            "record_size": 32384,
+            "pixel_offset": 452085,
+            "width": 207,
+            "height": 155,
+            "right": 356,
+            "bottom": 476,
+            "rect": {
+              "x": 149,
+              "y": 321,
+              "width": 207,
+              "height": 155
+            },
+            "bmp_output": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_008_b_ben 01_207x155.bmp"
+          },
+          {
+            "index": 9,
+            "name": "bęben 01",
+            "record_offset": 484341,
+            "record_size": 29724,
+            "pixel_offset": 484473,
+            "width": 204,
+            "height": 145,
+            "right": 495,
+            "bottom": 431,
+            "rect": {
+              "x": 291,
+              "y": 286,
+              "width": 204,
+              "height": 145
+            },
+            "bmp_output": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_009_b_ben 01_204x145.bmp"
+          }
+        ]
+      }
     },
     {
       "index": 1,
@@ -49,63 +407,63 @@
       "embedded": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_000_0007e392.wav",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_000_0007e392.wav",
           "offset": 517010,
           "size": 8516,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_001_00080536.wav",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_001_00080536.wav",
           "offset": 525622,
           "size": 7510,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_002_000822ec.wav",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_002_000822ec.wav",
           "offset": 533228,
           "size": 7556,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_003_000840d0.wav",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_003_000840d0.wav",
           "offset": 540880,
           "size": 3714,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_004_00084fb2.wav",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_004_00084fb2.wav",
           "offset": 544690,
           "size": 3582,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_005_00085e10.wav",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_005_00085e10.wav",
           "offset": 548368,
           "size": 6450,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_006_000877a2.wav",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_006_000877a2.wav",
           "offset": 554914,
           "size": 18032,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_007_0008be72.wav",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_007_0008be72.wav",
           "offset": 573042,
           "size": 22992,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_008_000918a2.wav",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_008_000918a2.wav",
           "offset": 596130,
           "size": 14628,
           "extension": ".wav"
@@ -122,21 +480,21 @@
       "embedded": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\03_Text_Holder_000_00095950.wav",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\03_Text_Holder_000_00095950.wav",
           "offset": 612688,
           "size": 5049692,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\03_Text_Holder_001_00566de8.wav",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\03_Text_Holder_001_00566de8.wav",
           "offset": 5664232,
           "size": 5100396,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\03_Text_Holder_002_00a447be.wav",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\03_Text_Holder_002_00a447be.wav",
           "offset": 10766270,
           "size": 640808,
           "extension": ".wav"
@@ -150,7 +508,157 @@
       "display_name": "Sprite_Holder",
       "private_offset": 11451817,
       "private_size": 66132,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_000_marakas 0_phase_00.png",
+          "offset": 11452431,
+          "size": 4021,
+          "pixel_size": 47214,
+          "width": 122,
+          "height": 129,
+          "name": "marakas 0",
+          "id": 0,
+          "definition_id": 0,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_000_marakas 0_phase_00.png",
+              "size": 4021
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_000_marakas 0_phase_01.png",
+              "size": 6270
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_000_marakas 0_phase_02.png",
+              "size": 3307
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek_phase_00.png",
+          "offset": 11500119,
+          "size": 3040,
+          "pixel_size": 17550,
+          "width": 90,
+          "height": 65,
+          "name": "dzwonek ",
+          "id": 1,
+          "definition_id": 1,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek_phase_00.png",
+              "size": 3040
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek_phase_01.png",
+              "size": 3262
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek_phase_02.png",
+              "size": 2832
+            }
+          ]
+        }
+      ],
+      "sprite_holder": {
+        "version": 1,
+        "definition_count": 2,
+        "instance_count": 2,
+        "parsed_definitions": 2,
+        "parsed_instances": 2,
+        "definitions": [
+          {
+            "index": 0,
+            "name": "marakas 0",
+            "record_offset": 11451829,
+            "blob_offset": 11451833,
+            "blob_size": 47812,
+            "width": 122,
+            "height": 129,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_000_marakas 0_phase_00.png",
+                "size": 4021
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_000_marakas 0_phase_01.png",
+                "size": 6270
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_000_marakas 0_phase_02.png",
+                "size": 3307
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "dzwonek ",
+            "record_offset": 11499645,
+            "blob_offset": 11499649,
+            "blob_size": 18020,
+            "width": 90,
+            "height": 65,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek_phase_00.png",
+                "size": 3040
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek_phase_01.png",
+                "size": 3262
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek_phase_02.png",
+                "size": 2832
+              }
+            ]
+          }
+        ],
+        "instances": [
+          {
+            "index": 0,
+            "definition_id": 0,
+            "field04": 0,
+            "x": 482,
+            "y": 324,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 11517669
+          },
+          {
+            "index": 1,
+            "definition_id": 1,
+            "field04": 1,
+            "x": 228,
+            "y": 246,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 11517809
+          }
+        ]
+      }
     },
     {
       "index": 5,
@@ -162,7 +670,7 @@
       "embedded": [
         {
           "kind": "multibitmap_bmp",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\multibitmap\\05_MultiBitmap_000_zosia_b.bmp",
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\multibitmap\\05_MultiBitmap_000_zosia_b.bmp",
           "offset": 11518966,
           "size": 308278,
           "pixel_size": 307200,
@@ -184,7 +692,7 @@
             "metadata_offset": 11826166,
             "width": 640,
             "height": 480,
-            "bmp_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\multibitmap\\05_MultiBitmap_000_zosia_b.bmp"
+            "bmp_output": "extracted_assets\\bdf\\ZOSIA_PS\\multibitmap\\05_MultiBitmap_000_zosia_b.bmp"
           }
         ]
       }
@@ -193,87 +701,317 @@
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "dib",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\background.dib",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\background.dib",
       "size": 308180
     },
     {
       "kind": "bmp",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\background.bmp",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\background.bmp",
       "size": 308194
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\script.txt",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\script.txt",
       "size": 16450
     },
     {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_000_b_ben 02_142x137.bmp",
+      "offset": 310625,
+      "size": 20806,
+      "pixel_size": 19728,
+      "width": 142,
+      "height": 137,
+      "name": "bęben 02",
+      "rect": {
+        "x": 84,
+        "y": 283,
+        "width": 142,
+        "height": 137
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_001_b_ben 02_207x155.bmp",
+      "offset": 330501,
+      "size": 33318,
+      "pixel_size": 32240,
+      "width": 207,
+      "height": 155,
+      "name": "bęben 02",
+      "rect": {
+        "x": 149,
+        "y": 321,
+        "width": 207,
+        "height": 155
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_002_b_ben 02_204x145.bmp",
+      "offset": 362889,
+      "size": 30658,
+      "pixel_size": 29580,
+      "width": 204,
+      "height": 145,
+      "name": "bęben 02",
+      "rect": {
+        "x": 291,
+        "y": 286,
+        "width": 204,
+        "height": 145
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_003_b_benek 0_74x70.bmp",
+      "offset": 392617,
+      "size": 6398,
+      "pixel_size": 5320,
+      "width": 74,
+      "height": 70,
+      "name": "bębenek 0",
+      "rect": {
+        "x": 353,
+        "y": 209,
+        "width": 74,
+        "height": 70
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_004_tamtam 02_105x119.bmp",
+      "offset": 398085,
+      "size": 13930,
+      "pixel_size": 12852,
+      "width": 105,
+      "height": 119,
+      "name": "tamtam 02",
+      "rect": {
+        "x": 421,
+        "y": 177,
+        "width": 105,
+        "height": 119
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_005_tamtam 02_106x116.bmp",
+      "offset": 411085,
+      "size": 13606,
+      "pixel_size": 12528,
+      "width": 106,
+      "height": 116,
+      "name": "tamtam 02",
+      "rect": {
+        "x": 525,
+        "y": 175,
+        "width": 106,
+        "height": 116
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_006_talerz 02_145x56.bmp",
+      "offset": 423773,
+      "size": 9366,
+      "pixel_size": 8288,
+      "width": 145,
+      "height": 56,
+      "name": "talerz 02",
+      "rect": {
+        "x": 416,
+        "y": 32,
+        "width": 145,
+        "height": 56
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_007_b_ben 01_142x137.bmp",
+      "offset": 432209,
+      "size": 20806,
+      "pixel_size": 19728,
+      "width": 142,
+      "height": 137,
+      "name": "bęben 01",
+      "rect": {
+        "x": 84,
+        "y": 283,
+        "width": 142,
+        "height": 137
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_008_b_ben 01_207x155.bmp",
+      "offset": 452085,
+      "size": 33318,
+      "pixel_size": 32240,
+      "width": 207,
+      "height": 155,
+      "name": "bęben 01",
+      "rect": {
+        "x": 149,
+        "y": 321,
+        "width": 207,
+        "height": 155
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\bitmap_holder\\00_Bitmap_Holder_009_b_ben 01_204x145.bmp",
+      "offset": 484473,
+      "size": 30658,
+      "pixel_size": 29580,
+      "width": 204,
+      "height": 145,
+      "name": "bęben 01",
+      "rect": {
+        "x": 291,
+        "y": 286,
+        "width": 204,
+        "height": 145
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_000_0007e392.wav",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_000_0007e392.wav",
       "size": 8516
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_001_00080536.wav",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_001_00080536.wav",
       "size": 7510
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_002_000822ec.wav",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_002_000822ec.wav",
       "size": 7556
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_003_000840d0.wav",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_003_000840d0.wav",
       "size": 3714
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_004_00084fb2.wav",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_004_00084fb2.wav",
       "size": 3582
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_005_00085e10.wav",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_005_00085e10.wav",
       "size": 6450
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_006_000877a2.wav",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_006_000877a2.wav",
       "size": 18032
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_007_0008be72.wav",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_007_0008be72.wav",
       "size": 22992
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_008_000918a2.wav",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\02_Sound_Holder_008_000918a2.wav",
       "size": 14628
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\03_Text_Holder_000_00095950.wav",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\03_Text_Holder_000_00095950.wav",
       "size": 5049692
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\03_Text_Holder_001_00566de8.wav",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\03_Text_Holder_001_00566de8.wav",
       "size": 5100396
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\embedded\\03_Text_Holder_002_00a447be.wav",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\embedded\\03_Text_Holder_002_00a447be.wav",
       "size": 640808
     },
     {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_000_marakas 0_phase_00.png",
+      "offset": 11452431,
+      "size": 4021,
+      "pixel_size": 47214,
+      "width": 122,
+      "height": 129,
+      "name": "marakas 0",
+      "id": 0,
+      "definition_id": 0,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_000_marakas 0_phase_00.png",
+          "size": 4021
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_000_marakas 0_phase_01.png",
+          "size": 6270
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_000_marakas 0_phase_02.png",
+          "size": 3307
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek_phase_00.png",
+      "offset": 11500119,
+      "size": 3040,
+      "pixel_size": 17550,
+      "width": 90,
+      "height": 65,
+      "name": "dzwonek ",
+      "id": 1,
+      "definition_id": 1,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek_phase_00.png",
+          "size": 3040
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek_phase_01.png",
+          "size": 3262
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\ZOSIA_PS\\sprite_holder\\04_Sprite_Holder_001_dzwonek_phase_02.png",
+          "size": 2832
+        }
+      ]
+    },
+    {
       "kind": "multibitmap_bmp",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ZOSIA_PS\\multibitmap\\05_MultiBitmap_000_zosia_b.bmp",
+      "path": "extracted_assets\\bdf\\ZOSIA_PS\\multibitmap\\05_MultiBitmap_000_zosia_b.bmp",
       "offset": 11518966,
       "size": 308278,
       "pixel_size": 307200,

@@ -9,7 +9,7 @@
       "width": 28,
       "height": 30,
       "url": "../extracted_assets/grp/GR_CZYM/cursor_00_tu_nie.pgm",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\cursor_00_tu_nie.pgm"
+      "path": "extracted_assets\\grp\\GR_CZYM\\cursor_00_tu_nie.pgm"
     },
     {
       "index": 1,
@@ -17,7 +17,7 @@
       "width": 28,
       "height": 30,
       "url": "../extracted_assets/grp/GR_CZYM/cursor_01_action1.pgm",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\cursor_01_action1.pgm"
+      "path": "extracted_assets\\grp\\GR_CZYM\\cursor_01_action1.pgm"
     }
   ],
   "components": [
@@ -46,30 +46,60 @@
             "width": 753,
             "height": 47
           },
+          "name": "",
+          "layer": 4,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            215
+          ],
           "sourceOffset": 2910,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 13,
+          "auxState": 0
         },
         {
-          "id": 1,
+          "id": 11,
           "rect": {
             "x": 639,
             "y": -7,
             "width": 10,
             "height": 487
           },
+          "name": "",
+          "layer": 6,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            215
+          ],
           "sourceOffset": 3011,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 13,
+          "auxState": 0
         },
         {
-          "id": 2,
+          "id": 12,
           "rect": {
             "x": 4,
             "y": 6,
             "width": 624,
             "height": 471
           },
+          "name": "",
+          "layer": 6,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            215
+          ],
           "sourceOffset": 3112,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 13,
+          "auxState": 0
         }
       ],
       "sourceOffset": 1788,
@@ -106,7 +136,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_000_00001027.wav",
+          "path": "extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_000_00001027.wav",
           "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_000_00001027.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -116,7 +146,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_001_000bb92f.wav",
+          "path": "extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_001_000bb92f.wav",
           "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_001_000bb92f.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -126,7 +156,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_002_000d7d15.wav",
+          "path": "extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_002_000d7d15.wav",
           "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_002_000d7d15.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -136,7 +166,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_003_000ff6df.wav",
+          "path": "extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_003_000ff6df.wav",
           "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_003_000ff6df.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -146,7 +176,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_004_001940cb.wav",
+          "path": "extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_004_001940cb.wav",
           "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_004_001940cb.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -156,7 +186,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_005_001c0c9f.wav",
+          "path": "extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_005_001c0c9f.wav",
           "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_005_001c0c9f.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -166,7 +196,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_006_001c6527.wav",
+          "path": "extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_006_001c6527.wav",
           "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_006_001c6527.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -176,7 +206,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_007_001c96a3.wav",
+          "path": "extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_007_001c96a3.wav",
           "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_007_001c96a3.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -186,7 +216,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_008_001efdcb.wav",
+          "path": "extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_008_001efdcb.wav",
           "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_008_001efdcb.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -196,7 +226,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_009_001f848f.wav",
+          "path": "extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_009_001f848f.wav",
           "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_009_001f848f.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -206,7 +236,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_010_00200b53.wav",
+          "path": "extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_010_00200b53.wav",
           "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_010_00200b53.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -216,7 +246,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_011_0023b851.wav",
+          "path": "extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_011_0023b851.wav",
           "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_011_0023b851.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -226,7 +256,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_012_0023e70f.wav",
+          "path": "extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_012_0023e70f.wav",
           "url": "../extracted_assets/grp/GR_CZYM/embedded/01_Group.Sound_Holder_012_0023e70f.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -251,7 +281,7 @@
         "height": 48
       },
       "geometryConfidence": "synthetic_items",
-      "itemCount": 7,
+      "itemCount": 20,
       "hitboxes": [],
       "sourceOffset": 2364873,
       "geometrySourceOffset": null,

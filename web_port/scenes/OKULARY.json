@@ -24,22 +24,44 @@
       "namespace": "Page",
       "index": 0,
       "z": 0,
-      "visible": false,
+      "visible": true,
       "rect": {
         "x": 0,
         "y": 0,
-        "width": 640,
+        "width": 1224,
         "height": 480
       },
-      "geometryConfidence": "fallback_full_page",
+      "geometryConfidence": "serialized_entries",
       "itemCount": null,
       "hitboxes": [],
       "sourceOffset": 1173,
       "geometrySourceOffset": null,
       "privateOffset": 2763,
       "privateSize": 964900,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/bdf/OKULARY/panorama/00_Panorama_000_panorama_1224x480.bmp",
+      "assets": [
+        {
+          "kind": "panorama_bmp",
+          "path": "extracted_assets\\bdf\\OKULARY\\panorama\\00_Panorama_000_panorama_1224x480.bmp",
+          "url": "../extracted_assets/bdf/OKULARY/panorama/00_Panorama_000_panorama_1224x480.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 1224,
+          "height": 480,
+          "frameCount": null,
+          "offset": 3319,
+          "name": null,
+          "id": 0,
+          "initiallyVisible": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1224,
+            "height": 480
+          },
+          "geometryConfidence": "serialized_entry"
+        }
+      ],
       "audio": []
     },
     {
@@ -93,7 +115,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_000_000f0706.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_000_000f0706.wav",
           "url": "../extracted_assets/bdf/OKULARY/embedded/02_Sound_Holder_000_000f0706.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -103,7 +125,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_001_000f70a2.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_001_000f70a2.wav",
           "url": "../extracted_assets/bdf/OKULARY/embedded/02_Sound_Holder_001_000f70a2.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -113,7 +135,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_002_000fcb9a.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_002_000fcb9a.wav",
           "url": "../extracted_assets/bdf/OKULARY/embedded/02_Sound_Holder_002_000fcb9a.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -123,7 +145,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_003_000ffb48.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_003_000ffb48.wav",
           "url": "../extracted_assets/bdf/OKULARY/embedded/02_Sound_Holder_003_000ffb48.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -133,7 +155,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_004_00108674.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_004_00108674.wav",
           "url": "../extracted_assets/bdf/OKULARY/embedded/02_Sound_Holder_004_00108674.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -143,7 +165,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_005_0010c4fa.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_005_0010c4fa.wav",
           "url": "../extracted_assets/bdf/OKULARY/embedded/02_Sound_Holder_005_0010c4fa.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -153,7 +175,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_006_00112d28.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_006_00112d28.wav",
           "url": "../extracted_assets/bdf/OKULARY/embedded/02_Sound_Holder_006_00112d28.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -163,7 +185,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_007_00118e88.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_007_00118e88.wav",
           "url": "../extracted_assets/bdf/OKULARY/embedded/02_Sound_Holder_007_00118e88.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -173,7 +195,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_008_0011f5a8.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_008_0011f5a8.wav",
           "url": "../extracted_assets/bdf/OKULARY/embedded/02_Sound_Holder_008_0011f5a8.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -183,7 +205,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_009_00127272.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_009_00127272.wav",
           "url": "../extracted_assets/bdf/OKULARY/embedded/02_Sound_Holder_009_00127272.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -193,7 +215,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_010_0012d5ca.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_010_0012d5ca.wav",
           "url": "../extracted_assets/bdf/OKULARY/embedded/02_Sound_Holder_010_0012d5ca.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -203,7 +225,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_011_00134978.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_011_00134978.wav",
           "url": "../extracted_assets/bdf/OKULARY/embedded/02_Sound_Holder_011_00134978.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -213,7 +235,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_012_00137a20.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_012_00137a20.wav",
           "url": "../extracted_assets/bdf/OKULARY/embedded/02_Sound_Holder_012_00137a20.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -223,7 +245,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_013_001429a8.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_013_001429a8.wav",
           "url": "../extracted_assets/bdf/OKULARY/embedded/02_Sound_Holder_013_001429a8.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -233,7 +255,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_014_00168522.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_014_00168522.wav",
           "url": "../extracted_assets/bdf/OKULARY/embedded/02_Sound_Holder_014_00168522.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -243,7 +265,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_015_001a199e.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_015_001a199e.wav",
           "url": "../extracted_assets/bdf/OKULARY/embedded/02_Sound_Holder_015_001a199e.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -253,7 +275,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_016_001ad798.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_016_001ad798.wav",
           "url": "../extracted_assets/bdf/OKULARY/embedded/02_Sound_Holder_016_001ad798.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -263,7 +285,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_017_001b7654.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_017_001b7654.wav",
           "url": "../extracted_assets/bdf/OKULARY/embedded/02_Sound_Holder_017_001b7654.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -273,7 +295,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_018_001bf274.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_018_001bf274.wav",
           "url": "../extracted_assets/bdf/OKULARY/embedded/02_Sound_Holder_018_001bf274.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -283,7 +305,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_019_001c44dc.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_019_001c44dc.wav",
           "url": "../extracted_assets/bdf/OKULARY/embedded/02_Sound_Holder_019_001c44dc.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -293,7 +315,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_020_001cea96.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_020_001cea96.wav",
           "url": "../extracted_assets/bdf/OKULARY/embedded/02_Sound_Holder_020_001cea96.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -303,7 +325,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_021_002a3ca0.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_021_002a3ca0.wav",
           "url": "../extracted_assets/bdf/OKULARY/embedded/02_Sound_Holder_021_002a3ca0.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -313,7 +335,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_022_002bc2e2.wav",
+          "path": "extracted_assets\\bdf\\OKULARY\\embedded\\02_Sound_Holder_022_002bc2e2.wav",
           "url": "../extracted_assets/bdf/OKULARY/embedded/02_Sound_Holder_022_002bc2e2.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -329,23 +351,133 @@
       "sourceType": "Sprite_Holder",
       "namespace": "Page",
       "index": 3,
-      "z": 50,
+      "z": 1,
       "visible": true,
       "rect": {
-        "x": 0,
-        "y": 0,
-        "width": 48,
-        "height": 48
+        "x": 150,
+        "y": 18,
+        "width": 635,
+        "height": 428
       },
-      "geometryConfidence": "synthetic_items",
+      "geometryConfidence": "serialized_entries",
       "itemCount": 3,
       "hitboxes": [],
       "sourceOffset": 3253050,
       "geometrySourceOffset": null,
       "privateOffset": 3254584,
       "privateSize": 127740,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/bdf/OKULARY/sprite_holder/03_Sprite_Holder_000_okulary 0_phase_00.png",
+      "assets": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_000_okulary 0_phase_00.png",
+          "url": "../extracted_assets/bdf/OKULARY/sprite_holder/03_Sprite_Holder_000_okulary 0_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 82,
+          "height": 70,
+          "frameCount": null,
+          "offset": 3255220,
+          "name": "okulary 0",
+          "id": 0,
+          "definitionId": 0,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_000_okulary 0_phase_00.png",
+              "url": "../extracted_assets/bdf/OKULARY/sprite_holder/03_Sprite_Holder_000_okulary 0_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_000_okulary 0_phase_01.png",
+              "url": "../extracted_assets/bdf/OKULARY/sprite_holder/03_Sprite_Holder_000_okulary 0_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 3381904,
+          "rect": {
+            "x": 703,
+            "y": 18,
+            "width": 82,
+            "height": 70
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_001_okulary 0_phase_00.png",
+          "url": "../extracted_assets/bdf/OKULARY/sprite_holder/03_Sprite_Holder_001_okulary 0_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 67,
+          "frameCount": null,
+          "offset": 3267044,
+          "name": "okulary 0",
+          "id": 1,
+          "definitionId": 1,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_001_okulary 0_phase_00.png",
+              "url": "../extracted_assets/bdf/OKULARY/sprite_holder/03_Sprite_Holder_001_okulary 0_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_001_okulary 0_phase_01.png",
+              "url": "../extracted_assets/bdf/OKULARY/sprite_holder/03_Sprite_Holder_001_okulary 0_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 3382044,
+          "rect": {
+            "x": 709,
+            "y": 108,
+            "width": 76,
+            "height": 67
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_002_lusterko_phase_00.png",
+          "url": "../extracted_assets/bdf/OKULARY/sprite_holder/03_Sprite_Holder_002_lusterko_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 247,
+          "height": 421,
+          "frameCount": null,
+          "offset": 3277917,
+          "name": "lusterko",
+          "id": 2,
+          "definitionId": 2,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\OKULARY\\sprite_holder\\03_Sprite_Holder_002_lusterko_phase_00.png",
+              "url": "../extracted_assets/bdf/OKULARY/sprite_holder/03_Sprite_Holder_002_lusterko_phase_00.png"
+            }
+          ],
+          "phaseCount": 1,
+          "instanceOffset": 3382184,
+          "rect": {
+            "x": 150,
+            "y": 25,
+            "width": 247,
+            "height": 421
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": false,
+          "z": 1
+        }
+      ],
       "audio": []
     }
   ],
@@ -370,14 +502,6 @@
         "signature": "SetTextMode(void)"
       },
       {
-        "name": "if",
-        "signature": "if(textMode)"
-      },
-      {
-        "name": "while",
-        "signature": "while(tt<19)"
-      },
-      {
         "name": "Panorama.SpriteMouseMoveOut",
         "signature": "Panorama.SpriteMouseMoveOut()"
       },
@@ -386,56 +510,12 @@
         "signature": "Panorama.ClickOnSprite(int panoramaNo,int spriteNo)"
       },
       {
-        "name": "if",
-        "signature": "if(spriteNo==13)"
-      },
-      {
         "name": "Group.HotSpot_Holder.MouseMoveIn",
         "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(rectID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbar)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarPhase)"
-      },
-      {
-        "name": "if",
-        "signature": "if(txtHotSpotOn==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.InPlace",
         "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==480)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarCase)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(puzzleNo)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(puzzleNo)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==0)"
       },
       {
         "name": "Group.Sprite_Holder.MouseMoveIn",
@@ -450,28 +530,12 @@
         "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(spriteID==11)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseClickOnUp",
         "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(toolbarPhase)"
-      },
-      {
         "name": "Group.Sprite_Holder.EndAnimation",
         "signature": "Group.Sprite_Holder.EndAnimation(int spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
       },
       {
         "name": "Text_Holder.ScrollTextUp",
@@ -498,20 +562,12 @@
         "signature": "Text_Holder.ClickOnText(int textID)"
       },
       {
-        "name": "if",
-        "signature": "if(playStatus)"
-      },
-      {
         "name": "Text_Holder.EndOfSynchroText",
         "signature": "Text_Holder.EndOfSynchroText(int textID)"
       },
       {
         "name": "Sound_Holder.EndPlaySound",
         "signature": "Sound_Holder.EndPlaySound(int soundID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(soundID==0 && textMode)"
       },
       {
         "name": "Sprite_Holder.MouseMoveIn",
@@ -524,14 +580,6 @@
       {
         "name": "Sprite_Holder.MouseClickOnDown",
         "signature": "Sprite_Holder.MouseClickOnDown(int spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(spriteID<2)"
-      },
-      {
-        "name": "while",
-        "signature": "while(tt<19)"
       },
       {
         "name": "Sprite_Holder.MouseClickOnUp",

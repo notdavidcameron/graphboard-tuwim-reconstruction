@@ -9,7 +9,7 @@
       "width": 28,
       "height": 30,
       "url": "../extracted_assets/grp/G_PIOS/cursor_00_tu_nie.pgm",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\cursor_00_tu_nie.pgm"
+      "path": "extracted_assets\\grp\\G_PIOS\\cursor_00_tu_nie.pgm"
     },
     {
       "index": 1,
@@ -17,7 +17,7 @@
       "width": 28,
       "height": 30,
       "url": "../extracted_assets/grp/G_PIOS/cursor_01_actionj.pgm",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\cursor_01_actionj.pgm"
+      "path": "extracted_assets\\grp\\G_PIOS\\cursor_01_actionj.pgm"
     },
     {
       "index": 2,
@@ -33,7 +33,7 @@
       "width": 28,
       "height": 30,
       "url": "../extracted_assets/grp/G_PIOS/cursor_03_down.pgm",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\cursor_03_down.pgm"
+      "path": "extracted_assets\\grp\\G_PIOS\\cursor_03_down.pgm"
     }
   ],
   "components": [
@@ -63,7 +63,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_000_0000118a.wav",
+          "path": "extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_000_0000118a.wav",
           "url": "../extracted_assets/grp/G_PIOS/embedded/00_Group.Sound_Holder_000_0000118a.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -73,7 +73,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_001_00178500.wav",
+          "path": "extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_001_00178500.wav",
           "url": "../extracted_assets/grp/G_PIOS/embedded/00_Group.Sound_Holder_001_00178500.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -83,7 +83,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_002_00179dea.wav",
+          "path": "extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_002_00179dea.wav",
           "url": "../extracted_assets/grp/G_PIOS/embedded/00_Group.Sound_Holder_002_00179dea.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -93,7 +93,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_003_0017f672.wav",
+          "path": "extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_003_0017f672.wav",
           "url": "../extracted_assets/grp/G_PIOS/embedded/00_Group.Sound_Holder_003_0017f672.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -103,7 +103,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_004_001827ee.wav",
+          "path": "extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_004_001827ee.wav",
           "url": "../extracted_assets/grp/G_PIOS/embedded/00_Group.Sound_Holder_004_001827ee.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -113,7 +113,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_005_001a8f16.wav",
+          "path": "extracted_assets\\grp\\G_PIOS\\embedded\\00_Group.Sound_Holder_005_001a8f16.wav",
           "url": "../extracted_assets/grp/G_PIOS/embedded/00_Group.Sound_Holder_005_001a8f16.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -173,8 +173,18 @@
             "width": 19,
             "height": 477
           },
+          "name": "",
+          "layer": 6,
+          "enabled": true,
+          "flags": [
+            180,
+            0,
+            255
+          ],
           "sourceOffset": 1913054,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 3,
+          "auxState": 0
         },
         {
           "id": 1,
@@ -184,8 +194,18 @@
             "width": 634,
             "height": 476
           },
+          "name": "",
+          "layer": 6,
+          "enabled": true,
+          "flags": [
+            180,
+            0,
+            255
+          ],
           "sourceOffset": 1913155,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 3,
+          "auxState": 0
         }
       ],
       "sourceOffset": 1911932,

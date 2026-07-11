@@ -23,15 +23,15 @@
       "sourceType": "Sprite_Holder",
       "namespace": "Page",
       "index": 0,
-      "z": 50,
+      "z": 0,
       "visible": true,
       "rect": {
-        "x": 0,
-        "y": 0,
-        "width": 48,
-        "height": 48
+        "x": 63,
+        "y": 214,
+        "width": 492,
+        "height": 168
       },
-      "geometryConfidence": "synthetic_items",
+      "geometryConfidence": "serialized_entries",
       "itemCount": 5,
       "hitboxes": [],
       "sourceOffset": 309357,
@@ -49,9 +49,10 @@
           "width": 117,
           "height": 122,
           "frameCount": null,
-          "offset": 326005,
+          "offset": 311735,
           "name": "g",
           "id": 0,
+          "definitionId": 0,
           "phaseAssets": [
             {
               "phase": 0,
@@ -67,16 +68,25 @@
               "phase": 2,
               "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_000_g_phase_02.png",
               "url": "../extracted_assets/bdf/PLOTKI/sprite_holder/00_Sprite_Holder_000_g_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_000_g_phase_03.png",
+              "url": "../extracted_assets/bdf/PLOTKI/sprite_holder/00_Sprite_Holder_000_g_phase_03.png"
             }
           ],
-          "phaseCount": 3,
+          "phaseCount": 4,
+          "instanceOffset": 513887,
           "rect": {
-            "x": 0,
-            "y": 400,
+            "x": 63,
+            "y": 256,
             "width": 117,
             "height": 122
           },
-          "geometryConfidence": "serialized_sprite"
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
         },
         {
           "kind": "sprite_holder_png",
@@ -87,9 +97,10 @@
           "width": 95,
           "height": 96,
           "frameCount": null,
-          "offset": 378675,
+          "offset": 369559,
           "name": "indyk 01",
           "id": 1,
+          "definitionId": 1,
           "phaseAssets": [
             {
               "phase": 0,
@@ -105,16 +116,25 @@
               "phase": 2,
               "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_001_indyk 01_phase_02.png",
               "url": "../extracted_assets/bdf/PLOTKI/sprite_holder/00_Sprite_Holder_001_indyk 01_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_001_indyk 01_phase_03.png",
+              "url": "../extracted_assets/bdf/PLOTKI/sprite_holder/00_Sprite_Holder_001_indyk 01_phase_03.png"
             }
           ],
-          "phaseCount": 3,
+          "phaseCount": 4,
+          "instanceOffset": 514027,
           "rect": {
-            "x": 0,
-            "y": 400,
+            "x": 359,
+            "y": 218,
             "width": 95,
             "height": 96
           },
-          "geometryConfidence": "serialized_sprite"
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
         },
         {
           "kind": "sprite_holder_png",
@@ -125,9 +145,10 @@
           "width": 63,
           "height": 67,
           "frameCount": null,
-          "offset": 410868,
+          "offset": 406651,
           "name": "kaczuszka",
           "id": 2,
+          "definitionId": 2,
           "phaseAssets": [
             {
               "phase": 0,
@@ -143,16 +164,25 @@
               "phase": 2,
               "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_002_kaczuszka_phase_02.png",
               "url": "../extracted_assets/bdf/PLOTKI/sprite_holder/00_Sprite_Holder_002_kaczuszka_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_002_kaczuszka_phase_03.png",
+              "url": "../extracted_assets/bdf/PLOTKI/sprite_holder/00_Sprite_Holder_002_kaczuszka_phase_03.png"
             }
           ],
-          "phaseCount": 3,
+          "phaseCount": 4,
+          "instanceOffset": 514167,
           "rect": {
-            "x": 97,
-            "y": 400,
+            "x": 159,
+            "y": 315,
             "width": 63,
             "height": 67
           },
-          "geometryConfidence": "serialized_sprite"
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
         },
         {
           "kind": "sprite_holder_png",
@@ -163,9 +193,10 @@
           "width": 90,
           "height": 104,
           "frameCount": null,
-          "offset": 433443,
+          "offset": 424087,
           "name": "kura01",
           "id": 3,
+          "definitionId": 3,
           "phaseAssets": [
             {
               "phase": 0,
@@ -186,16 +217,25 @@
               "phase": 3,
               "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_003_kura01_phase_03.png",
               "url": "../extracted_assets/bdf/PLOTKI/sprite_holder/00_Sprite_Holder_003_kura01_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_003_kura01_phase_04.png",
+              "url": "../extracted_assets/bdf/PLOTKI/sprite_holder/00_Sprite_Holder_003_kura01_phase_04.png"
             }
           ],
-          "phaseCount": 4,
+          "phaseCount": 5,
+          "instanceOffset": 514307,
           "rect": {
-            "x": 0,
-            "y": 100,
+            "x": 270,
+            "y": 214,
             "width": 90,
             "height": 104
           },
-          "geometryConfidence": "serialized_sprite"
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
         },
         {
           "kind": "sprite_holder_png",
@@ -206,9 +246,10 @@
           "width": 85,
           "height": 124,
           "frameCount": null,
-          "offset": 482263,
+          "offset": 471727,
           "name": "perliczka",
           "id": 4,
+          "definitionId": 4,
           "phaseAssets": [
             {
               "phase": 0,
@@ -224,16 +265,25 @@
               "phase": 2,
               "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_004_perliczka_phase_02.png",
               "url": "../extracted_assets/bdf/PLOTKI/sprite_holder/00_Sprite_Holder_004_perliczka_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_004_perliczka_phase_03.png",
+              "url": "../extracted_assets/bdf/PLOTKI/sprite_holder/00_Sprite_Holder_004_perliczka_phase_03.png"
             }
           ],
-          "phaseCount": 3,
+          "phaseCount": 4,
+          "instanceOffset": 514447,
           "rect": {
-            "x": 97,
-            "y": 100,
+            "x": 470,
+            "y": 257,
             "width": 85,
             "height": 124
           },
-          "geometryConfidence": "serialized_sprite"
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
         }
       ],
       "audio": []
@@ -614,16 +664,8 @@
         "signature": "SetTextMode()"
       },
       {
-        "name": "if",
-        "signature": "if(textMode==0)"
-      },
-      {
         "name": "Transparent_Video_Holder.TheEnd",
         "signature": "Transparent_Video_Holder.TheEnd(int videoID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(curVdo>4)"
       },
       {
         "name": "Sprite_Holder.MouseMoveIn",
@@ -634,20 +676,8 @@
         "signature": "Sprite_Holder.MouseMoveOut(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(curVdo==0)"
-      },
-      {
         "name": "Sprite_Holder.MouseClickOnDown",
         "signature": "Sprite_Holder.MouseClickOnDown(int spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(inw[spriteID]==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(zwCnt>4)"
       },
       {
         "name": "Transparent_Video_Holder.MouseClickOnDown",
@@ -666,40 +696,8 @@
         "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(rectID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbar)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(txtHotSpotOn==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.InPlace",
         "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==480)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarCase)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==0)"
       },
       {
         "name": "Group.Sprite_Holder.MouseMoveIn",
@@ -714,28 +712,12 @@
         "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(spriteID==11)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseClickOnUp",
         "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.EndAnimation",
         "signature": "Group.Sprite_Holder.EndAnimation(int spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
       },
       {
         "name": "Text_Holder.ScrollTextUp",
@@ -762,10 +744,6 @@
         "signature": "Text_Holder.ClickOnText(int textID)"
       },
       {
-        "name": "if",
-        "signature": "if(playStatus)"
-      },
-      {
         "name": "Text_Holder.EndOfSynchroText",
         "signature": "Text_Holder.EndOfSynchroText(int textID)"
       },
@@ -774,16 +752,8 @@
         "signature": "Sound_Holder.EndPlaySound(int soundID)"
       },
       {
-        "name": "if",
-        "signature": "if(soundID==0 && textMode)"
-      },
-      {
         "name": "OnTimer",
         "signature": "OnTimer(void)"
-      },
-      {
-        "name": "if",
-        "signature": "if(curVdo==0)"
       },
       {
         "name": "OnLButtonDown",

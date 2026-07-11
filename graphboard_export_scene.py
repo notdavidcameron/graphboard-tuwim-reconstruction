@@ -11,7 +11,16 @@ from pathlib import Path
 from typing import Any
 
 
-IMAGE_KINDS = {"bmp", "dib", "board_video_gif", "multibitmap_bmp", "multibitmap_gif", "bitmap_holder_bmp", "sprite_holder_png"}
+IMAGE_KINDS = {
+    "bmp",
+    "dib",
+    "board_video_gif",
+    "multibitmap_bmp",
+    "bitmap_holder_bmp",
+    "sprite_holder_png",
+    "panorama_bmp",
+    "panorama_holder_bmp",
+}
 AUDIO_KINDS = {"WAVE", "riff_wave", "board_video_pcm_wave"}
 
 
@@ -154,7 +163,8 @@ def parse_project_order(project_path: Path | None, available_ids: set[str]) -> t
 
 
 HANDLER_PATTERN = re.compile(
-    r"(?m)^\s*(?:(?:void|int|CString|float|double|char|long)\s+)?"
+    r"(?im)^\s*(?:(?:void|bool|int|CString|float|double|char|long|short|UINT|DWORD|BOOL|VOID)\s+)?"
+    r"(?!(?:if|else|while|switch|for|do)\b)"
     r"([A-Za-z_][A-Za-z0-9_.]*)\s*\(([^;{}]*)\)\s*\{"
 )
 
@@ -226,18 +236,35 @@ def read_i32(data: bytes, offset: int) -> int:
     return struct.unpack_from("<i", data, offset)[0]
 
 
+def read_archive_string(data: bytes, offset: int, end: int) -> tuple[str, int]:
+    """Read an MFC CArchive CString and return (decoded_text, new_offset)."""
+    if offset >= end:
+        raise struct.error("CString length is outside the private block")
+    length = data[offset]
+    offset += 1
+    if length == 0xFF:
+        if offset + 2 > end:
+            raise struct.error("CString u16 length is outside the private block")
+        length = struct.unpack_from("<H", data, offset)[0]
+        offset += 2
+        if length == 0xFFFF:
+            if offset + 4 > end:
+                raise struct.error("CString u32 length is outside the private block")
+            length = read_u32(data, offset)
+            offset += 4
+    if offset + length > end:
+        raise struct.error("CString payload is outside the private block")
+    raw = data[offset : offset + length]
+    return raw.decode("cp1250", "replace"), offset + length
+
+
 def runtime_component_type(component_type: str | None) -> str:
     value = str(component_type or "")
     return value.removeprefix("Group.")
 
 
 def parse_hotspot_entries(meta_component: dict[str, Any], source_data: bytes | None) -> list[dict[str, Any]]:
-    """Recover HotSpotHolder rectangles from the compact serialized table.
-
-    Corpus samples show a 7-byte prefix, a little-endian u32 count at +7,
-    0x65-byte entries, then an 8-byte tail. Each entry begins with
-    left/top/right/bottom i32 values.
-    """
+    """Recover HotSpotHolder rectangles from the DLL serializer layout."""
     if runtime_component_type(meta_component.get("display_name")) != "HotSpot_Holder" or not source_data:
         return []
     private_start = int(meta_component.get("private_offset") or 0)
@@ -246,10 +273,14 @@ def parse_hotspot_entries(meta_component: dict[str, Any], source_data: bytes | N
     if private_start + 19 > private_end:
         return []
     try:
+        version = read_u32(source_data, private_start)
+        flag0 = source_data[private_start + 4]
+        flag1 = source_data[private_start + 5]
+        flag2 = source_data[private_start + 6]
         count = read_u32(source_data, private_start + 7)
     except struct.error:
         return []
-    if count <= 0 or count > 100 or private_start + 11 + count * 0x65 > private_end:
+    if version != 0 or count <= 0 or count > 100 or private_start + 11 + count * 100 + 8 > private_end:
         return []
 
     entries: list[dict[str, Any]] = []
@@ -260,20 +291,40 @@ def parse_hotspot_entries(meta_component: dict[str, Any], source_data: bytes | N
             top = read_i32(source_data, cursor + 4)
             right = read_i32(source_data, cursor + 8)
             bottom = read_i32(source_data, cursor + 12)
+            hotspot_id = read_i32(source_data, cursor + 0x18)
+            layer = read_i32(source_data, cursor + 0x1C)
+            enabled = read_i32(source_data, cursor + 0x20)
+            name, next_cursor = read_archive_string(source_data, cursor + 100, private_end)
         except struct.error:
-            break
+            return []
         width = max(1, right - left)
         height = max(1, bottom - top)
         if -5000 <= left <= 5000 and -5000 <= top <= 5000 and 0 < width <= 5000 and 0 < height <= 5000:
             entries.append(
                 {
-                    "id": index,
+                    # The holder addresses hotspots by this serialized id, not
+                    # by their position in the record array.
+                    "id": hotspot_id,
                     "rect": {"x": left, "y": top, "width": width, "height": height},
+                    "name": name,
+                    "layer": layer,
+                    "enabled": enabled != 0,
+                    "flags": [flag0, flag1, flag2],
                     "sourceOffset": cursor,
                     "geometryConfidence": "serialized_entry",
                 }
             )
-        cursor += 0x65
+        cursor = next_cursor
+    if cursor + 8 <= private_end:
+        try:
+            active_index = read_u32(source_data, cursor)
+            aux_state = read_u32(source_data, cursor + 4)
+        except struct.error:
+            active_index = None
+            aux_state = None
+        for entry in entries:
+            entry["activeIndex"] = active_index
+            entry["auxState"] = aux_state
     return entries
 
 
@@ -289,8 +340,8 @@ def parse_bitmap_rect(meta_component: dict[str, Any], source_data: bytes | None)
     """Recover BitmapHolder's first visible rectangle.
 
     The observed BitmapHolder private block starts with version/count/bitmap-size,
-    followed by a per-item record. The stable stage rectangle is x/y/width/height
-    at +0x14..+0x20 in the first record.
+    followed by a per-item blob. The stable stage rectangle is left/top/right/bottom
+    at +0x14..+0x20 in the private block.
     """
     if runtime_component_type(meta_component.get("display_name")) != "Bitmap_Holder" or not source_data:
         return None
@@ -304,11 +355,11 @@ def parse_bitmap_rect(meta_component: dict[str, Any], source_data: bytes | None)
         count = read_u32(source_data, private_start + 4)
         left = read_i32(source_data, private_start + 0x14)
         top = read_i32(source_data, private_start + 0x18)
-        width = read_i32(source_data, private_start + 0x1C)
-        height = read_i32(source_data, private_start + 0x20)
+        right = read_i32(source_data, private_start + 0x1C)
+        bottom = read_i32(source_data, private_start + 0x20)
     except struct.error:
         return None
-    rect = plausible_rect(left, top, left + width, top + height)
+    rect = plausible_rect(left, top, right, bottom)
     if version != 1 or count <= 0 or count > 200 or not rect:
         return None
     return {"rect": rect, "sourceOffset": private_start + 0x14, "geometryConfidence": "serialized_entry"}
@@ -376,11 +427,12 @@ def parse_sprite_item_count(meta_component: dict[str, Any], source_data: bytes |
         return None
     try:
         version = read_u32(source_data, private_start)
-        count = read_u32(source_data, private_start + 4)
+        definition_count = read_u32(source_data, private_start + 4)
+        instance_count = read_u32(source_data, private_start + 8)
     except struct.error:
         return None
-    if version == 1 and 0 <= count <= 200:
-        return count
+    if version == 1 and 0 <= definition_count <= 200 and 0 <= instance_count <= 200:
+        return instance_count
     return None
 
 
@@ -475,6 +527,8 @@ def image_asset(item: dict[str, Any], web_root: Path, workspace_root: Path) -> d
         "name": item.get("name"),
         "id": item.get("id") if item.get("id") is not None else asset_id_from_path(path or ""),
     }
+    if item.get("definition_id") is not None:
+        asset["definitionId"] = item.get("definition_id")
     if item.get("phase_outputs"):
         asset["phaseAssets"] = [
             {
@@ -491,6 +545,58 @@ def image_asset(item: dict[str, Any], web_root: Path, workspace_root: Path) -> d
         asset["rect"] = item["rect"]
         asset["geometryConfidence"] = item.get("geometry_confidence") or "serialized_entry"
     return asset
+
+
+def expand_sprite_instances(meta_component: dict[str, Any], definition_assets: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    if runtime_component_type(meta_component.get("display_name")) != "Sprite_Holder":
+        return definition_assets
+
+    holder = meta_component.get("sprite_holder") or {}
+    instances = holder.get("instances") or []
+    if not instances:
+        return definition_assets
+
+    by_definition: dict[int, dict[str, Any]] = {}
+    for asset in definition_assets:
+        definition_id = asset.get("definitionId")
+        if definition_id is None:
+            definition_id = asset.get("id")
+        if isinstance(definition_id, int):
+            by_definition[definition_id] = asset
+
+    expanded = []
+    for instance in instances:
+        definition_id = instance.get("definition_id")
+        if not isinstance(definition_id, int):
+            continue
+        source = by_definition.get(definition_id)
+        if not source:
+            continue
+        try:
+            x = int(instance.get("x"))
+            y = int(instance.get("y"))
+        except (TypeError, ValueError):
+            continue
+        width = int(source.get("width") or 0)
+        height = int(source.get("height") or 0)
+        if width <= 0 or height <= 0:
+            continue
+
+        sprite = dict(source)
+        sprite["id"] = int(instance.get("index") or 0)
+        sprite["definitionId"] = definition_id
+        sprite["instanceOffset"] = instance.get("record_offset")
+        sprite["rect"] = {"x": x, "y": y, "width": width, "height": height}
+        sprite["geometryConfidence"] = "serialized_instance"
+        phase_count = int(sprite.get("phaseCount") or 1)
+        initial_phase = int(instance.get("phase") or 0)
+        sprite["initialPhase"] = initial_phase if 0 <= initial_phase < phase_count else 0
+        sprite["initiallyVisible"] = bool(instance.get("visible"))
+        if isinstance(instance.get("z"), int):
+            sprite["z"] = instance["z"]
+        expanded.append(sprite)
+
+    return expanded or definition_assets
 
 
 def audio_asset(item: dict[str, Any], web_root: Path, workspace_root: Path) -> dict[str, Any]:
@@ -700,6 +806,11 @@ def build_component(
             images.append(image_asset(item, web_root, workspace_root))
         elif kind in AUDIO_KINDS:
             audios.append(audio_asset(item, web_root, workspace_root))
+    if component_type == "MultiBitmap":
+        for asset in images:
+            asset["initiallyVisible"] = False
+        if len(images) == 1 and not hints["MultiBitmap"]:
+            images[0]["initiallyVisible"] = True
     tvh_entries = parse_transparent_video_entries(meta_component, source_data)
     if tvh_entries:
         for asset in images:
@@ -713,10 +824,15 @@ def build_component(
                 asset["streamOffset"] = entry["streamOffset"]
                 asset["originalRect"] = entry["originalRect"]
                 asset["originalZ"] = entry["originalZ"]
+    images = expand_sprite_instances(meta_component, images)
     primary = images[0] if images else None
     rect, confidence, z = pick_rect(component_type, primary, hints)
     geometry_source_offset = None
-    known_rects = [asset["rect"] for asset in images if asset.get("geometryConfidence") == "serialized_entry"]
+    known_rects = [
+        asset["rect"]
+        for asset in images
+        if asset.get("rect") and str(asset.get("geometryConfidence") or "").startswith("serialized_")
+    ]
     if known_rects:
         min_x = min(rect["x"] for rect in known_rects)
         min_y = min(rect["y"] for rect in known_rects)
@@ -724,7 +840,11 @@ def build_component(
         max_y = max(rect["y"] + rect["height"] for rect in known_rects)
         rect = {"x": min_x, "y": min_y, "width": max_x - min_x, "height": max_y - min_y}
         confidence = "serialized_entries"
-        z = min(int(asset.get("z") or 0) for asset in images if asset.get("geometryConfidence") == "serialized_entry")
+        z = min(
+            int(asset.get("z") or 0)
+            for asset in images
+            if asset.get("rect") and str(asset.get("geometryConfidence") or "").startswith("serialized_")
+        )
     hitboxes = parse_hotspot_entries(meta_component, source_data)
     if hitboxes:
         min_x = min(item["rect"]["x"] for item in hitboxes)
@@ -809,6 +929,7 @@ def build_scene(meta_path: Path, web_root: Path, workspace_root: Path) -> dict[s
     recovered_tvh = sum(
         1
         for component in components
+        if component.get("type") == "Transparent_Video_Holder"
         for asset in component.get("assets", [])
         if asset.get("geometryConfidence") == "serialized_entry"
     )

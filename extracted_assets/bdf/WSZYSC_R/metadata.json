@@ -40,7 +40,7 @@
       "embedded": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSC_R\\embedded\\01_Sound_Holder_000_00055c0c.wav",
+          "path": "extracted_assets\\bdf\\WSZYSC_R\\embedded\\01_Sound_Holder_000_00055c0c.wav",
           "offset": 351244,
           "size": 66246,
           "extension": ".wav"
@@ -63,34 +63,94 @@
       "display_name": "Bitmap_Holder",
       "private_offset": 419816,
       "private_size": 1236,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\WSZYSC_R\\bitmap_holder\\03_Bitmap_Holder_000_czas 01_70x15.bmp",
+          "offset": 419956,
+          "size": 2158,
+          "pixel_size": 1080,
+          "width": 70,
+          "height": 15,
+          "name": "czas 01",
+          "rect": {
+            "x": 544,
+            "y": 432,
+            "width": 70,
+            "height": 15
+          },
+          "geometry_confidence": "serialized_entry"
+        }
+      ],
+      "bitmap_holder": {
+        "version": 1,
+        "declared_count": 1,
+        "parsed_count": 1,
+        "frames": [
+          {
+            "index": 0,
+            "name": "czas 01",
+            "record_offset": 419824,
+            "record_size": 1224,
+            "pixel_offset": 419956,
+            "width": 70,
+            "height": 15,
+            "right": 614,
+            "bottom": 447,
+            "rect": {
+              "x": 544,
+              "y": 432,
+              "width": 70,
+              "height": 15
+            },
+            "bmp_output": "extracted_assets\\bdf\\WSZYSC_R\\bitmap_holder\\03_Bitmap_Holder_000_czas 01_70x15.bmp"
+          }
+        ]
+      }
     }
   ],
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSC_R\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\WSZYSC_R\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "dib",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSC_R\\background.dib",
+      "path": "extracted_assets\\bdf\\WSZYSC_R\\background.dib",
       "size": 308180
     },
     {
       "kind": "bmp",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSC_R\\background.bmp",
+      "path": "extracted_assets\\bdf\\WSZYSC_R\\background.bmp",
       "size": 308194
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSC_R\\script.txt",
+      "path": "extracted_assets\\bdf\\WSZYSC_R\\script.txt",
       "size": 22410
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WSZYSC_R\\embedded\\01_Sound_Holder_000_00055c0c.wav",
+      "path": "extracted_assets\\bdf\\WSZYSC_R\\embedded\\01_Sound_Holder_000_00055c0c.wav",
       "size": 66246
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\WSZYSC_R\\bitmap_holder\\03_Bitmap_Holder_000_czas 01_70x15.bmp",
+      "offset": 419956,
+      "size": 2158,
+      "pixel_size": 1080,
+      "width": 70,
+      "height": 15,
+      "name": "czas 01",
+      "rect": {
+        "x": 544,
+        "y": 432,
+        "width": 70,
+        "height": 15
+      },
+      "geometry_confidence": "serialized_entry"
     }
   ],
   "script": {

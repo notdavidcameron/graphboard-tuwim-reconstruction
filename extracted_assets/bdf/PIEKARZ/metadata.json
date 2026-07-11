@@ -28,7 +28,295 @@
       "display_name": "Bitmap_Holder",
       "private_offset": 310489,
       "private_size": 53464,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_000_bagietka_202x57.bmp",
+          "offset": 310629,
+          "size": 12706,
+          "pixel_size": 11628,
+          "width": 202,
+          "height": 57,
+          "name": "bagietka",
+          "rect": {
+            "x": 21,
+            "y": 396,
+            "width": 202,
+            "height": 57
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_001_bulka_62x46.bmp",
+          "offset": 322405,
+          "size": 4022,
+          "pixel_size": 2944,
+          "width": 62,
+          "height": 46,
+          "name": "bulka",
+          "rect": {
+            "x": 77,
+            "y": 404,
+            "width": 62,
+            "height": 46
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_002_chleb01_149x71.bmp",
+          "offset": 325497,
+          "size": 11870,
+          "pixel_size": 10792,
+          "width": 149,
+          "height": 71,
+          "name": "chleb01",
+          "rect": {
+            "x": 56,
+            "y": 387,
+            "width": 149,
+            "height": 71
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_003_rogal01_68x65.bmp",
+          "offset": 336437,
+          "size": 5498,
+          "pixel_size": 4420,
+          "width": 68,
+          "height": 65,
+          "name": "rogal01",
+          "rect": {
+            "x": 78,
+            "y": 392,
+            "width": 68,
+            "height": 65
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_004_bagi02_45x140.bmp",
+          "offset": 341005,
+          "size": 7798,
+          "pixel_size": 6720,
+          "width": 45,
+          "height": 140,
+          "name": "bagi02",
+          "rect": {
+            "x": 312,
+            "y": 59,
+            "width": 45,
+            "height": 140
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_005_bulka02_63x46.bmp",
+          "offset": 347873,
+          "size": 4022,
+          "pixel_size": 2944,
+          "width": 63,
+          "height": 46,
+          "name": "bulka02",
+          "rect": {
+            "x": 170,
+            "y": 189,
+            "width": 63,
+            "height": 46
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_006_chleb02_122x71.bmp",
+          "offset": 350965,
+          "size": 9882,
+          "pixel_size": 8804,
+          "width": 122,
+          "height": 71,
+          "name": "chleb02",
+          "rect": {
+            "x": 489,
+            "y": 212,
+            "width": 122,
+            "height": 71
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_007_rogal02_59x67.bmp",
+          "offset": 359917,
+          "size": 5098,
+          "pixel_size": 4020,
+          "width": 59,
+          "height": 67,
+          "name": "rogal02",
+          "rect": {
+            "x": 9,
+            "y": 88,
+            "width": 59,
+            "height": 67
+          },
+          "geometry_confidence": "serialized_entry"
+        }
+      ],
+      "bitmap_holder": {
+        "version": 1,
+        "declared_count": 8,
+        "parsed_count": 8,
+        "frames": [
+          {
+            "index": 0,
+            "name": "bagietka",
+            "record_offset": 310497,
+            "record_size": 11772,
+            "pixel_offset": 310629,
+            "width": 202,
+            "height": 57,
+            "right": 223,
+            "bottom": 453,
+            "rect": {
+              "x": 21,
+              "y": 396,
+              "width": 202,
+              "height": 57
+            },
+            "bmp_output": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_000_bagietka_202x57.bmp"
+          },
+          {
+            "index": 1,
+            "name": "bulka",
+            "record_offset": 322273,
+            "record_size": 3088,
+            "pixel_offset": 322405,
+            "width": 62,
+            "height": 46,
+            "right": 139,
+            "bottom": 450,
+            "rect": {
+              "x": 77,
+              "y": 404,
+              "width": 62,
+              "height": 46
+            },
+            "bmp_output": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_001_bulka_62x46.bmp"
+          },
+          {
+            "index": 2,
+            "name": "chleb01",
+            "record_offset": 325365,
+            "record_size": 10936,
+            "pixel_offset": 325497,
+            "width": 149,
+            "height": 71,
+            "right": 205,
+            "bottom": 458,
+            "rect": {
+              "x": 56,
+              "y": 387,
+              "width": 149,
+              "height": 71
+            },
+            "bmp_output": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_002_chleb01_149x71.bmp"
+          },
+          {
+            "index": 3,
+            "name": "rogal01",
+            "record_offset": 336305,
+            "record_size": 4564,
+            "pixel_offset": 336437,
+            "width": 68,
+            "height": 65,
+            "right": 146,
+            "bottom": 457,
+            "rect": {
+              "x": 78,
+              "y": 392,
+              "width": 68,
+              "height": 65
+            },
+            "bmp_output": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_003_rogal01_68x65.bmp"
+          },
+          {
+            "index": 4,
+            "name": "bagi02",
+            "record_offset": 340873,
+            "record_size": 6864,
+            "pixel_offset": 341005,
+            "width": 45,
+            "height": 140,
+            "right": 357,
+            "bottom": 199,
+            "rect": {
+              "x": 312,
+              "y": 59,
+              "width": 45,
+              "height": 140
+            },
+            "bmp_output": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_004_bagi02_45x140.bmp"
+          },
+          {
+            "index": 5,
+            "name": "bulka02",
+            "record_offset": 347741,
+            "record_size": 3088,
+            "pixel_offset": 347873,
+            "width": 63,
+            "height": 46,
+            "right": 233,
+            "bottom": 235,
+            "rect": {
+              "x": 170,
+              "y": 189,
+              "width": 63,
+              "height": 46
+            },
+            "bmp_output": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_005_bulka02_63x46.bmp"
+          },
+          {
+            "index": 6,
+            "name": "chleb02",
+            "record_offset": 350833,
+            "record_size": 8948,
+            "pixel_offset": 350965,
+            "width": 122,
+            "height": 71,
+            "right": 611,
+            "bottom": 283,
+            "rect": {
+              "x": 489,
+              "y": 212,
+              "width": 122,
+              "height": 71
+            },
+            "bmp_output": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_006_chleb02_122x71.bmp"
+          },
+          {
+            "index": 7,
+            "name": "rogal02",
+            "record_offset": 359785,
+            "record_size": 4164,
+            "pixel_offset": 359917,
+            "width": 59,
+            "height": 67,
+            "right": 68,
+            "bottom": 155,
+            "rect": {
+              "x": 9,
+              "y": 88,
+              "width": 59,
+              "height": 67
+            },
+            "bmp_output": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_007_rogal02_59x67.bmp"
+          }
+        ]
+      }
     },
     {
       "index": 1,
@@ -49,49 +337,49 @@
       "embedded": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_000_0005979a.wav",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_000_0005979a.wav",
           "offset": 366490,
           "size": 705838,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_001_00105d28.wav",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_001_00105d28.wav",
           "offset": 1072424,
           "size": 8002,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_002_00107cca.wav",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_002_00107cca.wav",
           "offset": 1080522,
           "size": 16006,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_003_0010bbb0.wav",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_003_0010bbb0.wav",
           "offset": 1096624,
           "size": 120196,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_004_00129194.wav",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_004_00129194.wav",
           "offset": 1216916,
           "size": 230064,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_005_001614a4.wav",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_005_001614a4.wav",
           "offset": 1447076,
           "size": 61516,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_006_00170550.wav",
+          "path": "extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_006_00170550.wav",
           "offset": 1508688,
           "size": 125280,
           "extension": ".wav"
@@ -111,57 +399,193 @@
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\PIEKARZ\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "dib",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ\\background.dib",
+      "path": "extracted_assets\\bdf\\PIEKARZ\\background.dib",
       "size": 308184
     },
     {
       "kind": "bmp",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ\\background.bmp",
+      "path": "extracted_assets\\bdf\\PIEKARZ\\background.bmp",
       "size": 308198
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ\\script.txt",
+      "path": "extracted_assets\\bdf\\PIEKARZ\\script.txt",
       "size": 21626
     },
     {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_000_bagietka_202x57.bmp",
+      "offset": 310629,
+      "size": 12706,
+      "pixel_size": 11628,
+      "width": 202,
+      "height": 57,
+      "name": "bagietka",
+      "rect": {
+        "x": 21,
+        "y": 396,
+        "width": 202,
+        "height": 57
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_001_bulka_62x46.bmp",
+      "offset": 322405,
+      "size": 4022,
+      "pixel_size": 2944,
+      "width": 62,
+      "height": 46,
+      "name": "bulka",
+      "rect": {
+        "x": 77,
+        "y": 404,
+        "width": 62,
+        "height": 46
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_002_chleb01_149x71.bmp",
+      "offset": 325497,
+      "size": 11870,
+      "pixel_size": 10792,
+      "width": 149,
+      "height": 71,
+      "name": "chleb01",
+      "rect": {
+        "x": 56,
+        "y": 387,
+        "width": 149,
+        "height": 71
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_003_rogal01_68x65.bmp",
+      "offset": 336437,
+      "size": 5498,
+      "pixel_size": 4420,
+      "width": 68,
+      "height": 65,
+      "name": "rogal01",
+      "rect": {
+        "x": 78,
+        "y": 392,
+        "width": 68,
+        "height": 65
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_004_bagi02_45x140.bmp",
+      "offset": 341005,
+      "size": 7798,
+      "pixel_size": 6720,
+      "width": 45,
+      "height": 140,
+      "name": "bagi02",
+      "rect": {
+        "x": 312,
+        "y": 59,
+        "width": 45,
+        "height": 140
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_005_bulka02_63x46.bmp",
+      "offset": 347873,
+      "size": 4022,
+      "pixel_size": 2944,
+      "width": 63,
+      "height": 46,
+      "name": "bulka02",
+      "rect": {
+        "x": 170,
+        "y": 189,
+        "width": 63,
+        "height": 46
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_006_chleb02_122x71.bmp",
+      "offset": 350965,
+      "size": 9882,
+      "pixel_size": 8804,
+      "width": 122,
+      "height": 71,
+      "name": "chleb02",
+      "rect": {
+        "x": 489,
+        "y": 212,
+        "width": 122,
+        "height": 71
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\PIEKARZ\\bitmap_holder\\00_Bitmap_Holder_007_rogal02_59x67.bmp",
+      "offset": 359917,
+      "size": 5098,
+      "pixel_size": 4020,
+      "width": 59,
+      "height": 67,
+      "name": "rogal02",
+      "rect": {
+        "x": 9,
+        "y": 88,
+        "width": 59,
+        "height": 67
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_000_0005979a.wav",
+      "path": "extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_000_0005979a.wav",
       "size": 705838
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_001_00105d28.wav",
+      "path": "extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_001_00105d28.wav",
       "size": 8002
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_002_00107cca.wav",
+      "path": "extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_002_00107cca.wav",
       "size": 16006
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_003_0010bbb0.wav",
+      "path": "extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_003_0010bbb0.wav",
       "size": 120196
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_004_00129194.wav",
+      "path": "extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_004_00129194.wav",
       "size": 230064
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_005_001614a4.wav",
+      "path": "extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_005_001614a4.wav",
       "size": 61516
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_006_00170550.wav",
+      "path": "extracted_assets\\bdf\\PIEKARZ\\embedded\\02_Sound_Holder_006_00170550.wav",
       "size": 125280
     }
   ],

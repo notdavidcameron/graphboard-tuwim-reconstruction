@@ -28,7 +28,85 @@
       "display_name": "Bitmap_Holder",
       "private_offset": 2305,
       "private_size": 614704,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\PSTRYK\\bitmap_holder\\00_Bitmap_Holder_000_t_o 2_640x480.bmp",
+          "offset": 2445,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "tło 2",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 640,
+            "height": 480
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\PSTRYK\\bitmap_holder\\00_Bitmap_Holder_001_t_o 3k 02_640x480.bmp",
+          "offset": 309793,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "tło 3k 02",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 640,
+            "height": 480
+          },
+          "geometry_confidence": "serialized_entry"
+        }
+      ],
+      "bitmap_holder": {
+        "version": 1,
+        "declared_count": 2,
+        "parsed_count": 2,
+        "frames": [
+          {
+            "index": 0,
+            "name": "tło 2",
+            "record_offset": 2313,
+            "record_size": 307344,
+            "pixel_offset": 2445,
+            "width": 640,
+            "height": 480,
+            "right": 640,
+            "bottom": 480,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 640,
+              "height": 480
+            },
+            "bmp_output": "extracted_assets\\bdf\\PSTRYK\\bitmap_holder\\00_Bitmap_Holder_000_t_o 2_640x480.bmp"
+          },
+          {
+            "index": 1,
+            "name": "tło 3k 02",
+            "record_offset": 309661,
+            "record_size": 307344,
+            "pixel_offset": 309793,
+            "width": 640,
+            "height": 480,
+            "right": 640,
+            "bottom": 480,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 640,
+              "height": 480
+            },
+            "bmp_output": "extracted_assets\\bdf\\PSTRYK\\bitmap_holder\\00_Bitmap_Holder_001_t_o 3k 02_640x480.bmp"
+          }
+        ]
+      }
     },
     {
       "index": 1,
@@ -40,7 +118,7 @@
       "embedded": [
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_000_00096ed3_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_000_00096ed3_board_video_audio.wav",
           "offset": 618195,
           "size": 132344,
           "pcm_size": 132300,
@@ -52,21 +130,21 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_000_00096ed3_board_video_202x252.gif",
-          "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_000_00096ed3_board_video_202x252_still.png",
+          "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_000_00096ed3_board_video_202x252.gif",
+          "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_000_00096ed3_board_video_202x252_still.png",
           "offset": 618195,
           "size": 405408,
-          "still_size": 16688,
+          "still_size": 18830,
           "frame_count": 7,
           "width": 202,
           "height": 252,
-          "transparent_index": 30,
+          "transparent_index": 202,
           "header_transparent_index": 202,
           "delay_centiseconds": 10
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_002_000f6fde_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_002_000f6fde_board_video_audio.wav",
           "offset": 1011678,
           "size": 352844,
           "pcm_size": 352800,
@@ -78,11 +156,11 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_002_000f6fde_board_video_314x140.gif",
-          "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_002_000f6fde_board_video_314x140_still.png",
+          "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_002_000f6fde_board_video_314x140.gif",
+          "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_002_000f6fde_board_video_314x140_still.png",
           "offset": 1011678,
           "size": 3245536,
-          "still_size": 7117,
+          "still_size": 7795,
           "frame_count": 65,
           "width": 314,
           "height": 140,
@@ -92,7 +170,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_004_0023007d_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_004_0023007d_board_video_audio.wav",
           "offset": 2293885,
           "size": 176444,
           "pcm_size": 176400,
@@ -104,11 +182,11 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_004_0023007d_board_video_133x125.gif",
-          "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_004_0023007d_board_video_133x125_still.png",
+          "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_004_0023007d_board_video_133x125.gif",
+          "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_004_0023007d_board_video_133x125_still.png",
           "offset": 2293885,
           "size": 435340,
-          "still_size": 4930,
+          "still_size": 5272,
           "frame_count": 23,
           "width": 133,
           "height": 125,
@@ -118,7 +196,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_006_00285b2f_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_006_00285b2f_board_video_audio.wav",
           "offset": 2644783,
           "size": 132344,
           "pcm_size": 132300,
@@ -130,21 +208,21 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_006_00285b2f_board_video_202x252.gif",
-          "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_006_00285b2f_board_video_202x252_still.png",
+          "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_006_00285b2f_board_video_202x252.gif",
+          "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_006_00285b2f_board_video_202x252_still.png",
           "offset": 2644783,
           "size": 405408,
-          "still_size": 16192,
+          "still_size": 18190,
           "frame_count": 7,
           "width": 202,
           "height": 252,
-          "transparent_index": 30,
+          "transparent_index": 202,
           "header_transparent_index": 202,
           "delay_centiseconds": 10
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_008_002f6ac3_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_008_002f6ac3_board_video_audio.wav",
           "offset": 3107523,
           "size": 176444,
           "pcm_size": 176400,
@@ -156,11 +234,11 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_008_002f6ac3_board_video_154x150.gif",
-          "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_008_002f6ac3_board_video_154x150_still.png",
+          "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_008_002f6ac3_board_video_154x150.gif",
+          "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_008_002f6ac3_board_video_154x150_still.png",
           "offset": 3107523,
           "size": 446932,
-          "still_size": 9025,
+          "still_size": 10084,
           "frame_count": 17,
           "width": 154,
           "height": 150,
@@ -170,7 +248,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_010_00384900_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_010_00384900_board_video_audio.wav",
           "offset": 3688704,
           "size": 132344,
           "pcm_size": 132300,
@@ -182,11 +260,11 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_010_00384900_board_video_161x145.gif",
-          "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_010_00384900_board_video_161x145_still.png",
+          "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_010_00384900_board_video_161x145.gif",
+          "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_010_00384900_board_video_161x145_still.png",
           "offset": 3688704,
           "size": 319041,
-          "still_size": 6926,
+          "still_size": 7846,
           "frame_count": 12,
           "width": 161,
           "height": 145,
@@ -196,7 +274,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_012_003d6fbf_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_012_003d6fbf_board_video_audio.wav",
           "offset": 4026303,
           "size": 132344,
           "pcm_size": 132300,
@@ -208,16 +286,114 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_012_003d6fbf_board_video_59x22.gif",
-          "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_012_003d6fbf_board_video_59x22_still.png",
+          "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_012_003d6fbf_board_video_59x22.gif",
+          "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_012_003d6fbf_board_video_59x22_still.png",
           "offset": 4026303,
           "size": 24737,
-          "still_size": 1591,
+          "still_size": 1628,
           "frame_count": 16,
           "width": 59,
           "height": 22,
           "transparent_index": 198,
           "header_transparent_index": 198,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_014_003fceb2_board_video_202x221.gif",
+          "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_014_003fceb2_board_video_202x221_still.png",
+          "offset": 4181682,
+          "size": 355659,
+          "still_size": 14145,
+          "frame_count": 7,
+          "width": 202,
+          "height": 221,
+          "transparent_index": 0,
+          "header_transparent_index": 0,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_016_0042bc29_board_video_314x140.gif",
+          "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_016_0042bc29_board_video_314x140_still.png",
+          "offset": 4373545,
+          "size": 3195617,
+          "still_size": 7986,
+          "frame_count": 64,
+          "width": 314,
+          "height": 140,
+          "transparent_index": 185,
+          "header_transparent_index": 185,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_018_0050a3b0_board_video_133x125.gif",
+          "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_018_0050a3b0_board_video_133x125_still.png",
+          "offset": 5284784,
+          "size": 435340,
+          "still_size": 4984,
+          "frame_count": 23,
+          "width": 133,
+          "height": 125,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_020_00529c06_board_video_199x236.gif",
+          "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_020_00529c06_board_video_199x236_still.png",
+          "offset": 5413894,
+          "size": 374104,
+          "still_size": 14805,
+          "frame_count": 7,
+          "width": 199,
+          "height": 236,
+          "transparent_index": 0,
+          "header_transparent_index": 0,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_022_0056a83a_board_video_154x150.gif",
+          "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_022_0056a83a_board_video_154x150_still.png",
+          "offset": 5679162,
+          "size": 446932,
+          "still_size": 7209,
+          "frame_count": 17,
+          "width": 154,
+          "height": 150,
+          "transparent_index": 0,
+          "header_transparent_index": 0,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_024_005a6bef_board_video_161x145.gif",
+          "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_024_005a6bef_board_video_161x145_still.png",
+          "offset": 5925871,
+          "size": 319041,
+          "still_size": 6468,
+          "frame_count": 12,
+          "width": 161,
+          "height": 145,
+          "transparent_index": 30,
+          "header_transparent_index": 30,
+          "delay_centiseconds": 10
+        },
+        {
+          "kind": "board_video_gif",
+          "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_026_005c9281_board_video_59x22.gif",
+          "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_026_005c9281_board_video_59x22_still.png",
+          "offset": 6066817,
+          "size": 24737,
+          "still_size": 1453,
+          "frame_count": 16,
+          "width": 59,
+          "height": 22,
+          "transparent_index": 17,
+          "header_transparent_index": 17,
           "delay_centiseconds": 10
         }
       ],
@@ -241,12 +417,12 @@
           "audio_record_count": 3,
           "video_record_count": 7,
           "stop_reason": "next_stream",
-          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_000_00096ed3_board_video_audio.wav",
+          "audio_output": "extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_000_00096ed3_board_video_audio.wav",
           "audio_pcm_size": 132300,
           "duration_seconds": 3.0,
-          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_000_00096ed3_board_video_202x252.gif",
-          "still_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_000_00096ed3_board_video_202x252_still.png",
-          "transparent_index": 30
+          "video_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_000_00096ed3_board_video_202x252.gif",
+          "still_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_000_00096ed3_board_video_202x252_still.png",
+          "transparent_index": 202
         },
         {
           "index": 1,
@@ -285,11 +461,11 @@
           "audio_record_count": 8,
           "video_record_count": 65,
           "stop_reason": "next_stream",
-          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_002_000f6fde_board_video_audio.wav",
+          "audio_output": "extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_002_000f6fde_board_video_audio.wav",
           "audio_pcm_size": 352800,
           "duration_seconds": 8.0,
-          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_002_000f6fde_board_video_314x140.gif",
-          "still_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_002_000f6fde_board_video_314x140_still.png",
+          "video_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_002_000f6fde_board_video_314x140.gif",
+          "still_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_002_000f6fde_board_video_314x140_still.png",
           "transparent_index": 30
         },
         {
@@ -329,11 +505,11 @@
           "audio_record_count": 4,
           "video_record_count": 23,
           "stop_reason": "next_stream",
-          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_004_0023007d_board_video_audio.wav",
+          "audio_output": "extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_004_0023007d_board_video_audio.wav",
           "audio_pcm_size": 176400,
           "duration_seconds": 4.0,
-          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_004_0023007d_board_video_133x125.gif",
-          "still_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_004_0023007d_board_video_133x125_still.png",
+          "video_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_004_0023007d_board_video_133x125.gif",
+          "still_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_004_0023007d_board_video_133x125_still.png",
           "transparent_index": 35
         },
         {
@@ -373,12 +549,12 @@
           "audio_record_count": 3,
           "video_record_count": 7,
           "stop_reason": "next_stream",
-          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_006_00285b2f_board_video_audio.wav",
+          "audio_output": "extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_006_00285b2f_board_video_audio.wav",
           "audio_pcm_size": 132300,
           "duration_seconds": 3.0,
-          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_006_00285b2f_board_video_202x252.gif",
-          "still_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_006_00285b2f_board_video_202x252_still.png",
-          "transparent_index": 30
+          "video_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_006_00285b2f_board_video_202x252.gif",
+          "still_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_006_00285b2f_board_video_202x252_still.png",
+          "transparent_index": 202
         },
         {
           "index": 7,
@@ -417,11 +593,11 @@
           "audio_record_count": 4,
           "video_record_count": 17,
           "stop_reason": "next_stream",
-          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_008_002f6ac3_board_video_audio.wav",
+          "audio_output": "extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_008_002f6ac3_board_video_audio.wav",
           "audio_pcm_size": 176400,
           "duration_seconds": 4.0,
-          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_008_002f6ac3_board_video_154x150.gif",
-          "still_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_008_002f6ac3_board_video_154x150_still.png",
+          "video_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_008_002f6ac3_board_video_154x150.gif",
+          "still_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_008_002f6ac3_board_video_154x150_still.png",
           "transparent_index": 202
         },
         {
@@ -461,11 +637,11 @@
           "audio_record_count": 3,
           "video_record_count": 12,
           "stop_reason": "next_stream",
-          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_010_00384900_board_video_audio.wav",
+          "audio_output": "extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_010_00384900_board_video_audio.wav",
           "audio_pcm_size": 132300,
           "duration_seconds": 3.0,
-          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_010_00384900_board_video_161x145.gif",
-          "still_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_010_00384900_board_video_161x145_still.png",
+          "video_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_010_00384900_board_video_161x145.gif",
+          "still_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_010_00384900_board_video_161x145_still.png",
           "transparent_index": 30
         },
         {
@@ -505,11 +681,11 @@
           "audio_record_count": 3,
           "video_record_count": 16,
           "stop_reason": "next_stream",
-          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_012_003d6fbf_board_video_audio.wav",
+          "audio_output": "extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_012_003d6fbf_board_video_audio.wav",
           "audio_pcm_size": 132300,
           "duration_seconds": 3.0,
-          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_012_003d6fbf_board_video_59x22.gif",
-          "still_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_012_003d6fbf_board_video_59x22_still.png",
+          "video_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_012_003d6fbf_board_video_59x22.gif",
+          "still_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_012_003d6fbf_board_video_59x22_still.png",
           "transparent_index": 198
         },
         {
@@ -526,6 +702,293 @@
           "frames_per_second": 10,
           "frame_count": 16,
           "header_record_count": 18,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 14,
+          "offset": 4181682,
+          "end_offset": 4327073,
+          "sample_rate": 0,
+          "bits_per_sample": 0,
+          "channels": 0,
+          "byte_rate": 0,
+          "video_width": 202,
+          "video_height": 221,
+          "header_transparent_index": 0,
+          "frames_per_second": 10,
+          "frame_count": 7,
+          "header_record_count": 7,
+          "record_count": 7,
+          "audio_record_count": 0,
+          "video_record_count": 7,
+          "stop_reason": "next_stream",
+          "video_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_014_003fceb2_board_video_202x221.gif",
+          "still_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_014_003fceb2_board_video_202x221_still.png",
+          "transparent_index": 0
+        },
+        {
+          "index": 15,
+          "offset": 4327073,
+          "end_offset": 4328329,
+          "sample_rate": 0,
+          "bits_per_sample": 0,
+          "channels": 0,
+          "byte_rate": 0,
+          "video_width": 202,
+          "video_height": 221,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 7,
+          "header_record_count": 7,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 16,
+          "offset": 4373545,
+          "end_offset": 5239156,
+          "sample_rate": 0,
+          "bits_per_sample": 0,
+          "channels": 0,
+          "byte_rate": 0,
+          "video_width": 314,
+          "video_height": 140,
+          "header_transparent_index": 185,
+          "frames_per_second": 10,
+          "frame_count": 64,
+          "header_record_count": 64,
+          "record_count": 64,
+          "audio_record_count": 0,
+          "video_record_count": 64,
+          "stop_reason": "next_stream",
+          "video_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_016_0042bc29_board_video_314x140.gif",
+          "still_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_016_0042bc29_board_video_314x140_still.png",
+          "transparent_index": 185
+        },
+        {
+          "index": 17,
+          "offset": 5239156,
+          "end_offset": 5240412,
+          "sample_rate": 0,
+          "bits_per_sample": 0,
+          "channels": 0,
+          "byte_rate": 0,
+          "video_width": 314,
+          "video_height": 140,
+          "header_transparent_index": 185,
+          "frames_per_second": 10,
+          "frame_count": 64,
+          "header_record_count": 64,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 18,
+          "offset": 5284784,
+          "end_offset": 5395506,
+          "sample_rate": 0,
+          "bits_per_sample": 0,
+          "channels": 0,
+          "byte_rate": 0,
+          "video_width": 133,
+          "video_height": 125,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 23,
+          "header_record_count": 23,
+          "record_count": 23,
+          "audio_record_count": 0,
+          "video_record_count": 23,
+          "stop_reason": "next_stream",
+          "video_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_018_0050a3b0_board_video_133x125.gif",
+          "still_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_018_0050a3b0_board_video_133x125_still.png",
+          "transparent_index": 30
+        },
+        {
+          "index": 19,
+          "offset": 5395506,
+          "end_offset": 5396762,
+          "sample_rate": 0,
+          "bits_per_sample": 0,
+          "channels": 0,
+          "byte_rate": 0,
+          "video_width": 133,
+          "video_height": 125,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 23,
+          "header_record_count": 23,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 20,
+          "offset": 5413894,
+          "end_offset": 5630574,
+          "sample_rate": 0,
+          "bits_per_sample": 0,
+          "channels": 0,
+          "byte_rate": 0,
+          "video_width": 199,
+          "video_height": 236,
+          "header_transparent_index": 0,
+          "frames_per_second": 10,
+          "frame_count": 7,
+          "header_record_count": 7,
+          "record_count": 7,
+          "audio_record_count": 0,
+          "video_record_count": 7,
+          "stop_reason": "next_stream",
+          "video_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_020_00529c06_board_video_199x236.gif",
+          "still_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_020_00529c06_board_video_199x236_still.png",
+          "transparent_index": 0
+        },
+        {
+          "index": 21,
+          "offset": 5630574,
+          "end_offset": 5631830,
+          "sample_rate": 0,
+          "bits_per_sample": 0,
+          "channels": 0,
+          "byte_rate": 0,
+          "video_width": 199,
+          "video_height": 236,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 7,
+          "header_record_count": 7,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 22,
+          "offset": 5679162,
+          "end_offset": 5901083,
+          "sample_rate": 0,
+          "bits_per_sample": 0,
+          "channels": 0,
+          "byte_rate": 0,
+          "video_width": 154,
+          "video_height": 150,
+          "header_transparent_index": 0,
+          "frames_per_second": 10,
+          "frame_count": 17,
+          "header_record_count": 17,
+          "record_count": 17,
+          "audio_record_count": 0,
+          "video_record_count": 17,
+          "stop_reason": "next_stream",
+          "video_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_022_0056a83a_board_video_154x150.gif",
+          "still_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_022_0056a83a_board_video_154x150_still.png",
+          "transparent_index": 0
+        },
+        {
+          "index": 23,
+          "offset": 5901083,
+          "end_offset": 5902339,
+          "sample_rate": 0,
+          "bits_per_sample": 0,
+          "channels": 0,
+          "byte_rate": 0,
+          "video_width": 154,
+          "video_height": 150,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 17,
+          "header_record_count": 17,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 24,
+          "offset": 5925871,
+          "end_offset": 6041649,
+          "sample_rate": 0,
+          "bits_per_sample": 0,
+          "channels": 0,
+          "byte_rate": 0,
+          "video_width": 161,
+          "video_height": 145,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 12,
+          "header_record_count": 12,
+          "record_count": 12,
+          "audio_record_count": 0,
+          "video_record_count": 12,
+          "stop_reason": "next_stream",
+          "video_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_024_005a6bef_board_video_161x145.gif",
+          "still_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_024_005a6bef_board_video_161x145_still.png",
+          "transparent_index": 30
+        },
+        {
+          "index": 25,
+          "offset": 6041649,
+          "end_offset": 6042905,
+          "sample_rate": 0,
+          "bits_per_sample": 0,
+          "channels": 0,
+          "byte_rate": 0,
+          "video_width": 161,
+          "video_height": 145,
+          "header_transparent_index": 30,
+          "frames_per_second": 10,
+          "frame_count": 12,
+          "header_record_count": 12,
+          "record_count": 0,
+          "audio_record_count": 0,
+          "video_record_count": 0,
+          "stop_reason": "invalid_record"
+        },
+        {
+          "index": 26,
+          "offset": 6066817,
+          "end_offset": 6086821,
+          "sample_rate": 0,
+          "bits_per_sample": 0,
+          "channels": 0,
+          "byte_rate": 0,
+          "video_width": 59,
+          "video_height": 22,
+          "header_transparent_index": 17,
+          "frames_per_second": 10,
+          "frame_count": 16,
+          "header_record_count": 16,
+          "record_count": 16,
+          "audio_record_count": 0,
+          "video_record_count": 16,
+          "stop_reason": "next_stream",
+          "video_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_026_005c9281_board_video_59x22.gif",
+          "still_output": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_026_005c9281_board_video_59x22_still.png",
+          "transparent_index": 17
+        },
+        {
+          "index": 27,
+          "offset": 6086821,
+          "end_offset": 6088077,
+          "sample_rate": 0,
+          "bits_per_sample": 0,
+          "channels": 0,
+          "byte_rate": 0,
+          "video_width": 59,
+          "video_height": 22,
+          "header_transparent_index": 17,
+          "frames_per_second": 10,
+          "frame_count": 16,
+          "header_record_count": 16,
           "record_count": 0,
           "audio_record_count": 0,
           "video_record_count": 0,
@@ -561,84 +1024,84 @@
       "embedded": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_000_005d33a0.wav",
+          "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_000_005d33a0.wav",
           "offset": 6108064,
           "size": 20186,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_001_005d82da.wav",
+          "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_001_005d82da.wav",
           "offset": 6128346,
           "size": 552010,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_002_0065ef84.wav",
+          "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_002_0065ef84.wav",
           "offset": 6680452,
           "size": 127646,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_003_0067e282.wav",
+          "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_003_0067e282.wav",
           "offset": 6808194,
           "size": 186414,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_004_006abb10.wav",
+          "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_004_006abb10.wav",
           "offset": 6994704,
           "size": 399476,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_005_0070d3e4.wav",
+          "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_005_0070d3e4.wav",
           "offset": 7394276,
           "size": 202798,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_006_0073ec72.wav",
+          "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_006_0073ec72.wav",
           "offset": 7597170,
           "size": 158766,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_007_00765900.wav",
+          "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_007_00765900.wav",
           "offset": 7756032,
           "size": 240686,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_008_007a058e.wav",
+          "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_008_007a058e.wav",
           "offset": 7996814,
           "size": 372808,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_009_007fb636.wav",
+          "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_009_007fb636.wav",
           "offset": 8369718,
           "size": 341850,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_010_0084edf0.wav",
+          "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_010_0084edf0.wav",
           "offset": 8711664,
           "size": 704610,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_011_008faeb2.wav",
+          "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_011_008faeb2.wav",
           "offset": 9416370,
           "size": 465094,
           "extension": ".wav"
@@ -652,23 +1115,187 @@
       "display_name": "Sprite_Holder",
       "private_offset": 9883090,
       "private_size": 20740,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\PSTRYK\\sprite_holder\\05_Sprite_Holder_000_pstryk 01_phase_00.png",
+          "offset": 9883446,
+          "size": 4120,
+          "pixel_size": 9880,
+          "width": 76,
+          "height": 65,
+          "name": "pstryk 01",
+          "id": 0,
+          "definition_id": 0,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\PSTRYK\\sprite_holder\\05_Sprite_Holder_000_pstryk 01_phase_00.png",
+              "size": 4120
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\PSTRYK\\sprite_holder\\05_Sprite_Holder_000_pstryk 01_phase_01.png",
+              "size": 3769
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\PSTRYK\\sprite_holder\\05_Sprite_Holder_001_pstryk 01_phase_00.png",
+          "offset": 9893670,
+          "size": 4183,
+          "pixel_size": 9880,
+          "width": 76,
+          "height": 65,
+          "name": "pstryk 01",
+          "id": 1,
+          "definition_id": 1,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\PSTRYK\\sprite_holder\\05_Sprite_Holder_001_pstryk 01_phase_00.png",
+              "size": 4183
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\PSTRYK\\sprite_holder\\05_Sprite_Holder_001_pstryk 01_phase_01.png",
+              "size": 3854
+            }
+          ]
+        }
+      ],
+      "sprite_holder": {
+        "version": 1,
+        "definition_count": 2,
+        "instance_count": 2,
+        "parsed_definitions": 2,
+        "parsed_instances": 2,
+        "definitions": [
+          {
+            "index": 0,
+            "name": "pstryk 01",
+            "record_offset": 9883102,
+            "blob_offset": 9883106,
+            "blob_size": 10220,
+            "width": 76,
+            "height": 65,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\PSTRYK\\sprite_holder\\05_Sprite_Holder_000_pstryk 01_phase_00.png",
+                "size": 4120
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\PSTRYK\\sprite_holder\\05_Sprite_Holder_000_pstryk 01_phase_01.png",
+                "size": 3769
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "pstryk 01",
+            "record_offset": 9893326,
+            "blob_offset": 9893330,
+            "blob_size": 10220,
+            "width": 76,
+            "height": 65,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\PSTRYK\\sprite_holder\\05_Sprite_Holder_001_pstryk 01_phase_00.png",
+                "size": 4183
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\PSTRYK\\sprite_holder\\05_Sprite_Holder_001_pstryk 01_phase_01.png",
+                "size": 3854
+              }
+            ]
+          }
+        ],
+        "instances": [
+          {
+            "index": 0,
+            "definition_id": 0,
+            "field04": 8,
+            "x": 706,
+            "y": 20,
+            "z": 8,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 9903550
+          },
+          {
+            "index": 1,
+            "definition_id": 1,
+            "field04": 8,
+            "x": 708,
+            "y": 98,
+            "z": 8,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 9903690
+          }
+        ]
+      }
     }
   ],
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\PSTRYK\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\script.txt",
+      "path": "extracted_assets\\bdf\\PSTRYK\\script.txt",
       "size": 20199
     },
     {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\PSTRYK\\bitmap_holder\\00_Bitmap_Holder_000_t_o 2_640x480.bmp",
+      "offset": 2445,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "tło 2",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 640,
+        "height": 480
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\PSTRYK\\bitmap_holder\\00_Bitmap_Holder_001_t_o 3k 02_640x480.bmp",
+      "offset": 309793,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "tło 3k 02",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 640,
+        "height": 480
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
       "kind": "board_video_pcm_wave",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_000_00096ed3_board_video_audio.wav",
+      "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_000_00096ed3_board_video_audio.wav",
       "offset": 618195,
       "size": 132344,
       "pcm_size": 132300,
@@ -680,21 +1307,21 @@
     },
     {
       "kind": "board_video_gif",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_000_00096ed3_board_video_202x252.gif",
-      "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_000_00096ed3_board_video_202x252_still.png",
+      "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_000_00096ed3_board_video_202x252.gif",
+      "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_000_00096ed3_board_video_202x252_still.png",
       "offset": 618195,
       "size": 405408,
-      "still_size": 16688,
+      "still_size": 18830,
       "frame_count": 7,
       "width": 202,
       "height": 252,
-      "transparent_index": 30,
+      "transparent_index": 202,
       "header_transparent_index": 202,
       "delay_centiseconds": 10
     },
     {
       "kind": "board_video_pcm_wave",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_002_000f6fde_board_video_audio.wav",
+      "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_002_000f6fde_board_video_audio.wav",
       "offset": 1011678,
       "size": 352844,
       "pcm_size": 352800,
@@ -706,11 +1333,11 @@
     },
     {
       "kind": "board_video_gif",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_002_000f6fde_board_video_314x140.gif",
-      "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_002_000f6fde_board_video_314x140_still.png",
+      "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_002_000f6fde_board_video_314x140.gif",
+      "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_002_000f6fde_board_video_314x140_still.png",
       "offset": 1011678,
       "size": 3245536,
-      "still_size": 7117,
+      "still_size": 7795,
       "frame_count": 65,
       "width": 314,
       "height": 140,
@@ -720,7 +1347,7 @@
     },
     {
       "kind": "board_video_pcm_wave",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_004_0023007d_board_video_audio.wav",
+      "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_004_0023007d_board_video_audio.wav",
       "offset": 2293885,
       "size": 176444,
       "pcm_size": 176400,
@@ -732,11 +1359,11 @@
     },
     {
       "kind": "board_video_gif",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_004_0023007d_board_video_133x125.gif",
-      "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_004_0023007d_board_video_133x125_still.png",
+      "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_004_0023007d_board_video_133x125.gif",
+      "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_004_0023007d_board_video_133x125_still.png",
       "offset": 2293885,
       "size": 435340,
-      "still_size": 4930,
+      "still_size": 5272,
       "frame_count": 23,
       "width": 133,
       "height": 125,
@@ -746,7 +1373,7 @@
     },
     {
       "kind": "board_video_pcm_wave",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_006_00285b2f_board_video_audio.wav",
+      "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_006_00285b2f_board_video_audio.wav",
       "offset": 2644783,
       "size": 132344,
       "pcm_size": 132300,
@@ -758,21 +1385,21 @@
     },
     {
       "kind": "board_video_gif",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_006_00285b2f_board_video_202x252.gif",
-      "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_006_00285b2f_board_video_202x252_still.png",
+      "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_006_00285b2f_board_video_202x252.gif",
+      "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_006_00285b2f_board_video_202x252_still.png",
       "offset": 2644783,
       "size": 405408,
-      "still_size": 16192,
+      "still_size": 18190,
       "frame_count": 7,
       "width": 202,
       "height": 252,
-      "transparent_index": 30,
+      "transparent_index": 202,
       "header_transparent_index": 202,
       "delay_centiseconds": 10
     },
     {
       "kind": "board_video_pcm_wave",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_008_002f6ac3_board_video_audio.wav",
+      "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_008_002f6ac3_board_video_audio.wav",
       "offset": 3107523,
       "size": 176444,
       "pcm_size": 176400,
@@ -784,11 +1411,11 @@
     },
     {
       "kind": "board_video_gif",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_008_002f6ac3_board_video_154x150.gif",
-      "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_008_002f6ac3_board_video_154x150_still.png",
+      "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_008_002f6ac3_board_video_154x150.gif",
+      "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_008_002f6ac3_board_video_154x150_still.png",
       "offset": 3107523,
       "size": 446932,
-      "still_size": 9025,
+      "still_size": 10084,
       "frame_count": 17,
       "width": 154,
       "height": 150,
@@ -798,7 +1425,7 @@
     },
     {
       "kind": "board_video_pcm_wave",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_010_00384900_board_video_audio.wav",
+      "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_010_00384900_board_video_audio.wav",
       "offset": 3688704,
       "size": 132344,
       "pcm_size": 132300,
@@ -810,11 +1437,11 @@
     },
     {
       "kind": "board_video_gif",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_010_00384900_board_video_161x145.gif",
-      "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_010_00384900_board_video_161x145_still.png",
+      "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_010_00384900_board_video_161x145.gif",
+      "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_010_00384900_board_video_161x145_still.png",
       "offset": 3688704,
       "size": 319041,
-      "still_size": 6926,
+      "still_size": 7846,
       "frame_count": 12,
       "width": 161,
       "height": 145,
@@ -824,7 +1451,7 @@
     },
     {
       "kind": "board_video_pcm_wave",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_012_003d6fbf_board_video_audio.wav",
+      "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\01_Transparent_Video_Holder_012_003d6fbf_board_video_audio.wav",
       "offset": 4026303,
       "size": 132344,
       "pcm_size": 132300,
@@ -836,11 +1463,11 @@
     },
     {
       "kind": "board_video_gif",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_012_003d6fbf_board_video_59x22.gif",
-      "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_012_003d6fbf_board_video_59x22_still.png",
+      "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_012_003d6fbf_board_video_59x22.gif",
+      "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_012_003d6fbf_board_video_59x22_still.png",
       "offset": 4026303,
       "size": 24737,
-      "still_size": 1591,
+      "still_size": 1628,
       "frame_count": 16,
       "width": 59,
       "height": 22,
@@ -849,64 +1476,212 @@
       "delay_centiseconds": 10
     },
     {
+      "kind": "board_video_gif",
+      "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_014_003fceb2_board_video_202x221.gif",
+      "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_014_003fceb2_board_video_202x221_still.png",
+      "offset": 4181682,
+      "size": 355659,
+      "still_size": 14145,
+      "frame_count": 7,
+      "width": 202,
+      "height": 221,
+      "transparent_index": 0,
+      "header_transparent_index": 0,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_016_0042bc29_board_video_314x140.gif",
+      "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_016_0042bc29_board_video_314x140_still.png",
+      "offset": 4373545,
+      "size": 3195617,
+      "still_size": 7986,
+      "frame_count": 64,
+      "width": 314,
+      "height": 140,
+      "transparent_index": 185,
+      "header_transparent_index": 185,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_018_0050a3b0_board_video_133x125.gif",
+      "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_018_0050a3b0_board_video_133x125_still.png",
+      "offset": 5284784,
+      "size": 435340,
+      "still_size": 4984,
+      "frame_count": 23,
+      "width": 133,
+      "height": 125,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_020_00529c06_board_video_199x236.gif",
+      "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_020_00529c06_board_video_199x236_still.png",
+      "offset": 5413894,
+      "size": 374104,
+      "still_size": 14805,
+      "frame_count": 7,
+      "width": 199,
+      "height": 236,
+      "transparent_index": 0,
+      "header_transparent_index": 0,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_022_0056a83a_board_video_154x150.gif",
+      "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_022_0056a83a_board_video_154x150_still.png",
+      "offset": 5679162,
+      "size": 446932,
+      "still_size": 7209,
+      "frame_count": 17,
+      "width": 154,
+      "height": 150,
+      "transparent_index": 0,
+      "header_transparent_index": 0,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_024_005a6bef_board_video_161x145.gif",
+      "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_024_005a6bef_board_video_161x145_still.png",
+      "offset": 5925871,
+      "size": 319041,
+      "still_size": 6468,
+      "frame_count": 12,
+      "width": 161,
+      "height": 145,
+      "transparent_index": 30,
+      "header_transparent_index": 30,
+      "delay_centiseconds": 10
+    },
+    {
+      "kind": "board_video_gif",
+      "path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_026_005c9281_board_video_59x22.gif",
+      "still_path": "extracted_assets\\bdf\\PSTRYK\\animations\\01_Transparent_Video_Holder_026_005c9281_board_video_59x22_still.png",
+      "offset": 6066817,
+      "size": 24737,
+      "still_size": 1453,
+      "frame_count": 16,
+      "width": 59,
+      "height": 22,
+      "transparent_index": 17,
+      "header_transparent_index": 17,
+      "delay_centiseconds": 10
+    },
+    {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_000_005d33a0.wav",
+      "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_000_005d33a0.wav",
       "size": 20186
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_001_005d82da.wav",
+      "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_001_005d82da.wav",
       "size": 552010
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_002_0065ef84.wav",
+      "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_002_0065ef84.wav",
       "size": 127646
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_003_0067e282.wav",
+      "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_003_0067e282.wav",
       "size": 186414
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_004_006abb10.wav",
+      "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_004_006abb10.wav",
       "size": 399476
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_005_0070d3e4.wav",
+      "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_005_0070d3e4.wav",
       "size": 202798
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_006_0073ec72.wav",
+      "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_006_0073ec72.wav",
       "size": 158766
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_007_00765900.wav",
+      "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_007_00765900.wav",
       "size": 240686
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_008_007a058e.wav",
+      "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_008_007a058e.wav",
       "size": 372808
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_009_007fb636.wav",
+      "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_009_007fb636.wav",
       "size": 341850
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_010_0084edf0.wav",
+      "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_010_0084edf0.wav",
       "size": 704610
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_011_008faeb2.wav",
+      "path": "extracted_assets\\bdf\\PSTRYK\\embedded\\04_Sound_Holder_011_008faeb2.wav",
       "size": 465094
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\PSTRYK\\sprite_holder\\05_Sprite_Holder_000_pstryk 01_phase_00.png",
+      "offset": 9883446,
+      "size": 4120,
+      "pixel_size": 9880,
+      "width": 76,
+      "height": 65,
+      "name": "pstryk 01",
+      "id": 0,
+      "definition_id": 0,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\PSTRYK\\sprite_holder\\05_Sprite_Holder_000_pstryk 01_phase_00.png",
+          "size": 4120
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\PSTRYK\\sprite_holder\\05_Sprite_Holder_000_pstryk 01_phase_01.png",
+          "size": 3769
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\PSTRYK\\sprite_holder\\05_Sprite_Holder_001_pstryk 01_phase_00.png",
+      "offset": 9893670,
+      "size": 4183,
+      "pixel_size": 9880,
+      "width": 76,
+      "height": 65,
+      "name": "pstryk 01",
+      "id": 1,
+      "definition_id": 1,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\PSTRYK\\sprite_holder\\05_Sprite_Holder_001_pstryk 01_phase_00.png",
+          "size": 4183
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\PSTRYK\\sprite_holder\\05_Sprite_Holder_001_pstryk 01_phase_01.png",
+          "size": 3854
+        }
+      ]
     }
   ],
   "script": {

@@ -28,7 +28,50 @@
       "display_name": "Bitmap_Holder",
       "private_offset": 310485,
       "private_size": 197268,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\bitmap_holder\\00_Bitmap_Holder_000_syntezato_515x382.bmp",
+          "offset": 310625,
+          "size": 198190,
+          "pixel_size": 197112,
+          "width": 515,
+          "height": 382,
+          "name": "syntezato",
+          "rect": {
+            "x": 117,
+            "y": 88,
+            "width": 515,
+            "height": 382
+          },
+          "geometry_confidence": "serialized_entry"
+        }
+      ],
+      "bitmap_holder": {
+        "version": 1,
+        "declared_count": 1,
+        "parsed_count": 1,
+        "frames": [
+          {
+            "index": 0,
+            "name": "syntezato",
+            "record_offset": 310493,
+            "record_size": 197256,
+            "pixel_offset": 310625,
+            "width": 515,
+            "height": 382,
+            "right": 632,
+            "bottom": 470,
+            "rect": {
+              "x": 117,
+              "y": 88,
+              "width": 515,
+              "height": 382
+            },
+            "bmp_output": "extracted_assets\\bdf\\CUDA_PS2\\bitmap_holder\\00_Bitmap_Holder_000_syntezato_515x382.bmp"
+          }
+        ]
+      }
     },
     {
       "index": 1,
@@ -49,175 +92,175 @@
       "embedded": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_000_0007c759.wav",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_000_0007c759.wav",
           "offset": 509785,
           "size": 10322,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_001_0007f00b.wav",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_001_0007f00b.wav",
           "offset": 520203,
           "size": 11486,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_002_00081d49.wav",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_002_00081d49.wav",
           "offset": 531785,
           "size": 11146,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_003_00084933.wav",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_003_00084933.wav",
           "offset": 543027,
           "size": 9926,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_004_00087059.wav",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_004_00087059.wav",
           "offset": 553049,
           "size": 9370,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_005_00089553.wav",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_005_00089553.wav",
           "offset": 562515,
           "size": 8406,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_006_0008b689.wav",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_006_0008b689.wav",
           "offset": 571017,
           "size": 9508,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_007_0008dc0d.wav",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_007_0008dc0d.wav",
           "offset": 580621,
           "size": 9022,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_008_0008ffab.wav",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_008_0008ffab.wav",
           "offset": 589739,
           "size": 8334,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_009_00092099.wav",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_009_00092099.wav",
           "offset": 598169,
           "size": 8926,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_010_000943d7.wav",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_010_000943d7.wav",
           "offset": 607191,
           "size": 9966,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_011_00096b25.wav",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_011_00096b25.wav",
           "offset": 617253,
           "size": 8656,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_012_00098d55.wav",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_012_00098d55.wav",
           "offset": 626005,
           "size": 8716,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_013_0009afc1.wav",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_013_0009afc1.wav",
           "offset": 634817,
           "size": 8582,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_014_0009d1a7.wav",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_014_0009d1a7.wav",
           "offset": 643495,
           "size": 11050,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_015_0009fd31.wav",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_015_0009fd31.wav",
           "offset": 654641,
           "size": 10876,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_016_000a280d.wav",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_016_000a280d.wav",
           "offset": 665613,
           "size": 10126,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_017_000a4ffb.wav",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_017_000a4ffb.wav",
           "offset": 675835,
           "size": 8866,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_018_000a72fd.wav",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_018_000a72fd.wav",
           "offset": 684797,
           "size": 9486,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_019_000a986b.wav",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_019_000a986b.wav",
           "offset": 694379,
           "size": 8836,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_020_000abb4f.wav",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_020_000abb4f.wav",
           "offset": 703311,
           "size": 8178,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_021_000adba1.wav",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_021_000adba1.wav",
           "offset": 711585,
           "size": 9076,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_022_000aff75.wav",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_022_000aff75.wav",
           "offset": 720757,
           "size": 8308,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_023_000b2049.wav",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_023_000b2049.wav",
           "offset": 729161,
           "size": 9736,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_024_000b46b1.wav",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_024_000b46b1.wav",
           "offset": 738993,
           "size": 238,
           "extension": ".wav"
@@ -234,7 +277,7 @@
       "embedded": [
         {
           "kind": "multibitmap_raw",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\multibitmap\\03_MultiBitmap_000_a3.raw",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\multibitmap\\03_MultiBitmap_000_a3.raw",
           "offset": 740340,
           "size": 29380,
           "pixel_size": 29380,
@@ -256,7 +299,7 @@
             "metadata_offset": 769720,
             "width": 594,
             "height": 437,
-            "raw_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\multibitmap\\03_MultiBitmap_000_a3.raw"
+            "raw_output": "extracted_assets\\bdf\\CUDA_PS2\\multibitmap\\03_MultiBitmap_000_a3.raw"
           }
         ]
       }
@@ -268,7 +311,1494 @@
       "display_name": "Sprite_Holder",
       "private_offset": 771446,
       "private_size": 431972,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_000_przycisk_phase_00.png",
+          "offset": 772006,
+          "size": 2317,
+          "pixel_size": 5100,
+          "width": 50,
+          "height": 51,
+          "name": "przycisk ",
+          "id": 0,
+          "definition_id": 0,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_000_przycisk_phase_00.png",
+              "size": 2317
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_000_przycisk_phase_01.png",
+              "size": 2115
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_001_klawisz 0_phase_00.png",
+          "offset": 777758,
+          "size": 2472,
+          "pixel_size": 8932,
+          "width": 58,
+          "height": 77,
+          "name": "klawisz 0",
+          "id": 1,
+          "definition_id": 1,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_001_klawisz 0_phase_00.png",
+              "size": 2472
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_001_klawisz 0_phase_01.png",
+              "size": 2473
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_002_klawisz 0_phase_00.png",
+          "offset": 787034,
+          "size": 2158,
+          "pixel_size": 7488,
+          "width": 48,
+          "height": 78,
+          "name": "klawisz 0",
+          "id": 2,
+          "definition_id": 2,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_002_klawisz 0_phase_00.png",
+              "size": 2158
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_002_klawisz 0_phase_01.png",
+              "size": 2094
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_003_klawisz 0_phase_00.png",
+          "offset": 795214,
+          "size": 2395,
+          "pixel_size": 8004,
+          "width": 46,
+          "height": 87,
+          "name": "klawisz 0",
+          "id": 3,
+          "definition_id": 3,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_003_klawisz 0_phase_00.png",
+              "size": 2395
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_003_klawisz 0_phase_01.png",
+              "size": 2355
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_004_klawisz 0_phase_00.png",
+          "offset": 804096,
+          "size": 2396,
+          "pixel_size": 7298,
+          "width": 41,
+          "height": 89,
+          "name": "klawisz 0",
+          "id": 4,
+          "definition_id": 4,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_004_klawisz 0_phase_00.png",
+              "size": 2396
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_004_klawisz 0_phase_01.png",
+              "size": 2327
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_005_klawisz 0_phase_00.png",
+          "offset": 812284,
+          "size": 2230,
+          "pixel_size": 6006,
+          "width": 33,
+          "height": 91,
+          "name": "klawisz 0",
+          "id": 5,
+          "definition_id": 5,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_005_klawisz 0_phase_00.png",
+              "size": 2230
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_005_klawisz 0_phase_01.png",
+              "size": 2121
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_006_klawisz 0_phase_00.png",
+          "offset": 818974,
+          "size": 2309,
+          "pixel_size": 5100,
+          "width": 30,
+          "height": 85,
+          "name": "klawisz 0",
+          "id": 6,
+          "definition_id": 6,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_006_klawisz 0_phase_00.png",
+              "size": 2309
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_006_klawisz 0_phase_01.png",
+              "size": 2251
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_007_klawisz 0_phase_00.png",
+          "offset": 824588,
+          "size": 2247,
+          "pixel_size": 5270,
+          "width": 31,
+          "height": 85,
+          "name": "klawisz 0",
+          "id": 7,
+          "definition_id": 7,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_007_klawisz 0_phase_00.png",
+              "size": 2247
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_007_klawisz 0_phase_01.png",
+              "size": 1995
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_008_klawisz 0_phase_00.png",
+          "offset": 830550,
+          "size": 2285,
+          "pixel_size": 7308,
+          "width": 42,
+          "height": 87,
+          "name": "klawisz 0",
+          "id": 8,
+          "definition_id": 8,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_008_klawisz 0_phase_00.png",
+              "size": 2285
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_008_klawisz 0_phase_01.png",
+              "size": 2300
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_009_klawisz 0_phase_00.png",
+          "offset": 838126,
+          "size": 2128,
+          "pixel_size": 7488,
+          "width": 52,
+          "height": 72,
+          "name": "klawisz 0",
+          "id": 9,
+          "definition_id": 9,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_009_klawisz 0_phase_00.png",
+              "size": 2128
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_009_klawisz 0_phase_01.png",
+              "size": 2139
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_010_klawisz 0_phase_00.png",
+          "offset": 846112,
+          "size": 2251,
+          "pixel_size": 9086,
+          "width": 59,
+          "height": 77,
+          "name": "klawisz 0",
+          "id": 10,
+          "definition_id": 10,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_010_klawisz 0_phase_00.png",
+              "size": 2251
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_010_klawisz 0_phase_01.png",
+              "size": 2305
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_011_klawisz 0_phase_00.png",
+          "offset": 855834,
+          "size": 5868,
+          "pixel_size": 31244,
+          "width": 107,
+          "height": 146,
+          "name": "klawisz 0",
+          "id": 11,
+          "definition_id": 11,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_011_klawisz 0_phase_00.png",
+              "size": 5868
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_011_klawisz 0_phase_01.png",
+              "size": 5937
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_012_klawisz 0_phase_00.png",
+          "offset": 887422,
+          "size": 5390,
+          "pixel_size": 28608,
+          "width": 96,
+          "height": 149,
+          "name": "klawisz 0",
+          "id": 12,
+          "definition_id": 12,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_012_klawisz 0_phase_00.png",
+              "size": 5390
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_012_klawisz 0_phase_01.png",
+              "size": 5157
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_013_klawisz 0_phase_00.png",
+          "offset": 917328,
+          "size": 5661,
+          "pixel_size": 28302,
+          "width": 89,
+          "height": 159,
+          "name": "klawisz 0",
+          "id": 13,
+          "definition_id": 13,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_013_klawisz 0_phase_00.png",
+              "size": 5661
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_013_klawisz 0_phase_01.png",
+              "size": 5614
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_014_klawisz 0_phase_00.png",
+          "offset": 946626,
+          "size": 5882,
+          "pixel_size": 26732,
+          "width": 82,
+          "height": 163,
+          "name": "klawisz 0",
+          "id": 14,
+          "definition_id": 14,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_014_klawisz 0_phase_00.png",
+              "size": 5882
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_014_klawisz 0_phase_01.png",
+              "size": 5677
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_015_klawisz 0_phase_00.png",
+          "offset": 973702,
+          "size": 4853,
+          "pixel_size": 21376,
+          "width": 64,
+          "height": 167,
+          "name": "klawisz 0",
+          "id": 15,
+          "definition_id": 15,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_015_klawisz 0_phase_00.png",
+              "size": 4853
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_015_klawisz 0_phase_01.png",
+              "size": 4927
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_016_klawisz 0_phase_00.png",
+          "offset": 996424,
+          "size": 5289,
+          "pixel_size": 20374,
+          "width": 61,
+          "height": 167,
+          "name": "klawisz 0",
+          "id": 16,
+          "definition_id": 16,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_016_klawisz 0_phase_00.png",
+              "size": 5289
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_016_klawisz 0_phase_01.png",
+              "size": 5271
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_017_klawisz 0_phase_00.png",
+          "offset": 1017802,
+          "size": 5024,
+          "pixel_size": 16500,
+          "width": 50,
+          "height": 165,
+          "name": "klawisz 0",
+          "id": 17,
+          "definition_id": 17,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_017_klawisz 0_phase_00.png",
+              "size": 5024
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_017_klawisz 0_phase_01.png",
+              "size": 4899
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_018_klawisz 0_phase_00.png",
+          "offset": 1034988,
+          "size": 4964,
+          "pixel_size": 14706,
+          "width": 43,
+          "height": 171,
+          "name": "klawisz 0",
+          "id": 18,
+          "definition_id": 18,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_018_klawisz 0_phase_00.png",
+              "size": 4964
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_018_klawisz 0_phase_01.png",
+              "size": 4695
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_019_klawisz 0_phase_00.png",
+          "offset": 1050038,
+          "size": 4299,
+          "pixel_size": 13680,
+          "width": 40,
+          "height": 171,
+          "name": "klawisz 0",
+          "id": 19,
+          "definition_id": 19,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_019_klawisz 0_phase_00.png",
+              "size": 4299
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_019_klawisz 0_phase_01.png",
+              "size": 4439
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_020_klawisz 0_phase_00.png",
+          "offset": 1064738,
+          "size": 5324,
+          "pixel_size": 18252,
+          "width": 54,
+          "height": 169,
+          "name": "klawisz 0",
+          "id": 20,
+          "definition_id": 20,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_020_klawisz 0_phase_00.png",
+              "size": 5324
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_020_klawisz 0_phase_01.png",
+              "size": 5014
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_021_klawisz 0_phase_00.png",
+          "offset": 1083660,
+          "size": 5473,
+          "pixel_size": 20538,
+          "width": 63,
+          "height": 163,
+          "name": "klawisz 0",
+          "id": 21,
+          "definition_id": 21,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_021_klawisz 0_phase_00.png",
+              "size": 5473
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_021_klawisz 0_phase_01.png",
+              "size": 5534
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_022_klawisz 0_phase_00.png",
+          "offset": 1105520,
+          "size": 5806,
+          "pixel_size": 25102,
+          "width": 77,
+          "height": 163,
+          "name": "klawisz 0",
+          "id": 22,
+          "definition_id": 22,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_022_klawisz 0_phase_00.png",
+              "size": 5806
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_022_klawisz 0_phase_01.png",
+              "size": 5718
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_023_klawisz 0_phase_00.png",
+          "offset": 1130966,
+          "size": 5960,
+          "pixel_size": 31872,
+          "width": 96,
+          "height": 166,
+          "name": "klawisz 0",
+          "id": 23,
+          "definition_id": 23,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_023_klawisz 0_phase_00.png",
+              "size": 5960
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_023_klawisz 0_phase_01.png",
+              "size": 5956
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_024_klawisz 0_phase_00.png",
+          "offset": 1164166,
+          "size": 6310,
+          "pixel_size": 35752,
+          "width": 109,
+          "height": 164,
+          "name": "klawisz 0",
+          "id": 24,
+          "definition_id": 24,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_024_klawisz 0_phase_00.png",
+              "size": 6310
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_024_klawisz 0_phase_01.png",
+              "size": 6150
+            }
+          ]
+        }
+      ],
+      "sprite_holder": {
+        "version": 1,
+        "definition_count": 25,
+        "instance_count": 25,
+        "parsed_definitions": 25,
+        "parsed_instances": 25,
+        "definitions": [
+          {
+            "index": 0,
+            "name": "przycisk ",
+            "record_offset": 771458,
+            "blob_offset": 771462,
+            "blob_size": 5644,
+            "width": 50,
+            "height": 51,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_000_przycisk_phase_00.png",
+                "size": 2317
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_000_przycisk_phase_01.png",
+                "size": 2115
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "klawisz 0",
+            "record_offset": 777106,
+            "blob_offset": 777110,
+            "blob_size": 9580,
+            "width": 58,
+            "height": 77,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_001_klawisz 0_phase_00.png",
+                "size": 2472
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_001_klawisz 0_phase_01.png",
+                "size": 2473
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "klawisz 0",
+            "record_offset": 786690,
+            "blob_offset": 786694,
+            "blob_size": 7828,
+            "width": 48,
+            "height": 78,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_002_klawisz 0_phase_00.png",
+                "size": 2158
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_002_klawisz 0_phase_01.png",
+                "size": 2094
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "name": "klawisz 0",
+            "record_offset": 794522,
+            "blob_offset": 794526,
+            "blob_size": 8692,
+            "width": 46,
+            "height": 87,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_003_klawisz 0_phase_00.png",
+                "size": 2395
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_003_klawisz 0_phase_01.png",
+                "size": 2355
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "name": "klawisz 0",
+            "record_offset": 803218,
+            "blob_offset": 803222,
+            "blob_size": 8172,
+            "width": 41,
+            "height": 89,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_004_klawisz 0_phase_00.png",
+                "size": 2396
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_004_klawisz 0_phase_01.png",
+                "size": 2327
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "name": "klawisz 0",
+            "record_offset": 811394,
+            "blob_offset": 811398,
+            "blob_size": 6892,
+            "width": 33,
+            "height": 91,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_005_klawisz 0_phase_00.png",
+                "size": 2230
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_005_klawisz 0_phase_01.png",
+                "size": 2121
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "name": "klawisz 0",
+            "record_offset": 818290,
+            "blob_offset": 818294,
+            "blob_size": 5780,
+            "width": 30,
+            "height": 85,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_006_klawisz 0_phase_00.png",
+                "size": 2309
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_006_klawisz 0_phase_01.png",
+                "size": 2251
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "name": "klawisz 0",
+            "record_offset": 824074,
+            "blob_offset": 824078,
+            "blob_size": 5780,
+            "width": 31,
+            "height": 85,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_007_klawisz 0_phase_00.png",
+                "size": 2247
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_007_klawisz 0_phase_01.png",
+                "size": 1995
+              }
+            ]
+          },
+          {
+            "index": 8,
+            "name": "klawisz 0",
+            "record_offset": 829858,
+            "blob_offset": 829862,
+            "blob_size": 7996,
+            "width": 42,
+            "height": 87,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_008_klawisz 0_phase_00.png",
+                "size": 2285
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_008_klawisz 0_phase_01.png",
+                "size": 2300
+              }
+            ]
+          },
+          {
+            "index": 9,
+            "name": "klawisz 0",
+            "record_offset": 837858,
+            "blob_offset": 837862,
+            "blob_size": 7752,
+            "width": 52,
+            "height": 72,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_009_klawisz 0_phase_00.png",
+                "size": 2128
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_009_klawisz 0_phase_01.png",
+                "size": 2139
+              }
+            ]
+          },
+          {
+            "index": 10,
+            "name": "klawisz 0",
+            "record_offset": 845614,
+            "blob_offset": 845618,
+            "blob_size": 9580,
+            "width": 59,
+            "height": 77,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_010_klawisz 0_phase_00.png",
+                "size": 2251
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_010_klawisz 0_phase_01.png",
+                "size": 2305
+              }
+            ]
+          },
+          {
+            "index": 11,
+            "name": "klawisz 0",
+            "record_offset": 855198,
+            "blob_offset": 855202,
+            "blob_size": 31876,
+            "width": 107,
+            "height": 146,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_011_klawisz 0_phase_00.png",
+                "size": 5868
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_011_klawisz 0_phase_01.png",
+                "size": 5937
+              }
+            ]
+          },
+          {
+            "index": 12,
+            "name": "klawisz 0",
+            "record_offset": 887078,
+            "blob_offset": 887082,
+            "blob_size": 28948,
+            "width": 96,
+            "height": 149,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_012_klawisz 0_phase_00.png",
+                "size": 5390
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_012_klawisz 0_phase_01.png",
+                "size": 5157
+              }
+            ]
+          },
+          {
+            "index": 13,
+            "name": "klawisz 0",
+            "record_offset": 916030,
+            "blob_offset": 916034,
+            "blob_size": 29596,
+            "width": 89,
+            "height": 159,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_013_klawisz 0_phase_00.png",
+                "size": 5661
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_013_klawisz 0_phase_01.png",
+                "size": 5614
+              }
+            ]
+          },
+          {
+            "index": 14,
+            "name": "klawisz 0",
+            "record_offset": 945630,
+            "blob_offset": 945634,
+            "blob_size": 27724,
+            "width": 82,
+            "height": 163,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_014_klawisz 0_phase_00.png",
+                "size": 5882
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_014_klawisz 0_phase_01.png",
+                "size": 5677
+              }
+            ]
+          },
+          {
+            "index": 15,
+            "name": "klawisz 0",
+            "record_offset": 973358,
+            "blob_offset": 973362,
+            "blob_size": 21716,
+            "width": 64,
+            "height": 167,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_015_klawisz 0_phase_00.png",
+                "size": 4853
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_015_klawisz 0_phase_01.png",
+                "size": 4927
+              }
+            ]
+          },
+          {
+            "index": 16,
+            "name": "klawisz 0",
+            "record_offset": 995078,
+            "blob_offset": 995082,
+            "blob_size": 21716,
+            "width": 61,
+            "height": 167,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_016_klawisz 0_phase_00.png",
+                "size": 5289
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_016_klawisz 0_phase_01.png",
+                "size": 5271
+              }
+            ]
+          },
+          {
+            "index": 17,
+            "name": "klawisz 0",
+            "record_offset": 1016798,
+            "blob_offset": 1016802,
+            "blob_size": 17500,
+            "width": 50,
+            "height": 165,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_017_klawisz 0_phase_00.png",
+                "size": 5024
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_017_klawisz 0_phase_01.png",
+                "size": 4899
+              }
+            ]
+          },
+          {
+            "index": 18,
+            "name": "klawisz 0",
+            "record_offset": 1034302,
+            "blob_offset": 1034306,
+            "blob_size": 15388,
+            "width": 43,
+            "height": 171,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_018_klawisz 0_phase_00.png",
+                "size": 4964
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_018_klawisz 0_phase_01.png",
+                "size": 4695
+              }
+            ]
+          },
+          {
+            "index": 19,
+            "name": "klawisz 0",
+            "record_offset": 1049694,
+            "blob_offset": 1049698,
+            "blob_size": 14020,
+            "width": 40,
+            "height": 171,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_019_klawisz 0_phase_00.png",
+                "size": 4299
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_019_klawisz 0_phase_01.png",
+                "size": 4439
+              }
+            ]
+          },
+          {
+            "index": 20,
+            "name": "klawisz 0",
+            "record_offset": 1063718,
+            "blob_offset": 1063722,
+            "blob_size": 19268,
+            "width": 54,
+            "height": 169,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_020_klawisz 0_phase_00.png",
+                "size": 5324
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_020_klawisz 0_phase_01.png",
+                "size": 5014
+              }
+            ]
+          },
+          {
+            "index": 21,
+            "name": "klawisz 0",
+            "record_offset": 1082990,
+            "blob_offset": 1082994,
+            "blob_size": 21204,
+            "width": 63,
+            "height": 163,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_021_klawisz 0_phase_00.png",
+                "size": 5473
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_021_klawisz 0_phase_01.png",
+                "size": 5534
+              }
+            ]
+          },
+          {
+            "index": 22,
+            "name": "klawisz 0",
+            "record_offset": 1104198,
+            "blob_offset": 1104202,
+            "blob_size": 26420,
+            "width": 77,
+            "height": 163,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_022_klawisz 0_phase_00.png",
+                "size": 5806
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_022_klawisz 0_phase_01.png",
+                "size": 5718
+              }
+            ]
+          },
+          {
+            "index": 23,
+            "name": "klawisz 0",
+            "record_offset": 1130622,
+            "blob_offset": 1130626,
+            "blob_size": 32212,
+            "width": 96,
+            "height": 166,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_023_klawisz 0_phase_00.png",
+                "size": 5960
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_023_klawisz 0_phase_01.png",
+                "size": 5956
+              }
+            ]
+          },
+          {
+            "index": 24,
+            "name": "klawisz 0",
+            "record_offset": 1162838,
+            "blob_offset": 1162842,
+            "blob_size": 37076,
+            "width": 109,
+            "height": 164,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_024_klawisz 0_phase_00.png",
+                "size": 6310
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_024_klawisz 0_phase_01.png",
+                "size": 6150
+              }
+            ]
+          }
+        ],
+        "instances": [
+          {
+            "index": 0,
+            "definition_id": 11,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1199918
+          },
+          {
+            "index": 1,
+            "definition_id": 12,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1200058
+          },
+          {
+            "index": 2,
+            "definition_id": 13,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1200198
+          },
+          {
+            "index": 3,
+            "definition_id": 14,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1200338
+          },
+          {
+            "index": 4,
+            "definition_id": 15,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1200478
+          },
+          {
+            "index": 5,
+            "definition_id": 16,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1200618
+          },
+          {
+            "index": 6,
+            "definition_id": 17,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1200758
+          },
+          {
+            "index": 7,
+            "definition_id": 18,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1200898
+          },
+          {
+            "index": 8,
+            "definition_id": 19,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1201038
+          },
+          {
+            "index": 9,
+            "definition_id": 20,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1201178
+          },
+          {
+            "index": 10,
+            "definition_id": 21,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1201318
+          },
+          {
+            "index": 11,
+            "definition_id": 22,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1201458
+          },
+          {
+            "index": 12,
+            "definition_id": 23,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1201598
+          },
+          {
+            "index": 13,
+            "definition_id": 24,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1201738
+          },
+          {
+            "index": 14,
+            "definition_id": 1,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1201878
+          },
+          {
+            "index": 15,
+            "definition_id": 2,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1202018
+          },
+          {
+            "index": 16,
+            "definition_id": 3,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1202158
+          },
+          {
+            "index": 17,
+            "definition_id": 4,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1202298
+          },
+          {
+            "index": 18,
+            "definition_id": 5,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1202438
+          },
+          {
+            "index": 19,
+            "definition_id": 6,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1202578
+          },
+          {
+            "index": 20,
+            "definition_id": 7,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1202718
+          },
+          {
+            "index": 21,
+            "definition_id": 8,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1202858
+          },
+          {
+            "index": 22,
+            "definition_id": 9,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1202998
+          },
+          {
+            "index": 23,
+            "definition_id": 10,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1203138
+          },
+          {
+            "index": 24,
+            "definition_id": 0,
+            "field04": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1203278
+          }
+        ]
+      }
     },
     {
       "index": 5,
@@ -283,158 +1813,800 @@
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "dib",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\background.dib",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\background.dib",
       "size": 308180
     },
     {
       "kind": "bmp",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\background.bmp",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\background.bmp",
       "size": 308194
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\script.txt",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\script.txt",
       "size": 21285
     },
     {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\bitmap_holder\\00_Bitmap_Holder_000_syntezato_515x382.bmp",
+      "offset": 310625,
+      "size": 198190,
+      "pixel_size": 197112,
+      "width": 515,
+      "height": 382,
+      "name": "syntezato",
+      "rect": {
+        "x": 117,
+        "y": 88,
+        "width": 515,
+        "height": 382
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_000_0007c759.wav",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_000_0007c759.wav",
       "size": 10322
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_001_0007f00b.wav",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_001_0007f00b.wav",
       "size": 11486
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_002_00081d49.wav",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_002_00081d49.wav",
       "size": 11146
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_003_00084933.wav",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_003_00084933.wav",
       "size": 9926
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_004_00087059.wav",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_004_00087059.wav",
       "size": 9370
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_005_00089553.wav",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_005_00089553.wav",
       "size": 8406
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_006_0008b689.wav",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_006_0008b689.wav",
       "size": 9508
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_007_0008dc0d.wav",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_007_0008dc0d.wav",
       "size": 9022
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_008_0008ffab.wav",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_008_0008ffab.wav",
       "size": 8334
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_009_00092099.wav",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_009_00092099.wav",
       "size": 8926
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_010_000943d7.wav",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_010_000943d7.wav",
       "size": 9966
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_011_00096b25.wav",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_011_00096b25.wav",
       "size": 8656
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_012_00098d55.wav",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_012_00098d55.wav",
       "size": 8716
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_013_0009afc1.wav",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_013_0009afc1.wav",
       "size": 8582
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_014_0009d1a7.wav",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_014_0009d1a7.wav",
       "size": 11050
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_015_0009fd31.wav",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_015_0009fd31.wav",
       "size": 10876
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_016_000a280d.wav",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_016_000a280d.wav",
       "size": 10126
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_017_000a4ffb.wav",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_017_000a4ffb.wav",
       "size": 8866
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_018_000a72fd.wav",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_018_000a72fd.wav",
       "size": 9486
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_019_000a986b.wav",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_019_000a986b.wav",
       "size": 8836
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_020_000abb4f.wav",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_020_000abb4f.wav",
       "size": 8178
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_021_000adba1.wav",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_021_000adba1.wav",
       "size": 9076
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_022_000aff75.wav",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_022_000aff75.wav",
       "size": 8308
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_023_000b2049.wav",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_023_000b2049.wav",
       "size": 9736
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_024_000b46b1.wav",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\embedded\\02_Sound_Holder_024_000b46b1.wav",
       "size": 238
     },
     {
       "kind": "multibitmap_raw",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_PS2\\multibitmap\\03_MultiBitmap_000_a3.raw",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\multibitmap\\03_MultiBitmap_000_a3.raw",
       "offset": 740340,
       "size": 29380,
       "pixel_size": 29380,
       "width": 594,
       "height": 437,
       "name": "a3"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_000_przycisk_phase_00.png",
+      "offset": 772006,
+      "size": 2317,
+      "pixel_size": 5100,
+      "width": 50,
+      "height": 51,
+      "name": "przycisk ",
+      "id": 0,
+      "definition_id": 0,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_000_przycisk_phase_00.png",
+          "size": 2317
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_000_przycisk_phase_01.png",
+          "size": 2115
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_001_klawisz 0_phase_00.png",
+      "offset": 777758,
+      "size": 2472,
+      "pixel_size": 8932,
+      "width": 58,
+      "height": 77,
+      "name": "klawisz 0",
+      "id": 1,
+      "definition_id": 1,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_001_klawisz 0_phase_00.png",
+          "size": 2472
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_001_klawisz 0_phase_01.png",
+          "size": 2473
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_002_klawisz 0_phase_00.png",
+      "offset": 787034,
+      "size": 2158,
+      "pixel_size": 7488,
+      "width": 48,
+      "height": 78,
+      "name": "klawisz 0",
+      "id": 2,
+      "definition_id": 2,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_002_klawisz 0_phase_00.png",
+          "size": 2158
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_002_klawisz 0_phase_01.png",
+          "size": 2094
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_003_klawisz 0_phase_00.png",
+      "offset": 795214,
+      "size": 2395,
+      "pixel_size": 8004,
+      "width": 46,
+      "height": 87,
+      "name": "klawisz 0",
+      "id": 3,
+      "definition_id": 3,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_003_klawisz 0_phase_00.png",
+          "size": 2395
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_003_klawisz 0_phase_01.png",
+          "size": 2355
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_004_klawisz 0_phase_00.png",
+      "offset": 804096,
+      "size": 2396,
+      "pixel_size": 7298,
+      "width": 41,
+      "height": 89,
+      "name": "klawisz 0",
+      "id": 4,
+      "definition_id": 4,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_004_klawisz 0_phase_00.png",
+          "size": 2396
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_004_klawisz 0_phase_01.png",
+          "size": 2327
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_005_klawisz 0_phase_00.png",
+      "offset": 812284,
+      "size": 2230,
+      "pixel_size": 6006,
+      "width": 33,
+      "height": 91,
+      "name": "klawisz 0",
+      "id": 5,
+      "definition_id": 5,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_005_klawisz 0_phase_00.png",
+          "size": 2230
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_005_klawisz 0_phase_01.png",
+          "size": 2121
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_006_klawisz 0_phase_00.png",
+      "offset": 818974,
+      "size": 2309,
+      "pixel_size": 5100,
+      "width": 30,
+      "height": 85,
+      "name": "klawisz 0",
+      "id": 6,
+      "definition_id": 6,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_006_klawisz 0_phase_00.png",
+          "size": 2309
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_006_klawisz 0_phase_01.png",
+          "size": 2251
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_007_klawisz 0_phase_00.png",
+      "offset": 824588,
+      "size": 2247,
+      "pixel_size": 5270,
+      "width": 31,
+      "height": 85,
+      "name": "klawisz 0",
+      "id": 7,
+      "definition_id": 7,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_007_klawisz 0_phase_00.png",
+          "size": 2247
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_007_klawisz 0_phase_01.png",
+          "size": 1995
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_008_klawisz 0_phase_00.png",
+      "offset": 830550,
+      "size": 2285,
+      "pixel_size": 7308,
+      "width": 42,
+      "height": 87,
+      "name": "klawisz 0",
+      "id": 8,
+      "definition_id": 8,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_008_klawisz 0_phase_00.png",
+          "size": 2285
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_008_klawisz 0_phase_01.png",
+          "size": 2300
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_009_klawisz 0_phase_00.png",
+      "offset": 838126,
+      "size": 2128,
+      "pixel_size": 7488,
+      "width": 52,
+      "height": 72,
+      "name": "klawisz 0",
+      "id": 9,
+      "definition_id": 9,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_009_klawisz 0_phase_00.png",
+          "size": 2128
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_009_klawisz 0_phase_01.png",
+          "size": 2139
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_010_klawisz 0_phase_00.png",
+      "offset": 846112,
+      "size": 2251,
+      "pixel_size": 9086,
+      "width": 59,
+      "height": 77,
+      "name": "klawisz 0",
+      "id": 10,
+      "definition_id": 10,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_010_klawisz 0_phase_00.png",
+          "size": 2251
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_010_klawisz 0_phase_01.png",
+          "size": 2305
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_011_klawisz 0_phase_00.png",
+      "offset": 855834,
+      "size": 5868,
+      "pixel_size": 31244,
+      "width": 107,
+      "height": 146,
+      "name": "klawisz 0",
+      "id": 11,
+      "definition_id": 11,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_011_klawisz 0_phase_00.png",
+          "size": 5868
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_011_klawisz 0_phase_01.png",
+          "size": 5937
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_012_klawisz 0_phase_00.png",
+      "offset": 887422,
+      "size": 5390,
+      "pixel_size": 28608,
+      "width": 96,
+      "height": 149,
+      "name": "klawisz 0",
+      "id": 12,
+      "definition_id": 12,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_012_klawisz 0_phase_00.png",
+          "size": 5390
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_012_klawisz 0_phase_01.png",
+          "size": 5157
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_013_klawisz 0_phase_00.png",
+      "offset": 917328,
+      "size": 5661,
+      "pixel_size": 28302,
+      "width": 89,
+      "height": 159,
+      "name": "klawisz 0",
+      "id": 13,
+      "definition_id": 13,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_013_klawisz 0_phase_00.png",
+          "size": 5661
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_013_klawisz 0_phase_01.png",
+          "size": 5614
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_014_klawisz 0_phase_00.png",
+      "offset": 946626,
+      "size": 5882,
+      "pixel_size": 26732,
+      "width": 82,
+      "height": 163,
+      "name": "klawisz 0",
+      "id": 14,
+      "definition_id": 14,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_014_klawisz 0_phase_00.png",
+          "size": 5882
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_014_klawisz 0_phase_01.png",
+          "size": 5677
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_015_klawisz 0_phase_00.png",
+      "offset": 973702,
+      "size": 4853,
+      "pixel_size": 21376,
+      "width": 64,
+      "height": 167,
+      "name": "klawisz 0",
+      "id": 15,
+      "definition_id": 15,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_015_klawisz 0_phase_00.png",
+          "size": 4853
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_015_klawisz 0_phase_01.png",
+          "size": 4927
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_016_klawisz 0_phase_00.png",
+      "offset": 996424,
+      "size": 5289,
+      "pixel_size": 20374,
+      "width": 61,
+      "height": 167,
+      "name": "klawisz 0",
+      "id": 16,
+      "definition_id": 16,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_016_klawisz 0_phase_00.png",
+          "size": 5289
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_016_klawisz 0_phase_01.png",
+          "size": 5271
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_017_klawisz 0_phase_00.png",
+      "offset": 1017802,
+      "size": 5024,
+      "pixel_size": 16500,
+      "width": 50,
+      "height": 165,
+      "name": "klawisz 0",
+      "id": 17,
+      "definition_id": 17,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_017_klawisz 0_phase_00.png",
+          "size": 5024
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_017_klawisz 0_phase_01.png",
+          "size": 4899
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_018_klawisz 0_phase_00.png",
+      "offset": 1034988,
+      "size": 4964,
+      "pixel_size": 14706,
+      "width": 43,
+      "height": 171,
+      "name": "klawisz 0",
+      "id": 18,
+      "definition_id": 18,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_018_klawisz 0_phase_00.png",
+          "size": 4964
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_018_klawisz 0_phase_01.png",
+          "size": 4695
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_019_klawisz 0_phase_00.png",
+      "offset": 1050038,
+      "size": 4299,
+      "pixel_size": 13680,
+      "width": 40,
+      "height": 171,
+      "name": "klawisz 0",
+      "id": 19,
+      "definition_id": 19,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_019_klawisz 0_phase_00.png",
+          "size": 4299
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_019_klawisz 0_phase_01.png",
+          "size": 4439
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_020_klawisz 0_phase_00.png",
+      "offset": 1064738,
+      "size": 5324,
+      "pixel_size": 18252,
+      "width": 54,
+      "height": 169,
+      "name": "klawisz 0",
+      "id": 20,
+      "definition_id": 20,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_020_klawisz 0_phase_00.png",
+          "size": 5324
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_020_klawisz 0_phase_01.png",
+          "size": 5014
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_021_klawisz 0_phase_00.png",
+      "offset": 1083660,
+      "size": 5473,
+      "pixel_size": 20538,
+      "width": 63,
+      "height": 163,
+      "name": "klawisz 0",
+      "id": 21,
+      "definition_id": 21,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_021_klawisz 0_phase_00.png",
+          "size": 5473
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_021_klawisz 0_phase_01.png",
+          "size": 5534
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_022_klawisz 0_phase_00.png",
+      "offset": 1105520,
+      "size": 5806,
+      "pixel_size": 25102,
+      "width": 77,
+      "height": 163,
+      "name": "klawisz 0",
+      "id": 22,
+      "definition_id": 22,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_022_klawisz 0_phase_00.png",
+          "size": 5806
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_022_klawisz 0_phase_01.png",
+          "size": 5718
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_023_klawisz 0_phase_00.png",
+      "offset": 1130966,
+      "size": 5960,
+      "pixel_size": 31872,
+      "width": 96,
+      "height": 166,
+      "name": "klawisz 0",
+      "id": 23,
+      "definition_id": 23,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_023_klawisz 0_phase_00.png",
+          "size": 5960
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_023_klawisz 0_phase_01.png",
+          "size": 5956
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_024_klawisz 0_phase_00.png",
+      "offset": 1164166,
+      "size": 6310,
+      "pixel_size": 35752,
+      "width": 109,
+      "height": 164,
+      "name": "klawisz 0",
+      "id": 24,
+      "definition_id": 24,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_024_klawisz 0_phase_00.png",
+          "size": 6310
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_PS2\\sprite_holder\\04_Sprite_Holder_024_klawisz 0_phase_01.png",
+          "size": 6150
+        }
+      ]
     }
   ],
   "script": {

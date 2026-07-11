@@ -32,328 +32,417 @@
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_000_g_phase_00.png",
-          "offset": 326005,
-          "size": 4912,
-          "pixel_size": 42822,
+          "offset": 311735,
+          "size": 5717,
+          "pixel_size": 57096,
           "width": 117,
           "height": 122,
           "name": "g",
           "id": 0,
-          "phase_count": 3,
-          "phase_outputs": [
-            {
-              "phase": 0,
-              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_000_g_phase_00.png",
-              "size": 4912
-            },
-            {
-              "phase": 1,
-              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_000_g_phase_01.png",
-              "size": 4435
-            },
-            {
-              "phase": 2,
-              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_000_g_phase_02.png",
-              "size": 3259
-            }
-          ],
-          "rect": {
-            "x": 0,
-            "y": 400,
-            "width": 117,
-            "height": 122
-          },
-          "geometry_confidence": "serialized_sprite"
-        },
-        {
-          "kind": "sprite_holder_png",
-          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_001_indyk 01_phase_00.png",
-          "offset": 378675,
-          "size": 4070,
-          "pixel_size": 27360,
-          "width": 95,
-          "height": 96,
-          "name": "indyk 01",
-          "id": 1,
-          "phase_count": 3,
-          "phase_outputs": [
-            {
-              "phase": 0,
-              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_001_indyk 01_phase_00.png",
-              "size": 4070
-            },
-            {
-              "phase": 1,
-              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_001_indyk 01_phase_01.png",
-              "size": 4700
-            },
-            {
-              "phase": 2,
-              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_001_indyk 01_phase_02.png",
-              "size": 3236
-            }
-          ],
-          "rect": {
-            "x": 0,
-            "y": 400,
-            "width": 95,
-            "height": 96
-          },
-          "geometry_confidence": "serialized_sprite"
-        },
-        {
-          "kind": "sprite_holder_png",
-          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_002_kaczuszka_phase_00.png",
-          "offset": 410868,
-          "size": 2186,
-          "pixel_size": 12663,
-          "width": 63,
-          "height": 67,
-          "name": "kaczuszka",
-          "id": 2,
-          "phase_count": 3,
-          "phase_outputs": [
-            {
-              "phase": 0,
-              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_002_kaczuszka_phase_00.png",
-              "size": 2186
-            },
-            {
-              "phase": 1,
-              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_002_kaczuszka_phase_01.png",
-              "size": 2463
-            },
-            {
-              "phase": 2,
-              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_002_kaczuszka_phase_02.png",
-              "size": 2067
-            }
-          ],
-          "rect": {
-            "x": 97,
-            "y": 400,
-            "width": 63,
-            "height": 67
-          },
-          "geometry_confidence": "serialized_sprite"
-        },
-        {
-          "kind": "sprite_holder_png",
-          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_003_kura01_phase_00.png",
-          "offset": 433443,
-          "size": 3889,
-          "pixel_size": 37440,
-          "width": 90,
-          "height": 104,
-          "name": "kura01",
-          "id": 3,
+          "definition_id": 0,
           "phase_count": 4,
           "phase_outputs": [
             {
               "phase": 0,
+              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_000_g_phase_00.png",
+              "size": 5717
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_000_g_phase_01.png",
+              "size": 4873
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_000_g_phase_02.png",
+              "size": 4444
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_000_g_phase_03.png",
+              "size": 3237
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_001_indyk 01_phase_00.png",
+          "offset": 369559,
+          "size": 5228,
+          "pixel_size": 36480,
+          "width": 95,
+          "height": 96,
+          "name": "indyk 01",
+          "id": 1,
+          "definition_id": 1,
+          "phase_count": 4,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_001_indyk 01_phase_00.png",
+              "size": 5228
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_001_indyk 01_phase_01.png",
+              "size": 4063
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_001_indyk 01_phase_02.png",
+              "size": 4690
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_001_indyk 01_phase_03.png",
+              "size": 3259
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_002_kaczuszka_phase_00.png",
+          "offset": 406651,
+          "size": 2655,
+          "pixel_size": 16884,
+          "width": 63,
+          "height": 67,
+          "name": "kaczuszka",
+          "id": 2,
+          "definition_id": 2,
+          "phase_count": 4,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_002_kaczuszka_phase_00.png",
+              "size": 2655
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_002_kaczuszka_phase_01.png",
+              "size": 2181
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_002_kaczuszka_phase_02.png",
+              "size": 2451
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_002_kaczuszka_phase_03.png",
+              "size": 2046
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_003_kura01_phase_00.png",
+          "offset": 424087,
+          "size": 4246,
+          "pixel_size": 46800,
+          "width": 90,
+          "height": 104,
+          "name": "kura01",
+          "id": 3,
+          "definition_id": 3,
+          "phase_count": 5,
+          "phase_outputs": [
+            {
+              "phase": 0,
               "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_003_kura01_phase_00.png",
-              "size": 3889
+              "size": 4246
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_003_kura01_phase_01.png",
-              "size": 4186
+              "size": 3891
             },
             {
               "phase": 2,
               "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_003_kura01_phase_02.png",
-              "size": 4100
+              "size": 4182
             },
             {
               "phase": 3,
               "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_003_kura01_phase_03.png",
-              "size": 2121
+              "size": 4106
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_003_kura01_phase_04.png",
+              "size": 2119
             }
-          ],
-          "rect": {
-            "x": 0,
-            "y": 100,
-            "width": 90,
-            "height": 104
-          },
-          "geometry_confidence": "serialized_sprite"
+          ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_004_perliczka_phase_00.png",
-          "offset": 482263,
-          "size": 3693,
-          "pixel_size": 31620,
+          "offset": 471727,
+          "size": 4972,
+          "pixel_size": 42160,
           "width": 85,
           "height": 124,
           "name": "perliczka",
           "id": 4,
-          "phase_count": 3,
+          "definition_id": 4,
+          "phase_count": 4,
           "phase_outputs": [
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_004_perliczka_phase_00.png",
-              "size": 3693
+              "size": 4972
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_004_perliczka_phase_01.png",
-              "size": 4309
+              "size": 3709
             },
             {
               "phase": 2,
               "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_004_perliczka_phase_02.png",
-              "size": 3329
+              "size": 4311
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_004_perliczka_phase_03.png",
+              "size": 3340
             }
-          ],
-          "rect": {
-            "x": 97,
-            "y": 100,
-            "width": 85,
-            "height": 124
-          },
-          "geometry_confidence": "serialized_sprite"
+          ]
         }
       ],
       "sprite_holder": {
         "version": 1,
-        "declared_count": 5,
-        "parsed_count": 5,
-        "frames": [
+        "definition_count": 5,
+        "instance_count": 5,
+        "parsed_definitions": 5,
+        "parsed_instances": 5,
+        "definitions": [
           {
             "index": 0,
             "name": "g",
-            "record_offset": 310899,
-            "record_size": 57924,
+            "record_offset": 310903,
+            "blob_offset": 310907,
+            "blob_size": 57924,
             "width": 117,
             "height": 122,
-            "phase_count": 3,
+            "phase_count": 4,
+            "phase_hint": 3,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_000_g_phase_00.png",
-                "size": 4912
+                "size": 5717
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_000_g_phase_01.png",
-                "size": 4435
+                "size": 4873
               },
               {
                 "phase": 2,
                 "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_000_g_phase_02.png",
-                "size": 3259
+                "size": 4444
+              },
+              {
+                "phase": 3,
+                "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_000_g_phase_03.png",
+                "size": 3237
               }
             ]
           },
           {
             "index": 1,
             "name": "indyk 01",
-            "record_offset": 368827,
-            "record_size": 37204,
+            "record_offset": 368831,
+            "blob_offset": 368835,
+            "blob_size": 37204,
             "width": 95,
             "height": 96,
-            "phase_count": 3,
+            "phase_count": 4,
+            "phase_hint": 3,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_001_indyk 01_phase_00.png",
-                "size": 4070
+                "size": 5228
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_001_indyk 01_phase_01.png",
-                "size": 4700
+                "size": 4063
               },
               {
                 "phase": 2,
                 "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_001_indyk 01_phase_02.png",
-                "size": 3236
+                "size": 4690
+              },
+              {
+                "phase": 3,
+                "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_001_indyk 01_phase_03.png",
+                "size": 3259
               }
             ]
           },
           {
             "index": 2,
             "name": "kaczuszka",
-            "record_offset": 406035,
-            "record_size": 17492,
+            "record_offset": 406039,
+            "blob_offset": 406043,
+            "blob_size": 17492,
             "width": 63,
             "height": 67,
-            "phase_count": 3,
+            "phase_count": 4,
+            "phase_hint": 3,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_002_kaczuszka_phase_00.png",
-                "size": 2186
+                "size": 2655
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_002_kaczuszka_phase_01.png",
-                "size": 2463
+                "size": 2181
               },
               {
                 "phase": 2,
                 "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_002_kaczuszka_phase_02.png",
-                "size": 2067
+                "size": 2451
+              },
+              {
+                "phase": 3,
+                "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_002_kaczuszka_phase_03.png",
+                "size": 2046
               }
             ]
           },
           {
             "index": 3,
             "name": "kura01",
-            "record_offset": 423531,
-            "record_size": 47348,
+            "record_offset": 423535,
+            "blob_offset": 423539,
+            "blob_size": 47348,
             "width": 90,
             "height": 104,
-            "phase_count": 4,
+            "phase_count": 5,
+            "phase_hint": 4,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_003_kura01_phase_00.png",
-                "size": 3889
+                "size": 4246
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_003_kura01_phase_01.png",
-                "size": 4186
+                "size": 3891
               },
               {
                 "phase": 2,
                 "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_003_kura01_phase_02.png",
-                "size": 4100
+                "size": 4182
               },
               {
                 "phase": 3,
                 "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_003_kura01_phase_03.png",
-                "size": 2121
+                "size": 4106
+              },
+              {
+                "phase": 4,
+                "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_003_kura01_phase_04.png",
+                "size": 2119
               }
             ]
           },
           {
             "index": 4,
             "name": "perliczka",
-            "record_offset": 470883,
-            "record_size": 42996,
+            "record_offset": 470887,
+            "blob_offset": 470891,
+            "blob_size": 42996,
             "width": 85,
             "height": 124,
-            "phase_count": 3,
+            "phase_count": 4,
+            "phase_hint": 3,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_004_perliczka_phase_00.png",
-                "size": 3693
+                "size": 4972
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_004_perliczka_phase_01.png",
-                "size": 4309
+                "size": 3709
               },
               {
                 "phase": 2,
                 "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_004_perliczka_phase_02.png",
-                "size": 3329
+                "size": 4311
+              },
+              {
+                "phase": 3,
+                "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_004_perliczka_phase_03.png",
+                "size": 3340
               }
             ]
+          }
+        ],
+        "instances": [
+          {
+            "index": 0,
+            "definition_id": 0,
+            "field04": 0,
+            "x": 63,
+            "y": 256,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 513887
+          },
+          {
+            "index": 1,
+            "definition_id": 1,
+            "field04": 0,
+            "x": 359,
+            "y": 218,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 514027
+          },
+          {
+            "index": 2,
+            "definition_id": 2,
+            "field04": 0,
+            "x": 159,
+            "y": 315,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 514167
+          },
+          {
+            "index": 3,
+            "definition_id": 3,
+            "field04": 0,
+            "x": 270,
+            "y": 214,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 514307
+          },
+          {
+            "index": 4,
+            "definition_id": 4,
+            "field04": 0,
+            "x": 470,
+            "y": 257,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 514447
           }
         ]
       }
@@ -821,187 +910,182 @@
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_000_g_phase_00.png",
-      "offset": 326005,
-      "size": 4912,
-      "pixel_size": 42822,
+      "offset": 311735,
+      "size": 5717,
+      "pixel_size": 57096,
       "width": 117,
       "height": 122,
       "name": "g",
       "id": 0,
-      "phase_count": 3,
-      "phase_outputs": [
-        {
-          "phase": 0,
-          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_000_g_phase_00.png",
-          "size": 4912
-        },
-        {
-          "phase": 1,
-          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_000_g_phase_01.png",
-          "size": 4435
-        },
-        {
-          "phase": 2,
-          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_000_g_phase_02.png",
-          "size": 3259
-        }
-      ],
-      "rect": {
-        "x": 0,
-        "y": 400,
-        "width": 117,
-        "height": 122
-      },
-      "geometry_confidence": "serialized_sprite"
-    },
-    {
-      "kind": "sprite_holder_png",
-      "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_001_indyk 01_phase_00.png",
-      "offset": 378675,
-      "size": 4070,
-      "pixel_size": 27360,
-      "width": 95,
-      "height": 96,
-      "name": "indyk 01",
-      "id": 1,
-      "phase_count": 3,
-      "phase_outputs": [
-        {
-          "phase": 0,
-          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_001_indyk 01_phase_00.png",
-          "size": 4070
-        },
-        {
-          "phase": 1,
-          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_001_indyk 01_phase_01.png",
-          "size": 4700
-        },
-        {
-          "phase": 2,
-          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_001_indyk 01_phase_02.png",
-          "size": 3236
-        }
-      ],
-      "rect": {
-        "x": 0,
-        "y": 400,
-        "width": 95,
-        "height": 96
-      },
-      "geometry_confidence": "serialized_sprite"
-    },
-    {
-      "kind": "sprite_holder_png",
-      "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_002_kaczuszka_phase_00.png",
-      "offset": 410868,
-      "size": 2186,
-      "pixel_size": 12663,
-      "width": 63,
-      "height": 67,
-      "name": "kaczuszka",
-      "id": 2,
-      "phase_count": 3,
-      "phase_outputs": [
-        {
-          "phase": 0,
-          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_002_kaczuszka_phase_00.png",
-          "size": 2186
-        },
-        {
-          "phase": 1,
-          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_002_kaczuszka_phase_01.png",
-          "size": 2463
-        },
-        {
-          "phase": 2,
-          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_002_kaczuszka_phase_02.png",
-          "size": 2067
-        }
-      ],
-      "rect": {
-        "x": 97,
-        "y": 400,
-        "width": 63,
-        "height": 67
-      },
-      "geometry_confidence": "serialized_sprite"
-    },
-    {
-      "kind": "sprite_holder_png",
-      "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_003_kura01_phase_00.png",
-      "offset": 433443,
-      "size": 3889,
-      "pixel_size": 37440,
-      "width": 90,
-      "height": 104,
-      "name": "kura01",
-      "id": 3,
+      "definition_id": 0,
       "phase_count": 4,
       "phase_outputs": [
         {
           "phase": 0,
+          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_000_g_phase_00.png",
+          "size": 5717
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_000_g_phase_01.png",
+          "size": 4873
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_000_g_phase_02.png",
+          "size": 4444
+        },
+        {
+          "phase": 3,
+          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_000_g_phase_03.png",
+          "size": 3237
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_001_indyk 01_phase_00.png",
+      "offset": 369559,
+      "size": 5228,
+      "pixel_size": 36480,
+      "width": 95,
+      "height": 96,
+      "name": "indyk 01",
+      "id": 1,
+      "definition_id": 1,
+      "phase_count": 4,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_001_indyk 01_phase_00.png",
+          "size": 5228
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_001_indyk 01_phase_01.png",
+          "size": 4063
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_001_indyk 01_phase_02.png",
+          "size": 4690
+        },
+        {
+          "phase": 3,
+          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_001_indyk 01_phase_03.png",
+          "size": 3259
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_002_kaczuszka_phase_00.png",
+      "offset": 406651,
+      "size": 2655,
+      "pixel_size": 16884,
+      "width": 63,
+      "height": 67,
+      "name": "kaczuszka",
+      "id": 2,
+      "definition_id": 2,
+      "phase_count": 4,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_002_kaczuszka_phase_00.png",
+          "size": 2655
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_002_kaczuszka_phase_01.png",
+          "size": 2181
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_002_kaczuszka_phase_02.png",
+          "size": 2451
+        },
+        {
+          "phase": 3,
+          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_002_kaczuszka_phase_03.png",
+          "size": 2046
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_003_kura01_phase_00.png",
+      "offset": 424087,
+      "size": 4246,
+      "pixel_size": 46800,
+      "width": 90,
+      "height": 104,
+      "name": "kura01",
+      "id": 3,
+      "definition_id": 3,
+      "phase_count": 5,
+      "phase_outputs": [
+        {
+          "phase": 0,
           "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_003_kura01_phase_00.png",
-          "size": 3889
+          "size": 4246
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_003_kura01_phase_01.png",
-          "size": 4186
+          "size": 3891
         },
         {
           "phase": 2,
           "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_003_kura01_phase_02.png",
-          "size": 4100
+          "size": 4182
         },
         {
           "phase": 3,
           "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_003_kura01_phase_03.png",
-          "size": 2121
+          "size": 4106
+        },
+        {
+          "phase": 4,
+          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_003_kura01_phase_04.png",
+          "size": 2119
         }
-      ],
-      "rect": {
-        "x": 0,
-        "y": 100,
-        "width": 90,
-        "height": 104
-      },
-      "geometry_confidence": "serialized_sprite"
+      ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_004_perliczka_phase_00.png",
-      "offset": 482263,
-      "size": 3693,
-      "pixel_size": 31620,
+      "offset": 471727,
+      "size": 4972,
+      "pixel_size": 42160,
       "width": 85,
       "height": 124,
       "name": "perliczka",
       "id": 4,
-      "phase_count": 3,
+      "definition_id": 4,
+      "phase_count": 4,
       "phase_outputs": [
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_004_perliczka_phase_00.png",
-          "size": 3693
+          "size": 4972
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_004_perliczka_phase_01.png",
-          "size": 4309
+          "size": 3709
         },
         {
           "phase": 2,
           "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_004_perliczka_phase_02.png",
-          "size": 3329
+          "size": 4311
+        },
+        {
+          "phase": 3,
+          "path": "extracted_assets\\bdf\\PLOTKI\\sprite_holder\\00_Sprite_Holder_004_perliczka_phase_03.png",
+          "size": 3340
         }
-      ],
-      "rect": {
-        "x": 97,
-        "y": 100,
-        "width": 85,
-        "height": 124
-      },
-      "geometry_confidence": "serialized_sprite"
+      ]
     },
     {
       "kind": "board_video_pcm_wave",

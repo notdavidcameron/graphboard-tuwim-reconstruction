@@ -5,19 +5,25 @@
   "orderWarnings": [
     "167 scene(s) were not listed in START.PRJ and were appended alphabetically."
   ],
+  "project": {
+    "version": 1,
+    "startupPage": "intro.bdf",
+    "audioPresetIndex": 11,
+    "pageCount": 34,
+    "groupNames": [
+      "cursors.grp",
+      "cursors1.grp",
+      "cursors2.grp",
+      "g_rec.grp",
+      "g_tan.grp",
+      "gr_czym.grp"
+    ],
+    "signatureValid": true,
+    "globalScript": "//###########################################################################\r\n//Global variables\r\n//###########################################################################\r\n\r\n\r\n   int global1=0;   //zmienne uniwersalne\r\n   int global2=0;\r\n   int global3=0;\r\n   int global4=0;\r\n\r\n//   int textMode=0;\r\n   CString parentWnd;\r\n\r\n ",
+    "globalScriptHandlers": []
+  },
   "groupsUrl": "groups/index.json",
   "scenes": [
-    {
-      "id": "INTRO",
-      "title": "INTRO",
-      "url": "scenes/INTRO.json",
-      "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\INTRO.BDF",
-      "componentCount": 3,
-      "assetCount": 21,
-      "warningCount": 1,
-      "hasBackground": true,
-      "hasScript": true
-    },
     {
       "id": "WYBORW",
       "title": "WYBORW",
@@ -35,7 +41,7 @@
       "url": "scenes/DYZIO.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\DYZIO.BDF",
       "componentCount": 6,
-      "assetCount": 17,
+      "assetCount": 33,
       "warningCount": 1,
       "hasBackground": true,
       "hasScript": true
@@ -57,7 +63,7 @@
       "url": "scenes/WSZYSCY.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WSZYSCY.BDF",
       "componentCount": 5,
-      "assetCount": 19,
+      "assetCount": 24,
       "warningCount": 1,
       "hasBackground": true,
       "hasScript": true
@@ -68,7 +74,7 @@
       "url": "scenes/RYCERZ.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RYCERZ.BDF",
       "componentCount": 6,
-      "assetCount": 17,
+      "assetCount": 42,
       "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
@@ -79,7 +85,7 @@
       "url": "scenes/PSTRYK_R.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\PSTRYK_R.BDF",
       "componentCount": 4,
-      "assetCount": 1,
+      "assetCount": 2,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -90,8 +96,8 @@
       "url": "scenes/PSTRYK.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\PSTRYK.BDF",
       "componentCount": 6,
-      "assetCount": 26,
-      "warningCount": 1,
+      "assetCount": 37,
+      "warningCount": 2,
       "hasBackground": false,
       "hasScript": true
     },
@@ -101,7 +107,7 @@
       "url": "scenes/MICH2.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MICH2.BDF",
       "componentCount": 4,
-      "assetCount": 4,
+      "assetCount": 10,
       "warningCount": 1,
       "hasBackground": true,
       "hasScript": true
@@ -112,7 +118,7 @@
       "url": "scenes/MICH3.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MICH3.BDF",
       "componentCount": 4,
-      "assetCount": 4,
+      "assetCount": 10,
       "warningCount": 1,
       "hasBackground": true,
       "hasScript": true
@@ -123,7 +129,7 @@
       "url": "scenes/MICH4.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MICH4.BDF",
       "componentCount": 4,
-      "assetCount": 4,
+      "assetCount": 10,
       "warningCount": 1,
       "hasBackground": true,
       "hasScript": true
@@ -134,7 +140,7 @@
       "url": "scenes/MICH5.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MICH5.BDF",
       "componentCount": 4,
-      "assetCount": 4,
+      "assetCount": 10,
       "warningCount": 1,
       "hasBackground": true,
       "hasScript": true
@@ -145,7 +151,7 @@
       "url": "scenes/MICH1.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MICH1.BDF",
       "componentCount": 4,
-      "assetCount": 4,
+      "assetCount": 10,
       "warningCount": 1,
       "hasBackground": true,
       "hasScript": true
@@ -156,7 +162,7 @@
       "url": "scenes/MICH0.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MICH0.BDF",
       "componentCount": 3,
-      "assetCount": 4,
+      "assetCount": 10,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -178,7 +184,7 @@
       "url": "scenes/KOTEK.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\KOTEK.BDF",
       "componentCount": 3,
-      "assetCount": 10,
+      "assetCount": 34,
       "warningCount": 0,
       "hasBackground": false,
       "hasScript": true
@@ -189,7 +195,7 @@
       "url": "scenes/SLOWIK.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLOWIK.BDF",
       "componentCount": 5,
-      "assetCount": 26,
+      "assetCount": 46,
       "warningCount": 1,
       "hasBackground": true,
       "hasScript": true
@@ -211,7 +217,7 @@
       "url": "scenes/GRZESIU.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\GRZESIU.BDF",
       "componentCount": 6,
-      "assetCount": 33,
+      "assetCount": 36,
       "warningCount": 1,
       "hasBackground": true,
       "hasScript": true
@@ -222,7 +228,7 @@
       "url": "scenes/GRZES_R.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\GRZES_R.BDF",
       "componentCount": 4,
-      "assetCount": 1,
+      "assetCount": 2,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -255,7 +261,7 @@
       "url": "scenes/ABEC_R.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ABEC_R.BDF",
       "componentCount": 4,
-      "assetCount": 1,
+      "assetCount": 2,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -266,7 +272,7 @@
       "url": "scenes/FIG_R.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\FIG_R.BDF",
       "componentCount": 4,
-      "assetCount": 1,
+      "assetCount": 2,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -277,7 +283,7 @@
       "url": "scenes/WIES.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WIES.BDF",
       "componentCount": 4,
-      "assetCount": 16,
+      "assetCount": 21,
       "warningCount": 0,
       "hasBackground": false,
       "hasScript": true
@@ -288,7 +294,7 @@
       "url": "scenes/ABECADLO.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ABECADLO.BDF",
       "componentCount": 4,
-      "assetCount": 6,
+      "assetCount": 31,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -299,7 +305,7 @@
       "url": "scenes/MURZYNEK.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MURZYNEK.BDF",
       "componentCount": 7,
-      "assetCount": 45,
+      "assetCount": 54,
       "warningCount": 2,
       "hasBackground": false,
       "hasScript": true
@@ -310,7 +316,7 @@
       "url": "scenes/CUDA.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDA.BDF",
       "componentCount": 5,
-      "assetCount": 22,
+      "assetCount": 27,
       "warningCount": 1,
       "hasBackground": true,
       "hasScript": true
@@ -321,7 +327,7 @@
       "url": "scenes/MROZ.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MROZ.BDF",
       "componentCount": 7,
-      "assetCount": 13,
+      "assetCount": 25,
       "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
@@ -332,7 +338,7 @@
       "url": "scenes/ZOSIA.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ZOSIA.BDF",
       "componentCount": 5,
-      "assetCount": 13,
+      "assetCount": 29,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -344,7 +350,7 @@
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ABEC_C.BDF",
       "componentCount": 2,
       "assetCount": 22,
-      "warningCount": 2,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -354,7 +360,7 @@
       "url": "scenes/KRAWIEC.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\KRAWIEC.BDF",
       "componentCount": 4,
-      "assetCount": 7,
+      "assetCount": 17,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -365,7 +371,7 @@
       "url": "scenes/PIEKARZ.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\PIEKARZ.BDF",
       "componentCount": 4,
-      "assetCount": 7,
+      "assetCount": 15,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -376,7 +382,18 @@
       "url": "scenes/THEEND.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\THEEND.BDF",
       "componentCount": 3,
-      "assetCount": 2,
+      "assetCount": 3,
+      "warningCount": 1,
+      "hasBackground": true,
+      "hasScript": true
+    },
+    {
+      "id": "INTRO",
+      "title": "INTRO",
+      "url": "scenes/INTRO.json",
+      "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\INTRO.BDF",
+      "componentCount": 3,
+      "assetCount": 22,
       "warningCount": 1,
       "hasBackground": true,
       "hasScript": true
@@ -398,7 +415,7 @@
       "url": "scenes/ABEC_PS.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ABEC_PS.BDF",
       "componentCount": 4,
-      "assetCount": 28,
+      "assetCount": 52,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -409,8 +426,8 @@
       "url": "scenes/ABEC_T.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ABEC_T.BDF",
       "componentCount": 4,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 10,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -442,8 +459,8 @@
       "url": "scenes/CUDA_C.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDA_C.BDF",
       "componentCount": 2,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 22,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -453,7 +470,7 @@
       "url": "scenes/CUDA_PS1.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDA_PS1.BDF",
       "componentCount": 5,
-      "assetCount": 35,
+      "assetCount": 70,
       "warningCount": 1,
       "hasBackground": true,
       "hasScript": true
@@ -464,7 +481,7 @@
       "url": "scenes/CUDA_PS2.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDA_PS2.BDF",
       "componentCount": 6,
-      "assetCount": 25,
+      "assetCount": 51,
       "warningCount": 1,
       "hasBackground": true,
       "hasScript": true
@@ -475,7 +492,7 @@
       "url": "scenes/CUDA_PS3.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDA_PS3.BDF",
       "componentCount": 6,
-      "assetCount": 25,
+      "assetCount": 52,
       "warningCount": 1,
       "hasBackground": true,
       "hasScript": true
@@ -486,7 +503,7 @@
       "url": "scenes/CUDA_R.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDA_R.BDF",
       "componentCount": 4,
-      "assetCount": 1,
+      "assetCount": 2,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -497,8 +514,8 @@
       "url": "scenes/CUDA_T.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\CUDA_T.BDF",
       "componentCount": 4,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 10,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -530,8 +547,8 @@
       "url": "scenes/DYZIO_C.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\DYZIO_C.BDF",
       "componentCount": 2,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 22,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -541,7 +558,7 @@
       "url": "scenes/DYZIO_R.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\DYZIO_R.BDF",
       "componentCount": 4,
-      "assetCount": 1,
+      "assetCount": 2,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -563,8 +580,8 @@
       "url": "scenes/FIGIEL_C.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\FIGIEL_C.BDF",
       "componentCount": 2,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 22,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -596,8 +613,8 @@
       "url": "scenes/GRZES_C.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\GRZES_C.BDF",
       "componentCount": 2,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 22,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -717,8 +734,8 @@
       "url": "scenes/KOTEK_C.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\KOTEK_C.BDF",
       "componentCount": 2,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 22,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -728,7 +745,7 @@
       "url": "scenes/KOTEK_R.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\KOTEK_R.BDF",
       "componentCount": 4,
-      "assetCount": 1,
+      "assetCount": 2,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -871,7 +888,7 @@
       "url": "scenes/LOKOMOT.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\LOKOMOT.BDF",
       "componentCount": 5,
-      "assetCount": 25,
+      "assetCount": 30,
       "warningCount": 1,
       "hasBackground": true,
       "hasScript": true
@@ -882,8 +899,8 @@
       "url": "scenes/LOKOM_C.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\LOKOM_C.BDF",
       "componentCount": 2,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 22,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -893,7 +910,7 @@
       "url": "scenes/LOKOM_R.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\LOKOM_R.BDF",
       "componentCount": 4,
-      "assetCount": 1,
+      "assetCount": 2,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -904,7 +921,7 @@
       "url": "scenes/MALUSKIE.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MALUSKIE.BDF",
       "componentCount": 5,
-      "assetCount": 30,
+      "assetCount": 39,
       "warningCount": 1,
       "hasBackground": true,
       "hasScript": true
@@ -937,8 +954,8 @@
       "url": "scenes/MALUS_C.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MALUS_C.BDF",
       "componentCount": 2,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 22,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -948,7 +965,7 @@
       "url": "scenes/MALUS_R.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MALUS_R.BDF",
       "componentCount": 4,
-      "assetCount": 1,
+      "assetCount": 2,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -970,8 +987,8 @@
       "url": "scenes/MICHAL_C.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MICHAL_C.BDF",
       "componentCount": 2,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 22,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -981,7 +998,7 @@
       "url": "scenes/MICHAL_R.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MICHAL_R.BDF",
       "componentCount": 4,
-      "assetCount": 1,
+      "assetCount": 2,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -1014,8 +1031,8 @@
       "url": "scenes/MROZ_C.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MROZ_C.BDF",
       "componentCount": 2,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 22,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -1025,7 +1042,7 @@
       "url": "scenes/MROZ_R.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MROZ_R.BDF",
       "componentCount": 4,
-      "assetCount": 1,
+      "assetCount": 2,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -1036,7 +1053,7 @@
       "url": "scenes/MURARZ.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MURARZ.BDF",
       "componentCount": 4,
-      "assetCount": 7,
+      "assetCount": 19,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -1091,8 +1108,8 @@
       "url": "scenes/MURZ_C.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MURZ_C.BDF",
       "componentCount": 2,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 22,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -1102,7 +1119,7 @@
       "url": "scenes/MURZ_R.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\MURZ_R.BDF",
       "componentCount": 4,
-      "assetCount": 1,
+      "assetCount": 2,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -1157,7 +1174,7 @@
       "url": "scenes/OKULARY.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\OKULARY.BDF",
       "componentCount": 4,
-      "assetCount": 23,
+      "assetCount": 27,
       "warningCount": 0,
       "hasBackground": false,
       "hasScript": true
@@ -1168,8 +1185,8 @@
       "url": "scenes/OKULAR_C.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\OKULAR_C.BDF",
       "componentCount": 2,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 22,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -1179,7 +1196,7 @@
       "url": "scenes/OKUL_R.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\OKUL_R.BDF",
       "componentCount": 4,
-      "assetCount": 1,
+      "assetCount": 2,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -1245,8 +1262,8 @@
       "url": "scenes/PLOTKI_C.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\PLOTKI_C.BDF",
       "componentCount": 2,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 22,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -1256,7 +1273,7 @@
       "url": "scenes/PLOTKI_R.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\PLOTKI_R.BDF",
       "componentCount": 4,
-      "assetCount": 1,
+      "assetCount": 2,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -1311,8 +1328,8 @@
       "url": "scenes/PSTRYK_C.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\PSTRYK_C.BDF",
       "componentCount": 2,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 22,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -1322,7 +1339,7 @@
       "url": "scenes/RACHUNEK.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RACHUNEK.BDF",
       "componentCount": 4,
-      "assetCount": 21,
+      "assetCount": 49,
       "warningCount": 1,
       "hasBackground": true,
       "hasScript": true
@@ -1355,7 +1372,7 @@
       "url": "scenes/RACHUN_R.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RACHUN_R.BDF",
       "componentCount": 4,
-      "assetCount": 1,
+      "assetCount": 2,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -1366,8 +1383,8 @@
       "url": "scenes/RACH_C.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RACH_C.BDF",
       "componentCount": 2,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 22,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -1410,8 +1427,8 @@
       "url": "scenes/RADIO_C.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RADIO_C.BDF",
       "componentCount": 2,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 22,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -1421,7 +1438,7 @@
       "url": "scenes/RADIO_R.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RADIO_R.BDF",
       "componentCount": 4,
-      "assetCount": 1,
+      "assetCount": 2,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -1531,8 +1548,8 @@
       "url": "scenes/RYCERZ_C.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RYCERZ_C.BDF",
       "componentCount": 2,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 22,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -1542,7 +1559,7 @@
       "url": "scenes/RYCERZ_R.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RYCERZ_R.BDF",
       "componentCount": 4,
-      "assetCount": 1,
+      "assetCount": 2,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -1597,7 +1614,7 @@
       "url": "scenes/RZECZKA.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RZECZKA.BDF",
       "componentCount": 6,
-      "assetCount": 46,
+      "assetCount": 45,
       "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
@@ -1608,8 +1625,8 @@
       "url": "scenes/RZECZK_C.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RZECZK_C.BDF",
       "componentCount": 2,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 22,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -1619,7 +1636,7 @@
       "url": "scenes/RZECZ_R.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\RZECZ_R.BDF",
       "componentCount": 4,
-      "assetCount": 1,
+      "assetCount": 2,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -1630,7 +1647,7 @@
       "url": "scenes/SLON.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLON.BDF",
       "componentCount": 5,
-      "assetCount": 13,
+      "assetCount": 16,
       "warningCount": 0,
       "hasBackground": false,
       "hasScript": true
@@ -1729,8 +1746,8 @@
       "url": "scenes/SLON_C.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLON_C.BDF",
       "componentCount": 2,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 22,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -1740,7 +1757,7 @@
       "url": "scenes/SLON_R.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLON_R.BDF",
       "componentCount": 4,
-      "assetCount": 1,
+      "assetCount": 2,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -1795,7 +1812,7 @@
       "url": "scenes/SLOWIK1.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLOWIK1.BDF",
       "componentCount": 5,
-      "assetCount": 25,
+      "assetCount": 43,
       "warningCount": 1,
       "hasBackground": true,
       "hasScript": true
@@ -1806,8 +1823,8 @@
       "url": "scenes/SLOWIK_C.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLOWIK_C.BDF",
       "componentCount": 2,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 22,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -1817,7 +1834,7 @@
       "url": "scenes/SLOWIK_R.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SLOWIK_R.BDF",
       "componentCount": 4,
-      "assetCount": 1,
+      "assetCount": 2,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -1828,7 +1845,7 @@
       "url": "scenes/SZEWC.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\SZEWC.BDF",
       "componentCount": 4,
-      "assetCount": 7,
+      "assetCount": 13,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -1905,8 +1922,8 @@
       "url": "scenes/TANIEC.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TANIEC.BDF",
       "componentCount": 6,
-      "assetCount": 20,
-      "warningCount": 1,
+      "assetCount": 25,
+      "warningCount": 2,
       "hasBackground": false,
       "hasScript": true
     },
@@ -1916,8 +1933,8 @@
       "url": "scenes/TANIEC_C.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TANIEC_C.BDF",
       "componentCount": 2,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 22,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -1927,7 +1944,7 @@
       "url": "scenes/TANIEC_R.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TANIEC_R.BDF",
       "componentCount": 4,
-      "assetCount": 1,
+      "assetCount": 2,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -1938,8 +1955,8 @@
       "url": "scenes/TANIEC_T.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TANIEC_T.BDF",
       "componentCount": 4,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 9,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -1949,7 +1966,7 @@
       "url": "scenes/TAN_PS.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TAN_PS.BDF",
       "componentCount": 6,
-      "assetCount": 18,
+      "assetCount": 31,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -1960,7 +1977,7 @@
       "url": "scenes/TRALALA.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TRALALA.BDF",
       "componentCount": 5,
-      "assetCount": 34,
+      "assetCount": 50,
       "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
@@ -1993,8 +2010,8 @@
       "url": "scenes/TRALAL_C.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TRALAL_C.BDF",
       "componentCount": 2,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 22,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -2004,7 +2021,7 @@
       "url": "scenes/TRAL_R.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\TRAL_R.BDF",
       "componentCount": 4,
-      "assetCount": 1,
+      "assetCount": 2,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -2103,8 +2120,8 @@
       "url": "scenes/WIES_C.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WIES_C.BDF",
       "componentCount": 2,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 22,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -2114,7 +2131,7 @@
       "url": "scenes/WIES_R.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WIES_R.BDF",
       "componentCount": 4,
-      "assetCount": 1,
+      "assetCount": 2,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -2136,8 +2153,8 @@
       "url": "scenes/WSZYSC_C.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WSZYSC_C.BDF",
       "componentCount": 2,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 22,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -2147,7 +2164,7 @@
       "url": "scenes/WSZYSC_R.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\WSZYSC_R.BDF",
       "componentCount": 4,
-      "assetCount": 1,
+      "assetCount": 2,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -2180,8 +2197,8 @@
       "url": "scenes/ZOSIA_C.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ZOSIA_C.BDF",
       "componentCount": 2,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 22,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     },
@@ -2191,7 +2208,7 @@
       "url": "scenes/ZOSIA_PS.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ZOSIA_PS.BDF",
       "componentCount": 6,
-      "assetCount": 13,
+      "assetCount": 25,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -2202,7 +2219,7 @@
       "url": "scenes/ZOSIA_R.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ZOSIA_R.BDF",
       "componentCount": 4,
-      "assetCount": 1,
+      "assetCount": 2,
       "warningCount": 0,
       "hasBackground": true,
       "hasScript": true
@@ -2213,8 +2230,8 @@
       "url": "scenes/ZOSIA_T.json",
       "sourceBdf": "C:\\Users\\Administrator\\Desktop\\Multimedialny świat Juliana Tuwima PL\\Tuwim\\DATA\\ZOSIA_T.BDF",
       "componentCount": 4,
-      "assetCount": 0,
-      "warningCount": 0,
+      "assetCount": 9,
+      "warningCount": 1,
       "hasBackground": false,
       "hasScript": true
     }
@@ -2230,7 +2247,7 @@
     "totalGroupComponents": 23,
     "totalGroupAssets": 70,
     "totalComponents": 580,
-    "totalAssets": 1552,
+    "totalAssets": 2617,
     "warnings": [
       "167 scene(s) were not listed in START.PRJ and were appended alphabetically."
     ]

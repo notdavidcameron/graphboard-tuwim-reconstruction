@@ -24,22 +24,44 @@
       "namespace": "Page",
       "index": 0,
       "z": 0,
-      "visible": false,
+      "visible": true,
       "rect": {
         "x": 0,
         "y": 0,
-        "width": 640,
-        "height": 480
+        "width": 1280,
+        "height": 960
       },
-      "geometryConfidence": "fallback_full_page",
+      "geometryConfidence": "serialized_entries",
       "itemCount": null,
       "hitboxes": [],
       "sourceOffset": 1173,
       "geometrySourceOffset": null,
       "privateOffset": 2763,
       "privateSize": 4582880,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/bdf/WIES/panorama/00_Panorama_000_panorama_1280x960.bmp",
+      "assets": [
+        {
+          "kind": "panorama_bmp",
+          "path": "extracted_assets\\bdf\\WIES\\panorama\\00_Panorama_000_panorama_1280x960.bmp",
+          "url": "../extracted_assets/bdf/WIES/panorama/00_Panorama_000_panorama_1280x960.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 1280,
+          "height": 960,
+          "frameCount": null,
+          "offset": 3319,
+          "name": null,
+          "id": 0,
+          "initiallyVisible": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 960
+          },
+          "geometryConfidence": "serialized_entry"
+        }
+      ],
       "audio": []
     },
     {
@@ -93,7 +115,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_000_004635e5.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_000_004635e5.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_000_004635e5.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -103,7 +125,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_001_0046cc09.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_001_0046cc09.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_001_0046cc09.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -113,7 +135,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_002_0047581d.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_002_0047581d.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_002_0047581d.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -123,7 +145,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_003_004978c5.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_003_004978c5.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_003_004978c5.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -133,7 +155,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_004_004a26e7.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_004_004a26e7.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_004_004a26e7.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -143,7 +165,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_005_004a505d.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_005_004a505d.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_005_004a505d.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -153,7 +175,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_006_004b76e7.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_006_004b76e7.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_006_004b76e7.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -163,7 +185,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_007_004c97fd.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_007_004c97fd.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_007_004c97fd.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -173,7 +195,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_008_004d53cb.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_008_004d53cb.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_008_004d53cb.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -183,7 +205,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_009_004e367b.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_009_004e367b.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_009_004e367b.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -193,7 +215,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_010_004f8819.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_010_004f8819.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_010_004f8819.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -203,7 +225,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_011_0050b1d7.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_011_0050b1d7.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_011_0050b1d7.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -213,7 +235,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_012_005144d5.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_012_005144d5.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_012_005144d5.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -223,7 +245,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_013_0052d1d3.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_013_0052d1d3.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_013_0052d1d3.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -233,7 +255,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_014_00541371.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_014_00541371.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_014_00541371.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -243,7 +265,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_015_005d53fd.wav",
+          "path": "extracted_assets\\bdf\\WIES\\embedded\\02_Sound_Holder_015_005d53fd.wav",
           "url": "../extracted_assets/bdf/WIES/embedded/02_Sound_Holder_015_005d53fd.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -259,23 +281,176 @@
       "sourceType": "Sprite_Holder",
       "namespace": "Page",
       "index": 3,
-      "z": 50,
+      "z": 8,
       "visible": true,
       "rect": {
-        "x": 0,
-        "y": 0,
-        "width": 48,
-        "height": 48
+        "x": 703,
+        "y": 18,
+        "width": 88,
+        "height": 308
       },
-      "geometryConfidence": "synthetic_items",
+      "geometryConfidence": "serialized_entries",
       "itemCount": 4,
       "hitboxes": [],
       "sourceOffset": 6398035,
       "geometrySourceOffset": null,
       "privateOffset": 6399569,
       "privateSize": 43308,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/bdf/WIES/sprite_holder/03_Sprite_Holder_000_wie_ 01_phase_00.png",
+      "assets": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_000_wie_ 01_phase_00.png",
+          "url": "../extracted_assets/bdf/WIES/sprite_holder/03_Sprite_Holder_000_wie_ 01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 77,
+          "height": 64,
+          "frameCount": null,
+          "offset": 6400309,
+          "name": "wieś 01",
+          "id": 0,
+          "definitionId": 0,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_000_wie_ 01_phase_00.png",
+              "url": "../extracted_assets/bdf/WIES/sprite_holder/03_Sprite_Holder_000_wie_ 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_000_wie_ 01_phase_01.png",
+              "url": "../extracted_assets/bdf/WIES/sprite_holder/03_Sprite_Holder_000_wie_ 01_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 6442317,
+          "rect": {
+            "x": 714,
+            "y": 18,
+            "width": 77,
+            "height": 64
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_001_wie_ 01_phase_00.png",
+          "url": "../extracted_assets/bdf/WIES/sprite_holder/03_Sprite_Holder_001_wie_ 01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 84,
+          "height": 78,
+          "frameCount": null,
+          "offset": 6410509,
+          "name": "wieś 01",
+          "id": 1,
+          "definitionId": 1,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_001_wie_ 01_phase_00.png",
+              "url": "../extracted_assets/bdf/WIES/sprite_holder/03_Sprite_Holder_001_wie_ 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_001_wie_ 01_phase_01.png",
+              "url": "../extracted_assets/bdf/WIES/sprite_holder/03_Sprite_Holder_001_wie_ 01_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 6442457,
+          "rect": {
+            "x": 703,
+            "y": 93,
+            "width": 84,
+            "height": 78
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_002_wie_ 01_phase_00.png",
+          "url": "../extracted_assets/bdf/WIES/sprite_holder/03_Sprite_Holder_002_wie_ 01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 71,
+          "height": 54,
+          "frameCount": null,
+          "offset": 6424065,
+          "name": "wieś 01",
+          "id": 2,
+          "definitionId": 2,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_002_wie_ 01_phase_00.png",
+              "url": "../extracted_assets/bdf/WIES/sprite_holder/03_Sprite_Holder_002_wie_ 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_002_wie_ 01_phase_01.png",
+              "url": "../extracted_assets/bdf/WIES/sprite_holder/03_Sprite_Holder_002_wie_ 01_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 6442597,
+          "rect": {
+            "x": 715,
+            "y": 179,
+            "width": 71,
+            "height": 54
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_003_wie_ 01_phase_00.png",
+          "url": "../extracted_assets/bdf/WIES/sprite_holder/03_Sprite_Holder_003_wie_ 01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 77,
+          "height": 64,
+          "frameCount": null,
+          "offset": 6432461,
+          "name": "wieś 01",
+          "id": 3,
+          "definitionId": 3,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_003_wie_ 01_phase_00.png",
+              "url": "../extracted_assets/bdf/WIES/sprite_holder/03_Sprite_Holder_003_wie_ 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_003_wie_ 01_phase_01.png",
+              "url": "../extracted_assets/bdf/WIES/sprite_holder/03_Sprite_Holder_003_wie_ 01_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 6442737,
+          "rect": {
+            "x": 712,
+            "y": 262,
+            "width": 77,
+            "height": 64
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 8
+        }
+      ],
       "audio": []
     }
   ],
@@ -288,16 +463,8 @@
         "signature": "OnOpenPage()"
       },
       {
-        "name": "if",
-        "signature": "if(IsProject()==0)"
-      },
-      {
         "name": "SetTextMode",
         "signature": "SetTextMode(void)"
-      },
-      {
-        "name": "if",
-        "signature": "if(textMode)"
       },
       {
         "name": "OnClosePage",
@@ -324,48 +491,8 @@
         "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(rectID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbar)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarPhase)"
-      },
-      {
-        "name": "if",
-        "signature": "if(txtHotSpotOn==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.InPlace",
         "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==480)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarCase)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(puzzleNo)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(puzzleNo)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==0)"
       },
       {
         "name": "Group.Sprite_Holder.MouseMoveIn",
@@ -380,28 +507,12 @@
         "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(spriteID==11)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseClickOnUp",
         "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(toolbarPhase)"
-      },
-      {
         "name": "Group.Sprite_Holder.EndAnimation",
         "signature": "Group.Sprite_Holder.EndAnimation(int spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
       },
       {
         "name": "Text_Holder.ScrollTextUp",
@@ -428,20 +539,12 @@
         "signature": "Text_Holder.ClickOnText(int textID)"
       },
       {
-        "name": "if",
-        "signature": "if(playStatus)"
-      },
-      {
         "name": "Text_Holder.EndOfSynchroText",
         "signature": "Text_Holder.EndOfSynchroText(int textID)"
       },
       {
         "name": "Sound_Holder.EndPlaySound",
         "signature": "Sound_Holder.EndPlaySound(int soundID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(soundID==0 && textMode)"
       },
       {
         "name": "Sprite_Holder.MouseMoveIn",

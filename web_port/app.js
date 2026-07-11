@@ -105,7 +105,9 @@ function setStageSize(scene) {
 }
 
 function runtimeIdFor(component, asset = null) {
-  if (!asset) return component.index ?? 0;
+  // Wrapper/component-list indexes are not holder item IDs. Asset-less
+  // holders expose their first runtime item as 0 in page scripts.
+  if (!asset) return 0;
   const id = Number(asset.id ?? 0);
   if (component.type === "Transparent_Video_Holder") {
     return id > 0 && id % 2 === 0 ? id / 2 : id;
@@ -115,7 +117,12 @@ function runtimeIdFor(component, asset = null) {
 
 function initialAssetVisible(component, asset, isPrimary, hasUnknownGeometry) {
   if (asset.initiallyVisible === false) return false;
-  if (component.type === "Sprite_Holder" && asset.kind === "sprite_holder_png" && Number(asset.width || 0) > 640) return false;
+  if (
+    component.type === "Sprite_Holder"
+    && asset.kind === "sprite_holder_png"
+    && Number(asset.width || 0) > 640
+    && asset.geometryConfidence !== "serialized_instance"
+  ) return false;
   if (!component.visible) return false;
   if (component.type === "Transparent_Video_Holder" && asset.geometryConfidence === "serialized_entry") {
     const runtimeId = runtimeIdFor(component, asset);
@@ -127,28 +134,61 @@ function initialAssetVisible(component, asset, isPrimary, hasUnknownGeometry) {
 }
 
 function bindRuntimeEvents(element, component, runtimeId, namespace = component.namespace || "Page") {
+  element.dataset.runtimeLayer = "1";
   element.dataset.componentType = component.type;
   element.dataset.runtimeId = String(runtimeId);
   element.dataset.runtimeNamespace = namespace;
   element.addEventListener("mouseenter", () => runtime.dispatchComponentEvent(component.type, "MouseMoveIn", runtimeId, [], namespace));
   element.addEventListener("mouseleave", () => runtime.dispatchComponentEvent(component.type, "MouseMoveOut", runtimeId, [], namespace));
   element.addEventListener("mousedown", (event) => {
-    if (event.button === 0) runtime.runUserInput(() => runtime.dispatchComponentEvent(component.type, "MouseClickOnDown", runtimeId, [], namespace));
+    if (event.button !== 0) return;
+    runtime.runUserInput(() => {
+      if (component.type === "Puzzle") runtime.executeHandler("Puzzle.MouseStartDrag");
+      if (component.type === "HotSpot_Holder") runtime.dispatchComponentEvent(component.type, "LeftButtonClickOn", runtimeId, [], namespace);
+      else if (["Sprite_Holder", "Transparent_Video_Holder", "MultiBitmap", "Bitmap_Holder"].includes(component.type)) {
+        const point = stagePointFromEvent(event);
+        const extra = component.type === "MultiBitmap" ? [point.x, point.y, Number(element.style.zIndex) || 0] : [];
+        runtime.dispatchComponentEvent(component.type, "MouseClickOnDown", runtimeId, extra, namespace);
+      }
+    });
   });
   element.addEventListener("mouseup", (event) => {
-    if (event.button === 0) runtime.runUserInput(() => runtime.dispatchComponentEvent(component.type, "MouseClickOnUp", runtimeId, [], namespace));
+    if (event.button !== 0) return;
+    runtime.runUserInput(() => {
+      if (component.type === "Puzzle") {
+        runtime.puzzle.drops += 1;
+        runtime.executeHandler("Puzzle.MouseDrop");
+        if (runtime.puzzle.drops >= 3) runtime.executeHandler("Puzzle.GameOver", [runtimeId]);
+      }
+      if (component.type === "HotSpot_Holder") runtime.dispatchComponentEvent(component.type, "LeftButtonClickOnUp", runtimeId, [], namespace);
+      else if (["Sprite_Holder", "Transparent_Video_Holder", "MultiBitmap", "Bitmap_Holder"].includes(component.type)) {
+        runtime.dispatchComponentEvent(component.type, "MouseClickOnUp", runtimeId, [], namespace);
+      }
+    });
   });
   element.addEventListener("click", (event) => {
     event.stopPropagation();
     runtime.runUserInput(() => {
-      if (component.type === "Text_Holder") {
-        runtime.dispatchComponentEvent(component.type, "ClickOnText", runtimeId, [], namespace);
-      }
-      if (component.type === "HotSpot_Holder") {
-        runtime.dispatchComponentEvent(component.type, "LeftButtonClickOn", runtimeId, [], namespace);
+      if (component.type === "Text_Holder" || component.type === "Video_Holder") {
+        runtime.dispatchComponentEvent(component.type, component.type === "Text_Holder" ? "ClickOnText" : "MouseClickOn", runtimeId, [], namespace);
       }
     });
   });
+  element.addEventListener("dblclick", () => {
+    if (component.type === "HotSpot_Holder") runtime.runUserInput(() => runtime.dispatchComponentEvent(component.type, "DBLClickOn", runtimeId, [], namespace));
+  });
+  element.addEventListener("contextmenu", (event) => {
+    event.preventDefault();
+    if (component.type === "HotSpot_Holder") runtime.runUserInput(() => runtime.dispatchComponentEvent(component.type, "RightButtonClickOn", runtimeId, [], namespace));
+  });
+}
+
+function stagePointFromEvent(event) {
+  const rect = els.stage.getBoundingClientRect();
+  return {
+    x: Math.round(event.clientX - rect.left),
+    y: Math.round(event.clientY - rect.top),
+  };
 }
 
 function renderStage(scene) {
@@ -176,7 +216,12 @@ function renderStage(scene) {
       const layerZ = Number.isFinite(Number(asset.z)) ? Number(asset.z) : Number(component.z ?? 0);
       const assetOrder = Number.isFinite(Number(asset.id)) ? Number(asset.id) : 0;
       const assetHasGeometry = asset.geometryConfidence && asset.geometryConfidence !== "unknown";
-      const initialSrc = component.type === "Transparent_Video_Holder" && asset.stillUrl ? asset.stillUrl : asset.url;
+      const initialPhaseAsset = component.type === "Sprite_Holder"
+        ? asset.phaseAssets?.find((item) => Number(item.phase) === Number(asset.initialPhase || 0))
+        : null;
+      const initialSrc = component.type === "Transparent_Video_Holder" && asset.stillUrl
+        ? asset.stillUrl
+        : initialPhaseAsset?.url || asset.url;
       const img = document.createElement("img");
       img.className = "layer";
       img.src = cacheBustUrl(initialSrc);
@@ -188,9 +233,15 @@ function renderStage(scene) {
       img.dataset.componentType = component.type;
       img.dataset.assetId = String(asset.id ?? "");
       img.dataset.runtimeId = String(runtimeIdFor(component, asset));
+      if (component.type === "Sprite_Holder") img.dataset.phase = String(asset.initialPhase || 0);
       img.dataset.runtimeKey = `Page:${component.type}:${asset.id ?? ""}`;
       img.dataset.runtimeLookupKey = `Page:${component.type}:${runtimeIdFor(component, asset)}`;
-      if (component.type === "Sprite_Holder" && asset.kind === "sprite_holder_png" && Number(asset.width || 0) > 640) {
+      if (
+        component.type === "Sprite_Holder"
+        && asset.kind === "sprite_holder_png"
+        && Number(asset.width || 0) > 640
+        && asset.geometryConfidence !== "serialized_instance"
+      ) {
         img.dataset.suppressVisual = "1";
       }
       img.style.left = `${rect.x}px`;
@@ -198,6 +249,8 @@ function renderStage(scene) {
       img.style.width = `${asset.width || rect.width}px`;
       img.style.height = `${asset.height || rect.height}px`;
       img.style.zIndex = String(1000 + layerZ * 1000 + assetOrder);
+      img.dataset.logicalZ = String(layerZ);
+      img.dataset.baseZIndex = img.style.zIndex;
       const isPrimary = component.primaryAssetUrl === asset.url;
       const shouldShow = initialAssetVisible(component, asset, isPrimary, hasUnknownGeometry);
       img.classList.toggle("runtime-hidden", !shouldShow);
@@ -229,13 +282,19 @@ function renderStage(scene) {
       hitbox.style.width = `${Math.max(rect.width, 8)}px`;
       hitbox.style.height = `${Math.max(rect.height, 8)}px`;
       hitbox.style.zIndex = String(900000 + Number(hotspot.id || 0));
+      hitbox.dataset.baseZIndex = hitbox.style.zIndex;
       hitbox.title = `${component.type} ${hotspot.id}`;
       bindRuntimeEvents(hitbox, component, Number(hotspot.id || 0), "Page");
       els.stage.appendChild(hitbox);
     }
 
     const isVisualComponent = component.geometryConfidence !== "not_visual";
-    if (isVisualComponent && (hitboxes.length === 0) && (els.unknown.checked || !hasUnknownGeometry || component.type === "HotSpot_Holder")) {
+    if (
+      isVisualComponent
+      && component.assets.length === 0
+      && hitboxes.length === 0
+      && (els.unknown.checked || !hasUnknownGeometry || component.type === "HotSpot_Holder")
+    ) {
       const rect = component.rect || { x: 0, y: 0, width: 1, height: 1 };
       const hitbox = document.createElement("button");
       hitbox.type = "button";
@@ -246,8 +305,10 @@ function renderStage(scene) {
       hitbox.style.width = `${Math.max(rect.width, 8)}px`;
       hitbox.style.height = `${Math.max(rect.height, 8)}px`;
       hitbox.style.zIndex = String(component.type === "HotSpot_Holder" ? 900 + (component.z ?? 0) : 1 + (component.z ?? 0));
-      hitbox.title = `${component.type} ${component.index}`;
-      bindRuntimeEvents(hitbox, component, component.index ?? 0, "Page");
+      hitbox.dataset.baseZIndex = hitbox.style.zIndex;
+      const runtimeId = runtimeIdFor(component);
+      hitbox.title = `${component.type} ${runtimeId}`;
+      bindRuntimeEvents(hitbox, component, runtimeId, "Page");
       els.stage.appendChild(hitbox);
     }
 
@@ -366,15 +427,24 @@ async function boot() {
     runtime.executeHandler(els.handlerSelect.value, args);
   });
   els.stage.addEventListener("mousedown", (event) => {
-    if (event.button !== 0 || event.target !== els.stage) return;
-    const rect = els.stage.getBoundingClientRect();
-    runtime.executeHandler("OnLButtonDown", [Math.round(event.clientX - rect.left), Math.round(event.clientY - rect.top)]);
-  });
+    if (event.button !== 0) return;
+    const point = stagePointFromEvent(event);
+    runtime.executeHandler("OnLButtonDown", [point.x, point.y]);
+  }, true);
   els.stage.addEventListener("mouseup", (event) => {
-    if (event.button !== 0 || event.target !== els.stage) return;
-    const rect = els.stage.getBoundingClientRect();
-    runtime.executeHandler("OnLButtonUp", [Math.round(event.clientX - rect.left), Math.round(event.clientY - rect.top)]);
+    if (event.button !== 0) return;
+    const point = stagePointFromEvent(event);
+    runtime.executeHandler("OnLButtonUp", [point.x, point.y]);
+  }, true);
+  els.stage.addEventListener("contextmenu", (event) => {
+    event.preventDefault();
+    const point = stagePointFromEvent(event);
+    runtime.executeHandler("OnRButtonDown", [point.x, point.y]);
+  }, true);
+  els.stage.addEventListener("mousemove", (event) => {
+    runtime.handleStagePointer(stagePointFromEvent(event));
   });
+  els.stage.addEventListener("mouseleave", () => runtime.handleStagePointer(null));
   for (const input of [els.debug, els.unknown, els.background]) {
     input.addEventListener("change", render);
   }

@@ -9,7 +9,7 @@
       "width": 28,
       "height": 30,
       "url": "../extracted_assets/grp/CURSORS1/cursor_00_tu_nie.pgm",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\cursor_00_tu_nie.pgm"
+      "path": "extracted_assets\\grp\\CURSORS1\\cursor_00_tu_nie.pgm"
     },
     {
       "index": 1,
@@ -17,7 +17,7 @@
       "width": 28,
       "height": 30,
       "url": "../extracted_assets/grp/CURSORS1/cursor_01_action1.pgm",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\cursor_01_action1.pgm"
+      "path": "extracted_assets\\grp\\CURSORS1\\cursor_01_action1.pgm"
     }
   ],
   "components": [
@@ -46,8 +46,18 @@
             "width": 10,
             "height": 487
           },
+          "name": "",
+          "layer": 6,
+          "enabled": true,
+          "flags": [
+            193,
+            71,
+            214
+          ],
           "sourceOffset": 2910,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 4,
+          "auxState": 0
         },
         {
           "id": 1,
@@ -57,8 +67,18 @@
             "width": 637,
             "height": 477
           },
+          "name": "",
+          "layer": 5,
+          "enabled": true,
+          "flags": [
+            193,
+            71,
+            214
+          ],
           "sourceOffset": 3011,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 4,
+          "auxState": 0
         },
         {
           "id": 2,
@@ -68,8 +88,18 @@
             "width": 35,
             "height": 50
           },
+          "name": "",
+          "layer": 6,
+          "enabled": true,
+          "flags": [
+            193,
+            71,
+            214
+          ],
           "sourceOffset": 3112,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 4,
+          "auxState": 0
         }
       ],
       "sourceOffset": 1788,
@@ -131,7 +161,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_000_00041d8f.wav",
+          "path": "extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_000_00041d8f.wav",
           "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_000_00041d8f.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -141,7 +171,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_001_00047617.wav",
+          "path": "extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_001_00047617.wav",
           "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_001_00047617.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -151,7 +181,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_002_0004c667.wav",
+          "path": "extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_002_0004c667.wav",
           "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_002_0004c667.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -161,7 +191,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_003_000501f3.wav",
+          "path": "extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_003_000501f3.wav",
           "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_003_000501f3.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -171,7 +201,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_004_0007691b.wav",
+          "path": "extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_004_0007691b.wav",
           "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_004_0007691b.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -181,7 +211,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_005_00079a97.wav",
+          "path": "extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_005_00079a97.wav",
           "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_005_00079a97.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -191,7 +221,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_006_0007b003.wav",
+          "path": "extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_006_0007b003.wav",
           "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_006_0007b003.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -201,7 +231,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_007_0007c9ad.wav",
+          "path": "extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_007_0007c9ad.wav",
           "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_007_0007c9ad.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -211,7 +241,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_008_0007d95f.wav",
+          "path": "extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_008_0007d95f.wav",
           "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_008_0007d95f.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -221,7 +251,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_009_000f2569.wav",
+          "path": "extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_009_000f2569.wav",
           "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_009_000f2569.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -231,7 +261,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_010_0012d267.wav",
+          "path": "extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_010_0012d267.wav",
           "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_010_0012d267.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -241,7 +271,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_011_00141ceb.wav",
+          "path": "extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_011_00141ceb.wav",
           "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_011_00141ceb.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -251,7 +281,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_012_00147c1b.wav",
+          "path": "extracted_assets\\grp\\CURSORS1\\embedded\\02_Group.Sound_Holder_012_00147c1b.wav",
           "url": "../extracted_assets/grp/CURSORS1/embedded/02_Group.Sound_Holder_012_00147c1b.wav",
           "durationSeconds": null,
           "sampleRate": null,

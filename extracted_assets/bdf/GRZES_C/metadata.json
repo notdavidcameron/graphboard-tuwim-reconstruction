@@ -28,7 +28,1348 @@
       "display_name": "Sprite_Holder",
       "private_offset": 2707,
       "private_size": 474164,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_000_dobry_phase_00.png",
+          "offset": 2987,
+          "size": 100550,
+          "pixel_size": 235200,
+          "width": 560,
+          "height": 420,
+          "name": "dobry",
+          "id": 0,
+          "definition_id": 0,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_000_dobry_phase_00.png",
+              "size": 100550
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_001_belwed_phase_00.png",
+          "offset": 238710,
+          "size": 2948,
+          "pixel_size": 25245,
+          "width": 99,
+          "height": 85,
+          "name": "belwed",
+          "id": 1,
+          "definition_id": 1,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_001_belwed_phase_00.png",
+              "size": 2948
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_001_belwed_phase_01.png",
+              "size": 3833
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_001_belwed_phase_02.png",
+              "size": 3702
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_002_grosz_phase_00.png",
+          "offset": 264483,
+          "size": 2406,
+          "pixel_size": 8268,
+          "width": 53,
+          "height": 52,
+          "name": "grosz",
+          "id": 2,
+          "definition_id": 2,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_002_grosz_phase_00.png",
+              "size": 2406
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_002_grosz_phase_01.png",
+              "size": 2355
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_002_grosz_phase_02.png",
+              "size": 2340
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_003_piecgrosz_phase_00.png",
+          "offset": 273154,
+          "size": 1333,
+          "pixel_size": 2565,
+          "width": 19,
+          "height": 45,
+          "name": "piecgrosz",
+          "id": 3,
+          "definition_id": 3,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_003_piecgrosz_phase_00.png",
+              "size": 1333
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_003_piecgrosz_phase_01.png",
+              "size": 1316
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_003_piecgrosz_phase_02.png",
+              "size": 1277
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_004_kiesz_phase_00.png",
+          "offset": 276065,
+          "size": 1688,
+          "pixel_size": 3978,
+          "width": 34,
+          "height": 39,
+          "name": "kiesz",
+          "id": 4,
+          "definition_id": 4,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_004_kiesz_phase_00.png",
+              "size": 1688
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_004_kiesz_phase_01.png",
+              "size": 1669
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_004_kiesz_phase_02.png",
+              "size": 1677
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_005_kon_phase_00.png",
+          "offset": 280530,
+          "size": 4027,
+          "pixel_size": 20805,
+          "width": 95,
+          "height": 73,
+          "name": "kon",
+          "id": 5,
+          "definition_id": 5,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_005_kon_phase_00.png",
+              "size": 4027
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_005_kon_phase_01.png",
+              "size": 3995
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_005_kon_phase_02.png",
+              "size": 3794
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_006_krowa_phase_00.png",
+          "offset": 302102,
+          "size": 5824,
+          "pixel_size": 31725,
+          "width": 75,
+          "height": 141,
+          "name": "krowa",
+          "id": 6,
+          "definition_id": 6,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_006_krowa_phase_00.png",
+              "size": 5824
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_006_krowa_phase_01.png",
+              "size": 6358
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_006_krowa_phase_02.png",
+              "size": 5429
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_007_napis_phase_00.png",
+          "offset": 334308,
+          "size": 1873,
+          "pixel_size": 4899,
+          "width": 23,
+          "height": 71,
+          "name": "napis",
+          "id": 7,
+          "definition_id": 7,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_007_napis_phase_00.png",
+              "size": 1873
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_007_napis_phase_01.png",
+              "size": 1912
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_007_napis_phase_02.png",
+              "size": 1884
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_008_raczki_phase_00.png",
+          "offset": 339609,
+          "size": 3160,
+          "pixel_size": 12462,
+          "width": 62,
+          "height": 67,
+          "name": "raczki",
+          "id": 8,
+          "definition_id": 8,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_008_raczki_phase_00.png",
+              "size": 3160
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_008_raczki_phase_01.png",
+              "size": 3074
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_008_raczki_phase_02.png",
+              "size": 2742
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_009_taksi_phase_00.png",
+          "offset": 352644,
+          "size": 4072,
+          "pixel_size": 24339,
+          "width": 133,
+          "height": 61,
+          "name": "taksi",
+          "id": 9,
+          "definition_id": 9,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_009_taksi_phase_00.png",
+              "size": 4072
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_009_taksi_phase_01.png",
+              "size": 4052
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_009_taksi_phase_02.png",
+              "size": 3879
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_010_usta_phase_00.png",
+          "offset": 377251,
+          "size": 1266,
+          "pixel_size": 2052,
+          "width": 36,
+          "height": 19,
+          "name": "usta",
+          "id": 10,
+          "definition_id": 10,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_010_usta_phase_00.png",
+              "size": 1266
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_010_usta_phase_01.png",
+              "size": 1243
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_010_usta_phase_02.png",
+              "size": 1170
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_011_belweder__phase_00.png",
+          "offset": 379741,
+          "size": 4429,
+          "pixel_size": 16830,
+          "width": 99,
+          "height": 85,
+          "name": "belweder_",
+          "id": 11,
+          "definition_id": 11,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_011_belweder__phase_00.png",
+              "size": 4429
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_011_belweder__phase_01.png",
+              "size": 4172
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_012_cena_s_phase_00.png",
+          "offset": 396943,
+          "size": 2234,
+          "pixel_size": 5512,
+          "width": 53,
+          "height": 52,
+          "name": "cena_s",
+          "id": 12,
+          "definition_id": 12,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_012_cena_s_phase_00.png",
+              "size": 2234
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_012_cena_s_phase_01.png",
+              "size": 2156
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_013_grosze_s_phase_00.png",
+          "offset": 402813,
+          "size": 1337,
+          "pixel_size": 1710,
+          "width": 19,
+          "height": 45,
+          "name": "grosze_s",
+          "id": 13,
+          "definition_id": 13,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_013_grosze_s_phase_00.png",
+              "size": 1337
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_013_grosze_s_phase_01.png",
+              "size": 1177
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_014_kieszen_s_phase_00.png",
+          "offset": 404791,
+          "size": 1680,
+          "pixel_size": 2652,
+          "width": 34,
+          "height": 39,
+          "name": "kieszen_s",
+          "id": 14,
+          "definition_id": 14,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_014_kieszen_s_phase_00.png",
+              "size": 1680
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_014_kieszen_s_phase_01.png",
+              "size": 1439
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_015_kon_s_phase_00.png",
+          "offset": 407857,
+          "size": 3934,
+          "pixel_size": 13870,
+          "width": 95,
+          "height": 73,
+          "name": "kon_s",
+          "id": 15,
+          "definition_id": 15,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_015_kon_s_phase_00.png",
+              "size": 3934
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_015_kon_s_phase_01.png",
+              "size": 3559
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_016_krowa_s_phase_00.png",
+          "offset": 422277,
+          "size": 6030,
+          "pixel_size": 21150,
+          "width": 75,
+          "height": 141,
+          "name": "krowa_s",
+          "id": 16,
+          "definition_id": 16,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_016_krowa_s_phase_00.png",
+              "size": 6030
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_016_krowa_s_phase_01.png",
+              "size": 5330
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_017_napis_s_phase_00.png",
+          "offset": 443837,
+          "size": 1885,
+          "pixel_size": 3266,
+          "width": 23,
+          "height": 71,
+          "name": "napis_s",
+          "id": 17,
+          "definition_id": 17,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_017_napis_s_phase_00.png",
+              "size": 1885
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_017_napis_s_phase_01.png",
+              "size": 1679
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_018_raczki_s_phase_00.png",
+          "offset": 447371,
+          "size": 3016,
+          "pixel_size": 8308,
+          "width": 62,
+          "height": 67,
+          "name": "raczki_s",
+          "id": 18,
+          "definition_id": 18,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_018_raczki_s_phase_00.png",
+              "size": 3016
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_018_raczki_s_phase_01.png",
+              "size": 2361
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_019_taksowka__phase_00.png",
+          "offset": 456069,
+          "size": 3819,
+          "pixel_size": 16226,
+          "width": 133,
+          "height": 61,
+          "name": "taksowka_",
+          "id": 19,
+          "definition_id": 19,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_019_taksowka__phase_00.png",
+              "size": 3819
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_019_taksowka__phase_01.png",
+              "size": 4003
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_020_usta_s_phase_00.png",
+          "offset": 472563,
+          "size": 1213,
+          "pixel_size": 1368,
+          "width": 36,
+          "height": 19,
+          "name": "usta_s",
+          "id": 20,
+          "definition_id": 20,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_020_usta_s_phase_00.png",
+              "size": 1213
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_020_usta_s_phase_01.png",
+              "size": 1118
+            }
+          ]
+        }
+      ],
+      "sprite_holder": {
+        "version": 1,
+        "definition_count": 21,
+        "instance_count": 21,
+        "parsed_definitions": 21,
+        "parsed_instances": 21,
+        "definitions": [
+          {
+            "index": 0,
+            "name": "dobry",
+            "record_offset": 2719,
+            "blob_offset": 2723,
+            "blob_size": 235464,
+            "width": 560,
+            "height": 420,
+            "phase_count": 1,
+            "phase_hint": 0,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_000_dobry_phase_00.png",
+                "size": 100550
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "belwed",
+            "record_offset": 238187,
+            "blob_offset": 238191,
+            "blob_size": 25764,
+            "width": 99,
+            "height": 85,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_001_belwed_phase_00.png",
+                "size": 2948
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_001_belwed_phase_01.png",
+                "size": 3833
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_001_belwed_phase_02.png",
+                "size": 3702
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "grosz",
+            "record_offset": 263955,
+            "blob_offset": 263959,
+            "blob_size": 8792,
+            "width": 53,
+            "height": 52,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_002_grosz_phase_00.png",
+                "size": 2406
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_002_grosz_phase_01.png",
+                "size": 2355
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_002_grosz_phase_02.png",
+                "size": 2340
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "name": "piecgrosz",
+            "record_offset": 272751,
+            "blob_offset": 272755,
+            "blob_size": 2964,
+            "width": 19,
+            "height": 45,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_003_piecgrosz_phase_00.png",
+                "size": 1333
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_003_piecgrosz_phase_01.png",
+                "size": 1316
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_003_piecgrosz_phase_02.png",
+                "size": 1277
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "name": "kiesz",
+            "record_offset": 275719,
+            "blob_offset": 275723,
+            "blob_size": 4320,
+            "width": 34,
+            "height": 39,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_004_kiesz_phase_00.png",
+                "size": 1688
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_004_kiesz_phase_01.png",
+                "size": 1669
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_004_kiesz_phase_02.png",
+                "size": 1677
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "name": "kon",
+            "record_offset": 280043,
+            "blob_offset": 280047,
+            "blob_size": 21288,
+            "width": 95,
+            "height": 73,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_005_kon_phase_00.png",
+                "size": 4027
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_005_kon_phase_01.png",
+                "size": 3995
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_005_kon_phase_02.png",
+                "size": 3794
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "name": "krowa",
+            "record_offset": 301335,
+            "blob_offset": 301339,
+            "blob_size": 32488,
+            "width": 75,
+            "height": 141,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_006_krowa_phase_00.png",
+                "size": 5824
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_006_krowa_phase_01.png",
+                "size": 6358
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_006_krowa_phase_02.png",
+                "size": 5429
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "name": "napis",
+            "record_offset": 333827,
+            "blob_offset": 333831,
+            "blob_size": 5376,
+            "width": 23,
+            "height": 71,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_007_napis_phase_00.png",
+                "size": 1873
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_007_napis_phase_01.png",
+                "size": 1912
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_007_napis_phase_02.png",
+                "size": 1884
+              }
+            ]
+          },
+          {
+            "index": 8,
+            "name": "raczki",
+            "record_offset": 339207,
+            "blob_offset": 339211,
+            "blob_size": 12860,
+            "width": 62,
+            "height": 67,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_008_raczki_phase_00.png",
+                "size": 3160
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_008_raczki_phase_01.png",
+                "size": 3074
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_008_raczki_phase_02.png",
+                "size": 2742
+              }
+            ]
+          },
+          {
+            "index": 9,
+            "name": "taksi",
+            "record_offset": 352071,
+            "blob_offset": 352075,
+            "blob_size": 24908,
+            "width": 133,
+            "height": 61,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_009_taksi_phase_00.png",
+                "size": 4072
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_009_taksi_phase_01.png",
+                "size": 4052
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_009_taksi_phase_02.png",
+                "size": 3879
+              }
+            ]
+          },
+          {
+            "index": 10,
+            "name": "usta",
+            "record_offset": 376983,
+            "blob_offset": 376987,
+            "blob_size": 2316,
+            "width": 36,
+            "height": 19,
+            "phase_count": 3,
+            "phase_hint": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_010_usta_phase_00.png",
+                "size": 1266
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_010_usta_phase_01.png",
+                "size": 1243
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_010_usta_phase_02.png",
+                "size": 1170
+              }
+            ]
+          },
+          {
+            "index": 11,
+            "name": "belweder_",
+            "record_offset": 379303,
+            "blob_offset": 379307,
+            "blob_size": 17264,
+            "width": 99,
+            "height": 85,
+            "phase_count": 2,
+            "phase_hint": 0,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_011_belweder__phase_00.png",
+                "size": 4429
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_011_belweder__phase_01.png",
+                "size": 4172
+              }
+            ]
+          },
+          {
+            "index": 12,
+            "name": "cena_s",
+            "record_offset": 396571,
+            "blob_offset": 396575,
+            "blob_size": 5880,
+            "width": 53,
+            "height": 52,
+            "phase_count": 2,
+            "phase_hint": 2762712484,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_012_cena_s_phase_00.png",
+                "size": 2234
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_012_cena_s_phase_01.png",
+                "size": 2156
+              }
+            ]
+          },
+          {
+            "index": 13,
+            "name": "grosze_s",
+            "record_offset": 402455,
+            "blob_offset": 402459,
+            "blob_size": 2064,
+            "width": 19,
+            "height": 45,
+            "phase_count": 2,
+            "phase_hint": 3643911383,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_013_grosze_s_phase_00.png",
+                "size": 1337
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_013_grosze_s_phase_01.png",
+                "size": 1177
+              }
+            ]
+          },
+          {
+            "index": 14,
+            "name": "kieszen_s",
+            "record_offset": 404523,
+            "blob_offset": 404527,
+            "blob_size": 2916,
+            "width": 34,
+            "height": 39,
+            "phase_count": 2,
+            "phase_hint": 3712998991,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_014_kieszen_s_phase_00.png",
+                "size": 1680
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_014_kieszen_s_phase_01.png",
+                "size": 1439
+              }
+            ]
+          },
+          {
+            "index": 15,
+            "name": "kon_s",
+            "record_offset": 407443,
+            "blob_offset": 407447,
+            "blob_size": 14280,
+            "width": 95,
+            "height": 73,
+            "phase_count": 2,
+            "phase_hint": 625559845,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_015_kon_s_phase_00.png",
+                "size": 3934
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_015_kon_s_phase_01.png",
+                "size": 3559
+              }
+            ]
+          },
+          {
+            "index": 16,
+            "name": "krowa_s",
+            "record_offset": 421727,
+            "blob_offset": 421731,
+            "blob_size": 21696,
+            "width": 75,
+            "height": 141,
+            "phase_count": 2,
+            "phase_hint": 505290270,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_016_krowa_s_phase_00.png",
+                "size": 6030
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_016_krowa_s_phase_01.png",
+                "size": 5330
+              }
+            ]
+          },
+          {
+            "index": 17,
+            "name": "napis_s",
+            "record_offset": 443427,
+            "blob_offset": 443431,
+            "blob_size": 3672,
+            "width": 23,
+            "height": 71,
+            "phase_count": 2,
+            "phase_hint": 2779098021,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_017_napis_s_phase_00.png",
+                "size": 1885
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_017_napis_s_phase_01.png",
+                "size": 1679
+              }
+            ]
+          },
+          {
+            "index": 18,
+            "name": "raczki_s",
+            "record_offset": 447103,
+            "blob_offset": 447107,
+            "blob_size": 8572,
+            "width": 62,
+            "height": 67,
+            "phase_count": 2,
+            "phase_hint": 3469725390,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_018_raczki_s_phase_00.png",
+                "size": 3016
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_018_raczki_s_phase_01.png",
+                "size": 2361
+              }
+            ]
+          },
+          {
+            "index": 19,
+            "name": "taksowka_",
+            "record_offset": 455679,
+            "blob_offset": 455683,
+            "blob_size": 16612,
+            "width": 133,
+            "height": 61,
+            "phase_count": 2,
+            "phase_hint": 3621246935,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_019_taksowka__phase_00.png",
+                "size": 3819
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_019_taksowka__phase_01.png",
+                "size": 4003
+              }
+            ]
+          },
+          {
+            "index": 20,
+            "name": "usta_s",
+            "record_offset": 472295,
+            "blob_offset": 472299,
+            "blob_size": 1632,
+            "width": 36,
+            "height": 19,
+            "phase_count": 2,
+            "phase_hint": 14542566,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_020_usta_s_phase_00.png",
+                "size": 1213
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_020_usta_s_phase_01.png",
+                "size": 1118
+              }
+            ]
+          }
+        ],
+        "instances": [
+          {
+            "index": 0,
+            "definition_id": 0,
+            "field04": 2,
+            "x": 40,
+            "y": -420,
+            "z": 2,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 473931
+          },
+          {
+            "index": 1,
+            "definition_id": 1,
+            "field04": 1,
+            "x": 37,
+            "y": 16,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 474071
+          },
+          {
+            "index": 2,
+            "definition_id": 2,
+            "field04": 1,
+            "x": 351,
+            "y": 86,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 474211
+          },
+          {
+            "index": 3,
+            "definition_id": 3,
+            "field04": 1,
+            "x": 58,
+            "y": 278,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 474351
+          },
+          {
+            "index": 4,
+            "definition_id": 4,
+            "field04": 1,
+            "x": 139,
+            "y": 92,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 474491
+          },
+          {
+            "index": 5,
+            "definition_id": 5,
+            "field04": 1,
+            "x": 492,
+            "y": 44,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 474631
+          },
+          {
+            "index": 6,
+            "definition_id": 6,
+            "field04": 1,
+            "x": 71,
+            "y": 170,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 474771
+          },
+          {
+            "index": 7,
+            "definition_id": 7,
+            "field04": 1,
+            "x": 350,
+            "y": 200,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 474911
+          },
+          {
+            "index": 8,
+            "definition_id": 8,
+            "field04": 1,
+            "x": 269,
+            "y": 222,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 475051
+          },
+          {
+            "index": 9,
+            "definition_id": 9,
+            "field04": 1,
+            "x": 210,
+            "y": 48,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 475191
+          },
+          {
+            "index": 10,
+            "definition_id": 10,
+            "field04": 1,
+            "x": 522,
+            "y": 272,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 475331
+          },
+          {
+            "index": 11,
+            "definition_id": 11,
+            "field04": 1,
+            "x": 37,
+            "y": 16,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 475471
+          },
+          {
+            "index": 12,
+            "definition_id": 12,
+            "field04": 1,
+            "x": 351,
+            "y": 86,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 475611
+          },
+          {
+            "index": 13,
+            "definition_id": 13,
+            "field04": 1,
+            "x": 58,
+            "y": 278,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 475751
+          },
+          {
+            "index": 14,
+            "definition_id": 14,
+            "field04": 1,
+            "x": 139,
+            "y": 92,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 475891
+          },
+          {
+            "index": 15,
+            "definition_id": 15,
+            "field04": 1,
+            "x": 492,
+            "y": 44,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 476031
+          },
+          {
+            "index": 16,
+            "definition_id": 16,
+            "field04": 1,
+            "x": 71,
+            "y": 170,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 476171
+          },
+          {
+            "index": 17,
+            "definition_id": 17,
+            "field04": 1,
+            "x": 350,
+            "y": 200,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 476311
+          },
+          {
+            "index": 18,
+            "definition_id": 18,
+            "field04": 1,
+            "x": 269,
+            "y": 222,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 476451
+          },
+          {
+            "index": 19,
+            "definition_id": 19,
+            "field04": 1,
+            "x": 210,
+            "y": 48,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 476591
+          },
+          {
+            "index": 20,
+            "definition_id": 20,
+            "field04": 1,
+            "x": 522,
+            "y": 272,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 476731
+          }
+        ]
+      }
     },
     {
       "index": 1,
@@ -37,19 +1378,649 @@
       "display_name": "Bitmap_Holder",
       "private_offset": 478003,
       "private_size": 307356,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\GRZES_C\\bitmap_holder\\01_Bitmap_Holder_000_grzesiudz_640x480.bmp",
+          "offset": 478143,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "grzesiudz",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 640,
+            "height": 480
+          },
+          "geometry_confidence": "serialized_entry"
+        }
+      ],
+      "bitmap_holder": {
+        "version": 1,
+        "declared_count": 1,
+        "parsed_count": 1,
+        "frames": [
+          {
+            "index": 0,
+            "name": "grzesiudz",
+            "record_offset": 478011,
+            "record_size": 307344,
+            "pixel_offset": 478143,
+            "width": 640,
+            "height": 480,
+            "right": 640,
+            "bottom": 480,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 640,
+              "height": 480
+            },
+            "bmp_output": "extracted_assets\\bdf\\GRZES_C\\bitmap_holder\\01_Bitmap_Holder_000_grzesiudz_640x480.bmp"
+          }
+        ]
+      }
     }
   ],
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\GRZES_C\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\GRZES_C\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\GRZES_C\\script.txt",
+      "path": "extracted_assets\\bdf\\GRZES_C\\script.txt",
       "size": 7924
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_000_dobry_phase_00.png",
+      "offset": 2987,
+      "size": 100550,
+      "pixel_size": 235200,
+      "width": 560,
+      "height": 420,
+      "name": "dobry",
+      "id": 0,
+      "definition_id": 0,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_000_dobry_phase_00.png",
+          "size": 100550
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_001_belwed_phase_00.png",
+      "offset": 238710,
+      "size": 2948,
+      "pixel_size": 25245,
+      "width": 99,
+      "height": 85,
+      "name": "belwed",
+      "id": 1,
+      "definition_id": 1,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_001_belwed_phase_00.png",
+          "size": 2948
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_001_belwed_phase_01.png",
+          "size": 3833
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_001_belwed_phase_02.png",
+          "size": 3702
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_002_grosz_phase_00.png",
+      "offset": 264483,
+      "size": 2406,
+      "pixel_size": 8268,
+      "width": 53,
+      "height": 52,
+      "name": "grosz",
+      "id": 2,
+      "definition_id": 2,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_002_grosz_phase_00.png",
+          "size": 2406
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_002_grosz_phase_01.png",
+          "size": 2355
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_002_grosz_phase_02.png",
+          "size": 2340
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_003_piecgrosz_phase_00.png",
+      "offset": 273154,
+      "size": 1333,
+      "pixel_size": 2565,
+      "width": 19,
+      "height": 45,
+      "name": "piecgrosz",
+      "id": 3,
+      "definition_id": 3,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_003_piecgrosz_phase_00.png",
+          "size": 1333
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_003_piecgrosz_phase_01.png",
+          "size": 1316
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_003_piecgrosz_phase_02.png",
+          "size": 1277
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_004_kiesz_phase_00.png",
+      "offset": 276065,
+      "size": 1688,
+      "pixel_size": 3978,
+      "width": 34,
+      "height": 39,
+      "name": "kiesz",
+      "id": 4,
+      "definition_id": 4,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_004_kiesz_phase_00.png",
+          "size": 1688
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_004_kiesz_phase_01.png",
+          "size": 1669
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_004_kiesz_phase_02.png",
+          "size": 1677
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_005_kon_phase_00.png",
+      "offset": 280530,
+      "size": 4027,
+      "pixel_size": 20805,
+      "width": 95,
+      "height": 73,
+      "name": "kon",
+      "id": 5,
+      "definition_id": 5,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_005_kon_phase_00.png",
+          "size": 4027
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_005_kon_phase_01.png",
+          "size": 3995
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_005_kon_phase_02.png",
+          "size": 3794
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_006_krowa_phase_00.png",
+      "offset": 302102,
+      "size": 5824,
+      "pixel_size": 31725,
+      "width": 75,
+      "height": 141,
+      "name": "krowa",
+      "id": 6,
+      "definition_id": 6,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_006_krowa_phase_00.png",
+          "size": 5824
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_006_krowa_phase_01.png",
+          "size": 6358
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_006_krowa_phase_02.png",
+          "size": 5429
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_007_napis_phase_00.png",
+      "offset": 334308,
+      "size": 1873,
+      "pixel_size": 4899,
+      "width": 23,
+      "height": 71,
+      "name": "napis",
+      "id": 7,
+      "definition_id": 7,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_007_napis_phase_00.png",
+          "size": 1873
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_007_napis_phase_01.png",
+          "size": 1912
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_007_napis_phase_02.png",
+          "size": 1884
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_008_raczki_phase_00.png",
+      "offset": 339609,
+      "size": 3160,
+      "pixel_size": 12462,
+      "width": 62,
+      "height": 67,
+      "name": "raczki",
+      "id": 8,
+      "definition_id": 8,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_008_raczki_phase_00.png",
+          "size": 3160
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_008_raczki_phase_01.png",
+          "size": 3074
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_008_raczki_phase_02.png",
+          "size": 2742
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_009_taksi_phase_00.png",
+      "offset": 352644,
+      "size": 4072,
+      "pixel_size": 24339,
+      "width": 133,
+      "height": 61,
+      "name": "taksi",
+      "id": 9,
+      "definition_id": 9,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_009_taksi_phase_00.png",
+          "size": 4072
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_009_taksi_phase_01.png",
+          "size": 4052
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_009_taksi_phase_02.png",
+          "size": 3879
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_010_usta_phase_00.png",
+      "offset": 377251,
+      "size": 1266,
+      "pixel_size": 2052,
+      "width": 36,
+      "height": 19,
+      "name": "usta",
+      "id": 10,
+      "definition_id": 10,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_010_usta_phase_00.png",
+          "size": 1266
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_010_usta_phase_01.png",
+          "size": 1243
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_010_usta_phase_02.png",
+          "size": 1170
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_011_belweder__phase_00.png",
+      "offset": 379741,
+      "size": 4429,
+      "pixel_size": 16830,
+      "width": 99,
+      "height": 85,
+      "name": "belweder_",
+      "id": 11,
+      "definition_id": 11,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_011_belweder__phase_00.png",
+          "size": 4429
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_011_belweder__phase_01.png",
+          "size": 4172
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_012_cena_s_phase_00.png",
+      "offset": 396943,
+      "size": 2234,
+      "pixel_size": 5512,
+      "width": 53,
+      "height": 52,
+      "name": "cena_s",
+      "id": 12,
+      "definition_id": 12,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_012_cena_s_phase_00.png",
+          "size": 2234
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_012_cena_s_phase_01.png",
+          "size": 2156
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_013_grosze_s_phase_00.png",
+      "offset": 402813,
+      "size": 1337,
+      "pixel_size": 1710,
+      "width": 19,
+      "height": 45,
+      "name": "grosze_s",
+      "id": 13,
+      "definition_id": 13,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_013_grosze_s_phase_00.png",
+          "size": 1337
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_013_grosze_s_phase_01.png",
+          "size": 1177
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_014_kieszen_s_phase_00.png",
+      "offset": 404791,
+      "size": 1680,
+      "pixel_size": 2652,
+      "width": 34,
+      "height": 39,
+      "name": "kieszen_s",
+      "id": 14,
+      "definition_id": 14,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_014_kieszen_s_phase_00.png",
+          "size": 1680
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_014_kieszen_s_phase_01.png",
+          "size": 1439
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_015_kon_s_phase_00.png",
+      "offset": 407857,
+      "size": 3934,
+      "pixel_size": 13870,
+      "width": 95,
+      "height": 73,
+      "name": "kon_s",
+      "id": 15,
+      "definition_id": 15,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_015_kon_s_phase_00.png",
+          "size": 3934
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_015_kon_s_phase_01.png",
+          "size": 3559
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_016_krowa_s_phase_00.png",
+      "offset": 422277,
+      "size": 6030,
+      "pixel_size": 21150,
+      "width": 75,
+      "height": 141,
+      "name": "krowa_s",
+      "id": 16,
+      "definition_id": 16,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_016_krowa_s_phase_00.png",
+          "size": 6030
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_016_krowa_s_phase_01.png",
+          "size": 5330
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_017_napis_s_phase_00.png",
+      "offset": 443837,
+      "size": 1885,
+      "pixel_size": 3266,
+      "width": 23,
+      "height": 71,
+      "name": "napis_s",
+      "id": 17,
+      "definition_id": 17,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_017_napis_s_phase_00.png",
+          "size": 1885
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_017_napis_s_phase_01.png",
+          "size": 1679
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_018_raczki_s_phase_00.png",
+      "offset": 447371,
+      "size": 3016,
+      "pixel_size": 8308,
+      "width": 62,
+      "height": 67,
+      "name": "raczki_s",
+      "id": 18,
+      "definition_id": 18,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_018_raczki_s_phase_00.png",
+          "size": 3016
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_018_raczki_s_phase_01.png",
+          "size": 2361
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_019_taksowka__phase_00.png",
+      "offset": 456069,
+      "size": 3819,
+      "pixel_size": 16226,
+      "width": 133,
+      "height": 61,
+      "name": "taksowka_",
+      "id": 19,
+      "definition_id": 19,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_019_taksowka__phase_00.png",
+          "size": 3819
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_019_taksowka__phase_01.png",
+          "size": 4003
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_020_usta_s_phase_00.png",
+      "offset": 472563,
+      "size": 1213,
+      "pixel_size": 1368,
+      "width": 36,
+      "height": 19,
+      "name": "usta_s",
+      "id": 20,
+      "definition_id": 20,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_020_usta_s_phase_00.png",
+          "size": 1213
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\GRZES_C\\sprite_holder\\00_Sprite_Holder_020_usta_s_phase_01.png",
+          "size": 1118
+        }
+      ]
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\GRZES_C\\bitmap_holder\\01_Bitmap_Holder_000_grzesiudz_640x480.bmp",
+      "offset": 478143,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "grzesiudz",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 640,
+        "height": 480
+      },
+      "geometry_confidence": "serialized_entry"
     }
   ],
   "script": {

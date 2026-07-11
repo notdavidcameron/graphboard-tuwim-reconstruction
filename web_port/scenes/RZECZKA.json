@@ -42,8 +42,18 @@
             "width": 50,
             "height": 475
           },
+          "name": "",
+          "layer": 4,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            255
+          ],
           "sourceOffset": 2289,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 8,
+          "auxState": 0
         },
         {
           "id": 1,
@@ -53,41 +63,81 @@
             "width": 46,
             "height": 473
           },
+          "name": "",
+          "layer": 4,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            255
+          ],
           "sourceOffset": 2390,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 8,
+          "auxState": 0
         },
         {
-          "id": 2,
+          "id": 3,
           "rect": {
             "x": 466,
             "y": 60,
             "width": 88,
             "height": 124
           },
+          "name": "",
+          "layer": 4,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            255
+          ],
           "sourceOffset": 2491,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 8,
+          "auxState": 0
         },
         {
-          "id": 3,
+          "id": 4,
           "rect": {
             "x": 434,
             "y": 241,
             "width": 94,
             "height": 78
           },
+          "name": "",
+          "layer": 4,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            255
+          ],
           "sourceOffset": 2592,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 8,
+          "auxState": 0
         },
         {
-          "id": 4,
+          "id": 6,
           "rect": {
             "x": 305,
             "y": 274,
             "width": 116,
             "height": 109
           },
+          "name": "",
+          "layer": 4,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            255
+          ],
           "sourceOffset": 2693,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 8,
+          "auxState": 0
         },
         {
           "id": 5,
@@ -97,30 +147,60 @@
             "width": 72,
             "height": 76
           },
+          "name": "",
+          "layer": 4,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            255
+          ],
           "sourceOffset": 2794,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 8,
+          "auxState": 0
         },
         {
-          "id": 6,
+          "id": 7,
           "rect": {
             "x": 509,
             "y": 326,
             "width": 75,
             "height": 61
           },
+          "name": "",
+          "layer": 4,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            255
+          ],
           "sourceOffset": 2895,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 8,
+          "auxState": 0
         },
         {
-          "id": 7,
+          "id": 8,
           "rect": {
             "x": 342,
             "y": 410,
             "width": 71,
             "height": 52
           },
+          "name": "",
+          "layer": 4,
+          "enabled": true,
+          "flags": [
+            210,
+            0,
+            255
+          ],
           "sourceOffset": 2996,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 8,
+          "auxState": 0
         }
       ],
       "sourceOffset": 1173,
@@ -484,15 +564,15 @@
       "sourceType": "Sprite_Holder",
       "namespace": "Page",
       "index": 2,
-      "z": 50,
+      "z": 0,
       "visible": true,
       "rect": {
         "x": 0,
         "y": 0,
-        "width": 48,
-        "height": 48
+        "width": 1280,
+        "height": 480
       },
-      "geometryConfidence": "synthetic_items",
+      "geometryConfidence": "serialized_entries",
       "itemCount": 5,
       "hitboxes": [],
       "sourceOffset": 5865332,
@@ -510,9 +590,10 @@
           "width": 1280,
           "height": 480,
           "frameCount": null,
-          "offset": 5867142,
+          "offset": 5867146,
           "name": "rzeczka",
           "id": 0,
+          "definitionId": 0,
           "phaseAssets": [
             {
               "phase": 0,
@@ -521,13 +602,17 @@
             }
           ],
           "phaseCount": 1,
+          "instanceOffset": 6560046,
           "rect": {
             "x": 0,
             "y": 0,
             "width": 1280,
             "height": 480
           },
-          "geometryConfidence": "serialized_sprite"
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
         },
         {
           "kind": "sprite_holder_png",
@@ -538,24 +623,34 @@
           "width": 73,
           "height": 59,
           "frameCount": null,
-          "offset": 6486547,
+          "offset": 6482244,
           "name": "rzeczka 0",
           "id": 1,
+          "definitionId": 1,
           "phaseAssets": [
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_001_rzeczka 0_phase_00.png",
               "url": "../extracted_assets/bdf/RZECZKA/sprite_holder/02_Sprite_Holder_001_rzeczka 0_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_001_rzeczka 0_phase_01.png",
+              "url": "../extracted_assets/bdf/RZECZKA/sprite_holder/02_Sprite_Holder_001_rzeczka 0_phase_01.png"
             }
           ],
-          "phaseCount": 1,
+          "phaseCount": 2,
+          "instanceOffset": 6560186,
           "rect": {
-            "x": 48,
-            "y": 10,
+            "x": 707,
+            "y": 18,
             "width": 73,
             "height": 59
           },
-          "geometryConfidence": "serialized_sprite"
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 8
         },
         {
           "kind": "sprite_holder_png",
@@ -566,24 +661,34 @@
           "width": 74,
           "height": 63,
           "frameCount": null,
-          "offset": 6496112,
+          "offset": 6491454,
           "name": "rzeczka 0",
           "id": 2,
+          "definitionId": 2,
           "phaseAssets": [
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_002_rzeczka 0_phase_00.png",
               "url": "../extracted_assets/bdf/RZECZKA/sprite_holder/02_Sprite_Holder_002_rzeczka 0_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_002_rzeczka 0_phase_01.png",
+              "url": "../extracted_assets/bdf/RZECZKA/sprite_holder/02_Sprite_Holder_002_rzeczka 0_phase_01.png"
             }
           ],
-          "phaseCount": 1,
+          "phaseCount": 2,
+          "instanceOffset": 6560326,
           "rect": {
-            "x": 48,
-            "y": 10,
+            "x": 710,
+            "y": 107,
             "width": 74,
             "height": 63
           },
-          "geometryConfidence": "serialized_sprite"
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 8
         },
         {
           "kind": "sprite_holder_png",
@@ -594,24 +699,34 @@
           "width": 36,
           "height": 23,
           "frameCount": null,
-          "offset": 6501794,
+          "offset": 6500970,
           "name": "migotanie",
           "id": 3,
+          "definitionId": 3,
           "phaseAssets": [
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_003_migotanie_phase_00.png",
               "url": "../extracted_assets/bdf/RZECZKA/sprite_holder/02_Sprite_Holder_003_migotanie_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_003_migotanie_phase_01.png",
+              "url": "../extracted_assets/bdf/RZECZKA/sprite_holder/02_Sprite_Holder_003_migotanie_phase_01.png"
             }
           ],
-          "phaseCount": 1,
+          "phaseCount": 2,
+          "instanceOffset": 6560466,
           "rect": {
-            "x": 101,
-            "y": 100,
+            "x": 360,
+            "y": 418,
             "width": 36,
             "height": 23
           },
-          "geometryConfidence": "serialized_sprite"
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": false,
+          "z": 1
         },
         {
           "kind": "sprite_holder_png",
@@ -622,24 +737,89 @@
           "width": 76,
           "height": 57,
           "frameCount": null,
-          "offset": 6555710,
+          "offset": 6503730,
           "name": "przycisk ",
           "id": 4,
+          "definitionId": 4,
           "phaseAssets": [
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_00.png",
               "url": "../extracted_assets/bdf/RZECZKA/sprite_holder/02_Sprite_Holder_004_przycisk_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_01.png",
+              "url": "../extracted_assets/bdf/RZECZKA/sprite_holder/02_Sprite_Holder_004_przycisk_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_02.png",
+              "url": "../extracted_assets/bdf/RZECZKA/sprite_holder/02_Sprite_Holder_004_przycisk_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_03.png",
+              "url": "../extracted_assets/bdf/RZECZKA/sprite_holder/02_Sprite_Holder_004_przycisk_phase_03.png"
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_04.png",
+              "url": "../extracted_assets/bdf/RZECZKA/sprite_holder/02_Sprite_Holder_004_przycisk_phase_04.png"
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_05.png",
+              "url": "../extracted_assets/bdf/RZECZKA/sprite_holder/02_Sprite_Holder_004_przycisk_phase_05.png"
+            },
+            {
+              "phase": 6,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_06.png",
+              "url": "../extracted_assets/bdf/RZECZKA/sprite_holder/02_Sprite_Holder_004_przycisk_phase_06.png"
+            },
+            {
+              "phase": 7,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_07.png",
+              "url": "../extracted_assets/bdf/RZECZKA/sprite_holder/02_Sprite_Holder_004_przycisk_phase_07.png"
+            },
+            {
+              "phase": 8,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_08.png",
+              "url": "../extracted_assets/bdf/RZECZKA/sprite_holder/02_Sprite_Holder_004_przycisk_phase_08.png"
+            },
+            {
+              "phase": 9,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_09.png",
+              "url": "../extracted_assets/bdf/RZECZKA/sprite_holder/02_Sprite_Holder_004_przycisk_phase_09.png"
+            },
+            {
+              "phase": 10,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_10.png",
+              "url": "../extracted_assets/bdf/RZECZKA/sprite_holder/02_Sprite_Holder_004_przycisk_phase_10.png"
+            },
+            {
+              "phase": 11,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_11.png",
+              "url": "../extracted_assets/bdf/RZECZKA/sprite_holder/02_Sprite_Holder_004_przycisk_phase_11.png"
+            },
+            {
+              "phase": 12,
+              "path": "extracted_assets\\bdf\\RZECZKA\\sprite_holder\\02_Sprite_Holder_004_przycisk_phase_12.png",
+              "url": "../extracted_assets/bdf/RZECZKA/sprite_holder/02_Sprite_Holder_004_przycisk_phase_12.png"
             }
           ],
-          "phaseCount": 1,
+          "phaseCount": 13,
+          "instanceOffset": 6560606,
           "rect": {
-            "x": 32,
-            "y": 100,
+            "x": 339,
+            "y": 410,
             "width": 76,
             "height": 57
           },
-          "geometryConfidence": "serialized_sprite"
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": false,
+          "z": 2
         }
       ],
       "audio": []
@@ -869,7 +1049,8 @@
           "frameCount": null,
           "offset": 11553121,
           "name": "niespodzi",
-          "id": 0
+          "id": 0,
+          "initiallyVisible": false
         },
         {
           "kind": "multibitmap_bmp",
@@ -882,7 +1063,8 @@
           "frameCount": null,
           "offset": 11860517,
           "name": "niespodzi",
-          "id": 1
+          "id": 1,
+          "initiallyVisible": false
         },
         {
           "kind": "multibitmap_bmp",
@@ -895,7 +1077,8 @@
           "frameCount": null,
           "offset": 12167913,
           "name": "niespodzi",
-          "id": 2
+          "id": 2,
+          "initiallyVisible": false
         },
         {
           "kind": "multibitmap_bmp",
@@ -908,7 +1091,8 @@
           "frameCount": null,
           "offset": 12475309,
           "name": "niespodzi",
-          "id": 3
+          "id": 3,
+          "initiallyVisible": false
         },
         {
           "kind": "multibitmap_bmp",
@@ -921,7 +1105,8 @@
           "frameCount": null,
           "offset": 12782705,
           "name": "niespodzi",
-          "id": 4
+          "id": 4,
+          "initiallyVisible": false
         },
         {
           "kind": "multibitmap_bmp",
@@ -934,7 +1119,8 @@
           "frameCount": null,
           "offset": 13090101,
           "name": "niespodzi",
-          "id": 5
+          "id": 5,
+          "initiallyVisible": false
         },
         {
           "kind": "multibitmap_bmp",
@@ -947,7 +1133,8 @@
           "frameCount": null,
           "offset": 13397497,
           "name": "niespodzi",
-          "id": 6
+          "id": 6,
+          "initiallyVisible": false
         },
         {
           "kind": "multibitmap_bmp",
@@ -960,7 +1147,8 @@
           "frameCount": null,
           "offset": 13704893,
           "name": "niespodzi",
-          "id": 7
+          "id": 7,
+          "initiallyVisible": false
         },
         {
           "kind": "multibitmap_bmp",
@@ -973,7 +1161,8 @@
           "frameCount": null,
           "offset": 14012289,
           "name": "niespodzi",
-          "id": 8
+          "id": 8,
+          "initiallyVisible": false
         },
         {
           "kind": "multibitmap_bmp",
@@ -986,20 +1175,8 @@
           "frameCount": null,
           "offset": 14319685,
           "name": "niespodzi",
-          "id": 9
-        },
-        {
-          "kind": "multibitmap_gif",
-          "path": "extracted_assets\\bdf\\RZECZKA\\animations\\05_MultiBitmap_niespodzi_640x480.gif",
-          "url": "../extracted_assets/bdf/RZECZKA/animations/05_MultiBitmap_niespodzi_640x480.gif",
-          "stillPath": null,
-          "stillUrl": null,
-          "width": 640,
-          "height": 480,
-          "frameCount": 10,
-          "offset": null,
-          "name": null,
-          "id": null
+          "id": 9,
+          "initiallyVisible": false
         }
       ],
       "audio": []
@@ -1018,10 +1195,6 @@
         "signature": "SetTextMode(void)"
       },
       {
-        "name": "if",
-        "signature": "if(textMode)"
-      },
-      {
         "name": "OnClosePage",
         "signature": "OnClosePage(void)"
       },
@@ -1030,56 +1203,16 @@
         "signature": "HotSpot_Holder.MouseMoveIn(int rectID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(rectID)"
-      },
-      {
         "name": "Transparent_Video_Holder.TheEnd",
         "signature": "Transparent_Video_Holder.TheEnd(int videoID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(videoID>2)"
-      },
-      {
-        "name": "if",
-        "signature": "if(niesp && view)"
       },
       {
         "name": "Sprite_Holder.InPlace",
         "signature": "Sprite_Holder.InPlace(int spriteID,int x,int y)"
       },
       {
-        "name": "if",
-        "signature": "if(niesp && x==-640)"
-      },
-      {
         "name": "HotSpot_Holder.LeftButtonClickOn",
         "signature": "HotSpot_Holder.LeftButtonClickOn(int rectID)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(rectID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(view==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(((view==0 && rectID==0) || (view && rectID)) && przedmioty[rectID]==0)"
-      },
-      {
-        "name": "while",
-        "signature": "while(xx<3)"
-      },
-      {
-        "name": "if",
-        "signature": "if(przyciskPhase==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(przyciskPhase<13)"
       },
       {
         "name": "HotSpot_Holder.MouseMoveOut",
@@ -1090,48 +1223,8 @@
         "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(rectID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbar)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarPhase)"
-      },
-      {
-        "name": "if",
-        "signature": "if(txtHotSpotOn==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.InPlace",
         "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==480)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarCase)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(puzzleNo)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(puzzleNo)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==0)"
       },
       {
         "name": "Group.Sprite_Holder.MouseMoveIn",
@@ -1146,28 +1239,12 @@
         "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(spriteID==11)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseClickOnUp",
         "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(toolbarPhase)"
-      },
-      {
         "name": "Group.Sprite_Holder.EndAnimation",
         "signature": "Group.Sprite_Holder.EndAnimation(int spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
       },
       {
         "name": "Text_Holder.ScrollTextUp",
@@ -1194,20 +1271,12 @@
         "signature": "Text_Holder.ClickOnText(int textID)"
       },
       {
-        "name": "if",
-        "signature": "if(playStatus)"
-      },
-      {
         "name": "Text_Holder.EndOfSynchroText",
         "signature": "Text_Holder.EndOfSynchroText(int textID)"
       },
       {
         "name": "Sound_Holder.EndPlaySound",
         "signature": "Sound_Holder.EndPlaySound(int soundID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(soundID==0 && textMode)"
       },
       {
         "name": "Sprite_Holder.MouseMoveIn",
@@ -1220,10 +1289,6 @@
       {
         "name": "Sprite_Holder.MouseClickOnDown",
         "signature": "Sprite_Holder.MouseClickOnDown(int spriteID)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
       },
       {
         "name": "Sprite_Holder.MouseClickOnUp",

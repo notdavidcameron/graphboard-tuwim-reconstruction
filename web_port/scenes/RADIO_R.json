@@ -74,22 +74,43 @@
       "namespace": "Page",
       "index": 2,
       "z": 0,
-      "visible": false,
+      "visible": true,
       "rect": {
         "x": 545,
         "y": 430,
         "width": 70,
         "height": 15
       },
-      "geometryConfidence": "serialized_entry",
+      "geometryConfidence": "serialized_entries",
       "itemCount": null,
       "hitboxes": [],
       "sourceOffset": 364521,
-      "geometrySourceOffset": 365673,
+      "geometrySourceOffset": null,
       "privateOffset": 365653,
       "privateSize": 1236,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/bdf/RADIO_R/bitmap_holder/02_Bitmap_Holder_000_czas 01_70x15.bmp",
+      "assets": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\RADIO_R\\bitmap_holder\\02_Bitmap_Holder_000_czas 01_70x15.bmp",
+          "url": "../extracted_assets/bdf/RADIO_R/bitmap_holder/02_Bitmap_Holder_000_czas 01_70x15.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 70,
+          "height": 15,
+          "frameCount": null,
+          "offset": 365793,
+          "name": "czas 01",
+          "id": 0,
+          "rect": {
+            "x": 545,
+            "y": 430,
+            "width": 70,
+            "height": 15
+          },
+          "geometryConfidence": "serialized_entry"
+        }
+      ],
       "audio": []
     },
     {
@@ -118,7 +139,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RADIO_R\\embedded\\03_Sound_Holder_000_00059cb5.wav",
+          "path": "extracted_assets\\bdf\\RADIO_R\\embedded\\03_Sound_Holder_000_00059cb5.wav",
           "url": "../extracted_assets/bdf/RADIO_R/embedded/03_Sound_Holder_000_00059cb5.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -138,10 +159,6 @@
         "signature": "OnOpenPage()"
       },
       {
-        "name": "while",
-        "signature": "while(indexGlob <= 31)"
-      },
-      {
         "name": "OnTimer",
         "signature": "OnTimer(void)"
       },
@@ -154,16 +171,8 @@
         "signature": "OnClosePage(void)"
       },
       {
-        "name": "switch",
-        "signature": "switch(textID)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(status_txt)"
-      },
-      {
-        "name": "if",
-        "signature": "if(status_txt==0)"
+        "name": "Text_Holder.ClickOnText",
+        "signature": "Text_Holder.ClickOnText(int textID)"
       },
       {
         "name": "Text_Holder.ScrollTextUp",
@@ -178,24 +187,8 @@
         "signature": "Text_Holder.EndScrollText(int textID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(status_txt)"
-      },
-      {
         "name": "Text_Holder.MouseMoveIn",
         "signature": "Text_Holder.MouseMoveIn(int textID)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(textID)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(status_txt)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(status_txt)"
       },
       {
         "name": "Text_Holder.MouseMoveOut",
@@ -206,104 +199,28 @@
         "signature": "Sound_Holder.EndPlaySound(int soundID)"
       },
       {
-        "name": "if",
-        "signature": "if((soundID==0) && (pomoc==0))"
-      },
-      {
         "name": "ZliczNagraneZwrotki",
         "signature": "ZliczNagraneZwrotki()"
-      },
-      {
-        "name": "while",
-        "signature": "while(index < maxZwrotek)"
-      },
-      {
-        "name": "if",
-        "signature": "if(result)"
-      },
-      {
-        "name": "if",
-        "signature": "if(biezacaZwrotka > 0)"
       },
       {
         "name": "UstawAktywnoscPanelu",
         "signature": "UstawAktywnoscPanelu(int spriteID, int wcisniecie)"
       },
       {
-        "name": "if",
-        "signature": "if(spriteID > -1)"
-      },
-      {
-        "name": "if",
-        "signature": "if(staraZwrotka == -1)"
-      },
-      {
-        "name": "if",
-        "signature": "if(status_txt)"
-      },
-      {
-        "name": "if",
-        "signature": "if(spriteID != (staraZwrotka + constSpriteID))"
-      },
-      {
-        "name": "while",
-        "signature": "while(index < maxZwrotek)"
-      },
-      {
         "name": "PobierzAktywnoscPrzycisku",
         "signature": "PobierzAktywnoscPrzycisku(int spriteID)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
       },
       {
         "name": "Group.Sprite_Holder.MouseClickOnDown",
         "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(spriteID>32)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
-        "name": "while",
-        "signature": "while(index < maxZwrotek)"
-      },
-      {
-        "name": "if",
-        "signature": "if(zwrotki[spriteID-constSpriteID].right)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseClickOnUp",
         "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(spriteID>32)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseMoveIn",
         "signature": "Group.Sprite_Holder.MouseMoveIn(int spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(spriteID>32)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
       },
       {
         "name": "Group.Sprite_Holder.MouseMoveOut",
@@ -322,14 +239,6 @@
         "signature": "Recorder.EndPlaySound()"
       },
       {
-        "name": "if",
-        "signature": "if(grajWszystko > 0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(grajWszystko <= maxZwrotek)"
-      },
-      {
         "name": "Recorder.DiskFull",
         "signature": "Recorder.DiskFull()"
       },
@@ -346,28 +255,8 @@
         "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
       },
       {
-        "name": "if",
-        "signature": "if(rectID==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbar)"
-      },
-      {
         "name": "Group.Sprite_Holder.InPlace",
         "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
-      },
-      {
-        "name": "if",
-        "signature": "if(spriteID==32)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==480)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarCase)"
       }
     ],
     "rawText": "//###########################################################################\n\n//Script code\n\n//###########################################################################\n\n\n\n\n\nOnOpenPage()\n\n{\n\n\t// Add your component and variables initialization code here\n\n\t// WARNING: All variables definied in this function are global for this page\n\n   CString plikWAV;\n\n   plikWAV.SetString(\"radio\");\n\n\n\n   int constSpriteID = 6;\n\n\n\n      // Zmienna informujaca ile dany wiersz ma zwrotek.\n\n   int maxZwrotek = 13;\n\n\n\n      // left - dlugosc trwania zwrotki podczas nagrywania\n\n      // top  - odleglosc zwrotki od poczatku\n\n      // right - czy byla nagrywana 0 - nie, 1 - tak\n\n   CRect zwrotki[maxZwrotek];\n\n\n\n   int const_zw = -21;\n\n   zwrotki[0].SetRect( 44100*15, 0, 0, 0 );\n\n   zwrotki[1].SetRect( 44100*12, 4*const_zw, 0, 0 );\n\n   zwrotki[2].SetRect( 44100*17, 10*const_zw, 0, 0 );\n\n   //zwrotki[3].SetRect( 44100*9, 13*const_zw, 0, 0 );\n\n\n\n   zwrotki[3].SetRect( 44100*14, 17*const_zw-15, 0, 0 );\n\n   //zwrotki[5].SetRect( 44100*7, 19*const_zw-15, 0, 0 );\n\n   zwrotki[4].SetRect( 44100*13, 21*const_zw-15, 0, 0 );\n\n   //zwrotki[7].SetRect( 44100*6, 23*const_zw-15, 0, 0 );\n\n\n\n   zwrotki[5].SetRect( 44100*21, 26*const_zw-8, 0, 0 );\n\n   //zwrotki[9].SetRect( 44100*10, 30*const_zw-8, 0, 0 );\n\n\n\n   zwrotki[6].SetRect( 44100*13, 35*const_zw, 0, 0 );\n\n   zwrotki[7].SetRect( 44100*14, 41*const_zw-2, 0, 0 );\n\n   //zwrotki[12].SetRect( 44100*12, 43*const_zw-2, 0, 0 );\n\n\n\n   zwrotki[8].SetRect( 44100*13, 49*const_zw+5, 0, 0 );\n\n\n\n   zwrotki[9].SetRect( 44100*18, 54*const_zw+11, 0, 0 );\n\n   zwrotki[10].SetRect( 44100*19, 60*const_zw+11, 0, 0 );\n\n   //zwrotki[11].SetRect( 44100*13, 62*const_zw+11, 0, 0 );\n\n\n\n   zwrotki[11].SetRect( 44100*21, 66*const_zw, 0, 0 );\n\n\n\n   //zwrotki[12].SetRect( 44100*13, 69*const_zw, 0, 0 );\n\n   zwrotki[12].SetRect( 44100*24, 74*const_zw, 0, 0 );\n\n   //zwrotki[14].SetRect( 44100*18, 77*const_zw, 0, 0 );\n\n\n\n      // Zmienna informujaca, ktory fragment tekstu jest aktywny\n\n   int biezacaZwrotka = -1;\n\n\n\n      // Zmienna informujac, ze odbywa sie obecnie nagrywanie\n\n   int nagrywanie = 0;\n\n\n\n      // Ogrywanie calego wiersza\n\n   int grajWszystko = 0;\n\n\n\n      // Zmienna informujaca, ze ma miejsce odtwarzanie jednej zwrotki\n\n   int odtwarzanie = 0;\n\n\n\n      // Zmienna informujaca, czy wszystkie zwrotki zostaly nagrane.\n\n      // 0 - tak, > 0  - nie\n\n   int wszystkieNagrane = maxZwrotek;\n\n\n\n   int ikona0=0;\n\n   int const_help=5000;\n\n   char status_txt=0;      //0-stop, 1-play, 2-pause, \n\n   int pomoc = 0;\n\n\n\n   LoadGroup(\"g_rec.grp\");\n\n\n\n   CRect progress;\n\n   progress.SetRect( 547, 433, 288+115, 229 );\n\n   Group.Sprite_Holder.MoveTo( 3, progress.left, progress.top );\n\n\n\n\n\n   int toolbar=0;\n\n   int toolbarCase=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n\n\n   int indexGlob = constSpriteID+maxZwrotek;\n\n   while( indexGlob <= 31 )\n\n   {\n\n      Group.Sprite_Holder.MoveTo( indexGlob, 700, 0 );\n\n      indexGlob++;\n\n   }\n\n\n\n   SetCursor(4);\n\n   //SetTimer (const_help);\n\n   ZliczNagraneZwrotki();\n\n   FadeScreen(1,1000);\n\n}\n\n\n\n\n\nvoid OnTimer(void)\n\n{\n\n\t// Add your timer handler code here\n\n   SetTimer(0);\n\n   Sound_Holder.Stop(0);\n\n   Group.Sound_Holder.PlayDSound(0);\n\n}\n\n\n\n\n\n\n\nvoid OnKeyDown(UINT nChar)\n\n{\n\n\t// Add your keyboard handler code here\n\n}\n\n\n\n\n\n\n\nvoid OnClosePage(void)\n\n{\n\n\t// Add your close page handler code here\n\n   grajWszystko = 0;\n\n   Recorder.Stop();\n\n   Recorder.CloseFile();\n\n\n\n   FadeScreen(0,1000);\n\n   CloseGroup();\n\n}\n\n\n\n\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nVOID Text_Holder.ClickOnText(int textID)\n\n{\n\n      // TextHolder traktuje jak normalny przycisk przelaczajacy\n\n      // zwrotke\n\n   if( PobierzAktywnoscPrzycisku( constSpriteID )==0 )\n\n      return;\n\n\n\n   switch(textID)\n\n   {\n\n      case 0:\n\n         switch(status_txt)\n\n         {\n\n            case 0:\n\n               status_txt=1;\n\n               SetCursor (5);\n\n               Text_Holder.PlaySynchroText(0);\n\n               break;\n\n\n\n            case 1:  \n\n               status_txt=0;\n\n               Text_Holder.StopSynchroText(0); \n\n               SetCursor(3);\n\n               break;\n\n         }\n\n         break;\n\n\n\n      case 1:\n\n         if (status_txt==0)\n\n         {   \n\n            UstawAktywnoscPanelu( -1, 2 );\n\n            Sound_Holder.PlayDSound(0);\n\n            Text_Holder.SetTextOffsets(0,0,0);\n\n            SetCursor(5);\n\n         }\n\n         else\n\n         {\n\n            status_txt=0;\n\n            Text_Holder.StopSynchroText(0);      \n\n            SetCursor(3);\n\n         }\n\n         break; \n\n\n\n      case 2:\n\n         status_txt=1;\n\n         SetCursor (5);\n\n         Text_Holder.SetTextOffsets( 0, 0, zwrotki[biezacaZwrotka].top );\n\n         Text_Holder.PlaySynchroText(0);\n\n\n\n         UstawAktywnoscPanelu( -1, 2 );\n\n\n\n         break;\n\n   }\n\n}\n\n\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Text_Holder.ScrollTextUp(int textID)\n\n{\n\n   SetCursor (1);\n\n}\n\n\n\nvoid Text_Holder.ScrollTextDown(int textID)\n\n{\n\n   SetCursor(2);\n\n}\n\n\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Text_Holder.EndScrollText(int textID)\n\n{\n\n   switch (status_txt)\n\n   { \n\n      case 0:\n\n      case 2:\n\n         SetCursor(3);\n\n         break;\n\n\n\n      case 1:  \n\n         SetCursor(5);\n\n         break;\n\n   }\n\n}\n\n\n\n\n\n\n\n/////////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Text_Holder.MouseMoveIn(int textID)\n\n{\n\n   if( PobierzAktywnoscPrzycisku( constSpriteID )==0 )\n\n      return;\n\n\n\n   switch (textID)\n\n   {\n\n      case 1: \n\n         switch (status_txt)\n\n         {\n\n            case 0:  \n\n               SetCursor(3);\n\n               break;\n\n\n\n            case 1:\n\n            case 2:   \n\n               SetCursor (5);\n\n               break;\n\n         }\n\n                  break;\n\n      case 0:  \n\n         switch (status_txt)\n\n         { \n\n            case 0:\n\n            case 2:\n\n               SetCursor(3);\n\n               break;\n\n\n\n            case 1:  \n\n               SetCursor(5);\n\n               break;\n\n         }\n\n         break;\n\n\n\n      case 2:\n\n         SetCursor(3);\n\n         break;\n\n   }\n\n}\n\n\n\nvoid Text_Holder.MouseMoveOut(int textID)\n\n{\n\n   SetCursor(4);\n\n}\n\n\n\n\n\n\n\n/////////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Sound_Holder.EndPlaySound(int soundID)\n\n{\n\n   if( (soundID==0) && (pomoc==0) )\n\n   {   \n\n      status_txt=1;\n\n      Text_Holder.PlaySynchroText(0);\n\n   }\n\n}\n\n\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid ZliczNagraneZwrotki()\n\n{\n\n   wszystkieNagrane = maxZwrotek;\n\n   CString plikTMP;\n\n   int index = 0;\n\n   int result;\n\n   while( index < maxZwrotek )\n\n   {\n\n      plikTMP.Format( \"%s_%d.wav\", plikWAV.GetString(), index );\n\n      Recorder.OpenFile( plikTMP.GetString() );\n\n\n\n      Recorder.IsEmpty( &result );\n\n\n\n      if( result )\n\n      {\n\n         // Zbior juz byl zachowywany\n\n         zwrotki[index].right = 1;\n\n         if( index <> biezacaZwrotka )\n\n            Group.Sprite_Holder.ChangePhase( index+constSpriteID, 3 );\n\n         wszystkieNagrane--;\n\n      }\n\n      else\n\n      {\n\n         zwrotki[index].right = 0;\n\n         if( index <> biezacaZwrotka )\n\n            Group.Sprite_Holder.ChangePhase( index+constSpriteID, 0 );\n\n      }\n\n            \n\n      index++;\n\n   }\n\n\n\n   if( biezacaZwrotka > 0 )\n\n   {\n\n      plikTMP.Format( \"%s_%d.wav\", plikWAV.GetString(), biezacaZwrotka );\n\n      Recorder.OpenFile( plikTMP.GetString() );\n\n   }\n\n\n\n}\n\n\n\n\n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid UstawAktywnoscPanelu( int spriteID, int wcisniecie )\n\n{\n\n   int staraZwrotka = biezacaZwrotka;\n\n   biezacaZwrotka = spriteID - constSpriteID;\n\n\n\n   if( spriteID == -1 )\n\n      biezacaZwrotka = -1;\n\n   else\n\n      biezacaZwrotka = spriteID - constSpriteID;\n\n\n\n   if( spriteID > -1 )\n\n   {\n\n      if( staraZwrotka == -1 )\n\n      {\n\n            // Nalezy uaktywnic tekst z podzialem na zwrotki.\n\n         if( status_txt )\n\n         {\n\n               status_txt=0;\n\n               Text_Holder.StopSynchroText(0); \n\n         }\n\n\n\n         DisableScreen();\n\n         Text_Holder.HideText(0);\n\n         Text_Holder.ShowText(2);\n\n         EnableScreen();\n\n         ShowBuffer();\n\n      }\n\n\n\n\n\n         // Sprawdzenie czy zostal otworzony nowy wiersz.\n\n      if( spriteID != (staraZwrotka + constSpriteID) )\n\n      {\n\n            // Wylaczenie poprzedniej zwrotki.\n\n         //Sprite_Holder.ChangePhase( staraZwrotka+constSpriteID, 0 );\n\n\n\n         int index = 0;\n\n         while( index < maxZwrotek ) \n\n         {\n\n            if( zwrotki[index].right )\n\n               Group.Sprite_Holder.ChangePhase( index+constSpriteID, 3 );\n\n            else\n\n               Group.Sprite_Holder.ChangePhase( index+constSpriteID, 0 );\n\n            index++;\n\n         }\n\n\n\n            // Wlaczenie nowej zwrotki.\n\n         Group.Sprite_Holder.ChangePhase( biezacaZwrotka+constSpriteID, wcisniecie );\n\n\n\n            // Przesuniecia wiersza do odpowiedniej zwrotki.\n\n         Text_Holder.SetTextOffsets( 2, 0, zwrotki[biezacaZwrotka].top );\n\n         Text_Holder.SetCurrentSelect( 2, biezacaZwrotka );\n\n      }\n\n\n\n         // Pobranie nazwy pliku skojarzonego ze zbiorem.\n\n      CString plikTMP;\n\n      plikTMP.Format( \"%s_%d.wav\", plikWAV.GetString(), biezacaZwrotka );\n\n\n\n         // Otworzenie zbioru skojarzonego z aktualna zwrotka.\n\n      Recorder.OpenFile( plikTMP.GetString() );\n\n\n\n\n\n         // Nagrywanie i stop\n\n      Group.Sprite_Holder.ChangePhase( 0, 0 );\n\n      Group.Sprite_Holder.ChangePhase( 1, 0 );\n\n\n\n\n\n        // Sprawdzenie czy zbior jest pusty.\n\n      int result;\n\n      Recorder.IsEmpty( &result );\n\n      if( result )\n\n            // Zbior ma jakas zawartosc - mozna go odgrywac\n\n         Group.Sprite_Holder.ChangePhase( 2, 0 );\n\n      else\n\n            // Zbior jest pusty - nie mozna go odgrywac\n\n         Group.Sprite_Holder.ChangePhase( 2, 2 );\n\n\n\n\n\n         // Graj wszystko\n\n      if( wszystkieNagrane == 0 )\n\n         Group.Sprite_Holder.ChangePhase( 4, 0 );\n\n      else\n\n         Group.Sprite_Holder.ChangePhase( 4, 2 );\n\n\n\n         // Usun wszystko \n\n      if( wszystkieNagrane != maxZwrotek )\n\n         Group.Sprite_Holder.ChangePhase( 5, 0 );\n\n      else\n\n         Group.Sprite_Holder.ChangePhase( 5, 2 );\n\n\n\n      Group.Sprite_Holder.MoveTo( 3, progress.left, progress.top );\n\n   }\n\n   else\n\n   {\n\n      Group.Sprite_Holder.ChangePhase( 0, 2 );\n\n      Group.Sprite_Holder.ChangePhase( 1, 2 );\n\n      Group.Sprite_Holder.ChangePhase( 2, 2 );\n\n      Group.Sprite_Holder.ChangePhase( 4, 2 );\n\n      Group.Sprite_Holder.ChangePhase( 5, 2 );\n\n\n\n\n\n      if( zwrotki[staraZwrotka].right )\n\n         Group.Sprite_Holder.ChangePhase( staraZwrotka+constSpriteID, 3 );\n\n      else\n\n         Group.Sprite_Holder.ChangePhase( staraZwrotka+constSpriteID, 0 );\n\n\n\n      if( nagrywanie )\n\n         Recorder.Stop();\n\n\n\n         // Byla podswietlona poprzednia zwrotka dlatego\n\n         // nalezy pokazac wiersz bez podzialu na zwrotki a \n\n         // ukryc z podzialem.\n\n      DisableScreen();\n\n      Text_Holder.HideText(2);\n\n      Text_Holder.ShowText(0);\n\n      EnableScreen();\n\n      ShowBuffer();\n\n   }\n\n\n\n}\n\n\n\n\n\n\n\n//////////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nint PobierzAktywnoscPrzycisku( int spriteID )\n\n{\n\n   switch( spriteID )\n\n   {\n\n      case 0:   //nagrywanie\n\n         if( (biezacaZwrotka == -1) || (nagrywanie) || (grajWszystko) || (odtwarzanie) )\n\n            return 0;\n\n         break;\n\n\n\n      case 1:   //stop\n\n         if( biezacaZwrotka == -1 ) \n\n            return 0;\n\n         break;\n\n\n\n      case 2:   //odtwarzanie bufora\n\n         if( (biezacaZwrotka == -1) || (nagrywanie) || (grajWszystko) || (odtwarzanie)) \n\n            return 0;\n\n\n\n         if( zwrotki[biezacaZwrotka].right == 0) \n\n            return 0;\n\n         break;\n\n\n\n      case 4:   // wszystko\n\n         if( (biezacaZwrotka == -1) || (wszystkieNagrane>0) || (grajWszystko) || (nagrywanie) || (odtwarzanie)) \n\n            return 0;\n\n         break;\n\n\n\n      case 5:   // smietnik\n\n         if( (biezacaZwrotka == -1) || (wszystkieNagrane == maxZwrotek) || (nagrywanie) || (grajWszystko) || (odtwarzanie)) \n\n            return 0;\n\n         break;\n\n\n\n      default:\n\n         if( (nagrywanie) || (grajWszystko) || (odtwarzanie) || (spriteID > (maxZwrotek+constSpriteID)) ) \n\n            return 0;\n\n         break;\n\n   }\n\n   return 1;\n\n}\n\n\n\n\n\n//////////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Group.Sprite_Holder.MouseClickOnDown(int spriteID)\n\n{\n\n   if(spriteID>32)\n\n   {\n\n      Group.Sprite_Holder.ChangePhase(spriteID,1);\n\n      switch(spriteID)\n\n      {\n\n         case 33:   //parent window\n\n            Group.Sound_Holder.PlayDSound(3);\n\n            break;\n\n         case 34:   //plansza glowna\n\n            Group.Sound_Holder.PlayDSound(4);\n\n            break;\n\n         case 35:   //parent window\n\n            Group.Sound_Holder.PlayDSound(5);\n\n            break;\n\n         case 36:   //plansza glowna\n\n            Group.Sound_Holder.PlayDSound(6);\n\n            break;\n\n      }\n\n      return;\n\n   }\n\n\n\n   if( PobierzAktywnoscPrzycisku( spriteID ) == 0 ) \n\n      return;\n\n\n\n   switch( spriteID )\n\n   {\n\n      case 0:   // nagrywanie\n\n            // Mozna nagrywac wylacznie wtedy, gdy jest aktywna jakas zwrotka\n\n            // i nie ma miejsca ogrywanie calego wiersza\n\n         nagrywanie = 1;\n\n\n\n            // Wlaczenie migania przycisku nagrywania.\n\n         Group.Sprite_Holder.ChangePhase( 0, 1 );\n\n\n\n            // Nie mozna nagrywac, odgrywac, odgrywac wszystkiego, usuwac.\n\n         Group.Sprite_Holder.ChangePhase( 2, 2 );\n\n         Group.Sprite_Holder.ChangePhase( 4, 2 );\n\n         Group.Sprite_Holder.ChangePhase( 5, 2 );\n\n\n\n            // Powrot progresu do stanu poczatkowego.\n\n         Group.Sprite_Holder.MoveTo( 3, progress.left, progress.top );\n\n\n\n            // Rozpoczecie nagrywania.\n\n         Recorder.Record(zwrotki[biezacaZwrotka].left);\n\n\n\n         break;\n\n\n\n\n\n      case 1:   // stop\n\n         Group.Sprite_Holder.ChangePhase( 1, 1 );\n\n\n\n         nagrywanie = 0;\n\n         grajWszystko = 0;\n\n         odtwarzanie = 0;\n\n\n\n         Recorder.Stop();\n\n\n\n         break;   \n\n\n\n\n\n      case 2:   // odtwarzanie bufora\n\n         Group.Sprite_Holder.ChangePhase( 2, 1 );\n\n\n\n            // Wylaczono maly play - nie mozna nagrywac, usuwac \n\n         Group.Sprite_Holder.ChangePhase( 0, 2 );\n\n         Group.Sprite_Holder.ChangePhase( 4, 2 );\n\n         Group.Sprite_Holder.ChangePhase( 5, 2 );\n\n\n\n         odtwarzanie = 1;\n\n         Group.Sprite_Holder.MoveTo( 3, progress.left, progress.top );\n\n         Recorder.Play();\n\n\n\n         break;\n\n\n\n      case 3:   // progres\n\n         break;\n\n\n\n      case 4:   // Odtwarzanie wszytkiego\n\n            // Wlaczenie migania\n\n            Group.Sprite_Holder.ChangePhase( 4, 1 );\n\n\n\n            // Wlaczono duzy play - nie mozna nagrywac, grac, usuwac \n\n            Group.Sprite_Holder.ChangePhase( 0, 2 );\n\n            Group.Sprite_Holder.ChangePhase( 2, 2 );\n\n            Group.Sprite_Holder.ChangePhase( 5, 2 );\n\n\n\n            grajWszystko = 1;\n\n               // Przesuniecia wiersza do odpowiedniej zwrotki.\n\n            Text_Holder.SetTextOffsets( 2, 0, zwrotki[grajWszystko-1].top );\n\n            Text_Holder.SetCurrentSelect( 2, grajWszystko-1 );\n\n\n\n            CString wavTMP;\n\n            wavTMP.Format( \"%s_%d.wav\", plikWAV, grajWszystko - 1 );\n\n\n\n            Recorder.OpenFile( wavTMP );\n\n            Recorder.Play();\n\n         break;\n\n\n\n      case 5:   // Usuniecie wszystkich zbiorow\n\n\n\n         Group.Sprite_Holder.ChangePhase( 5, 1 );\n\n\n\n         int index = 0;\n\n         while( index < maxZwrotek )\n\n         {\n\n            CString plikTMP;\n\n            plikTMP.Format( \"%s_%d.wav\", plikWAV.GetString(), index );\n\n            Recorder.OpenFile( plikTMP.GetString() );\n\n\n\n            Recorder.EmptyFile();\n\n\n\n            index++;\n\n         }\n\n\n\n         ZliczNagraneZwrotki();\n\n\n\n         // Wymuszenie ustawien panelu od poczatku.\n\n         index = biezacaZwrotka;\n\n         biezacaZwrotka = -1;\n\n         wszystkieNagrane = maxZwrotek;\n\n         UstawAktywnoscPanelu( index + constSpriteID, 2 );\n\n\n\n         break;\n\n\n\n\n\n\n\n      default:   // znaczniki zwrotek\n\n         Group.Sound_Holder.PlayDSound(1);\n\n\n\n         if( zwrotki[spriteID-constSpriteID].right )\n\n         {\n\n            UstawAktywnoscPanelu( spriteID, 4 );\n\n            Group.Sprite_Holder.ChangePhase( spriteID, 4 );\n\n         }\n\n         else\n\n         {\n\n            UstawAktywnoscPanelu( spriteID, 1 );\n\n            Group.Sprite_Holder.ChangePhase( spriteID, 1 );\n\n         }\n\n         break;\n\n   }\n\n\n\n}\n\n\n\n\n\n////////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Group.Sprite_Holder.MouseClickOnUp(int spriteID)\n\n{\n\n   if(spriteID>32)\n\n   {\n\n      Group.Sprite_Holder.DisableTimers();\n\n\n\n      Group.Sprite_Holder.GotoXY(32,640,0);\n\n      Group.Sprite_Holder.GotoXY(33,721,329);\n\n      Group.Sprite_Holder.GotoXY(34,717,404);\n\n      Group.Sprite_Holder.GotoXY(35,704,14);\n\n      Group.Sprite_Holder.GotoXY(36,744,14);\n\n   \n\n      Group.Sprite_Holder.SynchronizeTimers();\n\n      Group.Sprite_Holder.EnableTimers();\n\n      Group.Sound_Holder.PlayDSound(2);\n\n      toolbar=0;\n\n      Group.HotSpot_Holder.DisableHotSpot(1);\n\n      toolbarCase=spriteID;\n\n\n\n      return;\n\n   }\n\n   if( PobierzAktywnoscPrzycisku( spriteID ) == 0 ) \n\n      return;\n\n\n\n\n\n   switch( spriteID )\n\n   { \n\n      case 0:\n\n      case 2:\n\n      case 3:\n\n      case 4:\n\n         break;\n\n\n\n      case 1:\n\n         Group.Sprite_Holder.ChangePhase( 1, 0 );\n\n         break;\n\n\n\n      case 5:\n\n         Group.Sprite_Holder.ChangePhase( 5, 2 );\n\n         break;\n\n\n\n      default:\n\n         Group.Sprite_Holder.ChangePhase( spriteID, 2 );\n\n         break;\n\n\n\n   }\n\n}\n\n\n\n \n\n\n\n/////////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Group.Sprite_Holder.MouseMoveIn(int spriteID)\n\n{\n\n   if(spriteID>32)\n\n   {\n\n      if(toolbar)  SetCursor(0);\n\n      return;\n\n   }\n\n\n\n\n\n   if( PobierzAktywnoscPrzycisku( spriteID ) == 0 ) \n\n      return;\n\n\n\n   switch( spriteID )\n\n   {\n\n      case 2:   //odtwarzanie bufora\n\n         if( zwrotki[biezacaZwrotka].right == 0) \n\n            return;\n\n         break;\n\n   }\n\n   SetCursor(0);\n\n}\n\n\n\n \n\nvoid Group.Sprite_Holder.MouseMoveOut(int spriteID)\n\n{\n\n   SetCursor(4);   \n\n}\n\n\n\n \n\n/////////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Recorder.Progress(int percentFull)\n\n{\n\n   float prog = 0.64*percentFull;\n\n\n\n   // Przesuniecie wskaznika nagrywania o zadana wartosc.\n\n   Group.Sprite_Holder.MoveTo( 3, progress.left+prog, progress.top );\n\n}\n\n\n\n\n\n \n\n/////////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Recorder.EndRecordSound()\n\n{\n\n   ZliczNagraneZwrotki();\n\n   UstawAktywnoscPanelu( biezacaZwrotka + constSpriteID, 2 );\n\n   nagrywanie = 0;\n\n}\n\n\n\n\n\n \n\n/////////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Recorder.EndPlaySound()\n\n{\n\n   if( grajWszystko > 0 )\n\n   {\n\n      grajWszystko++;\n\n\n\n      if( grajWszystko <= maxZwrotek )\n\n      {\n\n            // Przesuniecia wiersza do odpowiedniej zwrotki.\n\n         Text_Holder.SetTextOffsets( 2, 0, zwrotki[grajWszystko-1].top );\n\n         Text_Holder.SetCurrentSelect( 2, grajWszystko-1 );\n\n\n\n         Group.Sprite_Holder.MoveTo( 3, progress.left, progress.top );\n\n\n\n         CString wavTMP;\n\n         wavTMP.Format( \"%s_%d.wav\", plikWAV, grajWszystko - 1 );\n\n         Recorder.OpenFile( wavTMP );\n\n         \n\n         Recorder.Play();\n\n      }\n\n      else\n\n      {\n\n         grajWszystko = 0;\n\n         int staraZwrotka = biezacaZwrotka;\n\n         biezacaZwrotka = -1;\n\n         UstawAktywnoscPanelu( staraZwrotka + constSpriteID, 2 );\n\n      }\n\n   }\n\n   else\n\n   {\n\n      int staraZwrotka = biezacaZwrotka;\n\n      biezacaZwrotka = -1;\n\n      UstawAktywnoscPanelu( staraZwrotka + constSpriteID, 2 );\n\n      odtwarzanie = 0;\n\n   }\n\n}\n\n\n\n\n\n \n\n/////////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid Recorder.DiskFull()\n\n{\n\n\n\n}\n\n \n\n\n\n\n\n///////////////////////////////////////////////////////////////////////\n\n//\n\n//\n\nvoid OnRButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   //Uruchomienie pomocy\n\n   pomoc = 1;\n\n\n\n   Sound_Holder.Stop(0);\n\n   Text_Holder.StopSynchroText(0);      \n\n   status_txt=0;\n\n\n\n   nagrywanie = 0;\n\n   grajWszystko = 0;\n\n   odtwarzanie = 0;\n\n\n\n   Recorder.Stop();\n\n\n\n   Sound_Holder.Stop(0);\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   SetTimer(0);\n\n}\n\n \n\n\n\n \n\nvoid OnLButtonDown(int x,int y)\n\n{\n\n        //Add your command handler code here\n\n   SetTimer(0);\n\n   Group.Sound_Holder.Stop(0);\n\n   pomoc = 0;\n\n}\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n//############################################################# T O O L B A R #######\n\n//#############################################################---------------#######\n\nvoid Group.HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n   if(rectID==0)\n\n   {\n\n      Group.Sprite_Holder.DisableTimers();\n\n\n\n      Group.Sprite_Holder.GotoXY(32,480,0);\n\n      Group.Sprite_Holder.GotoXY(33,560,329);\n\n      Group.Sprite_Holder.GotoXY(34,557,404);\n\n      Group.Sprite_Holder.GotoXY(35,544,14);\n\n      Group.Sprite_Holder.GotoXY(36,584,14);\n\n\n\n      Group.Sprite_Holder.SynchronizeTimers();\n\n      Group.Sprite_Holder.EnableTimers();\n\n      Group.Sound_Holder.PlayDSound(2);\n\n      SetCursor(0);\n\n   }\n\n   else\n\n   {\n\n      if(toolbar)\n\n      {\n\n         Group.Sprite_Holder.DisableTimers();\n\n\n\n         Group.Sprite_Holder.GotoXY(32,640,0);\n\n         Group.Sprite_Holder.GotoXY(33,721,329);\n\n         Group.Sprite_Holder.GotoXY(34,717,404);\n\n         Group.Sprite_Holder.GotoXY(35,704,14);\n\n         Group.Sprite_Holder.GotoXY(36,744,14);\n\n\n\n         Group.Sprite_Holder.SynchronizeTimers();\n\n         Group.Sprite_Holder.EnableTimers();\n\n         Group.Sound_Holder.PlayDSound(2);\n\n         toolbar=0;\n\n      }\n\n      Group.HotSpot_Holder.DisableHotSpot(1);\n\n      toolbarCase=0;\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.InPlace(int spriteID,int x,int y)\n\n{\n\n   if(spriteID==32)\n\n   {\n\n      if(x==480)\n\n      {\n\n         toolbar=1;\n\n         Group.HotSpot_Holder.EnableHotSpot(1);\n\n         SetCursor(0);\n\n      }\n\n      else\n\n      {\n\n         SetCursor(4);\n\n         Group.Sprite_Holder.ChangePhase(33,0);\n\n         Group.Sprite_Holder.ChangePhase(34,0);\n\n         Group.Sprite_Holder.ChangePhase(35,0);\n\n         Group.Sprite_Holder.ChangePhase(36,0);\n\n         switch(toolbarCase)\n\n         {\n\n            case 35:\t//lewo\n\n               LoadPage(\"plotki_r.bdf\");\n\n               break;\n\n            case 36:\t//prawo\n\n               if(IsProject())   parentWnd.SetString(\"rycerz.bdf\");\n\n               LoadPage(\"rycerz_r.bdf\");\n\n               break;\n\n            case 33:   //do planszy glownej   \n\n               LoadPage(\"radio.bdf\");\n\n               break;\n\n            case 34:   //Plansza wyboru\n\n               LoadPage(\"Wyborw.bdf\");\n\n               break;\n\n         }\n\n      }\n\n   }\n\n}\n\n//#############################################################\n\n//############################################################# \n\n "

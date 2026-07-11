@@ -87,6 +87,26 @@ with Ghidra; see "How the board routes raw input" in `component_interfaces.md`):
 - Every callback fires **only if** the page script defines that top-level
   handler.
 
+## Current web-port checkpoint (v48)
+
+- The exporter now consumes the recovered SpriteHolder definition/instance
+  split. It emits 919 placed instances across the corpus with their saved
+  definition, position, layer, phase, and visibility. `MoveTo`/`GotoXY`
+  preserves that visibility; `ShowSprite`/`HideSprite` remains authoritative.
+- The recovered HotSpotHolder serializer now supplies 255 real hit rectangles,
+  stored ids, layers, names, and enabled flags. Stored ids are intentionally
+  not normalized or deduplicated: PIEKARZ, for example, has two records with
+  id 0 and both are addressed by that script-visible id.
+- Five Panorama/PanoramaHolder bitmap assets are exported. The browser can open,
+  close, position, edge-pan, and run the recovered movement callbacks. Zoom and
+  embedded panorama sprites remain visual stubs, and motion speed is still an
+  approximation rather than recovered timing.
+- Asset-less holder fallbacks use item id 0 rather than the wrapper/component
+  index. Full-component fallback hitboxes are no longer added on top of real
+  asset layers.
+- Script handler indexing accepts GraphBoard's untyped functions while
+  excluding nested control-flow blocks (`if`, `while`, `switch`, and friends).
+
 ## Remaining divergences in `runtime.js`
 
 The generic event-routing issues formerly listed here were fixed in v41:
@@ -126,9 +146,8 @@ raw input"). Key points for `runtime.js`:
   with a per-pixel transparency test — a click on a transparent pixel misses
   (confirmed in-game: transparent backgrounds do nothing). Sprite pixels:
   `blob+0xb8 + frame[0x48]`. **Bitmap pixels are at `blob+0x80`, NOT `+0x90`** —
-  reading `+0x90` shears every row 16 bytes. `graphboard_export_scene.py` /
-  `graphboard_extract_assets.py` still read bitmaps at `+0x90`; fix both to
-  `+0x80` (see `component_interfaces.md`).
+  reading `+0x90` shears every row 16 bytes. The v48 asset extractor now uses
+  the verified `+0x80` base (see `component_interfaces.md`).
 - **Sprite drag** (`instance+0x1c == 1` → draggable; CUDA butterflies yes, DYZIO
   food no): down fires `MouseClickOnDown`, move follows at the grab offset with
   hover suppressed, up fires `MouseClickOnUp(id)` then

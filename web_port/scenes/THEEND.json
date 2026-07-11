@@ -35,26 +35,46 @@
       "itemCount": null,
       "hitboxes": [
         {
-          "id": 0,
+          "id": 1,
           "rect": {
             "x": 230,
             "y": 183,
             "width": 181,
             "height": 31
           },
+          "name": "",
+          "layer": 8,
+          "enabled": true,
+          "flags": [
+            213,
+            0,
+            255
+          ],
           "sourceOffset": 310553,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 3,
+          "auxState": 0
         },
         {
-          "id": 1,
+          "id": 2,
           "rect": {
             "x": 224,
             "y": 337,
             "width": 194,
             "height": 28
           },
+          "name": "",
+          "layer": 8,
+          "enabled": true,
+          "flags": [
+            213,
+            0,
+            255
+          ],
           "sourceOffset": 310654,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 3,
+          "auxState": 0
         }
       ],
       "sourceOffset": 309437,
@@ -90,9 +110,9 @@
       "assets": [
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\animations\\01_Transparent_Video_Holder_000_0004c28d_board_video_300x125.gif",
+          "path": "extracted_assets\\bdf\\THEEND\\animations\\01_Transparent_Video_Holder_000_0004c28d_board_video_300x125.gif",
           "url": "../extracted_assets/bdf/THEEND/animations/01_Transparent_Video_Holder_000_0004c28d_board_video_300x125.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\animations\\01_Transparent_Video_Holder_000_0004c28d_board_video_300x125_still.png",
+          "stillPath": "extracted_assets\\bdf\\THEEND\\animations\\01_Transparent_Video_Holder_000_0004c28d_board_video_300x125_still.png",
           "stillUrl": "../extracted_assets/bdf/THEEND/animations/01_Transparent_Video_Holder_000_0004c28d_board_video_300x125_still.png",
           "width": 300,
           "height": 125,
@@ -122,7 +142,7 @@
       "audio": [
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\THEEND\\embedded\\01_Transparent_Video_Holder_000_0004c28d_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\THEEND\\embedded\\01_Transparent_Video_Holder_000_0004c28d_board_video_audio.wav",
           "url": "../extracted_assets/bdf/THEEND/embedded/01_Transparent_Video_Holder_000_0004c28d_board_video_audio.wav",
           "durationSeconds": 19.0,
           "sampleRate": 22050,
@@ -139,22 +159,43 @@
       "namespace": "Page",
       "index": 2,
       "z": 0,
-      "visible": false,
+      "visible": true,
       "rect": {
         "x": 0,
         "y": 0,
         "width": 640,
         "height": 480
       },
-      "geometryConfidence": "serialized_entry",
+      "geometryConfidence": "serialized_entries",
       "itemCount": null,
       "hitboxes": [],
       "sourceOffset": 1412944,
-      "geometrySourceOffset": 1414096,
+      "geometrySourceOffset": null,
       "privateOffset": 1414076,
       "privateSize": 307356,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/bdf/THEEND/bitmap_holder/02_Bitmap_Holder_000_TuwimBlac_640x480.bmp",
+      "assets": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\THEEND\\bitmap_holder\\02_Bitmap_Holder_000_TuwimBlac_640x480.bmp",
+          "url": "../extracted_assets/bdf/THEEND/bitmap_holder/02_Bitmap_Holder_000_TuwimBlac_640x480.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 640,
+          "height": 480,
+          "frameCount": null,
+          "offset": 1414216,
+          "name": "TuwimBlac",
+          "id": 0,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 640,
+            "height": 480
+          },
+          "geometryConfidence": "serialized_entry"
+        }
+      ],
       "audio": []
     }
   ],

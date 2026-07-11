@@ -28,7 +28,1463 @@
       "display_name": "Sprite_Holder",
       "private_offset": 310891,
       "private_size": 304348,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_000_z1_phase_00.png",
+          "offset": 311171,
+          "size": 2679,
+          "pixel_size": 6400,
+          "width": 80,
+          "height": 80,
+          "name": "z1",
+          "id": 0,
+          "definition_id": 0,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_000_z1_phase_00.png",
+              "size": 2679
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_001_z2_phase_00.png",
+          "offset": 317839,
+          "size": 2293,
+          "pixel_size": 6400,
+          "width": 80,
+          "height": 80,
+          "name": "z2",
+          "id": 1,
+          "definition_id": 1,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_001_z2_phase_00.png",
+              "size": 2293
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_002_z3_phase_00.png",
+          "offset": 324507,
+          "size": 2684,
+          "pixel_size": 6400,
+          "width": 80,
+          "height": 80,
+          "name": "z3",
+          "id": 2,
+          "definition_id": 2,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_002_z3_phase_00.png",
+              "size": 2684
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_003_z4_phase_00.png",
+          "offset": 331175,
+          "size": 2656,
+          "pixel_size": 6400,
+          "width": 80,
+          "height": 80,
+          "name": "z4",
+          "id": 3,
+          "definition_id": 3,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_003_z4_phase_00.png",
+              "size": 2656
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_004_z5_phase_00.png",
+          "offset": 337843,
+          "size": 2502,
+          "pixel_size": 6400,
+          "width": 80,
+          "height": 80,
+          "name": "z5",
+          "id": 4,
+          "definition_id": 4,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_004_z5_phase_00.png",
+              "size": 2502
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_005_z6_phase_00.png",
+          "offset": 344511,
+          "size": 2663,
+          "pixel_size": 6400,
+          "width": 80,
+          "height": 80,
+          "name": "z6",
+          "id": 5,
+          "definition_id": 5,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_005_z6_phase_00.png",
+              "size": 2663
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_006_z7_phase_00.png",
+          "offset": 351179,
+          "size": 2669,
+          "pixel_size": 6400,
+          "width": 80,
+          "height": 80,
+          "name": "z7",
+          "id": 6,
+          "definition_id": 6,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_006_z7_phase_00.png",
+              "size": 2669
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_007_kaczuszka_phase_00.png",
+          "offset": 358385,
+          "size": 2528,
+          "pixel_size": 11858,
+          "width": 77,
+          "height": 77,
+          "name": "kaczuszka",
+          "id": 7,
+          "definition_id": 7,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_007_kaczuszka_phase_00.png",
+              "size": 2528
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_007_kaczuszka_phase_01.png",
+              "size": 2551
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_008_kaczuszka_phase_00.png",
+          "offset": 371049,
+          "size": 2622,
+          "pixel_size": 11858,
+          "width": 77,
+          "height": 77,
+          "name": "kaczuszka",
+          "id": 8,
+          "definition_id": 8,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_008_kaczuszka_phase_00.png",
+              "size": 2622
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_008_kaczuszka_phase_01.png",
+              "size": 2620
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_009_kaczuszka_phase_00.png",
+          "offset": 383713,
+          "size": 2015,
+          "pixel_size": 11858,
+          "width": 77,
+          "height": 77,
+          "name": "kaczuszka",
+          "id": 9,
+          "definition_id": 9,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_009_kaczuszka_phase_00.png",
+              "size": 2015
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_009_kaczuszka_phase_01.png",
+              "size": 2033
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_010_kaczuszka_phase_00.png",
+          "offset": 396377,
+          "size": 2597,
+          "pixel_size": 11858,
+          "width": 77,
+          "height": 77,
+          "name": "kaczuszka",
+          "id": 10,
+          "definition_id": 10,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_010_kaczuszka_phase_00.png",
+              "size": 2597
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_010_kaczuszka_phase_01.png",
+              "size": 2625
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_011_kaczuszka_phase_00.png",
+          "offset": 409041,
+          "size": 2381,
+          "pixel_size": 11858,
+          "width": 77,
+          "height": 77,
+          "name": "kaczuszka",
+          "id": 11,
+          "definition_id": 11,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_011_kaczuszka_phase_00.png",
+              "size": 2381
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_011_kaczuszka_phase_01.png",
+              "size": 2384
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_00.png",
+          "offset": 421243,
+          "size": 1094,
+          "pixel_size": 166400,
+          "width": 80,
+          "height": 80,
+          "name": "prąd",
+          "id": 12,
+          "definition_id": 12,
+          "phase_count": 26,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_00.png",
+              "size": 1094
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_01.png",
+              "size": 2085
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_02.png",
+              "size": 3317
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_03.png",
+              "size": 3910
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_04.png",
+              "size": 4275
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_05.png",
+              "size": 4469
+            },
+            {
+              "phase": 6,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_06.png",
+              "size": 4525
+            },
+            {
+              "phase": 7,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_07.png",
+              "size": 4420
+            },
+            {
+              "phase": 8,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_08.png",
+              "size": 4232
+            },
+            {
+              "phase": 9,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_09.png",
+              "size": 3928
+            },
+            {
+              "phase": 10,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_10.png",
+              "size": 3233
+            },
+            {
+              "phase": 11,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_11.png",
+              "size": 2012
+            },
+            {
+              "phase": 12,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_12.png",
+              "size": 1073
+            },
+            {
+              "phase": 13,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_13.png",
+              "size": 1077
+            },
+            {
+              "phase": 14,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_14.png",
+              "size": 2048
+            },
+            {
+              "phase": 15,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_15.png",
+              "size": 3268
+            },
+            {
+              "phase": 16,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_16.png",
+              "size": 3886
+            },
+            {
+              "phase": 17,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_17.png",
+              "size": 4248
+            },
+            {
+              "phase": 18,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_18.png",
+              "size": 4466
+            },
+            {
+              "phase": 19,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_19.png",
+              "size": 4498
+            },
+            {
+              "phase": 20,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_20.png",
+              "size": 4434
+            },
+            {
+              "phase": 21,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_21.png",
+              "size": 4236
+            },
+            {
+              "phase": 22,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_22.png",
+              "size": 3969
+            },
+            {
+              "phase": 23,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_23.png",
+              "size": 3265
+            },
+            {
+              "phase": 24,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_24.png",
+              "size": 2039
+            },
+            {
+              "phase": 25,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_25.png",
+              "size": 1074
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_013_punktacja_phase_00.png",
+          "offset": 588015,
+          "size": 2678,
+          "pixel_size": 3224,
+          "width": 62,
+          "height": 52,
+          "name": "punktacja",
+          "id": 13,
+          "definition_id": 13,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_013_punktacja_phase_00.png",
+              "size": 2678
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_014_punktacja_phase_00.png",
+          "offset": 591611,
+          "size": 2643,
+          "pixel_size": 3224,
+          "width": 62,
+          "height": 52,
+          "name": "punktacja",
+          "id": 14,
+          "definition_id": 14,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_014_punktacja_phase_00.png",
+              "size": 2643
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_015_punktacja_phase_00.png",
+          "offset": 595207,
+          "size": 2341,
+          "pixel_size": 3224,
+          "width": 62,
+          "height": 52,
+          "name": "punktacja",
+          "id": 15,
+          "definition_id": 15,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_015_punktacja_phase_00.png",
+              "size": 2341
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_016_punktacja_phase_00.png",
+          "offset": 598803,
+          "size": 2551,
+          "pixel_size": 3224,
+          "width": 62,
+          "height": 52,
+          "name": "punktacja",
+          "id": 16,
+          "definition_id": 16,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_016_punktacja_phase_00.png",
+              "size": 2551
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_017_punktacja_phase_00.png",
+          "offset": 602399,
+          "size": 2562,
+          "pixel_size": 3224,
+          "width": 62,
+          "height": 52,
+          "name": "punktacja",
+          "id": 17,
+          "definition_id": 17,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_017_punktacja_phase_00.png",
+              "size": 2562
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_018_start 01_phase_00.png",
+          "offset": 605923,
+          "size": 1465,
+          "pixel_size": 1120,
+          "width": 35,
+          "height": 32,
+          "name": "start 01",
+          "id": 18,
+          "definition_id": 18,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_018_start 01_phase_00.png",
+              "size": 1465
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_019_start 01_phase_00.png",
+          "offset": 607311,
+          "size": 1379,
+          "pixel_size": 1116,
+          "width": 36,
+          "height": 31,
+          "name": "start 01",
+          "id": 19,
+          "definition_id": 19,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_019_start 01_phase_00.png",
+              "size": 1379
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_020_start 01_phase_00.png",
+          "offset": 608726,
+          "size": 1449,
+          "pixel_size": 1085,
+          "width": 35,
+          "height": 31,
+          "name": "start 01",
+          "id": 20,
+          "definition_id": 20,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_020_start 01_phase_00.png",
+              "size": 1449
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_021_start 01_phase_00.png",
+          "offset": 610172,
+          "size": 1431,
+          "pixel_size": 1147,
+          "width": 37,
+          "height": 31,
+          "name": "start 01",
+          "id": 21,
+          "definition_id": 21,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_021_start 01_phase_00.png",
+              "size": 1431
+            }
+          ]
+        }
+      ],
+      "sprite_holder": {
+        "version": 1,
+        "definition_count": 22,
+        "instance_count": 28,
+        "parsed_definitions": 22,
+        "parsed_instances": 28,
+        "definitions": [
+          {
+            "index": 0,
+            "name": "z1",
+            "record_offset": 310903,
+            "blob_offset": 310907,
+            "blob_size": 6664,
+            "width": 80,
+            "height": 80,
+            "phase_count": 1,
+            "phase_hint": 589505315,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_000_z1_phase_00.png",
+                "size": 2679
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "z2",
+            "record_offset": 317571,
+            "blob_offset": 317575,
+            "blob_size": 6664,
+            "width": 80,
+            "height": 80,
+            "phase_count": 1,
+            "phase_hint": 589505315,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_001_z2_phase_00.png",
+                "size": 2293
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "z3",
+            "record_offset": 324239,
+            "blob_offset": 324243,
+            "blob_size": 6664,
+            "width": 80,
+            "height": 80,
+            "phase_count": 1,
+            "phase_hint": 589505315,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_002_z3_phase_00.png",
+                "size": 2684
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "name": "z4",
+            "record_offset": 330907,
+            "blob_offset": 330911,
+            "blob_size": 6664,
+            "width": 80,
+            "height": 80,
+            "phase_count": 1,
+            "phase_hint": 589505315,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_003_z4_phase_00.png",
+                "size": 2656
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "name": "z5",
+            "record_offset": 337575,
+            "blob_offset": 337579,
+            "blob_size": 6664,
+            "width": 80,
+            "height": 80,
+            "phase_count": 1,
+            "phase_hint": 589505315,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_004_z5_phase_00.png",
+                "size": 2502
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "name": "z6",
+            "record_offset": 344243,
+            "blob_offset": 344247,
+            "blob_size": 6664,
+            "width": 80,
+            "height": 80,
+            "phase_count": 1,
+            "phase_hint": 589505315,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_005_z6_phase_00.png",
+                "size": 2663
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "name": "z7",
+            "record_offset": 350911,
+            "blob_offset": 350915,
+            "blob_size": 6664,
+            "width": 80,
+            "height": 80,
+            "phase_count": 1,
+            "phase_hint": 589505315,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_006_z7_phase_00.png",
+                "size": 2669
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "name": "kaczuszka",
+            "record_offset": 357579,
+            "blob_offset": 357583,
+            "blob_size": 12660,
+            "width": 77,
+            "height": 77,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_007_kaczuszka_phase_00.png",
+                "size": 2528
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_007_kaczuszka_phase_01.png",
+                "size": 2551
+              }
+            ]
+          },
+          {
+            "index": 8,
+            "name": "kaczuszka",
+            "record_offset": 370243,
+            "blob_offset": 370247,
+            "blob_size": 12660,
+            "width": 77,
+            "height": 77,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_008_kaczuszka_phase_00.png",
+                "size": 2622
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_008_kaczuszka_phase_01.png",
+                "size": 2620
+              }
+            ]
+          },
+          {
+            "index": 9,
+            "name": "kaczuszka",
+            "record_offset": 382907,
+            "blob_offset": 382911,
+            "blob_size": 12660,
+            "width": 77,
+            "height": 77,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_009_kaczuszka_phase_00.png",
+                "size": 2015
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_009_kaczuszka_phase_01.png",
+                "size": 2033
+              }
+            ]
+          },
+          {
+            "index": 10,
+            "name": "kaczuszka",
+            "record_offset": 395571,
+            "blob_offset": 395575,
+            "blob_size": 12660,
+            "width": 77,
+            "height": 77,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_010_kaczuszka_phase_00.png",
+                "size": 2597
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_010_kaczuszka_phase_01.png",
+                "size": 2625
+              }
+            ]
+          },
+          {
+            "index": 11,
+            "name": "kaczuszka",
+            "record_offset": 408235,
+            "blob_offset": 408239,
+            "blob_size": 12660,
+            "width": 77,
+            "height": 77,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_011_kaczuszka_phase_00.png",
+                "size": 2381
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_011_kaczuszka_phase_01.png",
+                "size": 2384
+              }
+            ]
+          },
+          {
+            "index": 12,
+            "name": "prąd",
+            "record_offset": 420899,
+            "blob_offset": 420903,
+            "blob_size": 166740,
+            "width": 80,
+            "height": 80,
+            "phase_count": 26,
+            "phase_hint": 13,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_00.png",
+                "size": 1094
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_01.png",
+                "size": 2085
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_02.png",
+                "size": 3317
+              },
+              {
+                "phase": 3,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_03.png",
+                "size": 3910
+              },
+              {
+                "phase": 4,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_04.png",
+                "size": 4275
+              },
+              {
+                "phase": 5,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_05.png",
+                "size": 4469
+              },
+              {
+                "phase": 6,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_06.png",
+                "size": 4525
+              },
+              {
+                "phase": 7,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_07.png",
+                "size": 4420
+              },
+              {
+                "phase": 8,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_08.png",
+                "size": 4232
+              },
+              {
+                "phase": 9,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_09.png",
+                "size": 3928
+              },
+              {
+                "phase": 10,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_10.png",
+                "size": 3233
+              },
+              {
+                "phase": 11,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_11.png",
+                "size": 2012
+              },
+              {
+                "phase": 12,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_12.png",
+                "size": 1073
+              },
+              {
+                "phase": 13,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_13.png",
+                "size": 1077
+              },
+              {
+                "phase": 14,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_14.png",
+                "size": 2048
+              },
+              {
+                "phase": 15,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_15.png",
+                "size": 3268
+              },
+              {
+                "phase": 16,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_16.png",
+                "size": 3886
+              },
+              {
+                "phase": 17,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_17.png",
+                "size": 4248
+              },
+              {
+                "phase": 18,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_18.png",
+                "size": 4466
+              },
+              {
+                "phase": 19,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_19.png",
+                "size": 4498
+              },
+              {
+                "phase": 20,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_20.png",
+                "size": 4434
+              },
+              {
+                "phase": 21,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_21.png",
+                "size": 4236
+              },
+              {
+                "phase": 22,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_22.png",
+                "size": 3969
+              },
+              {
+                "phase": 23,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_23.png",
+                "size": 3265
+              },
+              {
+                "phase": 24,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_24.png",
+                "size": 2039
+              },
+              {
+                "phase": 25,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_25.png",
+                "size": 1074
+              }
+            ]
+          },
+          {
+            "index": 13,
+            "name": "punktacja",
+            "record_offset": 587643,
+            "blob_offset": 587647,
+            "blob_size": 3592,
+            "width": 62,
+            "height": 52,
+            "phase_count": 1,
+            "phase_hint": 3722259165,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_013_punktacja_phase_00.png",
+                "size": 2678
+              }
+            ]
+          },
+          {
+            "index": 14,
+            "name": "punktacja",
+            "record_offset": 591239,
+            "blob_offset": 591243,
+            "blob_size": 3592,
+            "width": 62,
+            "height": 52,
+            "phase_count": 1,
+            "phase_hint": 1431657438,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_014_punktacja_phase_00.png",
+                "size": 2643
+              }
+            ]
+          },
+          {
+            "index": 15,
+            "name": "punktacja",
+            "record_offset": 594835,
+            "blob_offset": 594839,
+            "blob_size": 3592,
+            "width": 62,
+            "height": 52,
+            "phase_count": 1,
+            "phase_hint": 1532319061,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_015_punktacja_phase_00.png",
+                "size": 2341
+              }
+            ]
+          },
+          {
+            "index": 16,
+            "name": "punktacja",
+            "record_offset": 598431,
+            "blob_offset": 598435,
+            "blob_size": 3592,
+            "width": 62,
+            "height": 52,
+            "phase_count": 1,
+            "phase_hint": 1431690545,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_016_punktacja_phase_00.png",
+                "size": 2551
+              }
+            ]
+          },
+          {
+            "index": 17,
+            "name": "punktacja",
+            "record_offset": 602027,
+            "blob_offset": 602031,
+            "blob_size": 3592,
+            "width": 62,
+            "height": 52,
+            "phase_count": 1,
+            "phase_hint": 2052347220,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_017_punktacja_phase_00.png",
+                "size": 2562
+              }
+            ]
+          },
+          {
+            "index": 18,
+            "name": "start 01",
+            "record_offset": 605623,
+            "blob_offset": 605627,
+            "blob_size": 1416,
+            "width": 35,
+            "height": 32,
+            "phase_count": 1,
+            "phase_hint": 1432048982,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_018_start 01_phase_00.png",
+                "size": 1465
+              }
+            ]
+          },
+          {
+            "index": 19,
+            "name": "start 01",
+            "record_offset": 607043,
+            "blob_offset": 607047,
+            "blob_size": 1380,
+            "width": 36,
+            "height": 31,
+            "phase_count": 1,
+            "phase_hint": 718942429,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_019_start 01_phase_00.png",
+                "size": 1379
+              }
+            ]
+          },
+          {
+            "index": 20,
+            "name": "start 01",
+            "record_offset": 608427,
+            "blob_offset": 608431,
+            "blob_size": 1380,
+            "width": 35,
+            "height": 31,
+            "phase_count": 1,
+            "phase_hint": 1432084567,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_020_start 01_phase_00.png",
+                "size": 1449
+              }
+            ]
+          },
+          {
+            "index": 21,
+            "name": "start 01",
+            "record_offset": 609811,
+            "blob_offset": 609815,
+            "blob_size": 1504,
+            "width": 37,
+            "height": 31,
+            "phase_count": 1,
+            "phase_hint": 824846854,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_021_start 01_phase_00.png",
+                "size": 1431
+              }
+            ]
+          }
+        ],
+        "instances": [
+          {
+            "index": 0,
+            "definition_id": 0,
+            "field04": 1,
+            "x": 80,
+            "y": 80,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 611319
+          },
+          {
+            "index": 1,
+            "definition_id": 0,
+            "field04": 1,
+            "x": 80,
+            "y": 240,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 611459
+          },
+          {
+            "index": 2,
+            "definition_id": 0,
+            "field04": 1,
+            "x": 80,
+            "y": 400,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 611599
+          },
+          {
+            "index": 3,
+            "definition_id": 1,
+            "field04": 1,
+            "x": 160,
+            "y": 0,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 611739
+          },
+          {
+            "index": 4,
+            "definition_id": 1,
+            "field04": 1,
+            "x": 160,
+            "y": 240,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 611879
+          },
+          {
+            "index": 5,
+            "definition_id": 2,
+            "field04": 1,
+            "x": 240,
+            "y": 160,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 612019
+          },
+          {
+            "index": 6,
+            "definition_id": 2,
+            "field04": 1,
+            "x": 240,
+            "y": 400,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 612159
+          },
+          {
+            "index": 7,
+            "definition_id": 3,
+            "field04": 1,
+            "x": 320,
+            "y": 0,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 612299
+          },
+          {
+            "index": 8,
+            "definition_id": 4,
+            "field04": 1,
+            "x": 400,
+            "y": 80,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 612439
+          },
+          {
+            "index": 9,
+            "definition_id": 4,
+            "field04": 1,
+            "x": 400,
+            "y": 240,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 612579
+          },
+          {
+            "index": 10,
+            "definition_id": 4,
+            "field04": 1,
+            "x": 400,
+            "y": 400,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 612719
+          },
+          {
+            "index": 11,
+            "definition_id": 5,
+            "field04": 1,
+            "x": 480,
+            "y": 0,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 612859
+          },
+          {
+            "index": 12,
+            "definition_id": 5,
+            "field04": 1,
+            "x": 480,
+            "y": 320,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 612999
+          },
+          {
+            "index": 13,
+            "definition_id": 7,
+            "field04": 1,
+            "x": 0,
+            "y": 160,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 613139
+          },
+          {
+            "index": 14,
+            "definition_id": 8,
+            "field04": 1,
+            "x": 0,
+            "y": 0,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 613279
+          },
+          {
+            "index": 15,
+            "definition_id": 9,
+            "field04": 1,
+            "x": 0,
+            "y": 0,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 613419
+          },
+          {
+            "index": 16,
+            "definition_id": 10,
+            "field04": 1,
+            "x": 0,
+            "y": 0,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 613559
+          },
+          {
+            "index": 17,
+            "definition_id": 11,
+            "field04": 1,
+            "x": 0,
+            "y": 0,
+            "z": 1,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 613699
+          },
+          {
+            "index": 18,
+            "definition_id": 12,
+            "field04": 2,
+            "x": 23,
+            "y": 54,
+            "z": 2,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 613839
+          },
+          {
+            "index": 19,
+            "definition_id": 13,
+            "field04": 0,
+            "x": 570,
+            "y": 57,
+            "z": 0,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 613979
+          },
+          {
+            "index": 20,
+            "definition_id": 14,
+            "field04": 0,
+            "x": 570,
+            "y": 136,
+            "z": 0,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 614119
+          },
+          {
+            "index": 21,
+            "definition_id": 15,
+            "field04": 0,
+            "x": 570,
+            "y": 215,
+            "z": 0,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 614259
+          },
+          {
+            "index": 22,
+            "definition_id": 16,
+            "field04": 0,
+            "x": 571,
+            "y": 293,
+            "z": 0,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 614399
+          },
+          {
+            "index": 23,
+            "definition_id": 17,
+            "field04": 0,
+            "x": 570,
+            "y": 371,
+            "z": 0,
+            "phase": 0,
+            "visible": 0,
+            "record_offset": 614539
+          },
+          {
+            "index": 24,
+            "definition_id": 18,
+            "field04": 0,
+            "x": 2,
+            "y": 5,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 614679
+          },
+          {
+            "index": 25,
+            "definition_id": 19,
+            "field04": 0,
+            "x": 2,
+            "y": 45,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 614819
+          },
+          {
+            "index": 26,
+            "definition_id": 20,
+            "field04": 0,
+            "x": 41,
+            "y": 6,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 614959
+          },
+          {
+            "index": 27,
+            "definition_id": 21,
+            "field04": 0,
+            "x": 40,
+            "y": 45,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 615099
+          }
+        ]
+      }
     },
     {
       "index": 1,
@@ -49,77 +1505,77 @@
       "embedded": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_000_0009a3a8.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_000_0009a3a8.wav",
           "offset": 631720,
           "size": 76640,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_001_000acf68.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_001_000acf68.wav",
           "offset": 708456,
           "size": 378926,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_002_001097f6.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_002_001097f6.wav",
           "offset": 1087478,
           "size": 14468,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_003_0010d0da.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_003_0010d0da.wav",
           "offset": 1102042,
           "size": 14940,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_004_00110b96.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_004_00110b96.wav",
           "offset": 1117078,
           "size": 14730,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_005_00114580.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_005_00114580.wav",
           "offset": 1131904,
           "size": 14582,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_006_00117ed6.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_006_00117ed6.wav",
           "offset": 1146582,
           "size": 73198,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_007_00129d24.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_007_00129d24.wav",
           "offset": 1219876,
           "size": 65546,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_008_00139d8e.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_008_00139d8e.wav",
           "offset": 1285518,
           "size": 247340,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_009_0017641a.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_009_0017641a.wav",
           "offset": 1532954,
           "size": 118316,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_010_001932a6.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_010_001932a6.wav",
           "offset": 1651366,
           "size": 512292,
           "extension": ".wav"
@@ -136,7 +1592,7 @@
       "embedded": [
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_000_002108c8_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_000_002108c8_board_video_audio.wav",
           "offset": 2164936,
           "size": 176444,
           "pcm_size": 176400,
@@ -148,11 +1604,11 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_000_002108c8_board_video_640x72.gif",
-          "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_000_002108c8_board_video_640x72_still.png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_000_002108c8_board_video_640x72.gif",
+          "still_path": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_000_002108c8_board_video_640x72_still.png",
           "offset": 2164936,
           "size": 1413603,
-          "still_size": 1033,
+          "still_size": 1218,
           "frame_count": 27,
           "width": 640,
           "height": 72,
@@ -162,7 +1618,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_002_002b4c0e_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_002_002b4c0e_board_video_audio.wav",
           "offset": 2837518,
           "size": 308744,
           "pcm_size": 308700,
@@ -174,11 +1630,11 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_002_002b4c0e_board_video_640x103.gif",
-          "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_002_002b4c0e_board_video_640x103_still.png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_002_002b4c0e_board_video_640x103.gif",
+          "still_path": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_002_002b4c0e_board_video_640x103_still.png",
           "offset": 2837518,
           "size": 3892793,
-          "still_size": 1087,
+          "still_size": 1352,
           "frame_count": 52,
           "width": 640,
           "height": 103,
@@ -188,7 +1644,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_004_003bfb0b_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_004_003bfb0b_board_video_audio.wav",
           "offset": 3930891,
           "size": 176444,
           "pcm_size": 176400,
@@ -200,11 +1656,11 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_004_003bfb0b_board_video_640x125.gif",
-          "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_004_003bfb0b_board_video_640x125_still.png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_004_003bfb0b_board_video_640x125.gif",
+          "still_path": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_004_003bfb0b_board_video_640x125_still.png",
           "offset": 3930891,
           "size": 2453130,
-          "still_size": 1127,
+          "still_size": 1447,
           "frame_count": 27,
           "width": 640,
           "height": 125,
@@ -214,7 +1670,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_006_00468c15_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_006_00468c15_board_video_audio.wav",
           "offset": 4623381,
           "size": 264644,
           "pcm_size": 264600,
@@ -226,21 +1682,21 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_006_00468c15_board_video_640x52.gif",
-          "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_006_00468c15_board_video_640x52_still.png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_006_00468c15_board_video_640x52.gif",
+          "still_path": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_006_00468c15_board_video_640x52_still.png",
           "offset": 4623381,
           "size": 1852854,
-          "still_size": 18114,
+          "still_size": 18813,
           "frame_count": 49,
           "width": 640,
           "height": 52,
-          "transparent_index": 42,
+          "transparent_index": 85,
           "header_transparent_index": 85,
           "delay_centiseconds": 10
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_008_005528a8_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_008_005528a8_board_video_audio.wav",
           "offset": 5580968,
           "size": 396944,
           "pcm_size": 396900,
@@ -252,15 +1708,15 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_008_005528a8_board_video_640x73.gif",
-          "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_008_005528a8_board_video_640x73_still.png",
+          "path": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_008_005528a8_board_video_640x73.gif",
+          "still_path": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_008_005528a8_board_video_640x73_still.png",
           "offset": 5580968,
           "size": 3767564,
-          "still_size": 24688,
+          "still_size": 25684,
           "frame_count": 71,
           "width": 640,
           "height": 73,
-          "transparent_index": 85,
+          "transparent_index": 48,
           "header_transparent_index": 48,
           "delay_centiseconds": 10
         }
@@ -285,11 +1741,11 @@
           "audio_record_count": 4,
           "video_record_count": 27,
           "stop_reason": "next_stream",
-          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_000_002108c8_board_video_audio.wav",
+          "audio_output": "extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_000_002108c8_board_video_audio.wav",
           "audio_pcm_size": 176400,
           "duration_seconds": 4.0,
-          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_000_002108c8_board_video_640x72.gif",
-          "still_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_000_002108c8_board_video_640x72_still.png",
+          "video_output": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_000_002108c8_board_video_640x72.gif",
+          "still_output": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_000_002108c8_board_video_640x72_still.png",
           "transparent_index": 30
         },
         {
@@ -329,11 +1785,11 @@
           "audio_record_count": 7,
           "video_record_count": 52,
           "stop_reason": "next_stream",
-          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_002_002b4c0e_board_video_audio.wav",
+          "audio_output": "extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_002_002b4c0e_board_video_audio.wav",
           "audio_pcm_size": 308700,
           "duration_seconds": 7.0,
-          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_002_002b4c0e_board_video_640x103.gif",
-          "still_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_002_002b4c0e_board_video_640x103_still.png",
+          "video_output": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_002_002b4c0e_board_video_640x103.gif",
+          "still_output": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_002_002b4c0e_board_video_640x103_still.png",
           "transparent_index": 30
         },
         {
@@ -373,11 +1829,11 @@
           "audio_record_count": 4,
           "video_record_count": 27,
           "stop_reason": "next_stream",
-          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_004_003bfb0b_board_video_audio.wav",
+          "audio_output": "extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_004_003bfb0b_board_video_audio.wav",
           "audio_pcm_size": 176400,
           "duration_seconds": 4.0,
-          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_004_003bfb0b_board_video_640x125.gif",
-          "still_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_004_003bfb0b_board_video_640x125_still.png",
+          "video_output": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_004_003bfb0b_board_video_640x125.gif",
+          "still_output": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_004_003bfb0b_board_video_640x125_still.png",
           "transparent_index": 30
         },
         {
@@ -417,12 +1873,12 @@
           "audio_record_count": 6,
           "video_record_count": 49,
           "stop_reason": "next_stream",
-          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_006_00468c15_board_video_audio.wav",
+          "audio_output": "extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_006_00468c15_board_video_audio.wav",
           "audio_pcm_size": 264600,
           "duration_seconds": 6.0,
-          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_006_00468c15_board_video_640x52.gif",
-          "still_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_006_00468c15_board_video_640x52_still.png",
-          "transparent_index": 42
+          "video_output": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_006_00468c15_board_video_640x52.gif",
+          "still_output": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_006_00468c15_board_video_640x52_still.png",
+          "transparent_index": 85
         },
         {
           "index": 7,
@@ -461,12 +1917,12 @@
           "audio_record_count": 9,
           "video_record_count": 71,
           "stop_reason": "next_stream",
-          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_008_005528a8_board_video_audio.wav",
+          "audio_output": "extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_008_005528a8_board_video_audio.wav",
           "audio_pcm_size": 396900,
           "duration_seconds": 9.0,
-          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_008_005528a8_board_video_640x73.gif",
-          "still_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_008_005528a8_board_video_640x73_still.png",
-          "transparent_index": 85
+          "video_output": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_008_005528a8_board_video_640x73.gif",
+          "still_output": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_008_005528a8_board_video_640x73_still.png",
+          "transparent_index": 48
         },
         {
           "index": 9,
@@ -493,82 +1949,672 @@
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "dib",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\background.dib",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\background.dib",
       "size": 308184
     },
     {
       "kind": "bmp",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\background.bmp",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\background.bmp",
       "size": 308198
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\script.txt",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\script.txt",
       "size": 20581
     },
     {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_000_z1_phase_00.png",
+      "offset": 311171,
+      "size": 2679,
+      "pixel_size": 6400,
+      "width": 80,
+      "height": 80,
+      "name": "z1",
+      "id": 0,
+      "definition_id": 0,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_000_z1_phase_00.png",
+          "size": 2679
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_001_z2_phase_00.png",
+      "offset": 317839,
+      "size": 2293,
+      "pixel_size": 6400,
+      "width": 80,
+      "height": 80,
+      "name": "z2",
+      "id": 1,
+      "definition_id": 1,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_001_z2_phase_00.png",
+          "size": 2293
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_002_z3_phase_00.png",
+      "offset": 324507,
+      "size": 2684,
+      "pixel_size": 6400,
+      "width": 80,
+      "height": 80,
+      "name": "z3",
+      "id": 2,
+      "definition_id": 2,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_002_z3_phase_00.png",
+          "size": 2684
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_003_z4_phase_00.png",
+      "offset": 331175,
+      "size": 2656,
+      "pixel_size": 6400,
+      "width": 80,
+      "height": 80,
+      "name": "z4",
+      "id": 3,
+      "definition_id": 3,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_003_z4_phase_00.png",
+          "size": 2656
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_004_z5_phase_00.png",
+      "offset": 337843,
+      "size": 2502,
+      "pixel_size": 6400,
+      "width": 80,
+      "height": 80,
+      "name": "z5",
+      "id": 4,
+      "definition_id": 4,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_004_z5_phase_00.png",
+          "size": 2502
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_005_z6_phase_00.png",
+      "offset": 344511,
+      "size": 2663,
+      "pixel_size": 6400,
+      "width": 80,
+      "height": 80,
+      "name": "z6",
+      "id": 5,
+      "definition_id": 5,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_005_z6_phase_00.png",
+          "size": 2663
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_006_z7_phase_00.png",
+      "offset": 351179,
+      "size": 2669,
+      "pixel_size": 6400,
+      "width": 80,
+      "height": 80,
+      "name": "z7",
+      "id": 6,
+      "definition_id": 6,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_006_z7_phase_00.png",
+          "size": 2669
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_007_kaczuszka_phase_00.png",
+      "offset": 358385,
+      "size": 2528,
+      "pixel_size": 11858,
+      "width": 77,
+      "height": 77,
+      "name": "kaczuszka",
+      "id": 7,
+      "definition_id": 7,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_007_kaczuszka_phase_00.png",
+          "size": 2528
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_007_kaczuszka_phase_01.png",
+          "size": 2551
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_008_kaczuszka_phase_00.png",
+      "offset": 371049,
+      "size": 2622,
+      "pixel_size": 11858,
+      "width": 77,
+      "height": 77,
+      "name": "kaczuszka",
+      "id": 8,
+      "definition_id": 8,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_008_kaczuszka_phase_00.png",
+          "size": 2622
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_008_kaczuszka_phase_01.png",
+          "size": 2620
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_009_kaczuszka_phase_00.png",
+      "offset": 383713,
+      "size": 2015,
+      "pixel_size": 11858,
+      "width": 77,
+      "height": 77,
+      "name": "kaczuszka",
+      "id": 9,
+      "definition_id": 9,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_009_kaczuszka_phase_00.png",
+          "size": 2015
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_009_kaczuszka_phase_01.png",
+          "size": 2033
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_010_kaczuszka_phase_00.png",
+      "offset": 396377,
+      "size": 2597,
+      "pixel_size": 11858,
+      "width": 77,
+      "height": 77,
+      "name": "kaczuszka",
+      "id": 10,
+      "definition_id": 10,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_010_kaczuszka_phase_00.png",
+          "size": 2597
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_010_kaczuszka_phase_01.png",
+          "size": 2625
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_011_kaczuszka_phase_00.png",
+      "offset": 409041,
+      "size": 2381,
+      "pixel_size": 11858,
+      "width": 77,
+      "height": 77,
+      "name": "kaczuszka",
+      "id": 11,
+      "definition_id": 11,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_011_kaczuszka_phase_00.png",
+          "size": 2381
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_011_kaczuszka_phase_01.png",
+          "size": 2384
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_00.png",
+      "offset": 421243,
+      "size": 1094,
+      "pixel_size": 166400,
+      "width": 80,
+      "height": 80,
+      "name": "prąd",
+      "id": 12,
+      "definition_id": 12,
+      "phase_count": 26,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_00.png",
+          "size": 1094
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_01.png",
+          "size": 2085
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_02.png",
+          "size": 3317
+        },
+        {
+          "phase": 3,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_03.png",
+          "size": 3910
+        },
+        {
+          "phase": 4,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_04.png",
+          "size": 4275
+        },
+        {
+          "phase": 5,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_05.png",
+          "size": 4469
+        },
+        {
+          "phase": 6,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_06.png",
+          "size": 4525
+        },
+        {
+          "phase": 7,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_07.png",
+          "size": 4420
+        },
+        {
+          "phase": 8,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_08.png",
+          "size": 4232
+        },
+        {
+          "phase": 9,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_09.png",
+          "size": 3928
+        },
+        {
+          "phase": 10,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_10.png",
+          "size": 3233
+        },
+        {
+          "phase": 11,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_11.png",
+          "size": 2012
+        },
+        {
+          "phase": 12,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_12.png",
+          "size": 1073
+        },
+        {
+          "phase": 13,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_13.png",
+          "size": 1077
+        },
+        {
+          "phase": 14,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_14.png",
+          "size": 2048
+        },
+        {
+          "phase": 15,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_15.png",
+          "size": 3268
+        },
+        {
+          "phase": 16,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_16.png",
+          "size": 3886
+        },
+        {
+          "phase": 17,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_17.png",
+          "size": 4248
+        },
+        {
+          "phase": 18,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_18.png",
+          "size": 4466
+        },
+        {
+          "phase": 19,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_19.png",
+          "size": 4498
+        },
+        {
+          "phase": 20,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_20.png",
+          "size": 4434
+        },
+        {
+          "phase": 21,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_21.png",
+          "size": 4236
+        },
+        {
+          "phase": 22,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_22.png",
+          "size": 3969
+        },
+        {
+          "phase": 23,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_23.png",
+          "size": 3265
+        },
+        {
+          "phase": 24,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_24.png",
+          "size": 2039
+        },
+        {
+          "phase": 25,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_25.png",
+          "size": 1074
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_013_punktacja_phase_00.png",
+      "offset": 588015,
+      "size": 2678,
+      "pixel_size": 3224,
+      "width": 62,
+      "height": 52,
+      "name": "punktacja",
+      "id": 13,
+      "definition_id": 13,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_013_punktacja_phase_00.png",
+          "size": 2678
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_014_punktacja_phase_00.png",
+      "offset": 591611,
+      "size": 2643,
+      "pixel_size": 3224,
+      "width": 62,
+      "height": 52,
+      "name": "punktacja",
+      "id": 14,
+      "definition_id": 14,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_014_punktacja_phase_00.png",
+          "size": 2643
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_015_punktacja_phase_00.png",
+      "offset": 595207,
+      "size": 2341,
+      "pixel_size": 3224,
+      "width": 62,
+      "height": 52,
+      "name": "punktacja",
+      "id": 15,
+      "definition_id": 15,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_015_punktacja_phase_00.png",
+          "size": 2341
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_016_punktacja_phase_00.png",
+      "offset": 598803,
+      "size": 2551,
+      "pixel_size": 3224,
+      "width": 62,
+      "height": 52,
+      "name": "punktacja",
+      "id": 16,
+      "definition_id": 16,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_016_punktacja_phase_00.png",
+          "size": 2551
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_017_punktacja_phase_00.png",
+      "offset": 602399,
+      "size": 2562,
+      "pixel_size": 3224,
+      "width": 62,
+      "height": 52,
+      "name": "punktacja",
+      "id": 17,
+      "definition_id": 17,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_017_punktacja_phase_00.png",
+          "size": 2562
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_018_start 01_phase_00.png",
+      "offset": 605923,
+      "size": 1465,
+      "pixel_size": 1120,
+      "width": 35,
+      "height": 32,
+      "name": "start 01",
+      "id": 18,
+      "definition_id": 18,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_018_start 01_phase_00.png",
+          "size": 1465
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_019_start 01_phase_00.png",
+      "offset": 607311,
+      "size": 1379,
+      "pixel_size": 1116,
+      "width": 36,
+      "height": 31,
+      "name": "start 01",
+      "id": 19,
+      "definition_id": 19,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_019_start 01_phase_00.png",
+          "size": 1379
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_020_start 01_phase_00.png",
+      "offset": 608726,
+      "size": 1449,
+      "pixel_size": 1085,
+      "width": 35,
+      "height": 31,
+      "name": "start 01",
+      "id": 20,
+      "definition_id": 20,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_020_start 01_phase_00.png",
+          "size": 1449
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_021_start 01_phase_00.png",
+      "offset": 610172,
+      "size": 1431,
+      "pixel_size": 1147,
+      "width": 37,
+      "height": 31,
+      "name": "start 01",
+      "id": 21,
+      "definition_id": 21,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_021_start 01_phase_00.png",
+          "size": 1431
+        }
+      ]
+    },
+    {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_000_0009a3a8.wav",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_000_0009a3a8.wav",
       "size": 76640
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_001_000acf68.wav",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_001_000acf68.wav",
       "size": 378926
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_002_001097f6.wav",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_002_001097f6.wav",
       "size": 14468
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_003_0010d0da.wav",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_003_0010d0da.wav",
       "size": 14940
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_004_00110b96.wav",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_004_00110b96.wav",
       "size": 14730
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_005_00114580.wav",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_005_00114580.wav",
       "size": 14582
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_006_00117ed6.wav",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_006_00117ed6.wav",
       "size": 73198
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_007_00129d24.wav",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_007_00129d24.wav",
       "size": 65546
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_008_00139d8e.wav",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_008_00139d8e.wav",
       "size": 247340
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_009_0017641a.wav",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_009_0017641a.wav",
       "size": 118316
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_010_001932a6.wav",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\02_Sound_Holder_010_001932a6.wav",
       "size": 512292
     },
     {
       "kind": "board_video_pcm_wave",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_000_002108c8_board_video_audio.wav",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_000_002108c8_board_video_audio.wav",
       "offset": 2164936,
       "size": 176444,
       "pcm_size": 176400,
@@ -580,11 +2626,11 @@
     },
     {
       "kind": "board_video_gif",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_000_002108c8_board_video_640x72.gif",
-      "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_000_002108c8_board_video_640x72_still.png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_000_002108c8_board_video_640x72.gif",
+      "still_path": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_000_002108c8_board_video_640x72_still.png",
       "offset": 2164936,
       "size": 1413603,
-      "still_size": 1033,
+      "still_size": 1218,
       "frame_count": 27,
       "width": 640,
       "height": 72,
@@ -594,7 +2640,7 @@
     },
     {
       "kind": "board_video_pcm_wave",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_002_002b4c0e_board_video_audio.wav",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_002_002b4c0e_board_video_audio.wav",
       "offset": 2837518,
       "size": 308744,
       "pcm_size": 308700,
@@ -606,11 +2652,11 @@
     },
     {
       "kind": "board_video_gif",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_002_002b4c0e_board_video_640x103.gif",
-      "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_002_002b4c0e_board_video_640x103_still.png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_002_002b4c0e_board_video_640x103.gif",
+      "still_path": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_002_002b4c0e_board_video_640x103_still.png",
       "offset": 2837518,
       "size": 3892793,
-      "still_size": 1087,
+      "still_size": 1352,
       "frame_count": 52,
       "width": 640,
       "height": 103,
@@ -620,7 +2666,7 @@
     },
     {
       "kind": "board_video_pcm_wave",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_004_003bfb0b_board_video_audio.wav",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_004_003bfb0b_board_video_audio.wav",
       "offset": 3930891,
       "size": 176444,
       "pcm_size": 176400,
@@ -632,11 +2678,11 @@
     },
     {
       "kind": "board_video_gif",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_004_003bfb0b_board_video_640x125.gif",
-      "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_004_003bfb0b_board_video_640x125_still.png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_004_003bfb0b_board_video_640x125.gif",
+      "still_path": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_004_003bfb0b_board_video_640x125_still.png",
       "offset": 3930891,
       "size": 2453130,
-      "still_size": 1127,
+      "still_size": 1447,
       "frame_count": 27,
       "width": 640,
       "height": 125,
@@ -646,7 +2692,7 @@
     },
     {
       "kind": "board_video_pcm_wave",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_006_00468c15_board_video_audio.wav",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_006_00468c15_board_video_audio.wav",
       "offset": 4623381,
       "size": 264644,
       "pcm_size": 264600,
@@ -658,21 +2704,21 @@
     },
     {
       "kind": "board_video_gif",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_006_00468c15_board_video_640x52.gif",
-      "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_006_00468c15_board_video_640x52_still.png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_006_00468c15_board_video_640x52.gif",
+      "still_path": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_006_00468c15_board_video_640x52_still.png",
       "offset": 4623381,
       "size": 1852854,
-      "still_size": 18114,
+      "still_size": 18813,
       "frame_count": 49,
       "width": 640,
       "height": 52,
-      "transparent_index": 42,
+      "transparent_index": 85,
       "header_transparent_index": 85,
       "delay_centiseconds": 10
     },
     {
       "kind": "board_video_pcm_wave",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_008_005528a8_board_video_audio.wav",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\embedded\\03_Transparent_Video_Holder_008_005528a8_board_video_audio.wav",
       "offset": 5580968,
       "size": 396944,
       "pcm_size": 396900,
@@ -684,15 +2730,15 @@
     },
     {
       "kind": "board_video_gif",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_008_005528a8_board_video_640x73.gif",
-      "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_008_005528a8_board_video_640x73_still.png",
+      "path": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_008_005528a8_board_video_640x73.gif",
+      "still_path": "extracted_assets\\bdf\\RACHUNEK\\animations\\03_Transparent_Video_Holder_008_005528a8_board_video_640x73_still.png",
       "offset": 5580968,
       "size": 3767564,
-      "still_size": 24688,
+      "still_size": 25684,
       "frame_count": 71,
       "width": 640,
       "height": 73,
-      "transparent_index": 85,
+      "transparent_index": 48,
       "header_transparent_index": 48,
       "delay_centiseconds": 10
     }

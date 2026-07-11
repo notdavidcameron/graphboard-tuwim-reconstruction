@@ -23,23 +23,264 @@
       "sourceType": "Sprite_Holder",
       "namespace": "Page",
       "index": 0,
-      "z": 50,
+      "z": 4,
       "visible": true,
       "rect": {
-        "x": 0,
-        "y": 0,
-        "width": 48,
-        "height": 48
+        "x": 385,
+        "y": 269,
+        "width": 158,
+        "height": 119
       },
-      "geometryConfidence": "synthetic_items",
+      "geometryConfidence": "serialized_entries",
       "itemCount": 5,
       "hitboxes": [],
       "sourceOffset": 309353,
       "geometrySourceOffset": null,
       "privateOffset": 310887,
       "privateSize": 180596,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_000_Sprite 0_phase_00.png",
+      "assets": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA\\sprite_holder\\00_Sprite_Holder_000_Sprite 0_phase_00.png",
+          "url": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_000_Sprite 0_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 120,
+          "height": 110,
+          "frameCount": null,
+          "offset": 311091,
+          "name": "Sprite 0",
+          "id": 0,
+          "definitionId": 0,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA\\sprite_holder\\00_Sprite_Holder_000_Sprite 0_phase_00.png",
+              "url": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_000_Sprite 0_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA\\sprite_holder\\00_Sprite_Holder_000_Sprite 0_phase_01.png",
+              "url": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_000_Sprite 0_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\CUDA\\sprite_holder\\00_Sprite_Holder_000_Sprite 0_phase_02.png",
+              "url": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_000_Sprite 0_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\CUDA\\sprite_holder\\00_Sprite_Holder_000_Sprite 0_phase_03.png",
+              "url": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_000_Sprite 0_phase_03.png"
+            }
+          ],
+          "phaseCount": 4,
+          "instanceOffset": 490783,
+          "rect": {
+            "x": 423,
+            "y": 269,
+            "width": 120,
+            "height": 110
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 4
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA\\sprite_holder\\00_Sprite_Holder_001_motylek_phase_00.png",
+          "url": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_001_motylek_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 104,
+          "height": 94,
+          "frameCount": null,
+          "offset": 364159,
+          "name": "motylek",
+          "id": 1,
+          "definitionId": 1,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA\\sprite_holder\\00_Sprite_Holder_001_motylek_phase_00.png",
+              "url": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_001_motylek_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA\\sprite_holder\\00_Sprite_Holder_001_motylek_phase_01.png",
+              "url": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_001_motylek_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\CUDA\\sprite_holder\\00_Sprite_Holder_001_motylek_phase_02.png",
+              "url": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_001_motylek_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\CUDA\\sprite_holder\\00_Sprite_Holder_001_motylek_phase_03.png",
+              "url": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_001_motylek_phase_03.png"
+            }
+          ],
+          "phaseCount": 4,
+          "instanceOffset": 490923,
+          "rect": {
+            "x": 415,
+            "y": 272,
+            "width": 104,
+            "height": 94
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 4
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA\\sprite_holder\\00_Sprite_Holder_002_motylek_phase_00.png",
+          "url": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_002_motylek_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 100,
+          "height": 80,
+          "frameCount": null,
+          "offset": 403531,
+          "name": "motylek",
+          "id": 2,
+          "definitionId": 2,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA\\sprite_holder\\00_Sprite_Holder_002_motylek_phase_00.png",
+              "url": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_002_motylek_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA\\sprite_holder\\00_Sprite_Holder_002_motylek_phase_01.png",
+              "url": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_002_motylek_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\CUDA\\sprite_holder\\00_Sprite_Holder_002_motylek_phase_02.png",
+              "url": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_002_motylek_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\CUDA\\sprite_holder\\00_Sprite_Holder_002_motylek_phase_03.png",
+              "url": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_002_motylek_phase_03.png"
+            }
+          ],
+          "phaseCount": 4,
+          "instanceOffset": 491063,
+          "rect": {
+            "x": 399,
+            "y": 308,
+            "width": 100,
+            "height": 80
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 4
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA\\sprite_holder\\00_Sprite_Holder_003_motylek_phase_00.png",
+          "url": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_003_motylek_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 92,
+          "height": 80,
+          "frameCount": null,
+          "offset": 435799,
+          "name": "motylek",
+          "id": 3,
+          "definitionId": 3,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA\\sprite_holder\\00_Sprite_Holder_003_motylek_phase_00.png",
+              "url": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_003_motylek_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA\\sprite_holder\\00_Sprite_Holder_003_motylek_phase_01.png",
+              "url": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_003_motylek_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\CUDA\\sprite_holder\\00_Sprite_Holder_003_motylek_phase_02.png",
+              "url": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_003_motylek_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\CUDA\\sprite_holder\\00_Sprite_Holder_003_motylek_phase_03.png",
+              "url": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_003_motylek_phase_03.png"
+            }
+          ],
+          "phaseCount": 4,
+          "instanceOffset": 491203,
+          "rect": {
+            "x": 434,
+            "y": 284,
+            "width": 92,
+            "height": 80
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 4
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA\\sprite_holder\\00_Sprite_Holder_004_motylek_phase_00.png",
+          "url": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_004_motylek_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 89,
+          "height": 71,
+          "frameCount": null,
+          "offset": 465507,
+          "name": "motylek",
+          "id": 4,
+          "definitionId": 4,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA\\sprite_holder\\00_Sprite_Holder_004_motylek_phase_00.png",
+              "url": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_004_motylek_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA\\sprite_holder\\00_Sprite_Holder_004_motylek_phase_01.png",
+              "url": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_004_motylek_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\CUDA\\sprite_holder\\00_Sprite_Holder_004_motylek_phase_02.png",
+              "url": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_004_motylek_phase_02.png"
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\CUDA\\sprite_holder\\00_Sprite_Holder_004_motylek_phase_03.png",
+              "url": "../extracted_assets/bdf/CUDA/sprite_holder/00_Sprite_Holder_004_motylek_phase_03.png"
+            }
+          ],
+          "phaseCount": 4,
+          "instanceOffset": 491343,
+          "rect": {
+            "x": 385,
+            "y": 310,
+            "width": 89,
+            "height": 71
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 4
+        }
+      ],
       "audio": []
     },
     {
@@ -51,10 +292,10 @@
       "z": 100,
       "visible": false,
       "rect": {
-        "x": 0,
-        "y": 0,
-        "width": 302,
-        "height": 88
+        "x": 181,
+        "y": 6,
+        "width": 401,
+        "height": 383
       },
       "geometryConfidence": "serialized_entries",
       "itemCount": null,
@@ -67,19 +308,102 @@
             "width": 82,
             "height": 82
           },
+          "name": "snieg",
+          "layer": 0,
+          "enabled": true,
+          "flags": [
+            250,
+            0,
+            255
+          ],
           "sourceOffset": 492599,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 7,
+          "auxState": 0
+        },
+        {
+          "id": 1,
+          "rect": {
+            "x": 503,
+            "y": 57,
+            "width": 79,
+            "height": 81
+          },
+          "name": "slonko",
+          "layer": 4,
+          "enabled": true,
+          "flags": [
+            250,
+            0,
+            255
+          ],
+          "sourceOffset": 492705,
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 7,
+          "auxState": 0
         },
         {
           "id": 4,
           "rect": {
-            "x": 0,
-            "y": 0,
-            "width": 1,
-            "height": 1
+            "x": 181,
+            "y": 103,
+            "width": 51,
+            "height": 89
           },
-          "sourceOffset": 493003,
-          "geometryConfidence": "serialized_entry"
+          "name": "glowa krowy",
+          "layer": 4,
+          "enabled": true,
+          "flags": [
+            250,
+            0,
+            255
+          ],
+          "sourceOffset": 492812,
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 7,
+          "auxState": 0
+        },
+        {
+          "id": 3,
+          "rect": {
+            "x": 217,
+            "y": 267,
+            "width": 30,
+            "height": 29
+          },
+          "name": "ptaszek",
+          "layer": 5,
+          "enabled": true,
+          "flags": [
+            250,
+            0,
+            255
+          ],
+          "sourceOffset": 492924,
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 7,
+          "auxState": 0
+        },
+        {
+          "id": 6,
+          "rect": {
+            "x": 364,
+            "y": 294,
+            "width": 215,
+            "height": 95
+          },
+          "name": "",
+          "layer": 0,
+          "enabled": true,
+          "flags": [
+            250,
+            0,
+            255
+          ],
+          "sourceOffset": 493032,
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 7,
+          "auxState": 0
         }
       ],
       "sourceOffset": 491483,
@@ -116,7 +440,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_000_000789e1.wav",
+          "path": "extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_000_000789e1.wav",
           "url": "../extracted_assets/bdf/CUDA/embedded/02_Sound_Holder_000_000789e1.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -126,7 +450,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_001_000c21b5.wav",
+          "path": "extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_001_000c21b5.wav",
           "url": "../extracted_assets/bdf/CUDA/embedded/02_Sound_Holder_001_000c21b5.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -136,7 +460,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_002_000d57f7.wav",
+          "path": "extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_002_000d57f7.wav",
           "url": "../extracted_assets/bdf/CUDA/embedded/02_Sound_Holder_002_000d57f7.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -146,7 +470,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_003_000d7a0f.wav",
+          "path": "extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_003_000d7a0f.wav",
           "url": "../extracted_assets/bdf/CUDA/embedded/02_Sound_Holder_003_000d7a0f.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -156,7 +480,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_004_000db143.wav",
+          "path": "extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_004_000db143.wav",
           "url": "../extracted_assets/bdf/CUDA/embedded/02_Sound_Holder_004_000db143.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -166,7 +490,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_005_000e0b73.wav",
+          "path": "extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_005_000e0b73.wav",
           "url": "../extracted_assets/bdf/CUDA/embedded/02_Sound_Holder_005_000e0b73.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -176,7 +500,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_006_000f78a1.wav",
+          "path": "extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_006_000f78a1.wav",
           "url": "../extracted_assets/bdf/CUDA/embedded/02_Sound_Holder_006_000f78a1.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -186,7 +510,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_007_000ff869.wav",
+          "path": "extracted_assets\\bdf\\CUDA\\embedded\\02_Sound_Holder_007_000ff869.wav",
           "url": "../extracted_assets/bdf/CUDA/embedded/02_Sound_Holder_007_000ff869.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -221,9 +545,9 @@
       "assets": [
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_000_00120b17_board_video_640x480.gif",
+          "path": "extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_000_00120b17_board_video_640x480.gif",
           "url": "../extracted_assets/bdf/CUDA/animations/03_Transparent_Video_Holder_000_00120b17_board_video_640x480.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_000_00120b17_board_video_640x480_still.png",
+          "stillPath": "extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_000_00120b17_board_video_640x480_still.png",
           "stillUrl": "../extracted_assets/bdf/CUDA/animations/03_Transparent_Video_Holder_000_00120b17_board_video_640x480_still.png",
           "width": 640,
           "height": 480,
@@ -251,9 +575,9 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_002_003380c1_board_video_64x87.gif",
+          "path": "extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_002_003380c1_board_video_64x87.gif",
           "url": "../extracted_assets/bdf/CUDA/animations/03_Transparent_Video_Holder_002_003380c1_board_video_64x87.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_002_003380c1_board_video_64x87_still.png",
+          "stillPath": "extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_002_003380c1_board_video_64x87_still.png",
           "stillUrl": "../extracted_assets/bdf/CUDA/animations/03_Transparent_Video_Holder_002_003380c1_board_video_64x87_still.png",
           "width": 64,
           "height": 87,
@@ -281,9 +605,9 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_004_0037ec21_board_video_175x171.gif",
+          "path": "extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_004_0037ec21_board_video_175x171.gif",
           "url": "../extracted_assets/bdf/CUDA/animations/03_Transparent_Video_Holder_004_0037ec21_board_video_175x171.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_004_0037ec21_board_video_175x171_still.png",
+          "stillPath": "extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_004_0037ec21_board_video_175x171_still.png",
           "stillUrl": "../extracted_assets/bdf/CUDA/animations/03_Transparent_Video_Holder_004_0037ec21_board_video_175x171_still.png",
           "width": 175,
           "height": 171,
@@ -311,9 +635,9 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_006_00482239_board_video_214x200.gif",
+          "path": "extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_006_00482239_board_video_214x200.gif",
           "url": "../extracted_assets/bdf/CUDA/animations/03_Transparent_Video_Holder_006_00482239_board_video_214x200.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_006_00482239_board_video_214x200_still.png",
+          "stillPath": "extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_006_00482239_board_video_214x200_still.png",
           "stillUrl": "../extracted_assets/bdf/CUDA/animations/03_Transparent_Video_Holder_006_00482239_board_video_214x200_still.png",
           "width": 214,
           "height": 200,
@@ -341,9 +665,9 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_008_00545e36_board_video_436x253.gif",
+          "path": "extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_008_00545e36_board_video_436x253.gif",
           "url": "../extracted_assets/bdf/CUDA/animations/03_Transparent_Video_Holder_008_00545e36_board_video_436x253.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_008_00545e36_board_video_436x253_still.png",
+          "stillPath": "extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_008_00545e36_board_video_436x253_still.png",
           "stillUrl": "../extracted_assets/bdf/CUDA/animations/03_Transparent_Video_Holder_008_00545e36_board_video_436x253_still.png",
           "width": 436,
           "height": 253,
@@ -371,9 +695,9 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_010_006363ab_board_video_56x49.gif",
+          "path": "extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_010_006363ab_board_video_56x49.gif",
           "url": "../extracted_assets/bdf/CUDA/animations/03_Transparent_Video_Holder_010_006363ab_board_video_56x49.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_010_006363ab_board_video_56x49_still.png",
+          "stillPath": "extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_010_006363ab_board_video_56x49_still.png",
           "stillUrl": "../extracted_assets/bdf/CUDA/animations/03_Transparent_Video_Holder_010_006363ab_board_video_56x49_still.png",
           "width": 56,
           "height": 49,
@@ -401,9 +725,9 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_012_0065d2c1_board_video_625x425.gif",
+          "path": "extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_012_0065d2c1_board_video_625x425.gif",
           "url": "../extracted_assets/bdf/CUDA/animations/03_Transparent_Video_Holder_012_0065d2c1_board_video_625x425.gif",
-          "stillPath": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_012_0065d2c1_board_video_625x425_still.png",
+          "stillPath": "extracted_assets\\bdf\\CUDA\\animations\\03_Transparent_Video_Holder_012_0065d2c1_board_video_625x425_still.png",
           "stillUrl": "../extracted_assets/bdf/CUDA/animations/03_Transparent_Video_Holder_012_0065d2c1_board_video_625x425_still.png",
           "width": 625,
           "height": 425,
@@ -433,7 +757,7 @@
       "audio": [
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_000_00120b17_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_000_00120b17_board_video_audio.wav",
           "url": "../extracted_assets/bdf/CUDA/embedded/03_Transparent_Video_Holder_000_00120b17_board_video_audio.wav",
           "durationSeconds": 16.0,
           "sampleRate": 22050,
@@ -443,7 +767,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_002_003380c1_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_002_003380c1_board_video_audio.wav",
           "url": "../extracted_assets/bdf/CUDA/embedded/03_Transparent_Video_Holder_002_003380c1_board_video_audio.wav",
           "durationSeconds": 4.0,
           "sampleRate": 22050,
@@ -453,7 +777,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_004_0037ec21_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_004_0037ec21_board_video_audio.wav",
           "url": "../extracted_assets/bdf/CUDA/embedded/03_Transparent_Video_Holder_004_0037ec21_board_video_audio.wav",
           "durationSeconds": 5.0,
           "sampleRate": 22050,
@@ -463,7 +787,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_006_00482239_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_006_00482239_board_video_audio.wav",
           "url": "../extracted_assets/bdf/CUDA/embedded/03_Transparent_Video_Holder_006_00482239_board_video_audio.wav",
           "durationSeconds": 4.0,
           "sampleRate": 22050,
@@ -473,7 +797,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_008_00545e36_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_008_00545e36_board_video_audio.wav",
           "url": "../extracted_assets/bdf/CUDA/embedded/03_Transparent_Video_Holder_008_00545e36_board_video_audio.wav",
           "durationSeconds": 4.0,
           "sampleRate": 22050,
@@ -483,7 +807,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_010_006363ab_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_010_006363ab_board_video_audio.wav",
           "url": "../extracted_assets/bdf/CUDA/embedded/03_Transparent_Video_Holder_010_006363ab_board_video_audio.wav",
           "durationSeconds": 3.0,
           "sampleRate": 22050,
@@ -493,7 +817,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_012_0065d2c1_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\CUDA\\embedded\\03_Transparent_Video_Holder_012_0065d2c1_board_video_audio.wav",
           "url": "../extracted_assets/bdf/CUDA/embedded/03_Transparent_Video_Holder_012_0065d2c1_board_video_audio.wav",
           "durationSeconds": 7.0,
           "sampleRate": 22050,
@@ -546,20 +870,16 @@
         "signature": "SetTextMode()"
       },
       {
-        "name": "if",
-        "signature": "if(textMode==0)"
+        "name": "HotSpot_Holder.LeftButtonClickOn",
+        "signature": "HotSpot_Holder.LeftButtonClickOn(int rectID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(rectID)"
+        "name": "Transparent_Video_Holder.MouseClickOnDown",
+        "signature": "Transparent_Video_Holder.MouseClickOnDown(int videoID)"
       },
       {
-        "name": "if",
-        "signature": "if(stat_slonko==0)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
+        "name": "Sprite_Holder.InPlace",
+        "signature": "Sprite_Holder.InPlace(int spriteID,int x,int y)"
       },
       {
         "name": "ResetMotyle",
@@ -594,88 +914,16 @@
         "signature": "OnTimer(void)"
       },
       {
-        "name": "if",
-        "signature": "if(helpTime>10)"
-      },
-      {
-        "name": "while",
-        "signature": "while(xx<5)"
-      },
-      {
-        "name": "if",
-        "signature": "if(motyle[xx])"
-      },
-      {
-        "name": "if",
-        "signature": "if(time[xx]==0)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(xx)"
-      },
-      {
         "name": "Sprite_Holder.MouseDrop",
         "signature": "Sprite_Holder.MouseDrop(int spriteID,int left,int top,int right,int bottom)"
-      },
-      {
-        "name": "if",
-        "signature": "if(res)"
-      },
-      {
-        "name": "if",
-        "signature": "if(motyle[spriteID]==0)"
-      },
-      {
-        "name": "while",
-        "signature": "while(xx<5)"
-      },
-      {
-        "name": "while",
-        "signature": "while(xx<5)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
       },
       {
         "name": "Group.HotSpot_Holder.MouseMoveIn",
         "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(rectID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbar)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(txtHotSpotOn==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.InPlace",
         "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==480)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarCase)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==0)"
       },
       {
         "name": "Group.Sprite_Holder.MouseMoveIn",
@@ -690,28 +938,12 @@
         "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(spriteID==4)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseClickOnUp",
         "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.EndAnimation",
         "signature": "Group.Sprite_Holder.EndAnimation(int spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
       },
       {
         "name": "Text_Holder.ScrollTextUp",
@@ -738,20 +970,12 @@
         "signature": "Text_Holder.ClickOnText(int textID)"
       },
       {
-        "name": "if",
-        "signature": "if(playStatus)"
-      },
-      {
         "name": "Text_Holder.EndOfSynchroText",
         "signature": "Text_Holder.EndOfSynchroText(int textID)"
       },
       {
         "name": "Sound_Holder.EndPlaySound",
         "signature": "Sound_Holder.EndPlaySound(int soundID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(soundID==1 && textMode)"
       },
       {
         "name": "Sprite_Holder.MouseMoveIn",

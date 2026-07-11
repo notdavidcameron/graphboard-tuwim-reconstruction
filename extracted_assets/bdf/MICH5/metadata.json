@@ -28,7 +28,373 @@
       "display_name": "Sprite_Holder",
       "private_offset": 310887,
       "private_size": 82408,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_000_przycisk_phase_00.png",
+          "offset": 311443,
+          "size": 1090,
+          "pixel_size": 5000,
+          "width": 50,
+          "height": 50,
+          "name": "przycisk ",
+          "id": 0,
+          "definition_id": 0,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_000_przycisk_phase_00.png",
+              "size": 1090
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_000_przycisk_phase_01.png",
+              "size": 1299
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_001_przycisk_phase_00.png",
+          "offset": 316887,
+          "size": 1139,
+          "pixel_size": 5100,
+          "width": 51,
+          "height": 50,
+          "name": "przycisk ",
+          "id": 1,
+          "definition_id": 1,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_001_przycisk_phase_00.png",
+              "size": 1139
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_001_przycisk_phase_01.png",
+              "size": 1339
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_002_przycisk_phase_00.png",
+          "offset": 322531,
+          "size": 1162,
+          "pixel_size": 5000,
+          "width": 50,
+          "height": 50,
+          "name": "przycisk ",
+          "id": 2,
+          "definition_id": 2,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_002_przycisk_phase_00.png",
+              "size": 1162
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_002_przycisk_phase_01.png",
+              "size": 1923
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_003_przycisk_phase_00.png",
+          "offset": 328047,
+          "size": 1078,
+          "pixel_size": 3956,
+          "width": 46,
+          "height": 43,
+          "name": "przycisk ",
+          "id": 3,
+          "definition_id": 3,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_003_przycisk_phase_00.png",
+              "size": 1078
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_003_przycisk_phase_01.png",
+              "size": 1618
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_004_przycisk_phase_00.png",
+          "offset": 332523,
+          "size": 1070,
+          "pixel_size": 4048,
+          "width": 46,
+          "height": 44,
+          "name": "przycisk ",
+          "id": 4,
+          "definition_id": 4,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_004_przycisk_phase_00.png",
+              "size": 1070
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_004_przycisk_phase_01.png",
+              "size": 1194
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_005_kula_phase_00.png",
+          "offset": 337191,
+          "size": 8463,
+          "pixel_size": 55264,
+          "width": 157,
+          "height": 176,
+          "name": "kula ",
+          "id": 5,
+          "definition_id": 5,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_005_kula_phase_00.png",
+              "size": 8463
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_005_kula_phase_01.png",
+              "size": 6603
+            }
+          ]
+        }
+      ],
+      "sprite_holder": {
+        "version": 1,
+        "definition_count": 6,
+        "instance_count": 6,
+        "parsed_definitions": 6,
+        "parsed_instances": 6,
+        "definitions": [
+          {
+            "index": 0,
+            "name": "przycisk ",
+            "record_offset": 310899,
+            "blob_offset": 310903,
+            "blob_size": 5540,
+            "width": 50,
+            "height": 50,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_000_przycisk_phase_00.png",
+                "size": 1090
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_000_przycisk_phase_01.png",
+                "size": 1299
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "przycisk ",
+            "record_offset": 316443,
+            "blob_offset": 316447,
+            "blob_size": 5540,
+            "width": 51,
+            "height": 50,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_001_przycisk_phase_00.png",
+                "size": 1139
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_001_przycisk_phase_01.png",
+                "size": 1339
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "przycisk ",
+            "record_offset": 321987,
+            "blob_offset": 321991,
+            "blob_size": 5540,
+            "width": 50,
+            "height": 50,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_002_przycisk_phase_00.png",
+                "size": 1162
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_002_przycisk_phase_01.png",
+                "size": 1923
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "name": "przycisk ",
+            "record_offset": 327531,
+            "blob_offset": 327535,
+            "blob_size": 4468,
+            "width": 46,
+            "height": 43,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_003_przycisk_phase_00.png",
+                "size": 1078
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_003_przycisk_phase_01.png",
+                "size": 1618
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "name": "przycisk ",
+            "record_offset": 332003,
+            "blob_offset": 332007,
+            "blob_size": 4564,
+            "width": 46,
+            "height": 44,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_004_przycisk_phase_00.png",
+                "size": 1070
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_004_przycisk_phase_01.png",
+                "size": 1194
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "name": "kula ",
+            "record_offset": 336571,
+            "blob_offset": 336575,
+            "blob_size": 55880,
+            "width": 157,
+            "height": 176,
+            "phase_count": 2,
+            "phase_hint": 505290270,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_005_kula_phase_00.png",
+                "size": 8463
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_005_kula_phase_01.png",
+                "size": 6603
+              }
+            ]
+          }
+        ],
+        "instances": [
+          {
+            "index": 0,
+            "definition_id": 0,
+            "field04": 0,
+            "x": 74,
+            "y": 202,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 392455
+          },
+          {
+            "index": 1,
+            "definition_id": 1,
+            "field04": 0,
+            "x": 78,
+            "y": 279,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 392595
+          },
+          {
+            "index": 2,
+            "definition_id": 2,
+            "field04": 0,
+            "x": 572,
+            "y": 77,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 392735
+          },
+          {
+            "index": 3,
+            "definition_id": 3,
+            "field04": 0,
+            "x": 535,
+            "y": 115,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 392875
+          },
+          {
+            "index": 4,
+            "definition_id": 4,
+            "field04": 0,
+            "x": 529,
+            "y": 186,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 393015
+          },
+          {
+            "index": 5,
+            "definition_id": 5,
+            "field04": 0,
+            "x": 260,
+            "y": 0,
+            "z": 0,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 393155
+          }
+        ]
+      }
     },
     {
       "index": 1,
@@ -159,6 +525,156 @@
       "kind": "script",
       "path": "extracted_assets\\bdf\\MICH5\\script.txt",
       "size": 12467
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_000_przycisk_phase_00.png",
+      "offset": 311443,
+      "size": 1090,
+      "pixel_size": 5000,
+      "width": 50,
+      "height": 50,
+      "name": "przycisk ",
+      "id": 0,
+      "definition_id": 0,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_000_przycisk_phase_00.png",
+          "size": 1090
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_000_przycisk_phase_01.png",
+          "size": 1299
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_001_przycisk_phase_00.png",
+      "offset": 316887,
+      "size": 1139,
+      "pixel_size": 5100,
+      "width": 51,
+      "height": 50,
+      "name": "przycisk ",
+      "id": 1,
+      "definition_id": 1,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_001_przycisk_phase_00.png",
+          "size": 1139
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_001_przycisk_phase_01.png",
+          "size": 1339
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_002_przycisk_phase_00.png",
+      "offset": 322531,
+      "size": 1162,
+      "pixel_size": 5000,
+      "width": 50,
+      "height": 50,
+      "name": "przycisk ",
+      "id": 2,
+      "definition_id": 2,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_002_przycisk_phase_00.png",
+          "size": 1162
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_002_przycisk_phase_01.png",
+          "size": 1923
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_003_przycisk_phase_00.png",
+      "offset": 328047,
+      "size": 1078,
+      "pixel_size": 3956,
+      "width": 46,
+      "height": 43,
+      "name": "przycisk ",
+      "id": 3,
+      "definition_id": 3,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_003_przycisk_phase_00.png",
+          "size": 1078
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_003_przycisk_phase_01.png",
+          "size": 1618
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_004_przycisk_phase_00.png",
+      "offset": 332523,
+      "size": 1070,
+      "pixel_size": 4048,
+      "width": 46,
+      "height": 44,
+      "name": "przycisk ",
+      "id": 4,
+      "definition_id": 4,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_004_przycisk_phase_00.png",
+          "size": 1070
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_004_przycisk_phase_01.png",
+          "size": 1194
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_005_kula_phase_00.png",
+      "offset": 337191,
+      "size": 8463,
+      "pixel_size": 55264,
+      "width": 157,
+      "height": 176,
+      "name": "kula ",
+      "id": 5,
+      "definition_id": 5,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_005_kula_phase_00.png",
+          "size": 8463
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MICH5\\sprite_holder\\00_Sprite_Holder_005_kula_phase_01.png",
+          "size": 6603
+        }
+      ]
     },
     {
       "kind": "board_video_gif",

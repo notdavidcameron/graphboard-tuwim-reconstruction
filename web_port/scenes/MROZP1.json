@@ -38,17 +38,17 @@
       "geometrySourceOffset": null,
       "privateOffset": 2257,
       "privateSize": 252520,
-      "primaryAssetUrl": "../extracted_assets/bdf/MROZ/animations/03_Transparent_Video_Holder_000_001cd847_board_video_129x142.gif",
+      "primaryAssetUrl": "../extracted_assets/bdf/MROZ/panorama_holder/00_Panorama_Holder_000_panorama_2560x276.bmp",
       "assets": [
         {
           "kind": "puzzle_fallback_background",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_000_001cd847_board_video_129x142.gif",
-          "url": "../extracted_assets/bdf/MROZ/animations/03_Transparent_Video_Holder_000_001cd847_board_video_129x142.gif",
-          "width": 129,
-          "height": 142,
+          "path": "extracted_assets\\bdf\\MROZ\\panorama_holder\\00_Panorama_Holder_000_panorama_2560x276.bmp",
+          "url": "../extracted_assets/bdf/MROZ/panorama_holder/00_Panorama_Holder_000_panorama_2560x276.bmp",
+          "width": 2560,
+          "height": 276,
           "frameCount": null,
           "offset": null,
-          "name": "animations",
+          "name": "panorama_holder",
           "id": 0,
           "geometryConfidence": "fallback"
         }
@@ -81,7 +81,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZP1\\embedded\\01_Sound_Holder_000_0003e6c5.wav",
+          "path": "extracted_assets\\bdf\\MROZP1\\embedded\\01_Sound_Holder_000_0003e6c5.wav",
           "url": "../extracted_assets/bdf/MROZP1/embedded/01_Sound_Holder_000_0003e6c5.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -91,7 +91,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZP1\\embedded\\01_Sound_Holder_001_00040095.wav",
+          "path": "extracted_assets\\bdf\\MROZP1\\embedded\\01_Sound_Holder_001_00040095.wav",
           "url": "../extracted_assets/bdf/MROZP1/embedded/01_Sound_Holder_001_00040095.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -101,7 +101,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZP1\\embedded\\01_Sound_Holder_002_000416d5.wav",
+          "path": "extracted_assets\\bdf\\MROZP1\\embedded\\01_Sound_Holder_002_000416d5.wav",
           "url": "../extracted_assets/bdf/MROZP1/embedded/01_Sound_Holder_002_000416d5.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -111,7 +111,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZP1\\embedded\\01_Sound_Holder_003_00042589.wav",
+          "path": "extracted_assets\\bdf\\MROZP1\\embedded\\01_Sound_Holder_003_00042589.wav",
           "url": "../extracted_assets/bdf/MROZP1/embedded/01_Sound_Holder_003_00042589.wav",
           "durationSeconds": null,
           "sampleRate": null,

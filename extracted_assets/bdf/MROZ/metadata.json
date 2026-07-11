@@ -28,7 +28,43 @@
       "display_name": "Panorama_Holder",
       "private_offset": 3295,
       "private_size": 708112,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "panorama_holder_bmp",
+          "path": "extracted_assets\\bdf\\MROZ\\panorama_holder\\00_Panorama_Holder_000_panorama_2560x276.bmp",
+          "offset": 3855,
+          "size": 707558,
+          "dib_size": 707544,
+          "width": 2560,
+          "height": 276,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 276
+          },
+          "geometry_confidence": "serialized_entry",
+          "initially_visible": false
+        }
+      ],
+      "panorama_holder": {
+        "version": 0,
+        "declared_count": 1,
+        "parsed_count": 1,
+        "scenes": [
+          {
+            "index": 0,
+            "record_offset": 3303,
+            "dib_offset": 3855,
+            "dib_size": 707544,
+            "width": 2560,
+            "height": 276,
+            "subimage_count": 0,
+            "region_count": 0,
+            "bmp_output": "extracted_assets\\bdf\\MROZ\\panorama_holder\\00_Panorama_Holder_000_panorama_2560x276.bmp"
+          }
+        ]
+      }
     },
     {
       "index": 1,
@@ -37,7 +73,295 @@
       "display_name": "Bitmap_Holder",
       "private_offset": 712539,
       "private_size": 340472,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MROZ\\bitmap_holder\\01_Bitmap_Holder_000_ch_op_98x165.bmp",
+          "offset": 712679,
+          "size": 17578,
+          "pixel_size": 16500,
+          "width": 98,
+          "height": 165,
+          "name": "chłop",
+          "rect": {
+            "x": 542,
+            "y": 192,
+            "width": 98,
+            "height": 165
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MROZ\\bitmap_holder\\01_Bitmap_Holder_001_szczebel_21x100.bmp",
+          "offset": 729327,
+          "size": 3478,
+          "pixel_size": 2400,
+          "width": 21,
+          "height": 100,
+          "name": "szczebel ",
+          "rect": {
+            "x": 394,
+            "y": 238,
+            "width": 21,
+            "height": 100
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MROZ\\bitmap_holder\\01_Bitmap_Holder_002_szczebel_21x100.bmp",
+          "offset": 731875,
+          "size": 3478,
+          "pixel_size": 2400,
+          "width": 21,
+          "height": 100,
+          "name": "szczebel ",
+          "rect": {
+            "x": 416,
+            "y": 238,
+            "width": 21,
+            "height": 100
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MROZ\\bitmap_holder\\01_Bitmap_Holder_003_w_z_314x149.bmp",
+          "offset": 734423,
+          "size": 48162,
+          "pixel_size": 47084,
+          "width": 314,
+          "height": 149,
+          "name": "wóz",
+          "rect": {
+            "x": 326,
+            "y": 233,
+            "width": 314,
+            "height": 149
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MROZ\\bitmap_holder\\01_Bitmap_Holder_004_K0_149x85.bmp",
+          "offset": 781655,
+          "size": 13998,
+          "pixel_size": 12920,
+          "width": 149,
+          "height": 85,
+          "name": "K0",
+          "rect": {
+            "x": 97,
+            "y": 269,
+            "width": 149,
+            "height": 85
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MROZ\\bitmap_holder\\01_Bitmap_Holder_005_k1_207x302.bmp",
+          "offset": 794723,
+          "size": 63894,
+          "pixel_size": 62816,
+          "width": 207,
+          "height": 302,
+          "name": "k1",
+          "rect": {
+            "x": 203,
+            "y": 127,
+            "width": 207,
+            "height": 302
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MROZ\\bitmap_holder\\01_Bitmap_Holder_006_k2_337x62.bmp",
+          "offset": 857687,
+          "size": 22158,
+          "pixel_size": 21080,
+          "width": 337,
+          "height": 62,
+          "name": "k2",
+          "rect": {
+            "x": 204,
+            "y": 418,
+            "width": 337,
+            "height": 62
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\MROZ\\bitmap_holder\\01_Bitmap_Holder_007_mroz1_640x272.bmp",
+          "offset": 878915,
+          "size": 175158,
+          "pixel_size": 174080,
+          "width": 640,
+          "height": 272,
+          "name": "mroz1",
+          "rect": {
+            "x": 0,
+            "y": 208,
+            "width": 640,
+            "height": 272
+          },
+          "geometry_confidence": "serialized_entry"
+        }
+      ],
+      "bitmap_holder": {
+        "version": 1,
+        "declared_count": 8,
+        "parsed_count": 8,
+        "frames": [
+          {
+            "index": 0,
+            "name": "chłop",
+            "record_offset": 712547,
+            "record_size": 16644,
+            "pixel_offset": 712679,
+            "width": 98,
+            "height": 165,
+            "right": 640,
+            "bottom": 357,
+            "rect": {
+              "x": 542,
+              "y": 192,
+              "width": 98,
+              "height": 165
+            },
+            "bmp_output": "extracted_assets\\bdf\\MROZ\\bitmap_holder\\01_Bitmap_Holder_000_ch_op_98x165.bmp"
+          },
+          {
+            "index": 1,
+            "name": "szczebel ",
+            "record_offset": 729195,
+            "record_size": 2544,
+            "pixel_offset": 729327,
+            "width": 21,
+            "height": 100,
+            "right": 415,
+            "bottom": 338,
+            "rect": {
+              "x": 394,
+              "y": 238,
+              "width": 21,
+              "height": 100
+            },
+            "bmp_output": "extracted_assets\\bdf\\MROZ\\bitmap_holder\\01_Bitmap_Holder_001_szczebel_21x100.bmp"
+          },
+          {
+            "index": 2,
+            "name": "szczebel ",
+            "record_offset": 731743,
+            "record_size": 2544,
+            "pixel_offset": 731875,
+            "width": 21,
+            "height": 100,
+            "right": 437,
+            "bottom": 338,
+            "rect": {
+              "x": 416,
+              "y": 238,
+              "width": 21,
+              "height": 100
+            },
+            "bmp_output": "extracted_assets\\bdf\\MROZ\\bitmap_holder\\01_Bitmap_Holder_002_szczebel_21x100.bmp"
+          },
+          {
+            "index": 3,
+            "name": "wóz",
+            "record_offset": 734291,
+            "record_size": 47228,
+            "pixel_offset": 734423,
+            "width": 314,
+            "height": 149,
+            "right": 640,
+            "bottom": 382,
+            "rect": {
+              "x": 326,
+              "y": 233,
+              "width": 314,
+              "height": 149
+            },
+            "bmp_output": "extracted_assets\\bdf\\MROZ\\bitmap_holder\\01_Bitmap_Holder_003_w_z_314x149.bmp"
+          },
+          {
+            "index": 4,
+            "name": "K0",
+            "record_offset": 781523,
+            "record_size": 13064,
+            "pixel_offset": 781655,
+            "width": 149,
+            "height": 85,
+            "right": 246,
+            "bottom": 354,
+            "rect": {
+              "x": 97,
+              "y": 269,
+              "width": 149,
+              "height": 85
+            },
+            "bmp_output": "extracted_assets\\bdf\\MROZ\\bitmap_holder\\01_Bitmap_Holder_004_K0_149x85.bmp"
+          },
+          {
+            "index": 5,
+            "name": "k1",
+            "record_offset": 794591,
+            "record_size": 62960,
+            "pixel_offset": 794723,
+            "width": 207,
+            "height": 302,
+            "right": 410,
+            "bottom": 429,
+            "rect": {
+              "x": 203,
+              "y": 127,
+              "width": 207,
+              "height": 302
+            },
+            "bmp_output": "extracted_assets\\bdf\\MROZ\\bitmap_holder\\01_Bitmap_Holder_005_k1_207x302.bmp"
+          },
+          {
+            "index": 6,
+            "name": "k2",
+            "record_offset": 857555,
+            "record_size": 21224,
+            "pixel_offset": 857687,
+            "width": 337,
+            "height": 62,
+            "right": 541,
+            "bottom": 480,
+            "rect": {
+              "x": 204,
+              "y": 418,
+              "width": 337,
+              "height": 62
+            },
+            "bmp_output": "extracted_assets\\bdf\\MROZ\\bitmap_holder\\01_Bitmap_Holder_006_k2_337x62.bmp"
+          },
+          {
+            "index": 7,
+            "name": "mroz1",
+            "record_offset": 878783,
+            "record_size": 174224,
+            "pixel_offset": 878915,
+            "width": 640,
+            "height": 272,
+            "right": 640,
+            "bottom": 480,
+            "rect": {
+              "x": 0,
+              "y": 208,
+              "width": 640,
+              "height": 272
+            },
+            "bmp_output": "extracted_assets\\bdf\\MROZ\\bitmap_holder\\01_Bitmap_Holder_007_mroz1_640x272.bmp"
+          }
+        ]
+      }
     },
     {
       "index": 2,
@@ -46,7 +370,886 @@
       "display_name": "Sprite_Holder",
       "private_offset": 1054545,
       "private_size": 834644,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_00.png",
+          "offset": 1054825,
+          "size": 1097,
+          "pixel_size": 268920,
+          "width": 83,
+          "height": 90,
+          "name": "kolo1",
+          "id": 0,
+          "definition_id": 0,
+          "phase_count": 36,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_00.png",
+              "size": 1097
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_01.png",
+              "size": 1250
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_02.png",
+              "size": 1977
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_03.png",
+              "size": 3026
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_04.png",
+              "size": 4006
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_05.png",
+              "size": 4504
+            },
+            {
+              "phase": 6,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_06.png",
+              "size": 4648
+            },
+            {
+              "phase": 7,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_07.png",
+              "size": 4918
+            },
+            {
+              "phase": 8,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_08.png",
+              "size": 5013
+            },
+            {
+              "phase": 9,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_09.png",
+              "size": 5160
+            },
+            {
+              "phase": 10,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_10.png",
+              "size": 5111
+            },
+            {
+              "phase": 11,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_11.png",
+              "size": 5128
+            },
+            {
+              "phase": 12,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_12.png",
+              "size": 5195
+            },
+            {
+              "phase": 13,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_13.png",
+              "size": 5345
+            },
+            {
+              "phase": 14,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_14.png",
+              "size": 5333
+            },
+            {
+              "phase": 15,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_15.png",
+              "size": 5403
+            },
+            {
+              "phase": 16,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_16.png",
+              "size": 5356
+            },
+            {
+              "phase": 17,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_17.png",
+              "size": 5331
+            },
+            {
+              "phase": 18,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_18.png",
+              "size": 5292
+            },
+            {
+              "phase": 19,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_19.png",
+              "size": 5140
+            },
+            {
+              "phase": 20,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_20.png",
+              "size": 4914
+            },
+            {
+              "phase": 21,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_21.png",
+              "size": 4788
+            },
+            {
+              "phase": 22,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_22.png",
+              "size": 4714
+            },
+            {
+              "phase": 23,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_23.png",
+              "size": 4551
+            },
+            {
+              "phase": 24,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_24.png",
+              "size": 4557
+            },
+            {
+              "phase": 25,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_25.png",
+              "size": 4332
+            },
+            {
+              "phase": 26,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_26.png",
+              "size": 4033
+            },
+            {
+              "phase": 27,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_27.png",
+              "size": 3749
+            },
+            {
+              "phase": 28,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_28.png",
+              "size": 3449
+            },
+            {
+              "phase": 29,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_29.png",
+              "size": 3100
+            },
+            {
+              "phase": 30,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_30.png",
+              "size": 2596
+            },
+            {
+              "phase": 31,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_31.png",
+              "size": 2084
+            },
+            {
+              "phase": 32,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_32.png",
+              "size": 1133
+            },
+            {
+              "phase": 33,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_33.png",
+              "size": 975
+            },
+            {
+              "phase": 34,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_34.png",
+              "size": 975
+            },
+            {
+              "phase": 35,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_35.png",
+              "size": 982
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_00.png",
+          "offset": 1324013,
+          "size": 1405,
+          "pixel_size": 298080,
+          "width": 92,
+          "height": 90,
+          "name": "kolo2",
+          "id": 1,
+          "definition_id": 1,
+          "phase_count": 36,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_00.png",
+              "size": 1405
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_01.png",
+              "size": 1766
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_02.png",
+              "size": 2216
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_03.png",
+              "size": 2914
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_04.png",
+              "size": 3355
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_05.png",
+              "size": 4329
+            },
+            {
+              "phase": 6,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_06.png",
+              "size": 4965
+            },
+            {
+              "phase": 7,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_07.png",
+              "size": 5273
+            },
+            {
+              "phase": 8,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_08.png",
+              "size": 5413
+            },
+            {
+              "phase": 9,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_09.png",
+              "size": 5612
+            },
+            {
+              "phase": 10,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_10.png",
+              "size": 5559
+            },
+            {
+              "phase": 11,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_11.png",
+              "size": 5485
+            },
+            {
+              "phase": 12,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_12.png",
+              "size": 5147
+            },
+            {
+              "phase": 13,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_13.png",
+              "size": 5636
+            },
+            {
+              "phase": 14,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_14.png",
+              "size": 5895
+            },
+            {
+              "phase": 15,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_15.png",
+              "size": 5977
+            },
+            {
+              "phase": 16,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_16.png",
+              "size": 5803
+            },
+            {
+              "phase": 17,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_17.png",
+              "size": 5755
+            },
+            {
+              "phase": 18,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_18.png",
+              "size": 5722
+            },
+            {
+              "phase": 19,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_19.png",
+              "size": 5586
+            },
+            {
+              "phase": 20,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_20.png",
+              "size": 5535
+            },
+            {
+              "phase": 21,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_21.png",
+              "size": 5409
+            },
+            {
+              "phase": 22,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_22.png",
+              "size": 5399
+            },
+            {
+              "phase": 23,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_23.png",
+              "size": 5302
+            },
+            {
+              "phase": 24,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_24.png",
+              "size": 5383
+            },
+            {
+              "phase": 25,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_25.png",
+              "size": 5283
+            },
+            {
+              "phase": 26,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_26.png",
+              "size": 5126
+            },
+            {
+              "phase": 27,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_27.png",
+              "size": 5128
+            },
+            {
+              "phase": 28,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_28.png",
+              "size": 4664
+            },
+            {
+              "phase": 29,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_29.png",
+              "size": 4354
+            },
+            {
+              "phase": 30,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_30.png",
+              "size": 3989
+            },
+            {
+              "phase": 31,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_31.png",
+              "size": 3836
+            },
+            {
+              "phase": 32,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_32.png",
+              "size": 3390
+            },
+            {
+              "phase": 33,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_33.png",
+              "size": 2894
+            },
+            {
+              "phase": 34,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_34.png",
+              "size": 2021
+            },
+            {
+              "phase": 35,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_35.png",
+              "size": 1474
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_002_chr0_phase_00.png",
+          "offset": 1624835,
+          "size": 20687,
+          "pixel_size": 263934,
+          "width": 341,
+          "height": 258,
+          "name": "chr0",
+          "id": 2,
+          "definition_id": 2,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_002_chr0_phase_00.png",
+              "size": 20687
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_002_chr0_phase_01.png",
+              "size": 15951
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_002_chr0_phase_02.png",
+              "size": 12934
+            }
+          ]
+        }
+      ],
+      "sprite_holder": {
+        "version": 1,
+        "definition_count": 3,
+        "instance_count": 3,
+        "parsed_definitions": 3,
+        "parsed_instances": 3,
+        "definitions": [
+          {
+            "index": 0,
+            "name": "kolo1",
+            "record_offset": 1054557,
+            "blob_offset": 1054561,
+            "blob_size": 269184,
+            "width": 83,
+            "height": 90,
+            "phase_count": 36,
+            "phase_hint": 505290270,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_00.png",
+                "size": 1097
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_01.png",
+                "size": 1250
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_02.png",
+                "size": 1977
+              },
+              {
+                "phase": 3,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_03.png",
+                "size": 3026
+              },
+              {
+                "phase": 4,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_04.png",
+                "size": 4006
+              },
+              {
+                "phase": 5,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_05.png",
+                "size": 4504
+              },
+              {
+                "phase": 6,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_06.png",
+                "size": 4648
+              },
+              {
+                "phase": 7,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_07.png",
+                "size": 4918
+              },
+              {
+                "phase": 8,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_08.png",
+                "size": 5013
+              },
+              {
+                "phase": 9,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_09.png",
+                "size": 5160
+              },
+              {
+                "phase": 10,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_10.png",
+                "size": 5111
+              },
+              {
+                "phase": 11,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_11.png",
+                "size": 5128
+              },
+              {
+                "phase": 12,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_12.png",
+                "size": 5195
+              },
+              {
+                "phase": 13,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_13.png",
+                "size": 5345
+              },
+              {
+                "phase": 14,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_14.png",
+                "size": 5333
+              },
+              {
+                "phase": 15,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_15.png",
+                "size": 5403
+              },
+              {
+                "phase": 16,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_16.png",
+                "size": 5356
+              },
+              {
+                "phase": 17,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_17.png",
+                "size": 5331
+              },
+              {
+                "phase": 18,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_18.png",
+                "size": 5292
+              },
+              {
+                "phase": 19,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_19.png",
+                "size": 5140
+              },
+              {
+                "phase": 20,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_20.png",
+                "size": 4914
+              },
+              {
+                "phase": 21,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_21.png",
+                "size": 4788
+              },
+              {
+                "phase": 22,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_22.png",
+                "size": 4714
+              },
+              {
+                "phase": 23,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_23.png",
+                "size": 4551
+              },
+              {
+                "phase": 24,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_24.png",
+                "size": 4557
+              },
+              {
+                "phase": 25,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_25.png",
+                "size": 4332
+              },
+              {
+                "phase": 26,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_26.png",
+                "size": 4033
+              },
+              {
+                "phase": 27,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_27.png",
+                "size": 3749
+              },
+              {
+                "phase": 28,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_28.png",
+                "size": 3449
+              },
+              {
+                "phase": 29,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_29.png",
+                "size": 3100
+              },
+              {
+                "phase": 30,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_30.png",
+                "size": 2596
+              },
+              {
+                "phase": 31,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_31.png",
+                "size": 2084
+              },
+              {
+                "phase": 32,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_32.png",
+                "size": 1133
+              },
+              {
+                "phase": 33,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_33.png",
+                "size": 975
+              },
+              {
+                "phase": 34,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_34.png",
+                "size": 975
+              },
+              {
+                "phase": 35,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_35.png",
+                "size": 982
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "kolo2",
+            "record_offset": 1323745,
+            "blob_offset": 1323749,
+            "blob_size": 298344,
+            "width": 92,
+            "height": 90,
+            "phase_count": 36,
+            "phase_hint": 505290270,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_00.png",
+                "size": 1405
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_01.png",
+                "size": 1766
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_02.png",
+                "size": 2216
+              },
+              {
+                "phase": 3,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_03.png",
+                "size": 2914
+              },
+              {
+                "phase": 4,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_04.png",
+                "size": 3355
+              },
+              {
+                "phase": 5,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_05.png",
+                "size": 4329
+              },
+              {
+                "phase": 6,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_06.png",
+                "size": 4965
+              },
+              {
+                "phase": 7,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_07.png",
+                "size": 5273
+              },
+              {
+                "phase": 8,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_08.png",
+                "size": 5413
+              },
+              {
+                "phase": 9,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_09.png",
+                "size": 5612
+              },
+              {
+                "phase": 10,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_10.png",
+                "size": 5559
+              },
+              {
+                "phase": 11,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_11.png",
+                "size": 5485
+              },
+              {
+                "phase": 12,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_12.png",
+                "size": 5147
+              },
+              {
+                "phase": 13,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_13.png",
+                "size": 5636
+              },
+              {
+                "phase": 14,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_14.png",
+                "size": 5895
+              },
+              {
+                "phase": 15,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_15.png",
+                "size": 5977
+              },
+              {
+                "phase": 16,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_16.png",
+                "size": 5803
+              },
+              {
+                "phase": 17,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_17.png",
+                "size": 5755
+              },
+              {
+                "phase": 18,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_18.png",
+                "size": 5722
+              },
+              {
+                "phase": 19,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_19.png",
+                "size": 5586
+              },
+              {
+                "phase": 20,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_20.png",
+                "size": 5535
+              },
+              {
+                "phase": 21,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_21.png",
+                "size": 5409
+              },
+              {
+                "phase": 22,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_22.png",
+                "size": 5399
+              },
+              {
+                "phase": 23,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_23.png",
+                "size": 5302
+              },
+              {
+                "phase": 24,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_24.png",
+                "size": 5383
+              },
+              {
+                "phase": 25,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_25.png",
+                "size": 5283
+              },
+              {
+                "phase": 26,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_26.png",
+                "size": 5126
+              },
+              {
+                "phase": 27,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_27.png",
+                "size": 5128
+              },
+              {
+                "phase": 28,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_28.png",
+                "size": 4664
+              },
+              {
+                "phase": 29,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_29.png",
+                "size": 4354
+              },
+              {
+                "phase": 30,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_30.png",
+                "size": 3989
+              },
+              {
+                "phase": 31,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_31.png",
+                "size": 3836
+              },
+              {
+                "phase": 32,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_32.png",
+                "size": 3390
+              },
+              {
+                "phase": 33,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_33.png",
+                "size": 2894
+              },
+              {
+                "phase": 34,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_34.png",
+                "size": 2021
+              },
+              {
+                "phase": 35,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_35.png",
+                "size": 1474
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "chr0",
+            "record_offset": 1622093,
+            "blob_offset": 1622097,
+            "blob_size": 266672,
+            "width": 341,
+            "height": 258,
+            "phase_count": 3,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_002_chr0_phase_00.png",
+                "size": 20687
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_002_chr0_phase_01.png",
+                "size": 15951
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_002_chr0_phase_02.png",
+                "size": 12934
+              }
+            ]
+          }
+        ],
+        "instances": [
+          {
+            "index": 0,
+            "definition_id": 0,
+            "field04": 3,
+            "x": 359,
+            "y": 330,
+            "z": 3,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1888769
+          },
+          {
+            "index": 1,
+            "definition_id": 1,
+            "field04": 3,
+            "x": 490,
+            "y": 330,
+            "z": 3,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1888909
+          },
+          {
+            "index": 2,
+            "definition_id": 2,
+            "field04": 2,
+            "x": 262,
+            "y": 125,
+            "z": 2,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1889049
+          }
+        ]
+      }
     },
     {
       "index": 3,
@@ -58,7 +1261,7 @@
       "embedded": [
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_000_001cd847_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_000_001cd847_board_video_audio.wav",
           "offset": 1890375,
           "size": 132344,
           "pcm_size": 132300,
@@ -70,11 +1273,11 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_000_001cd847_board_video_129x142.gif",
-          "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_000_001cd847_board_video_129x142_still.png",
+          "path": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_000_001cd847_board_video_129x142.gif",
+          "still_path": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_000_001cd847_board_video_129x142_still.png",
           "offset": 1890375,
           "size": 271396,
-          "still_size": 6624,
+          "still_size": 7105,
           "frame_count": 13,
           "width": 129,
           "height": 142,
@@ -84,7 +1287,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_002_002188c2_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_002_002188c2_board_video_audio.wav",
           "offset": 2197698,
           "size": 88244,
           "pcm_size": 88200,
@@ -96,11 +1299,11 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_002_002188c2_board_video_69x64.gif",
-          "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_002_002188c2_board_video_69x64_still.png",
+          "path": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_002_002188c2_board_video_69x64.gif",
+          "still_path": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_002_002188c2_board_video_69x64_still.png",
           "offset": 2197698,
           "size": 46116,
-          "still_size": 2595,
+          "still_size": 2691,
           "frame_count": 9,
           "width": 69,
           "height": 64,
@@ -110,7 +1313,7 @@
         },
         {
           "kind": "board_video_pcm_wave",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_004_00234f2e_board_video_audio.wav",
+          "path": "extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_004_00234f2e_board_video_audio.wav",
           "offset": 2314030,
           "size": 88244,
           "pcm_size": 88200,
@@ -122,11 +1325,11 @@
         },
         {
           "kind": "board_video_gif",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_004_00234f2e_board_video_51x40.gif",
-          "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_004_00234f2e_board_video_51x40_still.png",
+          "path": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_004_00234f2e_board_video_51x40.gif",
+          "still_path": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_004_00234f2e_board_video_51x40_still.png",
           "offset": 2314030,
           "size": 21852,
-          "still_size": 1504,
+          "still_size": 1570,
           "frame_count": 9,
           "width": 51,
           "height": 40,
@@ -155,11 +1358,11 @@
           "audio_record_count": 3,
           "video_record_count": 13,
           "stop_reason": "next_stream",
-          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_000_001cd847_board_video_audio.wav",
+          "audio_output": "extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_000_001cd847_board_video_audio.wav",
           "audio_pcm_size": 132300,
           "duration_seconds": 3.0,
-          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_000_001cd847_board_video_129x142.gif",
-          "still_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_000_001cd847_board_video_129x142_still.png",
+          "video_output": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_000_001cd847_board_video_129x142.gif",
+          "still_output": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_000_001cd847_board_video_129x142_still.png",
           "transparent_index": 30
         },
         {
@@ -199,11 +1402,11 @@
           "audio_record_count": 2,
           "video_record_count": 9,
           "stop_reason": "next_stream",
-          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_002_002188c2_board_video_audio.wav",
+          "audio_output": "extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_002_002188c2_board_video_audio.wav",
           "audio_pcm_size": 88200,
           "duration_seconds": 2.0,
-          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_002_002188c2_board_video_69x64.gif",
-          "still_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_002_002188c2_board_video_69x64_still.png",
+          "video_output": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_002_002188c2_board_video_69x64.gif",
+          "still_output": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_002_002188c2_board_video_69x64_still.png",
           "transparent_index": 30
         },
         {
@@ -243,11 +1446,11 @@
           "audio_record_count": 2,
           "video_record_count": 9,
           "stop_reason": "next_stream",
-          "audio_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_004_00234f2e_board_video_audio.wav",
+          "audio_output": "extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_004_00234f2e_board_video_audio.wav",
           "audio_pcm_size": 88200,
           "duration_seconds": 2.0,
-          "video_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_004_00234f2e_board_video_51x40.gif",
-          "still_output": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_004_00234f2e_board_video_51x40_still.png",
+          "video_output": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_004_00234f2e_board_video_51x40.gif",
+          "still_output": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_004_00234f2e_board_video_51x40_still.png",
           "transparent_index": 30
         },
         {
@@ -290,49 +1493,49 @@
       "embedded": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_000_0024ee58.wav",
+          "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_000_0024ee58.wav",
           "offset": 2420312,
           "size": 349442,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_001_002a43ba.wav",
+          "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_001_002a43ba.wav",
           "offset": 2769850,
           "size": 10920,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_002_002a6ec2.wav",
+          "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_002_002a6ec2.wav",
           "offset": 2780866,
           "size": 52436,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_003_002b3bf6.wav",
+          "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_003_002b3bf6.wav",
           "offset": 2833398,
           "size": 16852,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_004_002b7e2a.wav",
+          "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_004_002b7e2a.wav",
           "offset": 2850346,
           "size": 241476,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_005_002f2dce.wav",
+          "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_005_002f2dce.wav",
           "offset": 3091918,
           "size": 32504,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_006_002fad26.wav",
+          "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_006_002fad26.wav",
           "offset": 3124518,
           "size": 385818,
           "extension": ".wav"
@@ -352,17 +1555,590 @@
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\MROZ\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\script.txt",
+      "path": "extracted_assets\\bdf\\MROZ\\script.txt",
       "size": 17244
     },
     {
+      "kind": "panorama_holder_bmp",
+      "path": "extracted_assets\\bdf\\MROZ\\panorama_holder\\00_Panorama_Holder_000_panorama_2560x276.bmp",
+      "offset": 3855,
+      "size": 707558,
+      "dib_size": 707544,
+      "width": 2560,
+      "height": 276,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 2560,
+        "height": 276
+      },
+      "geometry_confidence": "serialized_entry",
+      "initially_visible": false
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\MROZ\\bitmap_holder\\01_Bitmap_Holder_000_ch_op_98x165.bmp",
+      "offset": 712679,
+      "size": 17578,
+      "pixel_size": 16500,
+      "width": 98,
+      "height": 165,
+      "name": "chłop",
+      "rect": {
+        "x": 542,
+        "y": 192,
+        "width": 98,
+        "height": 165
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\MROZ\\bitmap_holder\\01_Bitmap_Holder_001_szczebel_21x100.bmp",
+      "offset": 729327,
+      "size": 3478,
+      "pixel_size": 2400,
+      "width": 21,
+      "height": 100,
+      "name": "szczebel ",
+      "rect": {
+        "x": 394,
+        "y": 238,
+        "width": 21,
+        "height": 100
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\MROZ\\bitmap_holder\\01_Bitmap_Holder_002_szczebel_21x100.bmp",
+      "offset": 731875,
+      "size": 3478,
+      "pixel_size": 2400,
+      "width": 21,
+      "height": 100,
+      "name": "szczebel ",
+      "rect": {
+        "x": 416,
+        "y": 238,
+        "width": 21,
+        "height": 100
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\MROZ\\bitmap_holder\\01_Bitmap_Holder_003_w_z_314x149.bmp",
+      "offset": 734423,
+      "size": 48162,
+      "pixel_size": 47084,
+      "width": 314,
+      "height": 149,
+      "name": "wóz",
+      "rect": {
+        "x": 326,
+        "y": 233,
+        "width": 314,
+        "height": 149
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\MROZ\\bitmap_holder\\01_Bitmap_Holder_004_K0_149x85.bmp",
+      "offset": 781655,
+      "size": 13998,
+      "pixel_size": 12920,
+      "width": 149,
+      "height": 85,
+      "name": "K0",
+      "rect": {
+        "x": 97,
+        "y": 269,
+        "width": 149,
+        "height": 85
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\MROZ\\bitmap_holder\\01_Bitmap_Holder_005_k1_207x302.bmp",
+      "offset": 794723,
+      "size": 63894,
+      "pixel_size": 62816,
+      "width": 207,
+      "height": 302,
+      "name": "k1",
+      "rect": {
+        "x": 203,
+        "y": 127,
+        "width": 207,
+        "height": 302
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\MROZ\\bitmap_holder\\01_Bitmap_Holder_006_k2_337x62.bmp",
+      "offset": 857687,
+      "size": 22158,
+      "pixel_size": 21080,
+      "width": 337,
+      "height": 62,
+      "name": "k2",
+      "rect": {
+        "x": 204,
+        "y": 418,
+        "width": 337,
+        "height": 62
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\MROZ\\bitmap_holder\\01_Bitmap_Holder_007_mroz1_640x272.bmp",
+      "offset": 878915,
+      "size": 175158,
+      "pixel_size": 174080,
+      "width": 640,
+      "height": 272,
+      "name": "mroz1",
+      "rect": {
+        "x": 0,
+        "y": 208,
+        "width": 640,
+        "height": 272
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_00.png",
+      "offset": 1054825,
+      "size": 1097,
+      "pixel_size": 268920,
+      "width": 83,
+      "height": 90,
+      "name": "kolo1",
+      "id": 0,
+      "definition_id": 0,
+      "phase_count": 36,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_00.png",
+          "size": 1097
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_01.png",
+          "size": 1250
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_02.png",
+          "size": 1977
+        },
+        {
+          "phase": 3,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_03.png",
+          "size": 3026
+        },
+        {
+          "phase": 4,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_04.png",
+          "size": 4006
+        },
+        {
+          "phase": 5,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_05.png",
+          "size": 4504
+        },
+        {
+          "phase": 6,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_06.png",
+          "size": 4648
+        },
+        {
+          "phase": 7,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_07.png",
+          "size": 4918
+        },
+        {
+          "phase": 8,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_08.png",
+          "size": 5013
+        },
+        {
+          "phase": 9,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_09.png",
+          "size": 5160
+        },
+        {
+          "phase": 10,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_10.png",
+          "size": 5111
+        },
+        {
+          "phase": 11,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_11.png",
+          "size": 5128
+        },
+        {
+          "phase": 12,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_12.png",
+          "size": 5195
+        },
+        {
+          "phase": 13,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_13.png",
+          "size": 5345
+        },
+        {
+          "phase": 14,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_14.png",
+          "size": 5333
+        },
+        {
+          "phase": 15,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_15.png",
+          "size": 5403
+        },
+        {
+          "phase": 16,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_16.png",
+          "size": 5356
+        },
+        {
+          "phase": 17,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_17.png",
+          "size": 5331
+        },
+        {
+          "phase": 18,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_18.png",
+          "size": 5292
+        },
+        {
+          "phase": 19,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_19.png",
+          "size": 5140
+        },
+        {
+          "phase": 20,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_20.png",
+          "size": 4914
+        },
+        {
+          "phase": 21,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_21.png",
+          "size": 4788
+        },
+        {
+          "phase": 22,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_22.png",
+          "size": 4714
+        },
+        {
+          "phase": 23,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_23.png",
+          "size": 4551
+        },
+        {
+          "phase": 24,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_24.png",
+          "size": 4557
+        },
+        {
+          "phase": 25,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_25.png",
+          "size": 4332
+        },
+        {
+          "phase": 26,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_26.png",
+          "size": 4033
+        },
+        {
+          "phase": 27,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_27.png",
+          "size": 3749
+        },
+        {
+          "phase": 28,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_28.png",
+          "size": 3449
+        },
+        {
+          "phase": 29,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_29.png",
+          "size": 3100
+        },
+        {
+          "phase": 30,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_30.png",
+          "size": 2596
+        },
+        {
+          "phase": 31,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_31.png",
+          "size": 2084
+        },
+        {
+          "phase": 32,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_32.png",
+          "size": 1133
+        },
+        {
+          "phase": 33,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_33.png",
+          "size": 975
+        },
+        {
+          "phase": 34,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_34.png",
+          "size": 975
+        },
+        {
+          "phase": 35,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_000_kolo1_phase_35.png",
+          "size": 982
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_00.png",
+      "offset": 1324013,
+      "size": 1405,
+      "pixel_size": 298080,
+      "width": 92,
+      "height": 90,
+      "name": "kolo2",
+      "id": 1,
+      "definition_id": 1,
+      "phase_count": 36,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_00.png",
+          "size": 1405
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_01.png",
+          "size": 1766
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_02.png",
+          "size": 2216
+        },
+        {
+          "phase": 3,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_03.png",
+          "size": 2914
+        },
+        {
+          "phase": 4,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_04.png",
+          "size": 3355
+        },
+        {
+          "phase": 5,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_05.png",
+          "size": 4329
+        },
+        {
+          "phase": 6,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_06.png",
+          "size": 4965
+        },
+        {
+          "phase": 7,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_07.png",
+          "size": 5273
+        },
+        {
+          "phase": 8,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_08.png",
+          "size": 5413
+        },
+        {
+          "phase": 9,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_09.png",
+          "size": 5612
+        },
+        {
+          "phase": 10,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_10.png",
+          "size": 5559
+        },
+        {
+          "phase": 11,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_11.png",
+          "size": 5485
+        },
+        {
+          "phase": 12,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_12.png",
+          "size": 5147
+        },
+        {
+          "phase": 13,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_13.png",
+          "size": 5636
+        },
+        {
+          "phase": 14,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_14.png",
+          "size": 5895
+        },
+        {
+          "phase": 15,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_15.png",
+          "size": 5977
+        },
+        {
+          "phase": 16,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_16.png",
+          "size": 5803
+        },
+        {
+          "phase": 17,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_17.png",
+          "size": 5755
+        },
+        {
+          "phase": 18,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_18.png",
+          "size": 5722
+        },
+        {
+          "phase": 19,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_19.png",
+          "size": 5586
+        },
+        {
+          "phase": 20,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_20.png",
+          "size": 5535
+        },
+        {
+          "phase": 21,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_21.png",
+          "size": 5409
+        },
+        {
+          "phase": 22,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_22.png",
+          "size": 5399
+        },
+        {
+          "phase": 23,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_23.png",
+          "size": 5302
+        },
+        {
+          "phase": 24,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_24.png",
+          "size": 5383
+        },
+        {
+          "phase": 25,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_25.png",
+          "size": 5283
+        },
+        {
+          "phase": 26,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_26.png",
+          "size": 5126
+        },
+        {
+          "phase": 27,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_27.png",
+          "size": 5128
+        },
+        {
+          "phase": 28,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_28.png",
+          "size": 4664
+        },
+        {
+          "phase": 29,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_29.png",
+          "size": 4354
+        },
+        {
+          "phase": 30,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_30.png",
+          "size": 3989
+        },
+        {
+          "phase": 31,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_31.png",
+          "size": 3836
+        },
+        {
+          "phase": 32,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_32.png",
+          "size": 3390
+        },
+        {
+          "phase": 33,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_33.png",
+          "size": 2894
+        },
+        {
+          "phase": 34,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_34.png",
+          "size": 2021
+        },
+        {
+          "phase": 35,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_001_kolo2_phase_35.png",
+          "size": 1474
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_002_chr0_phase_00.png",
+      "offset": 1624835,
+      "size": 20687,
+      "pixel_size": 263934,
+      "width": 341,
+      "height": 258,
+      "name": "chr0",
+      "id": 2,
+      "definition_id": 2,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_002_chr0_phase_00.png",
+          "size": 20687
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_002_chr0_phase_01.png",
+          "size": 15951
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\MROZ\\sprite_holder\\02_Sprite_Holder_002_chr0_phase_02.png",
+          "size": 12934
+        }
+      ]
+    },
+    {
       "kind": "board_video_pcm_wave",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_000_001cd847_board_video_audio.wav",
+      "path": "extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_000_001cd847_board_video_audio.wav",
       "offset": 1890375,
       "size": 132344,
       "pcm_size": 132300,
@@ -374,11 +2150,11 @@
     },
     {
       "kind": "board_video_gif",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_000_001cd847_board_video_129x142.gif",
-      "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_000_001cd847_board_video_129x142_still.png",
+      "path": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_000_001cd847_board_video_129x142.gif",
+      "still_path": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_000_001cd847_board_video_129x142_still.png",
       "offset": 1890375,
       "size": 271396,
-      "still_size": 6624,
+      "still_size": 7105,
       "frame_count": 13,
       "width": 129,
       "height": 142,
@@ -388,7 +2164,7 @@
     },
     {
       "kind": "board_video_pcm_wave",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_002_002188c2_board_video_audio.wav",
+      "path": "extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_002_002188c2_board_video_audio.wav",
       "offset": 2197698,
       "size": 88244,
       "pcm_size": 88200,
@@ -400,11 +2176,11 @@
     },
     {
       "kind": "board_video_gif",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_002_002188c2_board_video_69x64.gif",
-      "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_002_002188c2_board_video_69x64_still.png",
+      "path": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_002_002188c2_board_video_69x64.gif",
+      "still_path": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_002_002188c2_board_video_69x64_still.png",
       "offset": 2197698,
       "size": 46116,
-      "still_size": 2595,
+      "still_size": 2691,
       "frame_count": 9,
       "width": 69,
       "height": 64,
@@ -414,7 +2190,7 @@
     },
     {
       "kind": "board_video_pcm_wave",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_004_00234f2e_board_video_audio.wav",
+      "path": "extracted_assets\\bdf\\MROZ\\embedded\\03_Transparent_Video_Holder_004_00234f2e_board_video_audio.wav",
       "offset": 2314030,
       "size": 88244,
       "pcm_size": 88200,
@@ -426,11 +2202,11 @@
     },
     {
       "kind": "board_video_gif",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_004_00234f2e_board_video_51x40.gif",
-      "still_path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_004_00234f2e_board_video_51x40_still.png",
+      "path": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_004_00234f2e_board_video_51x40.gif",
+      "still_path": "extracted_assets\\bdf\\MROZ\\animations\\03_Transparent_Video_Holder_004_00234f2e_board_video_51x40_still.png",
       "offset": 2314030,
       "size": 21852,
-      "still_size": 1504,
+      "still_size": 1570,
       "frame_count": 9,
       "width": 51,
       "height": 40,
@@ -440,37 +2216,37 @@
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_000_0024ee58.wav",
+      "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_000_0024ee58.wav",
       "size": 349442
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_001_002a43ba.wav",
+      "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_001_002a43ba.wav",
       "size": 10920
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_002_002a6ec2.wav",
+      "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_002_002a6ec2.wav",
       "size": 52436
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_003_002b3bf6.wav",
+      "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_003_002b3bf6.wav",
       "size": 16852
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_004_002b7e2a.wav",
+      "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_004_002b7e2a.wav",
       "size": 241476
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_005_002f2dce.wav",
+      "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_005_002f2dce.wav",
       "size": 32504
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_006_002fad26.wav",
+      "path": "extracted_assets\\bdf\\MROZ\\embedded\\05_Sound_Holder_006_002fad26.wav",
       "size": 385818
     }
   ],

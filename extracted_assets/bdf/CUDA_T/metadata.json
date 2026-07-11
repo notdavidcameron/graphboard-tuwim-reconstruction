@@ -37,7 +37,85 @@
       "display_name": "Bitmap_Holder",
       "private_offset": 4136,
       "private_size": 388144,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\CUDA_T\\bitmap_holder\\01_Bitmap_Holder_000_1atloi dz_640x480.bmp",
+          "offset": 4276,
+          "size": 308278,
+          "pixel_size": 307200,
+          "width": 640,
+          "height": 480,
+          "name": "1atloi dz",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 640,
+            "height": 480
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\CUDA_T\\bitmap_holder\\01_Bitmap_Holder_001_ryseo 02_285x280.bmp",
+          "offset": 311624,
+          "size": 81718,
+          "pixel_size": 80640,
+          "width": 285,
+          "height": 280,
+          "name": "ryseo 02",
+          "rect": {
+            "x": 355,
+            "y": 0,
+            "width": 285,
+            "height": 280
+          },
+          "geometry_confidence": "serialized_entry"
+        }
+      ],
+      "bitmap_holder": {
+        "version": 1,
+        "declared_count": 2,
+        "parsed_count": 2,
+        "frames": [
+          {
+            "index": 0,
+            "name": "1atloi dz",
+            "record_offset": 4144,
+            "record_size": 307344,
+            "pixel_offset": 4276,
+            "width": 640,
+            "height": 480,
+            "right": 640,
+            "bottom": 480,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 640,
+              "height": 480
+            },
+            "bmp_output": "extracted_assets\\bdf\\CUDA_T\\bitmap_holder\\01_Bitmap_Holder_000_1atloi dz_640x480.bmp"
+          },
+          {
+            "index": 1,
+            "name": "ryseo 02",
+            "record_offset": 311492,
+            "record_size": 80784,
+            "pixel_offset": 311624,
+            "width": 285,
+            "height": 280,
+            "right": 640,
+            "bottom": 280,
+            "rect": {
+              "x": 355,
+              "y": 0,
+              "width": 285,
+              "height": 280
+            },
+            "bmp_output": "extracted_assets\\bdf\\CUDA_T\\bitmap_holder\\01_Bitmap_Holder_001_ryseo 02_285x280.bmp"
+          }
+        ]
+      }
     },
     {
       "index": 2,
@@ -46,7 +124,541 @@
       "display_name": "Sprite_Holder",
       "private_offset": 393814,
       "private_size": 55328,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_000_play 01_phase_00.png",
+          "offset": 394170,
+          "size": 1294,
+          "pixel_size": 1440,
+          "width": 24,
+          "height": 30,
+          "name": "play 01",
+          "id": 0,
+          "definition_id": 0,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_000_play 01_phase_00.png",
+              "size": 1294
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_000_play 01_phase_01.png",
+              "size": 1364
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_001_stop 01_phase_00.png",
+          "offset": 396012,
+          "size": 1424,
+          "pixel_size": 1566,
+          "width": 27,
+          "height": 29,
+          "name": "stop 01",
+          "id": 1,
+          "definition_id": 1,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_001_stop 01_phase_00.png",
+              "size": 1424
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_001_stop 01_phase_01.png",
+              "size": 1146
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_002_przew1_phase_00.png",
+          "offset": 398010,
+          "size": 1259,
+          "pixel_size": 792,
+          "width": 18,
+          "height": 22,
+          "name": "przew1",
+          "id": 2,
+          "definition_id": 2,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_002_przew1_phase_00.png",
+              "size": 1259
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_002_przew1_phase_01.png",
+              "size": 1040
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_003_przew2_phase_00.png",
+          "offset": 399234,
+          "size": 1249,
+          "pixel_size": 792,
+          "width": 18,
+          "height": 22,
+          "name": "przew2",
+          "id": 3,
+          "definition_id": 3,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_003_przew2_phase_00.png",
+              "size": 1249
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_003_przew2_phase_01.png",
+              "size": 1035
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_004_przew3_phase_00.png",
+          "offset": 400458,
+          "size": 1251,
+          "pixel_size": 792,
+          "width": 18,
+          "height": 22,
+          "name": "przew3",
+          "id": 4,
+          "definition_id": 4,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_004_przew3_phase_00.png",
+              "size": 1251
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_004_przew3_phase_01.png",
+              "size": 1040
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_005_przew4_phase_00.png",
+          "offset": 401650,
+          "size": 1274,
+          "pixel_size": 836,
+          "width": 19,
+          "height": 22,
+          "name": "przew4",
+          "id": 5,
+          "definition_id": 5,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_005_przew4_phase_00.png",
+              "size": 1274
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_005_przew4_phase_01.png",
+              "size": 1062
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_006_przew5_phase_00.png",
+          "offset": 402842,
+          "size": 1198,
+          "pixel_size": 792,
+          "width": 18,
+          "height": 22,
+          "name": "przew5",
+          "id": 6,
+          "definition_id": 6,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_006_przew5_phase_00.png",
+              "size": 1198
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_006_przew5_phase_01.png",
+              "size": 1199
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_007_motylek_phase_00.png",
+          "offset": 404363,
+          "size": 4602,
+          "pixel_size": 43659,
+          "width": 81,
+          "height": 77,
+          "name": "motylek ",
+          "id": 7,
+          "definition_id": 7,
+          "phase_count": 7,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_007_motylek_phase_00.png",
+              "size": 4602
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_007_motylek_phase_01.png",
+              "size": 2824
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_007_motylek_phase_02.png",
+              "size": 3130
+            },
+            {
+              "phase": 3,
+              "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_007_motylek_phase_03.png",
+              "size": 2989
+            },
+            {
+              "phase": 4,
+              "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_007_motylek_phase_04.png",
+              "size": 2842
+            },
+            {
+              "phase": 5,
+              "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_007_motylek_phase_05.png",
+              "size": 2695
+            },
+            {
+              "phase": 6,
+              "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_007_motylek_phase_06.png",
+              "size": 1999
+            }
+          ]
+        }
+      ],
+      "sprite_holder": {
+        "version": 1,
+        "definition_count": 8,
+        "instance_count": 8,
+        "parsed_definitions": 8,
+        "parsed_instances": 8,
+        "definitions": [
+          {
+            "index": 0,
+            "name": "play 01",
+            "record_offset": 393826,
+            "blob_offset": 393830,
+            "blob_size": 1780,
+            "width": 24,
+            "height": 30,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_000_play 01_phase_00.png",
+                "size": 1294
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_000_play 01_phase_01.png",
+                "size": 1364
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "stop 01",
+            "record_offset": 395610,
+            "blob_offset": 395614,
+            "blob_size": 1964,
+            "width": 27,
+            "height": 29,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_001_stop 01_phase_00.png",
+                "size": 1424
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_001_stop 01_phase_01.png",
+                "size": 1146
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "przew1",
+            "record_offset": 397578,
+            "blob_offset": 397582,
+            "blob_size": 1220,
+            "width": 18,
+            "height": 22,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_002_przew1_phase_00.png",
+                "size": 1259
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_002_przew1_phase_01.png",
+                "size": 1040
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "name": "przew2",
+            "record_offset": 398802,
+            "blob_offset": 398806,
+            "blob_size": 1220,
+            "width": 18,
+            "height": 22,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_003_przew2_phase_00.png",
+                "size": 1249
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_003_przew2_phase_01.png",
+                "size": 1035
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "name": "przew3",
+            "record_offset": 400026,
+            "blob_offset": 400030,
+            "blob_size": 1220,
+            "width": 18,
+            "height": 22,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_004_przew3_phase_00.png",
+                "size": 1251
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_004_przew3_phase_01.png",
+                "size": 1040
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "name": "przew4",
+            "record_offset": 401250,
+            "blob_offset": 401254,
+            "blob_size": 1232,
+            "width": 19,
+            "height": 22,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_005_przew4_phase_00.png",
+                "size": 1274
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_005_przew4_phase_01.png",
+                "size": 1062
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "name": "przew5",
+            "record_offset": 402486,
+            "blob_offset": 402490,
+            "blob_size": 1144,
+            "width": 18,
+            "height": 22,
+            "phase_count": 2,
+            "phase_hint": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_006_przew5_phase_00.png",
+                "size": 1198
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_006_przew5_phase_01.png",
+                "size": 1199
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "name": "motylek ",
+            "record_offset": 403634,
+            "blob_offset": 403638,
+            "blob_size": 44384,
+            "width": 81,
+            "height": 77,
+            "phase_count": 7,
+            "phase_hint": 6,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_007_motylek_phase_00.png",
+                "size": 4602
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_007_motylek_phase_01.png",
+                "size": 2824
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_007_motylek_phase_02.png",
+                "size": 3130
+              },
+              {
+                "phase": 3,
+                "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_007_motylek_phase_03.png",
+                "size": 2989
+              },
+              {
+                "phase": 4,
+                "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_007_motylek_phase_04.png",
+                "size": 2842
+              },
+              {
+                "phase": 5,
+                "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_007_motylek_phase_05.png",
+                "size": 2695
+              },
+              {
+                "phase": 6,
+                "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_007_motylek_phase_06.png",
+                "size": 1999
+              }
+            ]
+          }
+        ],
+        "instances": [
+          {
+            "index": 0,
+            "definition_id": 0,
+            "field04": 1,
+            "x": 218,
+            "y": 226,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 448022
+          },
+          {
+            "index": 1,
+            "definition_id": 1,
+            "field04": 1,
+            "x": 244,
+            "y": 226,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 448162
+          },
+          {
+            "index": 2,
+            "definition_id": 2,
+            "field04": 1,
+            "x": 334,
+            "y": 229,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 448302
+          },
+          {
+            "index": 3,
+            "definition_id": 3,
+            "field04": 1,
+            "x": 353,
+            "y": 229,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 448442
+          },
+          {
+            "index": 4,
+            "definition_id": 4,
+            "field04": 1,
+            "x": 372,
+            "y": 229,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 448582
+          },
+          {
+            "index": 5,
+            "definition_id": 5,
+            "field04": 1,
+            "x": 390,
+            "y": 229,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 448722
+          },
+          {
+            "index": 6,
+            "definition_id": 6,
+            "field04": 1,
+            "x": 409,
+            "y": 229,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 448862
+          },
+          {
+            "index": 7,
+            "definition_id": 7,
+            "field04": 1,
+            "x": 323,
+            "y": 299,
+            "z": 1,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 449002
+          }
+        ]
+      }
     },
     {
       "index": 3,
@@ -61,13 +673,272 @@
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_T\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\CUDA_T\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\CUDA_T\\script.txt",
+      "path": "extracted_assets\\bdf\\CUDA_T\\script.txt",
       "size": 8592
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\CUDA_T\\bitmap_holder\\01_Bitmap_Holder_000_1atloi dz_640x480.bmp",
+      "offset": 4276,
+      "size": 308278,
+      "pixel_size": 307200,
+      "width": 640,
+      "height": 480,
+      "name": "1atloi dz",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 640,
+        "height": 480
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\CUDA_T\\bitmap_holder\\01_Bitmap_Holder_001_ryseo 02_285x280.bmp",
+      "offset": 311624,
+      "size": 81718,
+      "pixel_size": 80640,
+      "width": 285,
+      "height": 280,
+      "name": "ryseo 02",
+      "rect": {
+        "x": 355,
+        "y": 0,
+        "width": 285,
+        "height": 280
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_000_play 01_phase_00.png",
+      "offset": 394170,
+      "size": 1294,
+      "pixel_size": 1440,
+      "width": 24,
+      "height": 30,
+      "name": "play 01",
+      "id": 0,
+      "definition_id": 0,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_000_play 01_phase_00.png",
+          "size": 1294
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_000_play 01_phase_01.png",
+          "size": 1364
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_001_stop 01_phase_00.png",
+      "offset": 396012,
+      "size": 1424,
+      "pixel_size": 1566,
+      "width": 27,
+      "height": 29,
+      "name": "stop 01",
+      "id": 1,
+      "definition_id": 1,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_001_stop 01_phase_00.png",
+          "size": 1424
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_001_stop 01_phase_01.png",
+          "size": 1146
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_002_przew1_phase_00.png",
+      "offset": 398010,
+      "size": 1259,
+      "pixel_size": 792,
+      "width": 18,
+      "height": 22,
+      "name": "przew1",
+      "id": 2,
+      "definition_id": 2,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_002_przew1_phase_00.png",
+          "size": 1259
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_002_przew1_phase_01.png",
+          "size": 1040
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_003_przew2_phase_00.png",
+      "offset": 399234,
+      "size": 1249,
+      "pixel_size": 792,
+      "width": 18,
+      "height": 22,
+      "name": "przew2",
+      "id": 3,
+      "definition_id": 3,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_003_przew2_phase_00.png",
+          "size": 1249
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_003_przew2_phase_01.png",
+          "size": 1035
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_004_przew3_phase_00.png",
+      "offset": 400458,
+      "size": 1251,
+      "pixel_size": 792,
+      "width": 18,
+      "height": 22,
+      "name": "przew3",
+      "id": 4,
+      "definition_id": 4,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_004_przew3_phase_00.png",
+          "size": 1251
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_004_przew3_phase_01.png",
+          "size": 1040
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_005_przew4_phase_00.png",
+      "offset": 401650,
+      "size": 1274,
+      "pixel_size": 836,
+      "width": 19,
+      "height": 22,
+      "name": "przew4",
+      "id": 5,
+      "definition_id": 5,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_005_przew4_phase_00.png",
+          "size": 1274
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_005_przew4_phase_01.png",
+          "size": 1062
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_006_przew5_phase_00.png",
+      "offset": 402842,
+      "size": 1198,
+      "pixel_size": 792,
+      "width": 18,
+      "height": 22,
+      "name": "przew5",
+      "id": 6,
+      "definition_id": 6,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_006_przew5_phase_00.png",
+          "size": 1198
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_006_przew5_phase_01.png",
+          "size": 1199
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_007_motylek_phase_00.png",
+      "offset": 404363,
+      "size": 4602,
+      "pixel_size": 43659,
+      "width": 81,
+      "height": 77,
+      "name": "motylek ",
+      "id": 7,
+      "definition_id": 7,
+      "phase_count": 7,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_007_motylek_phase_00.png",
+          "size": 4602
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_007_motylek_phase_01.png",
+          "size": 2824
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_007_motylek_phase_02.png",
+          "size": 3130
+        },
+        {
+          "phase": 3,
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_007_motylek_phase_03.png",
+          "size": 2989
+        },
+        {
+          "phase": 4,
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_007_motylek_phase_04.png",
+          "size": 2842
+        },
+        {
+          "phase": 5,
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_007_motylek_phase_05.png",
+          "size": 2695
+        },
+        {
+          "phase": 6,
+          "path": "extracted_assets\\bdf\\CUDA_T\\sprite_holder\\02_Sprite_Holder_007_motylek_phase_06.png",
+          "size": 1999
+        }
+      ]
     }
   ],
   "script": {

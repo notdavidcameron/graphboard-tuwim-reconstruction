@@ -23,23 +23,252 @@
       "sourceType": "Sprite_Holder",
       "namespace": "Page",
       "index": 0,
-      "z": 50,
+      "z": 0,
       "visible": true,
       "rect": {
-        "x": 0,
+        "x": 74,
         "y": 0,
-        "width": 48,
-        "height": 48
+        "width": 548,
+        "height": 329
       },
-      "geometryConfidence": "synthetic_items",
+      "geometryConfidence": "serialized_entries",
       "itemCount": 6,
       "hitboxes": [],
       "sourceOffset": 309353,
       "geometrySourceOffset": null,
       "privateOffset": 310887,
       "privateSize": 82408,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/bdf/MICH1/sprite_holder/00_Sprite_Holder_000_przycisk_phase_00.png",
+      "assets": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MICH1\\sprite_holder\\00_Sprite_Holder_000_przycisk_phase_00.png",
+          "url": "../extracted_assets/bdf/MICH1/sprite_holder/00_Sprite_Holder_000_przycisk_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 50,
+          "height": 50,
+          "frameCount": null,
+          "offset": 311443,
+          "name": "przycisk ",
+          "id": 0,
+          "definitionId": 0,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MICH1\\sprite_holder\\00_Sprite_Holder_000_przycisk_phase_00.png",
+              "url": "../extracted_assets/bdf/MICH1/sprite_holder/00_Sprite_Holder_000_przycisk_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MICH1\\sprite_holder\\00_Sprite_Holder_000_przycisk_phase_01.png",
+              "url": "../extracted_assets/bdf/MICH1/sprite_holder/00_Sprite_Holder_000_przycisk_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 392455,
+          "rect": {
+            "x": 74,
+            "y": 202,
+            "width": 50,
+            "height": 50
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MICH1\\sprite_holder\\00_Sprite_Holder_001_przycisk_phase_00.png",
+          "url": "../extracted_assets/bdf/MICH1/sprite_holder/00_Sprite_Holder_001_przycisk_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 51,
+          "height": 50,
+          "frameCount": null,
+          "offset": 316887,
+          "name": "przycisk ",
+          "id": 1,
+          "definitionId": 1,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MICH1\\sprite_holder\\00_Sprite_Holder_001_przycisk_phase_00.png",
+              "url": "../extracted_assets/bdf/MICH1/sprite_holder/00_Sprite_Holder_001_przycisk_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MICH1\\sprite_holder\\00_Sprite_Holder_001_przycisk_phase_01.png",
+              "url": "../extracted_assets/bdf/MICH1/sprite_holder/00_Sprite_Holder_001_przycisk_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 392595,
+          "rect": {
+            "x": 78,
+            "y": 279,
+            "width": 51,
+            "height": 50
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MICH1\\sprite_holder\\00_Sprite_Holder_002_przycisk_phase_00.png",
+          "url": "../extracted_assets/bdf/MICH1/sprite_holder/00_Sprite_Holder_002_przycisk_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 50,
+          "height": 50,
+          "frameCount": null,
+          "offset": 322531,
+          "name": "przycisk ",
+          "id": 2,
+          "definitionId": 2,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MICH1\\sprite_holder\\00_Sprite_Holder_002_przycisk_phase_00.png",
+              "url": "../extracted_assets/bdf/MICH1/sprite_holder/00_Sprite_Holder_002_przycisk_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MICH1\\sprite_holder\\00_Sprite_Holder_002_przycisk_phase_01.png",
+              "url": "../extracted_assets/bdf/MICH1/sprite_holder/00_Sprite_Holder_002_przycisk_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 392735,
+          "rect": {
+            "x": 572,
+            "y": 77,
+            "width": 50,
+            "height": 50
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MICH1\\sprite_holder\\00_Sprite_Holder_003_przycisk_phase_00.png",
+          "url": "../extracted_assets/bdf/MICH1/sprite_holder/00_Sprite_Holder_003_przycisk_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 46,
+          "height": 43,
+          "frameCount": null,
+          "offset": 328047,
+          "name": "przycisk ",
+          "id": 3,
+          "definitionId": 3,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MICH1\\sprite_holder\\00_Sprite_Holder_003_przycisk_phase_00.png",
+              "url": "../extracted_assets/bdf/MICH1/sprite_holder/00_Sprite_Holder_003_przycisk_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MICH1\\sprite_holder\\00_Sprite_Holder_003_przycisk_phase_01.png",
+              "url": "../extracted_assets/bdf/MICH1/sprite_holder/00_Sprite_Holder_003_przycisk_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 392875,
+          "rect": {
+            "x": 535,
+            "y": 115,
+            "width": 46,
+            "height": 43
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MICH1\\sprite_holder\\00_Sprite_Holder_004_przycisk_phase_00.png",
+          "url": "../extracted_assets/bdf/MICH1/sprite_holder/00_Sprite_Holder_004_przycisk_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 46,
+          "height": 44,
+          "frameCount": null,
+          "offset": 332523,
+          "name": "przycisk ",
+          "id": 4,
+          "definitionId": 4,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MICH1\\sprite_holder\\00_Sprite_Holder_004_przycisk_phase_00.png",
+              "url": "../extracted_assets/bdf/MICH1/sprite_holder/00_Sprite_Holder_004_przycisk_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MICH1\\sprite_holder\\00_Sprite_Holder_004_przycisk_phase_01.png",
+              "url": "../extracted_assets/bdf/MICH1/sprite_holder/00_Sprite_Holder_004_przycisk_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 393015,
+          "rect": {
+            "x": 529,
+            "y": 186,
+            "width": 46,
+            "height": 44
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\MICH1\\sprite_holder\\00_Sprite_Holder_005_kula_phase_00.png",
+          "url": "../extracted_assets/bdf/MICH1/sprite_holder/00_Sprite_Holder_005_kula_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 157,
+          "height": 176,
+          "frameCount": null,
+          "offset": 337191,
+          "name": "kula ",
+          "id": 5,
+          "definitionId": 5,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\MICH1\\sprite_holder\\00_Sprite_Holder_005_kula_phase_00.png",
+              "url": "../extracted_assets/bdf/MICH1/sprite_holder/00_Sprite_Holder_005_kula_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\MICH1\\sprite_holder\\00_Sprite_Holder_005_kula_phase_01.png",
+              "url": "../extracted_assets/bdf/MICH1/sprite_holder/00_Sprite_Holder_005_kula_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 393155,
+          "rect": {
+            "x": 260,
+            "y": 0,
+            "width": 157,
+            "height": 176
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        }
+      ],
       "audio": []
     },
     {
@@ -189,16 +418,8 @@
         "signature": "OnOpenPage()"
       },
       {
-        "name": "if",
-        "signature": "if(IsProject()==0)"
-      },
-      {
         "name": "SetTextMode",
         "signature": "SetTextMode()"
-      },
-      {
-        "name": "if",
-        "signature": "if(textMode==0)"
       },
       {
         "name": "OnClosePage",
@@ -217,10 +438,6 @@
         "signature": "Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(textMode==0 && spriteID<5 && spriteID!=0)"
-      },
-      {
         "name": "Transparent_Video_Holder.TheEnd",
         "signature": "Transparent_Video_Holder.TheEnd(int videoID)"
       },
@@ -229,40 +446,8 @@
         "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(rectID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbar)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(txtHotSpotOn==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.InPlace",
         "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==480)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarCase)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==0)"
       },
       {
         "name": "Group.Sprite_Holder.MouseMoveIn",
@@ -277,28 +462,12 @@
         "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(spriteID==11)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseClickOnUp",
         "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.EndAnimation",
         "signature": "Group.Sprite_Holder.EndAnimation(int spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
       },
       {
         "name": "Text_Holder.ScrollTextUp",
@@ -325,24 +494,12 @@
         "signature": "Text_Holder.ClickOnText(int textID)"
       },
       {
-        "name": "if",
-        "signature": "if(playStatus)"
-      },
-      {
         "name": "Text_Holder.EndOfSynchroText",
         "signature": "Text_Holder.EndOfSynchroText(int textID)"
       },
       {
         "name": "Sound_Holder.EndPlaySound",
         "signature": "Sound_Holder.EndPlaySound(int soundID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(soundID==2 && textMode)"
-      },
-      {
-        "name": "if",
-        "signature": "if(soundID==1)"
       }
     ],
     "rawText": "//###########################################################################\n\n//Script code\n\n//###########################################################################\n\n\n\n\n\nOnOpenPage()\n\n{\n\n\t// Add your component and variables initialization code here\n\n\t// WARNING: All variables definied on this function are global for this page\n\n   if(IsProject()==0)   \n\n   {\n\n//      int textMode=0;\n\n      CString parentWnd;\n\n      int global4;\n\n   }\n\n   int textMode=0;\n\n   parentWnd.SetString(\"mich1.bdf\");\n\n   int click=0;\n\n\n\n   LoadGroup(\"Cursors.grp\");\n\n   SetCursor(0);\n\n\n\n\n\n//#############################################################################\n\n   int toolbar=0;\n\n   int toolbarCase=0;\n\n   int toolbarPhase=0;\n\n   int txtHotSpotOn=0;\n\n   int playStatus=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n//############################################################################\n\n\n\n   if(global4==972)   //wraca z puzzli\n\n      FadeScreen(1,1000);\n\n   global4=0;\n\n\n\n   Sound_Holder.PlayDSound(0);\n\n   SetTextMode();\n\n}\n\n\n\nvoid SetTextMode()\n\n{\n\n   if(textMode==0)\n\n   {\n\n      Sound_Holder.SetPlayDSoundParameters( 0, 0, 0, 0 );\n\n      playStatus = 0;\n\n      Sound_Holder.Stop(2);\n\n      Text_Holder.HideText(0);\n\n      Text_Holder.StopSynchroText(0);\n\n      Transparent_Video_Holder.Play(0,0);\n\n   }\n\n   else\n\n   {\n\n      Transparent_Video_Holder.Stop();\n\n      playStatus = 1;   \n\n      Sound_Holder.SetPlayDSoundParameters( 0, -1000, 0, 0 );\n\n      Sound_Holder.PlayDSound(2);\n\n      Text_Holder.SetTextOffsets(0,0,0);\n\n      Text_Holder.DisableMouse(0);\n\n      Text_Holder.ShowText(0);\n\n   }\n\n}\n\n\n\nvoid OnClosePage(void)\n\n{\n\n\t// Add your close page handler code here\n\n\n\n}\n\n\n\n\n\n \n\nvoid Sprite_Holder.MouseMoveIn(int spriteID)\n\n{\n\n   if(spriteID!=0 && textMode==0)  SetCursor(1); \n\n}\n\n\n\n \n\nvoid Sprite_Holder.MouseMoveOut(int spriteID)\n\n{\n\n   if(textMode==0)   SetCursor(0);\n\n}\n\n\n\n \n\nvoid Sprite_Holder.MouseClickOnDown(int spriteID)\n\n{\n\n   if(textMode==0 && spriteID<5 && spriteID!=0)\n\n   {\n\n      Sound_Holder.PlayDSound(1);\n\n      Sprite_Holder.ChangePhase(spriteID,1);\n\n      click=spriteID;\n\n   }\n\n}\n\n\n\n \n\nvoid Transparent_Video_Holder.TheEnd(int videoID)\n\n{\n\n   if(textMode==0)   Transparent_Video_Holder.Play(videoID,0);\n\n}\n\n\n\n\n\n//############################################################# T O O L B A R #######\n\n//#############################################################---------------#######\n\nvoid Group.HotSpot_Holder.MouseMoveIn(int rectID)\n\n{\n\n   switch(rectID)\n\n   {\n\n      case 0:\n\n         Group.HotSpot_Holder.DisableHotSpot(0);\n\n         Group.Sprite_Holder.DisableTimers();\n\n\n\n         Group.Sprite_Holder.GotoXY(0,480,0);\n\n         Group.Sprite_Holder.GotoXY(2,544,14);\n\n         Group.Sprite_Holder.GotoXY(3,584,14);\n\n         Group.Sprite_Holder.GotoXY(4,515,84);\n\n         Group.Sprite_Holder.GotoXY(5,559,210);\n\n         Group.Sprite_Holder.GotoXY(6,558,282);\n\n         Group.Sprite_Holder.GotoXY(7,557,404);\n\n   \n\n         Group.Sprite_Holder.SynchronizeTimers();\n\n         Group.Sprite_Holder.EnableTimers();\n\n         Group.Sound_Holder.PlayDSound(0);\n\n         break;\n\n      case 1:\n\n         if(toolbar)\n\n         {\n\n            Group.Sprite_Holder.DisableTimers();\n\n   \n\n            if(toolbarPhase==0)\n\n            {\n\n               Group.Sprite_Holder.GotoXY(0,640,0);\n\n               Group.Sprite_Holder.GotoXY(2,704,14);\n\n               Group.Sprite_Holder.GotoXY(3,744,14);\n\n               Group.Sprite_Holder.GotoXY(4,675,84);\n\n               Group.Sprite_Holder.GotoXY(5,719,210);\n\n               Group.Sprite_Holder.GotoXY(6,718,282);\n\n               Group.Sprite_Holder.GotoXY(7,717,404);\n\n            }\n\n            else\n\n            {\n\n               Group.Sprite_Holder.GotoXY(0,640,0);\n\n               Group.Sprite_Holder.GotoXY(8,693,22);\n\n               Group.Sprite_Holder.GotoXY(9,708,156);\n\n               Group.Sprite_Holder.GotoXY(7,717,404);\n\n            }\n\n            Group.Sprite_Holder.SynchronizeTimers();\n\n            Group.Sprite_Holder.EnableTimers();\n\n            Group.Sound_Holder.PlayDSound(0);\n\n            toolbar=0;\n\n            toolbarPhase=0;\n\n         }\n\n         else\n\n         {\n\n            Group.Sprite_Holder.GotoXY(11,-56,-70);\n\n            if(toolbarCase!=11)   Group.Sound_Holder.PlayDSound(2);\n\n            SetCursor(0);\n\n         }\n\n         txtHotSpotOn=0;\n\n         Group.HotSpot_Holder.DisableHotSpot(1);\n\n         Group.HotSpot_Holder.EnableHotSpot(0);\n\n         toolbarCase=0;\n\n         break;\n\n      case 2:\n\n         if(txtHotSpotOn==0)   \n\n         {\n\n            Group.Sprite_Holder.GotoXY(11,0,0);\n\n            Group.Sound_Holder.PlayDSound(3);\n\n         }\n\n         break;\n\n   }\n\n}\n\n\n\n\n\nvoid Group.Sprite_Holder.InPlace(int spriteID,int x,int y)\n\n{\n\n   switch(spriteID)\n\n   {\n\n      case 0:\n\n         if(x==480)\n\n         {\n\n            toolbar=1;\n\n            Group.HotSpot_Holder.EnableHotSpot(1);\n\n            SetCursor(1);\n\n         }\n\n         else\n\n         {\n\n            SetCursor(0);\n\n            Group.Sprite_Holder.ChangePhase(2,0);\n\n            Group.Sprite_Holder.ChangePhase(3,0);\n\n            Group.Sprite_Holder.ChangePhase(4,0);\n\n            Group.Sprite_Holder.ChangePhase(5,0);\n\n            Group.Sprite_Holder.ChangePhase(6,0);\n\n            Group.Sprite_Holder.ChangePhase(7,0);\n\n            Group.Sprite_Holder.ChangePhase(8,0);\n\n            Group.Sprite_Holder.ChangePhase(9,0);\n\n            switch(toolbarCase)\n\n            {\n\n            case 2:   //lewo   \n\n               FadeScreen(0,1000);\n\n               LoadPage(\"cuda.bdf\");\n\n               break;\n\n            case 3:   //prawo\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"dyzio.bdf\");\n\n               break;\n\n            case 4:   //recytacja\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"michal_r.bdf\");\n\n               break;\n\n            case 5:   //roznice\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"michal_c.bdf\");\n\n               break;\n\n            case 6:   //puzzle\n\n               Group.Sprite_Holder.DisableTimers();\n\n\n\n               Group.Sprite_Holder.GotoXY(0,480,0);\n\n               Group.Sprite_Holder.GotoXY(8,533,22);\n\n               Group.Sprite_Holder.GotoXY(9,548,156);\n\n               Group.Sprite_Holder.GotoXY(7,557,404);\n\n\n\n               Group.Sprite_Holder.SynchronizeTimers();\n\n               Group.Sprite_Holder.EnableTimers();\n\n               Group.Sound_Holder.PlayDSound(0);\n\n               toolbarPhase=1;\n\n               break;\n\n            case 7:   //Plansza wyboru\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"Wyborw.bdf\");\n\n               break;\n\n            case 8:   //puzzle trudne\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"michalp1.bdf\");\n\n               break;\n\n               break;\n\n            case 9:   //puzzle latwe\n\n               FadeScreen(0,1000);\n\n               LoadPage(\"michalp2.bdf\");\n\n               break;\n\n            }\n\n         }\n\n         break;\n\n      case 11:\n\n         if(x==0)\n\n         {\n\n            Group.HotSpot_Holder.EnableHotSpot(1);\n\n            txtHotSpotOn=1;\n\n            SetCursor(1);\n\n         }\n\n         break;\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseMoveIn(int spriteID)\n\n{\n\n   if(spriteID && toolbar)\n\n      SetCursor(1);\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseMoveOut(int spriteID)\n\n{\n\n   if(spriteID)\n\n      SetCursor(0);\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnDown(int spriteID)\n\n{\n\n   if(spriteID==0)   return;\n\n   if(spriteID==11)\n\n   {\n\n      Group.Sprite_Holder.GotoXY(11,-56,-70);\n\n      Group.Sound_Holder.PlayDSound(2);\n\n      toolbarCase=spriteID;\n\n      SetCursor(0);\n\n      if(textMode)    textMode=0;\n\n      else            textMode=1;\n\n      SetTextMode();\n\n   }\n\n   else\n\n   {\n\n      Group.HotSpot_Holder.DisableHotSpot(1);\n\n      Group.Sprite_Holder.ChangePhase(spriteID,1);\n\n      switch(spriteID)\n\n      {\n\n         case 2:   //lewo\n\n         case 3:   //prawo \n\n            Group.Sound_Holder.PlayDSound(4);\n\n            break;\n\n         case 4:   //recytacja\n\n            Group.Sound_Holder.PlayDSound(5);\n\n            break;\n\n         case 5:   //roznice\n\n            Group.Sound_Holder.PlayDSound(6);\n\n            break;\n\n         case 6:   //puzzle\n\n            Group.Sound_Holder.PlayDSound(7);\n\n            break;\n\n         case 7:   //plansza glowna\n\n            Group.Sound_Holder.PlayDSound(8);\n\n            break;\n\n         case 8:   //puzzle latwe\n\n            Group.Sound_Holder.PlayDSound(9);\n\n            break;\n\n         case 9:   //puzzle trudne\n\n            Group.Sound_Holder.PlayDSound(10);\n\n            break;\n\n         case 10:  //parent window\n\n            Group.Sound_Holder.PlayDSound(4);\n\n            break;\n\n      }\n\n   }\n\n}\n\n\n\nvoid Group.Sprite_Holder.MouseClickOnUp(int spriteID)\n\n{\n\n   if(spriteID==0 || spriteID==5 || spriteID==6 || spriteID==8 || spriteID==9 || spriteID==11)   return;\n\n   Group.Sprite_Holder.DisableTimers();\n\n\n\n   if(toolbarPhase==0)\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(2,704,14);\n\n      Group.Sprite_Holder.GotoXY(3,744,14);\n\n      Group.Sprite_Holder.GotoXY(4,675,84);\n\n      Group.Sprite_Holder.GotoXY(5,719,210);\n\n      Group.Sprite_Holder.GotoXY(6,718,282);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n   }\n\n   else\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(8,693,22);\n\n      Group.Sprite_Holder.GotoXY(9,708,156);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n      toolbarPhase=0;\n\n   }\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID;\n\n}\n\n\n\nvoid Group.Sprite_Holder.EndAnimation(int spriteID)\n\n{\n\n   if(spriteID!=5 && spriteID!=6 && spriteID!=8 && spriteID!=9)   return;\n\n\n\n   Group.Sprite_Holder.ChangePhase(spriteID,2);\n\n\n\n   Group.Sprite_Holder.DisableTimers();\n\n\n\n   if(toolbarPhase==0)\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(2,704,14);\n\n      Group.Sprite_Holder.GotoXY(3,744,14);\n\n      Group.Sprite_Holder.GotoXY(4,675,84);\n\n      Group.Sprite_Holder.GotoXY(5,719,210);\n\n      Group.Sprite_Holder.GotoXY(6,718,282);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n   }\n\n   else\n\n   {\n\n      Group.Sprite_Holder.GotoXY(0,640,0);\n\n      Group.Sprite_Holder.GotoXY(8,693,22);\n\n      Group.Sprite_Holder.GotoXY(9,708,156);\n\n      Group.Sprite_Holder.GotoXY(7,717,404);\n\n      toolbarPhase=0;\n\n   }\n\n   Group.Sprite_Holder.SynchronizeTimers();\n\n   Group.Sprite_Holder.EnableTimers();\n\n   Group.Sound_Holder.PlayDSound(0);\n\n   toolbar=0;\n\n   Group.HotSpot_Holder.DisableHotSpot(1);\n\n   toolbarCase=spriteID;\n\n}\n\n//#############################################################\n\n//############################################################# \n\n\n\n\n\n\n\n \n\nvoid Text_Holder.ScrollTextUp(int textID)\n\n{\n\n   if( textMode == 0 ) return;\n\n\n\n   SetCursor(3);\n\n}\n\n\n\n \n\nvoid Text_Holder.ScrollTextDown(int textID)\n\n{\n\n   if( textMode == 0 ) return;\n\n\n\n   SetCursor(4);\n\n}\n\n\n\n \n\nvoid Text_Holder.EndScrollText(int textID)\n\n{\n\n   if( textMode == 0 ) return;\n\n   if(playStatus)  SetCursor(2);\n\n   else            SetCursor(5);\n\n}\n\n\n\n \n\nvoid Text_Holder.MouseMoveIn(int textID)\n\n{\n\n   if( textMode == 0 ) return;\n\n\n\n   if(playStatus)\n\n      SetCursor(2);\n\n   else\n\n      SetCursor(5);\n\n}\n\n\n\n \n\nvoid Text_Holder.MouseMoveOut(int textID)\n\n{\n\n   SetCursor(0);\n\n}\n\n\n\n \n\nvoid Text_Holder.ClickOnText(int textID)\n\n{\n\n   if( textMode == 0 ) return;\n\n\n\n   if(playStatus)\n\n   {\n\n      playStatus=0;\n\n      Sound_Holder.Stop(3);\n\n      Text_Holder.StopSynchroText(0);\n\n      Sound_Holder.SetPlayDSoundParameters( 2, 0, 0, 0 );\n\n      SetCursor(5);\n\n   }\n\n   else\n\n   {\n\n      playStatus=1;\n\n      Sound_Holder.SetPlayDSoundParameters( 0, -1000, 0, 0 );\n\n      Text_Holder.PlaySynchroText(0);\n\n      SetCursor(2);\n\n   }\n\n}\n\n\n\n \n\nvoid Text_Holder.EndOfSynchroText(int textID)\n\n{\n\n   if(playStatus)\n\n      SetCursor(5);\n\n   else\n\n      SetCursor(0);\n\n   playStatus=0;\n\n   Sound_Holder.SetPlayDSoundParameters( 0, 0, 0, 0 );\n\n}\n\n\n\n \n\nvoid Sound_Holder.EndPlaySound(int soundID)\n\n{\n\n   if(soundID==2 && textMode)\n\n   { \n\n      playStatus=1;\n\n      Text_Holder.EnableMouse(0);\n\n      Text_Holder.PlaySynchroText(0);\n\n   }\n\n   if(soundID==1)\n\n   {\n\n      CString str;\n\n      str.Format(\"mich%d.bdf\",click+1);\n\n      LoadPage(str);\n\n   }\n\n}\n\n\n\n "

@@ -28,7 +28,365 @@
       "display_name": "Bitmap_Holder",
       "private_offset": 310489,
       "private_size": 57312,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_000_guzik_68x67.bmp",
+          "offset": 310629,
+          "size": 5634,
+          "pixel_size": 4556,
+          "width": 68,
+          "height": 67,
+          "name": "guzik",
+          "rect": {
+            "x": 182,
+            "y": 402,
+            "width": 68,
+            "height": 67
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_001_kieszen_66x64.bmp",
+          "offset": 315333,
+          "size": 5430,
+          "pixel_size": 4352,
+          "width": 66,
+          "height": 64,
+          "name": "kieszen",
+          "rect": {
+            "x": 79,
+            "y": 402,
+            "width": 66,
+            "height": 64
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_002_kokarda_59x84.bmp",
+          "offset": 319833,
+          "size": 6118,
+          "pixel_size": 5040,
+          "width": 59,
+          "height": 84,
+          "name": "kokarda",
+          "rect": {
+            "x": 395,
+            "y": 397,
+            "width": 59,
+            "height": 84
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_003_nogawki_66x65.bmp",
+          "offset": 325021,
+          "size": 5498,
+          "pixel_size": 4420,
+          "width": 66,
+          "height": 65,
+          "name": "nogawki",
+          "rect": {
+            "x": 288,
+            "y": 403,
+            "width": 66,
+            "height": 65
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_004_rekaw_66x65.bmp",
+          "offset": 329589,
+          "size": 5498,
+          "pixel_size": 4420,
+          "width": 66,
+          "height": 65,
+          "name": "rekaw",
+          "rect": {
+            "x": 496,
+            "y": 402,
+            "width": 66,
+            "height": 65
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_005_guzik02_24x25.bmp",
+          "offset": 334157,
+          "size": 1678,
+          "pixel_size": 600,
+          "width": 24,
+          "height": 25,
+          "name": "guzik02",
+          "rect": {
+            "x": 320,
+            "y": 152,
+            "width": 24,
+            "height": 25
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_006_kiesz02_77x96.bmp",
+          "offset": 334905,
+          "size": 8758,
+          "pixel_size": 7680,
+          "width": 77,
+          "height": 96,
+          "name": "kiesz02",
+          "rect": {
+            "x": 266,
+            "y": 252,
+            "width": 77,
+            "height": 96
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_007_kok02_67x87.bmp",
+          "offset": 342733,
+          "size": 6994,
+          "pixel_size": 5916,
+          "width": 67,
+          "height": 87,
+          "name": "kok02",
+          "rect": {
+            "x": 328,
+            "y": 21,
+            "width": 67,
+            "height": 87
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_008_nogawki 0_108x120.bmp",
+          "offset": 348797,
+          "size": 14038,
+          "pixel_size": 12960,
+          "width": 108,
+          "height": 120,
+          "name": "nogawki 0",
+          "rect": {
+            "x": 144,
+            "y": 241,
+            "width": 108,
+            "height": 120
+          },
+          "geometry_confidence": "serialized_entry"
+        },
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_009_rekaw02_38x147.bmp",
+          "offset": 361905,
+          "size": 6958,
+          "pixel_size": 5880,
+          "width": 38,
+          "height": 147,
+          "name": "rekaw02",
+          "rect": {
+            "x": 117,
+            "y": 110,
+            "width": 38,
+            "height": 147
+          },
+          "geometry_confidence": "serialized_entry"
+        }
+      ],
+      "bitmap_holder": {
+        "version": 1,
+        "declared_count": 10,
+        "parsed_count": 10,
+        "frames": [
+          {
+            "index": 0,
+            "name": "guzik",
+            "record_offset": 310497,
+            "record_size": 4700,
+            "pixel_offset": 310629,
+            "width": 68,
+            "height": 67,
+            "right": 250,
+            "bottom": 469,
+            "rect": {
+              "x": 182,
+              "y": 402,
+              "width": 68,
+              "height": 67
+            },
+            "bmp_output": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_000_guzik_68x67.bmp"
+          },
+          {
+            "index": 1,
+            "name": "kieszen",
+            "record_offset": 315201,
+            "record_size": 4496,
+            "pixel_offset": 315333,
+            "width": 66,
+            "height": 64,
+            "right": 145,
+            "bottom": 466,
+            "rect": {
+              "x": 79,
+              "y": 402,
+              "width": 66,
+              "height": 64
+            },
+            "bmp_output": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_001_kieszen_66x64.bmp"
+          },
+          {
+            "index": 2,
+            "name": "kokarda",
+            "record_offset": 319701,
+            "record_size": 5184,
+            "pixel_offset": 319833,
+            "width": 59,
+            "height": 84,
+            "right": 454,
+            "bottom": 481,
+            "rect": {
+              "x": 395,
+              "y": 397,
+              "width": 59,
+              "height": 84
+            },
+            "bmp_output": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_002_kokarda_59x84.bmp"
+          },
+          {
+            "index": 3,
+            "name": "nogawki",
+            "record_offset": 324889,
+            "record_size": 4564,
+            "pixel_offset": 325021,
+            "width": 66,
+            "height": 65,
+            "right": 354,
+            "bottom": 468,
+            "rect": {
+              "x": 288,
+              "y": 403,
+              "width": 66,
+              "height": 65
+            },
+            "bmp_output": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_003_nogawki_66x65.bmp"
+          },
+          {
+            "index": 4,
+            "name": "rekaw",
+            "record_offset": 329457,
+            "record_size": 4564,
+            "pixel_offset": 329589,
+            "width": 66,
+            "height": 65,
+            "right": 562,
+            "bottom": 467,
+            "rect": {
+              "x": 496,
+              "y": 402,
+              "width": 66,
+              "height": 65
+            },
+            "bmp_output": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_004_rekaw_66x65.bmp"
+          },
+          {
+            "index": 5,
+            "name": "guzik02",
+            "record_offset": 334025,
+            "record_size": 744,
+            "pixel_offset": 334157,
+            "width": 24,
+            "height": 25,
+            "right": 344,
+            "bottom": 177,
+            "rect": {
+              "x": 320,
+              "y": 152,
+              "width": 24,
+              "height": 25
+            },
+            "bmp_output": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_005_guzik02_24x25.bmp"
+          },
+          {
+            "index": 6,
+            "name": "kiesz02",
+            "record_offset": 334773,
+            "record_size": 7824,
+            "pixel_offset": 334905,
+            "width": 77,
+            "height": 96,
+            "right": 343,
+            "bottom": 348,
+            "rect": {
+              "x": 266,
+              "y": 252,
+              "width": 77,
+              "height": 96
+            },
+            "bmp_output": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_006_kiesz02_77x96.bmp"
+          },
+          {
+            "index": 7,
+            "name": "kok02",
+            "record_offset": 342601,
+            "record_size": 6060,
+            "pixel_offset": 342733,
+            "width": 67,
+            "height": 87,
+            "right": 395,
+            "bottom": 108,
+            "rect": {
+              "x": 328,
+              "y": 21,
+              "width": 67,
+              "height": 87
+            },
+            "bmp_output": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_007_kok02_67x87.bmp"
+          },
+          {
+            "index": 8,
+            "name": "nogawki 0",
+            "record_offset": 348665,
+            "record_size": 13104,
+            "pixel_offset": 348797,
+            "width": 108,
+            "height": 120,
+            "right": 252,
+            "bottom": 361,
+            "rect": {
+              "x": 144,
+              "y": 241,
+              "width": 108,
+              "height": 120
+            },
+            "bmp_output": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_008_nogawki 0_108x120.bmp"
+          },
+          {
+            "index": 9,
+            "name": "rekaw02",
+            "record_offset": 361773,
+            "record_size": 6024,
+            "pixel_offset": 361905,
+            "width": 38,
+            "height": 147,
+            "right": 155,
+            "bottom": 257,
+            "rect": {
+              "x": 117,
+              "y": 110,
+              "width": 38,
+              "height": 147
+            },
+            "bmp_output": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_009_rekaw02_38x147.bmp"
+          }
+        ]
+      }
     },
     {
       "index": 1,
@@ -49,49 +407,49 @@
       "embedded": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_000_0005a707.wav",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_000_0005a707.wav",
           "offset": 370439,
           "size": 705838,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_001_00106c95.wav",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_001_00106c95.wav",
           "offset": 1076373,
           "size": 18852,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_002_0010b699.wav",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_002_0010b699.wav",
           "offset": 1095321,
           "size": 120196,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_003_00128c7d.wav",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_003_00128c7d.wav",
           "offset": 1215613,
           "size": 31682,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_004_0013089f.wav",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_004_0013089f.wav",
           "offset": 1247391,
           "size": 233338,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_005_00169879.wav",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_005_00169879.wav",
           "offset": 1480825,
           "size": 61516,
           "extension": ".wav"
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_006_00178925.wav",
+          "path": "extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_006_00178925.wav",
           "offset": 1542437,
           "size": 109836,
           "extension": ".wav"
@@ -111,57 +469,227 @@
   "outputs": [
     {
       "kind": "palette",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\background_palette.bin",
+      "path": "extracted_assets\\bdf\\KRAWIEC\\background_palette.bin",
       "size": 1024
     },
     {
       "kind": "dib",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\background.dib",
+      "path": "extracted_assets\\bdf\\KRAWIEC\\background.dib",
       "size": 308184
     },
     {
       "kind": "bmp",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\background.bmp",
+      "path": "extracted_assets\\bdf\\KRAWIEC\\background.bmp",
       "size": 308198
     },
     {
       "kind": "script",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\script.txt",
+      "path": "extracted_assets\\bdf\\KRAWIEC\\script.txt",
       "size": 13760
     },
     {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_000_guzik_68x67.bmp",
+      "offset": 310629,
+      "size": 5634,
+      "pixel_size": 4556,
+      "width": 68,
+      "height": 67,
+      "name": "guzik",
+      "rect": {
+        "x": 182,
+        "y": 402,
+        "width": 68,
+        "height": 67
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_001_kieszen_66x64.bmp",
+      "offset": 315333,
+      "size": 5430,
+      "pixel_size": 4352,
+      "width": 66,
+      "height": 64,
+      "name": "kieszen",
+      "rect": {
+        "x": 79,
+        "y": 402,
+        "width": 66,
+        "height": 64
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_002_kokarda_59x84.bmp",
+      "offset": 319833,
+      "size": 6118,
+      "pixel_size": 5040,
+      "width": 59,
+      "height": 84,
+      "name": "kokarda",
+      "rect": {
+        "x": 395,
+        "y": 397,
+        "width": 59,
+        "height": 84
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_003_nogawki_66x65.bmp",
+      "offset": 325021,
+      "size": 5498,
+      "pixel_size": 4420,
+      "width": 66,
+      "height": 65,
+      "name": "nogawki",
+      "rect": {
+        "x": 288,
+        "y": 403,
+        "width": 66,
+        "height": 65
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_004_rekaw_66x65.bmp",
+      "offset": 329589,
+      "size": 5498,
+      "pixel_size": 4420,
+      "width": 66,
+      "height": 65,
+      "name": "rekaw",
+      "rect": {
+        "x": 496,
+        "y": 402,
+        "width": 66,
+        "height": 65
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_005_guzik02_24x25.bmp",
+      "offset": 334157,
+      "size": 1678,
+      "pixel_size": 600,
+      "width": 24,
+      "height": 25,
+      "name": "guzik02",
+      "rect": {
+        "x": 320,
+        "y": 152,
+        "width": 24,
+        "height": 25
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_006_kiesz02_77x96.bmp",
+      "offset": 334905,
+      "size": 8758,
+      "pixel_size": 7680,
+      "width": 77,
+      "height": 96,
+      "name": "kiesz02",
+      "rect": {
+        "x": 266,
+        "y": 252,
+        "width": 77,
+        "height": 96
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_007_kok02_67x87.bmp",
+      "offset": 342733,
+      "size": 6994,
+      "pixel_size": 5916,
+      "width": 67,
+      "height": 87,
+      "name": "kok02",
+      "rect": {
+        "x": 328,
+        "y": 21,
+        "width": 67,
+        "height": 87
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_008_nogawki 0_108x120.bmp",
+      "offset": 348797,
+      "size": 14038,
+      "pixel_size": 12960,
+      "width": 108,
+      "height": 120,
+      "name": "nogawki 0",
+      "rect": {
+        "x": 144,
+        "y": 241,
+        "width": 108,
+        "height": 120
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
+      "kind": "bitmap_holder_bmp",
+      "path": "extracted_assets\\bdf\\KRAWIEC\\bitmap_holder\\00_Bitmap_Holder_009_rekaw02_38x147.bmp",
+      "offset": 361905,
+      "size": 6958,
+      "pixel_size": 5880,
+      "width": 38,
+      "height": 147,
+      "name": "rekaw02",
+      "rect": {
+        "x": 117,
+        "y": 110,
+        "width": 38,
+        "height": 147
+      },
+      "geometry_confidence": "serialized_entry"
+    },
+    {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_000_0005a707.wav",
+      "path": "extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_000_0005a707.wav",
       "size": 705838
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_001_00106c95.wav",
+      "path": "extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_001_00106c95.wav",
       "size": 18852
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_002_0010b699.wav",
+      "path": "extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_002_0010b699.wav",
       "size": 120196
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_003_00128c7d.wav",
+      "path": "extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_003_00128c7d.wav",
       "size": 31682
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_004_0013089f.wav",
+      "path": "extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_004_0013089f.wav",
       "size": 233338
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_005_00169879.wav",
+      "path": "extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_005_00169879.wav",
       "size": 61516
     },
     {
       "kind": "WAVE",
-      "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_006_00178925.wav",
+      "path": "extracted_assets\\bdf\\KRAWIEC\\embedded\\02_Sound_Holder_006_00178925.wav",
       "size": 109836
     }
   ],

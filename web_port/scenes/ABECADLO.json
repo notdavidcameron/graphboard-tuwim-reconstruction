@@ -23,23 +23,974 @@
       "sourceType": "Sprite_Holder",
       "namespace": "Page",
       "index": 0,
-      "z": 50,
+      "z": 0,
       "visible": true,
       "rect": {
-        "x": 0,
+        "x": 44,
         "y": 0,
-        "width": 48,
-        "height": 48
+        "width": 345,
+        "height": 149
       },
-      "geometryConfidence": "synthetic_items",
+      "geometryConfidence": "serialized_entries",
       "itemCount": 25,
       "hitboxes": [],
       "sourceOffset": 309357,
       "geometrySourceOffset": null,
       "privateOffset": 310891,
       "privateSize": 353164,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_000_A_phase_00.png",
+      "assets": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_000_A_phase_00.png",
+          "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_000_A_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 90,
+          "frameCount": null,
+          "offset": 311247,
+          "name": "A",
+          "id": 0,
+          "definitionId": 0,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_000_A_phase_00.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_000_A_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_000_A_phase_01.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_000_A_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 660555,
+          "rect": {
+            "x": 44,
+            "y": 58,
+            "width": 76,
+            "height": 90
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_001_B_phase_00.png",
+          "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_001_B_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 90,
+          "frameCount": null,
+          "offset": 325271,
+          "name": "B",
+          "id": 1,
+          "definitionId": 1,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_001_B_phase_00.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_001_B_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_001_B_phase_01.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_001_B_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 660695,
+          "rect": {
+            "x": 45,
+            "y": 59,
+            "width": 76,
+            "height": 90
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_002_C_phase_00.png",
+          "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_002_C_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 90,
+          "frameCount": null,
+          "offset": 339295,
+          "name": "C",
+          "id": 2,
+          "definitionId": 2,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_002_C_phase_00.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_002_C_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_002_C_phase_01.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_002_C_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 660835,
+          "rect": {
+            "x": 45,
+            "y": 59,
+            "width": 76,
+            "height": 90
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_003_D_phase_00.png",
+          "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_003_D_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 90,
+          "frameCount": null,
+          "offset": 353319,
+          "name": "D",
+          "id": 3,
+          "definitionId": 3,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_003_D_phase_00.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_003_D_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_003_D_phase_01.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_003_D_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 660975,
+          "rect": {
+            "x": 45,
+            "y": 59,
+            "width": 76,
+            "height": 90
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_004_E_phase_00.png",
+          "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_004_E_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 90,
+          "frameCount": null,
+          "offset": 367343,
+          "name": "E",
+          "id": 4,
+          "definitionId": 4,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_004_E_phase_00.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_004_E_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_004_E_phase_01.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_004_E_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 661115,
+          "rect": {
+            "x": 45,
+            "y": 59,
+            "width": 76,
+            "height": 90
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_005_F_phase_00.png",
+          "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_005_F_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 90,
+          "frameCount": null,
+          "offset": 381367,
+          "name": "F",
+          "id": 5,
+          "definitionId": 5,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_005_F_phase_00.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_005_F_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_005_F_phase_01.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_005_F_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 661255,
+          "rect": {
+            "x": 45,
+            "y": 59,
+            "width": 76,
+            "height": 90
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_006_G_phase_00.png",
+          "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_006_G_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 90,
+          "frameCount": null,
+          "offset": 395315,
+          "name": "G",
+          "id": 6,
+          "definitionId": 6,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_006_G_phase_00.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_006_G_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_006_G_phase_01.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_006_G_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 661395,
+          "rect": {
+            "x": 45,
+            "y": 59,
+            "width": 76,
+            "height": 90
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_007_H_phase_00.png",
+          "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_007_H_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 90,
+          "frameCount": null,
+          "offset": 409339,
+          "name": "H",
+          "id": 7,
+          "definitionId": 7,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_007_H_phase_00.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_007_H_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_007_H_phase_01.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_007_H_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 661535,
+          "rect": {
+            "x": 45,
+            "y": 59,
+            "width": 76,
+            "height": 90
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_008_I_phase_00.png",
+          "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_008_I_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 90,
+          "frameCount": null,
+          "offset": 423363,
+          "name": "I",
+          "id": 8,
+          "definitionId": 8,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_008_I_phase_00.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_008_I_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_008_I_phase_01.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_008_I_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 661675,
+          "rect": {
+            "x": 45,
+            "y": 59,
+            "width": 76,
+            "height": 90
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_009_J_phase_00.png",
+          "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_009_J_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 90,
+          "frameCount": null,
+          "offset": 437387,
+          "name": "J",
+          "id": 9,
+          "definitionId": 9,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_009_J_phase_00.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_009_J_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_009_J_phase_01.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_009_J_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 661815,
+          "rect": {
+            "x": 45,
+            "y": 59,
+            "width": 76,
+            "height": 90
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_010_K_phase_00.png",
+          "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_010_K_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 90,
+          "frameCount": null,
+          "offset": 451335,
+          "name": "K",
+          "id": 10,
+          "definitionId": 10,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_010_K_phase_00.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_010_K_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_010_K_phase_01.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_010_K_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 661955,
+          "rect": {
+            "x": 45,
+            "y": 59,
+            "width": 76,
+            "height": 90
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_011_L_phase_00.png",
+          "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_011_L_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 90,
+          "frameCount": null,
+          "offset": 465359,
+          "name": "L",
+          "id": 11,
+          "definitionId": 11,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_011_L_phase_00.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_011_L_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_011_L_phase_01.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_011_L_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 662095,
+          "rect": {
+            "x": 45,
+            "y": 59,
+            "width": 76,
+            "height": 90
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_012_el_phase_00.png",
+          "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_012_el_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 90,
+          "frameCount": null,
+          "offset": 479383,
+          "name": "el",
+          "id": 12,
+          "definitionId": 12,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_012_el_phase_00.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_012_el_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_012_el_phase_01.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_012_el_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 662235,
+          "rect": {
+            "x": 45,
+            "y": 59,
+            "width": 76,
+            "height": 90
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_013_M_phase_00.png",
+          "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_013_M_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 90,
+          "frameCount": null,
+          "offset": 493407,
+          "name": "M",
+          "id": 13,
+          "definitionId": 13,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_013_M_phase_00.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_013_M_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_013_M_phase_01.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_013_M_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 662375,
+          "rect": {
+            "x": 45,
+            "y": 59,
+            "width": 76,
+            "height": 90
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_014_N_phase_00.png",
+          "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_014_N_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 90,
+          "frameCount": null,
+          "offset": 507431,
+          "name": "N",
+          "id": 14,
+          "definitionId": 14,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_014_N_phase_00.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_014_N_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_014_N_phase_01.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_014_N_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 662515,
+          "rect": {
+            "x": 45,
+            "y": 59,
+            "width": 76,
+            "height": 90
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_015_O_phase_00.png",
+          "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_015_O_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 90,
+          "frameCount": null,
+          "offset": 521455,
+          "name": "O",
+          "id": 15,
+          "definitionId": 15,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_015_O_phase_00.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_015_O_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_015_O_phase_01.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_015_O_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 662655,
+          "rect": {
+            "x": 45,
+            "y": 59,
+            "width": 76,
+            "height": 90
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_016_P_phase_00.png",
+          "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_016_P_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 90,
+          "frameCount": null,
+          "offset": 535479,
+          "name": "P",
+          "id": 16,
+          "definitionId": 16,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_016_P_phase_00.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_016_P_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_016_P_phase_01.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_016_P_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 662795,
+          "rect": {
+            "x": 45,
+            "y": 59,
+            "width": 76,
+            "height": 90
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_017_R_phase_00.png",
+          "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_017_R_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 90,
+          "frameCount": null,
+          "offset": 549427,
+          "name": "R",
+          "id": 17,
+          "definitionId": 17,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_017_R_phase_00.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_017_R_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_017_R_phase_01.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_017_R_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 662935,
+          "rect": {
+            "x": 45,
+            "y": 59,
+            "width": 76,
+            "height": 90
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_018_S_phase_00.png",
+          "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_018_S_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 90,
+          "frameCount": null,
+          "offset": 563451,
+          "name": "S",
+          "id": 18,
+          "definitionId": 18,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_018_S_phase_00.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_018_S_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_018_S_phase_01.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_018_S_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 663075,
+          "rect": {
+            "x": 45,
+            "y": 59,
+            "width": 76,
+            "height": 90
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_019_T_phase_00.png",
+          "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_019_T_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 90,
+          "frameCount": null,
+          "offset": 577475,
+          "name": "T",
+          "id": 19,
+          "definitionId": 19,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_019_T_phase_00.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_019_T_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_019_T_phase_01.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_019_T_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 663215,
+          "rect": {
+            "x": 45,
+            "y": 59,
+            "width": 76,
+            "height": 90
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_020_U_phase_00.png",
+          "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_020_U_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 90,
+          "frameCount": null,
+          "offset": 591499,
+          "name": "U",
+          "id": 20,
+          "definitionId": 20,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_020_U_phase_00.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_020_U_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_020_U_phase_01.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_020_U_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 663355,
+          "rect": {
+            "x": 45,
+            "y": 59,
+            "width": 76,
+            "height": 90
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_021_W_phase_00.png",
+          "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_021_W_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 90,
+          "frameCount": null,
+          "offset": 605523,
+          "name": "W",
+          "id": 21,
+          "definitionId": 21,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_021_W_phase_00.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_021_W_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_021_W_phase_01.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_021_W_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 663495,
+          "rect": {
+            "x": 45,
+            "y": 59,
+            "width": 76,
+            "height": 90
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_022_Y_phase_00.png",
+          "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_022_Y_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 90,
+          "frameCount": null,
+          "offset": 619547,
+          "name": "Y",
+          "id": 22,
+          "definitionId": 22,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_022_Y_phase_00.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_022_Y_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_022_Y_phase_01.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_022_Y_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 663635,
+          "rect": {
+            "x": 45,
+            "y": 59,
+            "width": 76,
+            "height": 90
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_023_Z_phase_00.png",
+          "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_023_Z_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 90,
+          "frameCount": null,
+          "offset": 633571,
+          "name": "Z",
+          "id": 23,
+          "definitionId": 23,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_023_Z_phase_00.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_023_Z_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_023_Z_phase_01.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_023_Z_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 663775,
+          "rect": {
+            "x": 45,
+            "y": 59,
+            "width": 76,
+            "height": 90
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_024_tabliczka_phase_00.png",
+          "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_024_tabliczka_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 144,
+          "height": 45,
+          "frameCount": null,
+          "offset": 647595,
+          "name": "tabliczka",
+          "id": 24,
+          "definitionId": 24,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_024_tabliczka_phase_00.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_024_tabliczka_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\bdf\\ABECADLO\\sprite_holder\\00_Sprite_Holder_024_tabliczka_phase_01.png",
+              "url": "../extracted_assets/bdf/ABECADLO/sprite_holder/00_Sprite_Holder_024_tabliczka_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 663915,
+          "rect": {
+            "x": 245,
+            "y": 0,
+            "width": 144,
+            "height": 45
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "z": 1
+        }
+      ],
       "audio": []
     },
     {
@@ -52,9 +1003,9 @@
       "visible": false,
       "rect": {
         "x": 349,
-        "y": 329,
-        "width": 75,
-        "height": 90
+        "y": 239,
+        "width": 148,
+        "height": 180
       },
       "geometryConfidence": "serialized_entries",
       "itemCount": null,
@@ -67,8 +1018,81 @@
             "width": 75,
             "height": 90
           },
+          "name": "left",
+          "layer": 0,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            179
+          ],
           "sourceOffset": 665171,
-          "geometryConfidence": "serialized_entry"
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 4,
+          "auxState": 0
+        },
+        {
+          "id": 1,
+          "rect": {
+            "x": 425,
+            "y": 329,
+            "width": 72,
+            "height": 89
+          },
+          "name": "right",
+          "layer": 0,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            179
+          ],
+          "sourceOffset": 665276,
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 4,
+          "auxState": 0
+        },
+        {
+          "id": 2,
+          "rect": {
+            "x": 349,
+            "y": 239,
+            "width": 76,
+            "height": 88
+          },
+          "name": "top",
+          "layer": 0,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            179
+          ],
+          "sourceOffset": 665382,
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 4,
+          "auxState": 0
+        },
+        {
+          "id": 3,
+          "rect": {
+            "x": 349,
+            "y": 329,
+            "width": 74,
+            "height": 89
+          },
+          "name": "bottom",
+          "layer": 0,
+          "enabled": true,
+          "flags": [
+            214,
+            0,
+            179
+          ],
+          "sourceOffset": 665486,
+          "geometryConfidence": "serialized_entry",
+          "activeIndex": 4,
+          "auxState": 0
         }
       ],
       "sourceOffset": 664055,
@@ -130,7 +1154,7 @@
       "audio": [
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ABECADLO\\embedded\\03_Sound_Holder_000_000a65ab.wav",
+          "path": "extracted_assets\\bdf\\ABECADLO\\embedded\\03_Sound_Holder_000_000a65ab.wav",
           "url": "../extracted_assets/bdf/ABECADLO/embedded/03_Sound_Holder_000_000a65ab.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -140,7 +1164,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ABECADLO\\embedded\\03_Sound_Holder_001_000b0beb.wav",
+          "path": "extracted_assets\\bdf\\ABECADLO\\embedded\\03_Sound_Holder_001_000b0beb.wav",
           "url": "../extracted_assets/bdf/ABECADLO/embedded/03_Sound_Holder_001_000b0beb.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -150,7 +1174,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ABECADLO\\embedded\\03_Sound_Holder_002_000b4009.wav",
+          "path": "extracted_assets\\bdf\\ABECADLO\\embedded\\03_Sound_Holder_002_000b4009.wav",
           "url": "../extracted_assets/bdf/ABECADLO/embedded/03_Sound_Holder_002_000b4009.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -160,7 +1184,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ABECADLO\\embedded\\03_Sound_Holder_003_000b621b.wav",
+          "path": "extracted_assets\\bdf\\ABECADLO\\embedded\\03_Sound_Holder_003_000b621b.wav",
           "url": "../extracted_assets/bdf/ABECADLO/embedded/03_Sound_Holder_003_000b621b.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -170,7 +1194,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ABECADLO\\embedded\\03_Sound_Holder_004_0010abf9.wav",
+          "path": "extracted_assets\\bdf\\ABECADLO\\embedded\\03_Sound_Holder_004_0010abf9.wav",
           "url": "../extracted_assets/bdf/ABECADLO/embedded/03_Sound_Holder_004_0010abf9.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -180,7 +1204,7 @@
         },
         {
           "kind": "WAVE",
-          "path": "C:\\Users\\Administrator\\Documents\\GRAPHBOARD\\extracted_assets\\bdf\\ABECADLO\\embedded\\03_Sound_Holder_005_00194c87.wav",
+          "path": "extracted_assets\\bdf\\ABECADLO\\embedded\\03_Sound_Holder_005_00194c87.wav",
           "url": "../extracted_assets/bdf/ABECADLO/embedded/03_Sound_Holder_005_00194c87.wav",
           "durationSeconds": null,
           "sampleRate": null,
@@ -204,22 +1228,6 @@
         "signature": "SetTextMode()"
       },
       {
-        "name": "while",
-        "signature": "while(uni1<28)"
-      },
-      {
-        "name": "while",
-        "signature": "while(uni1<24)"
-      },
-      {
-        "name": "while",
-        "signature": "while(puzz[tmp1])"
-      },
-      {
-        "name": "if",
-        "signature": "if(textMode==0)"
-      },
-      {
         "name": "OnClosePage",
         "signature": "OnClosePage(void)"
       },
@@ -228,56 +1236,16 @@
         "signature": "SetHotspots(int tabPos)"
       },
       {
-        "name": "if",
-        "signature": "if(xx && puzz[tabPos-1]==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(xx<6 && puzz[tabPos+1]==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(xx && puzz[tabPos-7]==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(xx<3 && puzz[tabPos+7]==0)"
-      },
-      {
         "name": "OnTimer",
         "signature": "OnTimer(void)"
-      },
-      {
-        "name": "if",
-        "signature": "if(helpTime>20)"
-      },
-      {
-        "name": "if",
-        "signature": "if(tmp1)"
       },
       {
         "name": "OnLButtonDown",
         "signature": "OnLButtonDown(int x,int y)"
       },
       {
-        "name": "if",
-        "signature": "if(puzz[tabPos]==0)"
-      },
-      {
         "name": "Sprite_Holder.InPlace",
         "signature": "Sprite_Holder.InPlace(int spriteID,int x,int y)"
-      },
-      {
-        "name": "while",
-        "signature": "while(uni1<24)"
-      },
-      {
-        "name": "if",
-        "signature": "if(uni1==24)"
-      },
-      {
-        "name": "if",
-        "signature": "if(gameOver==0)"
       },
       {
         "name": "Sprite_Holder.MouseMoveIn",
@@ -300,40 +1268,8 @@
         "signature": "Group.HotSpot_Holder.MouseMoveIn(int rectID)"
       },
       {
-        "name": "switch",
-        "signature": "switch(rectID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbar)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
-      },
-      {
-        "name": "if",
-        "signature": "if(txtHotSpotOn==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.InPlace",
         "signature": "Group.Sprite_Holder.InPlace(int spriteID,int x,int y)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==480)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(toolbarCase)"
-      },
-      {
-        "name": "if",
-        "signature": "if(x==0)"
       },
       {
         "name": "Group.Sprite_Holder.MouseMoveIn",
@@ -348,28 +1284,12 @@
         "signature": "Group.Sprite_Holder.MouseClickOnDown(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(spriteID==4)"
-      },
-      {
-        "name": "switch",
-        "signature": "switch(spriteID)"
-      },
-      {
         "name": "Group.Sprite_Holder.MouseClickOnUp",
         "signature": "Group.Sprite_Holder.MouseClickOnUp(int spriteID)"
       },
       {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
-      },
-      {
         "name": "Group.Sprite_Holder.EndAnimation",
         "signature": "Group.Sprite_Holder.EndAnimation(int spriteID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(toolbarPhase==0)"
       },
       {
         "name": "Text_Holder.ScrollTextUp",
@@ -396,20 +1316,12 @@
         "signature": "Text_Holder.ClickOnText(int textID)"
       },
       {
-        "name": "if",
-        "signature": "if(playStatus)"
-      },
-      {
         "name": "Text_Holder.EndOfSynchroText",
         "signature": "Text_Holder.EndOfSynchroText(int textID)"
       },
       {
         "name": "Sound_Holder.EndPlaySound",
         "signature": "Sound_Holder.EndPlaySound(int soundID)"
-      },
-      {
-        "name": "if",
-        "signature": "if(soundID==0 && textMode)"
       },
       {
         "name": "OnRButtonDown",
