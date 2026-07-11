@@ -45,6 +45,9 @@ struct ComponentState {
     std::vector<HotSpot> hotspots;         // HotSpot_Holder geometry (for hit tests)
     std::vector<SpriteGeometry> sprites;   // Sprite_Holder geometry, by spriteID
     std::vector<BitmapGeometry> bitmaps;   // Bitmap_Holder geometry, by bitmapID
+    // Playback length per clip id, in ms: video = frameDurationMs*frameCount,
+    // sound = WAV data length. Used by the clock to schedule TheEnd/EndPlaySound.
+    std::vector<int> clipDurationMs;
 };
 
 // One host call made while executing script (builtin or component method).
@@ -102,6 +105,13 @@ public:
     void soundEnd(int id);       // Sound_Holder.EndPlaySound(id)
     void animationEnd(int id);   // Sprite_Holder.EndAnimation(id)
 
+    // Advance the simulated clock by `ms`, firing each clip's completion callback
+    // when its recovered duration elapses. A video that finishes may start the
+    // next one (TheEnd -> Play), so cutscene chains play through on their own:
+    // advanceTime(60000) walks INTRO's ten clips and LoadPages to the menu.
+    void advanceTime(int ms);
+    int clockMs() const { return clockMs_; }
+
     // Convenience: a full press -> move -> release drag of whatever is under the
     // start point. Fires MouseClickOnDown, drags a draggable sprite to (x1,y1),
     // then MouseClickOnUp + MouseDrop.
@@ -149,6 +159,18 @@ private:
     void parse(BinaryReader& reader);
     ComponentState* resolve(const std::string& componentPath);
 
+    // A pending playback completion: fire `event` on `component` with `id` once
+    // the clock reaches `fireMs`.
+    struct Pending {
+        std::string component;
+        std::string event;
+        int id = 0;
+        int fireMs = 0;
+    };
+    // Schedule/cancel a clip's completion when Play/Stop is dispatched.
+    void scheduleCompletion(const ComponentState& state, const std::string& event, int id);
+    void cancelCompletions(const std::string& component);
+
     // The item a point lands on, across every clickable holder kind. `index` is
     // whatever the engine hands the script for that kind: a HotSpot_Holder's
     // stored id (record+0x18), or a Sprite_Holder's instance index.
@@ -179,6 +201,10 @@ private:
     // Last hovered item, for MouseMoveIn/MouseMoveOut edge detection across
     // successive mouseMove() calls.
     Hit hover_;
+
+    // Simulated playback clock and the completions waiting on it.
+    int clockMs_ = 0;
+    std::vector<Pending> pending_;
 
     // Mouse-button / drag state spanning down -> move -> up.
     Hit pressed_;               // item that received MouseClickOnDown, for the Up

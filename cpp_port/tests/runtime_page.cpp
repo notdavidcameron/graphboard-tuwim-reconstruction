@@ -525,6 +525,82 @@ void testCompletionEvents() {
     page->soundEnd(0);
 }
 
+// A page with a Transparent_Video_Holder holding `durations.size()` videos,
+// each a minimal board-video stream (fixed header only, no chunks, no still
+// frame) carrying just frameDurationMs and frameCount so total = product.
+std::vector<std::uint8_t> buildVideoBdf(const std::string& script,
+                                        const std::vector<std::pair<int,int>>& fdAndCount) {
+    const auto clsid = Guid::fromString("2F3C5846-5413-11D0-B447-008048EB5D40");  // TVH
+    std::vector<std::uint8_t> b;
+    putFixed(b, "YDP Board data file. Ver:1 test", 100);
+    putU32(b, 1);
+    putU32(b, 0); putU32(b, 0); putU32(b, 640); putU32(b, 480);
+    putU32(b, 0xffffffffu); putU32(b, 8);
+    putU32(b, 0); putU8(b, 0); putU32(b, 0); putU32(b, 0);
+    putU32(b, 1); putU32(b, 1);   // list: one component
+    putWrapper(b, clsid, "Transparent_Video_Holder");
+
+    putU32(b, 3);   // TVH private version
+    putU32(b, static_cast<std::uint32_t>(fdAndCount.size()));  // entryCount
+    for (const auto& [frameDurationMs, frameCount] : fdAndCount) {
+        const std::size_t streamBytes = 0x4e8;   // header only
+        putU32(b, static_cast<std::uint32_t>(streamBytes));
+        std::vector<std::uint8_t> hdr(streamBytes, 0);
+        auto put = [&hdr](std::size_t off, std::uint32_t v) {
+            hdr[off]=static_cast<std::uint8_t>(v);      hdr[off+1]=static_cast<std::uint8_t>(v>>8);
+            hdr[off+2]=static_cast<std::uint8_t>(v>>16); hdr[off+3]=static_cast<std::uint8_t>(v>>24);
+        };
+        put(0x7c, frameDurationMs);
+        put(0x80, 0); put(0x84, 0);           // width/height 0 -> no still frame
+        put(0x8c, static_cast<std::uint32_t>(frameCount));
+        b.insert(b.end(), hdr.begin(), hdr.end());
+        std::vector<std::uint8_t> entry(0x568, 0);  // width/height 0 -> stillFrame 0
+        b.insert(b.end(), entry.begin(), entry.end());
+    }
+
+    putU32(b, 1);
+    putArchiveString(b, script);
+    return b;
+}
+
+const char* kVideoChainScript = R"S(
+void OnOpenPage()
+{
+   Transparent_Video_Holder.Play(0, 0);
+}
+void Transparent_Video_Holder.TheEnd(int videoID)
+{
+   played = played + 1;
+   if(videoID == 2)  { LoadPage("next.bdf"); return; }
+   Transparent_Video_Holder.Play(videoID + 1, 0);
+}
+)S";
+
+// The clock: Play schedules TheEnd at now+duration; advanceTime fires due
+// completions in order, and a TheEnd that starts the next clip chains the whole
+// sequence. Durations: 1000, 2000, 4000 ms.
+void testVideoClockChain() {
+    const auto bytes = buildVideoBdf(kVideoChainScript, {{100, 10}, {100, 20}, {100, 40}});
+    BinaryReader reader(bytes);
+    auto page = Page::loadFromReader(reader, "video-clock");
+    page->open();   // Play(0) scheduled to end at t=1000
+
+    // Nothing has ended yet.
+    assert(!page->hasGlobal("played") || page->getGlobal("played").toInt() == 0);
+
+    // Advance past video 0 only: TheEnd(0) fires -> Play(1) (ends at 3000).
+    page->advanceTime(1500);
+    assert(page->getGlobal("played").toInt() == 1);
+    assert(page->clockMs() == 1500);
+    assert(page->pendingPage().empty());
+
+    // Advance to 7500: video 1 ends at 3000 -> Play(2) (ends at 7000); video 2
+    // ends at 7000 -> TheEnd(2) -> LoadPage. Three completions total.
+    page->advanceTime(6000);
+    assert(page->getGlobal("played").toInt() == 3);
+    assert(page->pendingPage() == "next.bdf");
+}
+
 const char* kPrecedenceScript = R"S(
 void OnOpenPage()
 {
@@ -725,6 +801,7 @@ int main() {
     testSpritePixelMask();
     testSpriteDrag();
     testCompletionEvents();
+    testVideoClockChain();
     testCrossKindLayerPrecedence();
     testBitmapCallbacks();
     testBitmapPixelMask();

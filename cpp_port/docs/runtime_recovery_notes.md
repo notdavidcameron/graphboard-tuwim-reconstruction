@@ -240,9 +240,28 @@ recovered engine functions, not the JS approximation.
    on real data, `gbinspect INTRO.BDF --video-end 0 … --video-end 9` walks the
    whole intro — `TheEnd(0..8)` chains `Play(1)…Play(9)`, then `TheEnd(9)`
    FadeScreens and `LoadPage("wyborw.bdf")`. `gbinspect` gains
-   `--video-end`/`--sound-end`/`--anim-end N`. What is *not* modelled is the
-   timing that decides *when* a clip ends (frame duration / WAV length /
-   animation phase count) — the port takes the completion as an explicit event.
+   `--video-end`/`--sound-end`/`--anim-end N`. These can also be clock-driven:
+
+   **Timing / clock (video done; sound & animation pending).** A simulated
+   per-page clock (`Page::advanceTime(ms)`, `gbinspect --advance MS`) fires a
+   completion when the clip's recovered duration elapses. **Video is wired and
+   grounded:** each entry's duration is `frameDurationMs * frameCount` (seeded
+   from the TVH private state), so `Transparent_Video_Holder.Play(id)` schedules
+   `TheEnd(id)` at `now + duration`, and a `TheEnd` that starts the next clip
+   chains the whole cutscene. Verified: `gbinspect INTRO.BDF --advance 60000`
+   plays all ten intro clips (`Play(1)…Play(9)`) and `LoadPage`s to the menu on
+   its own clock; `--advance 3500` correctly leaves video 2 mid-play (videos 0,1
+   finished at t=1000, 3000). A new `Play` supersedes any still-pending
+   completion; a 100k-iteration guard bounds a zero-cost restart loop. Covered by
+   `testVideoClockChain`.
+
+   Not yet clock-driven: **sound** — `EndPlaySound` needs a WAV duration
+   (data-chunk bytes / byte-rate) seeded into `clipDurationMs`; until then only
+   `--sound-end` fires it. **Sprite animation** — `EndAnimation` needs the
+   per-frame rate; `frame+0x20` (30–80 across sprites) looks like it, but the
+   single-phase "flying" sprites (butterflies, food) animate by *positional
+   movement*, not phase cycling — a continuous path the headless clock
+   deliberately does not simulate. Only `--anim-end` fires `EndAnimation` for now.
 
    Still TODO: MultiBitmap click callbacks — only 1 page uses them, and the
    callback is the 4-arg `MouseClickOnDown(id, x, y, deep)` where x/y are the

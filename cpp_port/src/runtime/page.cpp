@@ -3,6 +3,8 @@
 #include "graphboard/component.hpp"
 #include "graphboard/format.hpp"
 
+#include <algorithm>
+
 namespace graphboard::runtime {
 
 namespace {
@@ -52,7 +54,17 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
             break;
         }
         case HolderKind::MultiBitmap: parseMultiBitmapState(reader); break;
-        case HolderKind::TransparentVideoHolder: parseTransparentVideoHolderState(reader); break;
+        case HolderKind::TransparentVideoHolder: {
+            const auto tvh = parseTransparentVideoHolderState(reader);
+            // A video plays frameCount frames at frameDurationMs each; that total
+            // is when Transparent_Video_Holder.TheEnd(id) fires.
+            for (const auto& e : tvh.entries) {
+                state.clipDurationMs.push_back(
+                    static_cast<int>(e.stream.frameDurationMs) *
+                    static_cast<int>(e.stream.frameCount));
+            }
+            break;
+        }
         case HolderKind::SoundHolder: parseSoundHolderState(reader); break;
         case HolderKind::TextHolder: parseTextHolderState(reader); break;
         case HolderKind::BitmapHolder: {
@@ -213,11 +225,65 @@ Value Page::callComponent(const std::string& component, const std::string& metho
     } else if (method == "PlayDSound" || method == "Play") {
         state->props["playing"] =
             args.empty() ? Value::integer(1) : Value::integer(argInt(args, 0));
+        // Schedule the completion callback for whichever clip started. A new
+        // Play on the same holder supersedes any still-pending completion.
+        cancelCompletions(component);
+        if (state->kind == HolderKind::TransparentVideoHolder) {
+            scheduleCompletion(*state, "TheEnd", id);
+        } else if (state->kind == HolderKind::SoundHolder) {
+            scheduleCompletion(*state, "EndPlaySound", id);
+        }
     } else if (method == "Stop" || method == "StopAll" || method == "StopDSound") {
         state->props["playing"] = Value();
+        cancelCompletions(component);
     }
 
     return Value();
+}
+
+void Page::scheduleCompletion(const ComponentState& state, const std::string& event, int id) {
+    // Only clips with a known, positive duration complete on the clock; a
+    // zero/unknown duration never fires (matches an unbounded/looping clip).
+    if (id < 0 || static_cast<std::size_t>(id) >= state.clipDurationMs.size()) {
+        return;
+    }
+    const int duration = state.clipDurationMs[id];
+    if (duration <= 0) {
+        return;
+    }
+    pending_.push_back({state.displayName, event, id, clockMs_ + duration});
+}
+
+void Page::cancelCompletions(const std::string& component) {
+    const auto dot = component.rfind('.');
+    const std::string name =
+        dot == std::string::npos ? component : component.substr(dot + 1);
+    pending_.erase(std::remove_if(pending_.begin(), pending_.end(),
+                                  [&](const Pending& p) { return p.component == name; }),
+                   pending_.end());
+}
+
+void Page::advanceTime(int ms) {
+    const int target = clockMs_ + (ms > 0 ? ms : 0);
+    // Fire completions in time order; each may schedule the next clip, so keep
+    // going until nothing is due within the window. Bounded to avoid a runaway
+    // chain (a clip that restarts itself at zero cost).
+    for (int guard = 0; guard < 100000; ++guard) {
+        auto next = pending_.end();
+        for (auto it = pending_.begin(); it != pending_.end(); ++it) {
+            if (it->fireMs <= target && (next == pending_.end() || it->fireMs < next->fireMs)) {
+                next = it;
+            }
+        }
+        if (next == pending_.end()) {
+            break;
+        }
+        const Pending fired = *next;
+        pending_.erase(next);
+        clockMs_ = fired.fireMs;
+        runEvent(fired.component + "." + fired.event, {Value::integer(fired.id)});
+    }
+    clockMs_ = target;
 }
 
 Value Page::callBuiltin(const std::string& name, const std::vector<Value>& args) {

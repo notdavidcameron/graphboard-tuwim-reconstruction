@@ -711,7 +711,7 @@ int drivePage(const std::filesystem::path& path, const std::string& handler) {
 struct InputEvent {
     enum class Kind {
         Click, Down, Up, RClick, Move, Drag, Timer, Key,
-        VideoEnd, SoundEnd, AnimEnd,
+        VideoEnd, SoundEnd, AnimEnd, Advance,
     } kind;
     int a = 0;  // x, key code for Key, item id for *End, or drag start-x
     int b = 0;  // y, or drag start-y
@@ -734,6 +734,7 @@ void applyEvents(graphboard::runtime::Page& page, const std::vector<InputEvent>&
             case InputEvent::Kind::VideoEnd: page.videoEnd(ev.a); break;
             case InputEvent::Kind::SoundEnd: page.soundEnd(ev.a); break;
             case InputEvent::Kind::AnimEnd:  page.animationEnd(ev.a); break;
+            case InputEvent::Kind::Advance:  page.advanceTime(ev.a); break;
         }
     }
 }
@@ -768,6 +769,7 @@ int interactPage(const std::filesystem::path& path, bool runOpen,
     json out = pageStateJson(*page);
     out["opened"] = runOpen;
     out["openCallCount"] = openCallCount;
+    out["clockMs"] = page->clockMs();
     out["calls"] = callLogJson(*page);
     std::cout << out.dump(2) << "\n";
     return 0;
@@ -898,6 +900,9 @@ int main(int argc, char** argv) {
                 interact = true;
             } else if (isFlag(args[i], "--anim-end") && i + 1 < args.size()) {
                 events.push_back({InputEvent::Kind::AnimEnd, std::stoi(argToUtf8(args[++i]))});
+                interact = true;
+            } else if (isFlag(args[i], "--advance") && i + 1 < args.size()) {
+                events.push_back({InputEvent::Kind::Advance, std::stoi(argToUtf8(args[++i]))});
                 interact = true;
             } else if (isFlag(args[i], "--key") && i + 1 < args.size()) {
                 events.push_back({InputEvent::Kind::Key, std::stoi(argToUtf8(args[++i])), 0});
