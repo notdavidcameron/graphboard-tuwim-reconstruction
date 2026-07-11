@@ -19,11 +19,11 @@ plumbing.
 - Page/group component-list walking (`component`): the container framing
   (per-item leading CLSID) plus the reflected `GraphBrdCntrItem` wrapper record
   (functions/properties). Verified against `RZECZKA.BDF`.
-- A holder registry (`holders`) mapping the six confirmed wrapper CLSIDs to their
+- A holder registry (`holders`) mapping the confirmed wrapper CLSIDs to their
   identity, implementing DLL, and serializer anchor, with a note on which
   component-private payloads this port can currently parse.
-- Component-private state parsers, each byte-exact vs `RZECZKA.BDF`:
-  `HotSpot_Holder`, `Sprite_Holder`, `MultiBitmap`, `Transparent_Video_Holder`.
+- Component-private state parsers for every holder used by the shipped title,
+  including text/font, sound, bitmap, video, puzzle, recorder, and panorama.
 - Page script text + script-engine parse cache parsing (`format`), so a full
   `.BDF` is read end-to-end: header, components, script, engine state, trailer.
 - A runtime front-end (`runtime/lexer`, `runtime/script`): a cp1250-safe token
@@ -38,22 +38,22 @@ plumbing.
   page's components as far as the implemented private-state parsers allow and
   reporting each page's script handlers and API usage. It can also drive a page
   or a whole project headless with synthetic input (see Build, below).
+- `.GRP` cursor/component parsing and a live second component namespace:
+  `Group.*` methods, callbacks, hotspots, sprites, glides, sounds, rendering,
+  and `CloseGroup` remain isolated from the page's own holders.
+- A native Windows player, `gbgame`, with GDI scene output, embedded BoardVideo
+  decoding, overlapping audio, input, timers, navigation, and the sliding
+  `CURSORS.GRP` toolbar.
 
-`Text_Holder` (plus its trailing FontControl font block) and `Sound_Holder` have
-fully recovered, real-file-verified layouts and a step-by-step implementation
-plan in `docs/holder_recovery_notes.md`. Six more holder CLSIDs found across the
-DATA folder (`Bitmap_Holder`, `Video_Holder`, `Panorama_Holder`, `Panorama`,
-`Puzzle`, `Recorder`) are registered but their private layouts are unrecovered.
-Because a component's private block can only be skipped by fully parsing it, the
-walker stops at the first component whose private state is not yet implemented
-and reports how far it got.
+TextHolder content rendering/synchronization, exact palette fades, custom cursor
+artwork, and several less-used component behaviors remain outside this native
+checkpoint. Parsed TextHolder state is retained for later work.
 
 ## Real-File Regression Check
 
 `tools/verify_scenes.ps1` runs `gbinspect` against the original game DATA and
-asserts recovered ground truth for four files: `START.PRJ`, `RZECZKA.BDF`,
-`GRZESIU.BDF` (TVH-first ordering, cp1250 sprite names), and `INTRO.BDF`
-(stop-at-final-component edge). Run it after any parser change:
+asserts 123 recovered facts across `START.PRJ`, all seven shipped `.GRP` files,
+and representative pages. Run it after parser or runtime changes:
 
 ```powershell
 .\cpp_port\tools\verify_scenes.ps1
@@ -69,7 +69,16 @@ not `"YDP Board data file."` — the DATA folder contains misnamed non-BDF files
 ```powershell
 cmake -S cpp_port -B cpp_port/build
 cmake --build cpp_port/build
-ctest --test-dir cpp_port/build
+ctest --test-dir cpp_port/build -C Debug --output-on-failure
+```
+
+Portable MinGW release build:
+
+```powershell
+cmake -S cpp_port -B cpp_port/build-mingw -G Ninja -DCMAKE_BUILD_TYPE=Release `
+  -DCMAKE_CXX_COMPILER=C:/ProgramData/mingw64/mingw64/bin/g++.exe
+cmake --build cpp_port/build-mingw
+ctest --test-dir cpp_port/build-mingw --output-on-failure
 ```
 
 Inspect files:
@@ -77,7 +86,18 @@ Inspect files:
 ```powershell
 .\cpp_port\build\gbinspect.exe "C:\path\to\START.PRJ"
 .\cpp_port\build\gbinspect.exe "C:\path\to\MURZYNEK.BDF"
+.\cpp_port\build\gbinspect.exe "C:\path\to\CURSORS.GRP"
 ```
+
+Run the native player with an explicit manifest, or without arguments to choose
+`START.PRJ` in a file dialog:
+
+```powershell
+.\cpp_port\build-mingw\gbgame.exe "C:\path\to\DATA\START.PRJ"
+```
+
+Pages and groups resolve case-insensitively beside the manifest. The executable
+does not bundle or modify the original DATA assets.
 
 Drive a page headless (opens `OnOpenPage`, then replays synthetic input and
 prints the resulting state + host call log). Input events apply in order:

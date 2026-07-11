@@ -361,6 +361,7 @@ json hotspotStateToJson(const HotSpotHolderState& state) {
     for (const auto& hotspot : state.hotspots) {
         hotspots.push_back({
             {"rect", {hotspot.left, hotspot.top, hotspot.right, hotspot.bottom}},
+            {"id", hotspot.id},
             {"layer", hotspot.layer},
             {"enabled", hotspot.enabled},
             {"name", t(hotspot.name)},
@@ -467,6 +468,31 @@ json componentListToJson(graphboard::BinaryReader& reader) {
     if (!stopReason.empty()) {
         out["note"] = stopReason;
     }
+    return out;
+}
+
+json groupToJson(graphboard::BinaryReader& reader) {
+    const auto group = graphboard::parseGroupDocument(reader);
+    json cursors = json::array();
+    for (std::size_t i = 0; i < group.cursors.size(); ++i) {
+        const auto& cursor = group.cursors[i];
+        cursors.push_back({
+            {"index", i},
+            {"name", t(cursor.name)},
+            {"size", {cursor.width, cursor.height}},
+            {"hotspot", {cursor.hotX, cursor.hotY}},
+            {"transparentIndex", cursor.transparentIndex},
+            {"pixelByteCount", cursor.pixels.size()},
+        });
+    }
+    json out = {
+        {"kind", "GRP"},
+        {"cursorCount", group.cursors.size()},
+        {"cursors", cursors},
+        {"componentListOffset", group.componentListOffset},
+        {"componentList", componentListToJson(reader)},
+    };
+    out["trailingByteCount"] = reader.remaining();
     return out;
 }
 
@@ -612,11 +638,11 @@ public:
         if (name == "IsProject") return graphboard::runtime::Value::integer(1);
         return graphboard::runtime::Value();
     }
-    graphboard::runtime::Value callComponent(
+    ComponentResult callComponent(
         const std::string& component, const std::string& method,
         const std::vector<graphboard::runtime::Value>& args) override {
         calls.push_back(callToJson(true, component, method, args));
-        return graphboard::runtime::Value();
+        return {};
     }
 
 private:
@@ -996,6 +1022,8 @@ int main(int argc, char** argv) {
             std::cout << projectToJson(graphboard::parseProjectManifest(reader)).dump(2) << "\n";
         } else if (ext == ".bdf") {
             std::cout << bdfToJson(reader).dump(2) << "\n";
+        } else if (ext == ".grp") {
+            std::cout << groupToJson(reader).dump(2) << "\n";
         } else {
             std::cerr << "unsupported extension: " << ext << "\n";
             return 2;

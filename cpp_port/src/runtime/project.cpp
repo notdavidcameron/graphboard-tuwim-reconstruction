@@ -18,9 +18,9 @@ public:
     Value callBuiltin(const std::string& name, const std::vector<Value>&) override {
         return name == "IsProject" ? Value::integer(1) : Value();
     }
-    Value callComponent(const std::string&, const std::string&,
-                        const std::vector<Value>&) override {
-        return Value();
+    ComponentResult callComponent(const std::string&, const std::string&,
+                                  const std::vector<Value>&) override {
+        return {};
     }
 };
 

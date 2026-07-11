@@ -19,10 +19,17 @@ namespace graphboard::runtime {
 // itself and never reach the host.
 class Host {
 public:
+    struct ComponentResult {
+        Value value;
+        // Values written through pointer arguments, keyed by argument index.
+        std::map<std::size_t, Value> outArguments;
+    };
+
     virtual ~Host() = default;
     virtual Value callBuiltin(const std::string& name, const std::vector<Value>& args) = 0;
-    virtual Value callComponent(const std::string& component, const std::string& method,
-                                const std::vector<Value>& args) = 0;
+    virtual ComponentResult callComponent(const std::string& component,
+                                          const std::string& method,
+                                          const std::vector<Value>& args) = 0;
 };
 
 // A tree-walking interpreter for a single page's script text. Mirrors the
@@ -92,7 +99,12 @@ private:
     Value parseMultiplicative();
     Value parseUnary();
     Value parsePrimary();
-    std::vector<Value> parseArguments();  // pos_ at '(' -> consumes through ')'
+    // pos_ at '(' -> consumes through ')'. `outRefs` (when non-null) collects
+    // the variable names passed by address (&name), GraphBoard's out-param
+    // style: GetDeep(id, &deep). The caller assigns the call's return value to
+    // the referenced variable.
+    using OutReference = std::pair<std::size_t, std::string>;
+    std::vector<Value> parseArguments(std::vector<OutReference>* outRefs = nullptr);
     Value callFunctionOrHost(const std::string& name, const std::vector<Value>& args);
 
     // Scope helpers.

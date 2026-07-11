@@ -7,11 +7,19 @@ __pycache__/
 
 # Local native build outputs
 build/
+build-*/
 cmake-build-*/
 CMakeFiles/
 CMakeCache.txt
 *.o
 *.obj
+
+# Local native distributions and reverse-engineering tool outputs
+dist/
+gbtrace/*.dll
+gbtrace/*.exe
+gbtrace/*.obj
+gbtrace/*.log
 
 # Local editor/OS noise
 .DS_Store

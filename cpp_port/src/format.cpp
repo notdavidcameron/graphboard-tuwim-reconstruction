@@ -5,6 +5,7 @@ namespace graphboard {
 namespace {
 
 constexpr std::size_t kBdfBannerBytes = 100;
+constexpr std::size_t kCursorRecordBytes = 0x2c;
 
 std::vector<std::string> readStringTable(BinaryReader& reader) {
     const auto count = reader.readU32();
@@ -62,6 +63,35 @@ BdfHeader parseBdfHeader(BinaryReader& reader) {
     reader.skip(header.dibByteCount);
     header.componentListOffset = reader.position();
     return header;
+}
+
+GroupDocument parseGroupDocument(BinaryReader& reader) {
+    GroupDocument group;
+    const auto count = reader.readU32();
+    group.cursors.reserve(count);
+    for (std::uint32_t i = 0; i < count; ++i) {
+        const auto record = reader.readBytes(kCursorRecordBytes);
+        auto u32 = [&](std::size_t offset) -> std::uint32_t {
+            return static_cast<std::uint32_t>(record[offset]) |
+                   (static_cast<std::uint32_t>(record[offset + 1]) << 8) |
+                   (static_cast<std::uint32_t>(record[offset + 2]) << 16) |
+                   (static_cast<std::uint32_t>(record[offset + 3]) << 24);
+        };
+        CursorBitmap cursor;
+        cursor.flags = u32(0x00);
+        cursor.transparentIndex = u32(0x04);
+        cursor.width = u32(0x08);
+        cursor.height = u32(0x0c);
+        cursor.hotX = static_cast<std::int32_t>(u32(0x10));
+        cursor.hotY = static_cast<std::int32_t>(u32(0x14));
+        cursor.name.assign(reinterpret_cast<const char*>(record.data() + 0x1c), 12);
+        cursor.name = trimTrailingNulAndSpace(std::move(cursor.name));
+        const auto pixelBytes = reader.readU32();
+        cursor.pixels = reader.readBytes(pixelBytes);
+        group.cursors.push_back(std::move(cursor));
+    }
+    group.componentListOffset = reader.position();
+    return group;
 }
 
 ScriptText parseScriptText(BinaryReader& reader) {

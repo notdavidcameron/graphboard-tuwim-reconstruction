@@ -3,6 +3,8 @@
 
 #include <cassert>
 #include <cstdint>
+#include <filesystem>
+#include <fstream>
 #include <string>
 #include <vector>
 
@@ -138,6 +140,29 @@ std::vector<std::uint8_t> buildSyntheticBdf(const std::string& script) {
     return b;
 }
 
+std::vector<std::uint8_t> buildSyntheticGroup() {
+    const auto hotspotClsid = Guid::fromString("DA768116-5341-11D0-B444-008048EB5D40");
+    std::vector<std::uint8_t> b;
+    putU32(b, 0);                    // cursor count
+    putU32(b, 1);                    // component-list version
+    putU32(b, 1);                    // component count
+    putWrapper(b, hotspotClsid, "Group.HotSpot_Holder");
+    putU32(b, 0);                    // hotspot version
+    putU8(b, 0); putU8(b, 0); putU8(b, 0);
+    putU32(b, 1);
+    putHotSpotRecord(b, 0, 0, 50, 50, 9, 1, 42);
+    putArchiveString(b, "toolbar");
+    putU32(b, 0); putU32(b, 0);
+    return b;
+}
+
+void writeBytes(const std::filesystem::path& path, const std::vector<std::uint8_t>& bytes) {
+    std::ofstream out(path, std::ios::binary);
+    out.write(reinterpret_cast<const char*>(bytes.data()),
+              static_cast<std::streamsize>(bytes.size()));
+    assert(out.good());
+}
+
 const char* kScript = R"S(
 OnOpenPage()
 {
@@ -152,7 +177,8 @@ OnOpenPage()
 void OnLButtonDown(int x, int y)
 {
    Sprite_Holder.ChangePhase(0, 5);
-   Group.HotSpot_Holder.EnableHotSpot(5);
+   HotSpot_Holder.EnableHotSpot(5);
+   Group.HotSpot_Holder.DisableHotSpot(7);
    LoadPage("next.bdf");
 }
 )S";
@@ -201,13 +227,60 @@ void testDriveSyntheticPage() {
     assert(page->hitTestHotSpot(50, 50) == -1);
     assert(page->hitTestHotSpot(250, 250) == 7);
 
-    // A click re-enables hotspot id 5 (via Group.HotSpot_Holder.EnableHotSpot),
-    // changes the sprite phase, and requests the next page.
+    // A click re-enables hotspot id 5, changes the sprite phase, and requests
+    // the next page. The Group.HotSpot_Holder call must NOT leak onto the
+    // page's own holder: "Group." addresses the loaded .grp container (not
+    // loaded here), exactly as WYBORW relies on (its OnOpenPage calls
+    // Group.HotSpot_Holder.DisableHotSpot(1) without touching poem hotspot 1).
     page->lButtonDown(250, 250);
     assert(item(page->component("Sprite_Holder"), 0, "phase").toInt() == 5);
     assert(item(page->component("HotSpot_Holder"), 5, "enabled").toInt() == 1);
+    assert(item(page->component("HotSpot_Holder"), 7, "enabled").toInt() == 1);
     assert(page->hitTestHotSpot(50, 50) == 5);
+    assert(page->hitTestHotSpot(250, 250) == 7);
     assert(page->pendingPage() == "next.bdf");
+}
+
+void testGroupNamespaceAndHitRouting() {
+    const char* script = R"S(
+void OnOpenPage() { LoadGroup("toolbar.grp"); }
+void Group.HotSpot_Holder.LeftButtonClickOn(int rectID)
+{
+   if(rectID==42) LoadPage("group-hit.bdf");
+}
+)S";
+    const auto dir = std::filesystem::temp_directory_path() / "gb_group_runtime_test";
+    std::error_code ec;
+    std::filesystem::create_directories(dir, ec);
+    writeBytes(dir / "PAGE.BDF", buildSyntheticBdf(script));
+    writeBytes(dir / "TOOLBAR.GRP", buildSyntheticGroup());
+
+    auto page = Page::loadFromFile(dir / "PAGE.BDF");
+    page->open();
+    assert(page->currentGroup() == "toolbar.grp");
+    assert(page->groupComponents().size() == 1);
+    const auto* group = page->component("Group.HotSpot_Holder");
+    assert(group != nullptr && group->hotspots.size() == 1);
+    assert(group->hotspots[0].id == 42 && group->hotspots[0].enabled == 1);
+
+    page->callComponent("Group.HotSpot_Holder", "DisableHotSpot", {Value::integer(42)});
+    assert(page->component("Group.HotSpot_Holder")->hotspots[0].enabled == 0);
+    // A Group-qualified call must never leak to the page holder.
+    assert(page->component("HotSpot_Holder")->hotspots[0].enabled == 1);
+
+    // Reloading creates fresh group state, then the higher-layer group hotspot
+    // wins over the overlapping page hotspot and fires its prefixed callback.
+    page->callBuiltin("LoadGroup", {Value::string("toolbar.grp")});
+    assert(page->component("Group.HotSpot_Holder")->hotspots[0].enabled == 1);
+    page->lButtonDown(10, 10);
+    assert(page->pendingPage() == "group-hit.bdf");
+
+    page->callBuiltin("CloseGroup", {});
+    assert(page->currentGroup().empty());
+    assert(page->groupComponents().empty());
+    assert(page->component("Group.HotSpot_Holder") == nullptr);
+
+    std::filesystem::remove_all(dir, ec);
 }
 
 const char* kCallbackScript = R"S(
@@ -599,6 +672,19 @@ void testVideoClockChain() {
     page->advanceTime(6000);
     assert(page->getGlobal("played").toInt() == 3);
     assert(page->pendingPage() == "next.bdf");
+
+    // Reset returns an entry to its serialized resting visibility; explicit
+    // Show/Hide control that still-frame state without restarting playback.
+    page->callComponent("Transparent_Video_Holder", "ResetVideo", {Value::integer(2)});
+    assert(item(page->component("Transparent_Video_Holder"), 2, "playing").toInt() == 0);
+    assert(item(page->component("Transparent_Video_Holder"), 2, "hasPlayed").toInt() == 0);
+    assert(item(page->component("Transparent_Video_Holder"), 2, "visible").toInt() == 0);
+    page->callComponent("Transparent_Video_Holder", "ShowFirsLastVideoFrame",
+                        {Value::integer(2)});
+    assert(item(page->component("Transparent_Video_Holder"), 2, "visible").toInt() == 1);
+    page->callComponent("Transparent_Video_Holder", "HideFirsLastVideoFrame",
+                        {Value::integer(2)});
+    assert(item(page->component("Transparent_Video_Holder"), 2, "visible").toInt() == 0);
 }
 
 // A page with a Sound_Holder holding one sound: a minimal RIFF/WAVE whose
@@ -857,6 +943,7 @@ void testBitmapVsHotSpotLayer() {
 
 int main() {
     testDriveSyntheticPage();
+    testGroupNamespaceAndHitRouting();
     testHotSpotCallbacks();
     testSpriteCallbacks();
     testSpritePixelMask();

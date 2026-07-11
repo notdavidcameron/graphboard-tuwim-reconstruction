@@ -261,8 +261,8 @@ recovered engine functions, not the JS approximation.
    seeded into `clipDurationMs`, so `Sound_Holder.PlayDSound(id)` schedules
    `EndPlaySound(id)` at `now + duration`. Verified: the C++ durations match an
    independent WAV reader for all 14 RZECZKA sounds (767/374/741/8133… ms), and
-   `testSoundClock` drives a synthetic 500 ms clip. (Group-namespace sounds
-   aren't seeded, since the group isn't loaded — a page-only limitation.)
+   `testSoundClock` drives a synthetic 500 ms clip. Group-namespace sounds are
+   now seeded from the active `.GRP` and share the same completion scheduler.
 
    Not yet clock-driven: **sprite animation** — `EndAnimation` needs the
    per-frame rate; `frame+0x20` (30–80 across sprites) looks like it, but the
@@ -324,9 +324,9 @@ recovered engine functions, not the JS approximation.
    project globals. All 34 manifest pages open through the project path with 0
    failures and 0 hangs. Covered by `tests/runtime_project.cpp`.
 
-   Next: extend the component->script callback direction beyond HotSpot_Holder
-   (needs per-item click rects + a verified cross-kind z-order rule; see item 5),
-   and model `.GRP` group loading (`LoadGroup`) as a second component namespace.
+   Component callbacks now include hotspot, sprite, bitmap, and transparent-video
+   input. `.GRP` group loading is implemented as a second component namespace;
+   see the native checkpoint below.
 
 9. [DONE] Visual render — the headless runtime now has a "head". A small
    dependency-free PNG encoder (`image`) and `render` composite a page to a PNG:
@@ -407,6 +407,27 @@ appear as top-level *definitions* — those are component→script callbacks.
 `Sound_Holder.PlayDSound`, `Transparent_Video_Holder.Play`, MultiBitmap
 show/hide) — useful behavior reference, but defer to the recovered engine
 functions for exact semantics.
+
+## Native player + group checkpoint (2026-07-11)
+
+`gbgame` now wraps `Project`/`Page` in a Win32 event loop. It composites page
+sprites, bitmaps, TVH still/live frames, and active group sprites; plays page or
+group RIFF/WAVE clips plus BoardVideo PCM through `waveOut`; advances script and
+clip timers; follows `LoadPage`; and reports recoverable errors in its title.
+
+`.GRP` files are parsed as cursor records followed by the ordinary reflected
+component list. `LoadGroup` resolves beside `START.PRJ`, creates a separate
+`Group.*` namespace, and makes group holders participate in rendering, input,
+callbacks, sound completions, phase animation, and `GotoXY`. `CloseGroup`
+removes their pending state. Mouse hover is tracked per holder, which is
+required by `CURSORS.GRP`: its hotspot slides the toolbar even while a visible
+sprite occupies the same point.
+
+The current timing fallbacks are 100 ms per sprite phase and 320 px/s for
+`GotoXY`. The local `gbtrace` helper was prepared to measure these, but the
+archival executable available at this checkpoint is not assembled with its DLL
+runtime, so no reliable timing trace was captured. TextHolder drawing, exact
+palette fades, and custom cursor artwork remain deferred.
 
 ## Wanted from the Ghidra renaming agent (notes, no rush)
 

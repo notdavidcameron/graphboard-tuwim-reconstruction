@@ -111,14 +111,11 @@ std::vector<ScriptHandler> discoverHandlers(const std::string& source,
         }
         const std::size_t methodTok = i - 1;
         std::size_t nameStartTok = methodTok;
-        bool dotted = false;
-        std::size_t componentTok = 0;
-        if (methodTok >= 2 && isPunct(tokens[methodTok - 1], ".") &&
-            tokens[methodTok - 2].kind == TokenKind::Identifier) {
-            dotted = true;
-            componentTok = methodTok - 2;
-            nameStartTok = componentTok;
+        while (nameStartTok >= 2 && isPunct(tokens[nameStartTok - 1], ".") &&
+               tokens[nameStartTok - 2].kind == TokenKind::Identifier) {
+            nameStartTok -= 2;
         }
+        const bool dotted = nameStartTok != methodTok;
 
         // Find the matching ')'.
         int parenDepth = 0;
@@ -149,7 +146,10 @@ std::vector<ScriptHandler> discoverHandlers(const std::string& source,
         handler.nameOffset = tokens[nameStartTok].offset;
         if (dotted) {
             handler.kind = HandlerKind::ComponentCallback;
-            handler.component = tokens[componentTok].text;
+            for (std::size_t part = nameStartTok; part + 1 < methodTok; part += 2) {
+                if (!handler.component.empty()) handler.component += ".";
+                handler.component += tokens[part].text;
+            }
             handler.method = tokens[methodTok].text;
             handler.name = handler.component + "." + handler.method;
         } else {

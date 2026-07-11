@@ -46,6 +46,24 @@ struct BdfHeader {
     std::size_t componentListOffset = 0;
 };
 
+// Cursor bitmap prefix of a .GRP file. GraphBrdDoc_SerializeCursorAndGroupState
+// writes these records first, followed immediately by a normal ComponentList.
+struct CursorBitmap {
+    std::uint32_t flags = 0;
+    std::uint32_t transparentIndex = 0;
+    std::uint32_t width = 0;
+    std::uint32_t height = 0;
+    std::int32_t hotX = 0;
+    std::int32_t hotY = 0;
+    std::string name;
+    std::vector<std::uint8_t> pixels;
+};
+
+struct GroupDocument {
+    std::vector<CursorBitmap> cursors;
+    std::size_t componentListOffset = 0;
+};
+
 // Script editor text block (GraphBrdScriptEditor_SerializeText,
 // Tuwim.exe:004230a0). Used for both the per-page script (after the page
 // component list in .BDF) and the global project script (end of START.PRJ).
@@ -82,6 +100,7 @@ struct ScriptEngineState {
 
 ProjectManifest parseProjectManifest(BinaryReader& reader);
 BdfHeader parseBdfHeader(BinaryReader& reader);
+GroupDocument parseGroupDocument(BinaryReader& reader);
 ScriptText parseScriptText(BinaryReader& reader);
 ScriptEngineState parseScriptEngineState(BinaryReader& reader);
 

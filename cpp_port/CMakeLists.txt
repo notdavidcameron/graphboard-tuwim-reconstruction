@@ -6,11 +6,16 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+if(MSVC)
+    add_compile_options(/utf-8)
+endif()
+
 include(FetchContent)
 
 FetchContent_Declare(
     nlohmann_json
     URL https://github.com/nlohmann/json/releases/download/v3.11.3/json.tar.xz
+    DOWNLOAD_EXTRACT_TIMESTAMP TRUE
 )
 FetchContent_MakeAvailable(nlohmann_json)
 
@@ -21,6 +26,7 @@ add_library(graphboard_core
     src/holders.cpp
     src/image.cpp
     src/render.cpp
+    src/video.cpp
     src/runtime/lexer.cpp
     src/runtime/script.cpp
     src/runtime/value.cpp
@@ -42,6 +48,15 @@ target_link_libraries(gbinspect PRIVATE graphboard_core nlohmann_json::nlohmann_
 if(WIN32)
     # CommandLineToArgvW for lossless non-ASCII path handling.
     target_link_libraries(gbinspect PRIVATE shell32)
+
+    # The windowed game shell: GDI blitting, common-dialog START.PRJ picker.
+    add_executable(gbgame WIN32 tools/gbgame.cpp)
+    target_compile_definitions(gbgame PRIVATE UNICODE _UNICODE NOMINMAX)
+    target_link_libraries(gbgame PRIVATE graphboard_core user32 gdi32 comdlg32 shell32 winmm)
+    if(MINGW)
+        # wWinMain entry point; static runtime so the exe ships alone.
+        target_link_options(gbgame PRIVATE -municode -static)
+    endif()
 endif()
 
 include(CTest)
@@ -81,4 +96,10 @@ if(BUILD_TESTING)
     )
     target_link_libraries(graphboard_image_test PRIVATE graphboard_core)
     add_test(NAME image COMMAND graphboard_image_test)
+
+    add_executable(graphboard_video_test
+        tests/video.cpp
+    )
+    target_link_libraries(graphboard_video_test PRIVATE graphboard_core)
+    add_test(NAME video COMMAND graphboard_video_test)
 endif()

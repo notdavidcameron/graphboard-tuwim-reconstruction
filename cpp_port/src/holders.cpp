@@ -317,6 +317,7 @@ TransparentVideoHolderState parseTransparentVideoHolderState(BinaryReader& reade
         entry.stageX = static_cast<std::int32_t>(readU32At(entryBytes, 0x54c));
         entry.stageY = static_cast<std::int32_t>(readU32At(entryBytes, 0x550));
         entry.stageZ = static_cast<std::int32_t>(readU32At(entryBytes, 0x554));
+        entry.showStillAtRest = readU32At(entryBytes, 0x504) != 0;
 
         // The still frame is sized from the ENTRY's header copy, exactly as
         // TVH_LoadPrivateState computes it.
@@ -503,6 +504,11 @@ BitmapHolderState parseBitmapHolderState(BinaryReader& reader) {
             // 10003f50). Pixels are bottom-up from blob+0x80, transparent index
             // at blob+0x04.
             bitmap.transparentIndex = static_cast<std::uint8_t>(readU32At(blob, 0x04));
+            // blob+0x2c == 1 marks a bitmap the script reveals with ShowBitmap
+            // later: WYBORW's 25 hover-tooltip titles and PIEKARZ's script-shown
+            // items carry 1, KRAWIEC's initially-visible pieces and GRZESIU's
+            // static scenery carry 0 (all 203 DATA bitmaps surveyed).
+            bitmap.initiallyHidden = readU32At(blob, 0x2c) != 0;
             const bool wantsPixelTest =
                 readU32At(blob, 0x20) != 0 && readU32At(blob, 0x28) != 0;
             if (width > 0 && height > 0 &&

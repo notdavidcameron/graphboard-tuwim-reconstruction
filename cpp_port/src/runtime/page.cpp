@@ -4,6 +4,8 @@
 #include "graphboard/format.hpp"
 
 #include <algorithm>
+#include <cctype>
+#include <cmath>
 
 namespace graphboard::runtime {
 
@@ -26,7 +28,11 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
             // what scripts pass to EnableHotSpot/DisableHotSpot and receive in
             // LeftButtonClickOn -- not the array index.
             for (const auto& h : hs.hotspots) {
-                state.items[h.id]["enabled"] = Value::integer(h.enabled);
+                auto& item = state.items[h.id];
+                item["enabled"] = Value::integer(h.enabled);
+                item["x"] = Value::integer(h.left);
+                item["y"] = Value::integer(h.top);
+                item["z"] = Value::integer(h.layer);
             }
             break;
         }
@@ -42,6 +48,7 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
                 item["y"] = Value::integer(inst.posY);
                 item["phase"] = Value::integer(inst.phase);
                 item["visible"] = Value::integer(inst.visible);
+                item["z"] = Value::integer(inst.layer);
 
                 SpriteGeometry geom;
                 geom.layer = inst.layer;
@@ -58,10 +65,34 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
             const auto tvh = parseTransparentVideoHolderState(reader);
             // A video plays frameCount frames at frameDurationMs each; that total
             // is when Transparent_Video_Holder.TheEnd(id) fires.
-            for (const auto& e : tvh.entries) {
+            for (std::size_t i = 0; i < tvh.entries.size(); ++i) {
+                const auto& e = tvh.entries[i];
                 state.clipDurationMs.push_back(
                     static_cast<int>(e.stream.frameDurationMs) *
                     static_cast<int>(e.stream.frameCount));
+
+                VideoGeometry geom;
+                geom.width = e.stream.width;
+                geom.height = e.stream.height;
+                geom.frameDurationMs = static_cast<std::int32_t>(e.stream.frameDurationMs);
+                geom.frameCount = static_cast<std::int32_t>(e.stream.frameCount);
+                geom.streamOffset = e.stream.streamOffset;
+                geom.streamByteCount = e.stream.streamByteCount;
+                geom.paletteOffset = e.stream.streamOffset + 0xe8;
+                geom.stillFrameOffset = e.stillFrameOffset;
+                geom.stillFrameByteCount = e.stillFrameByteCount;
+                geom.showStillAtRest = e.showStillAtRest;
+                state.videos.push_back(geom);
+
+                auto& item = state.items[static_cast<int>(i)];
+                item["x"] = Value::integer(e.stageX);
+                item["y"] = Value::integer(e.stageY);
+                item["z"] = Value::integer(e.stageZ);
+                item["hasPlayed"] = Value::integer(0);
+                // At rest a flagged video paints its still frame (its resting
+                // pose), exactly as TVH_DrawStillFrame does. Entries not flagged
+                // (WYBORW's two menu-overlay panels) stay blank until played.
+                item["visible"] = Value::integer(e.showStillAtRest ? 1 : 0);
             }
             break;
         }
@@ -70,6 +101,7 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
             // A sound plays for its WAV length; that is when EndPlaySound(id) fires.
             for (const auto& s : sh.sounds) {
                 state.clipDurationMs.push_back(static_cast<int>(s.durationMs));
+                state.soundClips.push_back({s.soundOffset, s.soundByteCount});
             }
             break;
         }
@@ -83,7 +115,8 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
                 auto& item = state.items[static_cast<int>(i)];
                 item["x"] = Value::integer(bm.left);
                 item["y"] = Value::integer(bm.top);
-                item["visible"] = Value::integer(1);   // drawn until HideBitmap
+                item["visible"] = Value::integer(bm.initiallyHidden ? 0 : 1);
+                item["z"] = Value::integer(bm.layer);
                 BitmapGeometry geom;
                 geom.layer = bm.layer;
                 geom.width = bm.right - bm.left;
@@ -105,6 +138,21 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
     }
 }
 
+void parseComponentStates(BinaryReader& reader, std::vector<ComponentState>& components,
+                          std::map<std::string, std::size_t>& byName) {
+    const auto header = parseComponentListHeader(reader);
+    for (std::uint32_t i = 0; i < header.count; ++i) {
+        const auto wrapper = parseComponentListItem(reader);
+        ComponentState state;
+        state.displayName = wrapper.wrapper.displayName;
+        const auto* info = lookupHolder(wrapper.clsid);
+        state.kind = info ? info->kind : HolderKind::Unknown;
+        seedFromPrivateState(reader, state);
+        byName.emplace(state.displayName, components.size());
+        components.push_back(std::move(state));
+    }
+}
+
 } // namespace
 
 void Page::parse(BinaryReader& reader) {
@@ -115,26 +163,16 @@ void Page::parse(BinaryReader& reader) {
     }
     parseBdfHeader(reader);
 
-    const auto header = parseComponentListHeader(reader);
-    for (std::uint32_t i = 0; i < header.count; ++i) {
-        const auto item = parseComponentListItem(reader);
-        ComponentState state;
-        state.displayName = item.wrapper.displayName;
-        const auto* info = lookupHolder(item.clsid);
-        state.kind = info ? info->kind : HolderKind::Unknown;
-        seedFromPrivateState(reader, state);
-
-        // First instance of a display name wins for lookup; the vector keeps
-        // every instance in order.
-        byName_.emplace(state.displayName, components_.size());
-        components_.push_back(std::move(state));
-    }
+    parseComponentStates(reader, components_, byName_);
 
     script_ = parseScriptText(reader).text;
 }
 
-std::unique_ptr<Page> Page::loadFromReader(BinaryReader& reader, std::string /*sourceLabel*/) {
+std::unique_ptr<Page> Page::loadFromReader(BinaryReader& reader, std::string sourceLabel) {
     std::unique_ptr<Page> page(new Page());
+    if (!sourceLabel.empty()) {
+        page->resourceDirectory_ = std::filesystem::path(sourceLabel).parent_path();
+    }
     page->parse(reader);
     page->interpreter_ = std::make_unique<Interpreter>(page->script_, *page);
     return page;
@@ -170,8 +208,10 @@ void Page::setGlobal(const std::string& name, Value value) {
 }
 
 ComponentState* Page::resolve(const std::string& componentPath) {
-    // Scripts may qualify a component as Group.HotSpot_Holder; the instance is
-    // keyed by its bare display name (the segment after the last '.').
+    if (componentPath.rfind("Group.", 0) == 0) {
+        const auto it = groupByName_.find(componentPath);
+        return it != groupByName_.end() ? &groupComponents_[it->second] : nullptr;
+    }
     const auto dot = componentPath.rfind('.');
     const std::string name =
         dot == std::string::npos ? componentPath : componentPath.substr(dot + 1);
@@ -179,9 +219,12 @@ ComponentState* Page::resolve(const std::string& componentPath) {
     return it != byName_.end() ? &components_[it->second] : nullptr;
 }
 
+const ComponentState* Page::resolve(const std::string& componentPath) const {
+    return const_cast<Page*>(this)->resolve(componentPath);
+}
+
 const ComponentState* Page::component(const std::string& name) const {
-    const auto it = byName_.find(name);
-    return it != byName_.end() ? &components_[it->second] : nullptr;
+    return resolve(name);
 }
 
 std::vector<std::string> Page::componentNames() const {
@@ -190,16 +233,85 @@ std::vector<std::string> Page::componentNames() const {
     for (const auto& state : components_) {
         names.push_back(state.displayName);
     }
+    for (const auto& state : groupComponents_) {
+        names.push_back(state.displayName);
+    }
     return names;
 }
 
-Value Page::callComponent(const std::string& component, const std::string& method,
-                          const std::vector<Value>& args) {
+std::filesystem::path Page::resolveResourcePath(const std::string& name) const {
+    const auto direct = resourceDirectory_ / name;
+    if (std::filesystem::exists(direct)) return direct;
+    std::string wanted = name;
+    std::transform(wanted.begin(), wanted.end(), wanted.begin(), [](unsigned char c) {
+        return static_cast<char>(std::tolower(c));
+    });
+    std::error_code ec;
+    for (const auto& entry : std::filesystem::directory_iterator(resourceDirectory_, ec)) {
+        if (!entry.is_regular_file()) continue;
+        std::string candidate = entry.path().filename().string();
+        std::transform(candidate.begin(), candidate.end(), candidate.begin(), [](unsigned char c) {
+            return static_cast<char>(std::tolower(c));
+        });
+        if (candidate == wanted) return entry.path();
+    }
+    throw ParseError("Page::LoadGroup: group not found: " + name);
+}
+
+void Page::clearGroup() {
+    pending_.erase(std::remove_if(pending_.begin(), pending_.end(), [](const Pending& p) {
+                       return p.component.rfind("Group.", 0) == 0;
+                   }), pending_.end());
+    for (auto it = hoverByComponent_.begin(); it != hoverByComponent_.end();) {
+        if (it->first.rfind("Group.", 0) == 0) {
+            it = hoverByComponent_.erase(it);
+        } else {
+            ++it;
+        }
+    }
+    if (pressed_.component.rfind("Group.", 0) == 0) pressed_ = {};
+    dragging_ = false;
+    dragId_ = -1;
+    groupComponents_.clear();
+    groupByName_.clear();
+    groupBytes_.clear();
+    groupDocument_ = {};
+    currentGroup_.clear();
+}
+
+void Page::loadGroup(const std::string& name) {
+    if (name.empty()) {
+        clearGroup();
+        return;
+    }
+    // Synthetic reader tests have no resource directory; retain the requested
+    // name while leaving the namespace empty, matching the old headless stub.
+    if (resourceDirectory_.empty()) {
+        currentGroup_ = name;
+        return;
+    }
+    const auto path = resolveResourcePath(name);
+    auto reader = BinaryReader::fromFile(path);
+    GroupDocument document = parseGroupDocument(reader);
+    std::vector<ComponentState> components;
+    std::map<std::string, std::size_t> names;
+    parseComponentStates(reader, components, names);
+
+    clearGroup();
+    groupBytes_ = reader.bytes();
+    groupDocument_ = std::move(document);
+    groupComponents_ = std::move(components);
+    groupByName_ = std::move(names);
+    currentGroup_ = name;
+}
+
+Host::ComponentResult Page::callComponent(const std::string& component, const std::string& method,
+                                          const std::vector<Value>& args) {
     callLog_.push_back({false, component, method, args});
 
     ComponentState* state = resolve(component);
     if (state == nullptr) {
-        return Value();
+        return {};
     }
 
     // Index-addressed mutators. Method semantics follow the reflected member
@@ -208,9 +320,46 @@ Value Page::callComponent(const std::string& component, const std::string& metho
     const int id = static_cast<int>(argInt(args, 0));
     auto& item = state->items[id];
 
-    if (method == "MoveTo" || method == "MoveSprite" || method == "GotoXY") {
-        item["x"] = Value::integer(argInt(args, 1));
-        item["y"] = Value::integer(argInt(args, 2));
+    if (method == "MoveTo" || method == "MoveSprite") {
+        // Instant reposition; cancels any glide in progress.
+        const auto x = static_cast<std::int32_t>(argInt(args, 1));
+        const auto y = static_cast<std::int32_t>(argInt(args, 2));
+        item["x"] = Value::integer(x);
+        item["y"] = Value::integer(y);
+        item["gliding"] = Value::integer(0);
+        if (state->kind == HolderKind::HotSpotHolder) {
+            for (auto& hotspot : state->hotspots) {
+                if (hotspot.id != id) continue;
+                const auto width = hotspot.right - hotspot.left;
+                const auto height = hotspot.bottom - hotspot.top;
+                hotspot.left = x;
+                hotspot.top = y;
+                hotspot.right = x + width;
+                hotspot.bottom = y + height;
+            }
+        }
+    } else if (method == "GotoXY") {
+        // Animated glide to a target; the holder's timer walks the sprite there
+        // and fires InPlace(id, x, y) on arrival. Sprites that GotoXY off one
+        // edge and MoveTo back to the other on InPlace fly across the scene
+        // (DYZIO's ingredients).
+        item["targetX"] = Value::integer(argInt(args, 1));
+        item["targetY"] = Value::integer(argInt(args, 2));
+        item["gliding"] = Value::integer(1);
+    } else if (method == "GetPosition") {
+        ComponentResult result;
+        result.outArguments[1] = item.count("x") ? item["x"] : Value::integer(0);
+        result.outArguments[2] = item.count("y") ? item["y"] : Value::integer(0);
+        result.outArguments[3] = item.count("z") ? item["z"] : Value::integer(0);
+        return result;
+    } else if (method == "DisableTimers") {
+        state->props["timersEnabled"] = Value::integer(0);
+    } else if (method == "EnableTimers") {
+        state->props["timersEnabled"] = Value::integer(1);
+    } else if (method == "SynchronizeTimers") {
+        // Phase-aligns the holder's animations; visual-only, no state to model.
+    } else if (method == "ContinueAnimation") {
+        item["animating"] = Value::integer(1);
     } else if (method == "ShowBitmap" || method == "ShowText" || method == "Show" ||
                method == "ShowSprite") {
         item["visible"] = Value::integer(1);
@@ -223,6 +372,24 @@ Value Page::callComponent(const std::string& component, const std::string& metho
         item["animating"] = Value::integer(1);
     } else if (method == "StopAnimation") {
         item["animating"] = Value::integer(0);
+    } else if (method == "SetDeep") {
+        item["z"] = Value::integer(argInt(args, 1));
+    } else if (method == "GetDeep") {
+        ComponentResult result;
+        result.outArguments[1] = item.count("z") ? item["z"] : Value::integer(0);
+        return result;
+    } else if (method == "ShowFirsLastVideoFrame") {
+        item["visible"] = Value::integer(1);
+    } else if (method == "HideFirsLastVideoFrame") {
+        // Suppresses the entry's still frame when it is not playing.
+        item["visible"] = Value::integer(0);
+    } else if (method == "ResetVideo") {
+        item["playing"] = Value::integer(0);
+        item["hasPlayed"] = Value::integer(0);
+        const bool rest = id >= 0 && static_cast<std::size_t>(id) < state->videos.size() &&
+                          state->videos[static_cast<std::size_t>(id)].showStillAtRest;
+        item["visible"] = Value::integer(rest ? 1 : 0);
+        cancelCompletions(state->displayName);
     } else if (method == "EnableHotSpot" || method == "DisableHotSpot") {
         // Addressed by the hotspot's stored id, not its position in the array.
         const std::int32_t enabled = method == "EnableHotSpot" ? 1 : 0;
@@ -237,18 +404,32 @@ Value Page::callComponent(const std::string& component, const std::string& metho
             args.empty() ? Value::integer(1) : Value::integer(argInt(args, 0));
         // Schedule the completion callback for whichever clip started. A new
         // Play on the same holder supersedes any still-pending completion.
-        cancelCompletions(component);
+        cancelCompletions(state->displayName);
         if (state->kind == HolderKind::TransparentVideoHolder) {
+            // Per-entry playback state for the renderer: which clip runs and
+            // since when on the simulated clock.
+            for (auto& [otherId, other] : state->items) {
+                other["playing"] = Value::integer(0);
+            }
+            item["playing"] = Value::integer(1);
+            item["hasPlayed"] = Value::integer(1);
+            item["playStartMs"] = Value::integer(clockMs_);
+            item["visible"] = Value::integer(1);   // frames persist after the clip
             scheduleCompletion(*state, "TheEnd", id);
         } else if (state->kind == HolderKind::SoundHolder) {
             scheduleCompletion(*state, "EndPlaySound", id);
         }
     } else if (method == "Stop" || method == "StopAll" || method == "StopDSound") {
         state->props["playing"] = Value();
-        cancelCompletions(component);
+        if (state->kind == HolderKind::TransparentVideoHolder) {
+            for (auto& [otherId, other] : state->items) {
+                other["playing"] = Value::integer(0);
+            }
+        }
+        cancelCompletions(state->displayName);
     }
 
-    return Value();
+    return {};
 }
 
 void Page::scheduleCompletion(const ComponentState& state, const std::string& event, int id) {
@@ -265,15 +446,13 @@ void Page::scheduleCompletion(const ComponentState& state, const std::string& ev
 }
 
 void Page::cancelCompletions(const std::string& component) {
-    const auto dot = component.rfind('.');
-    const std::string name =
-        dot == std::string::npos ? component : component.substr(dot + 1);
     pending_.erase(std::remove_if(pending_.begin(), pending_.end(),
-                                  [&](const Pending& p) { return p.component == name; }),
+                                  [&](const Pending& p) { return p.component == component; }),
                    pending_.end());
 }
 
 void Page::advanceTime(int ms) {
+    const int startMs = clockMs_;
     const int target = clockMs_ + (ms > 0 ? ms : 0);
     // Fire completions in time order; each may schedule the next clip, so keep
     // going until nothing is due within the window. Bounded to avoid a runaway
@@ -291,9 +470,98 @@ void Page::advanceTime(int ms) {
         const Pending fired = *next;
         pending_.erase(next);
         clockMs_ = fired.fireMs;
+        // The clip is over before its completion handler runs; the renderer
+        // falls back to the entry's still frame.
+        if (auto* state = resolve(fired.component)) {
+            if (state->kind == HolderKind::TransparentVideoHolder) {
+                state->items[fired.id]["playing"] = Value::integer(0);
+            }
+        }
         runEvent(fired.component + "." + fired.event, {Value::integer(fired.id)});
     }
+    const int elapsed = target - startMs;
     clockMs_ = target;
+
+    // Step animating sprites through their phases so StartAnimation moves them
+    // on screen. The per-instance timer interval is not recovered yet; 100 ms
+    // per phase matches the videos' dominant frame rate. Animation loops until
+    // StopAnimation/ChangePhase, with the fractional remainder carried in the
+    // item so slow ticks stay smooth.
+    if (elapsed > 0) {
+        auto stepAnimations = [&](std::vector<ComponentState>& components) {
+            for (auto& c : components) {
+                if (c.kind != HolderKind::SpriteHolder) continue;
+                for (auto& [id, item] : c.items) {
+                    if (item.count("animating") == 0 || item["animating"].toInt() == 0) continue;
+                    if (id < 0 || static_cast<std::size_t>(id) >= c.sprites.size()) continue;
+                    const auto phases = static_cast<std::int64_t>(
+                        c.sprites[static_cast<std::size_t>(id)].frames.size());
+                    if (phases <= 1) continue;
+                    constexpr int kPhaseMs = 100;
+                    std::int64_t accum =
+                        item.count("animAccumMs") ? item["animAccumMs"].toInt() : 0;
+                    accum += elapsed;
+                    const std::int64_t steps = accum / kPhaseMs;
+                    if (steps > 0) {
+                        const std::int64_t phase =
+                            (item.count("phase") ? item["phase"].toInt() : 0) + steps;
+                        item["phase"] = Value::integer(phase % phases);
+                    }
+                    item["animAccumMs"] = Value::integer(accum % kPhaseMs);
+                }
+            }
+        };
+        stepAnimations(components_);
+        stepAnimations(groupComponents_);
+        stepGlides(elapsed);
+    }
+}
+
+void Page::stepGlides(int elapsed) {
+    // Walk each gliding sprite toward its GotoXY target. The holder's real
+    // per-instance velocity is not recovered; kGlideSpeed is a constant chosen
+    // so DYZIO's ingredients cross the scene at a natural pace. Arrivals fire
+    // InPlace(id, x, y), which may re-target the sprite (flight loops), so
+    // collect the callbacks and run them after stepping to avoid mutating the
+    // map mid-iteration.
+    constexpr double kGlideSpeed = 320.0;  // pixels per second
+    const double dist = kGlideSpeed * elapsed / 1000.0;
+
+    struct Arrival { std::string component; int id; int x; int y; };
+    std::vector<Arrival> arrivals;
+
+    auto stepContainer = [&](std::vector<ComponentState>& components) {
+        for (auto& c : components) {
+            if (c.kind != HolderKind::SpriteHolder) continue;
+            if (c.props.count("timersEnabled") && c.props["timersEnabled"].toInt() == 0) continue;
+            for (auto& [id, item] : c.items) {
+                if (item.count("gliding") == 0 || item["gliding"].toInt() == 0) continue;
+                const double x = static_cast<double>(item.count("x") ? item["x"].toInt() : 0);
+                const double y = static_cast<double>(item.count("y") ? item["y"].toInt() : 0);
+                const double tx = static_cast<double>(item["targetX"].toInt());
+                const double ty = static_cast<double>(item["targetY"].toInt());
+                const double dx = tx - x, dy = ty - y;
+                const double len = std::sqrt(dx * dx + dy * dy);
+                if (len <= dist || len == 0.0) {
+                    item["x"] = Value::integer(static_cast<std::int64_t>(tx));
+                    item["y"] = Value::integer(static_cast<std::int64_t>(ty));
+                    item["gliding"] = Value::integer(0);
+                    arrivals.push_back(
+                        {c.displayName, id, static_cast<int>(tx), static_cast<int>(ty)});
+                } else {
+                    item["x"] = Value::integer(static_cast<std::int64_t>(x + dx / len * dist));
+                    item["y"] = Value::integer(static_cast<std::int64_t>(y + dy / len * dist));
+                }
+            }
+        }
+    };
+    stepContainer(components_);
+    stepContainer(groupComponents_);
+
+    for (const auto& a : arrivals) {
+        runEvent(a.component + ".InPlace",
+                 {Value::integer(a.id), Value::integer(a.x), Value::integer(a.y)});
+    }
 }
 
 Value Page::callBuiltin(const std::string& name, const std::vector<Value>& args) {
@@ -302,9 +570,9 @@ Value Page::callBuiltin(const std::string& name, const std::vector<Value>& args)
     if (name == "LoadPage") {
         pendingPage_ = args.empty() ? std::string() : args[0].toString();
     } else if (name == "LoadGroup") {
-        currentGroup_ = args.empty() ? std::string() : args[0].toString();
+        loadGroup(args.empty() ? std::string() : args[0].toString());
     } else if (name == "CloseGroup") {
-        currentGroup_.clear();
+        clearGroup();
     } else if (name == "SetCursor") {
         cursor_ = static_cast<int>(argInt(args, 0));
     } else if (name == "SetTimer") {
@@ -394,9 +662,10 @@ Candidate topItemIn(const ComponentState& state, int x, int y) {
                 }
             }
 
-            if (best.index == -1 || geom.layer > best.layer) {
+            const auto layer = itemInt(state, id, "z");
+            if (best.index == -1 || layer > best.layer) {
                 best.index = id;
-                best.layer = geom.layer;
+                best.layer = static_cast<std::int32_t>(layer);
             }
         }
     } else if (state.kind == HolderKind::BitmapHolder) {
@@ -419,9 +688,31 @@ Candidate topItemIn(const ComponentState& state, int x, int y) {
                     continue;
                 }
             }
-            if (best.index == -1 || geom.layer > best.layer) {
+            const auto layer = itemInt(state, id, "z");
+            if (best.index == -1 || layer > best.layer) {
                 best.index = id;
-                best.layer = geom.layer;
+                best.layer = static_cast<std::int32_t>(layer);
+            }
+        }
+    } else if (state.kind == HolderKind::TransparentVideoHolder) {
+        // TVH click/hover routing (TransparentVideoHolder.dll): a rect test at
+        // the entry's stage position and layer ("deep"), addressed by entry
+        // index. Only a shown entry is a target. This is what fires
+        // Transparent_Video_Holder.MouseClickOnDown / MouseMoveIn -- e.g.
+        // DYZIO plays an entry when it is clicked.
+        for (std::size_t r = state.videos.size(); r-- > 0;) {
+            const int id = static_cast<int>(r);
+            if (itemInt(state, id, "visible") == 0) continue;
+            const auto& geom = state.videos[r];
+            const auto left = itemInt(state, id, "x");
+            const auto top = itemInt(state, id, "y");
+            if (x < left || x >= left + geom.width || y < top || y >= top + geom.height) {
+                continue;
+            }
+            const auto layer = itemInt(state, id, "z");
+            if (best.index == -1 || layer > best.layer) {
+                best.index = id;
+                best.layer = static_cast<std::int32_t>(layer);
             }
         }
     }
@@ -447,6 +738,18 @@ Page::Hit Page::findHit(int x, int y) const {
         const auto candidate = topItemIn(state, x, y);
         if (candidate.index == -1) continue;
         if (hit.index == -1 || candidate.layer > bestLayer) {
+            hit.index = candidate.index;
+            hit.component = state.displayName;
+            hit.kind = state.kind;
+            bestLayer = candidate.layer;
+        }
+    }
+    // Group components are dispatched after page components and win an equal
+    // layer, matching the document's page-list then group-list walk.
+    for (const auto& state : groupComponents_) {
+        const auto candidate = topItemIn(state, x, y);
+        if (candidate.index == -1) continue;
+        if (hit.index == -1 || candidate.layer >= bestLayer) {
             hit.index = candidate.index;
             hit.component = state.displayName;
             hit.kind = state.kind;
@@ -488,6 +791,7 @@ const char* clickEventFor(HolderKind kind) {
         case HolderKind::HotSpotHolder: return "LeftButtonClickOn";
         case HolderKind::SpriteHolder:  return "MouseClickOnDown";
         case HolderKind::BitmapHolder:  return "MouseClickOnDown";
+        case HolderKind::TransparentVideoHolder: return "MouseClickOnDown";
         default: return nullptr;
     }
 }
@@ -613,14 +917,29 @@ void Page::mouseMove(int x, int y) {
         return;
     }
 
-    const auto hit = findHit(x, y);
-    if (hit.index == hover_.index && hit.component == hover_.component) {
-        return;
-    }
-    // Both HotSpot_Holder and Sprite_Holder expose MouseMoveIn/MouseMoveOut.
-    fireHitEvent(hover_, "MouseMoveOut");
-    fireHitEvent(hit, "MouseMoveIn");
-    hover_ = hit;
+    auto dispatch = [&](const std::vector<ComponentState>& components) {
+        for (const auto& state : components) {
+            const auto candidate = topItemIn(state, x, y);
+            Hit hit;
+            if (candidate.index != -1) {
+                hit.component = state.displayName;
+                hit.kind = state.kind;
+                hit.index = candidate.index;
+            }
+            auto oldIt = hoverByComponent_.find(state.displayName);
+            const Hit old = oldIt != hoverByComponent_.end() ? oldIt->second : Hit{};
+            if (old.index == hit.index && old.component == hit.component) continue;
+            fireHitEvent(old, "MouseMoveOut");
+            fireHitEvent(hit, "MouseMoveIn");
+            if (hit.index == -1) {
+                hoverByComponent_.erase(state.displayName);
+            } else {
+                hoverByComponent_[state.displayName] = hit;
+            }
+        }
+    };
+    dispatch(components_);
+    dispatch(groupComponents_);
 }
 
 } // namespace graphboard::runtime

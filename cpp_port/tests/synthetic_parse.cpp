@@ -3,6 +3,7 @@
 #include "graphboard/guid.hpp"
 #include "graphboard/holders.hpp"
 
+#include <algorithm>
 #include <cassert>
 #include <cstdint>
 #include <string>
@@ -118,6 +119,40 @@ void testBdfHeader() {
     assert(header.paletteByteCount == 4);
     assert(header.dibByteCount == 3);
     assert(header.componentListOffset == 148);
+}
+
+void testGroupDocument() {
+    std::vector<std::uint8_t> bytes;
+    appendU32(bytes, 1);                 // cursor count
+    std::vector<std::uint8_t> record(0x2c, 0);
+    auto put = [&record](std::size_t off, std::uint32_t value) {
+        record[off] = static_cast<std::uint8_t>(value);
+        record[off + 1] = static_cast<std::uint8_t>(value >> 8);
+        record[off + 2] = static_cast<std::uint8_t>(value >> 16);
+        record[off + 3] = static_cast<std::uint8_t>(value >> 24);
+    };
+    put(0x00, 1); put(0x04, 7); put(0x08, 2); put(0x0c, 2);
+    put(0x10, 1); put(0x14, 0);
+    const std::string name = "action";
+    std::copy(name.begin(), name.end(), record.begin() + 0x1c);
+    bytes.insert(bytes.end(), record.begin(), record.end());
+    appendU32(bytes, 4);
+    bytes.insert(bytes.end(), {7, 1, 2, 7});
+    const std::size_t componentOffset = bytes.size();
+    appendU32(bytes, 1);                 // component-list version
+    appendU32(bytes, 0);                 // component count
+
+    graphboard::BinaryReader reader(bytes);
+    const auto group = graphboard::parseGroupDocument(reader);
+    assert(group.cursors.size() == 1);
+    assert(group.cursors[0].name == "action");
+    assert(group.cursors[0].width == 2 && group.cursors[0].height == 2);
+    assert(group.cursors[0].hotX == 1 && group.cursors[0].transparentIndex == 7);
+    assert(group.cursors[0].pixels == std::vector<std::uint8_t>({7, 1, 2, 7}));
+    assert(group.componentListOffset == componentOffset);
+    const auto components = graphboard::parseComponentListHeader(reader);
+    assert(components.version == 1 && components.count == 0);
+    assert(reader.eof());
 }
 
 void testGuidRoundTrip() {
@@ -484,6 +519,7 @@ void testScriptBlocks() {
 int main() {
     testProjectManifest();
     testBdfHeader();
+    testGroupDocument();
     testGuidRoundTrip();
     testComponentWrapper();
     testComponentListItem();

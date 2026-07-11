@@ -241,6 +241,10 @@ struct TransparentVideoEntry {
     std::int32_t stageZ = 0;        // entry+0x554
     std::uint32_t stillFrameByteCount = 0;
     std::size_t stillFrameOffset = 0;
+    // entry+0x504 (initialFrameScratch2): 1 => the board paints this entry's
+    // still frame at rest (its resting pose), 0 => it stays blank until played.
+    // WYBORW's 25 menu characters carry 1; its two menu-overlay entries carry 0.
+    bool showStillAtRest = false;
 };
 
 struct TransparentVideoHolderState {
@@ -365,6 +369,7 @@ struct BitmapHolderBitmap {
     std::size_t blobOffset = 0;
     std::int32_t left = 0, top = 0, right = 0, bottom = 0;
     std::int32_t layer = 0;           // blob+0x18 ("deep")
+    bool initiallyHidden = false;     // blob+0x2c: revealed later via ShowBitmap
     std::string name;                 // blob+0x34
     std::size_t pixelOffset = 0;      // blobOffset + 0x80 (pixels; 0x10 trailer follows)
     bool pixelSizeConsistent = false; // stride*(bottom-top) == blobByteCount-0x90

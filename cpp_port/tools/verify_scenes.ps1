@@ -80,6 +80,27 @@ Assert-Eq $prj.decodedSignature "Julian Tuwim" "START.PRJ signature"
 Assert-Eq $prj.globalScriptVersion 1 "START.PRJ globalScriptVersion"
 Assert-Eq $prj.globalScriptByteCount 332 "START.PRJ globalScript bytes"
 
+# ------------------------------------------------------------------- *.GRP
+$groups = @(
+    @("CURSORS.GRP", 13, 3),
+    @("CURSORS1.GRP", 2, 4),
+    @("CURSORS2.GRP", 13, 3),
+    @("G_PIOS.GRP", 4, 3),
+    @("G_REC.GRP", 6, 4),
+    @("G_TAN.GRP", 2, 3),
+    @("GR_CZYM.GRP", 2, 3)
+)
+foreach ($expect in $groups) {
+    $grp = Get-Scene $expect[0]
+    Assert-Eq $grp.cursorCount $expect[1] "$($expect[0]) cursor count"
+    Assert-Eq $grp.componentList.count $expect[2] "$($expect[0]) component count"
+    Assert-Eq $grp.componentList.componentsParsed $expect[2] "$($expect[0]) components parsed"
+    Assert-Eq $grp.trailingByteCount 0 "$($expect[0]) trailing bytes"
+}
+$cursors = Get-Scene "CURSORS.GRP"
+Assert-Eq (($cursors.componentList.components | ForEach-Object displayName) -join ',') `
+    "Group.HotSpot_Holder,Group.Sprite_Holder,Group.Sound_Holder" "CURSORS component order"
+
 # --------------------------------------------------------------- RZECZKA.BDF
 # All six components parse; the walk continues into the page script text and
 # the script-engine parse cache, ending 4 bytes before EOF (COleDocument tail).
@@ -230,7 +251,7 @@ Assert-Eq $snd.props.playing 0 "INTRO drive: Sound playing clip 0"
 # ------------------------------------------------------------------- summary
 Write-Output ""
 if ($script:failures -eq 0) {
-    Write-Output "verify_scenes: all $script:checks checks passed (START.PRJ, RZECZKA, GRZESIU, INTRO, ABEC_R, ABEC_T, OKULARY, MROZ)"
+    Write-Output "verify_scenes: all $script:checks checks passed (START.PRJ, all 7 GRPs, RZECZKA, GRZESIU, INTRO, ABEC_R, ABEC_T, OKULARY, MROZ)"
     exit 0
 } else {
     Write-Output "verify_scenes: $script:failures of $script:checks checks FAILED"

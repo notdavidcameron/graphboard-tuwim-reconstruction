@@ -27,10 +27,18 @@ public:
         if (name == "Random") return Value::integer(0);
         return Value();
     }
-    Value callComponent(const std::string& component, const std::string& method,
-                        const std::vector<Value>& args) override {
+    ComponentResult callComponent(const std::string& component, const std::string& method,
+                                  const std::vector<Value>& args) override {
         calls.push_back({false, component, method, args});
-        return Value();
+        ComponentResult result;
+        if (method == "GetPosition") {
+            result.outArguments[1] = Value::integer(12);
+            result.outArguments[2] = Value::integer(34);
+            result.outArguments[3] = Value::integer(56);
+        } else if (method == "GetDeep") {
+            result.outArguments[1] = Value::integer(78);
+        }
+        return result;
     }
 
     std::string trace() const {
@@ -251,6 +259,32 @@ void OnLButtonDown(int x,int y)
     assert(!interp.hasGlobal("localOnly"));
 }
 
+void testComponentOutParameters() {
+    const char* script = R"S(
+void OnOpenPage()
+{
+   int x=0; int y=0; int z=0; int deep=0;
+}
+void Query()
+{
+   Sprite_Holder.GetPosition(4,&x,&y,&z);
+   Transparent_Video_Holder.GetDeep(2,&deep);
+   Debug(x); Debug(y); Debug(z); Debug(deep);
+}
+)S";
+    RecordingHost host;
+    Interpreter interp(script, host);
+    interp.runHandler("OnOpenPage", {});
+    interp.runHandler("Query", {});
+    assert(interp.getGlobal("x").toInt() == 12);
+    assert(interp.getGlobal("y").toInt() == 34);
+    assert(interp.getGlobal("z").toInt() == 56);
+    assert(interp.getGlobal("deep").toInt() == 78);
+    assert(host.trace() ==
+           "Sprite_Holder.GetPosition(4,0,0,0) "
+           "Transparent_Video_Holder.GetDeep(2,0) Debug(12) Debug(34) Debug(56) Debug(78) ");
+}
+
 } // namespace
 
 int main() {
@@ -260,5 +294,6 @@ int main() {
     testControlFlowAndUserFunctions();
     testIncrementLoops();
     testOnOpenPageGlobals();
+    testComponentOutParameters();
     return 0;
 }

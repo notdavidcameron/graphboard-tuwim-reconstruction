@@ -679,7 +679,7 @@ Value Interpreter::parseUnary() {
     return parsePrimary();
 }
 
-std::vector<Value> Interpreter::parseArguments() {
+std::vector<Value> Interpreter::parseArguments(std::vector<OutReference>* outRefs) {
     std::vector<Value> args;
     if (!atPunct("(")) {
         return args;
@@ -690,6 +690,23 @@ std::vector<Value> Interpreter::parseArguments() {
         return args;
     }
     while (pos_ < tokens_.size() && tok().kind != TokenKind::End) {
+        // &name passes a variable by address (GetDeep(id, &deep)): send its
+        // current value and record the name for the post-call write-back.
+        if (atPunct("&") && pos_ + 1 < tokens_.size() &&
+            tokens_[pos_ + 1].kind == TokenKind::Identifier) {
+            ++pos_;
+            const std::string refName = tok().text;
+            ++pos_;
+            if (outRefs) {
+                outRefs->push_back({args.size(), refName});
+            }
+            args.push_back(lookup(refName));
+            if (atPunct(",")) {
+                ++pos_;
+                continue;
+            }
+            break;
+        }
         args.push_back(parseExpression());
         if (atPunct(",")) {
             ++pos_;
@@ -762,8 +779,16 @@ Value Interpreter::parsePrimary() {
                 break;
             }
             if (atPunct("(")) {
-                const auto args = parseArguments();
-                return host_.callComponent(component, member, args);
+                std::vector<OutReference> outRefs;
+                const auto args = parseArguments(&outRefs);
+                auto result = host_.callComponent(component, member, args);
+                for (const auto& [argument, variable] : outRefs) {
+                    const auto value = result.outArguments.find(argument);
+                    if (value != result.outArguments.end()) {
+                        assign(variable, value->second);
+                    }
+                }
+                return result.value;
             }
             return Value();  // property read: not modeled yet
         }

@@ -2,6 +2,7 @@
 
 #include "graphboard/binary_reader.hpp"
 #include "graphboard/holders.hpp"
+#include "graphboard/format.hpp"
 #include "graphboard/runtime/interpreter.hpp"
 #include "graphboard/runtime/value.hpp"
 
@@ -39,6 +40,29 @@ struct BitmapGeometry {
     std::uint8_t transparentIndex = 0;
 };
 
+// Static geometry of one Transparent_Video_Holder entry. The live position and
+// layer ("deep") are script-mutable (MoveTo/SetDeep) and live in items; the
+// stream/still-frame locations inside the .BDF are fixed, so a renderer or
+// audio player can slice the media straight out of the page bytes.
+struct VideoGeometry {
+    std::int32_t width = 0;
+    std::int32_t height = 0;
+    std::int32_t frameDurationMs = 0;
+    std::int32_t frameCount = 0;
+    std::size_t streamOffset = 0;       // "Board Video File" header start
+    std::uint32_t streamByteCount = 0;  // header + chunk records
+    std::size_t paletteOffset = 0;      // streamOffset + 0xe8: 256 RGBQUADs
+    std::size_t stillFrameOffset = 0;   // 8-bpp bottom-up DIB bits, stride-padded
+    std::uint32_t stillFrameByteCount = 0;
+    bool showStillAtRest = false;       // paint the still frame when not playing
+};
+
+// One Sound_Holder clip: a complete RIFF/WAVE file embedded in the page bytes.
+struct SoundClip {
+    std::size_t offset = 0;
+    std::uint32_t byteCount = 0;
+};
+
 struct ComponentState {
     std::string displayName;               // e.g. "Sprite_Holder"
     HolderKind kind = HolderKind::Unknown;
@@ -47,6 +71,8 @@ struct ComponentState {
     std::vector<HotSpot> hotspots;         // HotSpot_Holder geometry (for hit tests)
     std::vector<SpriteGeometry> sprites;   // Sprite_Holder geometry, by spriteID
     std::vector<BitmapGeometry> bitmaps;   // Bitmap_Holder geometry, by bitmapID
+    std::vector<VideoGeometry> videos;     // Transparent_Video_Holder entries
+    std::vector<SoundClip> soundClips;     // Sound_Holder embedded WAVs
     // Playback length per clip id, in ms: video = frameDurationMs*frameCount,
     // sound = WAV data length. Used by the clock to schedule TheEnd/EndPlaySound.
     std::vector<int> clipDurationMs;
@@ -85,12 +111,11 @@ public:
 
     // Raw input dispatch. Mirrors the original view's two-step handling: the
     // page-level script handler always runs, then (as the board would deliver
-    // IObject::LButtonDown/MouseMove to each component) the hit HotSpot_Holder
-    // item's own callback fires if the page script defines it. Only
-    // HotSpot_Holder is wired here: its hit-test rule and event names are
-    // verified (see docs/component_interfaces.md); other holder kinds need
-    // per-item click geometry and a verified cross-kind z-order rule before
-    // they can be dispatched the same way (see runtime_recovery_notes.md).
+    // IObject::LButtonDown/MouseMove to components) page and active-group
+    // hotspots, sprites, bitmaps, and transparent videos fire their recovered
+    // callbacks. Button hits use the merged layer order; hover is tracked per
+    // holder because the cursor toolbar intentionally overlaps its sprites and
+    // controlling hotspot.
     void lButtonDown(int x, int y);
     void lButtonUp(int x, int y);
     void rButtonDown(int x, int y);
@@ -125,13 +150,16 @@ public:
 
     // Host interface.
     Value callBuiltin(const std::string& name, const std::vector<Value>& args) override;
-    Value callComponent(const std::string& component, const std::string& method,
-                        const std::vector<Value>& args) override;
+    ComponentResult callComponent(const std::string& component, const std::string& method,
+                                  const std::vector<Value>& args) override;
 
     // Queries.
     const ComponentState* component(const std::string& name) const;
     std::vector<std::string> componentNames() const;
     const std::vector<ComponentState>& components() const { return components_; }
+    const std::vector<ComponentState>& groupComponents() const { return groupComponents_; }
+    const std::vector<std::uint8_t>& groupBytes() const { return groupBytes_; }
+    const std::vector<CursorBitmap>& groupCursors() const { return groupDocument_.cursors; }
     const std::string& scriptText() const { return script_; }
     const std::vector<HostCallRecord>& callLog() const { return callLog_; }
 
@@ -161,6 +189,10 @@ private:
     Page() = default;
     void parse(BinaryReader& reader);
     ComponentState* resolve(const std::string& componentPath);
+    const ComponentState* resolve(const std::string& componentPath) const;
+    void loadGroup(const std::string& name);
+    void clearGroup();
+    std::filesystem::path resolveResourcePath(const std::string& name) const;
 
     // A pending playback completion: fire `event` on `component` with `id` once
     // the clock reaches `fireMs`.
@@ -173,6 +205,9 @@ private:
     // Schedule/cancel a clip's completion when Play/Stop is dispatched.
     void scheduleCompletion(const ComponentState& state, const std::string& event, int id);
     void cancelCompletions(const std::string& component);
+
+    // Advance gliding sprites (GotoXY) toward their targets, firing InPlace.
+    void stepGlides(int elapsed);
 
     // The item a point lands on, across every clickable holder kind. `index` is
     // whatever the engine hands the script for that kind: a HotSpot_Holder's
@@ -191,6 +226,11 @@ private:
     std::string script_;
     std::vector<ComponentState> components_;
     std::map<std::string, std::size_t> byName_;
+    std::vector<ComponentState> groupComponents_;
+    std::map<std::string, std::size_t> groupByName_;
+    std::vector<std::uint8_t> groupBytes_;
+    GroupDocument groupDocument_;
+    std::filesystem::path resourceDirectory_;
     std::unique_ptr<Interpreter> interpreter_;
 
     std::vector<HostCallRecord> callLog_;
@@ -201,9 +241,10 @@ private:
     bool exited_ = false;
     std::uint32_t randomState_ = 0x12345678u;
 
-    // Last hovered item, for MouseMoveIn/MouseMoveOut edge detection across
-    // successive mouseMove() calls.
-    Hit hover_;
+    // Each component holder receives mouse movement independently in the
+    // original board. Track one hovered item per holder so a group hotspot can
+    // slide the toolbar while a sprite drawn above it also receives hover.
+    std::map<std::string, Hit> hoverByComponent_;
 
     // Simulated playback clock and the completions waiting on it.
     int clockMs_ = 0;
