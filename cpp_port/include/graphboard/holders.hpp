@@ -149,6 +149,10 @@ struct SpriteInstance {
     std::int32_t layer = 0;             // record+0x18 ("deep"; mirrors +0x04)
     std::int32_t phase = 0;             // record+0x5c (current animation frame)
     std::int32_t visible = 0;           // record+0x88
+    // record+0x1c == 1 means the sprite can be click-dragged (SpriteHolder
+    // LButtonUp @ 10008fd0 fires MouseDrop only for these). CUDA's butterflies
+    // are 1; DYZIO's flying food is 0.
+    bool dragEnabled = false;
 };
 
 struct SpriteHolderState {

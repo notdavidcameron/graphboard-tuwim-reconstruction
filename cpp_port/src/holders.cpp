@@ -242,6 +242,7 @@ SpriteHolderState parseSpriteHolderState(BinaryReader& reader) {
         instance.layer = static_cast<std::int32_t>(readU32At(record, 0x18));
         instance.phase = static_cast<std::int32_t>(readU32At(record, 0x5c));
         instance.visible = static_cast<std::int32_t>(readU32At(record, 0x88));
+        instance.dragEnabled = readU32At(record, 0x1c) == 1;
         state.instances.push_back(instance);
     }
 

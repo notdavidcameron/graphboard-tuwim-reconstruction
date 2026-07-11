@@ -214,6 +214,23 @@ recovered engine functions, not the JS approximation.
    pixels at +0x90, so the committed bitmap PNGs are sheared — a latent
    extractor bug, out of scope here but worth fixing there.
 
+   **Sprite drag (done).** The full press->move->release drag is wired, from
+   `SpriteHolder_LButtonUp` (@ 10008fd0): `Page::lButtonDown` fires
+   `MouseClickOnDown` and, if the pressed sprite is draggable
+   (`instance+0x1c == 1`), begins a drag capturing the cursor-to-top-left grab
+   offset; `mouseMove` then moves the sprite (suppressing hover, as the board
+   does); `lButtonUp` fires `MouseClickOnUp` on the pressed sprite and, for a
+   dragged one, `MouseDrop(id, left, top, right, bottom)` with its final frame
+   rect. The drag flag distinguishes CUDA's butterflies (all 1) from DYZIO's
+   flying food (all 0), exactly as observed in-game. Verified on real data:
+   `gbinspect CUDA.BDF --drag 467,319,250,200` grabs butterfly 4 pixel-accurately
+   (467,319 is opaque), follows the cursor to (168,191) via the grab offset
+   (82,9), and fires `MouseDrop(4, 168,191,257,262)` — its handler's
+   `HotSpot_Holder.PointInHotSpot(6, 212, 226)` is the rect's exact centre
+   (168+89/2, 191+71/2), confirming the drop rect. `gbinspect` gains
+   `--down`/`--up`/`--drag X1,Y1,X2,Y2` input events. `GotoXY` now moves a sprite
+   like `MoveTo` (it appears in the drop handler).
+
    Still TODO: MultiBitmap click callbacks — only 1 page uses them, and the
    callback is the 4-arg `MouseClickOnDown(id, x, y, deep)` where x/y are the
    bitmap's own position (not the mouse point), recovered in

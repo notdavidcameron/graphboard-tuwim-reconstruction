@@ -23,6 +23,7 @@ namespace graphboard::runtime {
 // layer and the per-phase frame sizes are fixed by the file.
 struct SpriteGeometry {
     std::int32_t layer = 0;
+    bool draggable = false;            // instance+0x1c == 1
     std::vector<SpriteFrame> frames;   // indexed by phase
 };
 
@@ -84,9 +85,19 @@ public:
     // per-item click geometry and a verified cross-kind z-order rule before
     // they can be dispatched the same way (see runtime_recovery_notes.md).
     void lButtonDown(int x, int y);
+    void lButtonUp(int x, int y);
     void rButtonDown(int x, int y);
     void mouseMove(int x, int y);
     void keyDown(int key) { runEvent("OnKeyDown", {Value::integer(key)}); }
+
+    // Convenience: a full press -> move -> release drag of whatever is under the
+    // start point. Fires MouseClickOnDown, drags a draggable sprite to (x1,y1),
+    // then MouseClickOnUp + MouseDrop.
+    void drag(int x0, int y0, int x1, int y1) {
+        lButtonDown(x0, y0);
+        mouseMove(x1, y1);
+        lButtonUp(x1, y1);
+    }
 
     // Host interface.
     Value callBuiltin(const std::string& name, const std::vector<Value>& args) override;
@@ -156,6 +167,13 @@ private:
     // Last hovered item, for MouseMoveIn/MouseMoveOut edge detection across
     // successive mouseMove() calls.
     Hit hover_;
+
+    // Mouse-button / drag state spanning down -> move -> up.
+    Hit pressed_;               // item that received MouseClickOnDown, for the Up
+    bool dragging_ = false;     // a draggable sprite is being dragged
+    int dragId_ = -1;           // sprite instance index being dragged
+    int grabOffsetX_ = 0;       // cursor-to-topleft offset captured on press
+    int grabOffsetY_ = 0;
 };
 
 } // namespace graphboard::runtime

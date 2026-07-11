@@ -414,6 +414,87 @@ void testSpritePixelMask() {
     assert(item(page2->component("Sprite_Holder"), 0, "phase").toInt() == 0);
 }
 
+// A page with one draggable sprite (instance+0x1c == 1), a 20x20 frame at
+// (100,100), used to exercise the down->move->up drag sequence.
+std::vector<std::uint8_t> buildDraggableSpriteBdf(const std::string& script) {
+    const auto spriteClsid = Guid::fromString("B64F3336-5368-11D0-B445-008048EB5D40");
+    std::vector<std::uint8_t> b;
+    putFixed(b, "YDP Board data file. Ver:1 test", 100);
+    putU32(b, 1);
+    putU32(b, 0); putU32(b, 0); putU32(b, 640); putU32(b, 480);
+    putU32(b, 0xffffffffu); putU32(b, 8);
+    putU32(b, 0); putU8(b, 0); putU32(b, 0); putU32(b, 0);
+    putU32(b, 1); putU32(b, 1);   // list: one component
+    putWrapper(b, spriteClsid, "Sprite_Holder");
+    putU32(b, 1); putU32(b, 1); putU32(b, 1);   // version, 1 def, 1 instance
+    putU32(b, 0x90);
+    {
+        std::vector<std::uint8_t> blob(0x90, 0);
+        blob[0x00] = 1;    // phaseCount
+        blob[0x80] = 20;   // frame width
+        blob[0x84] = 20;   // frame height
+        b.insert(b.end(), blob.begin(), blob.end());
+    }
+    {
+        std::vector<std::uint8_t> rec(0x8c, 0);
+        auto put = [&rec](std::size_t off, std::int32_t v) {
+            const auto u = static_cast<std::uint32_t>(v);
+            rec[off]=static_cast<std::uint8_t>(u);      rec[off+1]=static_cast<std::uint8_t>(u>>8);
+            rec[off+2]=static_cast<std::uint8_t>(u>>16); rec[off+3]=static_cast<std::uint8_t>(u>>24);
+        };
+        put(0x00, 0); put(0x08, 100); put(0x0c, 100);
+        put(0x18, 4); put(0x1c, 1);   // layer, drag-enabled
+        put(0x88, 1);                 // visible
+        b.insert(b.end(), rec.begin(), rec.end());
+    }
+    putU32(b, 1);
+    putArchiveString(b, script);
+    return b;
+}
+
+const char* kDragScript = R"S(
+void OnOpenPage() {}
+void Sprite_Holder.MouseClickOnDown(int id) { down = down + 1; }
+void Sprite_Holder.MouseClickOnUp(int id) { up = up + 1; }
+void Sprite_Holder.MouseDrop(int id, int left, int top, int right, int bottom)
+{
+   dropLeft = left; dropTop = top; dropRight = right; dropBottom = bottom;
+}
+)S";
+
+// The full down -> move -> up drag: MouseClickOnDown fires on press, the sprite
+// follows the cursor (offset by the grab point), MouseClickOnUp + MouseDrop fire
+// on release with the sprite's final bounding box.
+void testSpriteDrag() {
+    const auto bytes = buildDraggableSpriteBdf(kDragScript);
+    BinaryReader reader(bytes);
+    auto page = Page::loadFromReader(reader, "drag");
+    page->open();
+    const auto* spr = page->component("Sprite_Holder");
+
+    // Grab at (110,110) -- 10px into the 20x20 sprite at (100,100).
+    page->lButtonDown(110, 110);
+    // Drag so the cursor moves to (300,250); grab offset (10,10) keeps the same
+    // spot under the cursor, so the top-left lands at (290,240).
+    page->mouseMove(300, 250);
+    assert(item(spr, 0, "x").toInt() == 290);
+    assert(item(spr, 0, "y").toInt() == 240);
+    page->lButtonUp(300, 250);
+
+    // Callbacks: one down, one up, and MouseDrop with the final 20x20 rect.
+    assert(page->hasGlobal("down") && page->getGlobal("down").toInt() == 1);
+    assert(page->hasGlobal("up") && page->getGlobal("up").toInt() == 1);
+    assert(page->getGlobal("dropLeft").toInt() == 290);
+    assert(page->getGlobal("dropTop").toInt() == 240);
+    assert(page->getGlobal("dropRight").toInt() == 310);
+    assert(page->getGlobal("dropBottom").toInt() == 260);
+
+    // After release the drag state is cleared: a hover now fires normally
+    // instead of moving the sprite.
+    page->mouseMove(295, 245);   // inside the moved sprite -> hover, not drag
+    assert(item(page->component("Sprite_Holder"), 0, "x").toInt() == 290);
+}
+
 const char* kPrecedenceScript = R"S(
 void OnOpenPage()
 {
@@ -612,6 +693,7 @@ int main() {
     testHotSpotCallbacks();
     testSpriteCallbacks();
     testSpritePixelMask();
+    testSpriteDrag();
     testCrossKindLayerPrecedence();
     testBitmapCallbacks();
     testBitmapPixelMask();

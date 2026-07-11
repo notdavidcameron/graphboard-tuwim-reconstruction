@@ -10,6 +10,7 @@
 #include <nlohmann/json.hpp>
 
 #include <algorithm>
+#include <array>
 #include <cctype>
 #include <filesystem>
 #include <iostream>
@@ -708,9 +709,11 @@ int drivePage(const std::filesystem::path& path, const std::string& handler) {
 
 // One synthetic input event applied through the Page's raw-input entry points.
 struct InputEvent {
-    enum class Kind { Click, RClick, Move, Timer, Key } kind;
-    int a = 0;  // x, or key code for Key
-    int b = 0;  // y
+    enum class Kind { Click, Down, Up, RClick, Move, Drag, Timer, Key } kind;
+    int a = 0;  // x, key code for Key, or drag start-x
+    int b = 0;  // y, or drag start-y
+    int c = 0;  // drag end-x
+    int d = 0;  // drag end-y
 };
 
 // Apply a synthetic input sequence to a live page, in order.
@@ -718,8 +721,11 @@ void applyEvents(graphboard::runtime::Page& page, const std::vector<InputEvent>&
     for (const auto& ev : events) {
         switch (ev.kind) {
             case InputEvent::Kind::Click:  page.lButtonDown(ev.a, ev.b); break;
+            case InputEvent::Kind::Down:   page.lButtonDown(ev.a, ev.b); break;
+            case InputEvent::Kind::Up:     page.lButtonUp(ev.a, ev.b); break;
             case InputEvent::Kind::RClick: page.rButtonDown(ev.a, ev.b); break;
             case InputEvent::Kind::Move:   page.mouseMove(ev.a, ev.b); break;
+            case InputEvent::Kind::Drag:   page.drag(ev.a, ev.b, ev.c, ev.d); break;
             case InputEvent::Kind::Timer:  page.timer(); break;
             case InputEvent::Kind::Key:    page.keyDown(ev.a); break;
         }
@@ -816,6 +822,20 @@ std::pair<int, int> parseXY(const std::filesystem::path& arg) {
     return {x, y};
 }
 
+// Parse "X1,Y1,X2,Y2" into four ints.
+std::array<int, 4> parseXYXY(const std::filesystem::path& arg) {
+    std::string s = argToUtf8(arg);
+    for (char& c : s) {
+        if (c == ',') c = ' ';
+    }
+    std::istringstream in(s);
+    std::array<int, 4> v{};
+    if (!(in >> v[0] >> v[1] >> v[2] >> v[3])) {
+        throw std::runtime_error("expected X1,Y1,X2,Y2 but got '" + s + "'");
+    }
+    return v;
+}
+
 } // namespace
 
 int main(int argc, char** argv) {
@@ -849,6 +869,18 @@ int main(int argc, char** argv) {
                 const auto [x, y] = parseXY(args[++i]);
                 events.push_back({InputEvent::Kind::Move, x, y});
                 interact = true;
+            } else if (isFlag(args[i], "--down") && i + 1 < args.size()) {
+                const auto [x, y] = parseXY(args[++i]);
+                events.push_back({InputEvent::Kind::Down, x, y});
+                interact = true;
+            } else if (isFlag(args[i], "--up") && i + 1 < args.size()) {
+                const auto [x, y] = parseXY(args[++i]);
+                events.push_back({InputEvent::Kind::Up, x, y});
+                interact = true;
+            } else if (isFlag(args[i], "--drag") && i + 1 < args.size()) {
+                const auto v = parseXYXY(args[++i]);
+                events.push_back({InputEvent::Kind::Drag, v[0], v[1], v[2], v[3]});
+                interact = true;
             } else if (isFlag(args[i], "--timer")) {
                 events.push_back({InputEvent::Kind::Timer, 0, 0});
                 interact = true;
@@ -874,7 +906,8 @@ int main(int argc, char** argv) {
     if (file.empty()) {
         std::cerr << "usage: gbinspect <START.PRJ|PAGE.BDF> [--run <handler>] [--drive <handler>]\n"
                      "       gbinspect <PAGE.BDF> [--no-open] (--click X,Y | --rclick X,Y |\n"
-                     "                 --move X,Y | --timer | --key N)...\n"
+                     "                 --move X,Y | --down X,Y | --up X,Y |\n"
+                     "                 --drag X1,Y1,X2,Y2 | --timer | --key N)...\n"
                      "       gbinspect <START.PRJ> [--follow N] (--click X,Y | ...)...\n"
                      "                 runs the global setup block, opens the startup page,\n"
                      "                 applies input, and follows up to N LoadPage jumps\n";

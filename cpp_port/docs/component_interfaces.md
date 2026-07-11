@@ -412,6 +412,16 @@ path. `MultiBitmap`'s callback is the only 4-arg one, and its `x`/`y` are the
 bitmap's own `left`/`top` (record +0x08/+0x0c), not the mouse point; `deep` is
 its layer.
 
+**Sprite drag** (`SpriteHolder_LButtonUp` @ 10008fd0). A press stores the hit
+sprite; if `instance+0x1c == 1` it is draggable. On release: `MouseClickOnUp(id)`
+fires for the pressed sprite (slot +0x34), and for a dragged sprite
+`MouseDrop(id, left, top, right, bottom)` fires (slot +0x38) with the final frame
+rect (`left/top` = position, `right/bottom` = `+width/+height` of the current
+phase). During the drag the sprite follows the cursor at the grab offset and
+hover is suppressed. The drag flag is set for CUDA's `motylek` butterflies and
+clear for DYZIO's flying food, matching the game (butterflies drag, food only
+stops on click).
+
 **Bitmap_Holder pixel data lives at `blob+0x80`**, not `+0x90`. The blob is
 `[header .. 0x80)`, then `stride*height` pixel bytes (`stride = (width+3)&~3`,
 bottom-up, transparent index at `blob+0x04`), then a `0x10` trailer — so

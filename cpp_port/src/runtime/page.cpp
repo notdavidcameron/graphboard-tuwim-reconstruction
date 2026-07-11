@@ -43,6 +43,7 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
 
                 SpriteGeometry geom;
                 geom.layer = inst.layer;
+                geom.draggable = inst.dragEnabled;
                 if (inst.definitionIndex < sp.definitions.size()) {
                     geom.frames = sp.definitions[inst.definitionIndex].frames;
                 }
@@ -185,7 +186,7 @@ Value Page::callComponent(const std::string& component, const std::string& metho
     const int id = static_cast<int>(argInt(args, 0));
     auto& item = state->items[id];
 
-    if (method == "MoveTo" || method == "MoveSprite") {
+    if (method == "MoveTo" || method == "MoveSprite" || method == "GotoXY") {
         item["x"] = Value::integer(argInt(args, 1));
         item["y"] = Value::integer(argInt(args, 2));
     } else if (method == "ShowBitmap" || method == "ShowText" || method == "Show" ||
@@ -361,13 +362,8 @@ Candidate topItemIn(const ComponentState& state, int x, int y) {
 //
 // Note IsYou (@ 100047c0 / 10007fa0) -- the engine's *query* entry point -- uses
 // a bottom-exclusive rect and scans first->last. This routine deliberately
-// follows the click path, not the query path.
-//
-// Limitation: SpriteHolder::LButtonDown refines a rect hit with a per-pixel
-// transparency test (frame+0x04 holds the transparent colour index, frame+0x48
-// the pixel data, frame+0x10 the row width), gated on a per-frame flag. This
-// port stops at the bounding rect, so an irregular sprite reports a hit in its
-// transparent corners.
+// follows the click path, not the query path. Irregular sprites and bitmaps are
+// refined per-pixel in topItemIn (see SpriteFrame::opaque / BitmapGeometry::opaque).
 Page::Hit Page::findHit(int x, int y) const {
     Hit hit;
     std::int32_t bestLayer = 0;
@@ -424,12 +420,77 @@ const char* rightClickEventFor(HolderKind kind) {
     return kind == HolderKind::HotSpotHolder ? "RightButtonClickOn" : nullptr;
 }
 
+// The button-up callback, fired on the item that received the down. Sprites and
+// bitmaps expose MouseClickOnUp; a hotspot fires LeftButtonClickOnUp.
+const char* upEventFor(HolderKind kind) {
+    switch (kind) {
+        case HolderKind::HotSpotHolder: return "LeftButtonClickOnUp";
+        case HolderKind::SpriteHolder:  return "MouseClickOnUp";
+        case HolderKind::BitmapHolder:  return "MouseClickOnUp";
+        default: return nullptr;
+    }
+}
+
 } // namespace
 
 void Page::lButtonDown(int x, int y) {
     runEvent("OnLButtonDown", {Value::integer(x), Value::integer(y)});
     const auto hit = findHit(x, y);
     fireHitEvent(hit, clickEventFor(hit.kind));
+
+    // Remember the pressed item for the matching MouseClickOnUp, and begin a
+    // drag if it is a draggable sprite (instance+0x1c == 1). The grab offset
+    // keeps the cursor at the same spot on the sprite while dragging.
+    pressed_ = hit;
+    dragging_ = false;
+    if (hit.kind == HolderKind::SpriteHolder) {
+        const auto* c = component(hit.component);
+        if (c != nullptr && hit.index >= 0 &&
+            static_cast<std::size_t>(hit.index) < c->sprites.size() &&
+            c->sprites[hit.index].draggable) {
+            dragging_ = true;
+            dragId_ = hit.index;
+            const auto ci = c->items.find(hit.index);
+            const int sx = ci != c->items.end() ? static_cast<int>(
+                               ci->second.count("x") ? ci->second.at("x").toInt() : 0) : 0;
+            const int sy = ci != c->items.end() ? static_cast<int>(
+                               ci->second.count("y") ? ci->second.at("y").toInt() : 0) : 0;
+            grabOffsetX_ = x - sx;
+            grabOffsetY_ = y - sy;
+        }
+    }
+}
+
+void Page::lButtonUp(int x, int y) {
+    runEvent("OnLButtonUp", {Value::integer(x), Value::integer(y)});
+
+    // MouseClickOnUp fires on whatever was pressed, regardless of where the
+    // release lands (SpriteHolder LButtonUp uses the stored pressed index).
+    fireHitEvent(pressed_, upEventFor(pressed_.kind));
+
+    // A dragged sprite additionally reports its final bounding box via MouseDrop.
+    if (dragging_) {
+        auto* state = resolve(pressed_.component);
+        if (state != nullptr && dragId_ >= 0 &&
+            static_cast<std::size_t>(dragId_) < state->sprites.size()) {
+            const auto& geom = state->sprites[dragId_];
+            const auto phase = itemInt(*state, dragId_, "phase");
+            const auto& frame = (!geom.frames.empty() && phase >= 0 &&
+                                 phase < static_cast<std::int64_t>(geom.frames.size()))
+                                    ? geom.frames[static_cast<std::size_t>(phase)]
+                                    : (geom.frames.empty() ? SpriteFrame{} : geom.frames.front());
+            const auto left = itemInt(*state, dragId_, "x");
+            const auto top = itemInt(*state, dragId_, "y");
+            runEvent(pressed_.component + ".MouseDrop",
+                     {Value::integer(dragId_), Value::integer(left), Value::integer(top),
+                      Value::integer(left + static_cast<std::int64_t>(frame.width)),
+                      Value::integer(top + static_cast<std::int64_t>(frame.height))});
+        }
+    }
+
+    dragging_ = false;
+    dragId_ = -1;
+    pressed_ = Hit{};
 }
 
 void Page::rButtonDown(int x, int y) {
@@ -439,6 +500,17 @@ void Page::rButtonDown(int x, int y) {
 }
 
 void Page::mouseMove(int x, int y) {
+    // While dragging, the sprite follows the cursor (offset by the grab point)
+    // and hover events are suppressed, mirroring the board's drag mode.
+    if (dragging_) {
+        auto* state = resolve(pressed_.component);
+        if (state != nullptr) {
+            state->items[dragId_]["x"] = Value::integer(x - grabOffsetX_);
+            state->items[dragId_]["y"] = Value::integer(y - grabOffsetY_);
+        }
+        return;
+    }
+
     const auto hit = findHit(x, y);
     if (hit.index == hover_.index && hit.component == hover_.component) {
         return;
