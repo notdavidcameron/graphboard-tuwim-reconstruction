@@ -424,7 +424,14 @@ TextHolderState parseTextHolderState(BinaryReader& reader) {
 }
 
 BitmapHolderState parseBitmapHolderState(BinaryReader& reader) {
-    constexpr std::size_t kBitmapHeaderBytes = 0x90;
+    // Pixels begin at blob+0x80 (the base BitmapHolder_LButtonDown and the blit
+    // path both index), followed by stride*height bytes and 0x10 trailing bytes,
+    // so blobByteCount == 0x90 + stride*height. Reading them at +0x90 -- as an
+    // earlier note assumed -- shears every row by 16 bytes (confirmed: the guzik
+    // button's left/right symmetry drops from 97% to 55%).
+    constexpr std::size_t kBitmapPixelBase = 0x80;
+    constexpr std::size_t kBitmapTrailerBytes = 0x10;
+    constexpr std::size_t kBitmapHeaderBytes = kBitmapPixelBase + kBitmapTrailerBytes;
 
     BitmapHolderState state;
     state.version = reader.readU32();
@@ -443,13 +450,33 @@ BitmapHolderState parseBitmapHolderState(BinaryReader& reader) {
             bitmap.bottom = static_cast<std::int32_t>(readU32At(blob, 0x14));
             bitmap.layer = static_cast<std::int32_t>(readU32At(blob, 0x18));
             bitmap.name = readNulPaddedName(blob, 0x34, 12);
-            bitmap.pixelOffset = bitmap.blobOffset + kBitmapHeaderBytes;
+            bitmap.pixelOffset = bitmap.blobOffset + kBitmapPixelBase;
             const auto width = static_cast<std::uint32_t>(bitmap.right - bitmap.left);
             const auto height = static_cast<std::uint32_t>(bitmap.bottom - bitmap.top);
+            const std::size_t stride = (width + 3) & ~std::size_t{3};
             bitmap.pixelSizeConsistent =
                 bitmap.right > bitmap.left && bitmap.bottom > bitmap.top &&
-                static_cast<std::uint64_t>((width + 3) & ~3u) * height ==
+                static_cast<std::uint64_t>(stride) * height ==
                     bitmap.blobByteCount - kBitmapHeaderBytes;
+
+            // Per-pixel transparency mask, when the record opts in (record+0x20
+            // and +0x28 both != 0; BitmapHolder_LButtonDown @ 10003f50). Same
+            // shape as sprites: pixels bottom-up from blob+0x80, transparent
+            // index at blob+0x04.
+            const bool wantsPixelTest =
+                readU32At(blob, 0x20) != 0 && readU32At(blob, 0x28) != 0;
+            if (wantsPixelTest && width > 0 && height > 0 &&
+                kBitmapPixelBase + stride * height <= blob.size()) {
+                const std::uint32_t transparent = readU32At(blob, 0x04);
+                bitmap.opaque.assign(static_cast<std::size_t>(width) * height, 0);
+                for (std::uint32_t row = 0; row < height; ++row) {
+                    const std::size_t src = kBitmapPixelBase + (height - 1 - row) * stride;
+                    for (std::uint32_t col = 0; col < width; ++col) {
+                        bitmap.opaque[row * width + col] =
+                            blob[src + col] != transparent ? 1 : 0;
+                    }
+                }
+            }
         }
         state.bitmaps.push_back(std::move(bitmap));
     }

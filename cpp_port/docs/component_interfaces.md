@@ -412,6 +412,15 @@ path. `MultiBitmap`'s callback is the only 4-arg one, and its `x`/`y` are the
 bitmap's own `left`/`top` (record +0x08/+0x0c), not the mouse point; `deep` is
 its layer.
 
+**Bitmap_Holder pixel data lives at `blob+0x80`**, not `+0x90`. The blob is
+`[header .. 0x80)`, then `stride*height` pixel bytes (`stride = (width+3)&~3`,
+bottom-up, transparent index at `blob+0x04`), then a `0x10` trailer — so
+`blobByteCount == 0x90 + stride*height`, which is what made `+0x90` look like the
+start. It isn't: reading there shears each row 16 bytes (the `guzik` button's
+horizontal symmetry falls from 97% to 55%). `graphboard_extract_assets.py` still
+reads at `+0x90` and so emits sheared bitmap PNGs — a latent bug to fix there.
+(Sprites differ: their per-phase pixels are at `blob+0xb8 + frame[0x48]`.)
+
 Since the document keeps the aggregate min/max layer, the board walks layers
 top-down and stops at the first component that sets `*handled` — so the highest
 layer containing the point wins, and on a tie the earlier component in the list

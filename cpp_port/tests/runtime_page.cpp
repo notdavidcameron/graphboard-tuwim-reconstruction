@@ -536,6 +536,61 @@ void testBitmapCallbacks() {
     assert(item(page->component("Bitmap_Holder"), 0, "x").toInt() == 5);
 }
 
+// A Bitmap_Holder bitmap with a per-pixel transparency mask: 10x10 at (100,100),
+// transparent index 30, opaque only in the left half, with the record's pixel-
+// test gates (blob+0x20 and +0x28) set.
+std::vector<std::uint8_t> buildMaskedBitmapBdf(const std::string& script) {
+    const auto clsid = Guid::fromString("0D8A5736-5337-11D0-B444-008048EB5D40");
+    const std::int32_t l = 100, t = 100, w = 10, h = 10, transp = 30;
+    std::vector<std::uint8_t> b;
+    putFixed(b, "YDP Board data file. Ver:1 test", 100);
+    putU32(b, 1);
+    putU32(b, 0); putU32(b, 0); putU32(b, 640); putU32(b, 480);
+    putU32(b, 0xffffffffu); putU32(b, 8);
+    putU32(b, 0); putU8(b, 0); putU32(b, 0); putU32(b, 0);
+    putU32(b, 1); putU32(b, 1);
+    putWrapper(b, clsid, "Bitmap_Holder");
+    putU32(b, 1); putU32(b, 1);   // version, bitmap count
+
+    const std::uint32_t stride = (w + 3) & ~3u;
+    std::vector<std::uint8_t> blob(0x80 + stride * h + 0x10, static_cast<std::uint8_t>(transp));
+    auto pb = [&blob](std::size_t off, std::int32_t v) {
+        const auto u = static_cast<std::uint32_t>(v);
+        blob[off] = static_cast<std::uint8_t>(u);      blob[off+1] = static_cast<std::uint8_t>(u>>8);
+        blob[off+2] = static_cast<std::uint8_t>(u>>16); blob[off+3] = static_cast<std::uint8_t>(u>>24);
+    };
+    pb(0x04, transp);                        // transparent index
+    pb(0x08, l); pb(0x0c, t); pb(0x10, l+w); pb(0x14, t+h);
+    pb(0x18, 0);                             // layer
+    pb(0x20, 1); pb(0x28, 1);                // pixel-test opt-in gates
+    for (std::uint32_t row = 0; row < static_cast<std::uint32_t>(h); ++row) {
+        const std::size_t src = 0x80 + (h - 1 - row) * stride;   // bottom-up
+        for (std::uint32_t col = 0; col < 5; ++col) blob[src + col] = 7;  // left half opaque
+    }
+    putU32(b, static_cast<std::uint32_t>(blob.size()));
+    b.insert(b.end(), blob.begin(), blob.end());
+
+    // Bitmap_Holder has no instance table; the script text block follows directly.
+    putU32(b, 1);
+    putArchiveString(b, script);
+    return b;
+}
+
+void testBitmapPixelMask() {
+    const char* script =
+        "void OnOpenPage(){}\n"
+        "void Bitmap_Holder.MouseClickOnDown(int id){ Bitmap_Holder.MoveTo(id,7,7); }\n";
+    const auto bytes = buildMaskedBitmapBdf(script);
+    BinaryReader reader(bytes);
+    auto page = Page::loadFromReader(reader, "masked-bitmap");
+
+    // Rect is (100,100)-(110,110); only the left half (cols 0..4) is opaque.
+    page->lButtonDown(107, 104);   // right half -> transparent -> miss
+    assert(item(page->component("Bitmap_Holder"), 0, "x").toInt() == 100);
+    page->lButtonDown(102, 104);   // left half -> opaque -> hit -> MoveTo(0,7,7)
+    assert(item(page->component("Bitmap_Holder"), 0, "x").toInt() == 7);
+}
+
 // A bitmap on layer 5 outranks a hotspot on layer 1 where they overlap.
 void testBitmapVsHotSpotLayer() {
     // Reuse the hotspot builder's page, but a bitmap-only page suffices here:
@@ -559,6 +614,7 @@ int main() {
     testSpritePixelMask();
     testCrossKindLayerPrecedence();
     testBitmapCallbacks();
+    testBitmapPixelMask();
     testBitmapVsHotSpotLayer();
     return 0;
 }

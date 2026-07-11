@@ -200,15 +200,23 @@ recovered engine functions, not the JS approximation.
    buzzer branch), while clicking a letter is consumed by the sprite on the same
    layer — the board's list-order tie-break, reproduced by `findHit`.
 
-   Still TODO: Bitmap_Holder/MultiBitmap **pixel-accurate** hits. Both refine a
-   rect hit with the same per-pixel test as sprites (43 of 203 bitmaps, 156 of
-   201 multibitmap records opt in). For bitmaps the pixel base is ambiguous —
-   `LButtonDown` indexes `record+0x80` but the serialized pixels sit at
-   `blob+0x90` (`pixelSizeConsistent` proves the plane fills `[+0x90, blobEnd)`),
-   a 16-byte discrepancy to resolve before implementing. MultiBitmap click
-   callbacks are also unwired: only 1 page uses them, and the callback is the
-   4-arg `MouseClickOnDown(id, x, y, deep)` where x/y are the bitmap's own
-   position (not the mouse point) — recovered in
+   **Bitmap_Holder pixel-accuracy (done).** Bitmaps refine a rect hit with the
+   same per-pixel test as sprites (43 of 203 bitmaps opt in via record+0x20 and
+   +0x28). The earlier "+0x80 vs +0x90" ambiguity is resolved: pixels start at
+   **blob+0x80** (what `LButtonDown` and the blit path both index), followed by
+   stride*height bytes then a 0x10 trailer, so `blobByteCount == 0x90 +
+   stride*height` — which is why the plane looked like it began at +0x90.
+   Reading at +0x90 shears every row by 16 bytes: the `guzik` button's
+   left/right symmetry drops from 97% to 55%, and rendering it draws a clean
+   circle at +0x80 vs wrap-around garbage at +0x90. The C++ mask's opaque-pixel
+   counts match an independent Python reader for every masked KRAWIEC bitmap
+   (2827/2944/2121/2954/2977). NOTE: `graphboard_extract_assets.py` reads bitmap
+   pixels at +0x90, so the committed bitmap PNGs are sheared — a latent
+   extractor bug, out of scope here but worth fixing there.
+
+   Still TODO: MultiBitmap click callbacks — only 1 page uses them, and the
+   callback is the 4-arg `MouseClickOnDown(id, x, y, deep)` where x/y are the
+   bitmap's own position (not the mouse point), recovered in
    `MultiBmp_LButtonDown_HitTestAndFireClick` (@ 100047a5) but low priority.
 
    Playback-completion events (`Transparent_Video_Holder.TheEnd`,

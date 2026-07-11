@@ -268,13 +268,20 @@ json textStateToJson(const graphboard::TextHolderState& state) {
 json bitmapHolderStateToJson(const graphboard::BitmapHolderState& state) {
     json bitmaps = json::array();
     for (const auto& bitmap : state.bitmaps) {
-        bitmaps.push_back({
+        json j = {
             {"name", t(bitmap.name)},
             {"rect", {bitmap.left, bitmap.top, bitmap.right, bitmap.bottom}},
+            {"layer", bitmap.layer},
             {"blobByteCount", bitmap.blobByteCount},
             {"pixelOffset", bitmap.pixelOffset},
             {"pixelSizeConsistent", bitmap.pixelSizeConsistent},
-        });
+        };
+        if (!bitmap.opaque.empty()) {
+            std::size_t opaque = 0;
+            for (const auto v : bitmap.opaque) opaque += v;
+            j["opaquePixels"] = opaque;
+        }
+        bitmaps.push_back(j);
     }
     return {
         {"version", state.version},

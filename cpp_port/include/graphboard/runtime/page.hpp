@@ -27,11 +27,13 @@ struct SpriteGeometry {
 };
 
 // Static geometry of one Bitmap_Holder bitmap. Its top-left position is
-// script-mutable (MoveTo) and lives in items; the size and layer are fixed.
+// script-mutable (MoveTo) and lives in items; the size, layer and transparency
+// mask are fixed.
 struct BitmapGeometry {
     std::int32_t layer = 0;
     std::int32_t width = 0;
     std::int32_t height = 0;
+    std::vector<std::uint8_t> opaque;  // width*height, or empty for rect-only
 };
 
 struct ComponentState {

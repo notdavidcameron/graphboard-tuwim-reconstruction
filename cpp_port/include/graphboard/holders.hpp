@@ -355,8 +355,12 @@ struct BitmapHolderBitmap {
     std::int32_t left = 0, top = 0, right = 0, bottom = 0;
     std::int32_t layer = 0;           // blob+0x18 ("deep")
     std::string name;                 // blob+0x34
-    std::size_t pixelOffset = 0;      // blobOffset + 0x90
+    std::size_t pixelOffset = 0;      // blobOffset + 0x80 (pixels; 0x10 trailer follows)
     bool pixelSizeConsistent = false; // stride*(bottom-top) == blobByteCount-0x90
+    // Per-pixel transparency mask, when the record opts in (see the .cpp): a
+    // click on a transparent pixel misses. width*height, row-major top-down,
+    // 1 = opaque; empty for rect-only bitmaps.
+    std::vector<std::uint8_t> opaque;
 };
 
 struct BitmapHolderState {

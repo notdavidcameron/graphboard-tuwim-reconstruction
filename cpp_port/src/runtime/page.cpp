@@ -67,7 +67,8 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
                 geom.layer = bm.layer;
                 geom.width = bm.right - bm.left;
                 geom.height = bm.bottom - bm.top;
-                state.bitmaps.push_back(geom);
+                geom.opaque = bm.opaque;
+                state.bitmaps.push_back(std::move(geom));
             }
             break;
         }
@@ -332,6 +333,14 @@ Candidate topItemIn(const ComponentState& state, int x, int y) {
             const auto top = itemInt(state, id, "y");
             if (x < left || x >= left + geom.width || y < top || y >= top + geom.height) {
                 continue;
+            }
+            // Irregular bitmaps refine the rect with a transparency mask.
+            if (!geom.opaque.empty()) {
+                const auto cx = x - left;
+                const auto cy = y - top;
+                if (geom.opaque[static_cast<std::size_t>(cy) * geom.width + cx] == 0) {
+                    continue;
+                }
             }
             if (best.index == -1 || geom.layer > best.layer) {
                 best.index = id;
