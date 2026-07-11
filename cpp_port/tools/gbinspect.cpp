@@ -226,6 +226,7 @@ json soundStateToJson(const graphboard::SoundHolderState& state) {
             {"soundByteCount", sound.soundByteCount},
             {"soundOffset", sound.soundOffset},
             {"looksLikeRiff", sound.looksLikeRiff},
+            {"durationMs", sound.durationMs},
             {"waveFormatByteCount", sound.waveFormatByteCount},
         });
     }

@@ -272,6 +272,9 @@ struct SoundEntry {
     std::uint32_t archiveEnd = 0;     // record+0x08
     std::uint32_t waveFormatByteCount = 0;
     bool looksLikeRiff = false;       // soundBytes begin with "RIFF"
+    // Playback length in ms, from the WAV (data-chunk bytes / fmt byte-rate);
+    // 0 if the bytes are not a parseable RIFF/WAVE. Used to schedule EndPlaySound.
+    std::uint32_t durationMs = 0;
 };
 
 struct SoundHolderState {

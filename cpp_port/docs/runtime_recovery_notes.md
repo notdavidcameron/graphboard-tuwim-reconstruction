@@ -255,9 +255,16 @@ recovered engine functions, not the JS approximation.
    completion; a 100k-iteration guard bounds a zero-cost restart loop. Covered by
    `testVideoClockChain`.
 
-   Not yet clock-driven: **sound** — `EndPlaySound` needs a WAV duration
-   (data-chunk bytes / byte-rate) seeded into `clipDurationMs`; until then only
-   `--sound-end` fires it. **Sprite animation** — `EndAnimation` needs the
+   **Sound is clock-driven too:** each sound's duration is its WAV length
+   (data-chunk bytes / fmt byte-rate — the shipped clips are canonical
+   RIFF/WAVE, mono 22050 Hz / 16-bit), parsed in `parseSoundHolderState` and
+   seeded into `clipDurationMs`, so `Sound_Holder.PlayDSound(id)` schedules
+   `EndPlaySound(id)` at `now + duration`. Verified: the C++ durations match an
+   independent WAV reader for all 14 RZECZKA sounds (767/374/741/8133… ms), and
+   `testSoundClock` drives a synthetic 500 ms clip. (Group-namespace sounds
+   aren't seeded, since the group isn't loaded — a page-only limitation.)
+
+   Not yet clock-driven: **sprite animation** — `EndAnimation` needs the
    per-frame rate; `frame+0x20` (30–80 across sprites) looks like it, but the
    single-phase "flying" sprites (butterflies, food) animate by *positional
    movement*, not phase cycling — a continuous path the headless clock

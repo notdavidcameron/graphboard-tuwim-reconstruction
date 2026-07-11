@@ -65,7 +65,14 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
             }
             break;
         }
-        case HolderKind::SoundHolder: parseSoundHolderState(reader); break;
+        case HolderKind::SoundHolder: {
+            const auto sh = parseSoundHolderState(reader);
+            // A sound plays for its WAV length; that is when EndPlaySound(id) fires.
+            for (const auto& s : sh.sounds) {
+                state.clipDurationMs.push_back(static_cast<int>(s.durationMs));
+            }
+            break;
+        }
         case HolderKind::TextHolder: parseTextHolderState(reader); break;
         case HolderKind::BitmapHolder: {
             const auto bh = parseBitmapHolderState(reader);

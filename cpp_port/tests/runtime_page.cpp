@@ -601,6 +601,67 @@ void testVideoClockChain() {
     assert(page->pendingPage() == "next.bdf");
 }
 
+// A page with a Sound_Holder holding one sound: a minimal RIFF/WAVE whose
+// data-chunk length and byte-rate give a known duration (byteRate 1000, 500
+// data bytes -> 500 ms).
+std::vector<std::uint8_t> buildSoundBdf(const std::string& script) {
+    const auto clsid = Guid::fromString("1720D306-6932-11D0-B468-008048EB5D40");
+    auto putLE32 = [](std::vector<std::uint8_t>& v, std::uint32_t x) {
+        v.push_back(x & 0xff); v.push_back((x >> 8) & 0xff);
+        v.push_back((x >> 16) & 0xff); v.push_back((x >> 24) & 0xff);
+    };
+    auto putLE16 = [](std::vector<std::uint8_t>& v, std::uint16_t x) {
+        v.push_back(x & 0xff); v.push_back((x >> 8) & 0xff);
+    };
+
+    // Build the WAV: byteRate 1000, 500 data bytes -> 500 ms.
+    std::vector<std::uint8_t> wav;
+    const std::uint32_t byteRate = 1000, dataBytes = 500;
+    wav.insert(wav.end(), {'R','I','F','F'}); putLE32(wav, 36 + dataBytes);
+    wav.insert(wav.end(), {'W','A','V','E'});
+    wav.insert(wav.end(), {'f','m','t',' '}); putLE32(wav, 16);
+    putLE16(wav, 1); putLE16(wav, 1); putLE32(wav, byteRate); putLE32(wav, byteRate);
+    putLE16(wav, 1); putLE16(wav, 8);
+    wav.insert(wav.end(), {'d','a','t','a'}); putLE32(wav, dataBytes);
+    wav.resize(wav.size() + dataBytes, 0);
+
+    std::vector<std::uint8_t> b;
+    putFixed(b, "YDP Board data file. Ver:1 test", 100);
+    putU32(b, 1);
+    putU32(b, 0); putU32(b, 0); putU32(b, 640); putU32(b, 480);
+    putU32(b, 0xffffffffu); putU32(b, 8);
+    putU32(b, 0); putU8(b, 0); putU32(b, 0); putU32(b, 0);
+    putU32(b, 1); putU32(b, 1);
+    putWrapper(b, clsid, "Sound_Holder");
+    putU32(b, 2); putU32(b, 1);   // sound version, soundCount
+    putU32(b, static_cast<std::uint32_t>(wav.size()));  // soundByteCount
+    b.insert(b.end(), wav.begin(), wav.end());
+    b.resize(b.size() + 0x58, 0);  // sound record[0x58]
+    putU32(b, 0);                   // waveFormatByteCount
+    putU32(b, 1);
+    putArchiveString(b, script);
+    return b;
+}
+
+const char* kSoundClockScript = R"S(
+void OnOpenPage() { Sound_Holder.PlayDSound(0); }
+void Sound_Holder.EndPlaySound(int soundID) { ended = soundID + 1; }
+)S";
+
+// Sound completes on the same clock as video: PlayDSound(0) schedules
+// EndPlaySound(0) at the WAV's 500 ms length.
+void testSoundClock() {
+    const auto bytes = buildSoundBdf(kSoundClockScript);
+    BinaryReader reader(bytes);
+    auto page = Page::loadFromReader(reader, "sound-clock");
+    page->open();   // PlayDSound(0) -> completion scheduled at t=500
+
+    page->advanceTime(300);   // not yet
+    assert(!page->hasGlobal("ended") || page->getGlobal("ended").toInt() == 0);
+    page->advanceTime(400);   // now at 700ms -> EndPlaySound(0) fired
+    assert(page->getGlobal("ended").toInt() == 1);
+}
+
 const char* kPrecedenceScript = R"S(
 void OnOpenPage()
 {
@@ -802,6 +863,7 @@ int main() {
     testSpriteDrag();
     testCompletionEvents();
     testVideoClockChain();
+    testSoundClock();
     testCrossKindLayerPrecedence();
     testBitmapCallbacks();
     testBitmapPixelMask();

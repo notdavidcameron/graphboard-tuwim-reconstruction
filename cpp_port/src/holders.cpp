@@ -322,6 +322,33 @@ TransparentVideoHolderState parseTransparentVideoHolderState(BinaryReader& reade
     return state;
 }
 
+// Duration of a RIFF/WAVE clip in ms: walk the chunks for the fmt byte-rate and
+// the data chunk size (duration = dataBytes * 1000 / byteRate). Returns 0 for
+// anything that is not a canonical RIFF/WAVE.
+static std::uint32_t wavDurationMs(const std::vector<std::uint8_t>& wav) {
+    if (wav.size() < 12 || wav[0] != 'R' || wav[1] != 'I' || wav[2] != 'F' ||
+        wav[3] != 'F' || wav[8] != 'W' || wav[9] != 'A' || wav[10] != 'V' || wav[11] != 'E') {
+        return 0;
+    }
+    std::uint32_t byteRate = 0, dataBytes = 0;
+    std::size_t pos = 12;
+    while (pos + 8 <= wav.size()) {
+        const std::size_t chunkSize = readU32At(wav, pos + 4);
+        if (wav[pos] == 'f' && wav[pos + 1] == 'm' && wav[pos + 2] == 't' && wav[pos + 3] == ' ' &&
+            pos + 8 + 16 <= wav.size()) {
+            byteRate = readU32At(wav, pos + 8 + 8);   // fmt: +8 into the chunk data
+        } else if (wav[pos] == 'd' && wav[pos + 1] == 'a' && wav[pos + 2] == 't' &&
+                   wav[pos + 3] == 'a') {
+            dataBytes = static_cast<std::uint32_t>(chunkSize);
+        }
+        pos += 8 + chunkSize + (chunkSize & 1);   // chunks are word-aligned
+    }
+    if (byteRate == 0) {
+        return 0;
+    }
+    return static_cast<std::uint32_t>(static_cast<std::uint64_t>(dataBytes) * 1000 / byteRate);
+}
+
 SoundHolderState parseSoundHolderState(BinaryReader& reader) {
     // 0x58-byte record framing per the shipped 1997 DLL; the GraphBoard 1.00
     // DLL writes 0x6c-byte records (see holders.hpp / recovery notes).
@@ -336,13 +363,13 @@ SoundHolderState parseSoundHolderState(BinaryReader& reader) {
         SoundEntry sound;
         sound.soundByteCount = reader.readU32();
         sound.soundOffset = reader.position();
-        const auto riffTag = reader.readBytes(4);
-        sound.looksLikeRiff =
-            riffTag[0] == 'R' && riffTag[1] == 'I' && riffTag[2] == 'F' && riffTag[3] == 'F';
         if (sound.soundByteCount < 4) {
             throw ParseError("Sound entry shorter than a RIFF tag");
         }
-        reader.skip(sound.soundByteCount - 4);
+        const auto soundBytes = reader.readBytes(sound.soundByteCount);
+        sound.looksLikeRiff = soundBytes[0] == 'R' && soundBytes[1] == 'I' &&
+                              soundBytes[2] == 'F' && soundBytes[3] == 'F';
+        sound.durationMs = wavDurationMs(soundBytes);
 
         const auto record = reader.readBytes(kSoundRecordBytes);
         sound.archiveStart = readU32At(record, 0x04);
