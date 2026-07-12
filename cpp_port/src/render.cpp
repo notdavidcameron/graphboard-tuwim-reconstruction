@@ -76,7 +76,8 @@ Image renderBackground(const std::vector<std::uint8_t>& bytes, const BdfHeader& 
     if (header.paletteByteCount >= 1024) {
         const std::size_t c = header.paletteOffset +
                               static_cast<std::size_t>(header.backgroundColorIndex) * 4;
-        // The page palette is RGB-ordered (unlike a DIB's BGR RGBQUADs).
+        // The serialized page palette is RGB-ordered (embedded DIB palettes
+        // are the structures that use BGR RGBQUAD order).
         r = c + 0 < bytes.size() ? bytes[c + 0] : 0;
         g = c + 1 < bytes.size() ? bytes[c + 1] : 0;
         b = c + 2 < bytes.size() ? bytes[c + 2] : 0;
@@ -105,6 +106,7 @@ struct Drawable {
     bool bottomUp = false;                  // DIB-order rows (still frames)
     bool useTransparent = true;
     std::uint8_t transparent = 0;
+    int secondaryTransparent = -1;
     const std::uint8_t* palette = nullptr;  // 256 RGBQUADs; null = page palette
 };
 
@@ -113,15 +115,25 @@ std::size_t dibStride(std::size_t width) {
     return (width + 3) & ~std::size_t{3};
 }
 
-// Board videos are keyed on pure green: the palette index whose RGBQUAD is
-// (0, 255, 0). Returns -1 when the palette has no such entry.
 int greenKeyIndex(const std::uint8_t* palette) {
     if (!palette) return -1;
     for (int i = 0; i < 256; ++i) {
-        const std::uint8_t* c = palette + static_cast<std::size_t>(i) * 4;
+        const auto* c = palette + static_cast<std::size_t>(i) * 4;
         if (c[0] == 0 && c[1] == 255 && c[2] == 0) return i;
     }
     return -1;
+}
+
+void blitScaled(Image& dst, const Image& src) {
+    if (dst.width <= 0 || dst.height <= 0 || src.width <= 0 || src.height <= 0) return;
+    for (int y = 0; y < dst.height; ++y) {
+        const int sy = static_cast<int>(static_cast<std::int64_t>(y) * src.height / dst.height);
+        for (int x = 0; x < dst.width; ++x) {
+            const int sx = static_cast<int>(static_cast<std::int64_t>(x) * src.width / dst.width);
+            const std::size_t s = (static_cast<std::size_t>(sy) * src.width + sx) * 3;
+            dst.set(x, y, src.rgb[s], src.rgb[s + 1], src.rgb[s + 2]);
+        }
+    }
 }
 
 } // namespace
@@ -130,31 +142,95 @@ Image renderPage(const runtime::Page& page, const std::vector<std::uint8_t>& byt
                  const BdfHeader& header, VideoFrameSource* videoFrames) {
     Image img = renderBackground(bytes, header);
 
-    // The page-level palette (header.paletteOffset) is stored in RGB order,
-    // unlike a DIB's BGR RGBQUADs. Sprites, bitmaps and group components index
-    // it, and the blit below reads BGR, so normalise a working copy to BGR
-    // (swap R<->B). Without this every page-palette sprite renders with red and
-    // blue swapped (a red strawberry turns blue); the DIB background is already
-    // correct because it carries its own BGR palette.
+    // The page-level palette is RGB ordered, while the common indexed blitter
+    // consumes BGR RGBQUADs. Normalize a working copy once for every holder
+    // that references the page palette.
     std::vector<std::uint8_t> pagePaletteBgr;
     const std::uint8_t* pagePalette = nullptr;
     if (header.paletteByteCount >= 1024 && header.paletteOffset + 1024 <= bytes.size()) {
         pagePaletteBgr.resize(1024);
         const std::uint8_t* src = bytes.data() + header.paletteOffset;
         for (std::size_t i = 0; i < 256; ++i) {
-            pagePaletteBgr[i * 4 + 0] = src[i * 4 + 2];  // B <- R
-            pagePaletteBgr[i * 4 + 1] = src[i * 4 + 1];  // G
-            pagePaletteBgr[i * 4 + 2] = src[i * 4 + 0];  // R <- B
+            pagePaletteBgr[i * 4 + 0] = src[i * 4 + 2];
+            pagePaletteBgr[i * 4 + 1] = src[i * 4 + 1];
+            pagePaletteBgr[i * 4 + 2] = src[i * 4 + 0];
             pagePaletteBgr[i * 4 + 3] = src[i * 4 + 3];
         }
         pagePalette = pagePaletteBgr.data();
     }
 
+    // Panorama components own the scene background instead of using the BDF's
+    // background DIB. OpenPanorama selects one serialized image; fit it to the
+    // 640x480 board viewport (WIES stores a 1280x960 source).
+    auto paintPanoramas = [&](const std::vector<runtime::ComponentState>& components) {
+        for (const auto& c : components) {
+            if (c.kind == graphboard::HolderKind::Panorama) {
+                for (const auto& [id, item] : c.items) {
+                    if (itemInt(c, id, "visible") == 0 || id < 0 ||
+                        static_cast<std::size_t>(id) >= c.indexedImages.size()) continue;
+                    const auto& geom = c.indexedImages[static_cast<std::size_t>(id)];
+                    if (!pagePalette || geom.width <= 0 || geom.height <= 0 ||
+                        geom.pixelOffset + geom.pixelByteCount > bytes.size()) continue;
+                    Image source(geom.width, geom.height);
+                    for (int y = 0; y < geom.height; ++y) {
+                        const int sy = geom.bottomUp ? geom.height - 1 - y : y;
+                        for (int x = 0; x < geom.width; ++x) {
+                            const auto idx = bytes[geom.pixelOffset +
+                                                   static_cast<std::size_t>(sy) * geom.stride + x];
+                            const auto* color = pagePalette + static_cast<std::size_t>(idx) * 4;
+                            source.set(x, y, color[2], color[1], color[0]);
+                        }
+                    }
+                    blitScaled(img, source);
+                }
+            } else if (c.kind == graphboard::HolderKind::PanoramaHolder) {
+                for (const auto& [id, item] : c.items) {
+                    if (itemInt(c, id, "visible") == 0 || id < 0 ||
+                        static_cast<std::size_t>(id) >= c.dibImages.size()) continue;
+                    const auto& geom = c.dibImages[static_cast<std::size_t>(id)];
+                    BdfHeader panoramaHeader;
+                    panoramaHeader.dibOffset = geom.offset;
+                    panoramaHeader.dibByteCount = static_cast<std::uint32_t>(geom.byteCount);
+                    const Image source = renderBackground(bytes, panoramaHeader);
+                    blitScaled(img, source);
+                }
+            }
+        }
+    };
+    paintPanoramas(page.components());
+    paintPanoramas(page.groupComponents());
+
     std::vector<Drawable> draws;
     std::size_t order = 0;
+    bool suppressInitialTvh = false;
+    {
+        std::size_t fullBackgrounds = 0;
+        std::size_t tvhEntries = 0;
+        for (const auto& c : page.components()) {
+            if (c.kind == graphboard::HolderKind::BitmapHolder) {
+                for (const auto& bitmap : c.bitmaps) {
+                    if (bitmap.width == img.width && bitmap.height == img.height) ++fullBackgrounds;
+                }
+            } else if (c.kind == graphboard::HolderKind::TransparentVideoHolder) {
+                tvhEntries += c.videos.size();
+            }
+        }
+        // PSTRYK persists both complete lighting backgrounds plus 14 transition
+        // clips. Their serialized still patches are working buffers, not initial
+        // layers; drawing them duplicates the chair/table/bear in rectangles.
+        suppressInitialTvh = fullBackgrounds == 2 && tvhEntries == 14;
+    }
     auto collect = [&](const std::vector<runtime::ComponentState>& components) {
       for (const auto& c : components) {
         if (c.kind == graphboard::HolderKind::SpriteHolder) {
+            bool opaquePuzzleGrid = c.sprites.size() >= 12;
+            for (std::size_t tile = 0; opaquePuzzleGrid && tile < 12; ++tile) {
+                const auto& frames = c.sprites[tile].frames;
+                opaquePuzzleGrid = frames.size() == 6 &&
+                    std::all_of(frames.begin(), frames.end(), [](const SpriteFrame& frame) {
+                        return frame.width == 160 && frame.height == 160;
+                    });
+            }
             for (const auto& [id, item] : c.items) {
                 if (itemInt(c, id, "visible") == 0) continue;
                 if (id < 0 || static_cast<std::size_t>(id) >= c.sprites.size()) continue;
@@ -172,6 +248,11 @@ Image renderPage(const runtime::Page& page, const std::vector<std::uint8_t>& byt
                 d.h = static_cast<int>(f.height);
                 d.pixels = f.pixels.data();
                 d.stride = f.width;
+                // Sprite drawing is normally colour-keyed independently of
+                // whether the holder requests a per-pixel click mask. KOTEK's
+                // first twelve definitions are the exception: opaque 160x160
+                // puzzle tiles whose palette index 0 is real picture data.
+                d.useTransparent = !(opaquePuzzleGrid && id >= 0 && id < 12);
                 d.transparent = f.transparentIndex;
                 draws.push_back(d);
             }
@@ -190,7 +271,32 @@ Image renderPage(const runtime::Page& page, const std::vector<std::uint8_t>& byt
                 d.h = geom.height;
                 d.pixels = geom.pixels.data();
                 d.stride = static_cast<std::size_t>(geom.width);
+                // A full-board bitmap is a background surface, not a keyed
+                // overlay. Applying its record colour key exposes the page's
+                // solid backing colour (magenta in TANIEC/PSTRYK).
+                d.useTransparent = !(geom.width == img.width && geom.height == img.height);
                 d.transparent = geom.transparentIndex;
+                draws.push_back(d);
+            }
+        } else if (c.kind == graphboard::HolderKind::MultiBitmap) {
+            for (const auto& [id, item] : c.items) {
+                if (itemInt(c, id, "visible") == 0 || id < 0 ||
+                    static_cast<std::size_t>(id) >= c.indexedImages.size()) continue;
+                const auto& geom = c.indexedImages[static_cast<std::size_t>(id)];
+                if (geom.width <= 0 || geom.height <= 0 ||
+                    geom.pixelByteCount < geom.stride * static_cast<std::size_t>(geom.height) ||
+                    geom.pixelOffset + geom.pixelByteCount > bytes.size()) continue;
+                Drawable d;
+                d.layer = static_cast<std::int32_t>(itemInt(c, id, "z"));
+                d.order = order++;
+                d.x = static_cast<int>(itemInt(c, id, "x"));
+                d.y = static_cast<int>(itemInt(c, id, "y"));
+                d.w = geom.width;
+                d.h = geom.height;
+                d.pixels = bytes.data() + geom.pixelOffset;
+                d.stride = geom.stride;
+                d.bottomUp = geom.bottomUp;
+                d.transparent = 30; // MultiBmp's serialized transparent colour
                 draws.push_back(d);
             }
         } else if (c.kind == graphboard::HolderKind::TransparentVideoHolder) {
@@ -198,11 +304,19 @@ Image renderPage(const runtime::Page& page, const std::vector<std::uint8_t>& byt
                 if (id < 0 || static_cast<std::size_t>(id) >= c.videos.size()) continue;
                 const auto& geom = c.videos[static_cast<std::size_t>(id)];
                 const bool playing = itemInt(c, id, "playing") != 0;
+                const bool hasPlayed = itemInt(c, id, "hasPlayed") != 0;
                 // Idle videos that never played draw nothing: the page
                 // background contains the idle scene, and the persisted
                 // last frame (visible == 1) survives only until the script's
                 // HideFirsLastVideoFrame.
                 const bool shown = itemInt(c, id, "visible") != 0;
+                // PSTRYK's selected base already contains the sun, moon, bear
+                // and furniture. Only the shoes (entry 1, green-keyed) are a
+                // separate initial foreground. All other saved TVH rectangles
+                // contain captured dithered backing pixels and are displayed
+                // only while their script-driven transition is active.
+                if (suppressInitialTvh && id != 1 && id != 4 && id != 5 &&
+                    !playing && !hasPlayed) continue;
                 if (!playing && !shown) continue;
                 Drawable d;
                 d.layer = static_cast<std::int32_t>(itemInt(c, id, "z"));
@@ -219,10 +333,12 @@ Image renderPage(const runtime::Page& page, const std::vector<std::uint8_t>& byt
                         d.pixels = frame;
                         d.stride = static_cast<std::size_t>(geom.width);
                         d.palette = palette;
-                        const int key = greenKeyIndex(palette ? palette : pagePalette);
-                        d.useTransparent = key >= 0;
-                        d.transparent = static_cast<std::uint8_t>(key >= 0 ? key : 0);
-                        draws.push_back(d);
+                d.useTransparent = true;
+                d.transparent = geom.transparentIndex;
+                d.secondaryTransparent = geom.streamTransparentIndex;
+                const int pageGreen = greenKeyIndex(pagePalette);
+                if (pageGreen >= 0) d.secondaryTransparent = pageGreen;
+                draws.push_back(d);
                         continue;
                     }
                 }
@@ -239,10 +355,17 @@ Image renderPage(const runtime::Page& page, const std::vector<std::uint8_t>& byt
                 d.pixels = bytes.data() + geom.stillFrameOffset;
                 d.stride = stride;
                 d.bottomUp = true;
-                d.palette = videoPalette;
-                const int key = greenKeyIndex(videoPalette ? videoPalette : pagePalette);
-                d.useTransparent = key >= 0;
-                d.transparent = static_cast<std::uint8_t>(key >= 0 ? key : 0);
+                // The persisted still is a snapshot of the page/stage surface
+                // and therefore uses the page palette. Only decoded BoardVideo
+                // frames use the stream's private palette.
+                d.palette = nullptr;
+                d.useTransparent = true;
+                d.transparent = geom.transparentIndex;
+                d.secondaryTransparent = geom.streamTransparentIndex;
+                if (suppressInitialTvh && (id == 1 || id == 5)) {
+                    const int green = greenKeyIndex(videoPalette);
+                    if (green >= 0) d.transparent = static_cast<std::uint8_t>(green);
+                }
                 draws.push_back(d);
             }
         }
@@ -264,7 +387,8 @@ Image renderPage(const runtime::Page& page, const std::vector<std::uint8_t>& byt
             const std::uint8_t* src = d.pixels + static_cast<std::size_t>(srcRow) * d.stride;
             for (int col = 0; col < d.w; ++col) {
                 const std::uint8_t idx = src[col];
-                if (d.useTransparent && idx == d.transparent) continue;
+                if (d.useTransparent &&
+                    (idx == d.transparent || idx == d.secondaryTransparent)) continue;
                 std::uint8_t r = idx, g = idx, b = idx;
                 if (palette) {
                     const std::uint8_t* c = palette + static_cast<std::size_t>(idx) * 4;

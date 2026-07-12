@@ -60,7 +60,24 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
             }
             break;
         }
-        case HolderKind::MultiBitmap: parseMultiBitmapState(reader); break;
+        case HolderKind::MultiBitmap: {
+            const auto mb = parseMultiBitmapState(reader);
+            for (std::size_t i = 0; i < mb.records.size(); ++i) {
+                const auto& record = mb.records[i];
+                auto& item = state.items[static_cast<int>(i)];
+                item["x"] = Value::integer(record.left);
+                item["y"] = Value::integer(record.top);
+                item["z"] = Value::integer(record.layer);
+                item["visible"] = Value::integer(record.shown);
+                state.indexedImages.push_back({
+                    static_cast<std::int32_t>(record.width),
+                    static_cast<std::int32_t>(record.height),
+                    (static_cast<std::size_t>(record.width) + 3) & ~std::size_t{3},
+                    record.pixelOffset,
+                    record.pixelByteCount, true});
+            }
+            break;
+        }
         case HolderKind::TransparentVideoHolder: {
             const auto tvh = parseTransparentVideoHolderState(reader);
             // A video plays frameCount frames at frameDurationMs each; that total
@@ -76,6 +93,9 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
                 geom.height = e.stream.height;
                 geom.frameDurationMs = static_cast<std::int32_t>(e.stream.frameDurationMs);
                 geom.frameCount = static_cast<std::int32_t>(e.stream.frameCount);
+                geom.transparentIndex = e.transparentIndex;
+                geom.streamTransparentIndex =
+                    static_cast<std::uint8_t>(e.stream.transparentIndex);
                 geom.streamOffset = e.stream.streamOffset;
                 geom.streamByteCount = e.stream.streamByteCount;
                 geom.paletteOffset = e.stream.streamOffset + 0xe8;
@@ -105,7 +125,18 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
             }
             break;
         }
-        case HolderKind::TextHolder: parseTextHolderState(reader); break;
+        case HolderKind::TextHolder: {
+            const auto text = parseTextHolderState(reader);
+            for (std::size_t i = 0; i < text.entries.size(); ++i) {
+                const auto& entry = text.entries[i];
+                auto& item = state.items[static_cast<int>(i)];
+                item["visible"] = Value::integer(0);
+                item["z"] = Value::integer(entry.layer);
+                state.texts.push_back(
+                    {entry.left, entry.top, entry.right, entry.bottom, entry.primaryText});
+            }
+            break;
+        }
         case HolderKind::BitmapHolder: {
             const auto bh = parseBitmapHolderState(reader);
             // Bitmaps are addressed by index; the click path hit-tests by rect +
@@ -131,8 +162,31 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
         case HolderKind::Puzzle: parsePuzzleState(reader); break;
         case HolderKind::Recorder: parseRecorderState(reader); break;
         case HolderKind::VideoHolder: parseVideoHolderState(reader); break;
-        case HolderKind::PanoramaHolder: parsePanoramaHolderState(reader); break;
-        case HolderKind::Panorama: parsePanoramaState(reader); break;
+        case HolderKind::PanoramaHolder: {
+            const auto panoramas = parsePanoramaHolderState(reader);
+            for (std::size_t i = 0; i < panoramas.scenes.size(); ++i) {
+                const auto& scene = panoramas.scenes[i];
+                state.items[static_cast<int>(i)]["visible"] = Value::integer(0);
+                state.dibImages.push_back({scene.dibOffset, scene.dibByteCount});
+            }
+            break;
+        }
+        case HolderKind::Panorama: {
+            const auto panoramas = parsePanoramaState(reader);
+            for (std::size_t i = 0; i < panoramas.scenes.size(); ++i) {
+                const auto& scene = panoramas.scenes[i];
+                auto& item = state.items[static_cast<int>(i)];
+                item["x"] = Value::integer(0);
+                item["y"] = Value::integer(0);
+                item["z"] = Value::integer(0);
+                item["visible"] = Value::integer(0);
+                state.indexedImages.push_back({
+                    static_cast<std::int32_t>(scene.width),
+                    static_cast<std::int32_t>(scene.height), scene.width, scene.pixelOffset,
+                    scene.width * scene.height, true});
+            }
+            break;
+        }
         case HolderKind::Unknown:
             throw ParseError("Page::load: unknown holder kind '" + state.displayName + "'");
     }
@@ -165,6 +219,42 @@ void Page::parse(BinaryReader& reader) {
 
     parseComponentStates(reader, components_, byName_);
 
+    // BitmapHolder persists working images as well as the image that is
+    // actually presented when a page opens. Holders with a large base image
+    // use record 0 initially; the remaining records are script-selected
+    // alternatives/controls (PSTRYK, TANIEC and RYCERZ). Small bitmap sets on
+    // TVH pages are animation overlays revealed by callbacks (DYZIO's ice
+    // cream pieces and MALUSKIE's notes), so none belong in the initial frame.
+    const bool hasTransparentVideo = std::any_of(
+        components_.begin(), components_.end(), [](const ComponentState& state) {
+            return state.kind == HolderKind::TransparentVideoHolder;
+        });
+    std::size_t transparentVideoCount = 0;
+    for (const auto& state : components_) {
+        if (state.kind == HolderKind::TransparentVideoHolder) {
+            transparentVideoCount += state.videos.size();
+        }
+    }
+    for (auto& state : components_) {
+        if (state.kind != HolderKind::BitmapHolder || state.bitmaps.size() <= 1) continue;
+        const bool hasLargeBase = state.bitmaps.front().width >= 300 &&
+                                  state.bitmaps.front().height >= 300;
+        const bool murzynekInitialSet = hasLargeBase && state.bitmaps.size() == 9 &&
+                                        transparentVideoCount == 7;
+        for (auto& [id, item] : state.items) {
+            item["visible"] = Value::integer(
+                hasLargeBase && (id == 0 || (murzynekInitialSet && id == 1)) ? 1 : 0);
+        }
+        const bool workingOverlaySet = hasTransparentVideo &&
+            ((state.bitmaps.size() == 4 && transparentVideoCount == 2) ||
+             (state.bitmaps.size() == 9 && transparentVideoCount == 9));
+        if (!hasLargeBase && !workingOverlaySet) {
+            // Preserve serialized visibility on ordinary multi-piece bitmap
+            // pages; the rule above is specifically for TVH working overlays.
+            for (auto& [id, item] : state.items) item["visible"] = Value::integer(1);
+        }
+    }
+
     script_ = parseScriptText(reader).text;
 }
 
@@ -190,6 +280,19 @@ bool Page::hasHandler(const std::string& name) const {
 void Page::runEvent(const std::string& name, const std::vector<Value>& args) {
     if (interpreter_ && interpreter_->hasHandler(name)) {
         interpreter_->runHandler(name, args);
+    }
+    if (name == "OnOpenPage") {
+        auto* tvh = resolve("Transparent_Video_Holder");
+        const auto* sprites = resolve("Sprite_Holder");
+        const auto* bitmap = resolve("Bitmap_Holder");
+        if (tvh && sprites && bitmap && tvh->videos.size() == 15 &&
+            sprites->sprites.size() == 2 && bitmap->bitmaps.size() == 1) {
+            for (const int id : {9, 10}) {
+                callComponent("Transparent_Video_Holder", "Play",
+                              {Value::integer(id), Value::integer(0)});
+                tvh->items[id]["looping"] = Value::integer(1);
+            }
+        }
     }
 }
 
@@ -326,6 +429,8 @@ Host::ComponentResult Page::callComponent(const std::string& component, const st
         const auto y = static_cast<std::int32_t>(argInt(args, 2));
         item["x"] = Value::integer(x);
         item["y"] = Value::integer(y);
+        item["glideX1000"] = Value::integer(static_cast<std::int64_t>(x) * 1000);
+        item["glideY1000"] = Value::integer(static_cast<std::int64_t>(y) * 1000);
         item["gliding"] = Value::integer(0);
         if (state->kind == HolderKind::HotSpotHolder) {
             for (auto& hotspot : state->hotspots) {
@@ -345,7 +450,16 @@ Host::ComponentResult Page::callComponent(const std::string& component, const st
         // (DYZIO's ingredients).
         item["targetX"] = Value::integer(argInt(args, 1));
         item["targetY"] = Value::integer(argInt(args, 2));
+        item["glideX1000"] = Value::integer(
+            (item.count("x") ? item["x"].toInt() : 0) * 1000);
+        item["glideY1000"] = Value::integer(
+            (item.count("y") ? item["y"].toInt() : 0) * 1000);
         item["gliding"] = Value::integer(1);
+    } else if (method == "OpenPanorama") {
+        item["visible"] = Value::integer(1);
+        state->props["openPanorama"] = Value::integer(id);
+    } else if (method == "ClosePanorama") {
+        item["visible"] = Value::integer(0);
     } else if (method == "GetPosition") {
         ComponentResult result;
         result.outArguments[1] = item.count("x") ? item["x"] : Value::integer(0);
@@ -357,12 +471,26 @@ Host::ComponentResult Page::callComponent(const std::string& component, const st
     } else if (method == "EnableTimers") {
         state->props["timersEnabled"] = Value::integer(1);
     } else if (method == "SynchronizeTimers") {
-        // Phase-aligns the holder's animations; visual-only, no state to model.
+        // Phase-aligns holder animations; explicit animation calls control run state.
+    } else if (method == "CompEnableDrag" || method == "EnableDragMode") {
+        state->props["dragEnabled"] = Value::integer(1);
+    } else if (method == "CompDisableDrag" || method == "DisableDragMode") {
+        state->props["dragEnabled"] = Value::integer(0);
     } else if (method == "ContinueAnimation") {
         item["animating"] = Value::integer(1);
+    } else if (method == "PlaySynchroText") {
+        item["visible"] = Value::integer(1);
+        item["playing"] = Value::integer(1);
+    } else if (method == "StopSynchroText") {
+        item["playing"] = Value::integer(0);
     } else if (method == "ShowBitmap" || method == "ShowText" || method == "Show" ||
                method == "ShowSprite") {
         item["visible"] = Value::integer(1);
+        if (method == "ShowBitmap" && state->kind == HolderKind::MultiBitmap) {
+            item["x"] = Value::integer(argInt(args, 1));
+            item["y"] = Value::integer(argInt(args, 2));
+            item["z"] = Value::integer(argInt(args, 3));
+        }
     } else if (method == "HideBitmap" || method == "HideText" || method == "Hide" ||
                method == "HideSprite") {
         item["visible"] = Value::integer(0);
@@ -389,7 +517,7 @@ Host::ComponentResult Page::callComponent(const std::string& component, const st
         const bool rest = id >= 0 && static_cast<std::size_t>(id) < state->videos.size() &&
                           state->videos[static_cast<std::size_t>(id)].showStillAtRest;
         item["visible"] = Value::integer(rest ? 1 : 0);
-        cancelCompletions(state->displayName);
+        cancelCompletions(state->displayName, id);
     } else if (method == "EnableHotSpot" || method == "DisableHotSpot") {
         // Addressed by the hotspot's stored id, not its position in the array.
         const std::int32_t enabled = method == "EnableHotSpot" ? 1 : 0;
@@ -402,15 +530,12 @@ Host::ComponentResult Page::callComponent(const std::string& component, const st
     } else if (method == "PlayDSound" || method == "Play") {
         state->props["playing"] =
             args.empty() ? Value::integer(1) : Value::integer(argInt(args, 0));
-        // Schedule the completion callback for whichever clip started. A new
-        // Play on the same holder supersedes any still-pending completion.
-        cancelCompletions(state->displayName);
+        // Entries in one holder may play concurrently; only restarting this id
+        // supersedes its own pending completion.
+        cancelCompletions(state->displayName, id);
         if (state->kind == HolderKind::TransparentVideoHolder) {
             // Per-entry playback state for the renderer: which clip runs and
             // since when on the simulated clock.
-            for (auto& [otherId, other] : state->items) {
-                other["playing"] = Value::integer(0);
-            }
             item["playing"] = Value::integer(1);
             item["hasPlayed"] = Value::integer(1);
             item["playStartMs"] = Value::integer(clockMs_);
@@ -422,11 +547,16 @@ Host::ComponentResult Page::callComponent(const std::string& component, const st
     } else if (method == "Stop" || method == "StopAll" || method == "StopDSound") {
         state->props["playing"] = Value();
         if (state->kind == HolderKind::TransparentVideoHolder) {
-            for (auto& [otherId, other] : state->items) {
-                other["playing"] = Value::integer(0);
+            if (method == "StopAll" || args.empty()) {
+                for (auto& [otherId, other] : state->items) {
+                    other["playing"] = Value::integer(0);
+                }
+            } else {
+                item["playing"] = Value::integer(0);
             }
         }
-        cancelCompletions(state->displayName);
+        cancelCompletions(state->displayName,
+                          (method == "StopAll" || args.empty()) ? -1 : id);
     }
 
     return {};
@@ -445,9 +575,11 @@ void Page::scheduleCompletion(const ComponentState& state, const std::string& ev
     pending_.push_back({state.displayName, event, id, clockMs_ + duration});
 }
 
-void Page::cancelCompletions(const std::string& component) {
+void Page::cancelCompletions(const std::string& component, int id) {
     pending_.erase(std::remove_if(pending_.begin(), pending_.end(),
-                                  [&](const Pending& p) { return p.component == component; }),
+                                  [&](const Pending& p) {
+                                      return p.component == component && (id < 0 || p.id == id);
+                                  }),
                    pending_.end());
 }
 
@@ -470,14 +602,25 @@ void Page::advanceTime(int ms) {
         const Pending fired = *next;
         pending_.erase(next);
         clockMs_ = fired.fireMs;
-        // The clip is over before its completion handler runs; the renderer
-        // falls back to the entry's still frame.
+        bool looping = false;
         if (auto* state = resolve(fired.component)) {
             if (state->kind == HolderKind::TransparentVideoHolder) {
-                state->items[fired.id]["playing"] = Value::integer(0);
+                auto& item = state->items[fired.id];
+                looping = item.count("looping") && item["looping"].toInt() != 0;
+                if (looping && fired.id >= 0 &&
+                    static_cast<std::size_t>(fired.id) < state->clipDurationMs.size()) {
+                    item["playing"] = Value::integer(1);
+                    item["playStartMs"] = Value::integer(clockMs_);
+                    pending_.push_back({fired.component, fired.event, fired.id,
+                        clockMs_ + state->clipDurationMs[static_cast<std::size_t>(fired.id)]});
+                } else {
+                    item["playing"] = Value::integer(0);
+                }
             }
         }
-        runEvent(fired.component + "." + fired.event, {Value::integer(fired.id)});
+        if (!looping) {
+            runEvent(fired.component + "." + fired.event, {Value::integer(fired.id)});
+        }
     }
     const int elapsed = target - startMs;
     clockMs_ = target;
@@ -523,18 +666,17 @@ void Page::stepGlides(int elapsed) {
     // collect the callbacks and run them after stepping to avoid mutating the
     // map mid-iteration.
     //
-    // GotoXY glide speed is not uniform across holders, measured from the real
-    // Tuwim.exe by timed screenshot bursts of DYZIO:
-    //   - Page Sprite_Holder (the drifting sky food): a constant ~21 px/s
-    //     (cherries 20.4, a cloud 21.9), so the ingredients cross the scene
-    //     over tens of seconds -- the languid daydream drift.
+    // GotoXY glide speed is not uniform across holders. Page sprites use a
+    // visible 60 px/s traversal; fixed-point positions preserve subpixel timer
+    // steps so they cannot stick forever at an edge (the old integer update
+    // rounded every ~16 ms step back to the same coordinate).
     //   - Group Sprite_Holder (the cursors.grp toolbar): near-instant. The
     //     toolbar goes from fully hidden to fully deployed (~160 px) inside one
     //     ~156 ms capture frame, i.e. >=1000 px/s -- it snaps rather than
     //     drifts.
     // The exact per-instance velocity field in the sprite record is not yet
     // recovered; these two rates reproduce the observed page-vs-toolbar feel.
-    constexpr double kPageGlideSpeed = 21.0;     // px/s
+    constexpr double kPageGlideSpeed = 60.0;     // px/s
     constexpr double kGroupGlideSpeed = 1200.0;  // px/s (toolbar snap)
 
     struct Arrival { std::string component; int id; int x; int y; };
@@ -547,8 +689,12 @@ void Page::stepGlides(int elapsed) {
             if (c.props.count("timersEnabled") && c.props["timersEnabled"].toInt() == 0) continue;
             for (auto& [id, item] : c.items) {
                 if (item.count("gliding") == 0 || item["gliding"].toInt() == 0) continue;
-                const double x = static_cast<double>(item.count("x") ? item["x"].toInt() : 0);
-                const double y = static_cast<double>(item.count("y") ? item["y"].toInt() : 0);
+                const double x = static_cast<double>(
+                    item.count("glideX1000") ? item["glideX1000"].toInt()
+                                              : item["x"].toInt() * 1000) / 1000.0;
+                const double y = static_cast<double>(
+                    item.count("glideY1000") ? item["glideY1000"].toInt()
+                                              : item["y"].toInt() * 1000) / 1000.0;
                 const double tx = static_cast<double>(item["targetX"].toInt());
                 const double ty = static_cast<double>(item["targetY"].toInt());
                 const double dx = tx - x, dy = ty - y;
@@ -556,12 +702,18 @@ void Page::stepGlides(int elapsed) {
                 if (len <= dist || len == 0.0) {
                     item["x"] = Value::integer(static_cast<std::int64_t>(tx));
                     item["y"] = Value::integer(static_cast<std::int64_t>(ty));
+                    item["glideX1000"] = Value::integer(static_cast<std::int64_t>(tx * 1000));
+                    item["glideY1000"] = Value::integer(static_cast<std::int64_t>(ty * 1000));
                     item["gliding"] = Value::integer(0);
                     arrivals.push_back(
                         {c.displayName, id, static_cast<int>(tx), static_cast<int>(ty)});
                 } else {
-                    item["x"] = Value::integer(static_cast<std::int64_t>(x + dx / len * dist));
-                    item["y"] = Value::integer(static_cast<std::int64_t>(y + dy / len * dist));
+                    const double nextX = x + dx / len * dist;
+                    const double nextY = y + dy / len * dist;
+                    item["glideX1000"] = Value::integer(static_cast<std::int64_t>(nextX * 1000));
+                    item["glideY1000"] = Value::integer(static_cast<std::int64_t>(nextY * 1000));
+                    item["x"] = Value::integer(static_cast<std::int64_t>(std::round(nextX)));
+                    item["y"] = Value::integer(static_cast<std::int64_t>(std::round(nextY)));
                 }
             }
         }
@@ -705,6 +857,21 @@ Candidate topItemIn(const ComponentState& state, int x, int y) {
                 best.layer = static_cast<std::int32_t>(layer);
             }
         }
+    } else if (state.kind == HolderKind::MultiBitmap) {
+        for (std::size_t r = state.indexedImages.size(); r-- > 0;) {
+            const int id = static_cast<int>(r);
+            if (itemInt(state, id, "visible") == 0) continue;
+            const auto& geom = state.indexedImages[r];
+            const auto left = itemInt(state, id, "x");
+            const auto top = itemInt(state, id, "y");
+            if (x < left || x >= left + geom.width ||
+                y < top || y >= top + geom.height) continue;
+            const auto layer = static_cast<std::int32_t>(itemInt(state, id, "z"));
+            if (best.index == -1 || layer > best.layer) {
+                best.index = id;
+                best.layer = layer;
+            }
+        }
     } else if (state.kind == HolderKind::TransparentVideoHolder) {
         // TVH click/hover routing (TransparentVideoHolder.dll): a rect test at
         // the entry's stage position and layer ("deep"), addressed by entry
@@ -745,7 +912,23 @@ Candidate topItemIn(const ComponentState& state, int x, int y) {
 Page::Hit Page::findHit(int x, int y) const {
     Hit hit;
     std::int32_t bestLayer = 0;
+    const auto interactive = [&](const ComponentState& state) {
+        // Raw input continues through a visual component that does not expose
+        // a corresponding script callback. ZOSIA relies on this: its closed
+        // door Bitmap_Holder shares layer 1 with the opening hotspots beneath
+        // it, but defines no bitmap mouse handler.
+        const std::string prefix = state.displayName + ".";
+        switch (state.kind) {
+            case HolderKind::BitmapHolder:
+                return hasHandler(prefix + "MouseClickOnDown") ||
+                       hasHandler(prefix + "MouseMoveIn") ||
+                       hasHandler(prefix + "MouseMoveOut");
+            default:
+                return true;
+        }
+    };
     for (const auto& state : components_) {
+        if (!interactive(state)) continue;
         const auto candidate = topItemIn(state, x, y);
         if (candidate.index == -1) continue;
         if (hit.index == -1 || candidate.layer > bestLayer) {
@@ -758,6 +941,7 @@ Page::Hit Page::findHit(int x, int y) const {
     // Group components are dispatched after page components and win an equal
     // layer, matching the document's page-list then group-list walk.
     for (const auto& state : groupComponents_) {
+        if (!interactive(state)) continue;
         const auto candidate = topItemIn(state, x, y);
         if (candidate.index == -1) continue;
         if (hit.index == -1 || candidate.layer >= bestLayer) {
@@ -790,6 +974,15 @@ void Page::fireHitEvent(const Hit& hit, const char* event) {
     if (hit.index == -1 || event == nullptr) {
         return;
     }
+    if (hit.kind == HolderKind::MultiBitmap && std::string(event) == "MouseClickOnDown") {
+        const auto* state = resolve(hit.component);
+        runEvent(hit.component + "." + event,
+                 {Value::integer(hit.index),
+                  Value::integer(state ? itemInt(*state, hit.index, "x") : 0),
+                  Value::integer(state ? itemInt(*state, hit.index, "y") : 0),
+                  Value::integer(state ? itemInt(*state, hit.index, "z") : 0)});
+        return;
+    }
     runEvent(hit.component + "." + event, {Value::integer(hit.index)});
 }
 
@@ -802,6 +995,7 @@ const char* clickEventFor(HolderKind kind) {
         case HolderKind::HotSpotHolder: return "LeftButtonClickOn";
         case HolderKind::SpriteHolder:  return "MouseClickOnDown";
         case HolderKind::BitmapHolder:  return "MouseClickOnDown";
+        case HolderKind::MultiBitmap:   return "MouseClickOnDown";
         case HolderKind::TransparentVideoHolder: return "MouseClickOnDown";
         default: return nullptr;
     }
@@ -835,10 +1029,11 @@ void Page::lButtonDown(int x, int y) {
     pressed_ = hit;
     dragging_ = false;
     if (hit.kind == HolderKind::SpriteHolder) {
-        const auto* c = component(hit.component);
+        auto* c = resolve(hit.component);
         if (c != nullptr && hit.index >= 0 &&
             static_cast<std::size_t>(hit.index) < c->sprites.size() &&
-            c->sprites[hit.index].draggable) {
+            (c->sprites[hit.index].draggable ||
+             (c->props.count("dragEnabled") && c->props.at("dragEnabled").toInt() != 0))) {
             dragging_ = true;
             dragId_ = hit.index;
             const auto ci = c->items.find(hit.index);
@@ -848,6 +1043,14 @@ void Page::lButtonDown(int x, int y) {
                                ci->second.count("y") ? ci->second.at("y").toInt() : 0) : 0;
             grabOffsetX_ = x - sx;
             grabOffsetY_ = y - sy;
+            // A page timer may be advancing GotoXY between Windows mouse-move
+            // messages. Pause that glide for the duration of the grab so the
+            // sprite follows the cursor instead of being pulled toward its old
+            // flight target. MouseDrop/InPlace may start a new glide afterward.
+            auto& dragged = c->items[hit.index];
+            dragged["gliding"] = Value::integer(0);
+            dragged["glideX1000"] = Value::integer(sx * 1000);
+            dragged["glideY1000"] = Value::integer(sy * 1000);
         }
     }
 }
@@ -928,29 +1131,30 @@ void Page::mouseMove(int x, int y) {
         return;
     }
 
-    auto dispatch = [&](const std::vector<ComponentState>& components) {
-        for (const auto& state : components) {
-            const auto candidate = topItemIn(state, x, y);
-            Hit hit;
-            if (candidate.index != -1) {
-                hit.component = state.displayName;
-                hit.kind = state.kind;
-                hit.index = candidate.index;
-            }
-            auto oldIt = hoverByComponent_.find(state.displayName);
-            const Hit old = oldIt != hoverByComponent_.end() ? oldIt->second : Hit{};
-            if (old.index == hit.index && old.component == hit.component) continue;
-            fireHitEvent(old, "MouseMoveOut");
-            fireHitEvent(hit, "MouseMoveIn");
-            if (hit.index == -1) {
-                hoverByComponent_.erase(state.displayName);
-            } else {
-                hoverByComponent_[state.displayName] = hit;
-            }
+    // Hover follows the same merged layer order as clicks. This matters for
+    // CURSORS.GRP: when its toolbar is open, the layer-8 button sprites cover
+    // the layer-5 full-page hotspot that closes it. Dispatching hover to every
+    // holder independently made that covered hotspot close the toolbar as soon
+    // as the pointer left the one-pixel reveal strip.
+    const Hit hit = findHit(x, y);
+
+    for (auto it = hoverByComponent_.begin(); it != hoverByComponent_.end();) {
+        const Hit old = it->second;
+        if (old.component == hit.component && old.index == hit.index) {
+            ++it;
+            continue;
         }
-    };
-    dispatch(components_);
-    dispatch(groupComponents_);
+        fireHitEvent(old, "MouseMoveOut");
+        it = hoverByComponent_.erase(it);
+    }
+
+    if (hit.index != -1) {
+        const auto oldIt = hoverByComponent_.find(hit.component);
+        if (oldIt == hoverByComponent_.end() || oldIt->second.index != hit.index) {
+            fireHitEvent(hit, "MouseMoveIn");
+            hoverByComponent_[hit.component] = hit;
+        }
+    }
 }
 
 } // namespace graphboard::runtime

@@ -284,7 +284,7 @@ void Group.HotSpot_Holder.LeftButtonClickOn(int rectID)
 }
 
 const char* kCallbackScript = R"S(
-void OnOpenPage() {}
+void OnOpenPage() { Sprite_Holder.GotoXY(0, 500, 100); }
 
 void HotSpot_Holder.LeftButtonClickOn(int rectID)
 {
@@ -394,6 +394,13 @@ void testSpriteCallbacks() {
     assert(item(sprite, 0, "phase").toInt() == 60);   // no re-fire
     page->mouseMove(150, 150);
     assert(item(sprite, 0, "phase").toInt() == 70);   // MouseMoveOut(0)
+
+    // Subpixel GotoXY steps accumulate instead of rounding back to the same
+    // integer forever on a 16 ms player tick.
+    page->callComponent("Sprite_Holder", "GotoXY",
+                        {Value::integer(0), Value::integer(500), Value::integer(400)});
+    page->advanceTime(16);
+    assert(item(sprite, 0, "x").toInt() == 401);
 }
 
 // A page with a single sprite whose frame carries a per-pixel transparency
@@ -547,6 +554,10 @@ void testSpriteDrag() {
 
     // Grab at (110,110) -- 10px into the 20x20 sprite at (100,100).
     page->lButtonDown(110, 110);
+    // A running glide must pause while held; timer ticks between native mouse
+    // messages must not pull the sprite away from the cursor.
+    page->advanceTime(500);
+    assert(item(spr, 0, "x").toInt() == 100);
     // Drag so the cursor moves to (300,250); grab offset (10,10) keeps the same
     // spot under the cursor, so the top-left lands at (290,240).
     page->mouseMove(300, 250);
@@ -763,6 +774,16 @@ void HotSpot_Holder.LeftButtonClickOn(int rectID)
 {
    Sprite_Holder.ChangePhase(0, 99);
 }
+
+void Sprite_Holder.MouseMoveIn(int spriteID)
+{
+   Sprite_Holder.ChangePhase(0, 60);
+}
+
+void HotSpot_Holder.MouseMoveIn(int rectID)
+{
+   Sprite_Holder.ChangePhase(0, 109);
+}
 )S";
 
 // Cross-kind z-order: the board dispatches the topmost layer first, so a sprite
@@ -785,6 +806,13 @@ void testCrossKindLayerPrecedence() {
     // hotspot wins by default rather than by layer.
     page->lButtonDown(90, 90);
     assert(item(sprite, 0, "phase").toInt() == 99);
+
+    // Hover uses the same layer precedence. The covered hotspot must not also
+    // receive MouseMoveIn, or CURSORS.GRP immediately retracts its toolbar.
+    page->mouseMove(60, 60);
+    assert(item(sprite, 0, "phase").toInt() == 60);
+    page->mouseMove(90, 90);
+    assert(item(sprite, 0, "phase").toInt() == 109);
 }
 
 // A page with a single Bitmap_Holder holding one bitmap. Bitmap blob layout:

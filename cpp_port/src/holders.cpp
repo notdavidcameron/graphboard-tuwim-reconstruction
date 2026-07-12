@@ -1,5 +1,9 @@
 #include "graphboard/holders.hpp"
 
+#include <algorithm>
+#include <array>
+#include <iterator>
+
 namespace graphboard {
 
 namespace {
@@ -237,6 +241,8 @@ SpriteHolderState parseSpriteHolderState(BinaryReader& reader) {
                 }
                 definition.frames.push_back(std::move(f));
             }
+
+
         }
         state.definitions.push_back(std::move(definition));
     }
@@ -272,12 +278,21 @@ MultiBitmapState parseMultiBitmapState(BinaryReader& reader) {
         reader.skip(record.pixelByteCount);
 
         const auto metadata = reader.readBytes(kMultiBitmapMetadataBytes);
-        record.width = readU32At(metadata, 0x10);
-        record.height = readU32At(metadata, 0x14);
+        record.left = static_cast<std::int32_t>(readU32At(metadata, 0x08));
+        record.top = static_cast<std::int32_t>(readU32At(metadata, 0x0c));
+        record.right = static_cast<std::int32_t>(readU32At(metadata, 0x10));
+        record.bottom = static_cast<std::int32_t>(readU32At(metadata, 0x14));
+        record.layer = static_cast<std::int32_t>(readU32At(metadata, 0x18));
+        record.shown = static_cast<std::int32_t>(readU32At(metadata, 0x3c));
+        record.width = record.right > record.left
+                           ? static_cast<std::uint32_t>(record.right - record.left) : 0;
+        record.height = record.bottom > record.top
+                            ? static_cast<std::uint32_t>(record.bottom - record.top) : 0;
         record.name = readNulPaddedName(metadata, 0x28, 12);
         record.pixelsAreRawIndexed =
             record.width != 0 && record.height != 0 &&
-            static_cast<std::uint64_t>(record.width) * record.height == record.pixelByteCount;
+            static_cast<std::uint64_t>((record.width + 3) & ~std::uint32_t{3}) *
+                    record.height == record.pixelByteCount;
         state.records.push_back(std::move(record));
     }
 
@@ -302,6 +317,7 @@ TransparentVideoHolderState parseTransparentVideoHolderState(BinaryReader& reade
         }
         const auto header = reader.readBytes(kBoardVideoHeaderBytes);
         entry.stream.magic = readU32At(header, 0x68);
+        entry.stream.transparentIndex = readU32At(header, 0x74);
         entry.stream.frameDurationMs = readU32At(header, 0x7c);
         entry.stream.width = static_cast<std::int32_t>(readU32At(header, 0x80));
         entry.stream.height = static_cast<std::int32_t>(readU32At(header, 0x84));
@@ -325,6 +341,24 @@ TransparentVideoHolderState parseTransparentVideoHolderState(BinaryReader& reade
         const auto entryHeight = readU32At(entryBytes, 0x84);
         entry.stillFrameByteCount = dibStride8(entryWidth) * entryHeight;
         entry.stillFrameOffset = reader.position();
+        // Saved TVH frames carry a flat matte that is not always the stream
+        // header's +0x74 value (notably PSTRYK and TANIEC). The holder treats
+        // that dominant index as transparent when compositing the still and
+        // decoded frames.
+        std::array<std::uint32_t, 256> histogram{};
+        const auto& file = reader.bytes();
+        const auto stride = dibStride8(entryWidth);
+        if (entry.stillFrameOffset + entry.stillFrameByteCount <= file.size()) {
+            for (std::uint32_t y = 0; y < entryHeight; ++y) {
+                const auto row = entry.stillFrameOffset + static_cast<std::size_t>(y) * stride;
+                for (std::uint32_t x = 0; x < entryWidth; ++x) ++histogram[file[row + x]];
+            }
+            entry.transparentIndex = static_cast<std::uint8_t>(
+                std::distance(histogram.begin(),
+                              std::max_element(histogram.begin(), histogram.end())));
+        } else {
+            entry.transparentIndex = static_cast<std::uint8_t>(entry.stream.transparentIndex);
+        }
         reader.skip(entry.stillFrameByteCount);
 
         state.entries.push_back(entry);
@@ -412,6 +446,11 @@ TextHolderState parseTextHolderState(BinaryReader& reader) {
     for (std::uint32_t i = 0; i < textCount; ++i) {
         const auto record = reader.readBytes(kTextEntryBytes);
         TextEntry entry;
+        entry.left = static_cast<std::int32_t>(readU32At(record, 0x28));
+        entry.top = static_cast<std::int32_t>(readU32At(record, 0x2c));
+        entry.right = static_cast<std::int32_t>(readU32At(record, 0x30));
+        entry.bottom = static_cast<std::int32_t>(readU32At(record, 0x34));
+        entry.layer = static_cast<std::int32_t>(readU32At(record, 0x38));
         entry.hasRenderCache = readU32At(record, 0x70) != 0;
         entry.hasSecondaryText = readU32At(record, 0x90) != 0;
 
@@ -619,6 +658,7 @@ PanoramaHolderState parsePanoramaHolderState(BinaryReader& reader) {
         reader.skip(kSceneRecordBytes);
 
         scene.dibByteCount = reader.readU32();
+        scene.dibOffset = reader.position();
         reader.skip(scene.dibByteCount);
 
         scene.subImageCount = reader.readU32();
@@ -655,6 +695,7 @@ PanoramaState parsePanoramaState(BinaryReader& reader) {
         scene.regionCount = readU32At(record, 0x21c);
 
         // Base image: width*height bytes, size derived from the record fields.
+        scene.pixelOffset = reader.position();
         reader.skip(static_cast<std::uint64_t>(scene.width) * scene.height);
 
         for (std::uint32_t s = 0; s < scene.subImageCount; ++s) {

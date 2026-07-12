@@ -330,11 +330,13 @@ void testMultiBitmapState() {
     std::vector<std::uint8_t> bytes;
     appendU32(bytes, 1);                 // version
     appendU32(bytes, 1);                 // recordCount
-    appendU32(bytes, 6);                 // pixelByteCount (== 3x2 -> raw indexed)
-    for (std::uint8_t i = 0; i < 6; ++i) appendU8(bytes, i);
+    appendU32(bytes, 8);                 // pixelByteCount (stride 4 * height 2)
+    for (std::uint8_t i = 0; i < 8; ++i) appendU8(bytes, i);
     std::vector<std::uint8_t> metadata(0xc0, 0);
-    metadata[0x10] = 3;                  // width
-    metadata[0x14] = 2;                  // height
+    metadata[0x08] = 10;                 // left
+    metadata[0x0c] = 20;                 // top
+    metadata[0x10] = 13;                 // right -> width 3
+    metadata[0x14] = 22;                 // bottom -> height 2
     const std::string name = "przycisk";
     for (std::size_t i = 0; i < name.size(); ++i) metadata[0x28 + i] = static_cast<std::uint8_t>(name[i]);
     bytes.insert(bytes.end(), metadata.begin(), metadata.end());
@@ -345,6 +347,8 @@ void testMultiBitmapState() {
     assert(state.records.size() == 1);
     assert(state.records[0].width == 3);
     assert(state.records[0].height == 2);
+    assert(state.records[0].left == 10);
+    assert(state.records[0].top == 20);
     assert(state.records[0].name == "przycisk");
     assert(state.records[0].pixelsAreRawIndexed);
     assert(state.records[0].pixelOffset == 12);

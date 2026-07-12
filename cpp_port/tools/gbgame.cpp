@@ -607,6 +607,47 @@ void onPaint() {
         SetStretchBltMode(dc, HALFTONE);
         StretchDIBits(dc, 0, 0, rc.right, rc.bottom, 0, 0, g.frame.width, g.frame.height,
                       g.blit.data(), &bmi, DIB_RGB_COLORS, SRCCOPY);
+
+        // TextHolder uses the platform font here while the indexed scene stays
+        // in the portable renderer. This restores poem/synchronised-text pages
+        // such as TRALALA, which intentionally hide all picture layers on open.
+        const Page* page = g.project ? g.project->currentPage() : nullptr;
+        if (page) {
+            SetBkMode(dc, TRANSPARENT);
+            SetTextColor(dc, RGB(24, 24, 24));
+            HFONT font = CreateFontW(-18, 0, 0, 0, FW_NORMAL, FALSE, FALSE, FALSE,
+                                     EASTEUROPE_CHARSET, OUT_DEFAULT_PRECIS,
+                                     CLIP_DEFAULT_PRECIS, CLEARTYPE_QUALITY,
+                                     DEFAULT_PITCH | FF_DONTCARE, L"Segoe UI");
+            HGDIOBJ oldFont = SelectObject(dc, font);
+            for (const auto& component : page->components()) {
+                if (component.kind != graphboard::HolderKind::TextHolder) continue;
+                for (const auto& [id, item] : component.items) {
+                    const auto visible = item.find("visible");
+                    if (visible == item.end() || visible->second.toInt() == 0 || id < 0 ||
+                        static_cast<std::size_t>(id) >= component.texts.size()) continue;
+                    const auto& text = component.texts[static_cast<std::size_t>(id)];
+                    std::string cleaned;
+                    cleaned.reserve(text.text.size());
+                    bool lineStart = true;
+                    for (char ch : text.text) {
+                        if (lineStart && ch == '/') continue;
+                        cleaned.push_back(ch);
+                        lineStart = ch == '\n' || ch == '\r';
+                    }
+                    std::wstring wide = utf8ToWide(graphboard::cp1250ToUtf8(cleaned));
+                    RECT tr{
+                        MulDiv(text.left, rc.right, g.frame.width),
+                        MulDiv(text.top, rc.bottom, g.frame.height),
+                        MulDiv(text.right, rc.right, g.frame.width),
+                        MulDiv(text.bottom, rc.bottom, g.frame.height)};
+                    DrawTextW(dc, wide.c_str(), static_cast<int>(wide.size()), &tr,
+                              DT_LEFT | DT_TOP | DT_WORDBREAK | DT_NOPREFIX);
+                }
+            }
+            SelectObject(dc, oldFont);
+            DeleteObject(font);
+        }
     } else {
         RECT rc;
         GetClientRect(gWnd, &rc);

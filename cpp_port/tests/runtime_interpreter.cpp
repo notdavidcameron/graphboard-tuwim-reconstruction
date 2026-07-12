@@ -191,7 +191,7 @@ void OnOpenPage()
    while(i<3)
    {
       Group.Sprite_Holder.ChangePhase(i,0);   // double-dotted member call
-      puzz[i]=i;                               // array assign (unmodeled, no-op)
+      puzz[i]=i;                               // array assign
       i++;                                     // postfix
    }
    int j=5;
@@ -200,6 +200,7 @@ void OnOpenPage()
    int k=i++ + 1;                              // postfix in expression: i=3 -> 4, k=4
    Debug(k);
    Debug(i);                                   // 4
+   Debug(puzz[2]);                             // indexed read -> 2
 }
 )S";
 
@@ -208,10 +209,10 @@ void OnOpenPage()
     interp.runHandler("OnOpenPage", {});
 
     // Three loop iterations (double-dotted component path preserved), then
-    // Debug(4), Debug(4), Debug(4).
+    // Debug(4), Debug(4), Debug(4), and the stored array element.
     assert(host.trace() ==
            "Group.Sprite_Holder.ChangePhase(0,0) Group.Sprite_Holder.ChangePhase(1,0) "
-           "Group.Sprite_Holder.ChangePhase(2,0) Debug(4) Debug(4) Debug(4) ");
+           "Group.Sprite_Holder.ChangePhase(2,0) Debug(4) Debug(4) Debug(4) Debug(2) ");
 }
 
 // Recovered engine rule (the scripts' own comment): every variable declared in
@@ -285,6 +286,25 @@ void Query()
            "Transparent_Video_Holder.GetDeep(2,0) Debug(12) Debug(34) Debug(56) Debug(78) ");
 }
 
+void testCStringNavigationHelpers() {
+    const char* script = R"S(
+void OnOpenPage()
+{
+   int click=2;
+   CString str;
+   str.Format("mich%d.bdf",click+1);
+   LoadPage(str);
+   CString parent;
+   parent.SetString("rycerz.bdf");
+   Debug(parent);
+}
+)S";
+    RecordingHost host;
+    Interpreter interp(script, host);
+    interp.runHandler("OnOpenPage", {});
+    assert(host.trace() == "LoadPage(mich3.bdf) Debug(rycerz.bdf) ");
+}
+
 } // namespace
 
 int main() {
@@ -295,5 +315,6 @@ int main() {
     testIncrementLoops();
     testOnOpenPageGlobals();
     testComponentOutParameters();
+    testCStringNavigationHelpers();
     return 0;
 }

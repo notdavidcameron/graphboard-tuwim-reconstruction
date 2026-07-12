@@ -177,18 +177,20 @@ SpriteHolderState parseSpriteHolderState(BinaryReader& reader);
 //   repeat recordCount:
 //       u32 pixelByteCount
 //       u8  pixels[pixelByteCount]
-//       u8  metadata[0xc0]          (width u32 +0x10, height u32 +0x14,
+//       u8  metadata[0xc0]          (rect i32 +0x08..+0x14, layer +0x18,
 //                                    name char[12] +0x28; +0x34/+0x38 are stale
 //                                    runtime pointers)
 //
-// When pixelByteCount == width*height the pixels are raw 8-bit indexed and can
-// be rendered with the page palette; otherwise the bytes are component-private.
+// The pixels are raw 8-bit indexed for the live rect, not for right*bottom.
 // -------------------------------------------------------------------------
 struct MultiBitmapRecord {
     std::uint32_t pixelByteCount = 0;
     std::size_t pixelOffset = 0;   // file offset of the pixel bytes
-    std::uint32_t width = 0;       // metadata+0x10
-    std::uint32_t height = 0;      // metadata+0x14
+    std::int32_t left = 0, top = 0, right = 0, bottom = 0;
+    std::int32_t layer = 0;
+    std::int32_t shown = 0;
+    std::uint32_t width = 0;       // right-left
+    std::uint32_t height = 0;      // bottom-top
     std::string name;              // metadata+0x28, cp1250-ish, NUL padded
     bool pixelsAreRawIndexed = false;  // pixelByteCount == width*height
 };
@@ -223,6 +225,7 @@ struct BoardVideoStreamInfo {
     std::uint32_t streamByteCount = 0;
     std::size_t streamOffset = 0;   // file offset of "Board Video File Ver:0"
     std::uint32_t magic = 0;        // header+0x68, expected 0xada77777
+    std::uint32_t transparentIndex = 0; // header+0x74
     std::uint32_t frameDurationMs = 0;  // header+0x7c
     std::int32_t width = 0;         // header+0x80
     std::int32_t height = 0;        // header+0x84
@@ -245,6 +248,7 @@ struct TransparentVideoEntry {
     // still frame at rest (its resting pose), 0 => it stays blank until played.
     // WYBORW's 25 menu characters carry 1; its two menu-overlay entries carry 0.
     bool showStillAtRest = false;
+    std::uint8_t transparentIndex = 0; // dominant saved-frame matte colour
 };
 
 struct TransparentVideoHolderState {
@@ -317,6 +321,8 @@ SoundHolderState parseSoundHolderState(BinaryReader& reader);
 //       u32 present; if present: u8 slot[0xc84] + per-glyph bitmaps
 // -------------------------------------------------------------------------
 struct TextEntry {
+    std::int32_t left = 0, top = 0, right = 0, bottom = 0;
+    std::int32_t layer = 0;
     bool hasRenderCache = false;      // entry+0x70 != 0
     bool hasSecondaryText = false;    // entry+0x90 != 0
     std::uint32_t streamByteCount = 0;   // embedded render stream (branch A only)
@@ -483,6 +489,7 @@ VideoHolderState parseVideoHolderState(BinaryReader& reader);
 // -------------------------------------------------------------------------
 struct PanoramaHolderScene {
     std::size_t recordOffset = 0;
+    std::size_t dibOffset = 0;
     std::uint32_t dibByteCount = 0;
     std::uint32_t subImageCount = 0;
     std::uint32_t regionCount = 0;
@@ -517,6 +524,7 @@ PanoramaHolderState parsePanoramaHolderState(BinaryReader& reader);
 // -------------------------------------------------------------------------
 struct PanoramaScene {
     std::size_t recordOffset = 0;
+    std::size_t pixelOffset = 0;
     std::uint32_t width = 0;
     std::uint32_t height = 0;
     std::uint32_t subImageCount = 0;

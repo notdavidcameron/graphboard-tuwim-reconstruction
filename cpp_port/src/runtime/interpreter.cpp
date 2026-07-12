@@ -270,8 +270,27 @@ Interpreter::Flow Interpreter::execStatement() {
         return execDeclaration();
     }
 
-    // Assignment: identifier (not dotted, not indexed) followed by an assign op.
+    // Indexed scalar-array assignment. GraphBoard arrays are used pervasively
+    // as integer tables (KOTEK's tile phases, ABECADLO's letter positions,
+    // DYZIO/CUDA motion state). Store each element as a scoped synthetic name.
     if (tok().kind == TokenKind::Identifier && pos_ + 1 < tokens_.size() &&
+        atPunctAt(pos_ + 1, "[")) {
+        const std::string arrayName = tok().text;
+        pos_ += 2; // identifier '['
+        const auto index = parseExpression().toInt();
+        if (atPunct("]")) ++pos_;
+        const std::string element = arrayName + "[" + std::to_string(index) + "]";
+        if (isAssignOp(tok())) {
+            const std::string op = tok().text;
+            ++pos_;
+            const Value rhs = parseExpression();
+            const Value current = lookup(element);
+            assign(element, op == "=" ? rhs
+                                       : (op == "+=" ? addValues(current, rhs)
+                                                      : arithmetic(op[0], current, rhs)));
+        }
+    // Assignment: identifier (not dotted) followed by an assign op.
+    } else if (tok().kind == TokenKind::Identifier && pos_ + 1 < tokens_.size() &&
         isAssignOp(tokens_[pos_ + 1])) {
         const std::string name = tok().text;
         const std::string op = tokens_[pos_ + 1].text;
@@ -781,6 +800,23 @@ Value Interpreter::parsePrimary() {
             if (atPunct("(")) {
                 std::vector<OutReference> outRefs;
                 const auto args = parseArguments(&outRefs);
+                if (component == name && member == "SetString") {
+                    const Value value = args.empty() ? Value::string("")
+                                                     : Value::string(args[0].toString());
+                    assign(name, value);
+                    return value;
+                }
+                if (component == name && member == "Format") {
+                    std::string formatted = args.empty() ? std::string() : args[0].toString();
+                    for (std::size_t i = 1; i < args.size(); ++i) {
+                        const auto marker = formatted.find("%d");
+                        if (marker == std::string::npos) break;
+                        formatted.replace(marker, 2, args[i].toString());
+                    }
+                    Value value = Value::string(std::move(formatted));
+                    assign(name, value);
+                    return value;
+                }
                 auto result = host_.callComponent(component, member, args);
                 for (const auto& [argument, variable] : outRefs) {
                     const auto value = result.outArguments.find(argument);
@@ -809,14 +845,17 @@ Value Interpreter::parsePrimary() {
             base = lookup(name);
         }
 
-        // Array indexing is unsupported; consume it so parsing stays in sync.
+        // Scalar array indexing. Multidimensional arrays are represented by a
+        // stable synthetic key for each successive subscript.
+        std::string indexedName = name;
         while (atPunct("[")) {
             ++pos_;
-            parseExpression();
+            const auto index = parseExpression().toInt();
             if (atPunct("]")) {
                 ++pos_;
             }
-            base = Value();
+            indexedName += "[" + std::to_string(index) + "]";
+            base = lookup(indexedName);
         }
         return base;
     }

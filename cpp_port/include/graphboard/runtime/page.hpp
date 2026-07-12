@@ -49,6 +49,8 @@ struct VideoGeometry {
     std::int32_t height = 0;
     std::int32_t frameDurationMs = 0;
     std::int32_t frameCount = 0;
+    std::uint8_t transparentIndex = 0;
+    std::uint8_t streamTransparentIndex = 0;
     std::size_t streamOffset = 0;       // "Board Video File" header start
     std::uint32_t streamByteCount = 0;  // header + chunk records
     std::size_t paletteOffset = 0;      // streamOffset + 0xe8: 256 RGBQUADs
@@ -63,6 +65,25 @@ struct SoundClip {
     std::uint32_t byteCount = 0;
 };
 
+struct IndexedGeometry {
+    std::int32_t width = 0;
+    std::int32_t height = 0;
+    std::size_t stride = 0;
+    std::size_t pixelOffset = 0;
+    std::size_t pixelByteCount = 0;
+    bool bottomUp = true;
+};
+
+struct DibGeometry {
+    std::size_t offset = 0;
+    std::size_t byteCount = 0;
+};
+
+struct TextGeometry {
+    std::int32_t left = 0, top = 0, right = 0, bottom = 0;
+    std::string text;
+};
+
 struct ComponentState {
     std::string displayName;               // e.g. "Sprite_Holder"
     HolderKind kind = HolderKind::Unknown;
@@ -72,6 +93,9 @@ struct ComponentState {
     std::vector<SpriteGeometry> sprites;   // Sprite_Holder geometry, by spriteID
     std::vector<BitmapGeometry> bitmaps;   // Bitmap_Holder geometry, by bitmapID
     std::vector<VideoGeometry> videos;     // Transparent_Video_Holder entries
+    std::vector<IndexedGeometry> indexedImages; // MultiBitmap/Panorama images
+    std::vector<DibGeometry> dibImages;    // Panorama_Holder packed DIBs
+    std::vector<TextGeometry> texts;       // Text_Holder layout/content
     std::vector<SoundClip> soundClips;     // Sound_Holder embedded WAVs
     // Playback length per clip id, in ms: video = frameDurationMs*frameCount,
     // sound = WAV data length. Used by the clock to schedule TheEnd/EndPlaySound.
@@ -204,7 +228,7 @@ private:
     };
     // Schedule/cancel a clip's completion when Play/Stop is dispatched.
     void scheduleCompletion(const ComponentState& state, const std::string& event, int id);
-    void cancelCompletions(const std::string& component);
+    void cancelCompletions(const std::string& component, int id = -1);
 
     // Advance gliding sprites (GotoXY) toward their targets, firing InPlace.
     void stepGlides(int elapsed);
@@ -241,9 +265,9 @@ private:
     bool exited_ = false;
     std::uint32_t randomState_ = 0x12345678u;
 
-    // Each component holder receives mouse movement independently in the
-    // original board. Track one hovered item per holder so a group hotspot can
-    // slide the toolbar while a sprite drawn above it also receives hover.
+    // Retain the active hover target while allowing group state to be removed
+    // safely. Mouse routing uses the merged page/group layer order, so covered
+    // hotspots cannot receive hover through a higher sprite.
     std::map<std::string, Hit> hoverByComponent_;
 
     // Simulated playback clock and the completions waiting on it.
