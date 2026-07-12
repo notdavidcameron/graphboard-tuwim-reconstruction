@@ -76,9 +76,10 @@ Image renderBackground(const std::vector<std::uint8_t>& bytes, const BdfHeader& 
     if (header.paletteByteCount >= 1024) {
         const std::size_t c = header.paletteOffset +
                               static_cast<std::size_t>(header.backgroundColorIndex) * 4;
-        b = c + 0 < bytes.size() ? bytes[c + 0] : 0;
+        // The page palette is RGB-ordered (unlike a DIB's BGR RGBQUADs).
+        r = c + 0 < bytes.size() ? bytes[c + 0] : 0;
         g = c + 1 < bytes.size() ? bytes[c + 1] : 0;
-        r = c + 2 < bytes.size() ? bytes[c + 2] : 0;
+        b = c + 2 < bytes.size() ? bytes[c + 2] : 0;
     }
     return Image(width, height, r, g, b);
 }
@@ -129,9 +130,25 @@ Image renderPage(const runtime::Page& page, const std::vector<std::uint8_t>& byt
                  const BdfHeader& header, VideoFrameSource* videoFrames) {
     Image img = renderBackground(bytes, header);
 
-    const std::uint8_t* pagePalette =
-        header.paletteByteCount >= 1024 && header.paletteOffset + 1024 <= bytes.size()
-            ? bytes.data() + header.paletteOffset : nullptr;
+    // The page-level palette (header.paletteOffset) is stored in RGB order,
+    // unlike a DIB's BGR RGBQUADs. Sprites, bitmaps and group components index
+    // it, and the blit below reads BGR, so normalise a working copy to BGR
+    // (swap R<->B). Without this every page-palette sprite renders with red and
+    // blue swapped (a red strawberry turns blue); the DIB background is already
+    // correct because it carries its own BGR palette.
+    std::vector<std::uint8_t> pagePaletteBgr;
+    const std::uint8_t* pagePalette = nullptr;
+    if (header.paletteByteCount >= 1024 && header.paletteOffset + 1024 <= bytes.size()) {
+        pagePaletteBgr.resize(1024);
+        const std::uint8_t* src = bytes.data() + header.paletteOffset;
+        for (std::size_t i = 0; i < 256; ++i) {
+            pagePaletteBgr[i * 4 + 0] = src[i * 4 + 2];  // B <- R
+            pagePaletteBgr[i * 4 + 1] = src[i * 4 + 1];  // G
+            pagePaletteBgr[i * 4 + 2] = src[i * 4 + 0];  // R <- B
+            pagePaletteBgr[i * 4 + 3] = src[i * 4 + 3];
+        }
+        pagePalette = pagePaletteBgr.data();
+    }
 
     std::vector<Drawable> draws;
     std::size_t order = 0;
