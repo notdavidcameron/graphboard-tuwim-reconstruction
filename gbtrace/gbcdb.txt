@@ -1,0 +1,9 @@
+$$ cdb breakpoint script for the real Tuwim.exe (base 0x400000, no ASLR).
+$$ Each bp logs and auto-continues (gc). Addresses are Ghidra absolutes.
+
+bp 00408690 ".printf \"[OpenGroupFromPath] this=%p path=\\\"%ma\\\"\\n\", @ecx, poi(@esp+4); gc"
+bp 00412950 ".printf \"[BuiltinOpenGroup]  this=%p a0=%p a1=%p\\n\", @ecx, poi(@esp+4), poi(@esp+8); gc"
+bp 0040a050 ".printf \"[CloseCurrentGroup] this=%p\\n\", @ecx; gc"
+bp 004064c0 ".printf \"[SerializeCursorGroup] this=%p a0=%p a1=%p\\n\", @ecx, poi(@esp+4), poi(@esp+8); gc"
+
+g
