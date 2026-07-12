@@ -518,19 +518,30 @@ void Page::advanceTime(int ms) {
 }
 
 void Page::stepGlides(int elapsed) {
-    // Walk each gliding sprite toward its GotoXY target. The holder's real
-    // per-instance velocity is not recovered; kGlideSpeed is a constant chosen
-    // so DYZIO's ingredients cross the scene at a natural pace. Arrivals fire
+    // Walk each gliding sprite toward its GotoXY target. Arrivals fire
     // InPlace(id, x, y), which may re-target the sprite (flight loops), so
     // collect the callbacks and run them after stepping to avoid mutating the
     // map mid-iteration.
-    constexpr double kGlideSpeed = 320.0;  // pixels per second
-    const double dist = kGlideSpeed * elapsed / 1000.0;
+    //
+    // GotoXY glide speed is not uniform across holders, measured from the real
+    // Tuwim.exe by timed screenshot bursts of DYZIO:
+    //   - Page Sprite_Holder (the drifting sky food): a constant ~21 px/s
+    //     (cherries 20.4, a cloud 21.9), so the ingredients cross the scene
+    //     over tens of seconds -- the languid daydream drift.
+    //   - Group Sprite_Holder (the cursors.grp toolbar): near-instant. The
+    //     toolbar goes from fully hidden to fully deployed (~160 px) inside one
+    //     ~156 ms capture frame, i.e. >=1000 px/s -- it snaps rather than
+    //     drifts.
+    // The exact per-instance velocity field in the sprite record is not yet
+    // recovered; these two rates reproduce the observed page-vs-toolbar feel.
+    constexpr double kPageGlideSpeed = 21.0;     // px/s
+    constexpr double kGroupGlideSpeed = 1200.0;  // px/s (toolbar snap)
 
     struct Arrival { std::string component; int id; int x; int y; };
     std::vector<Arrival> arrivals;
 
-    auto stepContainer = [&](std::vector<ComponentState>& components) {
+    auto stepContainer = [&](std::vector<ComponentState>& components, double speed) {
+        const double dist = speed * elapsed / 1000.0;
         for (auto& c : components) {
             if (c.kind != HolderKind::SpriteHolder) continue;
             if (c.props.count("timersEnabled") && c.props["timersEnabled"].toInt() == 0) continue;
@@ -555,8 +566,8 @@ void Page::stepGlides(int elapsed) {
             }
         }
     };
-    stepContainer(components_);
-    stepContainer(groupComponents_);
+    stepContainer(components_, kPageGlideSpeed);
+    stepContainer(groupComponents_, kGroupGlideSpeed);
 
     for (const auto& a : arrivals) {
         runEvent(a.component + ".InPlace",
