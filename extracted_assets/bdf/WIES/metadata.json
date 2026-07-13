@@ -207,9 +207,8 @@
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_000_wie_ 01_phase_00.png",
-          "offset": 6400309,
-          "size": 4299,
-          "pixel_size": 9856,
+          "offset": 6399769,
+          "size": 4308,
           "width": 77,
           "height": 64,
           "name": "wieś 01",
@@ -220,21 +219,24 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_000_wie_ 01_phase_00.png",
-              "size": 4299
+              "size": 4308,
+              "width": 77,
+              "height": 64
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_000_wie_ 01_phase_01.png",
-              "size": 4162
+              "size": 4404,
+              "width": 77,
+              "height": 64
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_001_wie_ 01_phase_00.png",
-          "offset": 6410509,
-          "size": 4895,
-          "pixel_size": 13104,
+          "offset": 6410353,
+          "size": 4773,
           "width": 84,
           "height": 78,
           "name": "wieś 01",
@@ -245,21 +247,24 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_001_wie_ 01_phase_00.png",
-              "size": 4895
+              "size": 4773,
+              "width": 84,
+              "height": 78
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_001_wie_ 01_phase_01.png",
-              "size": 4786
+              "size": 4922,
+              "width": 84,
+              "height": 78
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_002_wie_ 01_phase_00.png",
-          "offset": 6424065,
-          "size": 3572,
-          "pixel_size": 7668,
+          "offset": 6423801,
+          "size": 3458,
           "width": 71,
           "height": 54,
           "name": "wieś 01",
@@ -270,21 +275,24 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_002_wie_ 01_phase_00.png",
-              "size": 3572
+              "size": 3458,
+              "width": 71,
+              "height": 54
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_002_wie_ 01_phase_01.png",
-              "size": 3498
+              "size": 3615,
+              "width": 71,
+              "height": 54
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_003_wie_ 01_phase_00.png",
-          "offset": 6432461,
+          "offset": 6431921,
           "size": 4231,
-          "pixel_size": 9856,
           "width": 77,
           "height": 64,
           "name": "wieś 01",
@@ -295,12 +303,16 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_003_wie_ 01_phase_00.png",
-              "size": 4231
+              "size": 4231,
+              "width": 77,
+              "height": 64
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_003_wie_ 01_phase_01.png",
-              "size": 4047
+              "size": 4286,
+              "width": 77,
+              "height": 64
             }
           ]
         }
@@ -321,17 +333,20 @@
             "width": 77,
             "height": 64,
             "phase_count": 2,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_000_wie_ 01_phase_00.png",
-                "size": 4299
+                "size": 4308,
+                "width": 77,
+                "height": 64
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_000_wie_ 01_phase_01.png",
-                "size": 4162
+                "size": 4404,
+                "width": 77,
+                "height": 64
               }
             ]
           },
@@ -344,17 +359,20 @@
             "width": 84,
             "height": 78,
             "phase_count": 2,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_001_wie_ 01_phase_00.png",
-                "size": 4895
+                "size": 4773,
+                "width": 84,
+                "height": 78
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_001_wie_ 01_phase_01.png",
-                "size": 4786
+                "size": 4922,
+                "width": 84,
+                "height": 78
               }
             ]
           },
@@ -367,17 +385,20 @@
             "width": 71,
             "height": 54,
             "phase_count": 2,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_002_wie_ 01_phase_00.png",
-                "size": 3572
+                "size": 3458,
+                "width": 71,
+                "height": 54
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_002_wie_ 01_phase_01.png",
-                "size": 3498
+                "size": 3615,
+                "width": 71,
+                "height": 54
               }
             ]
           },
@@ -390,17 +411,20 @@
             "width": 77,
             "height": 64,
             "phase_count": 2,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_003_wie_ 01_phase_00.png",
-                "size": 4231
+                "size": 4231,
+                "width": 77,
+                "height": 64
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_003_wie_ 01_phase_01.png",
-                "size": 4047
+                "size": 4286,
+                "width": 77,
+                "height": 64
               }
             ]
           }
@@ -569,9 +593,8 @@
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_000_wie_ 01_phase_00.png",
-      "offset": 6400309,
-      "size": 4299,
-      "pixel_size": 9856,
+      "offset": 6399769,
+      "size": 4308,
       "width": 77,
       "height": 64,
       "name": "wieś 01",
@@ -582,21 +605,24 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_000_wie_ 01_phase_00.png",
-          "size": 4299
+          "size": 4308,
+          "width": 77,
+          "height": 64
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_000_wie_ 01_phase_01.png",
-          "size": 4162
+          "size": 4404,
+          "width": 77,
+          "height": 64
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_001_wie_ 01_phase_00.png",
-      "offset": 6410509,
-      "size": 4895,
-      "pixel_size": 13104,
+      "offset": 6410353,
+      "size": 4773,
       "width": 84,
       "height": 78,
       "name": "wieś 01",
@@ -607,21 +633,24 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_001_wie_ 01_phase_00.png",
-          "size": 4895
+          "size": 4773,
+          "width": 84,
+          "height": 78
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_001_wie_ 01_phase_01.png",
-          "size": 4786
+          "size": 4922,
+          "width": 84,
+          "height": 78
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_002_wie_ 01_phase_00.png",
-      "offset": 6424065,
-      "size": 3572,
-      "pixel_size": 7668,
+      "offset": 6423801,
+      "size": 3458,
       "width": 71,
       "height": 54,
       "name": "wieś 01",
@@ -632,21 +661,24 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_002_wie_ 01_phase_00.png",
-          "size": 3572
+          "size": 3458,
+          "width": 71,
+          "height": 54
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_002_wie_ 01_phase_01.png",
-          "size": 3498
+          "size": 3615,
+          "width": 71,
+          "height": 54
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_003_wie_ 01_phase_00.png",
-      "offset": 6432461,
+      "offset": 6431921,
       "size": 4231,
-      "pixel_size": 9856,
       "width": 77,
       "height": 64,
       "name": "wieś 01",
@@ -657,12 +689,16 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_003_wie_ 01_phase_00.png",
-          "size": 4231
+          "size": 4231,
+          "width": 77,
+          "height": 64
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\WIES\\sprite_holder\\03_Sprite_Holder_003_wie_ 01_phase_01.png",
-          "size": 4047
+          "size": 4286,
+          "width": 77,
+          "height": 64
         }
       ]
     }

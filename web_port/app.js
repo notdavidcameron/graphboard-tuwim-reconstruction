@@ -424,7 +424,10 @@ function render() {
   renderScript(scene);
   renderWarnings(scene);
   runtime.reset(scene);
-  window.requestAnimationFrame(() => runtime.executeHandler("OnOpenPage"));
+  // setTimeout, not requestAnimationFrame: rAF is paused while the tab is
+  // backgrounded, which would leave OnOpenPage (and the sprite drift it starts)
+  // from ever running until the tab is focused.
+  setTimeout(() => runtime.executeHandler("OnOpenPage"), 0);
 }
 
 async function boot() {

@@ -100,6 +100,7 @@ json wrapperToJson(const ComponentWrapper& wrapper) {
     for (const auto& fn : wrapper.functions) {
         functions.push_back({
             {"name", t(fn.displayName)},
+            {"rawName", t(fn.rawName)},
             {"returnType", t(fn.typeOrReturnName)},
             {"signature", t(fn.descriptionOrHelpName)},
             {"dispatchId", fn.dispatchIdOrOffset},
@@ -110,6 +111,7 @@ json wrapperToJson(const ComponentWrapper& wrapper) {
     for (const auto& pr : wrapper.properties) {
         properties.push_back({
             {"name", t(pr.displayName)},
+            {"rawName", t(pr.rawName)},
             {"variantType", pr.variantTypeOrDispatchMetadata},
             {"flags", pr.flagsOrInvokeKind},
         });

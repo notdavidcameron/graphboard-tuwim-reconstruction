@@ -930,9 +930,8 @@
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_000_owoc 1_phase_00.png",
-          "offset": 2265273,
-          "size": 1291,
-          "pixel_size": 1050,
+          "offset": 2265123,
+          "size": 1300,
           "width": 30,
           "height": 35,
           "name": "owoc 1",
@@ -943,16 +942,17 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_000_owoc 1_phase_00.png",
-              "size": 1291
+              "size": 1300,
+              "width": 30,
+              "height": 35
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_00.png",
-          "offset": 2266979,
-          "size": 1341,
-          "pixel_size": 5600,
+          "offset": 2266511,
+          "size": 1313,
           "width": 35,
           "height": 40,
           "name": "owoc 2",
@@ -963,131 +963,80 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_00.png",
-              "size": 1341
+              "size": 1313,
+              "width": 35,
+              "height": 40
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_01.png",
-              "size": 1341
+              "size": 1313,
+              "width": 35,
+              "height": 40
             },
             {
               "phase": 2,
               "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_02.png",
-              "size": 1356
+              "size": 1313,
+              "width": 35,
+              "height": 40
             },
             {
               "phase": 3,
               "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_03.png",
-              "size": 1353
+              "size": 1313,
+              "width": 35,
+              "height": 40
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_00.png",
-          "offset": 2272899,
-          "size": 1588,
-          "pixel_size": 38844,
+          "offset": 2272767,
+          "size": 3094,
           "width": 83,
           "height": 52,
           "name": "nie",
           "id": 2,
           "definition_id": 2,
-          "phase_count": 9,
+          "phase_count": 1,
           "phase_outputs": [
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_00.png",
-              "size": 1588
-            },
-            {
-              "phase": 1,
-              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_01.png",
-              "size": 1785
-            },
-            {
-              "phase": 2,
-              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_02.png",
-              "size": 2091
-            },
-            {
-              "phase": 3,
-              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_03.png",
-              "size": 2160
-            },
-            {
-              "phase": 4,
-              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_04.png",
-              "size": 2124
-            },
-            {
-              "phase": 5,
-              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_05.png",
-              "size": 2157
-            },
-            {
-              "phase": 6,
-              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_06.png",
-              "size": 2209
-            },
-            {
-              "phase": 7,
-              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_07.png",
-              "size": 1698
-            },
-            {
-              "phase": 8,
-              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_08.png",
-              "size": 1282
+              "size": 3094,
+              "width": 83,
+              "height": 52
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_00.png",
-          "offset": 2312070,
-          "size": 1599,
-          "pixel_size": 24485,
+          "offset": 2311931,
+          "size": 2852,
           "width": 83,
           "height": 59,
           "name": "tak",
           "id": 3,
           "definition_id": 3,
-          "phase_count": 5,
+          "phase_count": 1,
           "phase_outputs": [
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_00.png",
-              "size": 1599
-            },
-            {
-              "phase": 1,
-              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_01.png",
-              "size": 1971
-            },
-            {
-              "phase": 2,
-              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_02.png",
-              "size": 2468
-            },
-            {
-              "phase": 3,
-              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_03.png",
-              "size": 2492
-            },
-            {
-              "phase": 4,
-              "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_04.png",
-              "size": 1587
+              "size": 2852,
+              "width": 83,
+              "height": 59
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_00.png",
-          "offset": 2337051,
-          "size": 1484,
-          "pixel_size": 4896,
+          "offset": 2336743,
+          "size": 1565,
           "width": 24,
           "height": 51,
           "name": "usta 01",
@@ -1098,22 +1047,30 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_00.png",
-              "size": 1484
+              "size": 1565,
+              "width": 24,
+              "height": 51
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_01.png",
-              "size": 1484
+              "size": 1563,
+              "width": 24,
+              "height": 51
             },
             {
               "phase": 2,
               "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_02.png",
-              "size": 1487
+              "size": 1568,
+              "width": 24,
+              "height": 51
             },
             {
               "phase": 3,
               "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_03.png",
-              "size": 1388
+              "size": 1559,
+              "width": 24,
+              "height": 51
             }
           ]
         }
@@ -1134,12 +1091,13 @@
             "width": 30,
             "height": 35,
             "phase_count": 1,
-            "phase_hint": 505290270,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_000_owoc 1_phase_00.png",
-                "size": 1291
+                "size": 1300,
+                "width": 30,
+                "height": 35
               }
             ]
           },
@@ -1152,27 +1110,34 @@
             "width": 35,
             "height": 40,
             "phase_count": 4,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_00.png",
-                "size": 1341
+                "size": 1313,
+                "width": 35,
+                "height": 40
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_01.png",
-                "size": 1341
+                "size": 1313,
+                "width": 35,
+                "height": 40
               },
               {
                 "phase": 2,
                 "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_02.png",
-                "size": 1356
+                "size": 1313,
+                "width": 35,
+                "height": 40
               },
               {
                 "phase": 3,
                 "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_03.png",
-                "size": 1353
+                "size": 1313,
+                "width": 35,
+                "height": 40
               }
             ]
           },
@@ -1184,53 +1149,14 @@
             "blob_size": 39160,
             "width": 83,
             "height": 52,
-            "phase_count": 9,
-            "phase_hint": 505290270,
+            "phase_count": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_00.png",
-                "size": 1588
-              },
-              {
-                "phase": 1,
-                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_01.png",
-                "size": 1785
-              },
-              {
-                "phase": 2,
-                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_02.png",
-                "size": 2091
-              },
-              {
-                "phase": 3,
-                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_03.png",
-                "size": 2160
-              },
-              {
-                "phase": 4,
-                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_04.png",
-                "size": 2124
-              },
-              {
-                "phase": 5,
-                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_05.png",
-                "size": 2157
-              },
-              {
-                "phase": 6,
-                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_06.png",
-                "size": 2209
-              },
-              {
-                "phase": 7,
-                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_07.png",
-                "size": 1698
-              },
-              {
-                "phase": 8,
-                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_08.png",
-                "size": 1282
+                "size": 3094,
+                "width": 83,
+                "height": 52
               }
             ]
           },
@@ -1242,33 +1168,14 @@
             "blob_size": 24808,
             "width": 83,
             "height": 59,
-            "phase_count": 5,
-            "phase_hint": 505290270,
+            "phase_count": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_00.png",
-                "size": 1599
-              },
-              {
-                "phase": 1,
-                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_01.png",
-                "size": 1971
-              },
-              {
-                "phase": 2,
-                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_02.png",
-                "size": 2468
-              },
-              {
-                "phase": 3,
-                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_03.png",
-                "size": 2492
-              },
-              {
-                "phase": 4,
-                "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_04.png",
-                "size": 1587
+                "size": 2852,
+                "width": 83,
+                "height": 59
               }
             ]
           },
@@ -1281,27 +1188,34 @@
             "width": 24,
             "height": 51,
             "phase_count": 4,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_00.png",
-                "size": 1484
+                "size": 1565,
+                "width": 24,
+                "height": 51
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_01.png",
-                "size": 1484
+                "size": 1563,
+                "width": 24,
+                "height": 51
               },
               {
                 "phase": 2,
                 "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_02.png",
-                "size": 1487
+                "size": 1568,
+                "width": 24,
+                "height": 51
               },
               {
                 "phase": 3,
                 "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_03.png",
-                "size": 1388
+                "size": 1559,
+                "width": 24,
+                "height": 51
               }
             ]
           }
@@ -1949,9 +1863,8 @@
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_000_owoc 1_phase_00.png",
-      "offset": 2265273,
-      "size": 1291,
-      "pixel_size": 1050,
+      "offset": 2265123,
+      "size": 1300,
       "width": 30,
       "height": 35,
       "name": "owoc 1",
@@ -1962,16 +1875,17 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_000_owoc 1_phase_00.png",
-          "size": 1291
+          "size": 1300,
+          "width": 30,
+          "height": 35
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_00.png",
-      "offset": 2266979,
-      "size": 1341,
-      "pixel_size": 5600,
+      "offset": 2266511,
+      "size": 1313,
       "width": 35,
       "height": 40,
       "name": "owoc 2",
@@ -1982,131 +1896,80 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_00.png",
-          "size": 1341
+          "size": 1313,
+          "width": 35,
+          "height": 40
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_01.png",
-          "size": 1341
+          "size": 1313,
+          "width": 35,
+          "height": 40
         },
         {
           "phase": 2,
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_02.png",
-          "size": 1356
+          "size": 1313,
+          "width": 35,
+          "height": 40
         },
         {
           "phase": 3,
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_001_owoc 2_phase_03.png",
-          "size": 1353
+          "size": 1313,
+          "width": 35,
+          "height": 40
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_00.png",
-      "offset": 2272899,
-      "size": 1588,
-      "pixel_size": 38844,
+      "offset": 2272767,
+      "size": 3094,
       "width": 83,
       "height": 52,
       "name": "nie",
       "id": 2,
       "definition_id": 2,
-      "phase_count": 9,
+      "phase_count": 1,
       "phase_outputs": [
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_00.png",
-          "size": 1588
-        },
-        {
-          "phase": 1,
-          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_01.png",
-          "size": 1785
-        },
-        {
-          "phase": 2,
-          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_02.png",
-          "size": 2091
-        },
-        {
-          "phase": 3,
-          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_03.png",
-          "size": 2160
-        },
-        {
-          "phase": 4,
-          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_04.png",
-          "size": 2124
-        },
-        {
-          "phase": 5,
-          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_05.png",
-          "size": 2157
-        },
-        {
-          "phase": 6,
-          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_06.png",
-          "size": 2209
-        },
-        {
-          "phase": 7,
-          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_07.png",
-          "size": 1698
-        },
-        {
-          "phase": 8,
-          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_002_nie_phase_08.png",
-          "size": 1282
+          "size": 3094,
+          "width": 83,
+          "height": 52
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_00.png",
-      "offset": 2312070,
-      "size": 1599,
-      "pixel_size": 24485,
+      "offset": 2311931,
+      "size": 2852,
       "width": 83,
       "height": 59,
       "name": "tak",
       "id": 3,
       "definition_id": 3,
-      "phase_count": 5,
+      "phase_count": 1,
       "phase_outputs": [
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_00.png",
-          "size": 1599
-        },
-        {
-          "phase": 1,
-          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_01.png",
-          "size": 1971
-        },
-        {
-          "phase": 2,
-          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_02.png",
-          "size": 2468
-        },
-        {
-          "phase": 3,
-          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_03.png",
-          "size": 2492
-        },
-        {
-          "phase": 4,
-          "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_003_tak_phase_04.png",
-          "size": 1587
+          "size": 2852,
+          "width": 83,
+          "height": 59
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_00.png",
-      "offset": 2337051,
-      "size": 1484,
-      "pixel_size": 4896,
+      "offset": 2336743,
+      "size": 1565,
       "width": 24,
       "height": 51,
       "name": "usta 01",
@@ -2117,22 +1980,30 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_00.png",
-          "size": 1484
+          "size": 1565,
+          "width": 24,
+          "height": 51
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_01.png",
-          "size": 1484
+          "size": 1563,
+          "width": 24,
+          "height": 51
         },
         {
           "phase": 2,
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_02.png",
-          "size": 1487
+          "size": 1568,
+          "width": 24,
+          "height": 51
         },
         {
           "phase": 3,
           "path": "extracted_assets\\bdf\\MURZYNEK\\sprite_holder\\03_Sprite_Holder_004_usta 01_phase_03.png",
-          "size": 1388
+          "size": 1559,
+          "width": 24,
+          "height": 51
         }
       ]
     },

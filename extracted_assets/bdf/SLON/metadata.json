@@ -3327,9 +3327,8 @@
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_000_s_o_ 01_phase_00.png",
-          "offset": 3011639,
-          "size": 4192,
-          "pixel_size": 10318,
+          "offset": 3011081,
+          "size": 4186,
           "width": 77,
           "height": 67,
           "name": "słoń 01",
@@ -3340,21 +3339,24 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_000_s_o_ 01_phase_00.png",
-              "size": 4192
+              "size": 4186,
+              "width": 77,
+              "height": 67
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_000_s_o_ 01_phase_01.png",
-              "size": 3939
+              "size": 4147,
+              "width": 77,
+              "height": 67
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_001_s_o_ 01_phase_00.png",
-          "offset": 3022301,
-          "size": 3940,
-          "pixel_size": 10184,
+          "offset": 3022145,
+          "size": 3893,
           "width": 76,
           "height": 67,
           "name": "słoń 01",
@@ -3365,21 +3367,24 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_001_s_o_ 01_phase_00.png",
-              "size": 3940
+              "size": 3893,
+              "width": 76,
+              "height": 67
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_001_s_o_ 01_phase_01.png",
-              "size": 3803
+              "size": 3989,
+              "width": 76,
+              "height": 67
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_002_s_o_ 01_phase_00.png",
-          "offset": 3033093,
-          "size": 4151,
-          "pixel_size": 10296,
+          "offset": 3032673,
+          "size": 4114,
           "width": 78,
           "height": 66,
           "name": "słoń 01",
@@ -3390,21 +3395,24 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_002_s_o_ 01_phase_00.png",
-              "size": 4151
+              "size": 4114,
+              "width": 78,
+              "height": 66
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_002_s_o_ 01_phase_01.png",
-              "size": 3936
+              "size": 4119,
+              "width": 78,
+              "height": 66
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_003_s_o_ 01_phase_00.png",
-          "offset": 3044129,
-          "size": 4089,
-          "pixel_size": 10164,
+          "offset": 3043577,
+          "size": 4137,
           "width": 77,
           "height": 66,
           "name": "słoń 01",
@@ -3415,12 +3423,16 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_003_s_o_ 01_phase_00.png",
-              "size": 4089
+              "size": 4137,
+              "width": 77,
+              "height": 66
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_003_s_o_ 01_phase_01.png",
-              "size": 3900
+              "size": 4148,
+              "width": 77,
+              "height": 66
             }
           ]
         }
@@ -3441,17 +3453,20 @@
             "width": 77,
             "height": 67,
             "phase_count": 2,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_000_s_o_ 01_phase_00.png",
-                "size": 4192
+                "size": 4186,
+                "width": 77,
+                "height": 67
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_000_s_o_ 01_phase_01.png",
-                "size": 3939
+                "size": 4147,
+                "width": 77,
+                "height": 67
               }
             ]
           },
@@ -3464,17 +3479,20 @@
             "width": 76,
             "height": 67,
             "phase_count": 2,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_001_s_o_ 01_phase_00.png",
-                "size": 3940
+                "size": 3893,
+                "width": 76,
+                "height": 67
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_001_s_o_ 01_phase_01.png",
-                "size": 3803
+                "size": 3989,
+                "width": 76,
+                "height": 67
               }
             ]
           },
@@ -3487,17 +3505,20 @@
             "width": 78,
             "height": 66,
             "phase_count": 2,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_002_s_o_ 01_phase_00.png",
-                "size": 4151
+                "size": 4114,
+                "width": 78,
+                "height": 66
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_002_s_o_ 01_phase_01.png",
-                "size": 3936
+                "size": 4119,
+                "width": 78,
+                "height": 66
               }
             ]
           },
@@ -3510,17 +3531,20 @@
             "width": 77,
             "height": 66,
             "phase_count": 2,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_003_s_o_ 01_phase_00.png",
-                "size": 4089
+                "size": 4137,
+                "width": 77,
+                "height": 66
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_003_s_o_ 01_phase_01.png",
-                "size": 3900
+                "size": 4148,
+                "width": 77,
+                "height": 66
               }
             ]
           }
@@ -5285,9 +5309,8 @@
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_000_s_o_ 01_phase_00.png",
-      "offset": 3011639,
-      "size": 4192,
-      "pixel_size": 10318,
+      "offset": 3011081,
+      "size": 4186,
       "width": 77,
       "height": 67,
       "name": "słoń 01",
@@ -5298,21 +5321,24 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_000_s_o_ 01_phase_00.png",
-          "size": 4192
+          "size": 4186,
+          "width": 77,
+          "height": 67
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_000_s_o_ 01_phase_01.png",
-          "size": 3939
+          "size": 4147,
+          "width": 77,
+          "height": 67
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_001_s_o_ 01_phase_00.png",
-      "offset": 3022301,
-      "size": 3940,
-      "pixel_size": 10184,
+      "offset": 3022145,
+      "size": 3893,
       "width": 76,
       "height": 67,
       "name": "słoń 01",
@@ -5323,21 +5349,24 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_001_s_o_ 01_phase_00.png",
-          "size": 3940
+          "size": 3893,
+          "width": 76,
+          "height": 67
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_001_s_o_ 01_phase_01.png",
-          "size": 3803
+          "size": 3989,
+          "width": 76,
+          "height": 67
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_002_s_o_ 01_phase_00.png",
-      "offset": 3033093,
-      "size": 4151,
-      "pixel_size": 10296,
+      "offset": 3032673,
+      "size": 4114,
       "width": 78,
       "height": 66,
       "name": "słoń 01",
@@ -5348,21 +5377,24 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_002_s_o_ 01_phase_00.png",
-          "size": 4151
+          "size": 4114,
+          "width": 78,
+          "height": 66
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_002_s_o_ 01_phase_01.png",
-          "size": 3936
+          "size": 4119,
+          "width": 78,
+          "height": 66
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_003_s_o_ 01_phase_00.png",
-      "offset": 3044129,
-      "size": 4089,
-      "pixel_size": 10164,
+      "offset": 3043577,
+      "size": 4137,
       "width": 77,
       "height": 66,
       "name": "słoń 01",
@@ -5373,12 +5405,16 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_003_s_o_ 01_phase_00.png",
-          "size": 4089
+          "size": 4137,
+          "width": 77,
+          "height": 66
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\SLON\\sprite_holder\\02_Sprite_Holder_003_s_o_ 01_phase_01.png",
-          "size": 3900
+          "size": 4148,
+          "width": 77,
+          "height": 66
         }
       ]
     },

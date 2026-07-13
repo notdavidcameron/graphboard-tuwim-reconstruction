@@ -32,6 +32,12 @@ class GraphBoardRuntime {
     this.puzzle = { active: false, drops: 0 };
     this.panorama = { active: false, enabled: true, type: "", id: 0, layer: null, dx: 0, dy: 0, source: "" };
     this.panoramaTimer = null;
+    // Sprite GotoXY glides, keyed by namespace:type:id. A single interval
+    // steps every active glide at a constant measured velocity and fires
+    // InPlace on arrival (see stepGlides), mirroring the cpp_port runtime.
+    this.glides = new Map();
+    this.glideTimer = null;
+    this.glideLastTs = 0;
     this.dragModes = new Map();
     this.disabledDragItems = new Set();
     this.pointerInteraction = null;
@@ -43,6 +49,7 @@ class GraphBoardRuntime {
   reset(scene) {
     if (this.panoramaTimer) clearInterval(this.panoramaTimer);
     this.panoramaTimer = null;
+    this.clearGlides();
     this.clearTimers();
     this.clearVideoTimers();
     this.scene = scene;
@@ -400,42 +407,127 @@ class GraphBoardRuntime {
     }
   }
 
+  // Instant reposition (MoveTo / ShowBitmap). Cancels any glide in progress and
+  // never fires InPlace -- only a GotoXY glide arrival does that.
   moveLayer(type, id, x, y, z = undefined, namespace = "Page") {
     const layer = this.findLayer(type, id, namespace, true);
     if (!layer) {
       this.log(`${namespace}.${type}.move(${id},${x},${y}) missing layer`);
       return;
     }
+    this.glides.delete(this.key(namespace, this.normalizeType(type), id));
+    layer.style.transition = "none";
     layer.style.left = `${Number(x) || 0}px`;
     layer.style.top = `${Number(y) || 0}px`;
-    layer.style.transition = "left 180ms linear, top 180ms linear";
     if (Number.isFinite(Number(z))) {
       layer.dataset.logicalZ = String(Number(z));
       layer.style.zIndex = String(graphBoardZIndex(namespace, Number(z), Number(layer.dataset.componentOrder), Number(layer.dataset.itemOrder)));
     }
     // Real holder instances retain their serialized/show-hide visibility when
-    // moved. Only synthetic placeholders need their first GotoXY to reveal
-    // them (notably the reconstructed group toolbar).
+    // moved. Only synthetic placeholders need their first move to reveal them
+    // (notably the reconstructed group toolbar).
     if (layer.dataset.synthetic === "1" && layer.dataset.suppressVisual !== "1") {
       layer.classList.remove("runtime-hidden");
     }
     this.log(`${namespace}.${type}.move(${id},${x},${y}${Number.isFinite(Number(z)) ? `,${z}` : ""})`);
+  }
 
-    const prefix = namespace === "Group" ? "Group." : "";
-    const cleanType = this.normalizeType(type);
-    clearTimeout(layer._inPlaceTimer);
-    const inPlaceHandler = `${prefix}${cleanType}.InPlace`;
-    if (this.extractFunctionBody(this.scene?.script?.rawText || "", inPlaceHandler)) {
-      const trusted = this.userInputDepth > 0;
-      layer._inPlaceTimer = setTimeout(() => {
-        if (trusted) this.trustedCallbackDepth += 1;
-        try {
-          this.executeHandler(inPlaceHandler, [Number(id) || 0, Number(x) || 0, Number(y) || 0]);
-        } finally {
-          if (trusted) this.trustedCallbackDepth -= 1;
-        }
-      }, 210);
+  // Animated glide to a target (GotoXY). The stepper walks the layer there at a
+  // constant velocity and fires InPlace(id,x,y) on arrival, which typically
+  // re-targets the sprite (DYZIO's endless food drift, the CURSORS.grp toolbar).
+  // Speeds are measured from the real Tuwim.exe: page Sprite_Holder glides drift
+  // at ~60 px/s while the group toolbar snaps at ~1200 px/s.
+  glideLayer(type, id, x, y, namespace = "Page") {
+    const layer = this.findLayer(type, id, namespace, true);
+    if (!layer) {
+      this.log(`${namespace}.${type}.GotoXY(${id},${x},${y}) missing layer`);
+      return;
     }
+    if (layer.dataset.synthetic === "1" && layer.dataset.suppressVisual !== "1") {
+      layer.classList.remove("runtime-hidden");
+    }
+    const key = this.key(namespace, this.normalizeType(type), id);
+    const existing = this.glides.get(key);
+    const curLeft = existing ? existing.x : parseInt(layer.style.left || "0", 10) || 0;
+    const curTop = existing ? existing.y : parseInt(layer.style.top || "0", 10) || 0;
+    layer.style.transition = "none";
+    this.glides.set(key, {
+      namespace,
+      type: this.normalizeType(type),
+      id: Number(id) || 0,
+      layer,
+      x: curLeft,
+      y: curTop,
+      targetX: Number(x) || 0,
+      targetY: Number(y) || 0,
+      speed: namespace === "Group" ? 1200 : 60,
+      // Preserve trust through a flight loop so a user-initiated glide's arrival
+      // InPlace may navigate (LoadPage), while the ambient page drift may not.
+      trusted: this.userInputDepth > 0 || this.trustedCallbackDepth > 0,
+    });
+    this.ensureGlideLoop();
+    this.log(`${namespace}.${type}.GotoXY(${id},${x},${y})`);
+  }
+
+  clearGlides() {
+    if (this.glideTimer) clearInterval(this.glideTimer);
+    this.glideTimer = null;
+    this.glideLastTs = 0;
+    if (this.glides) this.glides.clear();
+  }
+
+  ensureGlideLoop() {
+    if (this.glideTimer || this.glides.size === 0) return;
+    this.glideLastTs = 0;
+    // A 30ms interval (not requestAnimationFrame) matches the panorama stepper
+    // and is not throttled when the tab is backgrounded.
+    this.glideTimer = setInterval(() => this.stepGlides(), 30);
+  }
+
+  stepGlides() {
+    const now = (typeof performance !== "undefined" ? performance.now() : Date.now());
+    if (!this.glideLastTs) this.glideLastTs = now;
+    const elapsed = Math.min(200, now - this.glideLastTs); // clamp tab-switch gaps
+    this.glideLastTs = now;
+
+    const arrivals = [];
+    for (const [key, glide] of this.glides) {
+      if (!glide.layer?.isConnected) {
+        this.glides.delete(key);
+        continue;
+      }
+      const dist = glide.speed * elapsed / 1000;
+      const dx = glide.targetX - glide.x;
+      const dy = glide.targetY - glide.y;
+      const len = Math.hypot(dx, dy);
+      if (len <= dist || len === 0) {
+        glide.x = glide.targetX;
+        glide.y = glide.targetY;
+        this.glides.delete(key);
+        arrivals.push(glide);
+      } else {
+        glide.x += (dx / len) * dist;
+        glide.y += (dy / len) * dist;
+      }
+      glide.layer.style.left = `${Math.round(glide.x)}px`;
+      glide.layer.style.top = `${Math.round(glide.y)}px`;
+    }
+
+    // Fire arrivals after stepping: InPlace may re-target the sprite (starting a
+    // fresh glide) without mutating the map mid-iteration.
+    for (const glide of arrivals) {
+      const prefix = glide.namespace === "Group" ? "Group." : "";
+      const handler = `${prefix}${glide.type}.InPlace`;
+      if (!this.extractFunctionBody(this.scene?.script?.rawText || "", handler)) continue;
+      if (glide.trusted) this.trustedCallbackDepth += 1;
+      try {
+        this.executeHandler(handler, [glide.id, Math.round(glide.targetX), Math.round(glide.targetY)]);
+      } finally {
+        if (glide.trusted) this.trustedCallbackDepth -= 1;
+      }
+    }
+
+    if (this.glides.size === 0) this.clearGlides();
   }
 
   changePhase(type, id, phase, namespace = "Page") {
@@ -1583,8 +1675,10 @@ class GraphBoardRuntime {
           this.setLayerVisible(local.split(".")[0], Number(args[0]), true, namespace);
         }
         break;
-      case "Bitmap_Holder.MoveTo":
       case "Sprite_Holder.GotoXY":
+        this.glideLayer("Sprite_Holder", Number(args[0]), Number(args[1] || 0), Number(args[2] || 0), namespace);
+        break;
+      case "Bitmap_Holder.MoveTo":
       case "Sprite_Holder.MoveTo":
       case "HotSpot_Holder.MoveTo":
         this.moveLayer(local.split(".")[0], Number(args[0]), Number(args[1] || 0), Number(args[2] || 0), undefined, namespace);

@@ -635,109 +635,29 @@
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_00.png",
-          "offset": 4017358,
-          "size": 7158,
-          "pixel_size": 337875,
+          "offset": 4017153,
+          "size": 9496,
           "width": 159,
           "height": 125,
           "name": "ogień",
           "id": 0,
           "definition_id": 0,
-          "phase_count": 17,
+          "phase_count": 1,
           "phase_outputs": [
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_00.png",
-              "size": 7158
-            },
-            {
-              "phase": 1,
-              "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_01.png",
-              "size": 8194
-            },
-            {
-              "phase": 2,
-              "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_02.png",
-              "size": 8471
-            },
-            {
-              "phase": 3,
-              "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_03.png",
-              "size": 8706
-            },
-            {
-              "phase": 4,
-              "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_04.png",
-              "size": 9397
-            },
-            {
-              "phase": 5,
-              "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_05.png",
-              "size": 9692
-            },
-            {
-              "phase": 6,
-              "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_06.png",
-              "size": 10395
-            },
-            {
-              "phase": 7,
-              "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_07.png",
-              "size": 10681
-            },
-            {
-              "phase": 8,
-              "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_08.png",
-              "size": 10516
-            },
-            {
-              "phase": 9,
-              "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_09.png",
-              "size": 10253
-            },
-            {
-              "phase": 10,
-              "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_10.png",
-              "size": 9743
-            },
-            {
-              "phase": 11,
-              "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_11.png",
-              "size": 9041
-            },
-            {
-              "phase": 12,
-              "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_12.png",
-              "size": 8376
-            },
-            {
-              "phase": 13,
-              "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_13.png",
-              "size": 7897
-            },
-            {
-              "phase": 14,
-              "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_14.png",
-              "size": 6676
-            },
-            {
-              "phase": 15,
-              "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_15.png",
-              "size": 4040
-            },
-            {
-              "phase": 16,
-              "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_16.png",
-              "size": 1686
+              "size": 9496,
+              "width": 159,
+              "height": 125
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_001_taniec 01_phase_00.png",
-          "offset": 4355841,
-          "size": 3936,
-          "pixel_size": 10296,
+          "offset": 4355421,
+          "size": 3959,
           "width": 78,
           "height": 66,
           "name": "taniec 01",
@@ -748,21 +668,24 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_001_taniec 01_phase_00.png",
-              "size": 3936
+              "size": 3959,
+              "width": 78,
+              "height": 66
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_001_taniec 01_phase_01.png",
-              "size": 3798
+              "size": 4027,
+              "width": 78,
+              "height": 66
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_002_taniec 01_phase_00.png",
-          "offset": 4366785,
-          "size": 4432,
-          "pixel_size": 13072,
+          "offset": 4366325,
+          "size": 4346,
           "width": 86,
           "height": 76,
           "name": "taniec 01",
@@ -773,12 +696,16 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_002_taniec 01_phase_00.png",
-              "size": 4432
+              "size": 4346,
+              "width": 86,
+              "height": 76
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_002_taniec 01_phase_01.png",
-              "size": 4499
+              "size": 4686,
+              "width": 86,
+              "height": 76
             }
           ]
         }
@@ -798,93 +725,14 @@
             "blob_size": 338264,
             "width": 159,
             "height": 125,
-            "phase_count": 17,
-            "phase_hint": 606348324,
+            "phase_count": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_00.png",
-                "size": 7158
-              },
-              {
-                "phase": 1,
-                "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_01.png",
-                "size": 8194
-              },
-              {
-                "phase": 2,
-                "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_02.png",
-                "size": 8471
-              },
-              {
-                "phase": 3,
-                "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_03.png",
-                "size": 8706
-              },
-              {
-                "phase": 4,
-                "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_04.png",
-                "size": 9397
-              },
-              {
-                "phase": 5,
-                "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_05.png",
-                "size": 9692
-              },
-              {
-                "phase": 6,
-                "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_06.png",
-                "size": 10395
-              },
-              {
-                "phase": 7,
-                "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_07.png",
-                "size": 10681
-              },
-              {
-                "phase": 8,
-                "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_08.png",
-                "size": 10516
-              },
-              {
-                "phase": 9,
-                "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_09.png",
-                "size": 10253
-              },
-              {
-                "phase": 10,
-                "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_10.png",
-                "size": 9743
-              },
-              {
-                "phase": 11,
-                "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_11.png",
-                "size": 9041
-              },
-              {
-                "phase": 12,
-                "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_12.png",
-                "size": 8376
-              },
-              {
-                "phase": 13,
-                "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_13.png",
-                "size": 7897
-              },
-              {
-                "phase": 14,
-                "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_14.png",
-                "size": 6676
-              },
-              {
-                "phase": 15,
-                "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_15.png",
-                "size": 4040
-              },
-              {
-                "phase": 16,
-                "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_16.png",
-                "size": 1686
+                "size": 9496,
+                "width": 159,
+                "height": 125
               }
             ]
           },
@@ -897,17 +745,20 @@
             "width": 78,
             "height": 66,
             "phase_count": 2,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_001_taniec 01_phase_00.png",
-                "size": 3936
+                "size": 3959,
+                "width": 78,
+                "height": 66
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_001_taniec 01_phase_01.png",
-                "size": 3798
+                "size": 4027,
+                "width": 78,
+                "height": 66
               }
             ]
           },
@@ -920,17 +771,20 @@
             "width": 86,
             "height": 76,
             "phase_count": 2,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_002_taniec 01_phase_00.png",
-                "size": 4432
+                "size": 4346,
+                "width": 86,
+                "height": 76
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_002_taniec 01_phase_01.png",
-                "size": 4499
+                "size": 4686,
+                "width": 86,
+                "height": 76
               }
             ]
           }
@@ -1269,109 +1123,29 @@
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_00.png",
-      "offset": 4017358,
-      "size": 7158,
-      "pixel_size": 337875,
+      "offset": 4017153,
+      "size": 9496,
       "width": 159,
       "height": 125,
       "name": "ogień",
       "id": 0,
       "definition_id": 0,
-      "phase_count": 17,
+      "phase_count": 1,
       "phase_outputs": [
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_00.png",
-          "size": 7158
-        },
-        {
-          "phase": 1,
-          "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_01.png",
-          "size": 8194
-        },
-        {
-          "phase": 2,
-          "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_02.png",
-          "size": 8471
-        },
-        {
-          "phase": 3,
-          "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_03.png",
-          "size": 8706
-        },
-        {
-          "phase": 4,
-          "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_04.png",
-          "size": 9397
-        },
-        {
-          "phase": 5,
-          "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_05.png",
-          "size": 9692
-        },
-        {
-          "phase": 6,
-          "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_06.png",
-          "size": 10395
-        },
-        {
-          "phase": 7,
-          "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_07.png",
-          "size": 10681
-        },
-        {
-          "phase": 8,
-          "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_08.png",
-          "size": 10516
-        },
-        {
-          "phase": 9,
-          "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_09.png",
-          "size": 10253
-        },
-        {
-          "phase": 10,
-          "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_10.png",
-          "size": 9743
-        },
-        {
-          "phase": 11,
-          "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_11.png",
-          "size": 9041
-        },
-        {
-          "phase": 12,
-          "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_12.png",
-          "size": 8376
-        },
-        {
-          "phase": 13,
-          "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_13.png",
-          "size": 7897
-        },
-        {
-          "phase": 14,
-          "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_14.png",
-          "size": 6676
-        },
-        {
-          "phase": 15,
-          "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_15.png",
-          "size": 4040
-        },
-        {
-          "phase": 16,
-          "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_000_ogie__phase_16.png",
-          "size": 1686
+          "size": 9496,
+          "width": 159,
+          "height": 125
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_001_taniec 01_phase_00.png",
-      "offset": 4355841,
-      "size": 3936,
-      "pixel_size": 10296,
+      "offset": 4355421,
+      "size": 3959,
       "width": 78,
       "height": 66,
       "name": "taniec 01",
@@ -1382,21 +1156,24 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_001_taniec 01_phase_00.png",
-          "size": 3936
+          "size": 3959,
+          "width": 78,
+          "height": 66
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_001_taniec 01_phase_01.png",
-          "size": 3798
+          "size": 4027,
+          "width": 78,
+          "height": 66
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_002_taniec 01_phase_00.png",
-      "offset": 4366785,
-      "size": 4432,
-      "pixel_size": 13072,
+      "offset": 4366325,
+      "size": 4346,
       "width": 86,
       "height": 76,
       "name": "taniec 01",
@@ -1407,12 +1184,16 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_002_taniec 01_phase_00.png",
-          "size": 4432
+          "size": 4346,
+          "width": 86,
+          "height": 76
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\TANIEC\\sprite_holder\\03_Sprite_Holder_002_taniec 01_phase_01.png",
-          "size": 4499
+          "size": 4686,
+          "width": 86,
+          "height": 76
         }
       ]
     },

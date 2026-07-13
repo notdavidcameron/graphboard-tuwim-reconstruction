@@ -855,9 +855,8 @@
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_000_lokom 01_phase_00.png",
-          "offset": 4319770,
-          "size": 3939,
-          "pixel_size": 8700,
+          "offset": 4319498,
+          "size": 3830,
           "width": 75,
           "height": 58,
           "name": "lokom 01",
@@ -868,21 +867,24 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_000_lokom 01_phase_00.png",
-              "size": 3939
+              "size": 3830,
+              "width": 75,
+              "height": 58
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_000_lokom 01_phase_01.png",
-              "size": 3565
+              "size": 3721,
+              "width": 75,
+              "height": 58
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_001_lokom 01_phase_00.png",
-          "offset": 4329204,
-          "size": 4230,
-          "pixel_size": 10530,
+          "offset": 4328658,
+          "size": 4285,
           "width": 81,
           "height": 65,
           "name": "lokom 01",
@@ -893,21 +895,24 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_001_lokom 01_phase_00.png",
-              "size": 4230
+              "size": 4285,
+              "width": 81,
+              "height": 65
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_001_lokom 01_phase_01.png",
-              "size": 4218
+              "size": 4471,
+              "width": 81,
+              "height": 65
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_002_lokom 01_phase_00.png",
-          "offset": 4340350,
-          "size": 4594,
-          "pixel_size": 11152,
+          "offset": 4339922,
+          "size": 4520,
           "width": 82,
           "height": 68,
           "name": "lokom 01",
@@ -918,21 +923,24 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_002_lokom 01_phase_00.png",
-              "size": 4594
+              "size": 4520,
+              "width": 82,
+              "height": 68
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_002_lokom 01_phase_01.png",
-              "size": 4272
+              "size": 4461,
+              "width": 82,
+              "height": 68
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_003_lokom 01_phase_00.png",
-          "offset": 4351976,
-          "size": 4149,
-          "pixel_size": 10270,
+          "offset": 4351690,
+          "size": 4059,
           "width": 79,
           "height": 65,
           "name": "lokom 01",
@@ -943,21 +951,24 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_003_lokom 01_phase_00.png",
-              "size": 4149
+              "size": 4059,
+              "width": 79,
+              "height": 65
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_003_lokom 01_phase_01.png",
-              "size": 4002
+              "size": 4167,
+              "width": 79,
+              "height": 65
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_004_lokom 01_phase_00.png",
-          "offset": 4362818,
-          "size": 3497,
-          "pixel_size": 8436,
+          "offset": 4362434,
+          "size": 3577,
           "width": 74,
           "height": 57,
           "name": "lokom 01",
@@ -968,12 +979,16 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_004_lokom 01_phase_00.png",
-              "size": 3497
+              "size": 3577,
+              "width": 74,
+              "height": 57
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_004_lokom 01_phase_01.png",
-              "size": 3258
+              "size": 3502,
+              "width": 74,
+              "height": 57
             }
           ]
         }
@@ -994,17 +1009,20 @@
             "width": 75,
             "height": 58,
             "phase_count": 2,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_000_lokom 01_phase_00.png",
-                "size": 3939
+                "size": 3830,
+                "width": 75,
+                "height": 58
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_000_lokom 01_phase_01.png",
-                "size": 3565
+                "size": 3721,
+                "width": 75,
+                "height": 58
               }
             ]
           },
@@ -1017,17 +1035,20 @@
             "width": 81,
             "height": 65,
             "phase_count": 2,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_001_lokom 01_phase_00.png",
-                "size": 4230
+                "size": 4285,
+                "width": 81,
+                "height": 65
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_001_lokom 01_phase_01.png",
-                "size": 4218
+                "size": 4471,
+                "width": 81,
+                "height": 65
               }
             ]
           },
@@ -1040,17 +1061,20 @@
             "width": 82,
             "height": 68,
             "phase_count": 2,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_002_lokom 01_phase_00.png",
-                "size": 4594
+                "size": 4520,
+                "width": 82,
+                "height": 68
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_002_lokom 01_phase_01.png",
-                "size": 4272
+                "size": 4461,
+                "width": 82,
+                "height": 68
               }
             ]
           },
@@ -1063,17 +1087,20 @@
             "width": 79,
             "height": 65,
             "phase_count": 2,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_003_lokom 01_phase_00.png",
-                "size": 4149
+                "size": 4059,
+                "width": 79,
+                "height": 65
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_003_lokom 01_phase_01.png",
-                "size": 4002
+                "size": 4167,
+                "width": 79,
+                "height": 65
               }
             ]
           },
@@ -1086,17 +1113,20 @@
             "width": 74,
             "height": 57,
             "phase_count": 2,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_004_lokom 01_phase_00.png",
-                "size": 3497
+                "size": 3577,
+                "width": 74,
+                "height": 57
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_004_lokom 01_phase_01.png",
-                "size": 3258
+                "size": 3502,
+                "width": 74,
+                "height": 57
               }
             ]
           }
@@ -1500,9 +1530,8 @@
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_000_lokom 01_phase_00.png",
-      "offset": 4319770,
-      "size": 3939,
-      "pixel_size": 8700,
+      "offset": 4319498,
+      "size": 3830,
       "width": 75,
       "height": 58,
       "name": "lokom 01",
@@ -1513,21 +1542,24 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_000_lokom 01_phase_00.png",
-          "size": 3939
+          "size": 3830,
+          "width": 75,
+          "height": 58
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_000_lokom 01_phase_01.png",
-          "size": 3565
+          "size": 3721,
+          "width": 75,
+          "height": 58
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_001_lokom 01_phase_00.png",
-      "offset": 4329204,
-      "size": 4230,
-      "pixel_size": 10530,
+      "offset": 4328658,
+      "size": 4285,
       "width": 81,
       "height": 65,
       "name": "lokom 01",
@@ -1538,21 +1570,24 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_001_lokom 01_phase_00.png",
-          "size": 4230
+          "size": 4285,
+          "width": 81,
+          "height": 65
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_001_lokom 01_phase_01.png",
-          "size": 4218
+          "size": 4471,
+          "width": 81,
+          "height": 65
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_002_lokom 01_phase_00.png",
-      "offset": 4340350,
-      "size": 4594,
-      "pixel_size": 11152,
+      "offset": 4339922,
+      "size": 4520,
       "width": 82,
       "height": 68,
       "name": "lokom 01",
@@ -1563,21 +1598,24 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_002_lokom 01_phase_00.png",
-          "size": 4594
+          "size": 4520,
+          "width": 82,
+          "height": 68
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_002_lokom 01_phase_01.png",
-          "size": 4272
+          "size": 4461,
+          "width": 82,
+          "height": 68
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_003_lokom 01_phase_00.png",
-      "offset": 4351976,
-      "size": 4149,
-      "pixel_size": 10270,
+      "offset": 4351690,
+      "size": 4059,
       "width": 79,
       "height": 65,
       "name": "lokom 01",
@@ -1588,21 +1626,24 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_003_lokom 01_phase_00.png",
-          "size": 4149
+          "size": 4059,
+          "width": 79,
+          "height": 65
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_003_lokom 01_phase_01.png",
-          "size": 4002
+          "size": 4167,
+          "width": 79,
+          "height": 65
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_004_lokom 01_phase_00.png",
-      "offset": 4362818,
-      "size": 3497,
-      "pixel_size": 8436,
+      "offset": 4362434,
+      "size": 3577,
       "width": 74,
       "height": 57,
       "name": "lokom 01",
@@ -1613,12 +1654,16 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_004_lokom 01_phase_00.png",
-          "size": 3497
+          "size": 3577,
+          "width": 74,
+          "height": 57
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\LOKOMOT\\sprite_holder\\03_Sprite_Holder_004_lokom 01_phase_01.png",
-          "size": 3258
+          "size": 3502,
+          "width": 74,
+          "height": 57
         }
       ]
     }

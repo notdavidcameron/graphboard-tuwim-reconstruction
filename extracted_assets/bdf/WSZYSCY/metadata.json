@@ -654,9 +654,8 @@
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_000_wszyscy 0_phase_00.png",
-          "offset": 3064029,
-          "size": 4287,
-          "pixel_size": 10270,
+          "offset": 3063743,
+          "size": 4387,
           "width": 79,
           "height": 65,
           "name": "wszyscy 0",
@@ -667,21 +666,24 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_000_wszyscy 0_phase_00.png",
-              "size": 4287
+              "size": 4387,
+              "width": 79,
+              "height": 65
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_000_wszyscy 0_phase_01.png",
-              "size": 4288
+              "size": 4518,
+              "width": 79,
+              "height": 65
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_001_wszyscy 0_phase_00.png",
-          "offset": 3075019,
-          "size": 3767,
-          "pixel_size": 9548,
+          "offset": 3074487,
+          "size": 3852,
           "width": 77,
           "height": 62,
           "name": "wszyscy 0",
@@ -692,21 +694,24 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_001_wszyscy 0_phase_00.png",
-              "size": 3767
+              "size": 3852,
+              "width": 77,
+              "height": 62
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_001_wszyscy 0_phase_01.png",
-              "size": 3725
+              "size": 3972,
+              "width": 77,
+              "height": 62
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_002_wszyscy 0_phase_00.png",
-          "offset": 3085139,
-          "size": 3436,
-          "pixel_size": 8436,
+          "offset": 3084755,
+          "size": 3570,
           "width": 74,
           "height": 57,
           "name": "wszyscy 0",
@@ -717,21 +722,24 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_002_wszyscy 0_phase_00.png",
-              "size": 3436
+              "size": 3570,
+              "width": 74,
+              "height": 57
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_002_wszyscy 0_phase_01.png",
-              "size": 3323
+              "size": 3544,
+              "width": 74,
+              "height": 57
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_003_wszyscy 0_phase_00.png",
-          "offset": 3093919,
-          "size": 3292,
-          "pixel_size": 8064,
+          "offset": 3093763,
+          "size": 3251,
           "width": 72,
           "height": 56,
           "name": "wszyscy 0",
@@ -742,21 +750,24 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_003_wszyscy 0_phase_00.png",
-              "size": 3292
+              "size": 3251,
+              "width": 72,
+              "height": 56
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_003_wszyscy 0_phase_01.png",
-              "size": 3153
+              "size": 3378,
+              "width": 72,
+              "height": 56
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_004_wszyscy 0_phase_00.png",
-          "offset": 3102583,
-          "size": 4083,
-          "pixel_size": 9984,
+          "offset": 3102171,
+          "size": 4107,
           "width": 78,
           "height": 64,
           "name": "wszyscy 0",
@@ -767,12 +778,16 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_004_wszyscy 0_phase_00.png",
-              "size": 4083
+              "size": 4107,
+              "width": 78,
+              "height": 64
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_004_wszyscy 0_phase_01.png",
-              "size": 3995
+              "size": 4240,
+              "width": 78,
+              "height": 64
             }
           ]
         }
@@ -793,17 +808,20 @@
             "width": 79,
             "height": 65,
             "phase_count": 2,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_000_wszyscy 0_phase_00.png",
-                "size": 4287
+                "size": 4387,
+                "width": 79,
+                "height": 65
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_000_wszyscy 0_phase_01.png",
-                "size": 4288
+                "size": 4518,
+                "width": 79,
+                "height": 65
               }
             ]
           },
@@ -816,17 +834,20 @@
             "width": 77,
             "height": 62,
             "phase_count": 2,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_001_wszyscy 0_phase_00.png",
-                "size": 3767
+                "size": 3852,
+                "width": 77,
+                "height": 62
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_001_wszyscy 0_phase_01.png",
-                "size": 3725
+                "size": 3972,
+                "width": 77,
+                "height": 62
               }
             ]
           },
@@ -839,17 +860,20 @@
             "width": 74,
             "height": 57,
             "phase_count": 2,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_002_wszyscy 0_phase_00.png",
-                "size": 3436
+                "size": 3570,
+                "width": 74,
+                "height": 57
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_002_wszyscy 0_phase_01.png",
-                "size": 3323
+                "size": 3544,
+                "width": 74,
+                "height": 57
               }
             ]
           },
@@ -862,17 +886,20 @@
             "width": 72,
             "height": 56,
             "phase_count": 2,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_003_wszyscy 0_phase_00.png",
-                "size": 3292
+                "size": 3251,
+                "width": 72,
+                "height": 56
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_003_wszyscy 0_phase_01.png",
-                "size": 3153
+                "size": 3378,
+                "width": 72,
+                "height": 56
               }
             ]
           },
@@ -885,17 +912,20 @@
             "width": 78,
             "height": 64,
             "phase_count": 2,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_004_wszyscy 0_phase_00.png",
-                "size": 4083
+                "size": 4107,
+                "width": 78,
+                "height": 64
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_004_wszyscy 0_phase_01.png",
-                "size": 3995
+                "size": 4240,
+                "width": 78,
+                "height": 64
               }
             ]
           }
@@ -1212,9 +1242,8 @@
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_000_wszyscy 0_phase_00.png",
-      "offset": 3064029,
-      "size": 4287,
-      "pixel_size": 10270,
+      "offset": 3063743,
+      "size": 4387,
       "width": 79,
       "height": 65,
       "name": "wszyscy 0",
@@ -1225,21 +1254,24 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_000_wszyscy 0_phase_00.png",
-          "size": 4287
+          "size": 4387,
+          "width": 79,
+          "height": 65
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_000_wszyscy 0_phase_01.png",
-          "size": 4288
+          "size": 4518,
+          "width": 79,
+          "height": 65
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_001_wszyscy 0_phase_00.png",
-      "offset": 3075019,
-      "size": 3767,
-      "pixel_size": 9548,
+      "offset": 3074487,
+      "size": 3852,
       "width": 77,
       "height": 62,
       "name": "wszyscy 0",
@@ -1250,21 +1282,24 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_001_wszyscy 0_phase_00.png",
-          "size": 3767
+          "size": 3852,
+          "width": 77,
+          "height": 62
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_001_wszyscy 0_phase_01.png",
-          "size": 3725
+          "size": 3972,
+          "width": 77,
+          "height": 62
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_002_wszyscy 0_phase_00.png",
-      "offset": 3085139,
-      "size": 3436,
-      "pixel_size": 8436,
+      "offset": 3084755,
+      "size": 3570,
       "width": 74,
       "height": 57,
       "name": "wszyscy 0",
@@ -1275,21 +1310,24 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_002_wszyscy 0_phase_00.png",
-          "size": 3436
+          "size": 3570,
+          "width": 74,
+          "height": 57
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_002_wszyscy 0_phase_01.png",
-          "size": 3323
+          "size": 3544,
+          "width": 74,
+          "height": 57
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_003_wszyscy 0_phase_00.png",
-      "offset": 3093919,
-      "size": 3292,
-      "pixel_size": 8064,
+      "offset": 3093763,
+      "size": 3251,
       "width": 72,
       "height": 56,
       "name": "wszyscy 0",
@@ -1300,21 +1338,24 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_003_wszyscy 0_phase_00.png",
-          "size": 3292
+          "size": 3251,
+          "width": 72,
+          "height": 56
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_003_wszyscy 0_phase_01.png",
-          "size": 3153
+          "size": 3378,
+          "width": 72,
+          "height": 56
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_004_wszyscy 0_phase_00.png",
-      "offset": 3102583,
-      "size": 4083,
-      "pixel_size": 9984,
+      "offset": 3102171,
+      "size": 4107,
       "width": 78,
       "height": 64,
       "name": "wszyscy 0",
@@ -1325,12 +1366,16 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_004_wszyscy 0_phase_00.png",
-          "size": 4083
+          "size": 4107,
+          "width": 78,
+          "height": 64
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\WSZYSCY\\sprite_holder\\04_Sprite_Holder_004_wszyscy 0_phase_01.png",
-          "size": 3995
+          "size": 4240,
+          "width": 78,
+          "height": 64
         }
       ]
     }

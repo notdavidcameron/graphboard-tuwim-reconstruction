@@ -492,6 +492,23 @@ def gif_palette_from_bmp_palette(palette: bytes) -> bytes:
     return bytes(rgb)
 
 
+def page_palette_to_bgr(palette: bytes) -> bytes:
+    """Normalise the .BDF page palette from RGB to DIB BGR order.
+
+    The page-level palette (header palette_offset) is stored RGB-ordered, unlike
+    a DIB's BGR RGBQUADs. Sprite/MultiBitmap/Bitmap/Panorama holders index it, but
+    the writers here (gif_palette_from_bmp_palette, write_indexed_bmp) and the
+    green-key detector (bright_green_palette_indices) all expect BGR. Passing the
+    raw page palette therefore swaps red<->blue in the output *and* stops green-key
+    transparency from being detected. Swapping R<->B once fixes both. Mirrors the
+    cpp_port pagePaletteBgr normalisation in render.cpp.
+    """
+    out = bytearray(palette)
+    for offset in range(0, len(out) - 3, 4):
+        out[offset], out[offset + 2] = out[offset + 2], out[offset]
+    return bytes(out)
+
+
 def bright_green_palette_indices(palette: bytes) -> set[int]:
     indices = set()
     palette = palette[:1024]
@@ -941,22 +958,6 @@ def extract_sprite_holder_images(
     outputs = []
     sprite_dir = page_dir / "sprite_holder"
 
-    def infer_phase_count(blob_size: int, width: int, height: int) -> int:
-        pixel_unit = width * height
-        if pixel_unit <= 0:
-            return 0
-        max_count = min(64, blob_size // pixel_unit)
-        best_count = 0
-        best_remainder = blob_size
-        for count in range(max_count, 0, -1):
-            remainder = blob_size - pixel_unit * count
-            if 0x80 <= remainder <= 0x1200:
-                return count
-            if 0 <= remainder < best_remainder:
-                best_count = count
-                best_remainder = remainder
-        return best_count
-
     for index in range(definition_count):
         if offset + 4 > private_end:
             break
@@ -966,15 +967,22 @@ def extract_sprite_holder_images(
         if blob_size <= 0 or blob_end > private_end:
             break
 
+        # Definition blob layout (SpriteHolder.dll), recovered exactly in the
+        # cpp_port (parseSpriteHolderState): phaseCount @0x00, name @0x04, nominal
+        # width/height @0x80/0x84, and a frame table at 0x6c with stride 0x4c.
+        # Each frame carries its own width @0x14, height @0x18, transparent index
+        # @0x04, row width @0x10, and a pixel offset @0x48 relative to blob+0xb8.
+        # Pixels are 8-bit indexed, bottom-up, with the row pitch padded to a
+        # 4-byte boundary. (The previous heuristic read tight-packed rows from the
+        # blob end, which sheared every sprite whose row width was not a multiple
+        # of four and guessed the transparent colour from the border instead of
+        # reading the frame's own index.)
         name = data[blob_start + 0x04 : blob_start + 0x24].split(b"\x00", 1)[0].decode("cp1250", "replace")
+        phase_count = read_u32(data, blob_start + 0x00)[0] if blob_start + 0x04 <= blob_end else 0
         width = read_u32(data, blob_start + 0x80)[0] if blob_start + 0x84 <= blob_end else 0
         height = read_u32(data, blob_start + 0x84)[0] if blob_start + 0x88 <= blob_end else 0
-        phase_hint = read_u32(data, blob_start + 0xB8)[0] if blob_start + 0xBC <= blob_end else 0
-        phase_count = infer_phase_count(blob_size, width, height)
-        if phase_count <= 0 and 0 < phase_hint <= 64:
-            phase_count = phase_hint
-        pixel_size = width * height * phase_count
-        pixel_offset = blob_end - pixel_size
+        if phase_count > 64:
+            phase_count = 0
 
         definition = {
             "index": index,
@@ -985,33 +993,53 @@ def extract_sprite_holder_images(
             "width": width,
             "height": height,
             "phase_count": phase_count,
-            "phase_hint": phase_hint,
         }
 
-        if 0 < width <= 2000 and 0 < height <= 2000 and pixel_offset >= blob_start and pixel_offset + pixel_size <= blob_end:
-            phase_outputs = []
-            base = f"{component_name}_{index:03d}_{safe_name(name)}"
-            for phase in range(phase_count):
-                start = pixel_offset + phase * width * height
-                pixels = flip_indexed_rows(data[start : start + width * height], width, height)
-                transparent_index = dominant_border_index(pixels, width, height, palette)
-                png_path = sprite_dir / f"{base}_phase_{phase:02d}.png"
-                write_indexed_png(png_path, pixels, width, height, palette, transparent_index=transparent_index)
-                phase_outputs.append(
-                    {
-                        "phase": phase,
-                        "path": str(png_path),
-                        "size": png_path.stat().st_size,
-                    }
-                )
+        frame_table = 0x6C
+        frame_bytes = 0x4C
+        pixel_base = 0xB8
+        phase_outputs = []
+        base = f"{component_name}_{index:03d}_{safe_name(name)}"
+        for phase in range(phase_count):
+            frame = blob_start + frame_table + phase * frame_bytes
+            if frame + frame_bytes > blob_end:
+                break
+            frame_width = read_u32(data, frame + 0x14)[0]
+            frame_height = read_u32(data, frame + 0x18)[0]
+            if not (0 < frame_width <= 2000 and 0 < frame_height <= 2000):
+                continue
+            transparent_index = read_u32(data, frame + 0x04)[0] & 0xFF
+            row_width = read_u32(data, frame + 0x10)[0]
+            stride = (row_width + 3) & ~3
+            pixels_off = blob_start + pixel_base + read_u32(data, frame + 0x48)[0]
+            if stride < frame_width or pixels_off + stride * frame_height > blob_end:
+                continue
+            # Strip the row padding and flip bottom-up rows to top-down.
+            pixels = bytearray(frame_width * frame_height)
+            for row in range(frame_height):
+                src = pixels_off + (frame_height - 1 - row) * stride
+                pixels[row * frame_width : (row + 1) * frame_width] = data[src : src + frame_width]
+            png_path = sprite_dir / f"{base}_phase_{phase:02d}.png"
+            write_indexed_png(png_path, bytes(pixels), frame_width, frame_height, palette, transparent_index=transparent_index)
+            phase_outputs.append(
+                {
+                    "phase": phase,
+                    "path": str(png_path),
+                    "size": png_path.stat().st_size,
+                    "width": frame_width,
+                    "height": frame_height,
+                }
+            )
+
+        if phase_outputs:
+            first = phase_outputs[0]
             output = {
                 "kind": "sprite_holder_png",
-                "path": phase_outputs[0]["path"],
-                "offset": pixel_offset,
-                "size": Path(phase_outputs[0]["path"]).stat().st_size,
-                "pixel_size": pixel_size,
-                "width": width,
-                "height": height,
+                "path": first["path"],
+                "offset": blob_start + pixel_base,
+                "size": first["size"],
+                "width": first["width"],
+                "height": first["height"],
                 "name": name,
                 "id": index,
                 "definition_id": index,
@@ -1230,6 +1258,11 @@ def extract_bdf(path: Path, out_dir: Path, include_raw: bool = False) -> dict:
                     component_meta["embedded"].append(output)
                     metadata["outputs"].append(output)
 
+        # The page palette is RGB-ordered; holders that index it need it as BGR.
+        page_palette_bgr = page_palette_to_bgr(
+            data[header["palette_offset"] : header["palette_offset"] + header["palette_size"]]
+        )
+
         if wrapper["display_name"] == "MultiBitmap":
             multibitmap, multibitmap_outputs = extract_multibitmap_frames(
                 data,
@@ -1237,7 +1270,7 @@ def extract_bdf(path: Path, out_dir: Path, include_raw: bool = False) -> dict:
                 private_end,
                 component_name,
                 page_dir,
-                data[header["palette_offset"] : header["palette_offset"] + header["palette_size"]],
+                page_palette_bgr,
             )
             if multibitmap:
                 component_meta["multibitmap"] = multibitmap
@@ -1252,7 +1285,7 @@ def extract_bdf(path: Path, out_dir: Path, include_raw: bool = False) -> dict:
                 private_end,
                 component_name,
                 page_dir,
-                data[header["palette_offset"] : header["palette_offset"] + header["palette_size"]],
+                page_palette_bgr,
             )
             if sprite_holder:
                 component_meta["sprite_holder"] = sprite_holder
@@ -1267,7 +1300,7 @@ def extract_bdf(path: Path, out_dir: Path, include_raw: bool = False) -> dict:
                 private_end,
                 component_name,
                 page_dir,
-                data[header["palette_offset"] : header["palette_offset"] + header["palette_size"]],
+                page_palette_bgr,
             )
             if bitmap_holder:
                 component_meta["bitmap_holder"] = bitmap_holder
@@ -1282,7 +1315,7 @@ def extract_bdf(path: Path, out_dir: Path, include_raw: bool = False) -> dict:
                 private_end,
                 component_name,
                 page_dir,
-                data[header["palette_offset"] : header["palette_offset"] + header["palette_size"]],
+                page_palette_bgr,
             )
             if panorama:
                 component_meta["panorama"] = panorama

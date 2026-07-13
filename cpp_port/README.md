@@ -44,6 +44,22 @@ plumbing.
 - A native Windows player, `gbgame`, with GDI scene output, embedded BoardVideo
   decoding, overlapping audio, input, timers, navigation, and the sliding
   `CURSORS.GRP` toolbar.
+- A native Windows creator/editor, `gbeditor`, plus the headless `gbauthor`
+  workflow. It creates `.gbproj` directories, imports legacy projects/boards,
+  authors the recovered core holders, previews through the real reconstructed
+  parser/runtime, validates scripts and compatibility constraints, and exports
+  staged original-compatible `START.PRJ`, `.BDF`, and `.GRP` files. See
+  `docs/editor_format_recovery.md` for the Ghidra-backed writer layouts.
+
+GraphBoard Studio includes page/group dependency trees, shared and page-local
+palette editing, WIC image import, retained RGBA artwork, WAV and Media
+Foundation AVI preview, cursor and all recovered core-holder inspectors,
+grid/snap, box selection, hotspot drawing/resize handles, item/component order,
+visibility locks, undo/redo, strict diagnostics/navigation, autosave recovery,
+and reconstructed-runtime Play mode. Play stages the complete current document,
+so `OnOpenPage`, `.GRP` loading, project globals, input callbacks, and
+`LoadPage` navigation use the same parsers/runtime as `gbgame`. See
+`docs/editor_acceptance.md` for the synthetic and real-file verification matrix.
 
 TextHolder content rendering/synchronization, exact palette fades, custom cursor
 artwork, and several less-used component behaviors remain outside this native
@@ -70,6 +86,25 @@ not `"YDP Board data file."` — the DATA folder contains misnamed non-BDF files
 cmake -S cpp_port -B cpp_port/build
 cmake --build cpp_port/build
 ctest --test-dir cpp_port/build -C Debug --output-on-failure
+```
+
+Launch GraphBoard Studio from a matching configuration directory:
+
+```powershell
+.\cpp_port\build\Release\gbeditor.exe
+```
+
+The editable project is a directory containing `project.gbproj`, content-
+addressed `assets/`, and content-addressed `opaque/` preserved private/source
+blocks. The GUI has File >
+Import legacy and File > Export binaries. Equivalent headless commands are:
+
+```powershell
+.\cpp_port\build\Release\gbauthor.exe import "C:\path\to\START.PRJ" .\my-board
+.\cpp_port\build\Release\gbauthor.exe validate .\my-board
+.\cpp_port\build\Release\gbauthor.exe export .\my-board .\legacy-output
+.\cpp_port\build\Release\gbauthor.exe acceptance .\acceptance-output
+.\cpp_port\build\Release\gbauthor.exe verify-import "C:\path\to\START.PRJ"
 ```
 
 Portable MinGW release build:

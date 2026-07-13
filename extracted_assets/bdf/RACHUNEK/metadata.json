@@ -32,9 +32,8 @@
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_000_z1_phase_00.png",
-          "offset": 311171,
-          "size": 2679,
-          "pixel_size": 6400,
+          "offset": 311091,
+          "size": 2675,
           "width": 80,
           "height": 80,
           "name": "z1",
@@ -45,16 +44,17 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_000_z1_phase_00.png",
-              "size": 2679
+              "size": 2675,
+              "width": 80,
+              "height": 80
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_001_z2_phase_00.png",
-          "offset": 317839,
-          "size": 2293,
-          "pixel_size": 6400,
+          "offset": 317759,
+          "size": 2294,
           "width": 80,
           "height": 80,
           "name": "z2",
@@ -65,16 +65,17 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_001_z2_phase_00.png",
-              "size": 2293
+              "size": 2294,
+              "width": 80,
+              "height": 80
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_002_z3_phase_00.png",
-          "offset": 324507,
-          "size": 2684,
-          "pixel_size": 6400,
+          "offset": 324427,
+          "size": 2680,
           "width": 80,
           "height": 80,
           "name": "z3",
@@ -85,16 +86,17 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_002_z3_phase_00.png",
-              "size": 2684
+              "size": 2680,
+              "width": 80,
+              "height": 80
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_003_z4_phase_00.png",
-          "offset": 331175,
-          "size": 2656,
-          "pixel_size": 6400,
+          "offset": 331095,
+          "size": 2657,
           "width": 80,
           "height": 80,
           "name": "z4",
@@ -105,16 +107,17 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_003_z4_phase_00.png",
-              "size": 2656
+              "size": 2657,
+              "width": 80,
+              "height": 80
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_004_z5_phase_00.png",
-          "offset": 337843,
+          "offset": 337763,
           "size": 2502,
-          "pixel_size": 6400,
           "width": 80,
           "height": 80,
           "name": "z5",
@@ -125,16 +128,17 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_004_z5_phase_00.png",
-              "size": 2502
+              "size": 2502,
+              "width": 80,
+              "height": 80
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_005_z6_phase_00.png",
-          "offset": 344511,
+          "offset": 344431,
           "size": 2663,
-          "pixel_size": 6400,
           "width": 80,
           "height": 80,
           "name": "z6",
@@ -145,16 +149,17 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_005_z6_phase_00.png",
-              "size": 2663
+              "size": 2663,
+              "width": 80,
+              "height": 80
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_006_z7_phase_00.png",
-          "offset": 351179,
-          "size": 2669,
-          "pixel_size": 6400,
+          "offset": 351099,
+          "size": 2665,
           "width": 80,
           "height": 80,
           "name": "z7",
@@ -165,16 +170,17 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_006_z7_phase_00.png",
-              "size": 2669
+              "size": 2665,
+              "width": 80,
+              "height": 80
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_007_kaczuszka_phase_00.png",
-          "offset": 358385,
-          "size": 2528,
-          "pixel_size": 11858,
+          "offset": 357767,
+          "size": 2403,
           "width": 77,
           "height": 77,
           "name": "kaczuszka",
@@ -185,21 +191,24 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_007_kaczuszka_phase_00.png",
-              "size": 2528
+              "size": 2403,
+              "width": 77,
+              "height": 77
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_007_kaczuszka_phase_01.png",
-              "size": 2551
+              "size": 2409,
+              "width": 77,
+              "height": 77
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_008_kaczuszka_phase_00.png",
-          "offset": 371049,
-          "size": 2622,
-          "pixel_size": 11858,
+          "offset": 370431,
+          "size": 2505,
           "width": 77,
           "height": 77,
           "name": "kaczuszka",
@@ -210,21 +219,24 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_008_kaczuszka_phase_00.png",
-              "size": 2622
+              "size": 2505,
+              "width": 77,
+              "height": 77
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_008_kaczuszka_phase_01.png",
-              "size": 2620
+              "size": 2486,
+              "width": 77,
+              "height": 77
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_009_kaczuszka_phase_00.png",
-          "offset": 383713,
-          "size": 2015,
-          "pixel_size": 11858,
+          "offset": 383095,
+          "size": 1903,
           "width": 77,
           "height": 77,
           "name": "kaczuszka",
@@ -235,21 +247,24 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_009_kaczuszka_phase_00.png",
-              "size": 2015
+              "size": 1903,
+              "width": 77,
+              "height": 77
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_009_kaczuszka_phase_01.png",
-              "size": 2033
+              "size": 1902,
+              "width": 77,
+              "height": 77
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_010_kaczuszka_phase_00.png",
-          "offset": 396377,
-          "size": 2597,
-          "pixel_size": 11858,
+          "offset": 395759,
+          "size": 2469,
           "width": 77,
           "height": 77,
           "name": "kaczuszka",
@@ -260,21 +275,24 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_010_kaczuszka_phase_00.png",
-              "size": 2597
+              "size": 2469,
+              "width": 77,
+              "height": 77
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_010_kaczuszka_phase_01.png",
-              "size": 2625
+              "size": 2486,
+              "width": 77,
+              "height": 77
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_011_kaczuszka_phase_00.png",
-          "offset": 409041,
-          "size": 2381,
-          "pixel_size": 11858,
+          "offset": 408423,
+          "size": 2277,
           "width": 77,
           "height": 77,
           "name": "kaczuszka",
@@ -285,166 +303,52 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_011_kaczuszka_phase_00.png",
-              "size": 2381
+              "size": 2277,
+              "width": 77,
+              "height": 77
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_011_kaczuszka_phase_01.png",
-              "size": 2384
+              "size": 2249,
+              "width": 77,
+              "height": 77
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_00.png",
-          "offset": 421243,
-          "size": 1094,
-          "pixel_size": 166400,
+          "offset": 421087,
+          "size": 2702,
           "width": 80,
           "height": 80,
           "name": "prąd",
           "id": 12,
           "definition_id": 12,
-          "phase_count": 26,
+          "phase_count": 2,
           "phase_outputs": [
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_00.png",
-              "size": 1094
+              "size": 2702,
+              "width": 80,
+              "height": 80
             },
             {
               "phase": 1,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_01.png",
-              "size": 2085
-            },
-            {
-              "phase": 2,
-              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_02.png",
-              "size": 3317
-            },
-            {
-              "phase": 3,
-              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_03.png",
-              "size": 3910
-            },
-            {
-              "phase": 4,
-              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_04.png",
-              "size": 4275
-            },
-            {
-              "phase": 5,
-              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_05.png",
-              "size": 4469
-            },
-            {
-              "phase": 6,
-              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_06.png",
-              "size": 4525
-            },
-            {
-              "phase": 7,
-              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_07.png",
-              "size": 4420
-            },
-            {
-              "phase": 8,
-              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_08.png",
-              "size": 4232
-            },
-            {
-              "phase": 9,
-              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_09.png",
-              "size": 3928
-            },
-            {
-              "phase": 10,
-              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_10.png",
-              "size": 3233
-            },
-            {
-              "phase": 11,
-              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_11.png",
-              "size": 2012
-            },
-            {
-              "phase": 12,
-              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_12.png",
-              "size": 1073
-            },
-            {
-              "phase": 13,
-              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_13.png",
-              "size": 1077
-            },
-            {
-              "phase": 14,
-              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_14.png",
-              "size": 2048
-            },
-            {
-              "phase": 15,
-              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_15.png",
-              "size": 3268
-            },
-            {
-              "phase": 16,
-              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_16.png",
-              "size": 3886
-            },
-            {
-              "phase": 17,
-              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_17.png",
-              "size": 4248
-            },
-            {
-              "phase": 18,
-              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_18.png",
-              "size": 4466
-            },
-            {
-              "phase": 19,
-              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_19.png",
-              "size": 4498
-            },
-            {
-              "phase": 20,
-              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_20.png",
-              "size": 4434
-            },
-            {
-              "phase": 21,
-              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_21.png",
-              "size": 4236
-            },
-            {
-              "phase": 22,
-              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_22.png",
-              "size": 3969
-            },
-            {
-              "phase": 23,
-              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_23.png",
-              "size": 3265
-            },
-            {
-              "phase": 24,
-              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_24.png",
-              "size": 2039
-            },
-            {
-              "phase": 25,
-              "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_25.png",
-              "size": 1074
+              "size": 2699,
+              "width": 80,
+              "height": 80
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_013_punktacja_phase_00.png",
-          "offset": 588015,
-          "size": 2678,
-          "pixel_size": 3224,
+          "offset": 587831,
+          "size": 2783,
           "width": 62,
           "height": 52,
           "name": "punktacja",
@@ -455,16 +359,17 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_013_punktacja_phase_00.png",
-              "size": 2678
+              "size": 2783,
+              "width": 62,
+              "height": 52
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_014_punktacja_phase_00.png",
-          "offset": 591611,
-          "size": 2643,
-          "pixel_size": 3224,
+          "offset": 591427,
+          "size": 2730,
           "width": 62,
           "height": 52,
           "name": "punktacja",
@@ -475,16 +380,17 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_014_punktacja_phase_00.png",
-              "size": 2643
+              "size": 2730,
+              "width": 62,
+              "height": 52
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_015_punktacja_phase_00.png",
-          "offset": 595207,
-          "size": 2341,
-          "pixel_size": 3224,
+          "offset": 595023,
+          "size": 2498,
           "width": 62,
           "height": 52,
           "name": "punktacja",
@@ -495,16 +401,17 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_015_punktacja_phase_00.png",
-              "size": 2341
+              "size": 2498,
+              "width": 62,
+              "height": 52
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_016_punktacja_phase_00.png",
-          "offset": 598803,
-          "size": 2551,
-          "pixel_size": 3224,
+          "offset": 598619,
+          "size": 2797,
           "width": 62,
           "height": 52,
           "name": "punktacja",
@@ -515,16 +422,17 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_016_punktacja_phase_00.png",
-              "size": 2551
+              "size": 2797,
+              "width": 62,
+              "height": 52
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_017_punktacja_phase_00.png",
-          "offset": 602399,
-          "size": 2562,
-          "pixel_size": 3224,
+          "offset": 602215,
+          "size": 2729,
           "width": 62,
           "height": 52,
           "name": "punktacja",
@@ -535,16 +443,17 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_017_punktacja_phase_00.png",
-              "size": 2562
+              "size": 2729,
+              "width": 62,
+              "height": 52
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_018_start 01_phase_00.png",
-          "offset": 605923,
-          "size": 1465,
-          "pixel_size": 1120,
+          "offset": 605811,
+          "size": 1568,
           "width": 35,
           "height": 32,
           "name": "start 01",
@@ -555,16 +464,17 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_018_start 01_phase_00.png",
-              "size": 1465
+              "size": 1568,
+              "width": 35,
+              "height": 32
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_019_start 01_phase_00.png",
-          "offset": 607311,
-          "size": 1379,
-          "pixel_size": 1116,
+          "offset": 607231,
+          "size": 1497,
           "width": 36,
           "height": 31,
           "name": "start 01",
@@ -575,16 +485,17 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_019_start 01_phase_00.png",
-              "size": 1379
+              "size": 1497,
+              "width": 36,
+              "height": 31
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_020_start 01_phase_00.png",
-          "offset": 608726,
-          "size": 1449,
-          "pixel_size": 1085,
+          "offset": 608615,
+          "size": 1553,
           "width": 35,
           "height": 31,
           "name": "start 01",
@@ -595,16 +506,17 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_020_start 01_phase_00.png",
-              "size": 1449
+              "size": 1553,
+              "width": 35,
+              "height": 31
             }
           ]
         },
         {
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_021_start 01_phase_00.png",
-          "offset": 610172,
-          "size": 1431,
-          "pixel_size": 1147,
+          "offset": 609999,
+          "size": 1560,
           "width": 37,
           "height": 31,
           "name": "start 01",
@@ -615,7 +527,9 @@
             {
               "phase": 0,
               "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_021_start 01_phase_00.png",
-              "size": 1431
+              "size": 1560,
+              "width": 37,
+              "height": 31
             }
           ]
         }
@@ -636,12 +550,13 @@
             "width": 80,
             "height": 80,
             "phase_count": 1,
-            "phase_hint": 589505315,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_000_z1_phase_00.png",
-                "size": 2679
+                "size": 2675,
+                "width": 80,
+                "height": 80
               }
             ]
           },
@@ -654,12 +569,13 @@
             "width": 80,
             "height": 80,
             "phase_count": 1,
-            "phase_hint": 589505315,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_001_z2_phase_00.png",
-                "size": 2293
+                "size": 2294,
+                "width": 80,
+                "height": 80
               }
             ]
           },
@@ -672,12 +588,13 @@
             "width": 80,
             "height": 80,
             "phase_count": 1,
-            "phase_hint": 589505315,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_002_z3_phase_00.png",
-                "size": 2684
+                "size": 2680,
+                "width": 80,
+                "height": 80
               }
             ]
           },
@@ -690,12 +607,13 @@
             "width": 80,
             "height": 80,
             "phase_count": 1,
-            "phase_hint": 589505315,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_003_z4_phase_00.png",
-                "size": 2656
+                "size": 2657,
+                "width": 80,
+                "height": 80
               }
             ]
           },
@@ -708,12 +626,13 @@
             "width": 80,
             "height": 80,
             "phase_count": 1,
-            "phase_hint": 589505315,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_004_z5_phase_00.png",
-                "size": 2502
+                "size": 2502,
+                "width": 80,
+                "height": 80
               }
             ]
           },
@@ -726,12 +645,13 @@
             "width": 80,
             "height": 80,
             "phase_count": 1,
-            "phase_hint": 589505315,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_005_z6_phase_00.png",
-                "size": 2663
+                "size": 2663,
+                "width": 80,
+                "height": 80
               }
             ]
           },
@@ -744,12 +664,13 @@
             "width": 80,
             "height": 80,
             "phase_count": 1,
-            "phase_hint": 589505315,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_006_z7_phase_00.png",
-                "size": 2669
+                "size": 2665,
+                "width": 80,
+                "height": 80
               }
             ]
           },
@@ -762,17 +683,20 @@
             "width": 77,
             "height": 77,
             "phase_count": 2,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_007_kaczuszka_phase_00.png",
-                "size": 2528
+                "size": 2403,
+                "width": 77,
+                "height": 77
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_007_kaczuszka_phase_01.png",
-                "size": 2551
+                "size": 2409,
+                "width": 77,
+                "height": 77
               }
             ]
           },
@@ -785,17 +709,20 @@
             "width": 77,
             "height": 77,
             "phase_count": 2,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_008_kaczuszka_phase_00.png",
-                "size": 2622
+                "size": 2505,
+                "width": 77,
+                "height": 77
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_008_kaczuszka_phase_01.png",
-                "size": 2620
+                "size": 2486,
+                "width": 77,
+                "height": 77
               }
             ]
           },
@@ -808,17 +735,20 @@
             "width": 77,
             "height": 77,
             "phase_count": 2,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_009_kaczuszka_phase_00.png",
-                "size": 2015
+                "size": 1903,
+                "width": 77,
+                "height": 77
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_009_kaczuszka_phase_01.png",
-                "size": 2033
+                "size": 1902,
+                "width": 77,
+                "height": 77
               }
             ]
           },
@@ -831,17 +761,20 @@
             "width": 77,
             "height": 77,
             "phase_count": 2,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_010_kaczuszka_phase_00.png",
-                "size": 2597
+                "size": 2469,
+                "width": 77,
+                "height": 77
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_010_kaczuszka_phase_01.png",
-                "size": 2625
+                "size": 2486,
+                "width": 77,
+                "height": 77
               }
             ]
           },
@@ -854,17 +787,20 @@
             "width": 77,
             "height": 77,
             "phase_count": 2,
-            "phase_hint": 1,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_011_kaczuszka_phase_00.png",
-                "size": 2381
+                "size": 2277,
+                "width": 77,
+                "height": 77
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_011_kaczuszka_phase_01.png",
-                "size": 2384
+                "size": 2249,
+                "width": 77,
+                "height": 77
               }
             ]
           },
@@ -876,138 +812,21 @@
             "blob_size": 166740,
             "width": 80,
             "height": 80,
-            "phase_count": 26,
-            "phase_hint": 13,
+            "phase_count": 2,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_00.png",
-                "size": 1094
+                "size": 2702,
+                "width": 80,
+                "height": 80
               },
               {
                 "phase": 1,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_01.png",
-                "size": 2085
-              },
-              {
-                "phase": 2,
-                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_02.png",
-                "size": 3317
-              },
-              {
-                "phase": 3,
-                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_03.png",
-                "size": 3910
-              },
-              {
-                "phase": 4,
-                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_04.png",
-                "size": 4275
-              },
-              {
-                "phase": 5,
-                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_05.png",
-                "size": 4469
-              },
-              {
-                "phase": 6,
-                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_06.png",
-                "size": 4525
-              },
-              {
-                "phase": 7,
-                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_07.png",
-                "size": 4420
-              },
-              {
-                "phase": 8,
-                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_08.png",
-                "size": 4232
-              },
-              {
-                "phase": 9,
-                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_09.png",
-                "size": 3928
-              },
-              {
-                "phase": 10,
-                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_10.png",
-                "size": 3233
-              },
-              {
-                "phase": 11,
-                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_11.png",
-                "size": 2012
-              },
-              {
-                "phase": 12,
-                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_12.png",
-                "size": 1073
-              },
-              {
-                "phase": 13,
-                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_13.png",
-                "size": 1077
-              },
-              {
-                "phase": 14,
-                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_14.png",
-                "size": 2048
-              },
-              {
-                "phase": 15,
-                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_15.png",
-                "size": 3268
-              },
-              {
-                "phase": 16,
-                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_16.png",
-                "size": 3886
-              },
-              {
-                "phase": 17,
-                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_17.png",
-                "size": 4248
-              },
-              {
-                "phase": 18,
-                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_18.png",
-                "size": 4466
-              },
-              {
-                "phase": 19,
-                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_19.png",
-                "size": 4498
-              },
-              {
-                "phase": 20,
-                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_20.png",
-                "size": 4434
-              },
-              {
-                "phase": 21,
-                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_21.png",
-                "size": 4236
-              },
-              {
-                "phase": 22,
-                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_22.png",
-                "size": 3969
-              },
-              {
-                "phase": 23,
-                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_23.png",
-                "size": 3265
-              },
-              {
-                "phase": 24,
-                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_24.png",
-                "size": 2039
-              },
-              {
-                "phase": 25,
-                "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_25.png",
-                "size": 1074
+                "size": 2699,
+                "width": 80,
+                "height": 80
               }
             ]
           },
@@ -1020,12 +839,13 @@
             "width": 62,
             "height": 52,
             "phase_count": 1,
-            "phase_hint": 3722259165,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_013_punktacja_phase_00.png",
-                "size": 2678
+                "size": 2783,
+                "width": 62,
+                "height": 52
               }
             ]
           },
@@ -1038,12 +858,13 @@
             "width": 62,
             "height": 52,
             "phase_count": 1,
-            "phase_hint": 1431657438,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_014_punktacja_phase_00.png",
-                "size": 2643
+                "size": 2730,
+                "width": 62,
+                "height": 52
               }
             ]
           },
@@ -1056,12 +877,13 @@
             "width": 62,
             "height": 52,
             "phase_count": 1,
-            "phase_hint": 1532319061,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_015_punktacja_phase_00.png",
-                "size": 2341
+                "size": 2498,
+                "width": 62,
+                "height": 52
               }
             ]
           },
@@ -1074,12 +896,13 @@
             "width": 62,
             "height": 52,
             "phase_count": 1,
-            "phase_hint": 1431690545,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_016_punktacja_phase_00.png",
-                "size": 2551
+                "size": 2797,
+                "width": 62,
+                "height": 52
               }
             ]
           },
@@ -1092,12 +915,13 @@
             "width": 62,
             "height": 52,
             "phase_count": 1,
-            "phase_hint": 2052347220,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_017_punktacja_phase_00.png",
-                "size": 2562
+                "size": 2729,
+                "width": 62,
+                "height": 52
               }
             ]
           },
@@ -1110,12 +934,13 @@
             "width": 35,
             "height": 32,
             "phase_count": 1,
-            "phase_hint": 1432048982,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_018_start 01_phase_00.png",
-                "size": 1465
+                "size": 1568,
+                "width": 35,
+                "height": 32
               }
             ]
           },
@@ -1128,12 +953,13 @@
             "width": 36,
             "height": 31,
             "phase_count": 1,
-            "phase_hint": 718942429,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_019_start 01_phase_00.png",
-                "size": 1379
+                "size": 1497,
+                "width": 36,
+                "height": 31
               }
             ]
           },
@@ -1146,12 +972,13 @@
             "width": 35,
             "height": 31,
             "phase_count": 1,
-            "phase_hint": 1432084567,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_020_start 01_phase_00.png",
-                "size": 1449
+                "size": 1553,
+                "width": 35,
+                "height": 31
               }
             ]
           },
@@ -1164,12 +991,13 @@
             "width": 37,
             "height": 31,
             "phase_count": 1,
-            "phase_hint": 824846854,
             "phase_outputs": [
               {
                 "phase": 0,
                 "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_021_start 01_phase_00.png",
-                "size": 1431
+                "size": 1560,
+                "width": 37,
+                "height": 31
               }
             ]
           }
@@ -1998,9 +1826,8 @@
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_000_z1_phase_00.png",
-      "offset": 311171,
-      "size": 2679,
-      "pixel_size": 6400,
+      "offset": 311091,
+      "size": 2675,
       "width": 80,
       "height": 80,
       "name": "z1",
@@ -2011,16 +1838,17 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_000_z1_phase_00.png",
-          "size": 2679
+          "size": 2675,
+          "width": 80,
+          "height": 80
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_001_z2_phase_00.png",
-      "offset": 317839,
-      "size": 2293,
-      "pixel_size": 6400,
+      "offset": 317759,
+      "size": 2294,
       "width": 80,
       "height": 80,
       "name": "z2",
@@ -2031,16 +1859,17 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_001_z2_phase_00.png",
-          "size": 2293
+          "size": 2294,
+          "width": 80,
+          "height": 80
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_002_z3_phase_00.png",
-      "offset": 324507,
-      "size": 2684,
-      "pixel_size": 6400,
+      "offset": 324427,
+      "size": 2680,
       "width": 80,
       "height": 80,
       "name": "z3",
@@ -2051,16 +1880,17 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_002_z3_phase_00.png",
-          "size": 2684
+          "size": 2680,
+          "width": 80,
+          "height": 80
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_003_z4_phase_00.png",
-      "offset": 331175,
-      "size": 2656,
-      "pixel_size": 6400,
+      "offset": 331095,
+      "size": 2657,
       "width": 80,
       "height": 80,
       "name": "z4",
@@ -2071,16 +1901,17 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_003_z4_phase_00.png",
-          "size": 2656
+          "size": 2657,
+          "width": 80,
+          "height": 80
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_004_z5_phase_00.png",
-      "offset": 337843,
+      "offset": 337763,
       "size": 2502,
-      "pixel_size": 6400,
       "width": 80,
       "height": 80,
       "name": "z5",
@@ -2091,16 +1922,17 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_004_z5_phase_00.png",
-          "size": 2502
+          "size": 2502,
+          "width": 80,
+          "height": 80
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_005_z6_phase_00.png",
-      "offset": 344511,
+      "offset": 344431,
       "size": 2663,
-      "pixel_size": 6400,
       "width": 80,
       "height": 80,
       "name": "z6",
@@ -2111,16 +1943,17 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_005_z6_phase_00.png",
-          "size": 2663
+          "size": 2663,
+          "width": 80,
+          "height": 80
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_006_z7_phase_00.png",
-      "offset": 351179,
-      "size": 2669,
-      "pixel_size": 6400,
+      "offset": 351099,
+      "size": 2665,
       "width": 80,
       "height": 80,
       "name": "z7",
@@ -2131,16 +1964,17 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_006_z7_phase_00.png",
-          "size": 2669
+          "size": 2665,
+          "width": 80,
+          "height": 80
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_007_kaczuszka_phase_00.png",
-      "offset": 358385,
-      "size": 2528,
-      "pixel_size": 11858,
+      "offset": 357767,
+      "size": 2403,
       "width": 77,
       "height": 77,
       "name": "kaczuszka",
@@ -2151,21 +1985,24 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_007_kaczuszka_phase_00.png",
-          "size": 2528
+          "size": 2403,
+          "width": 77,
+          "height": 77
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_007_kaczuszka_phase_01.png",
-          "size": 2551
+          "size": 2409,
+          "width": 77,
+          "height": 77
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_008_kaczuszka_phase_00.png",
-      "offset": 371049,
-      "size": 2622,
-      "pixel_size": 11858,
+      "offset": 370431,
+      "size": 2505,
       "width": 77,
       "height": 77,
       "name": "kaczuszka",
@@ -2176,21 +2013,24 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_008_kaczuszka_phase_00.png",
-          "size": 2622
+          "size": 2505,
+          "width": 77,
+          "height": 77
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_008_kaczuszka_phase_01.png",
-          "size": 2620
+          "size": 2486,
+          "width": 77,
+          "height": 77
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_009_kaczuszka_phase_00.png",
-      "offset": 383713,
-      "size": 2015,
-      "pixel_size": 11858,
+      "offset": 383095,
+      "size": 1903,
       "width": 77,
       "height": 77,
       "name": "kaczuszka",
@@ -2201,21 +2041,24 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_009_kaczuszka_phase_00.png",
-          "size": 2015
+          "size": 1903,
+          "width": 77,
+          "height": 77
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_009_kaczuszka_phase_01.png",
-          "size": 2033
+          "size": 1902,
+          "width": 77,
+          "height": 77
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_010_kaczuszka_phase_00.png",
-      "offset": 396377,
-      "size": 2597,
-      "pixel_size": 11858,
+      "offset": 395759,
+      "size": 2469,
       "width": 77,
       "height": 77,
       "name": "kaczuszka",
@@ -2226,21 +2069,24 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_010_kaczuszka_phase_00.png",
-          "size": 2597
+          "size": 2469,
+          "width": 77,
+          "height": 77
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_010_kaczuszka_phase_01.png",
-          "size": 2625
+          "size": 2486,
+          "width": 77,
+          "height": 77
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_011_kaczuszka_phase_00.png",
-      "offset": 409041,
-      "size": 2381,
-      "pixel_size": 11858,
+      "offset": 408423,
+      "size": 2277,
       "width": 77,
       "height": 77,
       "name": "kaczuszka",
@@ -2251,166 +2097,52 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_011_kaczuszka_phase_00.png",
-          "size": 2381
+          "size": 2277,
+          "width": 77,
+          "height": 77
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_011_kaczuszka_phase_01.png",
-          "size": 2384
+          "size": 2249,
+          "width": 77,
+          "height": 77
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_00.png",
-      "offset": 421243,
-      "size": 1094,
-      "pixel_size": 166400,
+      "offset": 421087,
+      "size": 2702,
       "width": 80,
       "height": 80,
       "name": "prąd",
       "id": 12,
       "definition_id": 12,
-      "phase_count": 26,
+      "phase_count": 2,
       "phase_outputs": [
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_00.png",
-          "size": 1094
+          "size": 2702,
+          "width": 80,
+          "height": 80
         },
         {
           "phase": 1,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_01.png",
-          "size": 2085
-        },
-        {
-          "phase": 2,
-          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_02.png",
-          "size": 3317
-        },
-        {
-          "phase": 3,
-          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_03.png",
-          "size": 3910
-        },
-        {
-          "phase": 4,
-          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_04.png",
-          "size": 4275
-        },
-        {
-          "phase": 5,
-          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_05.png",
-          "size": 4469
-        },
-        {
-          "phase": 6,
-          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_06.png",
-          "size": 4525
-        },
-        {
-          "phase": 7,
-          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_07.png",
-          "size": 4420
-        },
-        {
-          "phase": 8,
-          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_08.png",
-          "size": 4232
-        },
-        {
-          "phase": 9,
-          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_09.png",
-          "size": 3928
-        },
-        {
-          "phase": 10,
-          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_10.png",
-          "size": 3233
-        },
-        {
-          "phase": 11,
-          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_11.png",
-          "size": 2012
-        },
-        {
-          "phase": 12,
-          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_12.png",
-          "size": 1073
-        },
-        {
-          "phase": 13,
-          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_13.png",
-          "size": 1077
-        },
-        {
-          "phase": 14,
-          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_14.png",
-          "size": 2048
-        },
-        {
-          "phase": 15,
-          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_15.png",
-          "size": 3268
-        },
-        {
-          "phase": 16,
-          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_16.png",
-          "size": 3886
-        },
-        {
-          "phase": 17,
-          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_17.png",
-          "size": 4248
-        },
-        {
-          "phase": 18,
-          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_18.png",
-          "size": 4466
-        },
-        {
-          "phase": 19,
-          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_19.png",
-          "size": 4498
-        },
-        {
-          "phase": 20,
-          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_20.png",
-          "size": 4434
-        },
-        {
-          "phase": 21,
-          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_21.png",
-          "size": 4236
-        },
-        {
-          "phase": 22,
-          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_22.png",
-          "size": 3969
-        },
-        {
-          "phase": 23,
-          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_23.png",
-          "size": 3265
-        },
-        {
-          "phase": 24,
-          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_24.png",
-          "size": 2039
-        },
-        {
-          "phase": 25,
-          "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_012_pr_d_phase_25.png",
-          "size": 1074
+          "size": 2699,
+          "width": 80,
+          "height": 80
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_013_punktacja_phase_00.png",
-      "offset": 588015,
-      "size": 2678,
-      "pixel_size": 3224,
+      "offset": 587831,
+      "size": 2783,
       "width": 62,
       "height": 52,
       "name": "punktacja",
@@ -2421,16 +2153,17 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_013_punktacja_phase_00.png",
-          "size": 2678
+          "size": 2783,
+          "width": 62,
+          "height": 52
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_014_punktacja_phase_00.png",
-      "offset": 591611,
-      "size": 2643,
-      "pixel_size": 3224,
+      "offset": 591427,
+      "size": 2730,
       "width": 62,
       "height": 52,
       "name": "punktacja",
@@ -2441,16 +2174,17 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_014_punktacja_phase_00.png",
-          "size": 2643
+          "size": 2730,
+          "width": 62,
+          "height": 52
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_015_punktacja_phase_00.png",
-      "offset": 595207,
-      "size": 2341,
-      "pixel_size": 3224,
+      "offset": 595023,
+      "size": 2498,
       "width": 62,
       "height": 52,
       "name": "punktacja",
@@ -2461,16 +2195,17 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_015_punktacja_phase_00.png",
-          "size": 2341
+          "size": 2498,
+          "width": 62,
+          "height": 52
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_016_punktacja_phase_00.png",
-      "offset": 598803,
-      "size": 2551,
-      "pixel_size": 3224,
+      "offset": 598619,
+      "size": 2797,
       "width": 62,
       "height": 52,
       "name": "punktacja",
@@ -2481,16 +2216,17 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_016_punktacja_phase_00.png",
-          "size": 2551
+          "size": 2797,
+          "width": 62,
+          "height": 52
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_017_punktacja_phase_00.png",
-      "offset": 602399,
-      "size": 2562,
-      "pixel_size": 3224,
+      "offset": 602215,
+      "size": 2729,
       "width": 62,
       "height": 52,
       "name": "punktacja",
@@ -2501,16 +2237,17 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_017_punktacja_phase_00.png",
-          "size": 2562
+          "size": 2729,
+          "width": 62,
+          "height": 52
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_018_start 01_phase_00.png",
-      "offset": 605923,
-      "size": 1465,
-      "pixel_size": 1120,
+      "offset": 605811,
+      "size": 1568,
       "width": 35,
       "height": 32,
       "name": "start 01",
@@ -2521,16 +2258,17 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_018_start 01_phase_00.png",
-          "size": 1465
+          "size": 1568,
+          "width": 35,
+          "height": 32
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_019_start 01_phase_00.png",
-      "offset": 607311,
-      "size": 1379,
-      "pixel_size": 1116,
+      "offset": 607231,
+      "size": 1497,
       "width": 36,
       "height": 31,
       "name": "start 01",
@@ -2541,16 +2279,17 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_019_start 01_phase_00.png",
-          "size": 1379
+          "size": 1497,
+          "width": 36,
+          "height": 31
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_020_start 01_phase_00.png",
-      "offset": 608726,
-      "size": 1449,
-      "pixel_size": 1085,
+      "offset": 608615,
+      "size": 1553,
       "width": 35,
       "height": 31,
       "name": "start 01",
@@ -2561,16 +2300,17 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_020_start 01_phase_00.png",
-          "size": 1449
+          "size": 1553,
+          "width": 35,
+          "height": 31
         }
       ]
     },
     {
       "kind": "sprite_holder_png",
       "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_021_start 01_phase_00.png",
-      "offset": 610172,
-      "size": 1431,
-      "pixel_size": 1147,
+      "offset": 609999,
+      "size": 1560,
       "width": 37,
       "height": 31,
       "name": "start 01",
@@ -2581,7 +2321,9 @@
         {
           "phase": 0,
           "path": "extracted_assets\\bdf\\RACHUNEK\\sprite_holder\\00_Sprite_Holder_021_start 01_phase_00.png",
-          "size": 1431
+          "size": 1560,
+          "width": 37,
+          "height": 31
         }
       ]
     },
