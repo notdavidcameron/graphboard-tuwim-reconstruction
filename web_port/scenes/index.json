@@ -23,6 +23,7 @@
     "globalScriptHandlers": []
   },
   "groupsUrl": "groups/index.json",
+  "assetsUrl": "assets/index.json",
   "scenes": [
     {
       "id": "WYBORW",
@@ -2245,9 +2246,11 @@
     "totalPages": 201,
     "totalGroups": 7,
     "totalGroupComponents": 23,
-    "totalGroupAssets": 70,
+    "totalGroupAssets": 176,
     "totalComponents": 580,
     "totalAssets": 2617,
+    "totalDirectAssets": 56,
+    "totalDirectBytes": 268716164,
     "warnings": [
       "167 scene(s) were not listed in START.PRJ and were appended alphabetically."
     ]

@@ -1,6 +1,7 @@
 #include "graphboard/runtime/interpreter.hpp"
 
 #include <cassert>
+#include <cmath>
 #include <string>
 #include <vector>
 
@@ -305,6 +306,53 @@ void OnOpenPage()
     assert(host.trace() == "LoadPage(mich3.bdf) Debug(rycerz.bdf) ");
 }
 
+void testBrzechwaRectStringAndRealValues() {
+    const char* script = R"S(
+void OnOpenPage()
+{
+   int licznik=1;
+   CRect filmy[3];
+   filmy[0].SetRect(438,134,0,0);
+   filmy[1].SetRect(341,129,0,0);
+   filmy[licznik].right=7;
+   filmy[licznik].right+=2;
+
+   float prog=1.15*50;
+   CString base;
+   base.SetString("take");
+   CString wav;
+   wav.Format("%s_%d%%",base.GetString(),3);
+
+   Debug(filmy[licznik].left);
+   Debug(filmy[licznik].top);
+   Debug(filmy[licznik].right);
+   Debug(prog);
+   Debug(wav);
+   Debug(base.GetLength());
+   base.Empty();
+   Debug(base.GetLength());
+   Group.Transparent_Video_Holder.MoveTo(licznik,filmy[licznik].left,filmy[licznik].top);
+}
+)S";
+
+    RecordingHost host;
+    Interpreter interp(script, host);
+    interp.runHandler("OnOpenPage", {});
+    assert(interp.getGlobal("filmy[1].left").toInt() == 341);
+    assert(interp.getGlobal("filmy[1].right").toInt() == 9);
+    assert(interp.getGlobal("prog").isReal());
+    assert(std::abs(interp.getGlobal("prog").toDouble() - 57.5) < 0.000001);
+    assert(interp.getGlobal("wav").toString() == "take_3%");
+    assert(interp.getGlobal("base").toString().empty());
+    assert(host.trace() ==
+           "Debug(341) Debug(129) Debug(9) Debug(57.5) Debug(take_3%) "
+           "Debug(4) Debug(0) Group.Transparent_Video_Holder.MoveTo(1,341,129) ");
+
+    const Value value = Value::real(1.5);
+    assert(value.isReal() && value.isNumeric());
+    assert(value.toInt() == 1 && std::abs(value.toDouble() - 1.5) < 0.000001);
+}
+
 } // namespace
 
 int main() {
@@ -316,5 +364,6 @@ int main() {
     testOnOpenPageGlobals();
     testComponentOutParameters();
     testCStringNavigationHelpers();
+    testBrzechwaRectStringAndRealValues();
     return 0;
 }

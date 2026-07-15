@@ -8,16 +8,18 @@
       "name": "pause",
       "width": 32,
       "height": 32,
-      "url": "../extracted_assets/grp/G_TAN/cursor_00_pause.pgm",
-      "path": "extracted_assets\\grp\\G_TAN\\cursor_00_pause.pgm"
+      "url": "assets/cursors/G_TAN_000.png",
+      "path": "extracted_assets\\grp\\G_TAN\\cursor_00_pause.pgm",
+      "previewPath": "web_port\\assets\\cursors\\G_TAN_000.png"
     },
     {
       "index": 1,
       "name": "action",
       "width": 32,
       "height": 32,
-      "url": "../extracted_assets/grp/G_TAN/cursor_01_action.pgm",
-      "path": "extracted_assets\\grp\\G_TAN\\cursor_01_action.pgm"
+      "url": "assets/cursors/G_TAN_001.png",
+      "path": "extracted_assets\\grp\\G_TAN\\cursor_01_action.pgm",
+      "previewPath": "web_port\\assets\\cursors\\G_TAN_001.png"
     }
   ],
   "components": [
@@ -171,23 +173,219 @@
       "sourceType": "Group.Sprite_Holder",
       "namespace": "Group",
       "index": 2,
-      "z": 50,
+      "z": 7,
       "visible": true,
       "rect": {
-        "x": 0,
+        "x": 640,
         "y": 0,
-        "width": 48,
-        "height": 48
+        "width": 160,
+        "height": 480
       },
-      "geometryConfidence": "synthetic_items",
+      "geometryConfidence": "serialized_entries",
       "itemCount": 5,
       "hitboxes": [],
       "sourceOffset": 978596,
       "geometrySourceOffset": null,
       "privateOffset": 980136,
       "privateSize": 105924,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/grp/G_TAN/sprite_holder/02_Group.Sprite_Holder_000_toolbar_phase_00.png",
+      "assets": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_000_toolbar_phase_00.png",
+          "url": "../extracted_assets/grp/G_TAN/sprite_holder/02_Group.Sprite_Holder_000_toolbar_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_000_toolbar_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 160,
+          "height": 480,
+          "frameCount": null,
+          "offset": 980336,
+          "name": "toolbar",
+          "id": 0,
+          "definitionId": 0,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_000_toolbar_phase_00.png",
+              "url": "../extracted_assets/grp/G_TAN/sprite_holder/02_Group.Sprite_Holder_000_toolbar_phase_00.png"
+            }
+          ],
+          "phaseCount": 1,
+          "instanceOffset": 1085360,
+          "rect": {
+            "x": 640,
+            "y": 0,
+            "width": 160,
+            "height": 480
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 7
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_001_strza_ka_phase_00.png",
+          "url": "../extracted_assets/grp/G_TAN/sprite_holder/02_Group.Sprite_Holder_001_strza_ka_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_001_strza_ka_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 66,
+          "height": 61,
+          "frameCount": null,
+          "offset": 1057404,
+          "name": "strzałka ",
+          "id": 1,
+          "definitionId": 1,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_001_strza_ka_phase_00.png",
+              "url": "../extracted_assets/grp/G_TAN/sprite_holder/02_Group.Sprite_Holder_001_strza_ka_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_001_strza_ka_phase_01.png",
+              "url": "../extracted_assets/grp/G_TAN/sprite_holder/02_Group.Sprite_Holder_001_strza_ka_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1085500,
+          "rect": {
+            "x": 720,
+            "y": 329,
+            "width": 66,
+            "height": 61
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_002_wyb_r 01_phase_00.png",
+          "url": "../extracted_assets/grp/G_TAN/sprite_holder/02_Group.Sprite_Holder_002_wyb_r 01_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_002_wyb_r 01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 77,
+          "height": 64,
+          "frameCount": null,
+          "offset": 1066044,
+          "name": "wybór 01",
+          "id": 2,
+          "definitionId": 2,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_002_wyb_r 01_phase_00.png",
+              "url": "../extracted_assets/grp/G_TAN/sprite_holder/02_Group.Sprite_Holder_002_wyb_r 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_002_wyb_r 01_phase_01.png",
+              "url": "../extracted_assets/grp/G_TAN/sprite_holder/02_Group.Sprite_Holder_002_wyb_r 01_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1085640,
+          "rect": {
+            "x": 717,
+            "y": 404,
+            "width": 77,
+            "height": 64
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_003_strza_ka_phase_00.png",
+          "url": "../extracted_assets/grp/G_TAN/sprite_holder/02_Group.Sprite_Holder_003_strza_ka_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_003_strza_ka_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 40,
+          "height": 49,
+          "frameCount": null,
+          "offset": 1076628,
+          "name": "strzałka ",
+          "id": 3,
+          "definitionId": 3,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_003_strza_ka_phase_00.png",
+              "url": "../extracted_assets/grp/G_TAN/sprite_holder/02_Group.Sprite_Holder_003_strza_ka_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_003_strza_ka_phase_01.png",
+              "url": "../extracted_assets/grp/G_TAN/sprite_holder/02_Group.Sprite_Holder_003_strza_ka_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1085780,
+          "rect": {
+            "x": 704,
+            "y": 14,
+            "width": 40,
+            "height": 49
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_004_strza_ka_phase_00.png",
+          "url": "../extracted_assets/grp/G_TAN/sprite_holder/02_Group.Sprite_Holder_004_strza_ka_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_004_strza_ka_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 41,
+          "height": 49,
+          "frameCount": null,
+          "offset": 1080892,
+          "name": "strzałka ",
+          "id": 4,
+          "definitionId": 4,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_004_strza_ka_phase_00.png",
+              "url": "../extracted_assets/grp/G_TAN/sprite_holder/02_Group.Sprite_Holder_004_strza_ka_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_004_strza_ka_phase_01.png",
+              "url": "../extracted_assets/grp/G_TAN/sprite_holder/02_Group.Sprite_Holder_004_strza_ka_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1085920,
+          "rect": {
+            "x": 744,
+            "y": 14,
+            "width": 41,
+            "height": 49
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 8
+        }
+      ],
       "audio": []
     }
   ],

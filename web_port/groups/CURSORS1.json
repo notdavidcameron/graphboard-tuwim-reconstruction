@@ -8,16 +8,18 @@
       "name": "tu_nie",
       "width": 28,
       "height": 30,
-      "url": "../extracted_assets/grp/CURSORS1/cursor_00_tu_nie.pgm",
-      "path": "extracted_assets\\grp\\CURSORS1\\cursor_00_tu_nie.pgm"
+      "url": "assets/cursors/CURSORS1_000.png",
+      "path": "extracted_assets\\grp\\CURSORS1\\cursor_00_tu_nie.pgm",
+      "previewPath": "web_port\\assets\\cursors\\CURSORS1_000.png"
     },
     {
       "index": 1,
       "name": "action1",
       "width": 28,
       "height": 30,
-      "url": "../extracted_assets/grp/CURSORS1/cursor_01_action1.pgm",
-      "path": "extracted_assets\\grp\\CURSORS1\\cursor_01_action1.pgm"
+      "url": "assets/cursors/CURSORS1_001.png",
+      "path": "extracted_assets\\grp\\CURSORS1\\cursor_01_action1.pgm",
+      "previewPath": "web_port\\assets\\cursors\\CURSORS1_001.png"
     }
   ],
   "components": [
@@ -116,23 +118,269 @@
       "sourceType": "Group.Sprite_Holder",
       "namespace": "Group",
       "index": 1,
-      "z": 50,
+      "z": 1,
       "visible": true,
       "rect": {
-        "x": 0,
+        "x": 569,
         "y": 0,
-        "width": 48,
-        "height": 48
+        "width": 231,
+        "height": 480
       },
-      "geometryConfidence": "synthetic_items",
+      "geometryConfidence": "serialized_entries",
       "itemCount": 6,
       "hitboxes": [],
       "sourceOffset": 3221,
       "geometrySourceOffset": null,
       "privateOffset": 4761,
       "privateSize": 264036,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/grp/CURSORS1/sprite_holder/01_Group.Sprite_Holder_000_toolbar_phase_00.png",
+      "assets": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\CURSORS1\\sprite_holder\\01_Group.Sprite_Holder_000_toolbar_phase_00.png",
+          "url": "../extracted_assets/grp/CURSORS1/sprite_holder/01_Group.Sprite_Holder_000_toolbar_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\CURSORS1\\sprite_holder\\01_Group.Sprite_Holder_000_toolbar_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 160,
+          "height": 480,
+          "frameCount": null,
+          "offset": 4961,
+          "name": "toolbar",
+          "id": 0,
+          "definitionId": 0,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\CURSORS1\\sprite_holder\\01_Group.Sprite_Holder_000_toolbar_phase_00.png",
+              "url": "../extracted_assets/grp/CURSORS1/sprite_holder/01_Group.Sprite_Holder_000_toolbar_phase_00.png"
+            }
+          ],
+          "phaseCount": 1,
+          "instanceOffset": 267957,
+          "rect": {
+            "x": 640,
+            "y": 0,
+            "width": 160,
+            "height": 480
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 7
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\CURSORS1\\sprite_holder\\01_Group.Sprite_Holder_001_wyb_r 01_phase_00.png",
+          "url": "../extracted_assets/grp/CURSORS1/sprite_holder/01_Group.Sprite_Holder_001_wyb_r 01_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\CURSORS1\\sprite_holder\\01_Group.Sprite_Holder_001_wyb_r 01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 77,
+          "height": 64,
+          "frameCount": null,
+          "offset": 82029,
+          "name": "wybór 01",
+          "id": 1,
+          "definitionId": 1,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\CURSORS1\\sprite_holder\\01_Group.Sprite_Holder_001_wyb_r 01_phase_00.png",
+              "url": "../extracted_assets/grp/CURSORS1/sprite_holder/01_Group.Sprite_Holder_001_wyb_r 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\CURSORS1\\sprite_holder\\01_Group.Sprite_Holder_001_wyb_r 01_phase_01.png",
+              "url": "../extracted_assets/grp/CURSORS1/sprite_holder/01_Group.Sprite_Holder_001_wyb_r 01_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 268097,
+          "rect": {
+            "x": 717,
+            "y": 404,
+            "width": 77,
+            "height": 64
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\CURSORS1\\sprite_holder\\01_Group.Sprite_Holder_002_trudno__phase_00.png",
+          "url": "../extracted_assets/grp/CURSORS1/sprite_holder/01_Group.Sprite_Holder_002_trudno__phase_00.png",
+          "renderPath": "extracted_assets\\grp\\CURSORS1\\sprite_holder\\01_Group.Sprite_Holder_002_trudno__phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 102,
+          "height": 98,
+          "frameCount": null,
+          "offset": 92613,
+          "name": "trudność ",
+          "id": 2,
+          "definitionId": 2,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\CURSORS1\\sprite_holder\\01_Group.Sprite_Holder_002_trudno__phase_00.png",
+              "url": "../extracted_assets/grp/CURSORS1/sprite_holder/01_Group.Sprite_Holder_002_trudno__phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\CURSORS1\\sprite_holder\\01_Group.Sprite_Holder_002_trudno__phase_01.png",
+              "url": "../extracted_assets/grp/CURSORS1/sprite_holder/01_Group.Sprite_Holder_002_trudno__phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\grp\\CURSORS1\\sprite_holder\\01_Group.Sprite_Holder_002_trudno__phase_02.png",
+              "url": "../extracted_assets/grp/CURSORS1/sprite_holder/01_Group.Sprite_Holder_002_trudno__phase_02.png"
+            }
+          ],
+          "phaseCount": 3,
+          "instanceOffset": 268237,
+          "rect": {
+            "x": 693,
+            "y": 22,
+            "width": 102,
+            "height": 98
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\CURSORS1\\sprite_holder\\01_Group.Sprite_Holder_003_trudno__phase_00.png",
+          "url": "../extracted_assets/grp/CURSORS1/sprite_holder/01_Group.Sprite_Holder_003_trudno__phase_00.png",
+          "renderPath": "extracted_assets\\grp\\CURSORS1\\sprite_holder\\01_Group.Sprite_Holder_003_trudno__phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 81,
+          "height": 97,
+          "frameCount": null,
+          "offset": 203577,
+          "name": "trudność ",
+          "id": 3,
+          "definitionId": 3,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\CURSORS1\\sprite_holder\\01_Group.Sprite_Holder_003_trudno__phase_00.png",
+              "url": "../extracted_assets/grp/CURSORS1/sprite_holder/01_Group.Sprite_Holder_003_trudno__phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\CURSORS1\\sprite_holder\\01_Group.Sprite_Holder_003_trudno__phase_01.png",
+              "url": "../extracted_assets/grp/CURSORS1/sprite_holder/01_Group.Sprite_Holder_003_trudno__phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\grp\\CURSORS1\\sprite_holder\\01_Group.Sprite_Holder_003_trudno__phase_02.png",
+              "url": "../extracted_assets/grp/CURSORS1/sprite_holder/01_Group.Sprite_Holder_003_trudno__phase_02.png"
+            }
+          ],
+          "phaseCount": 3,
+          "instanceOffset": 268377,
+          "rect": {
+            "x": 708,
+            "y": 156,
+            "width": 81,
+            "height": 97
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\CURSORS1\\sprite_holder\\01_Group.Sprite_Holder_004_strza_ka_phase_00.png",
+          "url": "../extracted_assets/grp/CURSORS1/sprite_holder/01_Group.Sprite_Holder_004_strza_ka_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\CURSORS1\\sprite_holder\\01_Group.Sprite_Holder_004_strza_ka_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 66,
+          "height": 61,
+          "frameCount": null,
+          "offset": 251721,
+          "name": "strzałka ",
+          "id": 4,
+          "definitionId": 4,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\CURSORS1\\sprite_holder\\01_Group.Sprite_Holder_004_strza_ka_phase_00.png",
+              "url": "../extracted_assets/grp/CURSORS1/sprite_holder/01_Group.Sprite_Holder_004_strza_ka_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\CURSORS1\\sprite_holder\\01_Group.Sprite_Holder_004_strza_ka_phase_01.png",
+              "url": "../extracted_assets/grp/CURSORS1/sprite_holder/01_Group.Sprite_Holder_004_strza_ka_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 268517,
+          "rect": {
+            "x": 720,
+            "y": 329,
+            "width": 66,
+            "height": 61
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\CURSORS1\\sprite_holder\\01_Group.Sprite_Holder_005_podgl_d 0_phase_00.png",
+          "url": "../extracted_assets/grp/CURSORS1/sprite_holder/01_Group.Sprite_Holder_005_podgl_d 0_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\CURSORS1\\sprite_holder\\01_Group.Sprite_Holder_005_podgl_d 0_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 60,
+          "height": 62,
+          "frameCount": null,
+          "offset": 260361,
+          "name": "podgląd 0",
+          "id": 5,
+          "definitionId": 5,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\CURSORS1\\sprite_holder\\01_Group.Sprite_Holder_005_podgl_d 0_phase_00.png",
+              "url": "../extracted_assets/grp/CURSORS1/sprite_holder/01_Group.Sprite_Holder_005_podgl_d 0_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\CURSORS1\\sprite_holder\\01_Group.Sprite_Holder_005_podgl_d 0_phase_01.png",
+              "url": "../extracted_assets/grp/CURSORS1/sprite_holder/01_Group.Sprite_Holder_005_podgl_d 0_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 268657,
+          "rect": {
+            "x": 569,
+            "y": 11,
+            "width": 60,
+            "height": 62
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 1
+        }
+      ],
       "audio": []
     },
     {
@@ -298,22 +546,45 @@
       "namespace": "Group",
       "index": 3,
       "z": 0,
-      "visible": false,
+      "visible": true,
       "rect": {
         "x": 0,
         "y": 0,
         "width": 640,
         "height": 480
       },
-      "geometryConfidence": "serialized_entry",
+      "geometryConfidence": "serialized_entries",
       "itemCount": null,
       "hitboxes": [],
       "sourceOffset": 2625425,
-      "geometrySourceOffset": 2626583,
+      "geometrySourceOffset": null,
       "privateOffset": 2626563,
       "privateSize": 307356,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/grp/CURSORS1/bitmap_holder/03_Group.Bitmap_Holder_000_t_o puzzl_640x480.bmp",
+      "assets": [
+        {
+          "kind": "bitmap_holder_bmp",
+          "path": "extracted_assets\\grp\\CURSORS1\\bitmap_holder\\03_Group.Bitmap_Holder_000_t_o puzzl_640x480.bmp",
+          "url": "../extracted_assets/grp/CURSORS1/bitmap_holder/03_Group.Bitmap_Holder_000_t_o puzzl_640x480.bmp",
+          "renderPath": "extracted_assets\\grp\\CURSORS1\\bitmap_holder\\03_Group.Bitmap_Holder_000_t_o puzzl_640x480.bmp",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 640,
+          "height": 480,
+          "frameCount": null,
+          "offset": 2626703,
+          "name": "tło puzzl",
+          "id": 0,
+          "initiallyVisible": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 640,
+            "height": 480
+          },
+          "geometryConfidence": "serialized_entry"
+        }
+      ],
       "audio": []
     }
   ],

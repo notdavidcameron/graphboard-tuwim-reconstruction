@@ -414,20 +414,56 @@ functions for exact semantics.
 sprites, bitmaps, TVH still/live frames, and active group sprites; plays page or
 group RIFF/WAVE clips plus BoardVideo PCM through `waveOut`; advances script and
 clip timers; follows `LoadPage`; and reports recoverable errors in its title.
+The title is derived from the manifest signature or project directory instead
+of being tied to Tuwim.
 
 `.GRP` files are parsed as cursor records followed by the ordinary reflected
 component list. `LoadGroup` resolves beside `START.PRJ`, creates a separate
 `Group.*` namespace, and makes group holders participate in rendering, input,
 callbacks, sound completions, phase animation, and `GotoXY`. `CloseGroup`
 removes their pending state. Mouse hover is tracked per holder, which is
-required by `CURSORS.GRP`: its hotspot slides the toolbar even while a visible
-sprite occupies the same point.
+required by the toolbar groups: their hotspots slide a sprite into place, after
+which the earlier same-layer SpriteHolder receives the click. Page components
+are walked before group components and the first handler wins an equal layer,
+matching `Brzechwa.exe:0040c8f0`.
+
+The active group's cursor record is software-composited after the scene and
+TextHolder pass, using the page palette, transparent index, serialized hotspot,
+and bottom-up padded rows. This matches the final cursor pass in
+`Brzechwa.exe:0040c2c0`; negative `SetCursor` values suppress the pointer.
 
 The current timing fallbacks are 100 ms per sprite phase and 320 px/s for
 `GotoXY`. The local `gbtrace` helper was prepared to measure these, but the
 archival executable available at this checkpoint is not assembled with its DLL
-runtime, so no reliable timing trace was captured. TextHolder drawing, exact
-palette fades, and custom cursor artwork remain deferred.
+runtime, so no reliable timing trace was captured. Exact synchronized TextHolder
+behavior and palette fades remain deferred.
+
+The native player now routes the mouse wheel to a visible TextHolder entry after
+the page enables it with `EnableMouse`. The runtime persists `SetTextOffsets`,
+clamps vertical movement to the serialized text line count/font height, and
+fires `ScrollTextUp`, `ScrollTextDown`, and `EndScrollText` callbacks. Enabled
+text also participates in the native hover/click route, including `MouseMoveIn`,
+`MouseMoveOut`, and `ClickOnText`. This makes the long poem panels on GRZESIU,
+WIES, and MROZ scroll inside their authored rectangles and preserves their
+scripted cursor/playback controls.
+
+## Brzechwa compatibility checkpoint (2026-07-13)
+
+The shipped Brzechwa `START.PRJ` uses schema 0, which omits the shifted signature
+CString. Its 375-byte global setup block declares `mHistory` and `doTanca`.
+Brzechwa scripts additionally require sparse `CRect` arrays/member fields,
+CString `Empty`/`GetLength`/`GetString`/`Format`, and decimal arithmetic.
+
+`WYBOR.BDF` intentionally runs one ambient poem preview at a time. `filmy[25]`
+stores each preview's location; losing those CRect fields caused every clip to
+appear at `(0,0)`. With object paths restored, clip 0 starts at `(438,134)` and
+clip 1 advances to `(341,129)`. Hover remains responsible for highlight/cursor
+changes, while the authored sequence continues independently.
+
+`WIERSZ5.GRP` places its navigation SpriteHolder before an overlapping
+HotSpotHolder on the same layer. Retaining the first equal-layer hit makes the
+left and right fingers dispatch group clips 7 and 8, whose completion loads
+`lato.bdf` and `samo.bdf` respectively.
 
 ## Wanted from the Ghidra renaming agent (notes, no rush)
 

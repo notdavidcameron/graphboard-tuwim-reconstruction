@@ -39,9 +39,9 @@ public:
 //
 // Deliberate simplifications from the original engine, documented so a later
 // pass can close them: expressions do not short-circuit && / || (both sides are
-// evaluated); arrays, CRect/storage member objects, and float values are not yet
-// modeled; the switch parse-cache is not used (semantics are identical, just
-// unoptimized).
+// evaluated); arrays and CRect members use sparse synthetic paths rather than
+// allocated objects; the switch parse-cache is not used (semantics are
+// identical, just unoptimized).
 class Interpreter {
 public:
     Interpreter(std::string source, Host& host);
@@ -99,6 +99,9 @@ private:
     Value parseMultiplicative();
     Value parseUnary();
     Value parsePrimary();
+    // Consume identifier/index/member postfixes into a stable scoped key such
+    // as `filmy[3].left`. Stops before a method call's `(`.
+    std::string parseVariablePath();
     // pos_ at '(' -> consumes through ')'. `outRefs` (when non-null) collects
     // the variable names passed by address (&name), GraphBoard's out-param
     // style: GetDeep(id, &deep). The caller assigns the call's return value to

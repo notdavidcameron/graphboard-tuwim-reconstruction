@@ -68,6 +68,139 @@
       "kind": "WAVE",
       "path": "extracted_assets\\grp\\G_TAN\\embedded\\00_Group.Sound_Holder_004_000ebab6.wav",
       "size": 11870
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_000_toolbar_phase_00.png",
+      "offset": 980336,
+      "size": 35928,
+      "width": 160,
+      "height": 480,
+      "name": "toolbar",
+      "id": 0,
+      "definition_id": 0,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_000_toolbar_phase_00.png",
+          "size": 35928,
+          "width": 160,
+          "height": 480
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_001_strza_ka_phase_00.png",
+      "offset": 1057404,
+      "size": 2890,
+      "width": 66,
+      "height": 61,
+      "name": "strzałka ",
+      "id": 1,
+      "definition_id": 1,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_001_strza_ka_phase_00.png",
+          "size": 2890,
+          "width": 66,
+          "height": 61
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_001_strza_ka_phase_01.png",
+          "size": 2686,
+          "width": 66,
+          "height": 61
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_002_wyb_r 01_phase_00.png",
+      "offset": 1066044,
+      "size": 4454,
+      "width": 77,
+      "height": 64,
+      "name": "wybór 01",
+      "id": 2,
+      "definition_id": 2,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_002_wyb_r 01_phase_00.png",
+          "size": 4454,
+          "width": 77,
+          "height": 64
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_002_wyb_r 01_phase_01.png",
+          "size": 4509,
+          "width": 77,
+          "height": 64
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_003_strza_ka_phase_00.png",
+      "offset": 1076628,
+      "size": 2063,
+      "width": 40,
+      "height": 49,
+      "name": "strzałka ",
+      "id": 3,
+      "definition_id": 3,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_003_strza_ka_phase_00.png",
+          "size": 2063,
+          "width": 40,
+          "height": 49
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_003_strza_ka_phase_01.png",
+          "size": 1959,
+          "width": 40,
+          "height": 49
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_004_strza_ka_phase_00.png",
+      "offset": 1080892,
+      "size": 2024,
+      "width": 41,
+      "height": 49,
+      "name": "strzałka ",
+      "id": 4,
+      "definition_id": 4,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_004_strza_ka_phase_00.png",
+          "size": 2024,
+          "width": 41,
+          "height": 49
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_004_strza_ka_phase_01.png",
+          "size": 1927,
+          "width": 41,
+          "height": 49
+        }
+      ]
     }
   ],
   "component_list_offset": 2148,
@@ -135,7 +268,335 @@
       "display_name": "Group.Sprite_Holder",
       "private_offset": 980136,
       "private_size": 105924,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_000_toolbar_phase_00.png",
+          "offset": 980336,
+          "size": 35928,
+          "width": 160,
+          "height": 480,
+          "name": "toolbar",
+          "id": 0,
+          "definition_id": 0,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_000_toolbar_phase_00.png",
+              "size": 35928,
+              "width": 160,
+              "height": 480
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_001_strza_ka_phase_00.png",
+          "offset": 1057404,
+          "size": 2890,
+          "width": 66,
+          "height": 61,
+          "name": "strzałka ",
+          "id": 1,
+          "definition_id": 1,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_001_strza_ka_phase_00.png",
+              "size": 2890,
+              "width": 66,
+              "height": 61
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_001_strza_ka_phase_01.png",
+              "size": 2686,
+              "width": 66,
+              "height": 61
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_002_wyb_r 01_phase_00.png",
+          "offset": 1066044,
+          "size": 4454,
+          "width": 77,
+          "height": 64,
+          "name": "wybór 01",
+          "id": 2,
+          "definition_id": 2,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_002_wyb_r 01_phase_00.png",
+              "size": 4454,
+              "width": 77,
+              "height": 64
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_002_wyb_r 01_phase_01.png",
+              "size": 4509,
+              "width": 77,
+              "height": 64
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_003_strza_ka_phase_00.png",
+          "offset": 1076628,
+          "size": 2063,
+          "width": 40,
+          "height": 49,
+          "name": "strzałka ",
+          "id": 3,
+          "definition_id": 3,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_003_strza_ka_phase_00.png",
+              "size": 2063,
+              "width": 40,
+              "height": 49
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_003_strza_ka_phase_01.png",
+              "size": 1959,
+              "width": 40,
+              "height": 49
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_004_strza_ka_phase_00.png",
+          "offset": 1080892,
+          "size": 2024,
+          "width": 41,
+          "height": 49,
+          "name": "strzałka ",
+          "id": 4,
+          "definition_id": 4,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_004_strza_ka_phase_00.png",
+              "size": 2024,
+              "width": 41,
+              "height": 49
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_004_strza_ka_phase_01.png",
+              "size": 1927,
+              "width": 41,
+              "height": 49
+            }
+          ]
+        }
+      ],
+      "sprite_holder": {
+        "version": 1,
+        "definition_count": 5,
+        "instance_count": 5,
+        "parsed_definitions": 5,
+        "parsed_instances": 5,
+        "definitions": [
+          {
+            "index": 0,
+            "name": "toolbar",
+            "record_offset": 980148,
+            "blob_offset": 980152,
+            "blob_size": 77064,
+            "width": 160,
+            "height": 480,
+            "phase_count": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_000_toolbar_phase_00.png",
+                "size": 35928,
+                "width": 160,
+                "height": 480
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "strzałka ",
+            "record_offset": 1057216,
+            "blob_offset": 1057220,
+            "blob_size": 8636,
+            "width": 66,
+            "height": 61,
+            "phase_count": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_001_strza_ka_phase_00.png",
+                "size": 2890,
+                "width": 66,
+                "height": 61
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_001_strza_ka_phase_01.png",
+                "size": 2686,
+                "width": 66,
+                "height": 61
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "wybór 01",
+            "record_offset": 1065856,
+            "blob_offset": 1065860,
+            "blob_size": 10580,
+            "width": 77,
+            "height": 64,
+            "phase_count": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_002_wyb_r 01_phase_00.png",
+                "size": 4454,
+                "width": 77,
+                "height": 64
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_002_wyb_r 01_phase_01.png",
+                "size": 4509,
+                "width": 77,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "name": "strzałka ",
+            "record_offset": 1076440,
+            "blob_offset": 1076444,
+            "blob_size": 4260,
+            "width": 40,
+            "height": 49,
+            "phase_count": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_003_strza_ka_phase_00.png",
+                "size": 2063,
+                "width": 40,
+                "height": 49
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_003_strza_ka_phase_01.png",
+                "size": 1959,
+                "width": 40,
+                "height": 49
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "name": "strzałka ",
+            "record_offset": 1080704,
+            "blob_offset": 1080708,
+            "blob_size": 4652,
+            "width": 41,
+            "height": 49,
+            "phase_count": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_004_strza_ka_phase_00.png",
+                "size": 2024,
+                "width": 41,
+                "height": 49
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\grp\\G_TAN\\sprite_holder\\02_Group.Sprite_Holder_004_strza_ka_phase_01.png",
+                "size": 1927,
+                "width": 41,
+                "height": 49
+              }
+            ]
+          }
+        ],
+        "instances": [
+          {
+            "index": 0,
+            "definition_id": 0,
+            "field04": 7,
+            "x": 640,
+            "y": 0,
+            "z": 7,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1085360
+          },
+          {
+            "index": 1,
+            "definition_id": 1,
+            "field04": 8,
+            "x": 720,
+            "y": 329,
+            "z": 8,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1085500
+          },
+          {
+            "index": 2,
+            "definition_id": 2,
+            "field04": 8,
+            "x": 717,
+            "y": 404,
+            "z": 8,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1085640
+          },
+          {
+            "index": 3,
+            "definition_id": 3,
+            "field04": 8,
+            "x": 704,
+            "y": 14,
+            "z": 8,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1085780
+          },
+          {
+            "index": 4,
+            "definition_id": 4,
+            "field04": 8,
+            "x": 744,
+            "y": 14,
+            "z": 8,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 1085920
+          }
+        ]
+      }
     }
   ]
 }

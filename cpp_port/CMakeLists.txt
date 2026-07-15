@@ -62,6 +62,61 @@ add_executable(gbinspect
 
 target_link_libraries(gbinspect PRIVATE graphboard_core nlohmann_json::nlohmann_json)
 
+if(EMSCRIPTEN)
+    # The interpreter is recursive and the core reports parse failures via
+    # exceptions, so wasm exceptions and a generous stack are required.
+    set(GRAPHBOARD_WASM_COMPILE_FLAGS -fwasm-exceptions)
+    set(GRAPHBOARD_WASM_LINK_FLAGS
+        -fwasm-exceptions
+        -sSTACK_SIZE=8388608
+        -sALLOW_MEMORY_GROWTH=1
+    )
+    target_compile_options(graphboard_core PRIVATE ${GRAPHBOARD_WASM_COMPILE_FLAGS})
+    target_compile_options(graphboard_authoring PRIVATE ${GRAPHBOARD_WASM_COMPILE_FLAGS})
+
+    # Same CLI as the native gbinspect, run under node against the real
+    # filesystem so verify_scenes.ps1 can drive the wasm-compiled core.
+    add_executable(gbinspect_node tools/gbinspect.cpp)
+    target_link_libraries(gbinspect_node PRIVATE graphboard_core nlohmann_json::nlohmann_json)
+    target_compile_options(gbinspect_node PRIVATE ${GRAPHBOARD_WASM_COMPILE_FLAGS})
+    target_link_options(gbinspect_node PRIVATE
+        ${GRAPHBOARD_WASM_LINK_FLAGS}
+        -sENVIRONMENT=node
+        -sNODERAWFS=1
+        -sEXIT_RUNTIME=1
+    )
+    target_compile_options(gbinspect PRIVATE ${GRAPHBOARD_WASM_COMPILE_FLAGS})
+    target_link_options(gbinspect PRIVATE
+        ${GRAPHBOARD_WASM_LINK_FLAGS}
+        -sENVIRONMENT=node
+        -sNODERAWFS=1
+        -sEXIT_RUNTIME=1
+    )
+    target_compile_options(gbauthor PRIVATE ${GRAPHBOARD_WASM_COMPILE_FLAGS})
+    target_link_options(gbauthor PRIVATE
+        ${GRAPHBOARD_WASM_LINK_FLAGS}
+        -sENVIRONMENT=node
+        -sNODERAWFS=1
+        -sEXIT_RUNTIME=1
+    )
+
+    # Browser player shim (Phase 1): exports a C API driven from JS.
+    if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/tools/gbweb.cpp)
+        add_executable(gbweb tools/gbweb.cpp)
+        target_link_libraries(gbweb PRIVATE graphboard_core)
+        target_compile_options(gbweb PRIVATE ${GRAPHBOARD_WASM_COMPILE_FLAGS})
+        target_link_options(gbweb PRIVATE
+            ${GRAPHBOARD_WASM_LINK_FLAGS}
+            -sMODULARIZE
+            -sEXPORT_ES6
+            -sENVIRONMENT=web
+            -sEXPORTED_RUNTIME_METHODS=FS,cwrap,HEAPU8,HEAPF32,UTF8ToString,stringToNewUTF8
+            -sEXPORTED_FUNCTIONS=_malloc,_free
+            --no-entry
+        )
+    endif()
+endif()
+
 if(WIN32)
     # CommandLineToArgvW for lossless non-ASCII path handling.
     target_link_libraries(gbinspect PRIVATE shell32)

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multimedialny świat Juliana Tuwima</title>
+<style>
+  html, body {
+    margin: 0; height: 100%;
+    background: #101014; color: #ddd;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    overflow: hidden;
+  }
+  #stage {
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    height: 100%;
+  }
+  #screen { image-rendering: pixelated; background: #000; }
+  #overlay {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 1rem;
+    background: rgba(10, 10, 16, 0.92);
+    text-align: center;
+  }
+  #overlay.hidden { display: none; }
+  #overlay h1 { font-weight: 300; letter-spacing: .04em; margin: 0; }
+  #overlay button {
+    font-size: 1.2rem; padding: .6em 2em; cursor: pointer;
+    background: #2b6cb0; color: #fff; border: 0; border-radius: 6px;
+  }
+  #overlay button:disabled { background: #444; cursor: default; }
+  #progress { font-size: .9rem; color: #9ab; min-height: 1.2em; }
+  #hud {
+    position: absolute; left: 8px; bottom: 6px;
+    font-size: 11px; color: #667; user-select: none;
+  }
+  #fullscreen {
+    position: absolute; right: 8px; bottom: 6px;
+    font-size: 11px; color: #9ab; background: none; border: 1px solid #345;
+    border-radius: 4px; padding: 2px 8px; cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="screen" width="640" height="480"></canvas>
+  <div id="overlay">
+    <h1>Multimedialny świat Juliana Tuwima</h1>
+    <div id="progress">Ładowanie silnika…</div>
+    <button id="start" disabled>Graj</button>
+  </div>
+  <div id="hud"></div>
+  <button id="fullscreen" title="Pełny ekran">⛶</button>
+</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>

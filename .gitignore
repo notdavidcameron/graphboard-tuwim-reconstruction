@@ -33,3 +33,8 @@ desktop.ini
 # extracted_assets/bdf, extracted_assets/direct, and extracted_assets/grp.
 extracted_assets/all_images/
 extracted_assets/all_images_jpeg/
+
+# Session scratch / diagnostics
+_diag/
+.claude/
+wasm_archive/

@@ -390,6 +390,13 @@ into `doc+0x100`/`doc+0x104` — the page's min/max layer (`kOffPageMinLayer`).
 receives the current layer in `deep`, and each holder considers *only* items
 whose layer field equals it:
 
+The host walks the page component list first and the active group component list
+second, stopping as soon as a component reports the point handled. Consequently
+an earlier component wins an equal-layer tie; a group component can replace a
+page hit only when its layer is strictly higher. Brzechwa's `WIERSZ5.GRP` depends
+on this ordering: its finger SpriteHolder precedes the same-layer hotspot that
+reveals it, so the revealed sprite receives the subsequent click.
+
 - `Sprite_Holder`: instance `+0x18` is the layer. (`MinMaxDeep` scans exactly
   this field for its min/max, which is what proves the field's meaning.)
 - `HotSpot_Holder`: record `+0x1c` is the layer.

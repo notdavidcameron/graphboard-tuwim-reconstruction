@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <cctype>
 #include <cmath>
+#include <limits>
 
 namespace graphboard::runtime {
 
@@ -127,13 +128,19 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
         }
         case HolderKind::TextHolder: {
             const auto text = parseTextHolderState(reader);
+            const std::uint32_t lineHeight = text.fontSlots.empty() || text.fontSlots.front().height == 0
+                                                 ? 18u
+                                                 : text.fontSlots.front().height;
             for (std::size_t i = 0; i < text.entries.size(); ++i) {
                 const auto& entry = text.entries[i];
                 auto& item = state.items[static_cast<int>(i)];
-                item["visible"] = Value::integer(0);
+                item["visible"] = Value::integer(entry.initiallyVisible ? 1 : 0);
                 item["z"] = Value::integer(entry.layer);
-                state.texts.push_back(
-                    {entry.left, entry.top, entry.right, entry.bottom, entry.primaryText});
+                item["offsetX"] = Value::integer(0);
+                item["offsetY"] = Value::integer(0);
+                item["mouseEnabled"] = Value::integer(0);
+                state.texts.push_back({entry.left, entry.top, entry.right, entry.bottom,
+                                       entry.primaryText, entry.lineCount, lineHeight});
             }
             break;
         }
@@ -423,7 +430,19 @@ Host::ComponentResult Page::callComponent(const std::string& component, const st
     const int id = static_cast<int>(argInt(args, 0));
     auto& item = state->items[id];
 
-    if (method == "MoveTo" || method == "MoveSprite") {
+    if (state->kind == HolderKind::TextHolder && method == "SetTextOffsets") {
+        item["offsetX"] = Value::integer(argInt(args, 1));
+        item["offsetY"] = Value::integer(argInt(args, 2));
+    } else if (state->kind == HolderKind::TextHolder && method == "GetTextOffsets") {
+        ComponentResult result;
+        result.outArguments[1] = item.count("offsetX") ? item["offsetX"] : Value::integer(0);
+        result.outArguments[2] = item.count("offsetY") ? item["offsetY"] : Value::integer(0);
+        return result;
+    } else if (state->kind == HolderKind::TextHolder && method == "EnableMouse") {
+        item["mouseEnabled"] = Value::integer(1);
+    } else if (state->kind == HolderKind::TextHolder && method == "DisableMouse") {
+        item["mouseEnabled"] = Value::integer(0);
+    } else if (method == "MoveTo" || method == "MoveSprite") {
         // Instant reposition; cancels any glide in progress.
         const auto x = static_cast<std::int32_t>(argInt(args, 1));
         const auto y = static_cast<std::int32_t>(argInt(args, 2));
@@ -893,6 +912,22 @@ Candidate topItemIn(const ComponentState& state, int x, int y) {
                 best.layer = static_cast<std::int32_t>(layer);
             }
         }
+    } else if (state.kind == HolderKind::TextHolder) {
+        // TextHolder accepts hover/click input only while its authored mouse
+        // mode is enabled. GRZESIU/WIES/MROZ use these callbacks to change the
+        // cursor and toggle synchronised poem playback.
+        for (std::size_t r = state.texts.size(); r-- > 0;) {
+            const int id = static_cast<int>(r);
+            if (itemInt(state, id, "visible") == 0 ||
+                itemInt(state, id, "mouseEnabled") == 0) continue;
+            const auto& geom = state.texts[r];
+            if (x < geom.left || x >= geom.right || y < geom.top || y >= geom.bottom) continue;
+            const auto layer = itemInt(state, id, "z");
+            if (best.index == -1 || layer > best.layer) {
+                best.index = id;
+                best.layer = static_cast<std::int32_t>(layer);
+            }
+        }
     }
     return best;
 }
@@ -938,13 +973,16 @@ Page::Hit Page::findHit(int x, int y) const {
             bestLayer = candidate.layer;
         }
     }
-    // Group components are dispatched after page components and win an equal
-    // layer, matching the document's page-list then group-list walk.
+    // Group components are dispatched after page components. Keep the strict
+    // comparison used above: the host stops at the first component that handles
+    // an equal-layer point, so page components precede group components and an
+    // earlier group holder precedes a later one. Brzechwa's navigation fingers
+    // rely on their Sprite_Holder beating the overlapping HotSpot_Holder.
     for (const auto& state : groupComponents_) {
         if (!interactive(state)) continue;
         const auto candidate = topItemIn(state, x, y);
         if (candidate.index == -1) continue;
-        if (hit.index == -1 || candidate.layer >= bestLayer) {
+        if (hit.index == -1 || candidate.layer > bestLayer) {
             hit.index = candidate.index;
             hit.component = state.displayName;
             hit.kind = state.kind;
@@ -997,6 +1035,7 @@ const char* clickEventFor(HolderKind kind) {
         case HolderKind::BitmapHolder:  return "MouseClickOnDown";
         case HolderKind::MultiBitmap:   return "MouseClickOnDown";
         case HolderKind::TransparentVideoHolder: return "MouseClickOnDown";
+        case HolderKind::TextHolder: return "ClickOnText";
         default: return nullptr;
     }
 }
@@ -1155,6 +1194,51 @@ void Page::mouseMove(int x, int y) {
             hoverByComponent_[hit.component] = hit;
         }
     }
+}
+
+bool Page::mouseWheel(int x, int y, int wheelDelta) {
+    if (wheelDelta == 0) return false;
+
+    // Text_Holder owns its scrolling and only accepts input after EnableMouse.
+    // Prefer the highest-layer visible text entry under the pointer, matching
+    // the holder routing used by the rest of the runtime.
+    ComponentState* target = nullptr;
+    int targetId = -1;
+    std::int64_t bestLayer = std::numeric_limits<std::int64_t>::min();
+    for (auto& state : components_) {
+        if (state.kind != HolderKind::TextHolder) continue;
+        for (auto& [id, item] : state.items) {
+            if (id < 0 || static_cast<std::size_t>(id) >= state.texts.size()) continue;
+            if (itemInt(state, id, "visible") == 0 || itemInt(state, id, "mouseEnabled") == 0) continue;
+            const auto& text = state.texts[static_cast<std::size_t>(id)];
+            if (x < text.left || x >= text.right || y < text.top || y >= text.bottom) continue;
+            const auto layer = itemInt(state, id, "z");
+            if (target == nullptr || layer > bestLayer) {
+                target = &state;
+                targetId = id;
+                bestLayer = layer;
+            }
+        }
+    }
+    if (target == nullptr) return false;
+
+    auto& item = target->items[targetId];
+    const auto& text = target->texts[static_cast<std::size_t>(targetId)];
+    const int lineHeight = static_cast<int>(std::max<std::uint32_t>(1, text.lineHeight));
+    const int viewportHeight = std::max(0, text.bottom - text.top);
+    const int contentHeight = static_cast<int>(text.lineCount) * lineHeight;
+    const int minimumOffset = std::min(0, viewportHeight - contentHeight);
+    const int current = static_cast<int>(itemInt(*target, targetId, "offsetY"));
+    const int direction = wheelDelta > 0 ? 1 : -1;
+    const int next = std::clamp(current + direction * lineHeight * 3, minimumOffset, 0);
+    item["offsetY"] = Value::integer(next);
+
+    runEvent(target->displayName + (direction > 0 ? ".ScrollTextUp" : ".ScrollTextDown"),
+             {Value::integer(targetId)});
+    if (next == current) {
+        runEvent(target->displayName + ".EndScrollText", {Value::integer(targetId)});
+    }
+    return true;
 }
 
 } // namespace graphboard::runtime

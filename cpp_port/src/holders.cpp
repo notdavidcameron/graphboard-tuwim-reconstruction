@@ -453,6 +453,10 @@ TextHolderState parseTextHolderState(BinaryReader& reader) {
         entry.layer = static_cast<std::int32_t>(readU32At(record, 0x38));
         entry.hasRenderCache = readU32At(record, 0x70) != 0;
         entry.hasSecondaryText = readU32At(record, 0x90) != 0;
+        // record+0x48 is the initial visibility flag: the poem body and title
+        // carry 1 (shown on open) while the plain karaoke-overlay duplicate of
+        // the same rect carries 0 (revealed only via ShowText during playback).
+        entry.initiallyVisible = readU32At(record, 0x48) != 0;
 
         if (entry.hasRenderCache) {
             if (!entry.hasSecondaryText) {

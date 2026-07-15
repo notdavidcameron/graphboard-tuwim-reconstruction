@@ -8,16 +8,18 @@
       "name": "tu_nie",
       "width": 28,
       "height": 30,
-      "url": "../extracted_assets/grp/G_PIOS/cursor_00_tu_nie.pgm",
-      "path": "extracted_assets\\grp\\G_PIOS\\cursor_00_tu_nie.pgm"
+      "url": "assets/cursors/G_PIOS_000.png",
+      "path": "extracted_assets\\grp\\G_PIOS\\cursor_00_tu_nie.pgm",
+      "previewPath": "web_port\\assets\\cursors\\G_PIOS_000.png"
     },
     {
       "index": 1,
       "name": "actionj",
       "width": 28,
       "height": 30,
-      "url": "../extracted_assets/grp/G_PIOS/cursor_01_actionj.pgm",
-      "path": "extracted_assets\\grp\\G_PIOS\\cursor_01_actionj.pgm"
+      "url": "assets/cursors/G_PIOS_001.png",
+      "path": "extracted_assets\\grp\\G_PIOS\\cursor_01_actionj.pgm",
+      "previewPath": "web_port\\assets\\cursors\\G_PIOS_001.png"
     },
     {
       "index": 2,
@@ -25,15 +27,17 @@
       "width": 28,
       "height": 30,
       "url": null,
-      "path": null
+      "path": null,
+      "previewPath": null
     },
     {
       "index": 3,
       "name": "down",
       "width": 28,
       "height": 30,
-      "url": "../extracted_assets/grp/G_PIOS/cursor_03_down.pgm",
-      "path": "extracted_assets\\grp\\G_PIOS\\cursor_03_down.pgm"
+      "url": "assets/cursors/G_PIOS_003.png",
+      "path": "extracted_assets\\grp\\G_PIOS\\cursor_03_down.pgm",
+      "previewPath": "web_port\\assets\\cursors\\G_PIOS_003.png"
     }
   ],
   "components": [
@@ -129,23 +133,464 @@
       "sourceType": "Group.Sprite_Holder",
       "namespace": "Group",
       "index": 1,
-      "z": 50,
+      "z": 0,
       "visible": true,
       "rect": {
-        "x": 0,
+        "x": 12,
         "y": 0,
-        "width": 48,
-        "height": 48
+        "width": 788,
+        "height": 480
       },
-      "geometryConfidence": "synthetic_items",
+      "geometryConfidence": "serialized_entries",
       "itemCount": 11,
       "hitboxes": [],
       "sourceOffset": 1752528,
       "geometrySourceOffset": null,
       "privateOffset": 1754068,
       "privateSize": 157864,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_004_g_o_no_phase_00.png",
+      "assets": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_004_g_o_no_phase_00.png",
+          "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_004_g_o_no_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_004_g_o_no_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 56,
+          "height": 66,
+          "frameCount": null,
+          "offset": 1789004,
+          "name": "głośno",
+          "id": 0,
+          "definitionId": 4,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_004_g_o_no_phase_00.png",
+              "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_004_g_o_no_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_004_g_o_no_phase_01.png",
+              "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_004_g_o_no_phase_01.png"
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_004_g_o_no_phase_02.png",
+              "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_004_g_o_no_phase_02.png"
+            }
+          ],
+          "phaseCount": 3,
+          "instanceOffset": 1910392,
+          "rect": {
+            "x": 12,
+            "y": 19,
+            "width": 56,
+            "height": 66
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_000_spiew_phase_00.png",
+          "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_000_spiew_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_000_spiew_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 49,
+          "height": 62,
+          "frameCount": null,
+          "offset": 1754268,
+          "name": "spiew",
+          "id": 1,
+          "definitionId": 0,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_000_spiew_phase_00.png",
+              "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_000_spiew_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_000_spiew_phase_01.png",
+              "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_000_spiew_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1910532,
+          "rect": {
+            "x": 13,
+            "y": 325,
+            "width": 49,
+            "height": 62
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_001_muzyka_phase_00.png",
+          "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_001_muzyka_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_001_muzyka_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 58,
+          "height": 59,
+          "frameCount": null,
+          "offset": 1764036,
+          "name": "muzyka",
+          "id": 2,
+          "definitionId": 1,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_001_muzyka_phase_00.png",
+              "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_001_muzyka_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_001_muzyka_phase_01.png",
+              "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_001_muzyka_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1910672,
+          "rect": {
+            "x": 12,
+            "y": 246,
+            "width": 58,
+            "height": 59
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_003_demo_phase_00.png",
+          "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_003_demo_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_003_demo_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 46,
+          "height": 56,
+          "frameCount": null,
+          "offset": 1780820,
+          "name": "demo",
+          "id": 3,
+          "definitionId": 3,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_003_demo_phase_00.png",
+              "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_003_demo_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_003_demo_phase_01.png",
+              "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_003_demo_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1910812,
+          "rect": {
+            "x": 15,
+            "y": 100,
+            "width": 46,
+            "height": 56
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_002_stop_phase_00.png",
+          "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_002_stop_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_002_stop_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 55,
+          "height": 51,
+          "frameCount": null,
+          "offset": 1774764,
+          "name": "stop",
+          "id": 4,
+          "definitionId": 2,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_002_stop_phase_00.png",
+              "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_002_stop_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_002_stop_phase_01.png",
+              "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_002_stop_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1910952,
+          "rect": {
+            "x": 12,
+            "y": 175,
+            "width": 55,
+            "height": 51
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 0
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_005_klawiatur_phase_00.png",
+          "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_005_klawiatur_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_005_klawiatur_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 47,
+          "height": 47,
+          "frameCount": null,
+          "offset": 1800512,
+          "name": "klawiatur",
+          "id": 5,
+          "definitionId": 5,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_005_klawiatur_phase_00.png",
+              "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_005_klawiatur_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_005_klawiatur_phase_01.png",
+              "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_005_klawiatur_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1911092,
+          "rect": {
+            "x": 14,
+            "y": 408,
+            "width": 47,
+            "height": 47
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 5
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_006_toolbar_phase_00.png",
+          "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_006_toolbar_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_006_toolbar_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 160,
+          "height": 480,
+          "frameCount": null,
+          "offset": 1805368,
+          "name": "toolbar",
+          "id": 6,
+          "definitionId": 6,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_006_toolbar_phase_00.png",
+              "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_006_toolbar_phase_00.png"
+            }
+          ],
+          "phaseCount": 1,
+          "instanceOffset": 1911232,
+          "rect": {
+            "x": 640,
+            "y": 0,
+            "width": 160,
+            "height": 480
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 7
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_007_strza_ka_phase_00.png",
+          "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_007_strza_ka_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_007_strza_ka_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 66,
+          "height": 61,
+          "frameCount": null,
+          "offset": 1882436,
+          "name": "strzałka ",
+          "id": 7,
+          "definitionId": 7,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_007_strza_ka_phase_00.png",
+              "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_007_strza_ka_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_007_strza_ka_phase_01.png",
+              "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_007_strza_ka_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1911372,
+          "rect": {
+            "x": 721,
+            "y": 329,
+            "width": 66,
+            "height": 61
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_008_wyb_r 01_phase_00.png",
+          "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_008_wyb_r 01_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_008_wyb_r 01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 77,
+          "height": 64,
+          "frameCount": null,
+          "offset": 1891076,
+          "name": "wybór 01",
+          "id": 8,
+          "definitionId": 8,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_008_wyb_r 01_phase_00.png",
+              "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_008_wyb_r 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_008_wyb_r 01_phase_01.png",
+              "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_008_wyb_r 01_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1911512,
+          "rect": {
+            "x": 717,
+            "y": 404,
+            "width": 77,
+            "height": 64
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_009_strza_ka_phase_00.png",
+          "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_009_strza_ka_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_009_strza_ka_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 40,
+          "height": 49,
+          "frameCount": null,
+          "offset": 1901660,
+          "name": "strzałka ",
+          "id": 9,
+          "definitionId": 9,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_009_strza_ka_phase_00.png",
+              "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_009_strza_ka_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_009_strza_ka_phase_01.png",
+              "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_009_strza_ka_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1911652,
+          "rect": {
+            "x": 704,
+            "y": 14,
+            "width": 40,
+            "height": 49
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_010_strza_ka_phase_00.png",
+          "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_010_strza_ka_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_010_strza_ka_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 41,
+          "height": 49,
+          "frameCount": null,
+          "offset": 1905924,
+          "name": "strzałka ",
+          "id": 10,
+          "definitionId": 10,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_010_strza_ka_phase_00.png",
+              "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_010_strza_ka_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\G_PIOS\\sprite_holder\\01_Group.Sprite_Holder_010_strza_ka_phase_01.png",
+              "url": "../extracted_assets/grp/G_PIOS/sprite_holder/01_Group.Sprite_Holder_010_strza_ka_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 1911792,
+          "rect": {
+            "x": 744,
+            "y": 14,
+            "width": 41,
+            "height": 49
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 8
+        }
+      ],
       "audio": []
     },
     {
@@ -217,5 +662,7 @@
       "audio": []
     }
   ],
-  "warnings": []
+  "warnings": [
+    "Cursor 2 (upwn) has no extracted pixel bitmap."
+  ]
 }

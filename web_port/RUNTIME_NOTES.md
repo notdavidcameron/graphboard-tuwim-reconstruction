@@ -87,7 +87,56 @@ with Ghidra; see "How the board routes raw input" in `component_interfaces.md`):
 - Every callback fires **only if** the page script defines that top-level
   handler.
 
-## Current web-port checkpoint (v55)
+## Current web-port checkpoint (v57)
+
+- **The group toolbar is now the real serialized one, not a guess.** The GRP
+  extractor (`graphboard_extract_assets.py parse_grp`) now decodes
+  `Group.Sprite_Holder` / `Group.Bitmap_Holder` blobs with the exact same
+  layout as their page counterparts, baking PNGs with the palette of the first
+  page whose script loads that group (`find_group_palette`; GRPs carry no
+  palette — at runtime the board draws group sprites with the live page
+  palette). All 7 groups export their definitions and placed instances:
+  CURSORS 12, CURSORS1 6, CURSORS2 13, G_PIOS 11, G_REC 37, G_TAN 5,
+  GR_CZYM 20.
+- The recovered CURSORS toolbar is a 160x480 `toolbar` panel parked at x=640
+  plus buttons parked at x~675-745 (off the 640px page): wyjscie (exit),
+  strzalka lewo/prawo, ksiazka (recitation -> `*_R`), biedronka (roznice),
+  puzzle, wybor (plansza glowna), trudnosc latwe/trudne, text toggle. Scripts
+  glide them in from the right edge; the click->highlight->toolbar-slide-out->
+  `Group.Sprite_Holder.InPlace(0,640,..)`->`LoadPage` chain is verified
+  end-to-end in the browser (DYZIO book button navigates to dyzio_r.bdf).
+- `loadGroup` honours each instance's serialized visibility and initial phase,
+  and only creates a synthetic placeholder for an id with no recovered sprite.
+  The invented toolbar labels ("Home"/"R"/"C"/"Easy"...) are gone — they
+  mislabelled the real buttons.
+
+## Previous checkpoint (v56)
+
+- **Script-interpreter parity with the cpp_port (matches its 2026-07 variable
+  path / CRect / CString / Real work):**
+  - Variable paths are canonicalized like the cpp_port's `parseVariablePath`:
+    `zwrotki[index].right`, `matrix[x][y]`, `progress.left` all resolve to
+    stable keys with each index expression evaluated once. Assignments,
+    `+=`-style compound ops, and `++`/`--` accept full paths.
+  - `CRect x[size]` declarations accept expression sizes (`CRect
+    zwrotki[maxZwrotek]`), and `x.SetRect(l,t,r,b)` populates
+    `x.left/.top/.right/.bottom` (missing args -> 0).
+  - CString members: `SetString`, `Format` (cpp `formatCString`: `%s`/`%d`
+    consume args, `%d` coerces to int, `%%` literal, unknown specifiers pass
+    through), `Empty`, `GetLength`, `GetString` — all path-addressable.
+  - Real (floating-point) literals parse and propagate; `/` truncates only
+    when both operands are integers. Known divergence: JS numbers cannot tag
+    `2.0` as Real, so an integral real literal degrades to int division — no
+    corpus script uses one (the only real literal in the corpus is `0.64`,
+    the `Recorder.Progress` bar scale in the `*_R` pages).
+  - Comparisons follow cpp `Value::compare`: numeric when both sides are
+    numeric, otherwise string comparison; `<>` is accepted as not-equal.
+  - Verified by `tests/interpreter_test.js` (semantics against ABEC_R's real
+    script patterns) and `tests/corpus_smoke.js` (OnOpenPage/OnTimer/
+    OnLButtonDown/OnKeyDown over all 175 scripted scenes, zero crashes).
+    Run both with `node`.
+
+## Previous checkpoint (v55)
 
 - The exporter now consumes the recovered SpriteHolder definition/instance
   split. It emits 919 placed instances across the corpus with their saved

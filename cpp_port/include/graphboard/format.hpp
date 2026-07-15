@@ -23,6 +23,8 @@ struct ProjectManifest {
     std::uint32_t audioPresetIndex = 0;   // audioManager+0x20; only project field it owns
     std::vector<std::string> pageNames;
     std::vector<std::string> groupNames;
+    // Absent (and therefore empty) in version-0 manifests. Version 1 stores a
+    // byte-shifted game signature between the group table and script block.
     std::string encodedSignature;
     std::string decodedSignature;
     // Trailing block is the group/global script editor's text (doc +0xa0),
