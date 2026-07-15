@@ -7,6 +7,20 @@ function graphBoardZIndex(namespace, logicalZ, componentOrder = 0, itemOrder = 0
   return 10000000 + (Number(logicalZ) || 0) * 100000 + (namespace === "Group" ? 20000 : 60000) + (999 - (Number(componentOrder) || 0)) * 100 + (Number(itemOrder) || 0);
 }
 
+function graphBoardInputZIndex(componentOrder = 0, itemOrder = 0) {
+  if (window.GraphBoardInputZIndex) return window.GraphBoardInputZIndex(componentOrder, itemOrder);
+  const component = Math.max(0, Math.min(999, Number(componentOrder) || 0));
+  const item = Math.max(0, Math.min(99, Number(itemOrder) || 0));
+  return 2140000000 + (999 - component) * 100 + item;
+}
+
+function graphBoardDragZIndex(componentOrder = 0, itemOrder = 0) {
+  if (window.GraphBoardDragZIndex) return window.GraphBoardDragZIndex(componentOrder, itemOrder);
+  const component = Math.max(0, Math.min(999, Number(componentOrder) || 0));
+  const item = Math.max(0, Math.min(99, Number(itemOrder) || 0));
+  return 2141000000 + (999 - component) * 100 + item;
+}
+
 class GraphBoardRuntime {
   constructor(stage, logTarget) {
     this.stage = stage;
@@ -41,6 +55,8 @@ class GraphBoardRuntime {
     this.dragModes = new Map();
     this.disabledDragItems = new Set();
     this.pointerInteraction = null;
+    this.pendingAudio = new Map();
+    this.audioUnlocked = false;
     this.userInputDepth = 0;
     this.trustedCallbackDepth = 0;
     this.handlerStack = [];
@@ -68,6 +84,8 @@ class GraphBoardRuntime {
     this.dragModes.clear();
     this.disabledDragItems.clear();
     this.pointerInteraction = null;
+    this.pendingAudio.clear();
+    this.audioUnlocked = false;
     this.userInputDepth = 0;
     this.trustedCallbackDepth = 0;
     this.handlerStack = [];
@@ -161,14 +179,14 @@ class GraphBoardRuntime {
         const endedType = this.normalizeType(audio.dataset.componentType);
         const id = Number(audio.dataset.runtimeId ?? audio.dataset.assetId ?? 0);
         const ns = audio.dataset.runtimeNamespace || "Page";
-        this.executeHandler(`${ns === "Group" ? "Group." : ""}${endedType}.EndPlaySound`, [id]);
-        if (endedType === "Sound_Holder" && ns === "Page") this.executeHandler("Sound_Holder.EndPlaySound", [id]);
+        this.executeHandlerIfPresent(`${ns === "Group" ? "Group." : ""}${endedType}.EndPlaySound`, [id]);
+        if (endedType === "Sound_Holder" && ns === "Page") this.executeHandlerIfPresent("Sound_Holder.EndPlaySound", [id]);
       });
     }
   }
 
   clearTimers() {
-    for (const timer of this.timers) clearTimeout(timer);
+    for (const timer of this.timers) clearInterval(timer);
     this.timers = [];
   }
 
@@ -290,11 +308,21 @@ class GraphBoardRuntime {
 
   runUserInput(callback) {
     this.userInputDepth += 1;
+    this.audioUnlocked = true;
     try {
-      return callback();
+      const result = callback();
+      this.retryPendingAudio();
+      return result;
     } finally {
       this.userInputDepth -= 1;
     }
+  }
+
+  retryPendingAudio() {
+    if (!this.pendingAudio.size) return;
+    const pending = [...this.pendingAudio.values()];
+    this.pendingAudio.clear();
+    for (const item of pending) this.playAudio(item.type, item.id, item.namespace);
   }
 
   createSyntheticLayer(namespace, type, id, rect = null) {
@@ -310,24 +338,12 @@ class GraphBoardRuntime {
     layer.dataset.runtimeKey = this.key(namespace, type, id);
     layer.title = `${namespace} ${type} ${id}`;
     if (namespace === "Group" && type === "Sprite_Holder") {
-      const labels = {
-        0: "",
-        1: "Home",
-        2: "<",
-        3: ">",
-        4: "R",
-        5: "C",
-        6: "P",
-        7: "Home",
-        8: "Easy",
-        9: "Hard",
-        10: "Back",
-        11: "Text",
-      };
+      // Fallback only: every shipped group now exports its real sprite
+      // instances, so this placeholder appears only for unrecovered items.
+      // Never invent a label -- the real button art/meaning lives in the
+      // serialized instances (see extracted_assets/grp/*/metadata.json).
       layer.dataset.toolbar = "1";
-      layer.dataset.toolbarLabel = labels[id] ?? String(id);
-      layer.title = layer.dataset.toolbarLabel ? `${layer.dataset.toolbarLabel} toolbar button` : "Toolbar";
-      if (layer.dataset.toolbarLabel) layer.textContent = layer.dataset.toolbarLabel;
+      layer.title = `Group sprite ${id} (asset not recovered)`;
     }
     const defaultRect = rect || { x: 0, y: 0, width: type === "Puzzle" ? 580 : 48, height: type === "Puzzle" ? 480 : 48 };
     layer.style.left = `${defaultRect.x}px`;
@@ -421,7 +437,10 @@ class GraphBoardRuntime {
     layer.style.top = `${Number(y) || 0}px`;
     if (Number.isFinite(Number(z))) {
       layer.dataset.logicalZ = String(Number(z));
-      layer.style.zIndex = String(graphBoardZIndex(namespace, Number(z), Number(layer.dataset.componentOrder), Number(layer.dataset.itemOrder)));
+      const zIndex = this.normalizeType(type) === "Sprite_Holder" && layer.dataset.draggable === "1"
+        ? graphBoardDragZIndex(layer.dataset.componentOrder, layer.dataset.itemOrder)
+        : graphBoardZIndex(namespace, Number(z), Number(layer.dataset.componentOrder), Number(layer.dataset.itemOrder));
+      layer.style.zIndex = String(zIndex);
     }
     // Real holder instances retain their serialized/show-hide visibility when
     // moved. Only synthetic placeholders need their first move to reveal them
@@ -547,7 +566,10 @@ class GraphBoardRuntime {
     const layer = this.findLayer(type, id, namespace, true);
     if (layer && Number.isFinite(Number(z))) {
       layer.dataset.logicalZ = String(Number(z));
-      layer.style.zIndex = String(graphBoardZIndex(namespace, Number(z), Number(layer.dataset.componentOrder), Number(layer.dataset.itemOrder)));
+      const zIndex = this.normalizeType(type) === "Sprite_Holder" && layer.dataset.draggable === "1"
+        ? graphBoardDragZIndex(layer.dataset.componentOrder, layer.dataset.itemOrder)
+        : graphBoardZIndex(namespace, Number(z), Number(layer.dataset.componentOrder), Number(layer.dataset.itemOrder));
+      layer.style.zIndex = String(zIndex);
     }
   }
 
@@ -745,11 +767,25 @@ class GraphBoardRuntime {
       this.log(`${namespace}.${type}.PlayDSound(${id}) missing audio`);
       return;
     }
-    for (const item of this.audio.values()) {
-      if (item !== audio && item.dataset.componentType === this.normalizeType(type) && item.dataset.runtimeNamespace === namespace) item.pause();
+    const pendingKey = this.key(namespace, type, id);
+    this.pendingAudio.delete(pendingKey);
+    audio.pause();
+    try {
+      audio.currentTime = 0;
+      audio.load();
+    } catch (error) {
+      this.log(`${namespace}.${type}.PlayDSound(${id}) reset failed: ${error.message}`);
     }
-    audio.currentTime = 0;
-    audio.play().catch((error) => this.log(`audio blocked: ${error.message}`));
+    const playPromise = audio.play();
+    if (playPromise?.catch) {
+      playPromise.catch((error) => {
+        const message = error?.message || String(error);
+        if (error?.name === "NotAllowedError" || /user didn't interact|not allowed/i.test(message)) {
+          this.pendingAudio.set(pendingKey, { type, id, namespace });
+        }
+        this.log(`audio blocked: ${message}`);
+      });
+    }
     this.log(`${namespace}.${type}.PlayDSound(${id})`);
   }
 
@@ -988,22 +1024,27 @@ class GraphBoardRuntime {
       this.returning = true;
       return;
     }
-    match = /^(?:int|long|short|bool|float|double|char|CString|UINT)\s+([A-Za-z_][A-Za-z0-9_]*(?:\s*\[\s*\d+\s*\])?)$/.exec(statement);
+    // Bare declaration (`CString plikTMP;`, `CRect zwrotki[maxZwrotek];`).
+    // Array sizes are expressions in the real scripts, not literals.
+    match = /^(?:int|long|short|bool|float|double|char|CString|CRect|CPoint|UINT|DWORD|BOOL)\s+([A-Za-z_][A-Za-z0-9_]*)\s*(?:\[([^\]]+)\])?$/.exec(statement);
     if (match) {
-      const array = /^([A-Za-z_][A-Za-z0-9_]*)\s*\[\s*(\d+)\s*\]$/.exec(match[1]);
-      if (array) {
-        for (let index = 0; index < Number(array[2]); index += 1) this.variables.set(`${array[1]}[${index}]`, 0);
+      if (match[2] !== undefined) {
+        const size = Math.max(0, Math.min(4096, Math.trunc(Number(this.valueOf(match[2])) || 0)));
+        for (let index = 0; index < size; index += 1) {
+          if (!this.variables.has(`${match[1]}[${index}]`)) this.variables.set(`${match[1]}[${index}]`, 0);
+        }
       } else if (!this.variables.has(match[1])) {
         this.variables.set(match[1], 0);
       }
       return;
     }
-    match = /^(?:(?:int|long|short|bool|float|double|char|CString|UINT)\s+)?([A-Za-z_][A-Za-z0-9_]*(?:\s*\[[^\]]+\])?)\s*=\s*(.+)$/.exec(statement);
+    const pathPattern = "[A-Za-z_][A-Za-z0-9_]*(?:\\s*\\[[^\\]]+\\]|\\s*\\.\\s*[A-Za-z_][A-Za-z0-9_]*)*";
+    match = new RegExp(`^(?:(?:int|long|short|bool|float|double|char|CString|CRect|CPoint|UINT|DWORD|BOOL)\\s+)?(${pathPattern})\\s*=\\s*([\\s\\S]+)$`).exec(statement);
     if (match && !/^[=!<>]/.test(match[2])) {
       this.variables.set(this.variableKey(match[1]), this.valueOf(match[2]));
       return;
     }
-    match = /^([A-Za-z_][A-Za-z0-9_]*(?:\s*\[[^\]]+\])?)\s*([+\-*/%])=\s*(.+)$/.exec(statement);
+    match = new RegExp(`^(${pathPattern})\\s*([+\\-*/%])=\\s*([\\s\\S]+)$`).exec(statement);
     if (match) {
       const key = this.variableKey(match[1]);
       const left = this.valueOf(key);
@@ -1012,7 +1053,7 @@ class GraphBoardRuntime {
       this.variables.set(key, this.applyOperator(left, right, op));
       return;
     }
-    match = /^([A-Za-z_][A-Za-z0-9_]*(?:\s*\[[^\]]+\])?)\s*(\+\+|--)$/.exec(statement);
+    match = new RegExp(`^(${pathPattern})\\s*(\\+\\+|--)$`).exec(statement);
     if (match) {
       const key = this.variableKey(match[1]);
       this.variables.set(key, this.valueOf(key) + (match[2] === "++" ? 1 : -1));
@@ -1033,7 +1074,9 @@ class GraphBoardRuntime {
       case "+": return typeof left === "string" || typeof right === "string" ? `${left}${right}` : l + r;
       case "-": return l - r;
       case "*": return l * r;
-      case "/": return r ? Math.trunc(l / r) : 0;
+      // Integer division truncates (GraphBoard ints); a real operand divides
+      // exactly, matching the cpp_port's Int/Real value split.
+      case "/": return r ? (Number.isInteger(l) && Number.isInteger(r) ? Math.trunc(l / r) : l / r) : 0;
       case "%": return r ? l % r : 0;
       default: return 0;
     }
@@ -1041,13 +1084,13 @@ class GraphBoardRuntime {
 
   findTopLevelCalls(statement) {
     const calls = [];
-    const re = /([A-Za-z_][A-Za-z0-9_.]*)\s*\(/g;
+    const re = /([A-Za-z_][A-Za-z0-9_]*(?:\s*\[[^\]]*\]|\s*\.\s*[A-Za-z_][A-Za-z0-9_]*)*)\s*\(/g;
     let match;
     while ((match = re.exec(statement))) {
-      const start = statement.indexOf("(", match.index);
+      const start = match.index + match[0].length - 1;
       const balanced = this.readBalanced(statement, start, "(", ")");
       if (balanced.end > start) {
-        calls.push({ method: match[1], args: balanced.text });
+        calls.push({ method: match[1].replace(/\s+/g, ""), args: balanced.text });
         re.lastIndex = balanced.end;
       }
     }
@@ -1058,7 +1101,7 @@ class GraphBoardRuntime {
     if (!text.trim()) return [];
     return this.splitArgs(text).map((part) => {
       const token = part.trim();
-      if (/^&\s*[A-Za-z_][A-Za-z0-9_]*(?:\s*\[[^\]]+\])?$/.test(token)) return { ref: this.variableKey(token.replace(/^&\s*/, "")) };
+      if (/^&\s*[A-Za-z_][A-Za-z0-9_]*(?:\s*\[[^\]]+\]|\s*\.\s*[A-Za-z_][A-Za-z0-9_]*)*$/.test(token)) return { ref: this.variableKey(token.replace(/^&\s*/, "")) };
       return this.valueOf(token);
     });
   }
@@ -1258,11 +1301,59 @@ class GraphBoardRuntime {
     this.executeBlock(body, args);
   }
 
+  // Canonicalize a variable path (`zwrotki[i].right`, `matrix[x][y]`) into the
+  // stable key the cpp_port interpreter stores sparse array/object fields
+  // under: each index expression is evaluated once and members are appended.
   variableKey(expr) {
     const token = String(expr || "").trim();
-    const match = /^([A-Za-z_][A-Za-z0-9_]*)\s*\[(.+)\]$/.exec(token);
-    if (!match) return token;
-    return `${match[1]}[${this.valueOf(match[2])}]`;
+    const match = /^([A-Za-z_][A-Za-z0-9_]*)([\s\S]*)$/.exec(token);
+    if (!match || !match[2].trim()) return token;
+    let key = match[1];
+    let rest = match[2];
+    while (rest) {
+      rest = rest.replace(/^\s+/, "");
+      if (!rest) break;
+      if (rest.startsWith("[")) {
+        const balanced = this.readBalanced(rest, 0, "[", "]");
+        if (balanced.end <= 0) return token;
+        key += `[${Math.trunc(Number(this.valueOf(balanced.text)) || 0)}]`;
+        rest = rest.slice(balanced.end);
+        continue;
+      }
+      const member = /^\.\s*([A-Za-z_][A-Za-z0-9_]*)/.exec(rest);
+      if (member) {
+        key += `.${member[1]}`;
+        rest = rest.slice(member[0].length);
+        continue;
+      }
+      return token;
+    }
+    return key;
+  }
+
+  // CString::Format. %s/%d consume arguments in order (%d coerces to int),
+  // %% emits a literal percent, any other specifier passes through untouched.
+  formatString(args) {
+    if (!args.length) return "";
+    const format = String(args[0] ?? "");
+    let result = "";
+    let argument = 1;
+    for (let i = 0; i < format.length; i += 1) {
+      if (format[i] !== "%" || i + 1 >= format.length) {
+        result += format[i];
+        continue;
+      }
+      const specifier = format[++i];
+      if (specifier === "%") {
+        result += "%";
+      } else if ((specifier === "s" || specifier === "d") && argument < args.length) {
+        const value = args[argument++];
+        result += specifier === "d" ? String(Math.trunc(Number(value) || 0)) : String(value ?? "");
+      } else {
+        result += `%${specifier}`;
+      }
+    }
+    return result;
   }
 
   stripOuterParens(text) {
@@ -1302,6 +1393,7 @@ class GraphBoardRuntime {
     let token = this.stripOuterParens(expr);
     if (!token) return 0;
     if (/^-?\d+$/.test(token)) return Number(token);
+    if (/^-?(?:\d+\.\d*|\.\d+)(?:[eE][-+]?\d+)?$/.test(token)) return Number(token);
     if (/^".*"$/.test(token) || /^'.*'$/.test(token)) return token.slice(1, -1);
     if (token.startsWith("!")) return this.evaluateCondition(token) ? 1 : 0;
     if (token.startsWith("-") && !/^-?\d+$/.test(token)) return -Number(this.valueOf(token.slice(1)));
@@ -1311,8 +1403,8 @@ class GraphBoardRuntime {
       if (found) return this.applyOperator(this.valueOf(token.slice(0, found.index)), this.valueOf(token.slice(found.index + 1)), found.op);
     }
 
-    const call = /^([A-Za-z_][A-Za-z0-9_.]*)\s*\(([\s\S]*)\)$/.exec(token);
-    if (call) return this.callFunctionValue(call[1], this.parseArgs(call[2]));
+    const call = /^([A-Za-z_][A-Za-z0-9_]*(?:\s*\[[^\]]*\]|\s*\.\s*[A-Za-z_][A-Za-z0-9_]*)*)\s*\(([\s\S]*)\)$/.exec(token);
+    if (call) return this.callFunctionValue(call[1].replace(/\s+/g, ""), this.parseArgs(call[2]));
 
     const key = this.variableKey(token);
     if (this.variables.has(key)) return this.variables.get(key);
@@ -1326,8 +1418,12 @@ class GraphBoardRuntime {
       return min + Math.floor(Math.random() * (Math.max(0, max - min) + 1));
     }
     if (method.endsWith(".GetString")) {
-      const objectName = method.replace(/\.GetString$/, "");
-      return this.variables.get(objectName) ?? "";
+      const key = this.variableKey(method.replace(/\.GetString$/, ""));
+      return String(this.variables.get(key) ?? "");
+    }
+    if (method.endsWith(".GetLength")) {
+      const key = this.variableKey(method.replace(/\.GetLength$/, ""));
+      return String(this.variables.get(key) ?? "").length;
     }
     if (method === "Recorder.IsEmpty") return this.recorder.hasContent ? 0 : 1;
     if (method === "IsProject") return 0;
@@ -1347,15 +1443,21 @@ class GraphBoardRuntime {
     if (andParts.length > 1) return andParts.every((part) => this.evaluateCondition(part));
     const compare = this.findTopLevelCompare(text);
     if (compare) {
-      const left = this.valueOf(text.slice(0, compare.index));
-      const right = this.valueOf(text.slice(compare.index + compare.op.length));
+      // Both numeric -> numeric comparison; a string operand coerces the
+      // other side to text (cpp_port Value::compare semantics).
+      const leftValue = this.valueOf(text.slice(0, compare.index));
+      const rightValue = this.valueOf(text.slice(compare.index + compare.op.length));
+      const numeric = typeof leftValue === "number" && typeof rightValue === "number";
+      const left = numeric ? leftValue : String(leftValue);
+      const right = numeric ? rightValue : String(rightValue);
       switch (compare.op) {
         case "==": return left === right;
-        case "!=": return left !== right;
-        case ">=": return Number(left) >= Number(right);
-        case "<=": return Number(left) <= Number(right);
-        case ">": return Number(left) > Number(right);
-        case "<": return Number(left) < Number(right);
+        case "!=":
+        case "<>": return left !== right;
+        case ">=": return left >= right;
+        case "<=": return left <= right;
+        case ">": return left > right;
+        case "<": return left < right;
       }
     }
     if (text.startsWith("!")) return !this.evaluateCondition(text.slice(1));
@@ -1390,7 +1492,8 @@ class GraphBoardRuntime {
   }
 
   findTopLevelCompare(text) {
-    const ops = ["==", "!=", ">=", "<=", ">", "<"];
+    // "<>" is GraphBoard's alternate not-equal; it must be tried before "<".
+    const ops = ["==", "!=", "<>", ">=", "<=", ">", "<"];
     let depth = 0;
     let quote = "";
     for (let index = 0; index < text.length; index += 1) {
@@ -1434,8 +1537,20 @@ class GraphBoardRuntime {
         this.indexAsset("Group", component, asset);
         if (!asset.url) continue;
         const img = document.createElement("img");
-        img.className = "layer group-layer runtime-hidden";
-        img.src = graphBoardCacheBustUrl(component.type === "Transparent_Video_Holder" && asset.stillUrl ? asset.stillUrl : asset.url);
+        // Sprite/bitmap instances carry their serialized visibility (the real
+        // toolbar starts visible but parked off the 640px page at x>=640);
+        // other holders stay hidden until a script shows them.
+        const serializedVisible = ["Sprite_Holder", "Bitmap_Holder"].includes(this.normalizeType(component.type))
+          ? asset.initiallyVisible !== false
+          : false;
+        img.className = `layer group-layer${serializedVisible ? "" : " runtime-hidden"}`;
+        const initialPhaseAsset = asset.phaseAssets?.find((item) => Number(item.phase) === Number(asset.initialPhase || 0));
+        img.src = graphBoardCacheBustUrl(
+          component.type === "Transparent_Video_Holder" && asset.stillUrl
+            ? asset.stillUrl
+            : (initialPhaseAsset?.url || asset.url)
+        );
+        if (asset.initialPhase !== undefined) img.dataset.phase = String(asset.initialPhase);
         img.alt = `${component.id}:${asset.id ?? ""}`;
         img.dataset.runtimeLayer = "1";
         img.dataset.originalSrc = graphBoardCacheBustUrl(asset.url);
@@ -1497,7 +1612,7 @@ class GraphBoardRuntime {
         button.style.top = `${rect.y}px`;
         button.style.width = `${Math.max(8, rect.width)}px`;
         button.style.height = `${Math.max(8, rect.height)}px`;
-        button.style.zIndex = String(graphBoardZIndex("Group", hotspot.layer ?? component.z, componentOrder, hotspotIndex));
+        button.style.zIndex = String(graphBoardInputZIndex(componentOrder, hotspotIndex));
         button.dataset.baseZIndex = button.style.zIndex;
         button.title = `Group HotSpot ${hotspot.id}`;
         this.bindRuntimeEvents(button, "HotSpot_Holder", Number(hotspot.id), "Group");
@@ -1505,6 +1620,9 @@ class GraphBoardRuntime {
       }
       if (component.type === "Sprite_Holder" && Number(component.itemCount) > 0) {
         for (let id = 0; id < Number(component.itemCount); id += 1) {
+          // Real serialized instances were mounted above; only ids with no
+          // recovered sprite still get a synthetic placeholder button.
+          if (this.layers.get(this.key("Group", "Sprite_Holder", id))) continue;
           const layer = this.createSyntheticLayer("Group", "Sprite_Holder", id, component.rect);
           layer.classList.add("group-layer");
         }
@@ -1573,9 +1691,14 @@ class GraphBoardRuntime {
     this.log(`Puzzle.Open/Mix(${args.join(",")})`);
   }
 
-  setText(id, text = "") {
-    const layer = this.findLayer("Text_Holder", id, "Page", true);
-    layer.textContent = String(text || layer.textContent || "");
+  setText(id, text = "", namespace = "Page") {
+    const value = String(text ?? "");
+    const layer = this.findLayer("Text_Holder", id, namespace, true);
+    layer.textContent = value;
+    // Most pages update Text_Holder from MouseMoveIn and clear it from
+    // MouseMoveOut without an explicit ShowText/HideText call. Treat blank
+    // text as hidden so labels are hover-only instead of persistent.
+    this.setLayerVisible("Text_Holder", id, value.trim().length > 0, namespace);
   }
 
   dispatch(method, args) {
@@ -1611,7 +1734,9 @@ class GraphBoardRuntime {
         this.clearTimers();
         if (Number(args[0]) > 0) {
           const delay = Math.max(1, Number(args[0]));
-          this.timers.push(setTimeout(() => this.executeHandler("OnTimer"), delay));
+          // GraphBoard timers repeat until SetTimer(0) cancels them. Pages use
+          // this for recurring sounds and delayed sprite-drop animations.
+          this.timers.push(setInterval(() => this.executeHandler("OnTimer"), delay));
         }
         this.log(`SetTimer(${args.join(",")})`);
         break;
@@ -1754,7 +1879,7 @@ class GraphBoardRuntime {
         this.setLayerVisible("Text_Holder", Number(args[0]), false, namespace);
         break;
       case "Text_Holder.SetText":
-        this.setText(Number(args[0]), args[1]);
+        this.setText(Number(args[0]), args[1], namespace);
         break;
       case "Text_Holder.PlaySynchroText":
         this.setLayerVisible("Text_Holder", Number(args[0]), true, namespace);
@@ -1871,22 +1996,29 @@ class GraphBoardRuntime {
         this.timers.push(setTimeout(() => this.executeHandler("Recorder.EndPlaySound"), 1000));
         this.log("Recorder.Play()");
         break;
-      default:
-        if (/^[A-Za-z_][A-Za-z0-9_]*\.SetString$/.test(method)) {
-          this.variables.set(method.replace(/\.SetString$/, ""), args[0] ?? "");
-        } else if (/^[A-Za-z_][A-Za-z0-9_]*\.Format$/.test(method)) {
-          const objectName = method.replace(/\.Format$/, "");
-          let index = 1;
-          const formatted = String(args[0] || "").replace(/%[sd]/g, () => String(args[index++] ?? ""));
-          this.variables.set(objectName, formatted);
-        } else if (/^[A-Za-z_][A-Za-z0-9_]*\.SetRect$/.test(method) || method === "SetRect") {
-          this.log(`${method}(${args.join(",")})`);
+      default: {
+        // Local CString/CRect method on a variable path (`plikTMP.Format`,
+        // `zwrotki[2].SetRect`), the cpp_port interpreter's built-in members.
+        const member = /^(.+)\.([A-Za-z_][A-Za-z0-9_]*)$/.exec(local);
+        const objectKey = member ? this.variableKey(member[1]) : "";
+        if (member && member[2] === "SetRect") {
+          const fields = ["left", "top", "right", "bottom"];
+          fields.forEach((field, index) => this.variables.set(`${objectKey}.${field}`, args[index] !== undefined ? args[index] : 0));
+        } else if (member && member[2] === "SetString") {
+          this.variables.set(objectKey, String(args[0] ?? ""));
+        } else if (member && member[2] === "Empty") {
+          this.variables.set(objectKey, "");
+        } else if (member && member[2] === "Format") {
+          this.variables.set(objectKey, this.formatString(args));
+        } else if (member && (member[2] === "GetString" || member[2] === "GetLength")) {
+          // Value-producing; harmless as a statement.
         } else if (!method.includes(".") && this.extractFunctionBody(this.scene?.script?.rawText || "", method)) {
           this.executeHandler(method, args);
         } else if (method.includes(".")) {
           this.log(`stub ${method}(${args.join(",")})`);
         }
         break;
+      }
     }
   }
 }

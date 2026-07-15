@@ -84,6 +84,28 @@ void testProjectManifest() {
     assert(project.globalScriptVersion == 1);
     assert(project.globalScript == "int global1=0;");
     assert(reader.eof());
+
+    // Brzechwa's version-0 layout has no shifted signature CString. The global
+    // script block begins immediately after the group table.
+    std::vector<std::uint8_t> version0;
+    appendU32(version0, 0);
+    appendArchiveString(version0, "intro.bdf");
+    appendArchiveString(version0, "");
+    appendU32(version0, 11);
+    appendU32(version0, 1);
+    appendArchiveString(version0, "wybor.bdf");
+    appendU32(version0, 0);
+    appendU32(version0, 1);
+    appendArchiveString(version0, "CString mHistory; int doTanca=0;");
+
+    graphboard::BinaryReader version0Reader(version0);
+    const auto brzechwa = graphboard::parseProjectManifest(version0Reader);
+    assert(brzechwa.version == 0);
+    assert(brzechwa.encodedSignature.empty());
+    assert(brzechwa.decodedSignature.empty());
+    assert(brzechwa.globalScriptVersion == 1);
+    assert(brzechwa.globalScript == "CString mHistory; int doTanca=0;");
+    assert(version0Reader.eof());
 }
 
 void testBdfHeader() {

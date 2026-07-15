@@ -8,16 +8,18 @@
       "name": "tu_nie",
       "width": 28,
       "height": 30,
-      "url": "../extracted_assets/grp/GR_CZYM/cursor_00_tu_nie.pgm",
-      "path": "extracted_assets\\grp\\GR_CZYM\\cursor_00_tu_nie.pgm"
+      "url": "assets/cursors/GR_CZYM_000.png",
+      "path": "extracted_assets\\grp\\GR_CZYM\\cursor_00_tu_nie.pgm",
+      "previewPath": "web_port\\assets\\cursors\\GR_CZYM_000.png"
     },
     {
       "index": 1,
       "name": "action1",
       "width": 28,
       "height": 30,
-      "url": "../extracted_assets/grp/GR_CZYM/cursor_01_action1.pgm",
-      "path": "extracted_assets\\grp\\GR_CZYM\\cursor_01_action1.pgm"
+      "url": "assets/cursors/GR_CZYM_001.png",
+      "path": "extracted_assets\\grp\\GR_CZYM\\cursor_01_action1.pgm",
+      "previewPath": "web_port\\assets\\cursors\\GR_CZYM_001.png"
     }
   ],
   "components": [
@@ -272,23 +274,819 @@
       "sourceType": "Group.Sprite_Holder",
       "namespace": "Group",
       "index": 2,
-      "z": 50,
+      "z": 1,
       "visible": true,
       "rect": {
-        "x": 0,
+        "x": 17,
         "y": 0,
-        "width": 48,
-        "height": 48
+        "width": 783,
+        "height": 480
       },
-      "geometryConfidence": "synthetic_items",
+      "geometryConfidence": "serialized_entries",
       "itemCount": 20,
       "hitboxes": [],
       "sourceOffset": 2364873,
       "geometrySourceOffset": null,
       "privateOffset": 2366413,
       "privateSize": 114136,
-      "primaryAssetUrl": null,
-      "assets": [],
+      "primaryAssetUrl": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+      "assets": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 40,
+          "height": 38,
+          "frameCount": null,
+          "offset": 2366613,
+          "name": "dobrze",
+          "id": 0,
+          "definitionId": 0,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_01.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 2477749,
+          "rect": {
+            "x": 17,
+            "y": 437,
+            "width": 40,
+            "height": 38
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 40,
+          "height": 38,
+          "frameCount": null,
+          "offset": 2366613,
+          "name": "dobrze",
+          "id": 1,
+          "definitionId": 0,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_01.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 2477889,
+          "rect": {
+            "x": 57,
+            "y": 437,
+            "width": 40,
+            "height": 38
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 40,
+          "height": 38,
+          "frameCount": null,
+          "offset": 2366613,
+          "name": "dobrze",
+          "id": 2,
+          "definitionId": 0,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_01.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 2478029,
+          "rect": {
+            "x": 97,
+            "y": 437,
+            "width": 40,
+            "height": 38
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 40,
+          "height": 38,
+          "frameCount": null,
+          "offset": 2366613,
+          "name": "dobrze",
+          "id": 3,
+          "definitionId": 0,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_01.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 2478169,
+          "rect": {
+            "x": 137,
+            "y": 437,
+            "width": 40,
+            "height": 38
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 40,
+          "height": 38,
+          "frameCount": null,
+          "offset": 2366613,
+          "name": "dobrze",
+          "id": 4,
+          "definitionId": 0,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_01.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 2478309,
+          "rect": {
+            "x": 177,
+            "y": 437,
+            "width": 40,
+            "height": 38
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 40,
+          "height": 38,
+          "frameCount": null,
+          "offset": 2366613,
+          "name": "dobrze",
+          "id": 5,
+          "definitionId": 0,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_01.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 2478449,
+          "rect": {
+            "x": 217,
+            "y": 437,
+            "width": 40,
+            "height": 38
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 40,
+          "height": 38,
+          "frameCount": null,
+          "offset": 2366613,
+          "name": "dobrze",
+          "id": 6,
+          "definitionId": 0,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_01.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 2478589,
+          "rect": {
+            "x": 257,
+            "y": 437,
+            "width": 40,
+            "height": 38
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 40,
+          "height": 38,
+          "frameCount": null,
+          "offset": 2366613,
+          "name": "dobrze",
+          "id": 7,
+          "definitionId": 0,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_01.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 2478729,
+          "rect": {
+            "x": 297,
+            "y": 437,
+            "width": 40,
+            "height": 38
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 40,
+          "height": 38,
+          "frameCount": null,
+          "offset": 2366613,
+          "name": "dobrze",
+          "id": 8,
+          "definitionId": 0,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_01.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 2478869,
+          "rect": {
+            "x": 337,
+            "y": 437,
+            "width": 40,
+            "height": 38
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 40,
+          "height": 38,
+          "frameCount": null,
+          "offset": 2366613,
+          "name": "dobrze",
+          "id": 9,
+          "definitionId": 0,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_01.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_000_dobrze_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 2479009,
+          "rect": {
+            "x": 377,
+            "y": 437,
+            "width": 40,
+            "height": 38
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_00.png",
+          "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_001_zle_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 39,
+          "height": 38,
+          "frameCount": null,
+          "offset": 2369997,
+          "name": "zle",
+          "id": 10,
+          "definitionId": 1,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_00.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_001_zle_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_01.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_001_zle_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 2479149,
+          "rect": {
+            "x": 420,
+            "y": 437,
+            "width": 39,
+            "height": 38
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_00.png",
+          "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_001_zle_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 39,
+          "height": 38,
+          "frameCount": null,
+          "offset": 2369997,
+          "name": "zle",
+          "id": 11,
+          "definitionId": 1,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_00.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_001_zle_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_01.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_001_zle_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 2479289,
+          "rect": {
+            "x": 461,
+            "y": 437,
+            "width": 39,
+            "height": 38
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_00.png",
+          "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_001_zle_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 39,
+          "height": 38,
+          "frameCount": null,
+          "offset": 2369997,
+          "name": "zle",
+          "id": 12,
+          "definitionId": 1,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_00.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_001_zle_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_01.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_001_zle_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 2479429,
+          "rect": {
+            "x": 502,
+            "y": 437,
+            "width": 39,
+            "height": 38
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_00.png",
+          "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_001_zle_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 39,
+          "height": 38,
+          "frameCount": null,
+          "offset": 2369997,
+          "name": "zle",
+          "id": 13,
+          "definitionId": 1,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_00.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_001_zle_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_01.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_001_zle_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 2479569,
+          "rect": {
+            "x": 543,
+            "y": 437,
+            "width": 39,
+            "height": 38
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_00.png",
+          "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_001_zle_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 39,
+          "height": 38,
+          "frameCount": null,
+          "offset": 2369997,
+          "name": "zle",
+          "id": 14,
+          "definitionId": 1,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_00.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_001_zle_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_01.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_001_zle_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 2479709,
+          "rect": {
+            "x": 584,
+            "y": 437,
+            "width": 39,
+            "height": 38
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 1
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_002_toolbar_phase_00.png",
+          "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_002_toolbar_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_002_toolbar_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 160,
+          "height": 480,
+          "frameCount": null,
+          "offset": 2373389,
+          "name": "toolbar",
+          "id": 15,
+          "definitionId": 2,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_002_toolbar_phase_00.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_002_toolbar_phase_00.png"
+            }
+          ],
+          "phaseCount": 1,
+          "instanceOffset": 2479849,
+          "rect": {
+            "x": 640,
+            "y": 0,
+            "width": 160,
+            "height": 480
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 7
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_004_strza_ka_phase_00.png",
+          "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_004_strza_ka_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_004_strza_ka_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 66,
+          "height": 61,
+          "frameCount": null,
+          "offset": 2460377,
+          "name": "strzałka ",
+          "id": 16,
+          "definitionId": 4,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_004_strza_ka_phase_00.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_004_strza_ka_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_004_strza_ka_phase_01.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_004_strza_ka_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 2479989,
+          "rect": {
+            "x": 721,
+            "y": 329,
+            "width": 66,
+            "height": 61
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_003_wyb_r 01_phase_00.png",
+          "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_003_wyb_r 01_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_003_wyb_r 01_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 76,
+          "height": 63,
+          "frameCount": null,
+          "offset": 2450457,
+          "name": "wybór 01",
+          "id": 17,
+          "definitionId": 3,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_003_wyb_r 01_phase_00.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_003_wyb_r 01_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_003_wyb_r 01_phase_01.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_003_wyb_r 01_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 2480129,
+          "rect": {
+            "x": 717,
+            "y": 404,
+            "width": 76,
+            "height": 63
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_005_strza_ka_phase_00.png",
+          "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_005_strza_ka_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_005_strza_ka_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 40,
+          "height": 49,
+          "frameCount": null,
+          "offset": 2469017,
+          "name": "strzałka ",
+          "id": 18,
+          "definitionId": 5,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_005_strza_ka_phase_00.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_005_strza_ka_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_005_strza_ka_phase_01.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_005_strza_ka_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 2480269,
+          "rect": {
+            "x": 704,
+            "y": 14,
+            "width": 40,
+            "height": 49
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 8
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_006_strza_ka_phase_00.png",
+          "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_006_strza_ka_phase_00.png",
+          "renderPath": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_006_strza_ka_phase_00.png",
+          "stillPath": null,
+          "stillUrl": null,
+          "width": 41,
+          "height": 49,
+          "frameCount": null,
+          "offset": 2473281,
+          "name": "strzałka ",
+          "id": 19,
+          "definitionId": 6,
+          "phaseAssets": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_006_strza_ka_phase_00.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_006_strza_ka_phase_00.png"
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_006_strza_ka_phase_01.png",
+              "url": "../extracted_assets/grp/GR_CZYM/sprite_holder/02_Group.Sprite_Holder_006_strza_ka_phase_01.png"
+            }
+          ],
+          "phaseCount": 2,
+          "instanceOffset": 2480409,
+          "rect": {
+            "x": 744,
+            "y": 14,
+            "width": 41,
+            "height": 49
+          },
+          "geometryConfidence": "serialized_instance",
+          "initialPhase": 0,
+          "initiallyVisible": true,
+          "draggable": false,
+          "z": 8
+        }
+      ],
       "audio": []
     }
   ],

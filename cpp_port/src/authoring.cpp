@@ -753,11 +753,15 @@ std::vector<std::uint8_t> serializeProjectManifest(const ProjectDocument& projec
     for (const auto& group : project.groups) if (group.listedInManifest) groups.push_back(group.fileName);
     writer.writeU32(static_cast<std::uint32_t>(groups.size()));
     for (const auto& group : groups) writer.writeArchiveString(cp1250(group, "Group filename"));
-    std::string signature;
-    const auto rawSignature = cp1250(project.signature, "Project signature");
-    signature.reserve(rawSignature.size());
-    for (const unsigned char c : rawSignature) signature.push_back(static_cast<char>(c + 0x21));
-    writer.writeArchiveString(signature);
+    if (project.manifestVersion != 0) {
+        std::string signature;
+        const auto rawSignature = cp1250(project.signature, "Project signature");
+        signature.reserve(rawSignature.size());
+        for (const unsigned char c : rawSignature) {
+            signature.push_back(static_cast<char>(c + 0x21));
+        }
+        writer.writeArchiveString(signature);
+    }
     writer.writeU32(project.globalScriptVersion);
     writer.writeArchiveString(cp1250(project.globalScript, "Global script"));
     auto generated=writer.takeBytes();if(!project.sourceManifestBytes.empty()&&!project.sourceManifestCanonicalBytes.empty()&&generated==project.sourceManifestCanonicalBytes)return project.sourceManifestBytes;return generated;
@@ -943,7 +947,8 @@ std::vector<Diagnostic> validateProject(const ProjectDocument& project) {
     }
     for(const auto& reference:groupPalettes)if(std::none_of(project.groups.begin(),project.groups.end(),[&](const GroupDocument& group){return cp1250CaseFoldKey(group.fileName)==reference.first;}))error("script.group_reference","LoadGroup target does not exist",reference.first);
     for(const auto& asset:project.looseAssets){validLeafName(asset.fileName,asset.fileName);encodedSize(asset.fileName,asset.fileName);const auto lower=cp1250CaseFoldKey(asset.fileName);if(!names.insert(lower).second)error("asset.collision","Loose asset collides with another exported filename",asset.fileName);}
-    encodedSize(project.globalScript,"project:global script");encodedSize(project.signature,"project:signature");
+    encodedSize(project.globalScript,"project:global script");
+    if(project.manifestVersion!=0)encodedSize(project.signature,"project:signature");
     if (!project.pages.empty() && project.startupPage.empty()) error("project.startup", "A startup page is required", "project");
     else if (std::none_of(project.pages.begin(), project.pages.end(), [&](const PageDocument& page) {
                  return cp1250CaseFoldKey(page.fileName) == cp1250CaseFoldKey(project.startupPage);

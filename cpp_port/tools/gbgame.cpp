@@ -5,8 +5,8 @@
 // keyboard input feed the page's recovered input entry points, a real-time
 // clock drives advanceTime (so recovered clip durations pace cutscenes), and
 // script LoadPage navigation is followed page to page — the same loop the
-// original Tuwim.exe board view ran. Text rendering, palette fades and custom
-// cursor artwork remain intentionally deferred.
+// original GraphBoard view ran. Text rendering and the active group's indexed
+// cursor artwork are composited in the final Win32 paint pass.
 
 #include "graphboard/binary_reader.hpp"
 #include "graphboard/format.hpp"
@@ -25,6 +25,7 @@
 
 #include <algorithm>
 #include <cctype>
+#include <cwctype>
 #include <cstdint>
 #include <cstring>
 #include <filesystem>
@@ -38,6 +39,7 @@ namespace {
 
 namespace fs = std::filesystem;
 using graphboard::BdfHeader;
+using graphboard::CursorBitmap;
 using graphboard::Image;
 using graphboard::runtime::Page;
 using graphboard::runtime::Project;
@@ -325,7 +327,11 @@ struct GameState {
     VideoPlayer video;
     std::size_t seenCalls = 0;         // callLog() entries already reacted to
 
+    std::wstring projectTitle;
     std::wstring statusText;           // script error surfaced in the title bar
+    POINT cursorPage{0, 0};
+    bool cursorInside = false;
+    bool trackingMouse = false;
 };
 
 GameState g;
@@ -353,7 +359,8 @@ fs::path resolvePagePath(const fs::path& dir, const std::string& pageName) {
 }
 
 void setTitle() {
-    std::wstring title = L"Multimedialny świat Juliana Tuwima — ";
+    std::wstring title = g.projectTitle.empty() ? L"GraphBoard" : g.projectTitle;
+    title += L" — ";
     title += g.project ? pageNameToWide(g.project->currentPageName()) : L"(no project)";
     if (!g.statusText.empty()) {
         title += L"  [";
@@ -361,6 +368,22 @@ void setTitle() {
         title += L"]";
     }
     SetWindowTextW(gWnd, title.c_str());
+}
+
+std::wstring projectTitle(const fs::path& startPrj, const Project& project) {
+    if (!project.manifest().decodedSignature.empty()) {
+        return pageNameToWide(project.manifest().decodedSignature);
+    }
+    fs::path directory = startPrj.parent_path();
+    std::wstring leaf = directory.filename().wstring();
+    std::wstring lower = leaf;
+    std::transform(lower.begin(), lower.end(), lower.begin(),
+                   [](wchar_t ch) { return static_cast<wchar_t>(std::towlower(ch)); });
+    if (lower == L"data" && directory.has_parent_path() &&
+        !directory.parent_path().filename().empty()) {
+        leaf = directory.parent_path().filename().wstring();
+    }
+    return leaf.empty() ? L"GraphBoard" : leaf;
 }
 
 // Size the window's client area to the rendered page and lock resizing to it.
@@ -520,8 +543,7 @@ void runScriptEvent(Fn&& fn) {
 // Map a client-area point to page coordinates (the window client is kept at
 // the frame's size, so this is normally identity; guard against a mismatch
 // while a resize is in flight).
-POINT toPagePoint(LPARAM lParam) {
-    POINT p{GET_X_LPARAM(lParam), GET_Y_LPARAM(lParam)};
+POINT clientToPagePoint(POINT p) {
     RECT rc;
     GetClientRect(gWnd, &rc);
     const int cw = rc.right - rc.left, ch = rc.bottom - rc.top;
@@ -531,6 +553,10 @@ POINT toPagePoint(LPARAM lParam) {
         p.y = MulDiv(p.y, g.frame.height, ch);
     }
     return p;
+}
+
+POINT toPagePoint(LPARAM lParam) {
+    return clientToPagePoint({GET_X_LPARAM(lParam), GET_Y_LPARAM(lParam)});
 }
 
 // A page with a running video or animating sprite changes appearance every
@@ -552,6 +578,67 @@ bool sceneIsLive() {
         return false;
     };
     return liveSprites(page->components()) || liveSprites(page->groupComponents());
+}
+
+const CursorBitmap* activeCursor() {
+    const Page* page = g.project ? g.project->currentPage() : nullptr;
+    if (!page || page->cursor() < 0) return nullptr;
+    const auto& cursors = page->groupCursors();
+    const auto index = static_cast<std::size_t>(page->cursor());
+    return index < cursors.size() ? &cursors[index] : nullptr;
+}
+
+void drawGraphBoardCursor(HDC dc, const RECT& client) {
+    const CursorBitmap* cursor = activeCursor();
+    if (!cursor || !g.cursorInside || cursor->width == 0 || cursor->height == 0 ||
+        cursor->width > 1024 || cursor->height > 1024 || g.frame.width <= 0 ||
+        g.frame.height <= 0) {
+        return;
+    }
+
+    const std::size_t packedStride = cursor->width;
+    const std::size_t dibStride = (static_cast<std::size_t>(cursor->width) + 3u) & ~3u;
+    const bool legacyBottomUp = cursor->height <= cursor->pixels.size() / dibStride;
+    const std::size_t stride = legacyBottomUp ? dibStride : packedStride;
+    if (cursor->height > cursor->pixels.size() / stride) return;
+
+    const bool hasPalette = g.pageHeader.paletteByteCount >= 1024 &&
+                            g.pageHeader.paletteOffset + 1024 <= g.pageBytes.size();
+    const auto* palette = hasPalette ? g.pageBytes.data() + g.pageHeader.paletteOffset : nullptr;
+    const int clientWidth = client.right - client.left;
+    const int clientHeight = client.bottom - client.top;
+    const int originX = g.cursorPage.x - cursor->hotX;
+    const int originY = g.cursorPage.y - cursor->hotY;
+    HBRUSH brush = reinterpret_cast<HBRUSH>(GetStockObject(DC_BRUSH));
+
+    for (std::uint32_t row = 0; row < cursor->height; ++row) {
+        const std::uint32_t sourceRow = legacyBottomUp ? cursor->height - 1u - row : row;
+        const auto* source = cursor->pixels.data() + static_cast<std::size_t>(sourceRow) * stride;
+        for (std::uint32_t col = 0; col < cursor->width; ++col) {
+            const std::uint8_t index = source[col];
+            if (index == cursor->transparentIndex) continue;
+            const auto* color = palette ? palette + static_cast<std::size_t>(index) * 4u : nullptr;
+            const COLORREF rgb = color ? RGB(color[0], color[1], color[2])
+                                       : RGB(index, index, index);
+            const int pageX = originX + static_cast<int>(col);
+            const int pageY = originY + static_cast<int>(row);
+            RECT pixel{
+                MulDiv(pageX, clientWidth, g.frame.width),
+                MulDiv(pageY, clientHeight, g.frame.height),
+                MulDiv(pageX + 1, clientWidth, g.frame.width),
+                MulDiv(pageY + 1, clientHeight, g.frame.height)};
+            if (pixel.right <= 0 || pixel.bottom <= 0 || pixel.left >= clientWidth ||
+                pixel.top >= clientHeight) {
+                continue;
+            }
+            if (pixel.right - pixel.left == 1 && pixel.bottom - pixel.top == 1) {
+                SetPixelV(dc, pixel.left, pixel.top, rgb);
+            } else {
+                SetDCBrushColor(dc, rgb);
+                FillRect(dc, &pixel, brush);
+            }
+        }
+    }
 }
 
 void onTick() {
@@ -636,18 +723,29 @@ void onPaint() {
                         lineStart = ch == '\n' || ch == '\r';
                     }
                     std::wstring wide = utf8ToWide(graphboard::cp1250ToUtf8(cleaned));
-                    RECT tr{
+                    RECT viewport{
                         MulDiv(text.left, rc.right, g.frame.width),
                         MulDiv(text.top, rc.bottom, g.frame.height),
                         MulDiv(text.right, rc.right, g.frame.width),
                         MulDiv(text.bottom, rc.bottom, g.frame.height)};
+                    const int offsetX = static_cast<int>(item.count("offsetX")
+                        ? item.at("offsetX").toInt() : 0);
+                    const int offsetY = static_cast<int>(item.count("offsetY")
+                        ? item.at("offsetY").toInt() : 0);
+                    RECT tr = viewport;
+                    OffsetRect(&tr, MulDiv(offsetX, rc.right, g.frame.width),
+                               MulDiv(offsetY, rc.bottom, g.frame.height));
+                    const int saved = SaveDC(dc);
+                    IntersectClipRect(dc, viewport.left, viewport.top, viewport.right, viewport.bottom);
                     DrawTextW(dc, wide.c_str(), static_cast<int>(wide.size()), &tr,
                               DT_LEFT | DT_TOP | DT_WORDBREAK | DT_NOPREFIX);
+                    RestoreDC(dc, saved);
                 }
             }
             SelectObject(dc, oldFont);
             DeleteObject(font);
         }
+        drawGraphBoardCursor(dc, rc);
     } else {
         RECT rc;
         GetClientRect(gWnd, &rc);
@@ -683,19 +781,51 @@ LRESULT CALLBACK wndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
         }
         case WM_MOUSEMOVE: {
             const POINT p = toPagePoint(lParam);
+            g.cursorPage = p;
+            g.cursorInside = true;
+            if (!g.trackingMouse) {
+                TRACKMOUSEEVENT tracking{sizeof(tracking), TME_LEAVE, hwnd, 0};
+                TrackMouseEvent(&tracking);
+                g.trackingMouse = true;
+            }
             runScriptEvent([&](Page& page) { page.mouseMove(p.x, p.y); });
+            // The software cursor is painted over a clean scene buffer, so a
+            // mouse-only move needs a repaint even when no script call fired.
+            InvalidateRect(hwnd, nullptr, FALSE);
             return 0;
         }
+        case WM_MOUSEWHEEL: {
+            POINT p{GET_X_LPARAM(lParam), GET_Y_LPARAM(lParam)};
+            ScreenToClient(hwnd, &p);
+            p = clientToPagePoint(p);
+            const int delta = GET_WHEEL_DELTA_WPARAM(wParam);
+            bool consumed = false;
+            runScriptEvent([&](Page& page) { consumed = page.mouseWheel(p.x, p.y, delta); });
+            if (consumed) {
+                g.dirty = true;
+                renderFrame();
+                InvalidateRect(hwnd, nullptr, FALSE);
+                return 0;
+            }
+            break;
+        }
+        case WM_MOUSELEAVE:
+            g.cursorInside = false;
+            g.trackingMouse = false;
+            InvalidateRect(hwnd, nullptr, FALSE);
+            return 0;
         case WM_KEYDOWN:
             runScriptEvent([&](Page& page) { page.keyDown(static_cast<int>(wParam)); });
             return 0;
         case WM_SETCURSOR:
-            // Cursor records are parsed, but native HCURSOR artwork is deferred;
-            // SetCursor(1) — the scripts' hot/hover cursor — with the hand.
             if (LOWORD(lParam) == HTCLIENT && g.project && g.project->currentPage()) {
-                SetCursor(LoadCursorW(nullptr, g.project->currentPage()->cursor() == 1
-                                                   ? MAKEINTRESOURCEW(32649)     // IDC_HAND
-                                                   : MAKEINTRESOURCEW(32512)));  // IDC_ARROW
+                const int index = g.project->currentPage()->cursor();
+                // Negative values explicitly hide the pointer. Valid positive
+                // indices are drawn from the active GRP; only an invalid index
+                // falls back to a visible system arrow so the window stays usable.
+                ::SetCursor(index < 0 || activeCursor() != nullptr
+                                ? nullptr
+                                : LoadCursorW(nullptr, IDC_ARROW));
                 return TRUE;
             }
             break;
@@ -759,6 +889,7 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE, PWSTR, int showCmd) {
     try {
         g.project = Project::loadFromFile(startPrj);
         g.dataDir = startPrj.parent_path();
+        g.projectTitle = projectTitle(startPrj, *g.project);
         g.project->openStartupPage();
     } catch (const std::exception& ex) {
         MessageBoxW(nullptr, utf8ToWide(ex.what()).c_str(), L"gbgame: failed to load project",

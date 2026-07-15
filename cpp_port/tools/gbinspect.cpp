@@ -654,6 +654,8 @@ private:
         for (const auto& value : args) {
             if (value.isInt()) {
                 a.push_back(value.toInt());
+            } else if (value.isReal()) {
+                a.push_back(value.toDouble());
             } else {
                 a.push_back(t(value.toString()));
             }
@@ -690,7 +692,9 @@ int runHandler(const std::filesystem::path& path, const std::string& handler) {
 }
 
 json valueToJson(const graphboard::runtime::Value& v) {
-    return v.isInt() ? json(v.toInt()) : json(t(v.toString()));
+    if (v.isInt()) return json(v.toInt());
+    if (v.isReal()) return json(v.toDouble());
+    return json(t(v.toString()));
 }
 
 // Serialize a page's live component + page state (the shared body of --drive
@@ -891,9 +895,12 @@ int main(int argc, char** argv) {
     int followLimit = 0;
     std::string pageName;
     std::string renderTarget;
+    bool panoramaInfo = false;
     try {
         for (std::size_t i = 1; i < args.size(); ++i) {
-            if (isFlag(args[i], "--render") && i + 1 < args.size()) {
+            if (isFlag(args[i], "--panorama-info")) {
+                panoramaInfo = true;
+            } else if (isFlag(args[i], "--render") && i + 1 < args.size()) {
                 renderTarget = argToUtf8(args[++i]);
             } else if (isFlag(args[i], "--run") && i + 1 < args.size()) {
                 runTarget = argToUtf8(args[++i]);
@@ -970,6 +977,51 @@ int main(int argc, char** argv) {
 
     try {
         const auto ext = lowerExtension(file);
+        if (panoramaInfo) {
+            if (ext != ".bdf") {
+                std::cerr << "gbinspect: --panorama-info requires a .BDF page\n";
+                return 2;
+            }
+            auto reader = graphboard::BinaryReader::fromFile(file);
+            const auto bytes = reader.bytes();
+            auto page = graphboard::runtime::Page::loadFromFile(file);
+            page->open();
+            auto readI32 = [&](std::size_t off) -> std::int32_t {
+                if (off + 4 > bytes.size()) return 0;
+                return static_cast<std::int32_t>(bytes[off]) | (bytes[off + 1] << 8) |
+                       (bytes[off + 2] << 16) | (bytes[off + 3] << 24);
+            };
+            for (const auto& c : page->components()) {
+                if (c.kind == graphboard::HolderKind::BitmapHolder) {
+                    for (std::size_t i = 0; i < c.bitmaps.size(); ++i) {
+                        const auto& b = c.bitmaps[i];
+                        std::cout << "Bitmap " << c.displayName << "[" << i << "] "
+                                  << b.width << "x" << b.height
+                                  << " transIdx=" << static_cast<int>(b.transparentIndex)
+                                  << "\n";
+                    }
+                }
+                if (c.kind == graphboard::HolderKind::Panorama) {
+                    std::cout << "Panorama " << c.displayName << " scenes="
+                              << c.indexedImages.size() << "\n";
+                    for (std::size_t i = 0; i < c.indexedImages.size(); ++i) {
+                        const auto& g = c.indexedImages[i];
+                        std::cout << "  [" << i << "] " << g.width << "x" << g.height
+                                  << "\n";
+                    }
+                } else if (c.kind == graphboard::HolderKind::PanoramaHolder) {
+                    std::cout << "Panorama_Holder " << c.displayName << " scenes="
+                              << c.dibImages.size() << "\n";
+                    for (std::size_t i = 0; i < c.dibImages.size(); ++i) {
+                        const auto& g = c.dibImages[i];
+                        const std::int32_t w = readI32(g.offset + 4);
+                        const std::int32_t h = readI32(g.offset + 8);
+                        std::cout << "  [" << i << "] dib " << w << "x" << h << "\n";
+                    }
+                }
+            }
+            return 0;
+        }
         if (!renderTarget.empty()) {
             if (ext != ".bdf") {
                 std::cerr << "gbinspect: --render requires a .BDF page\n";

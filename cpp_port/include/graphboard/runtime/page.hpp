@@ -82,6 +82,8 @@ struct DibGeometry {
 struct TextGeometry {
     std::int32_t left = 0, top = 0, right = 0, bottom = 0;
     std::string text;
+    std::uint32_t lineCount = 0;
+    std::uint32_t lineHeight = 18;
 };
 
 struct ComponentState {
@@ -144,6 +146,9 @@ public:
     void lButtonUp(int x, int y);
     void rButtonDown(int x, int y);
     void mouseMove(int x, int y);
+    // Scroll the enabled visible Text_Holder under the pointer. Returns true
+    // when a text entry consumed the wheel event (including a boundary hit).
+    bool mouseWheel(int x, int y, int wheelDelta);
     void keyDown(int key) { runEvent("OnKeyDown", {Value::integer(key)}); }
 
     // Playback-completion callbacks (component->script). The board fires these

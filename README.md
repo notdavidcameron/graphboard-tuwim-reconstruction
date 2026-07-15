@@ -24,10 +24,10 @@ remains as a secondary, browser-based reference.
 - **`gbtrace/`** — an INT3/VEH DLL injector for live-tracing the real
   `Tuwim.exe`, used to confirm serializer call sites and timing (e.g. glide
   speeds) against ground truth.
-- **`web_port/`** — a no-build HTML/CSS/JS scene viewer with a partial
-  GraphBoard script runtime, exported from `extracted_assets/` via
-  `graphboard_export_scene.py`. Superseded by `cpp_port` for engine-accuracy
-  work but still useful for a quick browser look at a scene.
+- **`web_port/`** — a no-build HTML/CSS/JS archive viewer for every exported
+  BDF scene, GRP library, embedded asset, cursor, script, and loose WAV/AVI
+  file. It includes a partial GraphBoard script runtime and is exported from
+  `extracted_assets/` via `graphboard_export_scene.py`.
 
 ## C++ Port (Primary)
 
@@ -65,11 +65,15 @@ From the repository root:
 python -m http.server 8765
 ```
 
-Then open `http://127.0.0.1:8765/web_port/index.html` (add `?scene=RADIO` to
-pick a scene). The runtime supports common page calls (`LoadGroup`,
-`LoadPage`, `SetCursor`, `SetTimer`, sound/video/bitmap/sprite/hotspot/text
-holder basics) but is not a faithful reimplementation — treat it as a visual
-sanity check, not ground truth.
+Then open `http://127.0.0.1:8765/web_port/index.html`. The archive browser
+supports searchable BDF/GRP/media collections, per-component and per-asset
+inspection, phase/frame previews, geometry overlays, zoom controls, audio
+playback, raw JSON, and deep links such as `?scene=RADIO`, `?group=CURSORS`,
+or `?media=audio-RADIO`. The BDF runtime supports common page calls
+(`LoadGroup`, `LoadPage`, `SetCursor`, `SetTimer`, and
+sound/video/bitmap/sprite/hotspot/text holder basics), but it is not a
+faithful reimplementation — treat runtime behavior as a visual sanity check,
+not ground truth.
 
 Regenerate scenes after extracting new assets:
 

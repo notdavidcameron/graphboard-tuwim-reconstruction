@@ -200,6 +200,24 @@ Image renderPage(const runtime::Page& page, const std::vector<std::uint8_t>& byt
     paintPanoramas(page.components());
     paintPanoramas(page.groupComponents());
 
+    // A visible panorama is the scene backdrop; a full-board foreground bitmap
+    // over it (MURZYNEK's ground/huts, transparent index == the sky) must stay
+    // colour-keyed so the panorama shows through. Without a panorama a full-board
+    // bitmap IS the base surface and is drawn opaque (TANIEC/PSTRYK).
+    auto hasVisiblePanorama = [](const std::vector<runtime::ComponentState>& components) {
+        for (const auto& c : components) {
+            if (c.kind != graphboard::HolderKind::Panorama &&
+                c.kind != graphboard::HolderKind::PanoramaHolder) continue;
+            for (const auto& [id, item] : c.items) {
+                const auto it = item.find("visible");
+                if (it != item.end() && it->second.toInt() != 0) return true;
+            }
+        }
+        return false;
+    };
+    const bool panoramaPresent =
+        hasVisiblePanorama(page.components()) || hasVisiblePanorama(page.groupComponents());
+
     std::vector<Drawable> draws;
     std::size_t order = 0;
     bool suppressInitialTvh = false;
@@ -273,8 +291,11 @@ Image renderPage(const runtime::Page& page, const std::vector<std::uint8_t>& byt
                 d.stride = static_cast<std::size_t>(geom.width);
                 // A full-board bitmap is a background surface, not a keyed
                 // overlay. Applying its record colour key exposes the page's
-                // solid backing colour (magenta in TANIEC/PSTRYK).
-                d.useTransparent = !(geom.width == img.width && geom.height == img.height);
+                // solid backing colour (magenta in TANIEC/PSTRYK). The exception
+                // is a full-board foreground over a panorama, whose colour key
+                // marks the region that reveals the panorama backdrop.
+                d.useTransparent =
+                    !(geom.width == img.width && geom.height == img.height) || panoramaPresent;
                 d.transparent = geom.transparentIndex;
                 draws.push_back(d);
             }

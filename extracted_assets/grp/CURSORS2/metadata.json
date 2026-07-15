@@ -265,6 +265,398 @@
       "size": 853
     },
     {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_000_toolbar_phase_00.png",
+      "offset": 14729,
+      "size": 35928,
+      "width": 160,
+      "height": 480,
+      "name": "toolbar",
+      "id": 0,
+      "definition_id": 0,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_000_toolbar_phase_00.png",
+          "size": 35928,
+          "width": 160,
+          "height": 480
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_001_strza_ka_phase_00.png",
+      "offset": 91797,
+      "size": 2050,
+      "width": 40,
+      "height": 49,
+      "name": "strzałka ",
+      "id": 1,
+      "definition_id": 1,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_001_strza_ka_phase_00.png",
+          "size": 2050,
+          "width": 40,
+          "height": 49
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_001_strza_ka_phase_01.png",
+          "size": 1962,
+          "width": 40,
+          "height": 49
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_002_strza_ka_phase_00.png",
+      "offset": 96061,
+      "size": 2031,
+      "width": 41,
+      "height": 49,
+      "name": "strzałka ",
+      "id": 2,
+      "definition_id": 2,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_002_strza_ka_phase_00.png",
+          "size": 2031,
+          "width": 41,
+          "height": 49
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_002_strza_ka_phase_01.png",
+          "size": 1929,
+          "width": 41,
+          "height": 49
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_003_ksi_ka 0_phase_00.png",
+      "offset": 100717,
+      "size": 5602,
+      "width": 112,
+      "height": 89,
+      "name": "książka 0",
+      "id": 3,
+      "definition_id": 3,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_003_ksi_ka 0_phase_00.png",
+          "size": 5602,
+          "width": 112,
+          "height": 89
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_003_ksi_ka 0_phase_01.png",
+          "size": 5307,
+          "width": 112,
+          "height": 89
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_004_text 01_phase_00.png",
+      "offset": 120997,
+      "size": 1841,
+      "width": 56,
+      "height": 70,
+      "name": "text 01",
+      "id": 4,
+      "definition_id": 4,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_004_text 01_phase_00.png",
+          "size": 1841,
+          "width": 56,
+          "height": 70
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_005_biedronka_phase_00.png",
+      "offset": 125185,
+      "size": 2590,
+      "width": 65,
+      "height": 45,
+      "name": "biedronka",
+      "id": 5,
+      "definition_id": 5,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_005_biedronka_phase_00.png",
+          "size": 2590,
+          "width": 65,
+          "height": 45
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_005_biedronka_phase_01.png",
+          "size": 2594,
+          "width": 65,
+          "height": 45
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_005_biedronka_phase_02.png",
+          "size": 2592,
+          "width": 65,
+          "height": 45
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_006_puzzle 01_phase_00.png",
+      "offset": 140545,
+      "size": 3890,
+      "width": 69,
+      "height": 82,
+      "name": "puzzle 01",
+      "id": 6,
+      "definition_id": 6,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_006_puzzle 01_phase_00.png",
+          "size": 3890,
+          "width": 69,
+          "height": 82
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_006_puzzle 01_phase_01.png",
+          "size": 3853,
+          "width": 69,
+          "height": 82
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_006_puzzle 01_phase_02.png",
+          "size": 3724,
+          "width": 69,
+          "height": 82
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_007_kaseta 01_phase_00.png",
+      "offset": 169829,
+      "size": 3597,
+      "width": 81,
+      "height": 65,
+      "name": "kaseta 01",
+      "id": 7,
+      "definition_id": 7,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_007_kaseta 01_phase_00.png",
+          "size": 3597,
+          "width": 81,
+          "height": 65
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_007_kaseta 01_phase_01.png",
+          "size": 3690,
+          "width": 81,
+          "height": 65
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_007_kaseta 01_phase_02.png",
+          "size": 3597,
+          "width": 81,
+          "height": 65
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_008_wyb_r 01_phase_00.png",
+      "offset": 207689,
+      "size": 4405,
+      "width": 76,
+      "height": 63,
+      "name": "wybór 01",
+      "id": 8,
+      "definition_id": 8,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_008_wyb_r 01_phase_00.png",
+          "size": 4405,
+          "width": 76,
+          "height": 63
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_008_wyb_r 01_phase_01.png",
+          "size": 4452,
+          "width": 76,
+          "height": 63
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_009_telewizor_phase_00.png",
+      "offset": 217609,
+      "size": 3600,
+      "width": 76,
+      "height": 70,
+      "name": "telewizor",
+      "id": 9,
+      "definition_id": 9,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_009_telewizor_phase_00.png",
+          "size": 3600,
+          "width": 76,
+          "height": 70
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_009_telewizor_phase_01.png",
+          "size": 3707,
+          "width": 76,
+          "height": 70
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_009_telewizor_phase_02.png",
+          "size": 3766,
+          "width": 76,
+          "height": 70
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_010_trudno__phase_00.png",
+      "offset": 276549,
+      "size": 6127,
+      "width": 102,
+      "height": 98,
+      "name": "trudność ",
+      "id": 10,
+      "definition_id": 10,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_010_trudno__phase_00.png",
+          "size": 6127,
+          "width": 102,
+          "height": 98
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_010_trudno__phase_01.png",
+          "size": 6137,
+          "width": 102,
+          "height": 98
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_010_trudno__phase_02.png",
+          "size": 5807,
+          "width": 102,
+          "height": 98
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_011_trudno__phase_00.png",
+      "offset": 377321,
+      "size": 4951,
+      "width": 81,
+      "height": 97,
+      "name": "trudność ",
+      "id": 11,
+      "definition_id": 11,
+      "phase_count": 3,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_011_trudno__phase_00.png",
+          "size": 4951,
+          "width": 81,
+          "height": 97
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_011_trudno__phase_01.png",
+          "size": 4966,
+          "width": 81,
+          "height": 97
+        },
+        {
+          "phase": 2,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_011_trudno__phase_02.png",
+          "size": 4753,
+          "width": 81,
+          "height": 97
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_012_wyb_r 01_phase_00.png",
+      "offset": 417705,
+      "size": 4454,
+      "width": 77,
+      "height": 64,
+      "name": "wybór 01",
+      "id": 12,
+      "definition_id": 12,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_012_wyb_r 01_phase_00.png",
+          "size": 4454,
+          "width": 77,
+          "height": 64
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_012_wyb_r 01_phase_01.png",
+          "size": 4509,
+          "width": 77,
+          "height": 64
+        }
+      ]
+    },
+    {
       "kind": "WAVE",
       "path": "extracted_assets\\grp\\CURSORS2\\embedded\\02_Group.Sound_Holder_000_000692f3.wav",
       "size": 22568
@@ -350,7 +742,933 @@
       "display_name": "Group.Sprite_Holder",
       "private_offset": 14529,
       "private_size": 415392,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_000_toolbar_phase_00.png",
+          "offset": 14729,
+          "size": 35928,
+          "width": 160,
+          "height": 480,
+          "name": "toolbar",
+          "id": 0,
+          "definition_id": 0,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_000_toolbar_phase_00.png",
+              "size": 35928,
+              "width": 160,
+              "height": 480
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_001_strza_ka_phase_00.png",
+          "offset": 91797,
+          "size": 2050,
+          "width": 40,
+          "height": 49,
+          "name": "strzałka ",
+          "id": 1,
+          "definition_id": 1,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_001_strza_ka_phase_00.png",
+              "size": 2050,
+              "width": 40,
+              "height": 49
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_001_strza_ka_phase_01.png",
+              "size": 1962,
+              "width": 40,
+              "height": 49
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_002_strza_ka_phase_00.png",
+          "offset": 96061,
+          "size": 2031,
+          "width": 41,
+          "height": 49,
+          "name": "strzałka ",
+          "id": 2,
+          "definition_id": 2,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_002_strza_ka_phase_00.png",
+              "size": 2031,
+              "width": 41,
+              "height": 49
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_002_strza_ka_phase_01.png",
+              "size": 1929,
+              "width": 41,
+              "height": 49
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_003_ksi_ka 0_phase_00.png",
+          "offset": 100717,
+          "size": 5602,
+          "width": 112,
+          "height": 89,
+          "name": "książka 0",
+          "id": 3,
+          "definition_id": 3,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_003_ksi_ka 0_phase_00.png",
+              "size": 5602,
+              "width": 112,
+              "height": 89
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_003_ksi_ka 0_phase_01.png",
+              "size": 5307,
+              "width": 112,
+              "height": 89
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_004_text 01_phase_00.png",
+          "offset": 120997,
+          "size": 1841,
+          "width": 56,
+          "height": 70,
+          "name": "text 01",
+          "id": 4,
+          "definition_id": 4,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_004_text 01_phase_00.png",
+              "size": 1841,
+              "width": 56,
+              "height": 70
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_005_biedronka_phase_00.png",
+          "offset": 125185,
+          "size": 2590,
+          "width": 65,
+          "height": 45,
+          "name": "biedronka",
+          "id": 5,
+          "definition_id": 5,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_005_biedronka_phase_00.png",
+              "size": 2590,
+              "width": 65,
+              "height": 45
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_005_biedronka_phase_01.png",
+              "size": 2594,
+              "width": 65,
+              "height": 45
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_005_biedronka_phase_02.png",
+              "size": 2592,
+              "width": 65,
+              "height": 45
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_006_puzzle 01_phase_00.png",
+          "offset": 140545,
+          "size": 3890,
+          "width": 69,
+          "height": 82,
+          "name": "puzzle 01",
+          "id": 6,
+          "definition_id": 6,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_006_puzzle 01_phase_00.png",
+              "size": 3890,
+              "width": 69,
+              "height": 82
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_006_puzzle 01_phase_01.png",
+              "size": 3853,
+              "width": 69,
+              "height": 82
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_006_puzzle 01_phase_02.png",
+              "size": 3724,
+              "width": 69,
+              "height": 82
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_007_kaseta 01_phase_00.png",
+          "offset": 169829,
+          "size": 3597,
+          "width": 81,
+          "height": 65,
+          "name": "kaseta 01",
+          "id": 7,
+          "definition_id": 7,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_007_kaseta 01_phase_00.png",
+              "size": 3597,
+              "width": 81,
+              "height": 65
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_007_kaseta 01_phase_01.png",
+              "size": 3690,
+              "width": 81,
+              "height": 65
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_007_kaseta 01_phase_02.png",
+              "size": 3597,
+              "width": 81,
+              "height": 65
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_008_wyb_r 01_phase_00.png",
+          "offset": 207689,
+          "size": 4405,
+          "width": 76,
+          "height": 63,
+          "name": "wybór 01",
+          "id": 8,
+          "definition_id": 8,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_008_wyb_r 01_phase_00.png",
+              "size": 4405,
+              "width": 76,
+              "height": 63
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_008_wyb_r 01_phase_01.png",
+              "size": 4452,
+              "width": 76,
+              "height": 63
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_009_telewizor_phase_00.png",
+          "offset": 217609,
+          "size": 3600,
+          "width": 76,
+          "height": 70,
+          "name": "telewizor",
+          "id": 9,
+          "definition_id": 9,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_009_telewizor_phase_00.png",
+              "size": 3600,
+              "width": 76,
+              "height": 70
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_009_telewizor_phase_01.png",
+              "size": 3707,
+              "width": 76,
+              "height": 70
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_009_telewizor_phase_02.png",
+              "size": 3766,
+              "width": 76,
+              "height": 70
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_010_trudno__phase_00.png",
+          "offset": 276549,
+          "size": 6127,
+          "width": 102,
+          "height": 98,
+          "name": "trudność ",
+          "id": 10,
+          "definition_id": 10,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_010_trudno__phase_00.png",
+              "size": 6127,
+              "width": 102,
+              "height": 98
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_010_trudno__phase_01.png",
+              "size": 6137,
+              "width": 102,
+              "height": 98
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_010_trudno__phase_02.png",
+              "size": 5807,
+              "width": 102,
+              "height": 98
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_011_trudno__phase_00.png",
+          "offset": 377321,
+          "size": 4951,
+          "width": 81,
+          "height": 97,
+          "name": "trudność ",
+          "id": 11,
+          "definition_id": 11,
+          "phase_count": 3,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_011_trudno__phase_00.png",
+              "size": 4951,
+              "width": 81,
+              "height": 97
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_011_trudno__phase_01.png",
+              "size": 4966,
+              "width": 81,
+              "height": 97
+            },
+            {
+              "phase": 2,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_011_trudno__phase_02.png",
+              "size": 4753,
+              "width": 81,
+              "height": 97
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_012_wyb_r 01_phase_00.png",
+          "offset": 417705,
+          "size": 4454,
+          "width": 77,
+          "height": 64,
+          "name": "wybór 01",
+          "id": 12,
+          "definition_id": 12,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_012_wyb_r 01_phase_00.png",
+              "size": 4454,
+              "width": 77,
+              "height": 64
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_012_wyb_r 01_phase_01.png",
+              "size": 4509,
+              "width": 77,
+              "height": 64
+            }
+          ]
+        }
+      ],
+      "sprite_holder": {
+        "version": 1,
+        "definition_count": 13,
+        "instance_count": 13,
+        "parsed_definitions": 13,
+        "parsed_instances": 13,
+        "definitions": [
+          {
+            "index": 0,
+            "name": "toolbar",
+            "record_offset": 14541,
+            "blob_offset": 14545,
+            "blob_size": 77064,
+            "width": 160,
+            "height": 480,
+            "phase_count": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_000_toolbar_phase_00.png",
+                "size": 35928,
+                "width": 160,
+                "height": 480
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "strzałka ",
+            "record_offset": 91609,
+            "blob_offset": 91613,
+            "blob_size": 4260,
+            "width": 40,
+            "height": 49,
+            "phase_count": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_001_strza_ka_phase_00.png",
+                "size": 2050,
+                "width": 40,
+                "height": 49
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_001_strza_ka_phase_01.png",
+                "size": 1962,
+                "width": 40,
+                "height": 49
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "strzałka ",
+            "record_offset": 95873,
+            "blob_offset": 95877,
+            "blob_size": 4652,
+            "width": 41,
+            "height": 49,
+            "phase_count": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_002_strza_ka_phase_00.png",
+                "size": 2031,
+                "width": 41,
+                "height": 49
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_002_strza_ka_phase_01.png",
+                "size": 1929,
+                "width": 41,
+                "height": 49
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "name": "książka 0",
+            "record_offset": 100529,
+            "blob_offset": 100533,
+            "blob_size": 20276,
+            "width": 112,
+            "height": 89,
+            "phase_count": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_003_ksi_ka 0_phase_00.png",
+                "size": 5602,
+                "width": 112,
+                "height": 89
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_003_ksi_ka 0_phase_01.png",
+                "size": 5307,
+                "width": 112,
+                "height": 89
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "name": "text 01",
+            "record_offset": 120809,
+            "blob_offset": 120813,
+            "blob_size": 4184,
+            "width": 56,
+            "height": 70,
+            "phase_count": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_004_text 01_phase_00.png",
+                "size": 1841,
+                "width": 56,
+                "height": 70
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "name": "biedronka",
+            "record_offset": 124997,
+            "blob_offset": 125001,
+            "blob_size": 15356,
+            "width": 65,
+            "height": 45,
+            "phase_count": 3,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_005_biedronka_phase_00.png",
+                "size": 2590,
+                "width": 65,
+                "height": 45
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_005_biedronka_phase_01.png",
+                "size": 2594,
+                "width": 65,
+                "height": 45
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_005_biedronka_phase_02.png",
+                "size": 2592,
+                "width": 65,
+                "height": 45
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "name": "puzzle 01",
+            "record_offset": 140357,
+            "blob_offset": 140361,
+            "blob_size": 29280,
+            "width": 69,
+            "height": 82,
+            "phase_count": 3,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_006_puzzle 01_phase_00.png",
+                "size": 3890,
+                "width": 69,
+                "height": 82
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_006_puzzle 01_phase_01.png",
+                "size": 3853,
+                "width": 69,
+                "height": 82
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_006_puzzle 01_phase_02.png",
+                "size": 3724,
+                "width": 69,
+                "height": 82
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "name": "kaseta 01",
+            "record_offset": 169641,
+            "blob_offset": 169645,
+            "blob_size": 37856,
+            "width": 81,
+            "height": 65,
+            "phase_count": 3,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_007_kaseta 01_phase_00.png",
+                "size": 3597,
+                "width": 81,
+                "height": 65
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_007_kaseta 01_phase_01.png",
+                "size": 3690,
+                "width": 81,
+                "height": 65
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_007_kaseta 01_phase_02.png",
+                "size": 3597,
+                "width": 81,
+                "height": 65
+              }
+            ]
+          },
+          {
+            "index": 8,
+            "name": "wybór 01",
+            "record_offset": 207501,
+            "blob_offset": 207505,
+            "blob_size": 9916,
+            "width": 76,
+            "height": 63,
+            "phase_count": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_008_wyb_r 01_phase_00.png",
+                "size": 4405,
+                "width": 76,
+                "height": 63
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_008_wyb_r 01_phase_01.png",
+                "size": 4452,
+                "width": 76,
+                "height": 63
+              }
+            ]
+          },
+          {
+            "index": 9,
+            "name": "telewizor",
+            "record_offset": 217421,
+            "blob_offset": 217425,
+            "blob_size": 58936,
+            "width": 76,
+            "height": 70,
+            "phase_count": 3,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_009_telewizor_phase_00.png",
+                "size": 3600,
+                "width": 76,
+                "height": 70
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_009_telewizor_phase_01.png",
+                "size": 3707,
+                "width": 76,
+                "height": 70
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_009_telewizor_phase_02.png",
+                "size": 3766,
+                "width": 76,
+                "height": 70
+              }
+            ]
+          },
+          {
+            "index": 10,
+            "name": "trudność ",
+            "record_offset": 276361,
+            "blob_offset": 276365,
+            "blob_size": 100768,
+            "width": 102,
+            "height": 98,
+            "phase_count": 3,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_010_trudno__phase_00.png",
+                "size": 6127,
+                "width": 102,
+                "height": 98
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_010_trudno__phase_01.png",
+                "size": 6137,
+                "width": 102,
+                "height": 98
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_010_trudno__phase_02.png",
+                "size": 5807,
+                "width": 102,
+                "height": 98
+              }
+            ]
+          },
+          {
+            "index": 11,
+            "name": "trudność ",
+            "record_offset": 377133,
+            "blob_offset": 377137,
+            "blob_size": 40380,
+            "width": 81,
+            "height": 97,
+            "phase_count": 3,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_011_trudno__phase_00.png",
+                "size": 4951,
+                "width": 81,
+                "height": 97
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_011_trudno__phase_01.png",
+                "size": 4966,
+                "width": 81,
+                "height": 97
+              },
+              {
+                "phase": 2,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_011_trudno__phase_02.png",
+                "size": 4753,
+                "width": 81,
+                "height": 97
+              }
+            ]
+          },
+          {
+            "index": 12,
+            "name": "wybór 01",
+            "record_offset": 417517,
+            "blob_offset": 417521,
+            "blob_size": 10580,
+            "width": 77,
+            "height": 64,
+            "phase_count": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_012_wyb_r 01_phase_00.png",
+                "size": 4454,
+                "width": 77,
+                "height": 64
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\grp\\CURSORS2\\sprite_holder\\01_Group.Sprite_Holder_012_wyb_r 01_phase_01.png",
+                "size": 4509,
+                "width": 77,
+                "height": 64
+              }
+            ]
+          }
+        ],
+        "instances": [
+          {
+            "index": 0,
+            "definition_id": 0,
+            "field04": 7,
+            "x": 640,
+            "y": 0,
+            "z": 7,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 428101
+          },
+          {
+            "index": 1,
+            "definition_id": 1,
+            "field04": 8,
+            "x": 704,
+            "y": 9,
+            "z": 8,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 428241
+          },
+          {
+            "index": 2,
+            "definition_id": 2,
+            "field04": 8,
+            "x": 744,
+            "y": 9,
+            "z": 8,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 428381
+          },
+          {
+            "index": 3,
+            "definition_id": 3,
+            "field04": 9,
+            "x": 675,
+            "y": 111,
+            "z": 9,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 428521
+          },
+          {
+            "index": 4,
+            "definition_id": 4,
+            "field04": 8,
+            "x": -56,
+            "y": -70,
+            "z": 8,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 428661
+          },
+          {
+            "index": 5,
+            "definition_id": 5,
+            "field04": 8,
+            "x": 717,
+            "y": 202,
+            "z": 8,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 428801
+          },
+          {
+            "index": 6,
+            "definition_id": 6,
+            "field04": 8,
+            "x": 717,
+            "y": 319,
+            "z": 8,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 428941
+          },
+          {
+            "index": 7,
+            "definition_id": 7,
+            "field04": 8,
+            "x": 709,
+            "y": 60,
+            "z": 8,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 429081
+          },
+          {
+            "index": 8,
+            "definition_id": 8,
+            "field04": 8,
+            "x": 717,
+            "y": 409,
+            "z": 8,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 429221
+          },
+          {
+            "index": 9,
+            "definition_id": 9,
+            "field04": 8,
+            "x": 711,
+            "y": 251,
+            "z": 8,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 429361
+          },
+          {
+            "index": 10,
+            "definition_id": 10,
+            "field04": 8,
+            "x": 693,
+            "y": 22,
+            "z": 8,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 429501
+          },
+          {
+            "index": 11,
+            "definition_id": 11,
+            "field04": 8,
+            "x": 708,
+            "y": 156,
+            "z": 8,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 429641
+          },
+          {
+            "index": 12,
+            "definition_id": 12,
+            "field04": 8,
+            "x": 717,
+            "y": 404,
+            "z": 8,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 429781
+          }
+        ]
+      }
     },
     {
       "index": 2,

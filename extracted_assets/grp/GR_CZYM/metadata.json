@@ -108,6 +108,195 @@
       "kind": "WAVE",
       "path": "extracted_assets\\grp\\GR_CZYM\\embedded\\01_Group.Sound_Holder_012_0023e70f.wav",
       "size": 11870
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+      "offset": 2366613,
+      "size": 1190,
+      "width": 40,
+      "height": 38,
+      "name": "dobrze",
+      "id": 0,
+      "definition_id": 0,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "size": 1190,
+          "width": 40,
+          "height": 38
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_01.png",
+          "size": 1295,
+          "width": 40,
+          "height": 38
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_00.png",
+      "offset": 2369997,
+      "size": 1210,
+      "width": 39,
+      "height": 38,
+      "name": "zle",
+      "id": 1,
+      "definition_id": 1,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_00.png",
+          "size": 1210,
+          "width": 39,
+          "height": 38
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_01.png",
+          "size": 1282,
+          "width": 39,
+          "height": 38
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_002_toolbar_phase_00.png",
+      "offset": 2373389,
+      "size": 35928,
+      "width": 160,
+      "height": 480,
+      "name": "toolbar",
+      "id": 2,
+      "definition_id": 2,
+      "phase_count": 1,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_002_toolbar_phase_00.png",
+          "size": 35928,
+          "width": 160,
+          "height": 480
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_003_wyb_r 01_phase_00.png",
+      "offset": 2450457,
+      "size": 4405,
+      "width": 76,
+      "height": 63,
+      "name": "wybór 01",
+      "id": 3,
+      "definition_id": 3,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_003_wyb_r 01_phase_00.png",
+          "size": 4405,
+          "width": 76,
+          "height": 63
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_003_wyb_r 01_phase_01.png",
+          "size": 4452,
+          "width": 76,
+          "height": 63
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_004_strza_ka_phase_00.png",
+      "offset": 2460377,
+      "size": 2890,
+      "width": 66,
+      "height": 61,
+      "name": "strzałka ",
+      "id": 4,
+      "definition_id": 4,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_004_strza_ka_phase_00.png",
+          "size": 2890,
+          "width": 66,
+          "height": 61
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_004_strza_ka_phase_01.png",
+          "size": 2686,
+          "width": 66,
+          "height": 61
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_005_strza_ka_phase_00.png",
+      "offset": 2469017,
+      "size": 2050,
+      "width": 40,
+      "height": 49,
+      "name": "strzałka ",
+      "id": 5,
+      "definition_id": 5,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_005_strza_ka_phase_00.png",
+          "size": 2050,
+          "width": 40,
+          "height": 49
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_005_strza_ka_phase_01.png",
+          "size": 1962,
+          "width": 40,
+          "height": 49
+        }
+      ]
+    },
+    {
+      "kind": "sprite_holder_png",
+      "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_006_strza_ka_phase_00.png",
+      "offset": 2473281,
+      "size": 2031,
+      "width": 41,
+      "height": 49,
+      "name": "strzałka ",
+      "id": 6,
+      "definition_id": 6,
+      "phase_count": 2,
+      "phase_outputs": [
+        {
+          "phase": 0,
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_006_strza_ka_phase_00.png",
+          "size": 2031,
+          "width": 41,
+          "height": 49
+        },
+        {
+          "phase": 1,
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_006_strza_ka_phase_01.png",
+          "size": 1929,
+          "width": 41,
+          "height": 49
+        }
+      ]
     }
   ],
   "component_list_offset": 1780,
@@ -231,7 +420,623 @@
       "display_name": "Group.Sprite_Holder",
       "private_offset": 2366413,
       "private_size": 114136,
-      "embedded": []
+      "embedded": [
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+          "offset": 2366613,
+          "size": 1190,
+          "width": 40,
+          "height": 38,
+          "name": "dobrze",
+          "id": 0,
+          "definition_id": 0,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+              "size": 1190,
+              "width": 40,
+              "height": 38
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_01.png",
+              "size": 1295,
+              "width": 40,
+              "height": 38
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_00.png",
+          "offset": 2369997,
+          "size": 1210,
+          "width": 39,
+          "height": 38,
+          "name": "zle",
+          "id": 1,
+          "definition_id": 1,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_00.png",
+              "size": 1210,
+              "width": 39,
+              "height": 38
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_01.png",
+              "size": 1282,
+              "width": 39,
+              "height": 38
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_002_toolbar_phase_00.png",
+          "offset": 2373389,
+          "size": 35928,
+          "width": 160,
+          "height": 480,
+          "name": "toolbar",
+          "id": 2,
+          "definition_id": 2,
+          "phase_count": 1,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_002_toolbar_phase_00.png",
+              "size": 35928,
+              "width": 160,
+              "height": 480
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_003_wyb_r 01_phase_00.png",
+          "offset": 2450457,
+          "size": 4405,
+          "width": 76,
+          "height": 63,
+          "name": "wybór 01",
+          "id": 3,
+          "definition_id": 3,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_003_wyb_r 01_phase_00.png",
+              "size": 4405,
+              "width": 76,
+              "height": 63
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_003_wyb_r 01_phase_01.png",
+              "size": 4452,
+              "width": 76,
+              "height": 63
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_004_strza_ka_phase_00.png",
+          "offset": 2460377,
+          "size": 2890,
+          "width": 66,
+          "height": 61,
+          "name": "strzałka ",
+          "id": 4,
+          "definition_id": 4,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_004_strza_ka_phase_00.png",
+              "size": 2890,
+              "width": 66,
+              "height": 61
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_004_strza_ka_phase_01.png",
+              "size": 2686,
+              "width": 66,
+              "height": 61
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_005_strza_ka_phase_00.png",
+          "offset": 2469017,
+          "size": 2050,
+          "width": 40,
+          "height": 49,
+          "name": "strzałka ",
+          "id": 5,
+          "definition_id": 5,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_005_strza_ka_phase_00.png",
+              "size": 2050,
+              "width": 40,
+              "height": 49
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_005_strza_ka_phase_01.png",
+              "size": 1962,
+              "width": 40,
+              "height": 49
+            }
+          ]
+        },
+        {
+          "kind": "sprite_holder_png",
+          "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_006_strza_ka_phase_00.png",
+          "offset": 2473281,
+          "size": 2031,
+          "width": 41,
+          "height": 49,
+          "name": "strzałka ",
+          "id": 6,
+          "definition_id": 6,
+          "phase_count": 2,
+          "phase_outputs": [
+            {
+              "phase": 0,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_006_strza_ka_phase_00.png",
+              "size": 2031,
+              "width": 41,
+              "height": 49
+            },
+            {
+              "phase": 1,
+              "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_006_strza_ka_phase_01.png",
+              "size": 1929,
+              "width": 41,
+              "height": 49
+            }
+          ]
+        }
+      ],
+      "sprite_holder": {
+        "version": 1,
+        "definition_count": 7,
+        "instance_count": 20,
+        "parsed_definitions": 7,
+        "parsed_instances": 20,
+        "definitions": [
+          {
+            "index": 0,
+            "name": "dobrze",
+            "record_offset": 2366425,
+            "blob_offset": 2366429,
+            "blob_size": 3380,
+            "width": 40,
+            "height": 38,
+            "phase_count": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_00.png",
+                "size": 1190,
+                "width": 40,
+                "height": 38
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_000_dobrze_phase_01.png",
+                "size": 1295,
+                "width": 40,
+                "height": 38
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "zle",
+            "record_offset": 2369809,
+            "blob_offset": 2369813,
+            "blob_size": 3388,
+            "width": 39,
+            "height": 38,
+            "phase_count": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_00.png",
+                "size": 1210,
+                "width": 39,
+                "height": 38
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_001_zle_phase_01.png",
+                "size": 1282,
+                "width": 39,
+                "height": 38
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "toolbar",
+            "record_offset": 2373201,
+            "blob_offset": 2373205,
+            "blob_size": 77064,
+            "width": 160,
+            "height": 480,
+            "phase_count": 1,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_002_toolbar_phase_00.png",
+                "size": 35928,
+                "width": 160,
+                "height": 480
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "name": "wybór 01",
+            "record_offset": 2450269,
+            "blob_offset": 2450273,
+            "blob_size": 9916,
+            "width": 76,
+            "height": 63,
+            "phase_count": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_003_wyb_r 01_phase_00.png",
+                "size": 4405,
+                "width": 76,
+                "height": 63
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_003_wyb_r 01_phase_01.png",
+                "size": 4452,
+                "width": 76,
+                "height": 63
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "name": "strzałka ",
+            "record_offset": 2460189,
+            "blob_offset": 2460193,
+            "blob_size": 8636,
+            "width": 66,
+            "height": 61,
+            "phase_count": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_004_strza_ka_phase_00.png",
+                "size": 2890,
+                "width": 66,
+                "height": 61
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_004_strza_ka_phase_01.png",
+                "size": 2686,
+                "width": 66,
+                "height": 61
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "name": "strzałka ",
+            "record_offset": 2468829,
+            "blob_offset": 2468833,
+            "blob_size": 4260,
+            "width": 40,
+            "height": 49,
+            "phase_count": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_005_strza_ka_phase_00.png",
+                "size": 2050,
+                "width": 40,
+                "height": 49
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_005_strza_ka_phase_01.png",
+                "size": 1962,
+                "width": 40,
+                "height": 49
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "name": "strzałka ",
+            "record_offset": 2473093,
+            "blob_offset": 2473097,
+            "blob_size": 4652,
+            "width": 41,
+            "height": 49,
+            "phase_count": 2,
+            "phase_outputs": [
+              {
+                "phase": 0,
+                "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_006_strza_ka_phase_00.png",
+                "size": 2031,
+                "width": 41,
+                "height": 49
+              },
+              {
+                "phase": 1,
+                "path": "extracted_assets\\grp\\GR_CZYM\\sprite_holder\\02_Group.Sprite_Holder_006_strza_ka_phase_01.png",
+                "size": 1929,
+                "width": 41,
+                "height": 49
+              }
+            ]
+          }
+        ],
+        "instances": [
+          {
+            "index": 0,
+            "definition_id": 0,
+            "field04": 1,
+            "x": 17,
+            "y": 437,
+            "z": 1,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 2477749
+          },
+          {
+            "index": 1,
+            "definition_id": 0,
+            "field04": 1,
+            "x": 57,
+            "y": 437,
+            "z": 1,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 2477889
+          },
+          {
+            "index": 2,
+            "definition_id": 0,
+            "field04": 1,
+            "x": 97,
+            "y": 437,
+            "z": 1,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 2478029
+          },
+          {
+            "index": 3,
+            "definition_id": 0,
+            "field04": 1,
+            "x": 137,
+            "y": 437,
+            "z": 1,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 2478169
+          },
+          {
+            "index": 4,
+            "definition_id": 0,
+            "field04": 1,
+            "x": 177,
+            "y": 437,
+            "z": 1,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 2478309
+          },
+          {
+            "index": 5,
+            "definition_id": 0,
+            "field04": 1,
+            "x": 217,
+            "y": 437,
+            "z": 1,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 2478449
+          },
+          {
+            "index": 6,
+            "definition_id": 0,
+            "field04": 1,
+            "x": 257,
+            "y": 437,
+            "z": 1,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 2478589
+          },
+          {
+            "index": 7,
+            "definition_id": 0,
+            "field04": 1,
+            "x": 297,
+            "y": 437,
+            "z": 1,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 2478729
+          },
+          {
+            "index": 8,
+            "definition_id": 0,
+            "field04": 1,
+            "x": 337,
+            "y": 437,
+            "z": 1,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 2478869
+          },
+          {
+            "index": 9,
+            "definition_id": 0,
+            "field04": 1,
+            "x": 377,
+            "y": 437,
+            "z": 1,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 2479009
+          },
+          {
+            "index": 10,
+            "definition_id": 1,
+            "field04": 1,
+            "x": 420,
+            "y": 437,
+            "z": 1,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 2479149
+          },
+          {
+            "index": 11,
+            "definition_id": 1,
+            "field04": 1,
+            "x": 461,
+            "y": 437,
+            "z": 1,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 2479289
+          },
+          {
+            "index": 12,
+            "definition_id": 1,
+            "field04": 1,
+            "x": 502,
+            "y": 437,
+            "z": 1,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 2479429
+          },
+          {
+            "index": 13,
+            "definition_id": 1,
+            "field04": 1,
+            "x": 543,
+            "y": 437,
+            "z": 1,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 2479569
+          },
+          {
+            "index": 14,
+            "definition_id": 1,
+            "field04": 1,
+            "x": 584,
+            "y": 437,
+            "z": 1,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 2479709
+          },
+          {
+            "index": 15,
+            "definition_id": 2,
+            "field04": 7,
+            "x": 640,
+            "y": 0,
+            "z": 7,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 2479849
+          },
+          {
+            "index": 16,
+            "definition_id": 4,
+            "field04": 8,
+            "x": 721,
+            "y": 329,
+            "z": 8,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 2479989
+          },
+          {
+            "index": 17,
+            "definition_id": 3,
+            "field04": 8,
+            "x": 717,
+            "y": 404,
+            "z": 8,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 2480129
+          },
+          {
+            "index": 18,
+            "definition_id": 5,
+            "field04": 8,
+            "x": 704,
+            "y": 14,
+            "z": 8,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 2480269
+          },
+          {
+            "index": 19,
+            "definition_id": 6,
+            "field04": 8,
+            "x": 744,
+            "y": 14,
+            "z": 8,
+            "drag_enabled": false,
+            "phase": 0,
+            "visible": 1,
+            "record_offset": 2480409
+          }
+        ]
+      }
     }
   ]
 }

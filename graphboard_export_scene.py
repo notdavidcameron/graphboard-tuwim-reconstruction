@@ -513,11 +513,15 @@ def parse_transparent_video_entries(meta_component: dict[str, Any], bdf_data: by
 
 def image_asset(item: dict[str, Any], web_root: Path, workspace_root: Path) -> dict[str, Any]:
     path = item.get("path") or item.get("video_output")
+    render_path = path
+    if item.get("kind") == "bitmap_holder_bmp" and item.get("png_path"):
+        render_path = item.get("png_path")
     still_path = item.get("still_path") or item.get("still_output")
     asset = {
         "kind": item.get("kind"),
         "path": path,
-        "url": rel_url(path, web_root, workspace_root),
+        "url": rel_url(render_path, web_root, workspace_root),
+        "renderPath": render_path,
         "stillPath": still_path,
         "stillUrl": rel_url(still_path, web_root, workspace_root),
         "width": item.get("width") or item.get("video_width"),
@@ -913,6 +917,17 @@ def build_scene(meta_path: Path, web_root: Path, workspace_root: Path) -> dict[s
     components = [
         build_component(component, web_root, workspace_root, hints, bdf_data, "Page") for component in meta.get("components", [])
     ]
+    # WYBORW keeps two full-height TransparentVideoHolder entries for the
+    # opened menu. Their recovered z values are high because they are menu
+    # overlays, but the original script reveals them only after the menu
+    # hotspot is activated.
+    if meta_path.parent.name.upper() == "WYBORW":
+        for component in components:
+            if component.get("type") != "Transparent_Video_Holder":
+                continue
+            for asset in component.get("assets") or []:
+                if normalized_board_video_id(asset.get("path") or "") in {25, 26}:
+                    asset["initiallyVisible"] = False
     attach_puzzle_fallbacks(components, meta_path.parent.name, meta_path.parent.parent, web_root, workspace_root)
     background_bmp = page_dir / "background.bmp"
     palette = page_dir / "background_palette.bin"
@@ -965,16 +980,34 @@ def build_group(meta_path: Path, web_root: Path, workspace_root: Path) -> dict[s
         for component in meta.get("components", [])
     ]
     cursors = []
+    warnings = []
     for cursor in meta.get("cursors", []):
         pgm = cursor.get("pgm_output")
+        if not pgm:
+            warnings.append(f"Cursor {cursor.get('index')} ({cursor.get('name') or 'unnamed'}) has no extracted pixel bitmap.")
+        preview_url = rel_url(pgm, web_root, workspace_root)
+        if pgm:
+            pgm_path = Path(pgm)
+            preview_rel = Path("assets") / "cursors" / f"{safe_id(meta_path.parent.name)}_{int(cursor.get('index') or 0):03d}.png"
+            preview_path = web_root / preview_rel
+            try:
+                from PIL import Image
+
+                preview_path.parent.mkdir(parents=True, exist_ok=True)
+                with Image.open(pgm_path) as image:
+                    image.save(preview_path, format="PNG")
+                preview_url = preview_rel.as_posix()
+            except (ImportError, OSError, ValueError):
+                pass
         cursors.append(
             {
                 "index": cursor.get("index"),
                 "name": cursor.get("name"),
                 "width": cursor.get("width"),
                 "height": cursor.get("height"),
-                "url": rel_url(pgm, web_root, workspace_root),
+                "url": preview_url,
                 "path": pgm,
+                "previewPath": str(preview_path) if pgm and preview_path.exists() else None,
             }
         )
     return {
@@ -983,7 +1016,7 @@ def build_group(meta_path: Path, web_root: Path, workspace_root: Path) -> dict[s
         "sourceGrp": meta.get("source"),
         "cursors": cursors,
         "components": components,
-        "warnings": [],
+        "warnings": warnings,
     }
 
 
@@ -1024,8 +1057,10 @@ def main() -> int:
     web_root = args.output
     scenes_dir = web_root / "scenes"
     groups_dir = web_root / "groups"
+    assets_dir = web_root / "assets"
     scenes_dir.mkdir(parents=True, exist_ok=True)
     groups_dir.mkdir(parents=True, exist_ok=True)
+    assets_dir.mkdir(parents=True, exist_ok=True)
 
     metadata_paths = sorted((args.extracted / "bdf").glob("*/metadata.json"))
     available = {path.parent.name.upper(): path for path in metadata_paths}
@@ -1064,8 +1099,34 @@ def main() -> int:
         "totalGroupAssets": 0,
         "totalComponents": 0,
         "totalAssets": 0,
+        "totalDirectAssets": 0,
+        "totalDirectBytes": 0,
         "warnings": order_warnings,
     }
+
+    direct_entries = []
+    direct_root = args.extracted / "direct"
+    if direct_root.exists():
+        for asset_path in sorted(path for path in direct_root.rglob("*") if path.is_file()):
+            suffix = asset_path.suffix.lower()
+            if suffix not in {".wav", ".avi"}:
+                continue
+            media_type = "audio" if suffix == ".wav" else "video"
+            size = asset_path.stat().st_size
+            direct_entries.append(
+                {
+                    "id": f"{media_type}-{safe_id(asset_path.stem)}",
+                    "title": asset_path.stem,
+                    "name": asset_path.name,
+                    "mediaType": media_type,
+                    "extension": suffix.removeprefix(".").upper(),
+                    "size": size,
+                    "path": str(asset_path),
+                    "url": rel_url(str(asset_path), web_root, workspace_root),
+                }
+            )
+            validation["totalDirectAssets"] += 1
+            validation["totalDirectBytes"] += size
 
     group_entries = []
     for group_meta_path in sorted((args.extracted / "grp").glob("*/metadata.json")):
@@ -1130,6 +1191,7 @@ def main() -> int:
         "orderWarnings": order_warnings,
         "project": project_block,
         "groupsUrl": "groups/index.json",
+        "assetsUrl": "assets/index.json",
         "scenes": index_entries,
         "validation": validation,
     }
@@ -1145,6 +1207,18 @@ def main() -> int:
     }
     write_json(scenes_dir / "index.json", index)
     write_json(groups_dir / "index.json", groups_index)
+    write_json(
+        assets_dir / "index.json",
+        {
+            "title": "GraphBoard Direct Media",
+            "generatedFrom": str(direct_root),
+            "assets": direct_entries,
+            "validation": {
+                "totalDirectAssets": validation["totalDirectAssets"],
+                "totalDirectBytes": validation["totalDirectBytes"],
+            },
+        },
+    )
     write_json(web_root / "validation.json", validation)
     print(json.dumps(validation, indent=2, ensure_ascii=False))
     return 1 if validation["missingAssets"] else 0

@@ -21,14 +21,15 @@ state) have a source-style C++ reconstruction in
 
 ## `START.PRJ`
 
-Serializer: `GraphBrdDoc_SerializeProjectState` at `Tuwim.exe:00406020`.
+Serializer: `GraphBrdDoc_SerializeProjectState` at `Tuwim.exe:00406020`, also
+confirmed at the corresponding `Brzechwa.exe:00406020` implementation.
 
 Observed sample: `START.PRJ`, 827 bytes.
 
 Layout:
 
 ```text
-u32 version                         // currently 1
+u32 version                         // observed 0 (Brzechwa) and 1 (Tuwim)
 CString startupPage                 // sample: "intro.bdf"
 CString currentPageOrGroupState     // sample: empty
 u32 audioPresetIndex                // sample: 11
@@ -36,10 +37,18 @@ u32 pageCount
 CString pageNames[pageCount]
 u32 groupCount
 CString groupNames[groupCount]
-CString encodedSignature            // "Julian Tuwim", each byte + 0x21 on save
+if version != 0:
+  CString encodedSignature          // game signature, each byte + 0x21 on save
 u32 globalScriptVersion             // currently 1
 CString globalScript                // project-wide global-variable / handler script
 ```
+
+The signature field was added after schema 0. `Brzechwa.exe` reads and validates
+`"Jan Brzechwa"` only when `version != 0`; a version-0 manifest proceeds directly
+from the group table to `globalScriptVersion`. The shipped Brzechwa manifest is
+1,313 bytes, lists 79 pages and no permanent groups, and ends with a 375-byte
+global script declaring `CString mHistory` and `int doTanca=0`. Its `.GRP` files
+are loaded dynamically by page scripts.
 
 The `audioPresetIndex` is the only project field owned by the audio manager: the
 serializer reads/writes it from `audioManager(+0xbc)->[+0x20]`. The audio manager

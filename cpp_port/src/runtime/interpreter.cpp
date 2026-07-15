@@ -29,6 +29,31 @@ bool isAssignOp(const Token& t) {
 constexpr int kMaxCallDepth = 256;
 constexpr long kMaxLoopIterations = 2000000;
 
+std::string formatCString(const std::vector<Value>& args) {
+    if (args.empty()) return {};
+    const std::string format = args[0].toString();
+    std::string result;
+    std::size_t argument = 1;
+    for (std::size_t i = 0; i < format.size(); ++i) {
+        if (format[i] != '%' || i + 1 >= format.size()) {
+            result.push_back(format[i]);
+            continue;
+        }
+        const char specifier = format[++i];
+        if (specifier == '%') {
+            result.push_back('%');
+        } else if ((specifier == 's' || specifier == 'd') && argument < args.size()) {
+            result += specifier == 'd' ? std::to_string(args[argument].toInt())
+                                       : args[argument].toString();
+            ++argument;
+        } else {
+            result.push_back('%');
+            result.push_back(specifier);
+        }
+    }
+    return result;
+}
+
 } // namespace
 
 Interpreter::Interpreter(std::string source, Host& host)
@@ -182,6 +207,19 @@ void Interpreter::assign(const std::string& name, Value value) {
             return;
         }
     }
+    // Sparse array/object fields belong to the same scope as their root
+    // declaration. This keeps a local `CRect rect` local while allowing
+    // OnOpenPage's promoted `filmy[25]` fields to persist as page globals.
+    const auto separator = name.find_first_of("[.");
+    if (separator != std::string::npos) {
+        const std::string root = name.substr(0, separator);
+        for (auto it = scopes_.rbegin(); it != scopes_.rend(); ++it) {
+            if (it->find(root) != it->end()) {
+                (*it)[name] = std::move(value);
+                return;
+            }
+        }
+    }
     scopes_.front()[name] = std::move(value);  // undeclared -> page global
 }
 
@@ -270,31 +308,36 @@ Interpreter::Flow Interpreter::execStatement() {
         return execDeclaration();
     }
 
-    // Indexed scalar-array assignment. GraphBoard arrays are used pervasively
-    // as integer tables (KOTEK's tile phases, ABECADLO's letter positions,
-    // DYZIO/CUDA motion state). Store each element as a scoped synthetic name.
-    if (tok().kind == TokenKind::Identifier && pos_ + 1 < tokens_.size() &&
-        atPunctAt(pos_ + 1, "[")) {
-        const std::string arrayName = tok().text;
-        pos_ += 2; // identifier '['
-        const auto index = parseExpression().toInt();
-        if (atPunct("]")) ++pos_;
-        const std::string element = arrayName + "[" + std::to_string(index) + "]";
-        if (isAssignOp(tok())) {
-            const std::string op = tok().text;
-            ++pos_;
-            const Value rhs = parseExpression();
-            const Value current = lookup(element);
-            assign(element, op == "=" ? rhs
-                                       : (op == "+=" ? addValues(current, rhs)
-                                                      : arithmetic(op[0], current, rhs)));
+    // Assignment to a scalar, sparse array element, or object member. Scan the
+    // postfix chain without evaluating it first so an index expression is
+    // executed exactly once when parseVariablePath consumes the real lvalue.
+    bool pathAssignment = false;
+    if (tok().kind == TokenKind::Identifier) {
+        std::size_t scan = pos_ + 1;
+        while (scan < tokens_.size()) {
+            if (atPunctAt(scan, "[")) {
+                int depth = 1;
+                ++scan;
+                while (scan < tokens_.size() && depth > 0) {
+                    if (atPunctAt(scan, "[")) ++depth;
+                    else if (atPunctAt(scan, "]")) --depth;
+                    ++scan;
+                }
+                continue;
+            }
+            if (atPunctAt(scan, ".") && scan + 1 < tokens_.size() &&
+                tokens_[scan + 1].kind == TokenKind::Identifier) {
+                scan += 2;
+                continue;
+            }
+            break;
         }
-    // Assignment: identifier (not dotted) followed by an assign op.
-    } else if (tok().kind == TokenKind::Identifier && pos_ + 1 < tokens_.size() &&
-        isAssignOp(tokens_[pos_ + 1])) {
-        const std::string name = tok().text;
-        const std::string op = tokens_[pos_ + 1].text;
-        pos_ += 2;
+        pathAssignment = scan < tokens_.size() && isAssignOp(tokens_[scan]);
+    }
+    if (pathAssignment) {
+        const std::string name = parseVariablePath();
+        const std::string op = tok().text;
+        ++pos_;
         const Value rhs = parseExpression();
         Value result;
         if (op == "=") {
@@ -327,8 +370,8 @@ Interpreter::Flow Interpreter::execDeclaration() {
     while (pos_ < tokens_.size() && tok().kind == TokenKind::Identifier) {
         const std::string name = tok().text;
         ++pos_;
-        // Array dimension(s): int puzz[28]; — consume the bracketed size so the
-        // declaration stays in sync (array elements are not modeled yet).
+        // Array dimension(s): consume the bracketed size. Elements are created
+        // lazily as scoped synthetic paths when they are assigned.
         while (atPunct("[")) {
             int depth = 0;
             while (pos_ < tokens_.size() && tok().kind != TokenKind::End) {
@@ -674,8 +717,7 @@ Value Interpreter::parseUnary() {
         const bool inc = tok().text == "++";
         ++pos_;
         if (tok().kind == TokenKind::Identifier) {
-            const std::string name = tok().text;
-            ++pos_;
+            const std::string name = parseVariablePath();
             const Value updated = inc ? addValues(lookup(name), Value::integer(1))
                                       : arithmetic('-', lookup(name), Value::integer(1));
             assign(name, updated);
@@ -753,13 +795,41 @@ Value Interpreter::callFunctionOrHost(const std::string& name, const std::vector
     return result;
 }
 
+std::string Interpreter::parseVariablePath() {
+    if (tok().kind != TokenKind::Identifier) return {};
+    std::string path = tok().text;
+    ++pos_;
+    while (pos_ < tokens_.size()) {
+        if (atPunct("[")) {
+            ++pos_;
+            const auto index = parseExpression().toInt();
+            if (atPunct("]")) ++pos_;
+            path += "[" + std::to_string(index) + "]";
+            continue;
+        }
+        if (atPunct(".") && pos_ + 1 < tokens_.size() &&
+            tokens_[pos_ + 1].kind == TokenKind::Identifier) {
+            ++pos_;
+            path += "." + tok().text;
+            ++pos_;
+            continue;
+        }
+        break;
+    }
+    return path;
+}
+
 Value Interpreter::parsePrimary() {
     const Token& t = tok();
 
     if (t.kind == TokenKind::Number) {
-        const std::int64_t v = static_cast<std::int64_t>(std::strtoll(t.text.c_str(), nullptr, 0));
+        const bool real = t.text.find_first_of(".eE") != std::string::npos;
+        const Value value = real
+                                ? Value::real(std::strtod(t.text.c_str(), nullptr))
+                                : Value::integer(static_cast<std::int64_t>(
+                                      std::strtoll(t.text.c_str(), nullptr, 0)));
         ++pos_;
-        return Value::integer(v);
+        return value;
     }
     if (t.kind == TokenKind::String) {
         Value v = Value::string(t.text);
@@ -769,93 +839,88 @@ Value Interpreter::parsePrimary() {
     if (atPunct("(")) {
         ++pos_;
         Value v = parseExpression();
-        if (atPunct(")")) {
-            ++pos_;
-        }
+        if (atPunct(")")) ++pos_;
         return v;
     }
     if (t.kind == TokenKind::Identifier) {
-        const std::string name = t.text;
+        std::string path = t.text;
         ++pos_;
 
-        // Dotted access, possibly a chain (Group.HotSpot_Holder.DisableHotSpot).
-        // Consume the whole chain so parsing stays in sync; the last name is the
-        // member/method and everything before it is the (possibly compound)
-        // component path.
-        if (atPunct(".") && pos_ + 1 < tokens_.size() &&
-            tokens_[pos_ + 1].kind == TokenKind::Identifier) {
-            std::string component = name;
-            std::string member;
-            while (atPunct(".") && pos_ + 1 < tokens_.size() &&
-                   tokens_[pos_ + 1].kind == TokenKind::Identifier) {
-                ++pos_;  // '.'
-                member = tok().text;
+        // An undotted call is a user function or host builtin.
+        if (atPunct("(")) {
+            return callFunctionOrHost(path, parseArguments());
+        }
+
+        // Apply index and member postfixes in source order. A final member
+        // followed by '(' is either a local CString/CRect method or a holder
+        // call; a member without '(' remains part of the sparse variable key.
+        while (pos_ < tokens_.size()) {
+            if (atPunct("[")) {
                 ++pos_;
-                if (atPunct(".")) {
-                    component += "." + member;
-                    continue;
-                }
+                const auto index = parseExpression().toInt();
+                if (atPunct("]")) ++pos_;
+                path += "[" + std::to_string(index) + "]";
+                continue;
+            }
+            if (!(atPunct(".") && pos_ + 1 < tokens_.size() &&
+                  tokens_[pos_ + 1].kind == TokenKind::Identifier)) {
                 break;
             }
-            if (atPunct("(")) {
-                std::vector<OutReference> outRefs;
-                const auto args = parseArguments(&outRefs);
-                if (component == name && member == "SetString") {
-                    const Value value = args.empty() ? Value::string("")
-                                                     : Value::string(args[0].toString());
-                    assign(name, value);
-                    return value;
-                }
-                if (component == name && member == "Format") {
-                    std::string formatted = args.empty() ? std::string() : args[0].toString();
-                    for (std::size_t i = 1; i < args.size(); ++i) {
-                        const auto marker = formatted.find("%d");
-                        if (marker == std::string::npos) break;
-                        formatted.replace(marker, 2, args[i].toString());
-                    }
-                    Value value = Value::string(std::move(formatted));
-                    assign(name, value);
-                    return value;
-                }
-                auto result = host_.callComponent(component, member, args);
-                for (const auto& [argument, variable] : outRefs) {
-                    const auto value = result.outArguments.find(argument);
-                    if (value != result.outArguments.end()) {
-                        assign(variable, value->second);
-                    }
-                }
-                return result.value;
+            ++pos_;  // '.'
+            const std::string member = tok().text;
+            ++pos_;
+            if (!atPunct("(")) {
+                path += "." + member;
+                continue;
             }
-            return Value();  // property read: not modeled yet
+
+            std::vector<OutReference> outRefs;
+            const auto args = parseArguments(&outRefs);
+            if (member == "SetRect") {
+                static const char* fields[] = {"left", "top", "right", "bottom"};
+                for (std::size_t i = 0; i < 4; ++i) {
+                    assign(path + "." + fields[i],
+                           i < args.size() ? args[i] : Value::integer(0));
+                }
+                return Value();
+            }
+            if (member == "SetString") {
+                const Value value = args.empty() ? Value::string("")
+                                                 : Value::string(args[0].toString());
+                assign(path, value);
+                return value;
+            }
+            if (member == "Empty") {
+                const Value value = Value::string("");
+                assign(path, value);
+                return value;
+            }
+            if (member == "GetLength") {
+                return Value::integer(static_cast<std::int64_t>(lookup(path).toString().size()));
+            }
+            if (member == "GetString") {
+                return Value::string(lookup(path).toString());
+            }
+            if (member == "Format") {
+                const Value value = Value::string(formatCString(args));
+                assign(path, value);
+                return value;
+            }
+
+            auto result = host_.callComponent(path, member, args);
+            for (const auto& [argument, variable] : outRefs) {
+                const auto value = result.outArguments.find(argument);
+                if (value != result.outArguments.end()) assign(variable, value->second);
+            }
+            return result.value;
         }
 
-        Value base;
-        if (atPunct("(")) {
-            const auto args = parseArguments();
-            base = callFunctionOrHost(name, args);
-        } else if (atPunct("++") || atPunct("--")) {
-            // Postfix x++ / x--: yield the old value, then mutate the variable.
+        const Value base = lookup(path);
+        if (atPunct("++") || atPunct("--")) {
             const bool inc = tok().text == "++";
             ++pos_;
-            const Value old = lookup(name);
-            assign(name, inc ? addValues(old, Value::integer(1))
-                             : arithmetic('-', old, Value::integer(1)));
-            return old;
-        } else {
-            base = lookup(name);
-        }
-
-        // Scalar array indexing. Multidimensional arrays are represented by a
-        // stable synthetic key for each successive subscript.
-        std::string indexedName = name;
-        while (atPunct("[")) {
-            ++pos_;
-            const auto index = parseExpression().toInt();
-            if (atPunct("]")) {
-                ++pos_;
-            }
-            indexedName += "[" + std::to_string(index) + "]";
-            base = lookup(indexedName);
+            assign(path, inc ? addValues(base, Value::integer(1))
+                             : arithmetic('-', base, Value::integer(1)));
         }
         return base;
     }

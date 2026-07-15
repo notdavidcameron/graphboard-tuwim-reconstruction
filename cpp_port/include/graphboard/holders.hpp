@@ -331,6 +331,7 @@ struct TextEntry {
     std::vector<std::uint32_t> lineOffsets;
     std::string secondaryText;           // branch B only
     std::string primaryText;
+    bool initiallyVisible = false;       // record+0x48: shown on page open
 };
 
 struct FontSlot {

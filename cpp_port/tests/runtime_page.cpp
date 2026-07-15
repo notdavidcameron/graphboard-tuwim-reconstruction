@@ -140,7 +140,56 @@ std::vector<std::uint8_t> buildSyntheticBdf(const std::string& script) {
     return b;
 }
 
-std::vector<std::uint8_t> buildSyntheticGroup() {
+std::vector<std::uint8_t> buildScrollableTextBdf(const std::string& script) {
+    const auto textClsid = Guid::fromString("AD45ADB6-5290-11D0-B442-008048EB5D40");
+
+    std::vector<std::uint8_t> b;
+    putFixed(b, "YDP Board data file. Ver:1 text", 100);
+    putU32(b, 1);
+    putU32(b, 0); putU32(b, 0); putU32(b, 640); putU32(b, 480);
+    putU32(b, 0xffffffffu); putU32(b, 8);
+    putU32(b, 0); putU8(b, 0); putU32(b, 0); putU32(b, 0);
+
+    putU32(b, 1);                    // component-list version
+    putU32(b, 1);                    // component count
+    putWrapper(b, textClsid, "Text_Holder");
+    putU32(b, 2);                    // TextHolder private version
+    putU32(b, 1);                    // text count
+    putU8(b, 0); putU8(b, 0); putU8(b, 0); putU8(b, 0);  // colors
+
+    std::vector<std::uint8_t> entry(0xc4, 0);
+    auto setEntry = [&entry](std::size_t off, std::int32_t value) {
+        const auto u = static_cast<std::uint32_t>(value);
+        entry[off] = static_cast<std::uint8_t>(u);
+        entry[off + 1] = static_cast<std::uint8_t>(u >> 8);
+        entry[off + 2] = static_cast<std::uint8_t>(u >> 16);
+        entry[off + 3] = static_cast<std::uint8_t>(u >> 24);
+    };
+    setEntry(0x28, 10); setEntry(0x2c, 10);
+    setEntry(0x30, 210); setEntry(0x34, 110);  // 100-pixel viewport
+    setEntry(0x38, 4);                         // layer
+    setEntry(0x48, 1);                         // initially visible
+    setEntry(0x70, 1); setEntry(0x90, 1);      // cache + secondary branch
+    b.insert(b.end(), entry.begin(), entry.end());
+
+    std::vector<std::uint8_t> cache(0x68, 0);
+    cache[0x0c] = 1;                    // serialized line-offset array present
+    cache[0x10] = 20;                   // 20 lines * 18px = 360px of content
+    b.insert(b.end(), cache.begin(), cache.end());
+    for (std::uint32_t line = 0; line < 20; ++line) putU32(b, line * 7);
+    putArchiveString(b, "");            // no synchronised-text file
+
+    std::string poem;
+    for (int line = 0; line < 20; ++line) poem += "Line " + std::to_string(line) + "\r\n";
+    putArchiveString(b, poem);
+    for (int slot = 0; slot < 50; ++slot) putU32(b, 0);  // default 18px fallback
+
+    putU32(b, 1);                    // page script version
+    putArchiveString(b, script);
+    return b;
+}
+
+std::vector<std::uint8_t> buildSyntheticGroup(std::int32_t layer = 9) {
     const auto hotspotClsid = Guid::fromString("DA768116-5341-11D0-B444-008048EB5D40");
     std::vector<std::uint8_t> b;
     putU32(b, 0);                    // cursor count
@@ -150,8 +199,44 @@ std::vector<std::uint8_t> buildSyntheticGroup() {
     putU32(b, 0);                    // hotspot version
     putU8(b, 0); putU8(b, 0); putU8(b, 0);
     putU32(b, 1);
-    putHotSpotRecord(b, 0, 0, 50, 50, 9, 1, 42);
+    putHotSpotRecord(b, 0, 0, 50, 50, layer, 1, 42);
     putArchiveString(b, "toolbar");
+    putU32(b, 0); putU32(b, 0);
+    return b;
+}
+
+// Sprite_Holder is intentionally first and overlaps a later HotSpot_Holder on
+// the same layer. The native host stops at the first component that handles an
+// equal-layer hit; Brzechwa's WIERSZ groups use this shape for their fingers.
+std::vector<std::uint8_t> buildEqualLayerGroup() {
+    const auto spriteClsid = Guid::fromString("B64F3336-5368-11D0-B445-008048EB5D40");
+    const auto hotspotClsid = Guid::fromString("DA768116-5341-11D0-B444-008048EB5D40");
+    std::vector<std::uint8_t> b;
+    putU32(b, 0);                    // cursor count
+    putU32(b, 1);                    // component-list version
+    putU32(b, 2);                    // component count
+
+    putWrapper(b, spriteClsid, "Group.Sprite_Holder");
+    putU32(b, 1); putU32(b, 1); putU32(b, 1);  // version, definitions, instances
+    putU32(b, 0x90);
+    std::vector<std::uint8_t> blob(0x90, 0);
+    blob[0x00] = 1; blob[0x80] = 32; blob[0x84] = 16;
+    b.insert(b.end(), blob.begin(), blob.end());
+    std::vector<std::uint8_t> instance(0x8c, 0);
+    auto put = [&instance](std::size_t off, std::int32_t value) {
+        const auto u = static_cast<std::uint32_t>(value);
+        instance[off] = static_cast<std::uint8_t>(u);
+        instance[off + 1] = static_cast<std::uint8_t>(u >> 8);
+        instance[off + 2] = static_cast<std::uint8_t>(u >> 16);
+        instance[off + 3] = static_cast<std::uint8_t>(u >> 24);
+    };
+    put(0x00, 0); put(0x08, 0); put(0x0c, 0); put(0x18, 4); put(0x5c, 0); put(0x88, 1);
+    b.insert(b.end(), instance.begin(), instance.end());
+
+    putWrapper(b, hotspotClsid, "Group.HotSpot_Holder");
+    putU32(b, 0); putU8(b, 0); putU8(b, 0); putU8(b, 0); putU32(b, 1);
+    putHotSpotRecord(b, 0, 0, 50, 50, 4, 1, 42);
+    putArchiveString(b, "overlap");
     putU32(b, 0); putU32(b, 0);
     return b;
 }
@@ -241,6 +326,53 @@ void testDriveSyntheticPage() {
     assert(page->pendingPage() == "next.bdf");
 }
 
+void testTextHolderWheelScrolling() {
+    const char* script =
+        "void OnOpenPage(){ Text_Holder.EnableMouse(0); }\n"
+        "void Text_Holder.MouseMoveIn(int id){ SetCursor(6); }\n"
+        "void Text_Holder.MouseMoveOut(int id){ SetCursor(7); }\n"
+        "void Text_Holder.ClickOnText(int id){ SetCursor(8); }\n"
+        "void Text_Holder.ScrollTextUp(int id){}\n"
+        "void Text_Holder.ScrollTextDown(int id){}\n"
+        "void Text_Holder.EndScrollText(int id){}\n";
+    const auto bytes = buildScrollableTextBdf(script);
+    BinaryReader reader(bytes);
+    auto page = Page::loadFromReader(reader, "scrollable-text");
+    page->open();
+
+    const auto* text = page->component("Text_Holder");
+    assert(text != nullptr);
+    assert(text->texts.size() == 1);
+    assert(item(text, 0, "visible").toInt() == 1);
+    assert(item(text, 0, "mouseEnabled").toInt() == 1);
+
+    page->mouseMove(50, 50);
+    assert(page->cursor() == 6);
+    page->lButtonDown(50, 50);
+    assert(page->cursor() == 8);
+    page->mouseMove(500, 400);
+    assert(page->cursor() == 7);
+
+    // Three 18-pixel lines per detent, with the authored rectangle acting as
+    // a viewport. Wheel-up restores the top; repeated wheel-down clamps at
+    // 100 - (20 * 18) = -260 pixels.
+    assert(page->mouseWheel(50, 50, -120));
+    assert(item(text, 0, "offsetY").toInt() == -54);
+    assert(page->mouseWheel(50, 50, 120));
+    assert(item(text, 0, "offsetY").toInt() == 0);
+    for (int i = 0; i < 10; ++i) assert(page->mouseWheel(50, 50, -120));
+    assert(item(text, 0, "offsetY").toInt() == -260);
+
+    assert(!page->mouseWheel(500, 400, 120));  // outside the text rect
+    page->callComponent("Text_Holder", "DisableMouse", {Value::integer(0)});
+    assert(!page->mouseWheel(50, 50, 120));
+
+    page->callComponent("Text_Holder", "SetTextOffsets",
+                        {Value::integer(0), Value::integer(7), Value::integer(-36)});
+    assert(item(text, 0, "offsetX").toInt() == 7);
+    assert(item(text, 0, "offsetY").toInt() == -36);
+}
+
 void testGroupNamespaceAndHitRouting() {
     const char* script = R"S(
 void OnOpenPage() { LoadGroup("toolbar.grp"); }
@@ -279,6 +411,35 @@ void Group.HotSpot_Holder.LeftButtonClickOn(int rectID)
     assert(page->currentGroup().empty());
     assert(page->groupComponents().empty());
     assert(page->component("Group.HotSpot_Holder") == nullptr);
+
+    std::filesystem::remove_all(dir, ec);
+}
+
+void testEqualLayerDispatchOrder() {
+    const char* script = R"S(
+void OnOpenPage() {}
+void HotSpot_Holder.LeftButtonClickOn(int id) { Sprite_Holder.ChangePhase(0,10); }
+void Group.Sprite_Holder.MouseClickOnDown(int id) { Sprite_Holder.ChangePhase(0,20); }
+void Group.HotSpot_Holder.LeftButtonClickOn(int id) { Sprite_Holder.ChangePhase(0,30); }
+)S";
+    const auto dir = std::filesystem::temp_directory_path() / "gb_equal_layer_test";
+    std::error_code ec;
+    std::filesystem::create_directories(dir, ec);
+    writeBytes(dir / "PAGE.BDF", buildSyntheticBdf(script));
+    writeBytes(dir / "PAGE-TIE.GRP", buildSyntheticGroup(/*layer=*/1));
+    writeBytes(dir / "GROUP-TIE.GRP", buildEqualLayerGroup());
+
+    auto page = Page::loadFromFile(dir / "PAGE.BDF");
+    page->open();
+    page->callBuiltin("LoadGroup", {Value::string("page-tie.grp")});
+    page->lButtonDown(10, 10);
+    assert(item(page->component("Sprite_Holder"), 0, "phase").toInt() == 10);
+
+    page->callComponent("Sprite_Holder", "ChangePhase",
+                        {Value::integer(0), Value::integer(0)});
+    page->callBuiltin("LoadGroup", {Value::string("group-tie.grp")});
+    page->lButtonDown(10, 10);
+    assert(item(page->component("Sprite_Holder"), 0, "phase").toInt() == 20);
 
     std::filesystem::remove_all(dir, ec);
 }
@@ -971,7 +1132,9 @@ void testBitmapVsHotSpotLayer() {
 
 int main() {
     testDriveSyntheticPage();
+    testTextHolderWheelScrolling();
     testGroupNamespaceAndHitRouting();
+    testEqualLayerDispatchOrder();
     testHotSpotCallbacks();
     testSpriteCallbacks();
     testSpritePixelMask();

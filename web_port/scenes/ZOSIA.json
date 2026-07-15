@@ -44,6 +44,7 @@
           "kind": "bitmap_holder_bmp",
           "path": "extracted_assets\\bdf\\ZOSIA\\bitmap_holder\\00_Bitmap_Holder_000_drzwi1_267x440.bmp",
           "url": "../extracted_assets/bdf/ZOSIA/bitmap_holder/00_Bitmap_Holder_000_drzwi1_267x440.bmp",
+          "renderPath": "extracted_assets\\bdf\\ZOSIA\\bitmap_holder\\00_Bitmap_Holder_000_drzwi1_267x440.bmp",
           "stillPath": null,
           "stillUrl": null,
           "width": 267,
@@ -65,6 +66,7 @@
           "kind": "bitmap_holder_bmp",
           "path": "extracted_assets\\bdf\\ZOSIA\\bitmap_holder\\00_Bitmap_Holder_001_drzwi2_166x419.bmp",
           "url": "../extracted_assets/bdf/ZOSIA/bitmap_holder/00_Bitmap_Holder_001_drzwi2_166x419.bmp",
+          "renderPath": "extracted_assets\\bdf\\ZOSIA\\bitmap_holder\\00_Bitmap_Holder_001_drzwi2_166x419.bmp",
           "stillPath": null,
           "stillUrl": null,
           "width": 166,
@@ -222,12 +224,13 @@
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_000_maszyna_phase_00.png",
           "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_000_maszyna_phase_00.png",
+          "renderPath": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_000_maszyna_phase_00.png",
           "stillPath": null,
           "stillUrl": null,
           "width": 72,
           "height": 57,
           "frameCount": null,
-          "offset": 505723,
+          "offset": 502367,
           "name": "maszyna",
           "id": 0,
           "definitionId": 0,
@@ -241,14 +244,9 @@
               "phase": 1,
               "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_000_maszyna_phase_01.png",
               "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_000_maszyna_phase_01.png"
-            },
-            {
-              "phase": 2,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_000_maszyna_phase_02.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_000_maszyna_phase_02.png"
             }
           ],
-          "phaseCount": 3,
+          "phaseCount": 2,
           "instanceOffset": 1232039,
           "rect": {
             "x": 418,
@@ -266,12 +264,13 @@
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_001_radio_phase_00.png",
           "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_001_radio_phase_00.png",
+          "renderPath": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_001_radio_phase_00.png",
           "stillPath": null,
           "stillUrl": null,
           "width": 69,
           "height": 43,
           "frameCount": null,
-          "offset": 521042,
+          "offset": 518223,
           "name": "radio",
           "id": 1,
           "definitionId": 1,
@@ -285,14 +284,9 @@
               "phase": 1,
               "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_001_radio_phase_01.png",
               "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_001_radio_phase_01.png"
-            },
-            {
-              "phase": 2,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_001_radio_phase_02.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_001_radio_phase_02.png"
             }
           ],
-          "phaseCount": 3,
+          "phaseCount": 2,
           "instanceOffset": 1232179,
           "rect": {
             "x": 443,
@@ -310,12 +304,13 @@
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_002_telefon_phase_00.png",
           "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_002_telefon_phase_00.png",
+          "renderPath": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_002_telefon_phase_00.png",
           "stillPath": null,
           "stillUrl": null,
           "width": 73,
           "height": 51,
           "frameCount": null,
-          "offset": 532498,
+          "offset": 530131,
           "name": "telefon",
           "id": 2,
           "definitionId": 2,
@@ -329,14 +324,9 @@
               "phase": 1,
               "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_002_telefon_phase_01.png",
               "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_002_telefon_phase_01.png"
-            },
-            {
-              "phase": 2,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_002_telefon_phase_02.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_002_telefon_phase_02.png"
             }
           ],
-          "phaseCount": 3,
+          "phaseCount": 2,
           "instanceOffset": 1232319,
           "rect": {
             "x": 425,
@@ -354,12 +344,13 @@
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_003_telewizor_phase_00.png",
           "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_003_telewizor_phase_00.png",
+          "renderPath": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_003_telewizor_phase_00.png",
           "stillPath": null,
           "stillUrl": null,
           "width": 88,
           "height": 82,
           "frameCount": null,
-          "offset": 547703,
+          "offset": 543855,
           "name": "telewizor",
           "id": 3,
           "definitionId": 3,
@@ -393,12 +384,13 @@
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_004_torebka_phase_00.png",
           "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_004_torebka_phase_00.png",
+          "renderPath": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_004_torebka_phase_00.png",
           "stillPath": null,
           "stillUrl": null,
           "width": 73,
           "height": 62,
           "frameCount": null,
-          "offset": 564763,
+          "offset": 562323,
           "name": "torebka",
           "id": 4,
           "definitionId": 4,
@@ -432,12 +424,13 @@
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_005_wiertarka_phase_00.png",
           "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_005_wiertarka_phase_00.png",
+          "renderPath": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_005_wiertarka_phase_00.png",
           "stillPath": null,
           "stillUrl": null,
           "width": 88,
           "height": 54,
           "frameCount": null,
-          "offset": 578515,
+          "offset": 574003,
           "name": "wiertarka",
           "id": 5,
           "definitionId": 5,
@@ -471,12 +464,13 @@
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_006_zegarek_phase_00.png",
           "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_006_zegarek_phase_00.png",
+          "renderPath": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_006_zegarek_phase_00.png",
           "stillPath": null,
           "stillUrl": null,
           "width": 50,
           "height": 46,
           "frameCount": null,
-          "offset": 588995,
+          "offset": 588207,
           "name": "zegarek",
           "id": 6,
           "definitionId": 6,
@@ -490,19 +484,9 @@
               "phase": 1,
               "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_006_zegarek_phase_01.png",
               "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_006_zegarek_phase_01.png"
-            },
-            {
-              "phase": 2,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_006_zegarek_phase_02.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_006_zegarek_phase_02.png"
-            },
-            {
-              "phase": 3,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_006_zegarek_phase_03.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_006_zegarek_phase_03.png"
             }
           ],
-          "phaseCount": 4,
+          "phaseCount": 2,
           "instanceOffset": 1232879,
           "rect": {
             "x": 456,
@@ -520,12 +504,13 @@
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_00.png",
           "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_00.png",
+          "renderPath": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_00.png",
           "stillPath": null,
           "stillUrl": null,
           "width": 81,
           "height": 40,
           "frameCount": null,
-          "offset": 600823,
+          "offset": 598383,
           "name": "balowa",
           "id": 7,
           "definitionId": 7,
@@ -544,159 +529,9 @@
               "phase": 2,
               "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_02.png",
               "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_02.png"
-            },
-            {
-              "phase": 3,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_03.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_03.png"
-            },
-            {
-              "phase": 4,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_04.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_04.png"
-            },
-            {
-              "phase": 5,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_05.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_05.png"
-            },
-            {
-              "phase": 6,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_06.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_06.png"
-            },
-            {
-              "phase": 7,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_07.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_07.png"
-            },
-            {
-              "phase": 8,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_08.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_08.png"
-            },
-            {
-              "phase": 9,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_09.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_09.png"
-            },
-            {
-              "phase": 10,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_10.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_10.png"
-            },
-            {
-              "phase": 11,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_11.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_11.png"
-            },
-            {
-              "phase": 12,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_12.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_12.png"
-            },
-            {
-              "phase": 13,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_13.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_13.png"
-            },
-            {
-              "phase": 14,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_14.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_14.png"
-            },
-            {
-              "phase": 15,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_15.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_15.png"
-            },
-            {
-              "phase": 16,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_16.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_16.png"
-            },
-            {
-              "phase": 17,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_17.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_17.png"
-            },
-            {
-              "phase": 18,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_18.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_18.png"
-            },
-            {
-              "phase": 19,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_19.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_19.png"
-            },
-            {
-              "phase": 20,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_20.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_20.png"
-            },
-            {
-              "phase": 21,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_21.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_21.png"
-            },
-            {
-              "phase": 22,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_22.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_22.png"
-            },
-            {
-              "phase": 23,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_23.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_23.png"
-            },
-            {
-              "phase": 24,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_24.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_24.png"
-            },
-            {
-              "phase": 25,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_25.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_25.png"
-            },
-            {
-              "phase": 26,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_26.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_26.png"
-            },
-            {
-              "phase": 27,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_27.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_27.png"
-            },
-            {
-              "phase": 28,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_28.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_28.png"
-            },
-            {
-              "phase": 29,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_29.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_29.png"
-            },
-            {
-              "phase": 30,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_30.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_30.png"
-            },
-            {
-              "phase": 31,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_31.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_31.png"
-            },
-            {
-              "phase": 32,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_007_balowa_phase_32.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_007_balowa_phase_32.png"
             }
           ],
-          "phaseCount": 33,
+          "phaseCount": 3,
           "instanceOffset": 1233019,
           "rect": {
             "x": 505,
@@ -714,12 +549,13 @@
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_008_jeans_phase_00.png",
           "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_008_jeans_phase_00.png",
+          "renderPath": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_008_jeans_phase_00.png",
           "stillPath": null,
           "stillUrl": null,
           "width": 95,
           "height": 51,
           "frameCount": null,
-          "offset": 709419,
+          "offset": 707931,
           "name": "jeans",
           "id": 8,
           "definitionId": 8,
@@ -738,74 +574,9 @@
               "phase": 2,
               "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_008_jeans_phase_02.png",
               "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_008_jeans_phase_02.png"
-            },
-            {
-              "phase": 3,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_008_jeans_phase_03.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_008_jeans_phase_03.png"
-            },
-            {
-              "phase": 4,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_008_jeans_phase_04.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_008_jeans_phase_04.png"
-            },
-            {
-              "phase": 5,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_008_jeans_phase_05.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_008_jeans_phase_05.png"
-            },
-            {
-              "phase": 6,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_008_jeans_phase_06.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_008_jeans_phase_06.png"
-            },
-            {
-              "phase": 7,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_008_jeans_phase_07.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_008_jeans_phase_07.png"
-            },
-            {
-              "phase": 8,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_008_jeans_phase_08.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_008_jeans_phase_08.png"
-            },
-            {
-              "phase": 9,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_008_jeans_phase_09.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_008_jeans_phase_09.png"
-            },
-            {
-              "phase": 10,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_008_jeans_phase_10.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_008_jeans_phase_10.png"
-            },
-            {
-              "phase": 11,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_008_jeans_phase_11.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_008_jeans_phase_11.png"
-            },
-            {
-              "phase": 12,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_008_jeans_phase_12.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_008_jeans_phase_12.png"
-            },
-            {
-              "phase": 13,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_008_jeans_phase_13.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_008_jeans_phase_13.png"
-            },
-            {
-              "phase": 14,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_008_jeans_phase_14.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_008_jeans_phase_14.png"
-            },
-            {
-              "phase": 15,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_008_jeans_phase_15.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_008_jeans_phase_15.png"
             }
           ],
-          "phaseCount": 16,
+          "phaseCount": 3,
           "instanceOffset": 1233159,
           "rect": {
             "x": 502,
@@ -823,12 +594,13 @@
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_009_kurtka_phase_00.png",
           "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_009_kurtka_phase_00.png",
+          "renderPath": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_009_kurtka_phase_00.png",
           "stillPath": null,
           "stillUrl": null,
           "width": 116,
           "height": 62,
           "frameCount": null,
-          "offset": 788507,
+          "offset": 787127,
           "name": "kurtka",
           "id": 9,
           "definitionId": 9,
@@ -847,59 +619,9 @@
               "phase": 2,
               "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_009_kurtka_phase_02.png",
               "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_009_kurtka_phase_02.png"
-            },
-            {
-              "phase": 3,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_009_kurtka_phase_03.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_009_kurtka_phase_03.png"
-            },
-            {
-              "phase": 4,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_009_kurtka_phase_04.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_009_kurtka_phase_04.png"
-            },
-            {
-              "phase": 5,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_009_kurtka_phase_05.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_009_kurtka_phase_05.png"
-            },
-            {
-              "phase": 6,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_009_kurtka_phase_06.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_009_kurtka_phase_06.png"
-            },
-            {
-              "phase": 7,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_009_kurtka_phase_07.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_009_kurtka_phase_07.png"
-            },
-            {
-              "phase": 8,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_009_kurtka_phase_08.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_009_kurtka_phase_08.png"
-            },
-            {
-              "phase": 9,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_009_kurtka_phase_09.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_009_kurtka_phase_09.png"
-            },
-            {
-              "phase": 10,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_009_kurtka_phase_10.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_009_kurtka_phase_10.png"
-            },
-            {
-              "phase": 11,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_009_kurtka_phase_11.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_009_kurtka_phase_11.png"
-            },
-            {
-              "phase": 12,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_009_kurtka_phase_12.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_009_kurtka_phase_12.png"
             }
           ],
-          "phaseCount": 13,
+          "phaseCount": 3,
           "instanceOffset": 1233299,
           "rect": {
             "x": 491,
@@ -917,12 +639,13 @@
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_010_kwiaty_phase_00.png",
           "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_010_kwiaty_phase_00.png",
+          "renderPath": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_010_kwiaty_phase_00.png",
           "stillPath": null,
           "stillUrl": null,
           "width": 102,
           "height": 55,
           "frameCount": null,
-          "offset": 884237,
+          "offset": 882191,
           "name": "kwiaty",
           "id": 10,
           "definitionId": 10,
@@ -941,69 +664,9 @@
               "phase": 2,
               "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_010_kwiaty_phase_02.png",
               "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_010_kwiaty_phase_02.png"
-            },
-            {
-              "phase": 3,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_010_kwiaty_phase_03.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_010_kwiaty_phase_03.png"
-            },
-            {
-              "phase": 4,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_010_kwiaty_phase_04.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_010_kwiaty_phase_04.png"
-            },
-            {
-              "phase": 5,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_010_kwiaty_phase_05.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_010_kwiaty_phase_05.png"
-            },
-            {
-              "phase": 6,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_010_kwiaty_phase_06.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_010_kwiaty_phase_06.png"
-            },
-            {
-              "phase": 7,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_010_kwiaty_phase_07.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_010_kwiaty_phase_07.png"
-            },
-            {
-              "phase": 8,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_010_kwiaty_phase_08.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_010_kwiaty_phase_08.png"
-            },
-            {
-              "phase": 9,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_010_kwiaty_phase_09.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_010_kwiaty_phase_09.png"
-            },
-            {
-              "phase": 10,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_010_kwiaty_phase_10.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_010_kwiaty_phase_10.png"
-            },
-            {
-              "phase": 11,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_010_kwiaty_phase_11.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_010_kwiaty_phase_11.png"
-            },
-            {
-              "phase": 12,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_010_kwiaty_phase_12.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_010_kwiaty_phase_12.png"
-            },
-            {
-              "phase": 13,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_010_kwiaty_phase_13.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_010_kwiaty_phase_13.png"
-            },
-            {
-              "phase": 14,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_010_kwiaty_phase_14.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_010_kwiaty_phase_14.png"
             }
           ],
-          "phaseCount": 15,
+          "phaseCount": 3,
           "instanceOffset": 1233439,
           "rect": {
             "x": 498,
@@ -1021,12 +684,13 @@
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_00.png",
           "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_00.png",
+          "renderPath": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_00.png",
           "stillPath": null,
           "stillUrl": null,
           "width": 80,
           "height": 37,
           "frameCount": null,
-          "offset": 969703,
+          "offset": 968575,
           "name": "letnia",
           "id": 11,
           "definitionId": 11,
@@ -1045,144 +709,9 @@
               "phase": 2,
               "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_02.png",
               "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_02.png"
-            },
-            {
-              "phase": 3,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_03.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_03.png"
-            },
-            {
-              "phase": 4,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_04.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_04.png"
-            },
-            {
-              "phase": 5,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_05.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_05.png"
-            },
-            {
-              "phase": 6,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_06.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_06.png"
-            },
-            {
-              "phase": 7,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_07.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_07.png"
-            },
-            {
-              "phase": 8,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_08.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_08.png"
-            },
-            {
-              "phase": 9,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_09.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_09.png"
-            },
-            {
-              "phase": 10,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_10.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_10.png"
-            },
-            {
-              "phase": 11,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_11.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_11.png"
-            },
-            {
-              "phase": 12,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_12.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_12.png"
-            },
-            {
-              "phase": 13,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_13.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_13.png"
-            },
-            {
-              "phase": 14,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_14.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_14.png"
-            },
-            {
-              "phase": 15,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_15.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_15.png"
-            },
-            {
-              "phase": 16,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_16.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_16.png"
-            },
-            {
-              "phase": 17,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_17.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_17.png"
-            },
-            {
-              "phase": 18,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_18.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_18.png"
-            },
-            {
-              "phase": 19,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_19.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_19.png"
-            },
-            {
-              "phase": 20,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_20.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_20.png"
-            },
-            {
-              "phase": 21,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_21.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_21.png"
-            },
-            {
-              "phase": 22,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_22.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_22.png"
-            },
-            {
-              "phase": 23,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_23.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_23.png"
-            },
-            {
-              "phase": 24,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_24.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_24.png"
-            },
-            {
-              "phase": 25,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_25.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_25.png"
-            },
-            {
-              "phase": 26,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_26.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_26.png"
-            },
-            {
-              "phase": 27,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_27.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_27.png"
-            },
-            {
-              "phase": 28,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_28.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_28.png"
-            },
-            {
-              "phase": 29,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_011_letnia_phase_29.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_011_letnia_phase_29.png"
             }
           ],
-          "phaseCount": 30,
+          "phaseCount": 3,
           "instanceOffset": 1233579,
           "rect": {
             "x": 506,
@@ -1200,12 +729,13 @@
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_00.png",
           "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_00.png",
+          "renderPath": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_00.png",
           "stillPath": null,
           "stillUrl": null,
           "width": 73,
           "height": 40,
           "frameCount": null,
-          "offset": 1058915,
+          "offset": 1058691,
           "name": "marynarsk",
           "id": 12,
           "definitionId": 12,
@@ -1224,144 +754,9 @@
               "phase": 2,
               "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_02.png",
               "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_02.png"
-            },
-            {
-              "phase": 3,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_03.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_03.png"
-            },
-            {
-              "phase": 4,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_04.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_04.png"
-            },
-            {
-              "phase": 5,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_05.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_05.png"
-            },
-            {
-              "phase": 6,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_06.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_06.png"
-            },
-            {
-              "phase": 7,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_07.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_07.png"
-            },
-            {
-              "phase": 8,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_08.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_08.png"
-            },
-            {
-              "phase": 9,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_09.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_09.png"
-            },
-            {
-              "phase": 10,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_10.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_10.png"
-            },
-            {
-              "phase": 11,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_11.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_11.png"
-            },
-            {
-              "phase": 12,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_12.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_12.png"
-            },
-            {
-              "phase": 13,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_13.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_13.png"
-            },
-            {
-              "phase": 14,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_14.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_14.png"
-            },
-            {
-              "phase": 15,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_15.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_15.png"
-            },
-            {
-              "phase": 16,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_16.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_16.png"
-            },
-            {
-              "phase": 17,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_17.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_17.png"
-            },
-            {
-              "phase": 18,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_18.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_18.png"
-            },
-            {
-              "phase": 19,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_19.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_19.png"
-            },
-            {
-              "phase": 20,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_20.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_20.png"
-            },
-            {
-              "phase": 21,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_21.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_21.png"
-            },
-            {
-              "phase": 22,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_22.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_22.png"
-            },
-            {
-              "phase": 23,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_23.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_23.png"
-            },
-            {
-              "phase": 24,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_24.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_24.png"
-            },
-            {
-              "phase": 25,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_25.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_25.png"
-            },
-            {
-              "phase": 26,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_26.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_26.png"
-            },
-            {
-              "phase": 27,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_27.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_27.png"
-            },
-            {
-              "phase": 28,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_28.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_28.png"
-            },
-            {
-              "phase": 29,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_012_marynarsk_phase_29.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_012_marynarsk_phase_29.png"
             }
           ],
-          "phaseCount": 30,
+          "phaseCount": 3,
           "instanceOffset": 1233719,
           "rect": {
             "x": 506,
@@ -1379,12 +774,13 @@
           "kind": "sprite_holder_png",
           "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_013_ogrodnicz_phase_00.png",
           "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_013_ogrodnicz_phase_00.png",
+          "renderPath": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_013_ogrodnicz_phase_00.png",
           "stillPath": null,
           "stillUrl": null,
           "width": 87,
           "height": 44,
           "frameCount": null,
-          "offset": 1147823,
+          "offset": 1146703,
           "name": "ogrodnicz",
           "id": 13,
           "definitionId": 13,
@@ -1403,104 +799,9 @@
               "phase": 2,
               "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_013_ogrodnicz_phase_02.png",
               "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_013_ogrodnicz_phase_02.png"
-            },
-            {
-              "phase": 3,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_013_ogrodnicz_phase_03.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_013_ogrodnicz_phase_03.png"
-            },
-            {
-              "phase": 4,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_013_ogrodnicz_phase_04.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_013_ogrodnicz_phase_04.png"
-            },
-            {
-              "phase": 5,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_013_ogrodnicz_phase_05.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_013_ogrodnicz_phase_05.png"
-            },
-            {
-              "phase": 6,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_013_ogrodnicz_phase_06.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_013_ogrodnicz_phase_06.png"
-            },
-            {
-              "phase": 7,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_013_ogrodnicz_phase_07.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_013_ogrodnicz_phase_07.png"
-            },
-            {
-              "phase": 8,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_013_ogrodnicz_phase_08.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_013_ogrodnicz_phase_08.png"
-            },
-            {
-              "phase": 9,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_013_ogrodnicz_phase_09.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_013_ogrodnicz_phase_09.png"
-            },
-            {
-              "phase": 10,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_013_ogrodnicz_phase_10.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_013_ogrodnicz_phase_10.png"
-            },
-            {
-              "phase": 11,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_013_ogrodnicz_phase_11.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_013_ogrodnicz_phase_11.png"
-            },
-            {
-              "phase": 12,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_013_ogrodnicz_phase_12.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_013_ogrodnicz_phase_12.png"
-            },
-            {
-              "phase": 13,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_013_ogrodnicz_phase_13.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_013_ogrodnicz_phase_13.png"
-            },
-            {
-              "phase": 14,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_013_ogrodnicz_phase_14.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_013_ogrodnicz_phase_14.png"
-            },
-            {
-              "phase": 15,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_013_ogrodnicz_phase_15.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_013_ogrodnicz_phase_15.png"
-            },
-            {
-              "phase": 16,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_013_ogrodnicz_phase_16.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_013_ogrodnicz_phase_16.png"
-            },
-            {
-              "phase": 17,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_013_ogrodnicz_phase_17.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_013_ogrodnicz_phase_17.png"
-            },
-            {
-              "phase": 18,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_013_ogrodnicz_phase_18.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_013_ogrodnicz_phase_18.png"
-            },
-            {
-              "phase": 19,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_013_ogrodnicz_phase_19.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_013_ogrodnicz_phase_19.png"
-            },
-            {
-              "phase": 20,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_013_ogrodnicz_phase_20.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_013_ogrodnicz_phase_20.png"
-            },
-            {
-              "phase": 21,
-              "path": "extracted_assets\\bdf\\ZOSIA\\sprite_holder\\02_Sprite_Holder_013_ogrodnicz_phase_21.png",
-              "url": "../extracted_assets/bdf/ZOSIA/sprite_holder/02_Sprite_Holder_013_ogrodnicz_phase_21.png"
             }
           ],
-          "phaseCount": 22,
+          "phaseCount": 3,
           "instanceOffset": 1233859,
           "rect": {
             "x": 503,

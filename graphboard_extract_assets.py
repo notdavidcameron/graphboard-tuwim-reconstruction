@@ -514,7 +514,9 @@ def bright_green_palette_indices(palette: bytes) -> set[int]:
     palette = palette[:1024]
     for index, offset in enumerate(range(0, len(palette) - 3, 4)):
         blue, green, red, _reserved = palette[offset : offset + 4]
-        if red <= 24 and green >= 224 and 24 <= blue <= 96:
+        # Source overlays use both pure green (0,255,0) and the slightly
+        # blue-tinted (0,255,51) variant as the chroma key.
+        if red <= 96 and green >= 224 and blue <= 96:
             indices.add(index)
     return indices
 
@@ -548,6 +550,19 @@ def dominant_border_index(pixels: bytes, width: int, height: int, palette: bytes
     return max(counts, key=counts.get) if counts else 0
 
 
+def write_chroma_key_png(path: Path, pixels: bytes, width: int, height: int, palette: bytes) -> bool:
+    """Write a true-colour PNG when an indexed image uses bright-green keying."""
+    chroma_indices = bright_green_palette_indices(palette)
+    if not chroma_indices or not any(pixel in chroma_indices for pixel in pixels):
+        return False
+    transparent_index = dominant_border_index(pixels, width, height, palette)
+    if transparent_index not in chroma_indices:
+        transparent_index = min(chroma_indices)
+    remapped = remap_chroma_key_pixels([pixels], palette, transparent_index)[0]
+    write_indexed_png(path, remapped, width, height, palette, transparent_index=transparent_index)
+    return True
+
+
 def png_chunk(kind: bytes, payload: bytes) -> bytes:
     return struct.pack(">I", len(payload)) + kind + payload + struct.pack(">I", zlib.crc32(kind + payload) & 0xFFFFFFFF)
 
@@ -563,18 +578,21 @@ def write_indexed_png(
     if width <= 0 or height <= 0 or len(pixels) < width * height:
         return
     mkdir(path.parent)
+    # Indexed PNGs with a tRNS table are valid, but the embedded viewer used
+    # by the web port has rendered those palette-transparent pixels as the
+    # original bright-green chroma key. Expand the palette into true-colour
+    # RGBA so transparency is unambiguous to every browser.
+    rgb_palette = gif_palette_from_bmp_palette(palette)
     scanlines = bytearray()
     for row in range(height):
         start = row * width
         scanlines.append(0)
-        scanlines.extend(pixels[start : start + width])
+        for pixel in pixels[start : start + width]:
+            palette_offset = pixel * 3
+            scanlines.extend(rgb_palette[palette_offset : palette_offset + 3])
+            scanlines.append(0 if pixel == transparent_index else 255)
     stream = bytearray(b"\x89PNG\r\n\x1a\n")
-    stream.extend(png_chunk(b"IHDR", struct.pack(">IIBBBBB", width, height, 8, 3, 0, 0, 0)))
-    stream.extend(png_chunk(b"PLTE", gif_palette_from_bmp_palette(palette)))
-    if transparent_index is not None and 0 <= transparent_index < 256:
-        alpha = bytearray([255] * (transparent_index + 1))
-        alpha[transparent_index] = 0
-        stream.extend(png_chunk(b"tRNS", bytes(alpha)))
+    stream.extend(png_chunk(b"IHDR", struct.pack(">IIBBBBB", width, height, 8, 6, 0, 0, 0)))
     stream.extend(png_chunk(b"IDAT", zlib.compress(bytes(scanlines), 1)))
     stream.extend(png_chunk(b"IEND", b""))
     path.write_bytes(stream)
@@ -1153,6 +1171,11 @@ def extract_bitmap_holder_images(
             pixels = data[pixel_offset : pixel_offset + pixel_size]
             pixels = flip_indexed_rows(pixels, row_stride, height)
             write_indexed_bmp(bmp_path, pixels, width, height, palette)
+            png_path = bmp_path.with_suffix(".png")
+            png_pixels = b"".join(
+                pixels[row * row_stride : row * row_stride + width]
+                for row in range(height)
+            )
             output = {
                 "kind": "bitmap_holder_bmp",
                 "path": str(bmp_path),
@@ -1166,7 +1189,12 @@ def extract_bitmap_holder_images(
                 "geometry_confidence": "serialized_entry",
                 "initially_visible": visible,
             }
+            if write_chroma_key_png(png_path, png_pixels, width, height, palette):
+                output["png_path"] = str(png_path)
+                output["png_size"] = png_path.stat().st_size
             frame["bmp_output"] = str(bmp_path)
+            if output.get("png_path"):
+                frame["png_output"] = output["png_path"]
             outputs.append(output)
 
         frames.append(frame)
@@ -1349,7 +1377,26 @@ def extract_bdf(path: Path, out_dir: Path, include_raw: bool = False) -> dict:
     return metadata
 
 
-def parse_grp(path: Path, out_dir: Path) -> dict:
+def find_group_palette(out_dir: Path, grp_stem: str) -> bytes | None:
+    """Palette for baking a group's indexed sprites into PNGs.
+
+    GRP files carry no palette: at runtime the board draws group sprites with
+    the palette of whichever page is loaded. Use the palette of the first
+    extracted page whose script loads this group, normalised to BGR the same
+    way page holders are.
+    """
+    needle = f'loadgroup("{grp_stem.lower()}.grp")'.encode("ascii", "ignore")
+    for script_path in sorted((out_dir / "bdf").glob("*/script.txt")):
+        text = script_path.read_text(encoding="utf-8", errors="replace").lower().replace(" ", "")
+        if needle.decode() not in text:
+            continue
+        palette_path = script_path.parent / "background_palette.bin"
+        if palette_path.exists():
+            return page_palette_to_bgr(palette_path.read_bytes())
+    return None
+
+
+def parse_grp(path: Path, out_dir: Path, palette_bgr: bytes | None = None) -> dict:
     data = path.read_bytes()
     offset = 0
     count, offset = read_u32(data, offset)
@@ -1428,6 +1475,29 @@ def parse_grp(path: Path, out_dir: Path) -> dict:
                 component_meta["embedded"].append(item)
                 metadata["outputs"].append({"kind": item["kind"], "path": str(asset_path), "size": chunk["size"]})
 
+            # Group holders serialize exactly like their page counterparts; the
+            # only page-specific input is the palette (resolved by the caller
+            # from a page that loads this group).
+            if palette_bgr and wrapper["display_name"] == "Group.Sprite_Holder":
+                sprite_holder, sprite_outputs = extract_sprite_holder_images(
+                    data, private_start, private_end, component_name, group_dir, palette_bgr
+                )
+                if sprite_holder:
+                    component_meta["sprite_holder"] = sprite_holder
+                    for output in sprite_outputs:
+                        component_meta["embedded"].append(output)
+                        metadata["outputs"].append(output)
+
+            if palette_bgr and wrapper["display_name"] == "Group.Bitmap_Holder":
+                bitmap_holder, bitmap_outputs = extract_bitmap_holder_images(
+                    data, private_start, private_end, component_name, group_dir, palette_bgr
+                )
+                if bitmap_holder:
+                    component_meta["bitmap_holder"] = bitmap_holder
+                    for output in bitmap_outputs:
+                        component_meta["embedded"].append(output)
+                        metadata["outputs"].append(output)
+
             metadata["components"].append(component_meta)
 
     write_json(group_dir / "metadata.json", metadata)
@@ -1482,7 +1552,7 @@ def extract_folder(
 
     for path in sorted(src_dir.glob("*.GRP")):
         try:
-            meta = parse_grp(path, out_dir)
+            meta = parse_grp(path, out_dir, find_group_palette(out_dir, path.stem))
             manifest["grp"].append(
                 {
                     "source": str(path),

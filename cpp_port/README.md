@@ -12,8 +12,9 @@ plumbing.
 ## Current Scope
 
 - MFC `CArchive` string decoding (`binary_reader`).
-- `START.PRJ` project manifest parsing, including the trailing global-script block
-  (`format`). Verified byte-exact against the real `START.PRJ`.
+- `START.PRJ` project manifest parsing, including both the version-0 layout
+  without a signature field and the version-1 layout, plus the trailing
+  global-script block (`format`).
 - Top-level `.BDF` page header parsing (`format`).
 - OLE `CLSID`/GUID handling (`guid`).
 - Page/group component-list walking (`component`): the container framing
@@ -43,7 +44,8 @@ plumbing.
   and `CloseGroup` remain isolated from the page's own holders.
 - A native Windows player, `gbgame`, with GDI scene output, embedded BoardVideo
   decoding, overlapping audio, input, timers, navigation, and the sliding
-  `CURSORS.GRP` toolbar.
+  toolbar. It draws the active group's original indexed cursor artwork with the
+  serialized hotspot and transparency.
 - A native Windows creator/editor, `gbeditor`, plus the headless `gbauthor`
   workflow. It creates `.gbproj` directories, imports legacy projects/boards,
   authors the recovered core holders, previews through the real reconstructed
@@ -61,9 +63,9 @@ so `OnOpenPage`, `.GRP` loading, project globals, input callbacks, and
 `LoadPage` navigation use the same parsers/runtime as `gbgame`. See
 `docs/editor_acceptance.md` for the synthetic and real-file verification matrix.
 
-TextHolder content rendering/synchronization, exact palette fades, custom cursor
-artwork, and several less-used component behaviors remain outside this native
-checkpoint. Parsed TextHolder state is retained for later work.
+Exact TextHolder synchronization, palette fades, and several less-used component
+behaviors remain outside this native checkpoint. Parsed state is retained for
+later work.
 
 ## Real-File Regression Check
 
@@ -73,6 +75,16 @@ and representative pages. Run it after parser or runtime changes:
 
 ```powershell
 .\cpp_port\tools\verify_scenes.ps1
+```
+
+The Brzechwa compatibility matrix is parameterized separately because those
+commercial assets remain external. It checks the version-0 project, all 176
+genuine BDF/GRP resources, selection preview placement, toolbar reveal, and both
+poem-navigation fingers; `WARZYWA.BDF` is reported as the known non-board file:
+
+```powershell
+.\cpp_port\tools\verify_brzechwa.ps1 `
+  -DataDir "C:\path\to\Multimedialny Swiat Jana Brzechwy\DATA"
 ```
 
 All GraphBoard strings are Windows-1250; `include/graphboard/text.hpp` converts

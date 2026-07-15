@@ -34,8 +34,13 @@ ProjectManifest parseProjectManifest(BinaryReader& reader) {
     project.audioPresetIndex = reader.readU32();
     project.pageNames = readStringTable(reader);
     project.groupNames = readStringTable(reader);
-    project.encodedSignature = reader.readArchiveString();
-    project.decodedSignature = decodeShiftedSignature(project.encodedSignature);
+    // The first GraphBoard project layout predates the shifted title/signature
+    // field. Brzechwa.exe's project serializer only reads it when version != 0;
+    // version-0 files continue directly with the global script editor block.
+    if (project.version != 0) {
+        project.encodedSignature = reader.readArchiveString();
+        project.decodedSignature = decodeShiftedSignature(project.encodedSignature);
+    }
     // Group/global script editor block (GraphBrdScriptEditor_SerializeText):
     // u32 version, then the project-wide global script as a CString.
     project.globalScriptVersion = reader.readU32();

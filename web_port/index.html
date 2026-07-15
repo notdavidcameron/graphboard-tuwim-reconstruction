@@ -3,72 +3,158 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GraphBoard Scene Viewer</title>
-    <link rel="stylesheet" href="styles.css?v=55">
+    <meta name="color-scheme" content="dark">
+    <title>GraphBoard Archive Viewer</title>
+    <link rel="stylesheet" href="styles.css?v=70">
   </head>
   <body>
     <div class="app">
-      <aside class="sidebar">
-        <header class="topbar">
-          <h1>GraphBoard</h1>
-          <div class="subtle" id="summary">Loading scenes...</div>
+      <aside class="library" aria-label="Archive library">
+        <header class="brand">
+          <div class="brand-mark" aria-hidden="true">GB</div>
+          <div>
+            <h1>GraphBoard Archive</h1>
+            <div class="subtle" id="summary" aria-live="polite">Reading archive…</div>
+          </div>
         </header>
 
-        <label class="field">
-          <span>Page</span>
-          <select id="sceneSelect"></select>
+        <nav class="mode-tabs" aria-label="Archive type">
+          <button class="mode-tab active" type="button" data-mode="scene">BDF <span id="sceneCount">0</span></button>
+          <button class="mode-tab" type="button" data-mode="group">GRP <span id="groupCount">0</span></button>
+          <button class="mode-tab" type="button" data-mode="loose">Media <span id="mediaCount">0</span></button>
+        </nav>
+
+        <label class="search-field">
+          <span class="sr-only">Search archive</span>
+          <input id="archiveSearch" type="search" placeholder="Search BDF pages…" autocomplete="off">
+          <kbd>/</kbd>
         </label>
 
-        <div class="toolbar">
-          <button id="prevBtn" type="button" title="Previous page">Prev</button>
-          <button id="nextBtn" type="button" title="Next page">Next</button>
+        <label class="field compact-select">
+          <span>Current item</span>
+          <select id="sceneSelect" aria-label="Current archive item"></select>
+        </label>
+
+        <div class="collection-heading">
+          <span id="collectionLabel">BDF scenes</span>
+          <span id="filteredCount"></span>
         </div>
+        <div id="collectionList" class="collection-list" role="listbox" aria-label="Archive items"></div>
 
-        <fieldset class="switches">
-          <label><input id="debugToggle" type="checkbox"> Bounds</label>
-          <label><input id="unknownToggle" type="checkbox"> Unknown layers</label>
-          <label><input id="backgroundToggle" type="checkbox" checked> Background</label>
-        </fieldset>
-
-        <section>
-          <h2>Runtime</h2>
-          <div class="toolbar">
-            <button id="openPageBtn" type="button" title="Run OnOpenPage">OpenPage</button>
-            <button id="resetRuntimeBtn" type="button" title="Reset runtime state">Reset</button>
-          </div>
-          <div id="runtimeLog" class="runtime-log"></div>
-        </section>
-
-        <section>
-          <h2>Components</h2>
-          <div id="componentList" class="list"></div>
-        </section>
-
-        <section>
-          <h2>Audio</h2>
-          <div id="audioList" class="list"></div>
-        </section>
-
-        <section>
-          <h2>Script</h2>
-          <div class="handler-runner">
-            <select id="handlerSelect"></select>
-            <input id="handlerArgs" type="text" placeholder="args, e.g. 1,0,0">
-            <button id="runHandlerBtn" type="button">Run</button>
-          </div>
-          <div id="scriptInfo" class="script-box"></div>
-        </section>
+        <footer class="library-footer">
+          <button id="prevBtn" type="button" title="Previous item (Alt+Left)">← Previous</button>
+          <button id="nextBtn" type="button" title="Next item (Alt+Right)">Next →</button>
+        </footer>
       </aside>
 
-      <main class="viewer">
-        <div class="stage-wrap">
-          <div id="stage" class="stage" aria-label="GraphBoard page stage"></div>
+      <main class="workspace">
+        <header class="workspace-bar">
+          <div class="document-title">
+            <div class="eyebrow" id="documentType">BDF scene</div>
+            <h2 id="documentTitle">Loading…</h2>
+            <div class="document-meta" id="documentMeta"></div>
+          </div>
+          <div class="view-tools" aria-label="View controls">
+            <button id="fitBtn" type="button" class="active" title="Fit stage">Fit</button>
+            <button id="actualBtn" type="button" title="Actual pixels">1:1</button>
+            <button id="zoomOutBtn" type="button" title="Zoom out">−</button>
+            <output id="zoomValue">100%</output>
+            <button id="zoomInBtn" type="button" title="Zoom in">+</button>
+          </div>
+        </header>
+
+        <div class="canvas-shell" id="canvasShell">
+          <div class="stage-wrap" id="stageWrap">
+            <div id="stageScaler" class="stage-scaler">
+              <div id="stage" class="stage" aria-label="GraphBoard stage"></div>
+            </div>
+          </div>
+          <div id="mediaBrowser" class="media-browser" hidden></div>
+          <div class="stage-status">
+            <span id="stageDimensions">640 × 480</span>
+            <span id="pointerPosition">x —, y —</span>
+            <span id="layerCount">0 layers</span>
+          </div>
         </div>
-        <div id="warnings" class="warnings"></div>
+
+        <section class="assets-panel" aria-labelledby="assetsHeading">
+          <div class="panel-heading">
+            <div>
+              <h2 id="assetsHeading">Assets</h2>
+              <span id="assetSummary" class="subtle"></span>
+            </div>
+            <div class="asset-tools">
+              <select id="assetFilter" aria-label="Filter assets by type"><option value="all">All types</option></select>
+              <input id="assetSearch" type="search" placeholder="Filter assets…" aria-label="Filter assets by name">
+            </div>
+          </div>
+          <div id="assetGrid" class="asset-grid"></div>
+        </section>
+
+        <div id="warnings" class="warnings" aria-live="polite"></div>
       </main>
+
+      <aside class="inspector" aria-label="Document inspector">
+        <div class="inspector-tabs" role="tablist">
+          <button class="inspector-tab active" type="button" data-panel="inspect">Inspect</button>
+          <button class="inspector-tab" type="button" data-panel="runtime">Runtime</button>
+          <button class="inspector-tab" type="button" data-panel="raw">Raw</button>
+        </div>
+
+        <div id="inspectPanel" class="inspector-panel active">
+          <div id="selectionPreview" class="selection-preview"></div>
+          <div id="selectionInfo" class="selection-info"></div>
+
+          <section>
+            <div class="section-heading">
+              <h3>Components</h3>
+              <span id="componentCount"></span>
+            </div>
+            <div id="componentList" class="component-list"></div>
+          </section>
+
+          <section>
+            <div class="section-heading"><h3>Audio</h3></div>
+            <div id="audioList" class="audio-list"></div>
+          </section>
+
+          <section>
+            <div class="section-heading"><h3>Script</h3></div>
+            <div id="scriptInfo" class="script-box"></div>
+          </section>
+        </div>
+
+        <div id="runtimePanel" class="inspector-panel">
+          <p class="panel-note">Execute recovered page handlers and inspect runtime activity. Runtime controls apply to BDF scenes.</p>
+          <div class="runtime-actions">
+            <button id="openPageBtn" type="button" title="Run OnOpenPage">Run OnOpenPage</button>
+            <button id="resetRuntimeBtn" type="button" title="Reset runtime state">Reset scene</button>
+          </div>
+          <fieldset class="switches">
+            <legend>Overlay</legend>
+            <label><input id="debugToggle" type="checkbox"> Geometry bounds</label>
+            <label><input id="unknownToggle" type="checkbox"> Unknown layers</label>
+            <label><input id="backgroundToggle" type="checkbox" checked> Background</label>
+          </fieldset>
+          <div class="handler-runner">
+            <select id="handlerSelect" aria-label="Script handler"></select>
+            <input id="handlerArgs" type="text" placeholder="Arguments: 1, 0, name">
+            <button id="runHandlerBtn" type="button">Run handler</button>
+          </div>
+          <div id="runtimeLog" class="runtime-log"></div>
+        </div>
+
+        <div id="rawPanel" class="inspector-panel">
+          <div class="raw-actions">
+            <button id="copyRawBtn" type="button">Copy JSON</button>
+            <a id="openJsonLink" class="button-link" target="_blank" rel="noreferrer">Open source JSON</a>
+          </div>
+          <pre id="rawJson" class="raw-json"></pre>
+        </div>
+      </aside>
     </div>
 
-    <script src="runtime.js?v=59"></script>
-    <script src="app.js?v=59"></script>
+    <script src="runtime.js?v=70"></script>
+    <script src="app.js?v=71"></script>
   </body>
 </html>

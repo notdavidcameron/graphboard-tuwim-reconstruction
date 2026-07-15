@@ -125,6 +125,14 @@ void testPageRoundTrip() {
 void testProjectAndGroup() {
     const auto project=sampleProject();const auto manifestBytes=serializeProjectManifest(project);BinaryReader mr(manifestBytes);
     const auto manifest=parseProjectManifest(mr);assert(manifest.startupPage=="MAIN.BDF"&&manifest.pageNames.size()==2);
+    auto version0=sampleProject();version0.manifestVersion=0;version0.signature="not serialized";
+    version0.globalScript="CString mHistory; int doTanca=0;";
+    const auto version0Bytes=serializeProjectManifest(version0);BinaryReader version0Reader(version0Bytes);
+    const auto version0Manifest=parseProjectManifest(version0Reader);
+    assert(version0Manifest.version==0&&version0Manifest.encodedSignature.empty()&&
+           version0Manifest.decodedSignature.empty()&&
+           version0Manifest.globalScript==version0.globalScript&&version0Reader.eof());
+    assert(serializeProjectManifest(version0)==version0Bytes);
     ExportContext context;context.projectPalette=project.palette;const auto groupBytes=serializeGroup(project.groups[0],context);BinaryReader gr(groupBytes);
     const auto group=parseGroupDocument(gr);assert(group.cursors.size()==1&&group.cursors[0].name=="arrow");
     const auto list=parseComponentListHeader(gr);assert(list.count==0&&gr.eof());
@@ -155,6 +163,9 @@ void testProjectStorageAndExport() {
     saveProject(root/"project",project);assert(!std::filesystem::exists(root/"project"/"project.gbproj.tmp"));const auto loaded=loadProject(root/"project");assert(loaded.pages.size()==2&&loaded.groups.size()==1&&loaded.pages[0].id==project.pages[0].id);assert(loaded.pages[0].background&&loaded.pages[0].background->sourceRgba==retained.pixels&&loaded.pages[0].background->alphaCutoff==77);
     exportLegacyProject(root/"export",loaded);assert(std::filesystem::exists(root/"export"/"START.PRJ"));
     assert(std::filesystem::exists(root/"export"/"MAIN.BDF"));assert(std::filesystem::exists(root/"export"/"CURSORS.GRP"));
+    auto version0Project=loaded;version0Project.manifestVersion=0;version0Project.signature="not present in version 0";version0Project.globalScript="CString mHistory; int doTanca=0;";
+    exportLegacyProject(root/"export-v0",version0Project);const auto version0Source=BinaryReader::fromFile(root/"export-v0"/"START.PRJ").bytes();
+    const auto importedVersion0=importLegacyProject(root/"export-v0"/"START.PRJ");assert(importedVersion0.manifestVersion==0&&importedVersion0.signature.empty());assert(serializeProjectManifest(importedVersion0)==version0Source);
     BinaryWriter dependencyWriter;dependencyWriter.writeBytes(serializePage(project.pages[1],ExportContext{project.palette,true,{}}));dependencyWriter.writeFileAtomic(root/"export"/"AAA_DEP.BDF");const auto importedManifest=importLegacyProject(root/"export"/"START.PRJ");assert(importedManifest.pages.size()==3&&importedManifest.pages[0].fileName=="MAIN.BDF"&&importedManifest.pages[1].fileName=="SECOND.BDF"&&importedManifest.pages[2].fileName=="AAA_DEP.BDF"&&!importedManifest.pages[2].listedInManifest);const auto sourceManifest=BinaryReader::fromFile(root/"export"/"START.PRJ").bytes();assert(serializeProjectManifest(importedManifest)==sourceManifest);saveProject(root/"manifest-project",importedManifest);assert(serializeProjectManifest(loadProject(root/"manifest-project"))==sourceManifest);auto changedManifest=importedManifest;changedManifest.signature="Changed";assert(serializeProjectManifest(changedManifest)!=sourceManifest);
     auto runtimeProject=graphboard::runtime::Project::loadFromFile(root/"export"/"START.PRJ");auto& page=runtimeProject->openStartupPage();
     assert(page.currentGroup()=="CURSORS.GRP"&&page.groupCursors().size()==1);page.lButtonDown(1,1);
