@@ -32,7 +32,8 @@ let baseFrame = null;
 const textFallbackStarts = new Map();
 
 function textProgress(item, key) {
-  if (!item.playing) {
+  const isPoem = item.text.length > 160;
+  if (!item.playing && !isPoem) {
     textFallbackStarts.delete(key);
     return -1;
   }
@@ -127,10 +128,7 @@ function blitIfDirty(forceText = false) {
   if (!baseFrame || (!rendered && !forceText)) return;
   ctx.putImageData(baseFrame, 0, 0);
   const textItems = JSON.parse(api.textItems());
-  drawTextItems(ctx, textItems, (key) => {
-    const item = textItems.find((entry) => `Text_Holder/${entry.id}` === key);
-    return item ? textProgress(item, key) : -1;
-  });
+  drawTextItems(ctx, textItems, (key, item) => item ? textProgress(item, key) : -1);
   canvas.style.cursor = api.cursorHidden() ? "none" : "default";
 }
 
