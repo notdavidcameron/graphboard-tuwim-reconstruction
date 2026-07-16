@@ -310,9 +310,14 @@ void processHostCalls() {
                 g.audioEvents.push_back(std::move(ev));
             }
         } else if (state->kind == graphboard::HolderKind::TextHolder) {
-            if (call.name == "PlaySynchroText" && id >= 0) {
+            const bool showStartsSynchro =
+                call.name == "ShowText" && id >= 0 &&
+                static_cast<std::size_t>(id) < state->texts.size() &&
+                !state->texts[static_cast<std::size_t>(id)].synchroFile.empty();
+            if ((call.name == "PlaySynchroText" || showStartsSynchro) && id >= 0) {
                 bool queued = false;
-                if (static_cast<std::size_t>(id) < state->soundClips.size()) {
+                if (call.name == "PlaySynchroText" &&
+                    static_cast<std::size_t>(id) < state->soundClips.size()) {
                     const auto& clip = state->soundClips[static_cast<std::size_t>(id)];
                     if (clip.byteCount != 0 &&
                         clip.offset + clip.byteCount <= g.pageBytes.size()) {

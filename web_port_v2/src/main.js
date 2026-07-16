@@ -29,6 +29,24 @@ let navigating = false;   // a page fetch is in flight; pause the clock
 let lastTick = 0;
 let animationFrameId = 0;
 let baseFrame = null;
+const textFallbackStarts = new Map();
+
+function textProgress(item, key) {
+  if (!item.playing) {
+    textFallbackStarts.delete(key);
+    return -1;
+  }
+  const decodedProgress = audio.progress(key);
+  if (decodedProgress >= 0) {
+    textFallbackStarts.delete(key);
+    return decodedProgress;
+  }
+  // EXS decoding is asynchronous and can take a few frames on larger pages.
+  // Keep the karaoke UI moving during that gap; decoded WebAudio progress
+  // replaces this estimate as soon as the source is ready.
+  if (!textFallbackStarts.has(key)) textFallbackStarts.set(key, performance.now());
+  return Math.min(0.999, (performance.now() - textFallbackStarts.get(key)) / 180000);
+}
 
 function setProgress(msg) { progress.textContent = msg; }
 
@@ -108,7 +126,11 @@ function blitIfDirty(forceText = false) {
   }
   if (!baseFrame || (!rendered && !forceText)) return;
   ctx.putImageData(baseFrame, 0, 0);
-  drawTextItems(ctx, JSON.parse(api.textItems()), (key) => audio.progress(key));
+  const textItems = JSON.parse(api.textItems());
+  drawTextItems(ctx, textItems, (key) => {
+    const item = textItems.find((entry) => `Text_Holder/${entry.id}` === key);
+    return item ? textProgress(item, key) : -1;
+  });
   canvas.style.cursor = api.cursorHidden() ? "none" : "default";
 }
 
