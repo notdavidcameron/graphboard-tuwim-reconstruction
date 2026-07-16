@@ -87,12 +87,17 @@ bool parseWav(const std::uint8_t* wav, std::size_t n, std::uint32_t& sampleRate,
     if (n < 12 || std::memcmp(wav, "RIFF", 4) != 0 || std::memcmp(wav + 8, "WAVE", 4) != 0) {
         return false;
     }
+    // Do not let a malformed chunk length make playback consume bytes from
+    // the following BDF record. SoundHolder stores a complete RIFF, so the
+    // RIFF-declared boundary is the authoritative upper limit.
+    const std::size_t riffBytes = static_cast<std::size_t>(u32(4)) + 8;
+    const std::size_t limit = std::min(n, riffBytes >= 12 ? riffBytes : n);
     std::size_t pos = 12;
     bool haveFmt = false;
     dataBytes = 0;
-    while (pos + 8 <= n) {
+    while (pos + 8 <= limit) {
         const std::uint32_t chunkSize = u32(pos + 4);
-        if (chunkSize > n - pos - 8) break;
+        if (chunkSize > limit - pos - 8) break;
         if (std::memcmp(wav + pos, "fmt ", 4) == 0 && pos + 8 + 16 <= n) {
             const std::uint32_t formatTag = u16(pos + 8);
             channels = u16(pos + 8 + 2);
@@ -102,7 +107,7 @@ bool parseWav(const std::uint8_t* wav, std::size_t n, std::uint32_t& sampleRate,
                       bits % 8 == 0;
         } else if (std::memcmp(wav + pos, "data", 4) == 0) {
             dataOff = pos + 8;
-            dataBytes = std::min<std::size_t>(chunkSize, n - dataOff);
+            dataBytes = std::min<std::size_t>(chunkSize, limit - dataOff);
         }
         pos += 8 + chunkSize + (chunkSize & 1);
     }

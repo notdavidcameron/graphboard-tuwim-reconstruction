@@ -53,7 +53,6 @@ export class AudioEngine {
     source._gbGain = gain;
     source._gbStart = this.context.currentTime;
     source._gbDuration = buffer.duration;
-    this.configureEnvelope(source, gain, key, buffer.duration, loop, this.context.currentTime);
     source.onended = () => {
       if (this.playing.get(key) === source) {
         this.playing.delete(key);
@@ -84,7 +83,6 @@ export class AudioEngine {
       source._gbDuration = Number(durationSeconds) > 0
         ? Math.min(Number(durationSeconds), buffer.duration - offset)
         : buffer.duration - offset;
-      this.configureEnvelope(source, gain, key, source._gbDuration, false, this.context.currentTime);
       source.onended = () => {
         if (this.playing.get(key) === source) {
           this.playing.delete(key);
@@ -104,35 +102,13 @@ export class AudioEngine {
     const source = this.playing.get(key);
     if (source) {
       this.playing.delete(key);
-      try {
-        if (source._gbGain && this.context) {
-          const now = this.context.currentTime;
-          source._gbGain.gain.cancelScheduledValues(now);
-          source._gbGain.gain.setValueAtTime(Math.max(0.0001, source._gbGain.gain.value), now);
-          source._gbGain.gain.linearRampToValueAtTime(0.0001, now + 0.01);
-          source.stop(now + 0.012);
-        } else {
-          source.stop();
-        }
-      } catch { /* already ended */ }
+      try { source.stop(); } catch { /* already ended */ }
     }
   }
 
   gainFor(key) {
     const value = Math.max(-10000, Math.min(0, Number(this.volumes.get(key)) || 0));
     return value <= -10000 ? 0 : Math.pow(10, value / 2000);
-  }
-
-  configureEnvelope(source, gain, key, duration, loop, startAt) {
-    const target = this.gainFor(key);
-    const attack = 0.006;
-    const release = 0.012;
-    gain.gain.setValueAtTime(0.0001, startAt);
-    gain.gain.linearRampToValueAtTime(target, startAt + attack);
-    if (!loop && duration > attack + release) {
-      gain.gain.setValueAtTime(target, startAt + duration - release);
-      gain.gain.linearRampToValueAtTime(0.0001, startAt + duration);
-    }
   }
 
   setVolume(key, value) {
