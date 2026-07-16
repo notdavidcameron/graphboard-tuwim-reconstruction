@@ -10,7 +10,15 @@ Workspace root:
 C:\Users\Administrator\Documents\GRAPHBOARD
 ```
 
-This project reconstructs GraphBoard `.BDF` / `.GRP` files from *Multimedialny swiat Juliana Tuwima* and provides a static HTML scene viewer/runtime port.
+This project reconstructs GraphBoard `.BDF` / `.GRP` files from *Multimedialny swiat Juliana Tuwima* and provides native and WebAssembly players powered by the shared C++ runtime.
+
+## Active Web Port
+
+`web_port_v2/` is the active browser implementation. It runs the shared C++
+runtime through WebAssembly. The former JavaScript-only `web_port/` has moved to
+`archive/web_port_legacy/` and must be treated as read-only recovery reference.
+Any later references in this handoff to the old static port describe historical
+state, not the current implementation target.
 
 The GitHub repository was created as private and pushed on `main`.
 
@@ -25,10 +33,11 @@ Current pushed commit:
 - `README.md` - user-facing overview and local run instructions.
 - `graphboard_file_formats.md` - recovered file-format notes, including Ghidra findings.
 - `graphboard_extract_assets.py` - asset extraction pipeline.
-- `graphboard_export_scene.py` - exports `web_port/scenes/*.json` from extracted metadata.
-- `web_port/index.html` - static viewer entry point.
-- `web_port/app.js` - scene rendering, UI, layer setup.
-- `web_port/runtime.js` - partial GraphBoard script/runtime emulator.
+- `cpp_port/tools/gbweb.cpp` - active WebAssembly bridge.
+- `web_port_v2/index.html` - active browser player entry point.
+- `web_port_v2/src/` - browser audio, video, input, loading, and canvas integration.
+- `graphboard_export_scene.py` - legacy exporter retained for the archived static viewer.
+- `archive/web_port_legacy/` - obsolete JavaScript-only viewer, kept as recovery reference.
 - `extracted_assets/` - canonical recovered assets used by the viewer.
 - `ghidra_import/TransparentVideoHolder_decomp.txt` - decompiled TVH notes used for geometry recovery.
 - `cpp_port/reconstructed/GraphBoardDocument_reconstructed.cpp` - source-style reconstruction of the `Tuwim.exe` host serializers (`START.PRJ`, `.BDF`, `.GRP`, script-text block, component wrapper, script engine state).
@@ -49,7 +58,10 @@ extracted_assets/direct/
 extracted_assets/grp/
 ```
 
-## Current HTML Port State
+## Archived HTML Port Historical State
+
+The commands and implementation notes in this section describe the archived
+JavaScript-only viewer. Do not use them as the active browser implementation.
 
 Run locally:
 

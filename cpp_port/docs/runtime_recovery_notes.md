@@ -264,11 +264,18 @@ recovered engine functions, not the JS approximation.
    `testSoundClock` drives a synthetic 500 ms clip. Group-namespace sounds are
    now seeded from the active `.GRP` and share the same completion scheduler.
 
-   Not yet clock-driven: **sprite animation** — `EndAnimation` needs the
-   per-frame rate; `frame+0x20` (30–80 across sprites) looks like it, but the
-   single-phase "flying" sprites (butterflies, food) animate by *positional
-   movement*, not phase cycling — a continuous path the headless clock
-   deliberately does not simulate. Only `--anim-end` fires `EndAnimation` for now.
+   **Sprite animation is clock-driven:** a script-visible phase can contain a
+   horizontal strip of timer cells (`phase+0x00` count, `+0x10` strip width,
+   `+0x20` interval). SynchronizeTimers aligns/starts those cells without
+   cycling the logical phases used as puzzle and button states. This restores
+   KOTEK's head/tail, MROZ's wheels, and PLOTKI's per-animal click animations
+   without toggling MICHAL buttons, KOTEK tiles, the MROZ wood pile, or SLOWIK's
+   clock face. Three-phase `Group.Sprite_Holder` toolbar buttons
+   treat `ChangePhase(id,1)` as a one-shot and fire `EndAnimation(id)` on their
+   last frame. This is required for the ladybug, puzzle, cassette and TV navbar
+   entries; two-frame book/arrow buttons still complete from MouseClickOnUp.
+   CUDA's five one-frame draggable butterfly records receive a narrow
+   open/closed-wing reconstruction while SpriteHolder timers are enabled.
 
    Still TODO: MultiBitmap click callbacks — only 1 page uses them, and the
    callback is the 4-arg `MouseClickOnDown(id, x, y, deep)` where x/y are the
@@ -446,6 +453,88 @@ text also participates in the native hover/click route, including `MouseMoveIn`,
 `MouseMoveOut`, and `ClickOnText`. This makes the long poem panels on GRZESIU,
 WIES, and MROZ scroll inside their authored rectangles and preserves their
 scripted cursor/playback controls.
+
+The 2026-07-15 real-scene pass removed several runtime guesses that contradicted
+the serialized state. BitmapHolder overlay visibility is persisted at
+`blob+0x00`; `blob+0x2c` is not the hidden flag. Full-page hit-test bitmaps are
+opening board art even when that word is zero, while exact-overlap records are
+replacement states (shallowest/first opens) and a singleton editor work surface
+behind a dense TVH collage is excluded. This restores activity-board opening
+states while keeping replacement colours hidden until scripts reveal them.
+`Text_Holder.SetText` now replaces the live string for the hovered poem, and the
+native player uses the holder's stored RGB rather than a hard-coded near-black
+colour. TransparentVideoHolder still mattes use the dominant perimeter key
+instead of the most common picture colour, fixing initial green seams without
+mistaking a large interior object for transparency. Finally,
+`StopAnimation` pauses an active GotoXY path and `ContinueAnimation` resumes it,
+keeping DYZIO's replacement ice-cream scoops attached to the stopped cone.
+
+Sprite instance `record+0x38` is not a GotoXY speed: samples across moving pages
+track coordinate/state-like values, and interpreting them as pixels per second
+made page objects move at wildly different rates. Page GotoXY movement therefore
+uses a shared moderate fallback until the real timing field is identified.
+Sound record `+0x00` is the DirectSound loop flag; the
+Win32 audio path submits those buffers as infinite waveOut loops and does not
+emit a false `EndPlaySound`. The player also hashes visual state and recomposites
+only on an actual phase, frame, position, visibility, puzzle, or text-offset
+change instead of repainting every timer tick.
+
+The native pump now samples at 16 ms, while fixed-point glide and panorama
+positions retain subpixel progress; this removes visible 30 Hz stepping without
+forcing redundant composites. TransparentVideoHolder playback has one
+foreground channel: starting a new scripted `Play` stops the prior click clip
+and cancels its pending `TheEnd`. GRZESIU's two idle doodles are recovered as
+separate ambient loops because that old runtime-only state is absent from both
+its script and serialized private block. MROZ's PanoramaHolder uses its
+90-degree authored start as an offset, auto-scrolls at 30 px/s, and clamps/stops
+at the actual remaining source edge. Page hotspots also receive their
+holder-local hover route beneath a foreground sprite, preserving RZECZKA's edge
+scrolling while allowing the sprite to keep the finger cursor.
+
+Foreground TVH replacement also returns the interrupted clip to its serialized
+resting still instead of freezing the partially decoded frame. Native text uses
+Arial with East-European metrics and Win32 antialiasing, which is closer to the
+original Win9x sans-serif appearance than Segoe UI; the exact embedded raster
+FontControl glyph renderer remains a possible later fidelity improvement.
+
+The TVH still buffer is the persisted first/last pose, not a clean captured
+background. It is therefore never repainted underneath active video. Before a
+changed BoardVideo record is applied, the decoder retains the preceding decoded
+surface and applies the new RLE rectangle as a cumulative delta, matching the
+persistent backing DIB in `TransparentVideoHolder.dll`. Rewinding clears the
+complete surface and replays the deltas from frame zero; an explicitly unchanged
+record keeps the prior surface. An explicit `Stop` restores the serialized
+resting state. Sprite strip duration is divided across its packed
+cells (rather than applied once per cell), and the native window forwards
+`WM_KEYUP`, allowing the instrument scripts' same-key latch to release. The
+non-holder Panorama runtime tracks and clamps Y movement in addition to X, so
+the 1280x960 WIES scene can be explored vertically.
+
+Sprite cell timers run even when their strip is the sprite's only logical
+phase. This is the normal CUDA butterfly layout (one phase, four wing cells),
+which the earlier outer-phase guard incorrectly skipped.
+
+A new `Sprite_Holder.GotoXY` clears a stale `StopAnimation` glide pause, so
+RZECZKA edge commands cannot queue a destination that never moves. The wasm
+shim shares these core fixes, forwards key-up for instrument retriggers, and
+keeps frames dirty while either panorama axis is moving.
+
+TextHolder synchronisation now also resolves the sibling `.EXS` files used by
+the title's poem pages. These files are RIFF/WAVE media despite their extension;
+the browser package includes them, WebAudio decodes them by content, and natural
+completion is routed back to `Text_Holder.EndOfSynchroText`.
+
+The native Puzzle holder now parses each chip's indexed pixels and its 0x2c-byte
+neighbour records. Those records encode solved-position constraints as
+`target[neighbour] = target[chip] + (dx, dy)`; a graph walk reconstructs and
+normalizes the complete picture, and `Mix` centres those targets inside the
+authored play bounds. Chips render and hit-test through their colour-keyed
+silhouettes, can be raised and dragged, snap within 20 pixels of their recovered
+target, and fire `ChipLock`, `MouseDrop`, and `GameOver`. `ShowFullBitmap` uses
+the same solved graph at the coordinates requested by the page, so the puzzle's
+hold-space reference preview is no longer a copy of the mixed arrangement. The
+chip matte is selected from the dominant perimeter palette index, avoiding the
+green rectangles caused when artwork happened to occupy one of four corners.
 
 ## Brzechwa compatibility checkpoint (2026-07-13)
 

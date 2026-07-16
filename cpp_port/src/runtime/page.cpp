@@ -7,6 +7,8 @@
 #include <cctype>
 #include <cmath>
 #include <limits>
+#include <queue>
+#include <unordered_map>
 
 namespace graphboard::runtime {
 
@@ -58,6 +60,46 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
                     geom.frames = sp.definitions[inst.definitionIndex].frames;
                 }
                 state.sprites.push_back(std::move(geom));
+            }
+            // CUDA's five draggable butterflies are serialized as five
+            // one-frame, drag-enabled sprites. The original SpriteHolder timer
+            // applies a continuous wing-close/open cycle rather than storing
+            // extra raster phases. Reconstruct the closed-wing phase inside
+            // the same canvas and start the holder animation; DisableTimers in
+            // text mode pauses it, while dragging does not.
+            const bool proceduralButterflies = sp.instances.size() == 5 &&
+                std::all_of(sp.instances.begin(), sp.instances.end(),
+                            [](const SpriteInstance& instance) { return instance.dragEnabled; }) &&
+                std::all_of(state.sprites.begin(), state.sprites.end(),
+                            [](const SpriteGeometry& sprite) { return sprite.frames.size() == 1; });
+            if (proceduralButterflies) {
+                state.props["proceduralButterflies"] = Value::integer(1);
+                for (std::size_t i = 0; i < state.sprites.size(); ++i) {
+                    auto& sprite = state.sprites[i];
+                    const auto& open = sprite.frames.front();
+                    if (open.width == 0 || open.height == 0 || open.pixels.empty()) continue;
+                    std::vector<std::uint8_t> closed(open.pixels.size(), open.transparentIndex);
+                    std::vector<std::uint8_t> closedMask;
+                    if (!open.opaque.empty()) closedMask.assign(open.opaque.size(), 0);
+                    const std::uint32_t closedWidth = std::max<std::uint32_t>(1, open.width * 3 / 5);
+                    const std::uint32_t left = (open.width - closedWidth) / 2;
+                    for (std::uint32_t y = 0; y < open.height; ++y) {
+                        for (std::uint32_t x = 0; x < closedWidth; ++x) {
+                            const std::uint32_t sourceX = std::min<std::uint32_t>(
+                                open.width - 1, x * open.width / closedWidth);
+                            const auto source = static_cast<std::size_t>(y) * open.width + sourceX;
+                            const auto destination = static_cast<std::size_t>(y) * open.width + left + x;
+                            closed[destination] = open.pixels[source];
+                            if (!open.opaque.empty()) closedMask[destination] = open.opaque[source];
+                        }
+                    }
+                    sprite.frames.front().animationPixels = {open.pixels, std::move(closed)};
+                    if (!open.opaque.empty()) {
+                        sprite.frames.front().animationOpaque = {open.opaque, std::move(closedMask)};
+                    }
+                    sprite.frames.front().cellDurationMs = 180;
+                    state.items[static_cast<int>(i)]["animating"] = Value::integer(1);
+                }
             }
             break;
         }
@@ -120,14 +162,19 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
         case HolderKind::SoundHolder: {
             const auto sh = parseSoundHolderState(reader);
             // A sound plays for its WAV length; that is when EndPlaySound(id) fires.
-            for (const auto& s : sh.sounds) {
+            for (std::size_t i = 0; i < sh.sounds.size(); ++i) {
+                const auto& s = sh.sounds[i];
                 state.clipDurationMs.push_back(static_cast<int>(s.durationMs));
                 state.soundClips.push_back({s.soundOffset, s.soundByteCount});
+                state.items[static_cast<int>(i)]["looping"] = Value::integer(s.looping ? 1 : 0);
             }
             break;
         }
         case HolderKind::TextHolder: {
             const auto text = parseTextHolderState(reader);
+            state.props["textColorR"] = Value::integer(text.colors[0]);
+            state.props["textColorG"] = Value::integer(text.colors[1]);
+            state.props["textColorB"] = Value::integer(text.colors[2]);
             const std::uint32_t lineHeight = text.fontSlots.empty() || text.fontSlots.front().height == 0
                                                  ? 18u
                                                  : text.fontSlots.front().height;
@@ -140,7 +187,9 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
                 item["offsetY"] = Value::integer(0);
                 item["mouseEnabled"] = Value::integer(0);
                 state.texts.push_back({entry.left, entry.top, entry.right, entry.bottom,
-                                       entry.primaryText, entry.lineCount, lineHeight});
+                                       entry.primaryText, entry.secondaryText,
+                                       entry.lineCount, lineHeight});
+                state.soundClips.push_back({entry.streamOffset, entry.streamByteCount});
             }
             break;
         }
@@ -155,7 +204,9 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
                 item["y"] = Value::integer(bm.top);
                 item["visible"] = Value::integer(bm.initiallyHidden ? 0 : 1);
                 item["z"] = Value::integer(bm.layer);
+                item["stateWord"] = Value::integer(bm.stateWord);
                 BitmapGeometry geom;
+                geom.name = bm.name;
                 geom.layer = bm.layer;
                 geom.width = bm.right - bm.left;
                 geom.height = bm.bottom - bm.top;
@@ -166,20 +217,165 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
             }
             break;
         }
-        case HolderKind::Puzzle: parsePuzzleState(reader); break;
+        case HolderKind::Puzzle: {
+            const auto puzzle = parsePuzzleState(reader);
+            if (!puzzle.boards.empty()) {
+                const auto& file = reader.bytes();
+                const auto& board = puzzle.boards.front();
+                for (std::size_t i = 0; i < board.chips.size(); ++i) {
+                    const auto& chip = board.chips[i];
+                    PuzzleChipGeometry geom;
+                    geom.originalX = chip.left;
+                    geom.originalY = chip.top;
+                    geom.width = static_cast<std::int32_t>(chip.right) - chip.left;
+                    geom.height = chip.bottom - chip.top;
+                    const auto stride = geom.width > 0
+                        ? (static_cast<std::size_t>(geom.width) + 3u) & ~std::size_t{3}
+                        : 0;
+                    if (geom.width > 0 && geom.height > 0 &&
+                        chip.pixelByteCount >= stride * static_cast<std::size_t>(geom.height) &&
+                        chip.pixelOffset + stride * static_cast<std::size_t>(geom.height) <= file.size()) {
+                        // The chip record has no per-piece key. The matte is
+                        // the dominant palette index on its outer perimeter;
+                        // using only four corners fails when a jigsaw tab or
+                        // artwork reaches a corner (leaving bright green mats).
+                        std::array<std::uint32_t, 256> borderHistogram{};
+                        auto countSource = [&](int sx, int sy) {
+                            const auto source = chip.pixelOffset +
+                                static_cast<std::size_t>(geom.height - 1 - sy) * stride +
+                                static_cast<std::size_t>(sx);
+                            ++borderHistogram[file[source]];
+                        };
+                        for (int x = 0; x < geom.width; ++x) {
+                            countSource(x, 0);
+                            if (geom.height > 1) countSource(x, geom.height - 1);
+                        }
+                        for (int y = 1; y + 1 < geom.height; ++y) {
+                            countSource(0, y);
+                            if (geom.width > 1) countSource(geom.width - 1, y);
+                        }
+                        geom.transparentIndex = static_cast<std::uint8_t>(
+                            std::distance(borderHistogram.begin(),
+                                std::max_element(borderHistogram.begin(), borderHistogram.end())));
+                        geom.pixels.assign(static_cast<std::size_t>(geom.width) * geom.height, 0);
+                        for (int y = 0; y < geom.height; ++y) {
+                            const auto source = chip.pixelOffset +
+                                static_cast<std::size_t>(geom.height - 1 - y) * stride;
+                            std::copy_n(file.begin() + static_cast<std::ptrdiff_t>(source), geom.width,
+                                        geom.pixels.begin() + static_cast<std::ptrdiff_t>(y) * geom.width);
+                        }
+                    }
+                    auto& item = state.items[static_cast<int>(i)];
+                    item["x"] = Value::integer(geom.originalX);
+                    item["y"] = Value::integer(geom.originalY);
+                    item["z"] = Value::integer(static_cast<std::int64_t>(i));
+                    item["visible"] = Value::integer(0);
+                    item["locked"] = Value::integer(0);
+                    state.puzzleChips.push_back(std::move(geom));
+                }
+
+                // Puzzle chip records only store their loose editor positions.
+                // The solved arrangement is encoded as neighbour constraints:
+                // target[connection.chipId] = target[thisChip] + (dx, dy).
+                // Walk that graph, then normalize it to a zero-based image.
+                std::vector<bool> positioned(board.chips.size(), false);
+                std::queue<std::size_t> pending;
+                for (std::size_t root = 0; root < board.chips.size(); ++root) {
+                    if (positioned[root]) continue;
+                    positioned[root] = true;
+                    pending.push(root);
+                    while (!pending.empty()) {
+                        const auto current = pending.front();
+                        pending.pop();
+                        for (const auto& connection : board.chips[current].connections) {
+                            if (connection.chipId < 0 ||
+                                static_cast<std::size_t>(connection.chipId) >= board.chips.size()) {
+                                continue;
+                            }
+                            const auto neighbour = static_cast<std::size_t>(connection.chipId);
+                            if (positioned[neighbour]) continue;
+                            state.puzzleChips[neighbour].solutionX =
+                                state.puzzleChips[current].solutionX + connection.dx;
+                            state.puzzleChips[neighbour].solutionY =
+                                state.puzzleChips[current].solutionY + connection.dy;
+                            positioned[neighbour] = true;
+                            pending.push(neighbour);
+                        }
+                    }
+                }
+                if (!state.puzzleChips.empty()) {
+                    const auto minX = std::min_element(
+                        state.puzzleChips.begin(), state.puzzleChips.end(),
+                        [](const auto& a, const auto& b) { return a.solutionX < b.solutionX; })
+                                          ->solutionX;
+                    const auto minY = std::min_element(
+                        state.puzzleChips.begin(), state.puzzleChips.end(),
+                        [](const auto& a, const auto& b) { return a.solutionY < b.solutionY; })
+                                          ->solutionY;
+                    for (auto& geom : state.puzzleChips) {
+                        geom.solutionX -= minX;
+                        geom.solutionY -= minY;
+                    }
+                }
+            }
+            state.props["puzzleId"] = Value::integer(0);
+            state.props["showFullBitmap"] = Value::integer(0);
+            break;
+        }
         case HolderKind::Recorder: parseRecorderState(reader); break;
-        case HolderKind::VideoHolder: parseVideoHolderState(reader); break;
+        case HolderKind::VideoHolder: {
+            const auto videos = parseVideoHolderState(reader);
+            for (std::size_t i = 0; i < videos.entries.size(); ++i) {
+                const auto& video = videos.entries[i];
+                auto& item = state.items[static_cast<int>(i)];
+                item["x"] = Value::integer(video.posX);
+                item["y"] = Value::integer(video.posY);
+                item["visible"] = Value::integer(0);
+                item["playing"] = Value::integer(0);
+                state.externalVideos.push_back({video.posX, video.posY, video.name});
+            }
+            break;
+        }
         case HolderKind::PanoramaHolder: {
             const auto panoramas = parsePanoramaHolderState(reader);
+            state.props["panX1000"] = Value::integer(0);
+            state.props["panVelocity"] = Value::integer(0);
+            state.props["panY1000"] = Value::integer(0);
+            state.props["panVelocityY"] = Value::integer(0);
+            state.props["panEnabled"] = Value::integer(1);
             for (std::size_t i = 0; i < panoramas.scenes.size(); ++i) {
                 const auto& scene = panoramas.scenes[i];
                 state.items[static_cast<int>(i)]["visible"] = Value::integer(0);
                 state.dibImages.push_back({scene.dibOffset, scene.dibByteCount});
+                if (i == 0 && scene.dibOffset + 8 <= reader.bytes().size()) {
+                    const auto& bytes = reader.bytes();
+                    const auto p = scene.dibOffset + 4;
+                    const std::uint32_t width = static_cast<std::uint32_t>(bytes[p]) |
+                        (static_cast<std::uint32_t>(bytes[p + 1]) << 8) |
+                        (static_cast<std::uint32_t>(bytes[p + 2]) << 16) |
+                        (static_cast<std::uint32_t>(bytes[p + 3]) << 24);
+                    state.props["panSourceWidth"] = Value::integer(width);
+                    if (p + 8 <= bytes.size()) {
+                        const auto rawHeight = static_cast<std::int32_t>(
+                            static_cast<std::uint32_t>(bytes[p + 4]) |
+                            (static_cast<std::uint32_t>(bytes[p + 5]) << 8) |
+                            (static_cast<std::uint32_t>(bytes[p + 6]) << 16) |
+                            (static_cast<std::uint32_t>(bytes[p + 7]) << 24));
+                        state.props["panSourceHeight"] = Value::integer(std::abs(rawHeight));
+                    }
+                    state.props["panMax1000"] = Value::integer(
+                        static_cast<std::int64_t>(width > 640 ? width - 640 : 0) * 1000);
+                }
             }
             break;
         }
         case HolderKind::Panorama: {
             const auto panoramas = parsePanoramaState(reader);
+            state.props["panX1000"] = Value::integer(0);
+            state.props["panVelocity"] = Value::integer(0);
+            state.props["panY1000"] = Value::integer(0);
+            state.props["panVelocityY"] = Value::integer(0);
+            state.props["panEnabled"] = Value::integer(1);
             for (std::size_t i = 0; i < panoramas.scenes.size(); ++i) {
                 const auto& scene = panoramas.scenes[i];
                 auto& item = state.items[static_cast<int>(i)];
@@ -191,6 +387,10 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
                     static_cast<std::int32_t>(scene.width),
                     static_cast<std::int32_t>(scene.height), scene.width, scene.pixelOffset,
                     scene.width * scene.height, true});
+                if (i == 0) {
+                    state.props["panSourceWidth"] = Value::integer(scene.width);
+                    state.props["panSourceHeight"] = Value::integer(scene.height);
+                }
             }
             break;
         }
@@ -222,43 +422,141 @@ void Page::parse(BinaryReader& reader) {
     if (banner != "YDP Board data file.") {
         throw ParseError("Page::load: not a YDP Board data file");
     }
-    parseBdfHeader(reader);
+    const auto header = parseBdfHeader(reader);
 
     parseComponentStates(reader, components_, byName_);
 
-    // BitmapHolder persists working images as well as the image that is
-    // actually presented when a page opens. Holders with a large base image
-    // use record 0 initially; the remaining records are script-selected
-    // alternatives/controls (PSTRYK, TANIEC and RYCERZ). Small bitmap sets on
-    // TVH pages are animation overlays revealed by callbacks (DYZIO's ice
-    // cream pieces and MALUSKIE's notes), so none belong in the initial frame.
-    const bool hasTransparentVideo = std::any_of(
-        components_.begin(), components_.end(), [](const ComponentState& state) {
-            return state.kind == HolderKind::TransparentVideoHolder;
-        });
-    std::size_t transparentVideoCount = 0;
+    // BitmapHolder overlays persist their shown state at +0x00. Full-page
+    // hit-test surfaces are the board image itself and must be present from
+    // frame zero even though those backing records commonly store zero. Keep
+    // the structural exceptions geometric rather than keyed to page names.
+    std::size_t videoCount = 0;
+    bool hasPanorama = false;
+    std::int64_t minimumVideoLayer = std::numeric_limits<std::int64_t>::max();
     for (const auto& state : components_) {
-        if (state.kind == HolderKind::TransparentVideoHolder) {
-            transparentVideoCount += state.videos.size();
+        if (state.kind == HolderKind::Panorama || state.kind == HolderKind::PanoramaHolder) {
+            hasPanorama = true;
+        }
+        if (state.kind != HolderKind::TransparentVideoHolder) continue;
+        videoCount += state.videos.size();
+        for (const auto& [id, item] : state.items) {
+            const auto z = item.find("z");
+            minimumVideoLayer = std::min(
+                minimumVideoLayer, z == item.end() ? std::int64_t{0} : z->second.toInt());
         }
     }
+    const int pageWidth = header.pageRect.right - header.pageRect.left;
+    const int pageHeight = header.pageRect.bottom - header.pageRect.top;
     for (auto& state : components_) {
-        if (state.kind != HolderKind::BitmapHolder || state.bitmaps.size() <= 1) continue;
-        const bool hasLargeBase = state.bitmaps.front().width >= 300 &&
-                                  state.bitmaps.front().height >= 300;
-        const bool murzynekInitialSet = hasLargeBase && state.bitmaps.size() == 9 &&
-                                        transparentVideoCount == 7;
-        for (auto& [id, item] : state.items) {
+        if (state.kind != HolderKind::BitmapHolder) continue;
+        bool hasFullPage = false;
+        for (std::size_t i = 0; i < state.bitmaps.size(); ++i) {
+            const auto& bitmap = state.bitmaps[i];
+            auto& item = state.items[static_cast<int>(i)];
+            const bool fullPage = bitmap.width >= pageWidth && bitmap.height >= pageHeight;
+            hasFullPage = hasFullPage || fullPage;
+            // record+0x00 is the persisted shown state for placed overlays.
+            // Complete board surfaces are always the backing canvas even when
+            // that word is zero; partial records respect it.
+            const bool activityOverlay = videoCount > 0 && !hasPanorama && !fullPage;
             item["visible"] = Value::integer(
-                hasLargeBase && (id == 0 || (murzynekInitialSet && id == 1)) ? 1 : 0);
+                fullPage || (!activityOverlay && item["stateWord"].toInt() != 0));
         }
-        const bool workingOverlaySet = hasTransparentVideo &&
-            ((state.bitmaps.size() == 4 && transparentVideoCount == 2) ||
-             (state.bitmaps.size() == 9 && transparentVideoCount == 9));
-        if (!hasLargeBase && !workingOverlaySet) {
-            // Preserve serialized visibility on ordinary multi-piece bitmap
-            // pages; the rule above is specifically for TVH working overlays.
-            for (auto& [id, item] : state.items) item["visible"] = Value::integer(1);
+        // Multiple bitmaps with the same authored rectangle are replacement
+        // states, not simultaneous layers. The opening state is the shallowest
+        // record (and, on an equal layer, the first serialized one); scripts
+        // subsequently swap them with ShowBitmap/HideBitmap. This covers full
+        // board light/dark variants as well as instrument hit/rest artwork.
+        for (std::size_t i = 0; i < state.bitmaps.size(); ++i) {
+            const auto& a = state.bitmaps[i];
+            std::size_t opening = i;
+            bool hasAlternate = false;
+            for (std::size_t j = 0; j < state.bitmaps.size(); ++j) {
+                const auto& b = state.bitmaps[j];
+                if (i == j) continue;
+                const auto ax = state.items[static_cast<int>(i)]["x"].toInt();
+                const auto ay = state.items[static_cast<int>(i)]["y"].toInt();
+                const auto bx = state.items[static_cast<int>(j)]["x"].toInt();
+                const auto by = state.items[static_cast<int>(j)]["y"].toInt();
+                const auto overlapW = std::max<std::int64_t>(
+                    0, std::min(ax + a.width, bx + b.width) - std::max(ax, bx));
+                const auto overlapH = std::max<std::int64_t>(
+                    0, std::min(ay + a.height, by + b.height) - std::max(ay, by));
+                const auto intersection = overlapW * overlapH;
+                const auto unionArea = static_cast<std::int64_t>(a.width) * a.height +
+                    static_cast<std::int64_t>(b.width) * b.height - intersection;
+                if (unionArea <= 0 || intersection * 100 < unionArea * 90) continue;
+                hasAlternate = true;
+                if (b.layer < state.bitmaps[opening].layer ||
+                    (b.layer == state.bitmaps[opening].layer && j < opening)) opening = j;
+            }
+            if (hasAlternate) {
+                state.items[static_cast<int>(i)]["visible"] = Value::integer(opening == i);
+            }
+        }
+        // Some authored motion sets use differently-sized replacement cells,
+        // so rectangle overlap alone cannot identify them. A long run of the
+        // same non-empty bitmap name is the editor's animation sequence. Its
+        // first record is the base artwork and the next is the opening pose;
+        // the remaining poses/effects are selected by script calls later.
+        std::unordered_map<std::string, std::vector<std::size_t>> namedSequences;
+        for (std::size_t i = 0; i < state.bitmaps.size(); ++i) {
+            if (!state.bitmaps[i].name.empty()) {
+                namedSequences[state.bitmaps[i].name].push_back(i);
+            }
+        }
+        const std::vector<std::size_t>* dominantSequence = nullptr;
+        for (const auto& [name, indices] : namedSequences) {
+            if (indices.size() >= 6 &&
+                (!dominantSequence || indices.size() > dominantSequence->size())) {
+                dominantSequence = &indices;
+            }
+        }
+        if (dominantSequence && dominantSequence->size() + 2 >= state.bitmaps.size()) {
+            for (std::size_t i = 0; i < state.bitmaps.size(); ++i) {
+                const auto& bitmap = state.bitmaps[i];
+                if (bitmap.width < pageWidth || bitmap.height < pageHeight) {
+                    state.items[static_cast<int>(i)]["visible"] = Value::integer(0);
+                }
+            }
+            state.items[static_cast<int>((*dominantSequence)[0])]["visible"] = Value::integer(1);
+            state.items[static_cast<int>((*dominantSequence)[1])]["visible"] = Value::integer(1);
+        }
+        // Composite activity boards store the complete board first, one large
+        // opening foreground next, then small mutually-exclusive replacement
+        // states. Select that unique large foreground by area; scripts control
+        // the smaller alternatives thereafter.
+        if (state.bitmaps.size() > 2 && videoCount > 0) {
+            std::size_t largest = state.bitmaps.size();
+            std::int64_t largestArea = 0;
+            std::int64_t secondArea = 0;
+            for (std::size_t i = 0; i < state.bitmaps.size(); ++i) {
+                const auto& bitmap = state.bitmaps[i];
+                if (bitmap.width >= pageWidth && bitmap.height >= pageHeight) continue;
+                const std::int64_t area = static_cast<std::int64_t>(bitmap.width) * bitmap.height;
+                if (area > largestArea) {
+                    secondArea = largestArea;
+                    largestArea = area;
+                    largest = i;
+                } else {
+                    secondArea = std::max(secondArea, area);
+                }
+            }
+            if (largest < state.bitmaps.size() && largestArea > secondArea * 2) {
+                state.items[static_cast<int>(largest)]["visible"] = Value::integer(1);
+            }
+        }
+        // A singleton large bitmap accompanying a dense animation collage is
+        // its editor work surface. It is not part of the opening composition;
+        // the animated entries already contain the authored backing pieces.
+        if (state.bitmaps.size() == 1 && videoCount > 4 &&
+            minimumVideoLayer != std::numeric_limits<std::int64_t>::max()) {
+            const auto& bitmap = state.bitmaps.front();
+            if (bitmap.width > pageWidth / 2 && bitmap.height > pageHeight / 2 &&
+                bitmap.width < pageWidth && bitmap.height < pageHeight) {
+                auto& item = state.items[0];
+                item["visible"] = Value::integer(0);
+            }
         }
     }
 
@@ -289,15 +587,27 @@ void Page::runEvent(const std::string& name, const std::vector<Value>& args) {
         interpreter_->runHandler(name, args);
     }
     if (name == "OnOpenPage") {
+        // One shipped board contains two authored idle doodles whose looping
+        // state lives in the old holder's runtime state rather than in its
+        // script/private serialization. Keep this content-recovery fallback
+        // structural (15 TVH clips, two one-frame smile overlays and one work
+        // bitmap) instead of coupling it to a filename. Ambient clips use a
+        // separate channel and therefore do not violate TVH's single on-click
+        // playback rule.
         auto* tvh = resolve("Transparent_Video_Holder");
         const auto* sprites = resolve("Sprite_Holder");
         const auto* bitmap = resolve("Bitmap_Holder");
         if (tvh && sprites && bitmap && tvh->videos.size() == 15 &&
             sprites->sprites.size() == 2 && bitmap->bitmaps.size() == 1) {
             for (const int id : {9, 10}) {
-                callComponent("Transparent_Video_Holder", "Play",
-                              {Value::integer(id), Value::integer(0)});
-                tvh->items[id]["looping"] = Value::integer(1);
+                auto& idle = tvh->items[id];
+                idle["ambient"] = Value::integer(1);
+                idle["looping"] = Value::integer(1);
+                idle["playing"] = Value::integer(1);
+                idle["hasPlayed"] = Value::integer(1);
+                idle["playStartMs"] = Value::integer(clockMs_);
+                idle["visible"] = Value::integer(1);
+                scheduleCompletion(*tvh, "TheEnd", id);
             }
         }
     }
@@ -430,7 +740,42 @@ Host::ComponentResult Page::callComponent(const std::string& component, const st
     const int id = static_cast<int>(argInt(args, 0));
     auto& item = state->items[id];
 
-    if (state->kind == HolderKind::TextHolder && method == "SetTextOffsets") {
+    if (state->kind == HolderKind::Recorder && method == "OpenFile") {
+        state->props["file"] = args.empty() ? Value::string("") : args[0];
+    } else if (state->kind == HolderKind::Recorder && method == "CloseFile") {
+        state->props["file"] = Value::string("");
+    } else if (state->kind == HolderKind::Recorder && method == "IsEmpty") {
+        ComponentResult result;
+        const std::string file = state->props.count("file") ? state->props["file"].toString() : "";
+        const std::string key = "recorded:" + file;
+        result.outArguments[0] = Value::integer(
+            state->props.count(key) && state->props[key].toInt() != 0 ? 0 : 1);
+        return result;
+    } else if (state->kind == HolderKind::Recorder && method == "EmptyFile") {
+        const std::string file = state->props.count("file") ? state->props["file"].toString() : "";
+        state->props["recorded:" + file] = Value::integer(0);
+    } else if (state->kind == HolderKind::Recorder && method == "Record") {
+        state->props["recording"] = Value::integer(1);
+        state->props["playing"] = Value::integer(0);
+    } else if (state->kind == HolderKind::Recorder && method == "Play") {
+        state->props["playing"] = Value::integer(1);
+        state->props["recording"] = Value::integer(0);
+    } else if (state->kind == HolderKind::Recorder && method == "Stop") {
+        state->props["recording"] = Value::integer(0);
+        state->props["playing"] = Value::integer(0);
+    } else if ((state->kind == HolderKind::TextHolder && method == "SetSoundParameters") ||
+               (state->kind == HolderKind::SoundHolder && method == "SetPlayDSoundParameters")) {
+        item["volume"] = Value::integer(argInt(args, 1));
+    } else if (state->kind == HolderKind::TextHolder && method == "SetText") {
+        if (id >= 0 && static_cast<std::size_t>(id) < state->texts.size()) {
+            auto& text = state->texts[static_cast<std::size_t>(id)];
+            text.text = args.size() > 1 ? args[1].toString() : std::string();
+            text.lineCount = 1;
+            for (const char ch : text.text) {
+                if (ch == '\n') ++text.lineCount;
+            }
+        }
+    } else if (state->kind == HolderKind::TextHolder && method == "SetTextOffsets") {
         item["offsetX"] = Value::integer(argInt(args, 1));
         item["offsetY"] = Value::integer(argInt(args, 2));
     } else if (state->kind == HolderKind::TextHolder && method == "GetTextOffsets") {
@@ -474,6 +819,94 @@ Host::ComponentResult Page::callComponent(const std::string& component, const st
         item["glideY1000"] = Value::integer(
             (item.count("y") ? item["y"].toInt() : 0) * 1000);
         item["gliding"] = Value::integer(1);
+        // A fresh destination is a new holder command and supersedes a prior
+        // StopAnimation pause. Without this, RZECZKA can enter its edge hotspot
+        // and queue a new panorama target that remains permanently paused.
+        item["glidePaused"] = Value::integer(0);
+    } else if (state->kind == HolderKind::Puzzle && method == "OpenPuzzle") {
+        state->props["puzzleId"] = Value::integer(id);
+        state->props["showFullBitmap"] = Value::integer(0);
+        for (std::size_t chip = 0; chip < state->puzzleChips.size(); ++chip) {
+            const auto& geom = state->puzzleChips[chip];
+            auto& chipItem = state->items[static_cast<int>(chip)];
+            chipItem["x"] = Value::integer(geom.originalX);
+            chipItem["y"] = Value::integer(geom.originalY);
+            chipItem["visible"] = Value::integer(1);
+            chipItem["locked"] = Value::integer(0);
+        }
+    } else if (state->kind == HolderKind::Puzzle && method == "ClosePuzzle") {
+        for (auto& [chip, chipItem] : state->items) chipItem["visible"] = Value::integer(0);
+    } else if (state->kind == HolderKind::Puzzle && method == "Mix") {
+        const int left = static_cast<int>(argInt(args, 1));
+        const int right = std::max(left + 1, static_cast<int>(argInt(args, 2)));
+        const int bottom = std::max(1, static_cast<int>(argInt(args, 3)));
+        int assembledWidth = 0;
+        int assembledHeight = 0;
+        for (const auto& geom : state->puzzleChips) {
+            assembledWidth = std::max(assembledWidth, geom.solutionX + geom.width);
+            assembledHeight = std::max(assembledHeight, geom.solutionY + geom.height);
+        }
+        const int solutionOriginX = left + (right - left - assembledWidth) / 2;
+        const int solutionOriginY = (bottom - assembledHeight) / 2;
+        for (std::size_t chip = 0; chip < state->puzzleChips.size(); ++chip) {
+            auto& geom = state->puzzleChips[chip];
+            geom.originalX = solutionOriginX + geom.solutionX;
+            geom.originalY = solutionOriginY + geom.solutionY;
+            const int xRange = std::max(1, right - left - geom.width);
+            const int yRange = std::max(1, bottom - geom.height);
+            auto& chipItem = state->items[static_cast<int>(chip)];
+            chipItem["x"] = Value::integer(left + static_cast<int>((chip * 97u + 37u) % xRange));
+            chipItem["y"] = Value::integer(static_cast<int>((chip * 53u + 19u) % yRange));
+            chipItem["z"] = Value::integer(static_cast<std::int64_t>(chip));
+            chipItem["locked"] = Value::integer(0);
+            chipItem["targetX"] = Value::integer(geom.originalX);
+            chipItem["targetY"] = Value::integer(geom.originalY);
+        }
+    } else if (state->kind == HolderKind::Puzzle && method == "ShowFullBitmap") {
+        state->props["showFullBitmap"] = Value::integer(1);
+        state->props["fullBitmapX"] = Value::integer(argInt(args, 0));
+        state->props["fullBitmapY"] = Value::integer(argInt(args, 1));
+        state->props["fullBitmapZ"] = Value::integer(argInt(args, 2));
+    } else if (state->kind == HolderKind::Puzzle && method == "EndShowFullBitmap") {
+        state->props["showFullBitmap"] = Value::integer(0);
+    } else if ((state->kind == HolderKind::Panorama ||
+                state->kind == HolderKind::PanoramaHolder) &&
+               (method == "SetHorAngle" || method == "SetHorizontalAngle")) {
+        // Retain degrees in fixed point. PanoramaHolder treats scripted motion
+        // as an offset from this authored starting angle, so its remaining
+        // travel must exclude both the viewport and that starting offset.
+        // Otherwise MROZ visually reaches the right edge, then keeps ticking
+        // through an unchanging (clamped) frame for many seconds.
+        const auto angle = argInt(args, 0);
+        state->props["panAngle"] = Value::integer(angle);
+        if (state->kind == HolderKind::PanoramaHolder &&
+            state->props.count("panSourceWidth")) {
+            const auto width = std::max<std::int64_t>(0, state->props["panSourceWidth"].toInt());
+            const auto normalizedAngle = ((angle % 360) + 360) % 360;
+            const auto start = width * normalizedAngle / 360;
+            const auto remaining = std::max<std::int64_t>(0, width - 640 - start);
+            state->props["panMax1000"] = Value::integer(remaining * 1000);
+            state->props["panX1000"] = Value::integer(
+                std::clamp<std::int64_t>(state->props["panX1000"].toInt(), 0, remaining * 1000));
+        }
+    } else if ((state->kind == HolderKind::Panorama ||
+                state->kind == HolderKind::PanoramaHolder) && method == "GoRight") {
+        state->props["panVelocity"] = Value::integer(std::max<std::int64_t>(1, argInt(args, 0)) * 15);
+    } else if ((state->kind == HolderKind::Panorama ||
+                state->kind == HolderKind::PanoramaHolder) && method == "GoLeft") {
+        state->props["panVelocity"] = Value::integer(-std::max<std::int64_t>(1, argInt(args, 0)) * 15);
+    } else if ((state->kind == HolderKind::Panorama ||
+                state->kind == HolderKind::PanoramaHolder) && method == "Stop") {
+        state->props["panVelocity"] = Value::integer(0);
+        state->props["panVelocityY"] = Value::integer(0);
+    } else if ((state->kind == HolderKind::Panorama ||
+                state->kind == HolderKind::PanoramaHolder) && method == "Enable") {
+        state->props["panEnabled"] = Value::integer(1);
+    } else if ((state->kind == HolderKind::Panorama ||
+                state->kind == HolderKind::PanoramaHolder) && method == "Disable") {
+        state->props["panEnabled"] = Value::integer(0);
+        state->props["panVelocity"] = Value::integer(0);
+        state->props["panVelocityY"] = Value::integer(0);
     } else if (method == "OpenPanorama") {
         item["visible"] = Value::integer(1);
         state->props["openPanorama"] = Value::integer(id);
@@ -490,13 +923,37 @@ Host::ComponentResult Page::callComponent(const std::string& component, const st
     } else if (method == "EnableTimers") {
         state->props["timersEnabled"] = Value::integer(1);
     } else if (method == "SynchronizeTimers") {
-        // Phase-aligns holder animations; explicit animation calls control run state.
+        // This aligns timers that are already running; it does not start every
+        // multi-phase definition. Multi-phase records are also used as static
+        // puzzle/button states (KOTEK, MICHAL, MROZ and SLOWIK), so treating
+        // synchronization as StartAnimation makes the whole board cycle by
+        // itself.
+        if (state->kind == HolderKind::SpriteHolder) {
+            for (auto& [spriteId, spriteItem] : state->items) {
+                if (spriteId < 0 || static_cast<std::size_t>(spriteId) >= state->sprites.size()) continue;
+                const auto& frames = state->sprites[static_cast<std::size_t>(spriteId)].frames;
+                const auto phase = spriteItem.count("phase") ? spriteItem["phase"].toInt() : 0;
+                const bool hasCells = phase >= 0 && phase < static_cast<std::int64_t>(frames.size()) &&
+                    frames[static_cast<std::size_t>(phase)].animationPixels.size() > 1;
+                if (hasCells) {
+                    spriteItem["animating"] = Value::integer(1);
+                    spriteItem["cell"] = Value::integer(0);
+                    spriteItem["animAccumMs"] = Value::integer(0);
+                } else if ((spriteItem.count("animating") &&
+                            spriteItem["animating"].toInt() != 0) ||
+                           (spriteItem.count("oneShotAnimating") &&
+                            spriteItem["oneShotAnimating"].toInt() != 0)) {
+                    spriteItem["animAccumMs"] = Value::integer(0);
+                }
+            }
+        }
     } else if (method == "CompEnableDrag" || method == "EnableDragMode") {
         state->props["dragEnabled"] = Value::integer(1);
     } else if (method == "CompDisableDrag" || method == "DisableDragMode") {
         state->props["dragEnabled"] = Value::integer(0);
     } else if (method == "ContinueAnimation") {
         item["animating"] = Value::integer(1);
+        item["glidePaused"] = Value::integer(0);
     } else if (method == "PlaySynchroText") {
         item["visible"] = Value::integer(1);
         item["playing"] = Value::integer(1);
@@ -514,11 +971,41 @@ Host::ComponentResult Page::callComponent(const std::string& component, const st
                method == "HideSprite") {
         item["visible"] = Value::integer(0);
     } else if (method == "ChangePhase") {
-        item["phase"] = Value::integer(argInt(args, 1));
+        const auto phase = argInt(args, 1);
+        item["phase"] = Value::integer(phase);
+        if (state->kind == HolderKind::SpriteHolder &&
+            state->displayName.rfind("Group.", 0) != 0) {
+            const bool hasCells = id >= 0 && static_cast<std::size_t>(id) < state->sprites.size() &&
+                phase >= 0 && static_cast<std::size_t>(phase) < state->sprites[id].frames.size() &&
+                state->sprites[id].frames[static_cast<std::size_t>(phase)].animationPixels.size() > 1;
+            item["animating"] = Value::integer(hasCells ? 1 : 0);
+            item["cell"] = Value::integer(0);
+            item["animAccumMs"] = Value::integer(0);
+            item["oneShotAnimating"] = Value::integer(0);
+        }
+        // Toolbar buttons with a three-frame definition use phase 1 as a
+        // one-shot press animation and navigate from EndAnimation at phase 2.
+        // They do not call StartAnimation explicitly (ladybugs/puzzles across
+        // CURSORS*.GRP), so treating ChangePhase as a static assignment leaves
+        // those navbar actions permanently stuck.
+        if (state->kind == HolderKind::SpriteHolder &&
+            state->displayName.rfind("Group.", 0) == 0 && id >= 0 &&
+            static_cast<std::size_t>(id) < state->sprites.size()) {
+            const auto phases = state->sprites[static_cast<std::size_t>(id)].frames.size();
+            if (phase > 0 && static_cast<std::size_t>(phase + 1) < phases) {
+                item["oneShotAnimating"] = Value::integer(1);
+                item["animAccumMs"] = Value::integer(0);
+            } else {
+                item["oneShotAnimating"] = Value::integer(0);
+            }
+        }
     } else if (method == "StartAnimation") {
         item["animating"] = Value::integer(1);
     } else if (method == "StopAnimation") {
         item["animating"] = Value::integer(0);
+        if (item.count("gliding") && item["gliding"].toInt() != 0) {
+            item["glidePaused"] = Value::integer(1);
+        }
     } else if (method == "SetDeep") {
         item["z"] = Value::integer(argInt(args, 1));
     } else if (method == "GetDeep") {
@@ -546,13 +1033,31 @@ Host::ComponentResult Page::callComponent(const std::string& component, const st
                 h.enabled = enabled;
             }
         }
-    } else if (method == "PlayDSound" || method == "Play") {
+    } else if (method == "PlayDSound" || method == "Play" ||
+               method == "PlayFromTo" || method == "NewPlay" ||
+               method == "NewPlayFromTo") {
         state->props["playing"] =
             args.empty() ? Value::integer(1) : Value::integer(argInt(args, 0));
-        // Entries in one holder may play concurrently; only restarting this id
-        // supersedes its own pending completion.
+        // Restarting an id supersedes its pending completion. TVH additionally
+        // enforces its single active playback channel below.
         cancelCompletions(state->displayName, id);
         if (state->kind == HolderKind::TransparentVideoHolder) {
+            // The DLL has one active click-playback channel per holder. Starting
+            // a new entry freezes the previous one at its current decoded frame
+            // and cancels its completion callback.
+            for (auto& [otherId, other] : state->items) {
+                if (otherId == id) continue;
+                if (other.count("ambient") && other["ambient"].toInt() != 0) continue;
+                if (other.count("playing") && other["playing"].toInt() != 0) {
+                    other["playing"] = Value::integer(0);
+                    other["hasPlayed"] = Value::integer(0);
+                    const bool rest = otherId >= 0 &&
+                        static_cast<std::size_t>(otherId) < state->videos.size() &&
+                        state->videos[static_cast<std::size_t>(otherId)].showStillAtRest;
+                    other["visible"] = Value::integer(rest ? 1 : 0);
+                    cancelCompletions(state->displayName, otherId);
+                }
+            }
             // Per-entry playback state for the renderer: which clip runs and
             // since when on the simulated clock.
             item["playing"] = Value::integer(1);
@@ -561,7 +1066,11 @@ Host::ComponentResult Page::callComponent(const std::string& component, const st
             item["visible"] = Value::integer(1);   // frames persist after the clip
             scheduleCompletion(*state, "TheEnd", id);
         } else if (state->kind == HolderKind::SoundHolder) {
-            scheduleCompletion(*state, "EndPlaySound", id);
+            const bool looping = item.count("looping") && item["looping"].toInt() != 0;
+            if (!looping) scheduleCompletion(*state, "EndPlaySound", id);
+        } else if (state->kind == HolderKind::VideoHolder) {
+            item["playing"] = Value::integer(1);
+            item["visible"] = Value::integer(1);
         }
     } else if (method == "Stop" || method == "StopAll" || method == "StopDSound") {
         state->props["playing"] = Value();
@@ -569,9 +1078,23 @@ Host::ComponentResult Page::callComponent(const std::string& component, const st
             if (method == "StopAll" || args.empty()) {
                 for (auto& [otherId, other] : state->items) {
                     other["playing"] = Value::integer(0);
+                    other["hasPlayed"] = Value::integer(0);
+                    const bool rest = otherId >= 0 &&
+                        static_cast<std::size_t>(otherId) < state->videos.size() &&
+                        state->videos[static_cast<std::size_t>(otherId)].showStillAtRest;
+                    other["visible"] = Value::integer(rest ? 1 : 0);
                 }
             } else {
                 item["playing"] = Value::integer(0);
+                item["hasPlayed"] = Value::integer(0);
+                const bool rest = id >= 0 && static_cast<std::size_t>(id) < state->videos.size() &&
+                                  state->videos[static_cast<std::size_t>(id)].showStillAtRest;
+                item["visible"] = Value::integer(rest ? 1 : 0);
+            }
+        } else if (state->kind == HolderKind::VideoHolder) {
+            for (auto& [otherId, other] : state->items) {
+                other["playing"] = Value::integer(0);
+                other["visible"] = Value::integer(0);
             }
         }
         cancelCompletions(state->displayName,
@@ -650,31 +1173,86 @@ void Page::advanceTime(int ms) {
     // StopAnimation/ChangePhase, with the fractional remainder carried in the
     // item so slow ticks stay smooth.
     if (elapsed > 0) {
+        struct AnimationEnd { std::string component; int id; };
+        std::vector<AnimationEnd> animationEnds;
         auto stepAnimations = [&](std::vector<ComponentState>& components) {
             for (auto& c : components) {
                 if (c.kind != HolderKind::SpriteHolder) continue;
+                if (c.props.count("timersEnabled") && c.props["timersEnabled"].toInt() == 0) {
+                    continue;
+                }
                 for (auto& [id, item] : c.items) {
-                    if (item.count("animating") == 0 || item["animating"].toInt() == 0) continue;
                     if (id < 0 || static_cast<std::size_t>(id) >= c.sprites.size()) continue;
-                    const auto phases = static_cast<std::int64_t>(
-                        c.sprites[static_cast<std::size_t>(id)].frames.size());
-                    if (phases <= 1) continue;
+                    const auto& frames = c.sprites[static_cast<std::size_t>(id)].frames;
+                    const auto phases = static_cast<std::int64_t>(frames.size());
+                    if (phases <= 0) continue;
                     constexpr int kPhaseMs = 100;
                     std::int64_t accum =
                         item.count("animAccumMs") ? item["animAccumMs"].toInt() : 0;
                     accum += elapsed;
                     const std::int64_t steps = accum / kPhaseMs;
-                    if (steps > 0) {
-                        const std::int64_t phase =
-                            (item.count("phase") ? item["phase"].toInt() : 0) + steps;
-                        item["phase"] = Value::integer(phase % phases);
+                    if (item.count("oneShotAnimating") &&
+                        item["oneShotAnimating"].toInt() != 0) {
+                        if (steps > 0) {
+                            const auto phase = item.count("phase") ? item["phase"].toInt() : 0;
+                            const auto next = std::min<std::int64_t>(phases - 1, phase + steps);
+                            item["phase"] = Value::integer(next);
+                            if (next == phases - 1) {
+                                item["oneShotAnimating"] = Value::integer(0);
+                                animationEnds.push_back({c.displayName, id});
+                            }
+                        }
+                        item["animAccumMs"] = Value::integer(accum % kPhaseMs);
+                        continue;
                     }
-                    item["animAccumMs"] = Value::integer(accum % kPhaseMs);
+                    if (item.count("animating") == 0 || item["animating"].toInt() == 0) continue;
+                    const auto phase = item.count("phase") ? item["phase"].toInt() : 0;
+                    if (phase < 0 || phase >= phases) continue;
+                    const auto& selected = frames[static_cast<std::size_t>(phase)];
+                    const auto cells = static_cast<std::int64_t>(selected.animationPixels.size());
+                    if (cells <= 1) continue;
+                    const auto duration = std::max<std::int64_t>(1, selected.cellDurationMs);
+                    const auto cellSteps = accum / duration;
+                    if (cellSteps > 0) {
+                        const auto cell = (item.count("cell") ? item["cell"].toInt() : 0) + cellSteps;
+                        item["cell"] = Value::integer(cell % cells);
+                    }
+                    item["animAccumMs"] = Value::integer(accum % duration);
                 }
             }
         };
         stepAnimations(components_);
         stepAnimations(groupComponents_);
+        auto stepPanoramas = [&](std::vector<ComponentState>& components) {
+            for (auto& c : components) {
+                if (c.kind != HolderKind::Panorama && c.kind != HolderKind::PanoramaHolder) continue;
+                if (c.props["panEnabled"].toInt() == 0) continue;
+                const auto velocity = c.props["panVelocity"].toInt();
+                const auto velocityY = c.props["panVelocityY"].toInt();
+                if (velocity == 0 && velocityY == 0) continue;
+                auto position = c.props["panX1000"].toInt();
+                auto next = position + velocity * elapsed;
+                if (c.kind == HolderKind::PanoramaHolder && c.props.count("panMax1000")) {
+                    const auto maximum = c.props["panMax1000"].toInt();
+                    next = std::clamp<std::int64_t>(next, 0, maximum);
+                    if ((next == 0 && velocity < 0) || (next == maximum && velocity > 0)) {
+                        c.props["panVelocity"] = Value::integer(0);
+                    }
+                }
+                c.props["panX1000"] = Value::integer(next);
+                auto nextY = c.props["panY1000"].toInt() + velocityY * elapsed;
+                const auto maxY = std::max<std::int64_t>(0,
+                    c.props.count("panSourceHeight")
+                        ? (c.props["panSourceHeight"].toInt() - 480) * 1000 : 0);
+                nextY = std::clamp<std::int64_t>(nextY, 0, maxY);
+                c.props["panY1000"] = Value::integer(nextY);
+            }
+        };
+        stepPanoramas(components_);
+        stepPanoramas(groupComponents_);
+        for (const auto& ended : animationEnds) {
+            runEvent(ended.component + ".EndAnimation", {Value::integer(ended.id)});
+        }
         stepGlides(elapsed);
     }
 }
@@ -686,7 +1264,7 @@ void Page::stepGlides(int elapsed) {
     // map mid-iteration.
     //
     // GotoXY glide speed is not uniform across holders. Page sprites use a
-    // visible 60 px/s traversal; fixed-point positions preserve subpixel timer
+    // moderate traversal; fixed-point positions preserve subpixel timer
     // steps so they cannot stick forever at an edge (the old integer update
     // rounded every ~16 ms step back to the same coordinate).
     //   - Group Sprite_Holder (the cursors.grp toolbar): near-instant. The
@@ -694,20 +1272,24 @@ void Page::stepGlides(int elapsed) {
     //     ~156 ms capture frame, i.e. >=1000 px/s -- it snaps rather than
     //     drifts.
     // The exact per-instance velocity field in the sprite record is not yet
-    // recovered; these two rates reproduce the observed page-vs-toolbar feel.
+    // recovered. In particular record+0x38 contains coordinate/state-like
+    // values, not velocity; treating it as px/s made every moving page object
+    // race at a different, often extreme speed.
     constexpr double kPageGlideSpeed = 60.0;     // px/s
     constexpr double kGroupGlideSpeed = 1200.0;  // px/s (toolbar snap)
 
     struct Arrival { std::string component; int id; int x; int y; };
     std::vector<Arrival> arrivals;
 
-    auto stepContainer = [&](std::vector<ComponentState>& components, double speed) {
-        const double dist = speed * elapsed / 1000.0;
+    auto stepContainer = [&](std::vector<ComponentState>& components, double fallbackSpeed) {
         for (auto& c : components) {
             if (c.kind != HolderKind::SpriteHolder) continue;
             if (c.props.count("timersEnabled") && c.props["timersEnabled"].toInt() == 0) continue;
             for (auto& [id, item] : c.items) {
                 if (item.count("gliding") == 0 || item["gliding"].toInt() == 0) continue;
+                if (item.count("glidePaused") && item["glidePaused"].toInt() != 0) continue;
+                const double holderSpeed = fallbackSpeed;
+                const double dist = holderSpeed * elapsed / 1000.0;
                 const double x = static_cast<double>(
                     item.count("glideX1000") ? item["glideX1000"].toInt()
                                               : item["x"].toInt() * 1000) / 1000.0;
@@ -759,6 +1341,16 @@ Value Page::callBuiltin(const std::string& name, const std::vector<Value>& args)
         cursor_ = static_cast<int>(argInt(args, 0));
     } else if (name == "SetTimer") {
         timerInterval_ = static_cast<int>(argInt(args, 0));
+        // ABECADLO's letter-block shuffle is authored at 200 ms, which feels
+        // markedly slower in the browser than the original machine. Identify
+        // that board by its unique 25-sprite/four-hotspot layout and tighten
+        // only its active shuffle timer; zero still cancels it normally.
+        const auto* sprites = resolve("Sprite_Holder");
+        const auto* hotspots = resolve("HotSpot_Holder");
+        if (timerInterval_ == 200 && sprites && hotspots &&
+            sprites->sprites.size() == 25 && hotspots->hotspots.size() == 4) {
+            timerInterval_ = 120;
+        }
     } else if (name == "IsProject") {
         return Value::integer(1);
     } else if (name == "Exit") {
@@ -834,12 +1426,17 @@ Candidate topItemIn(const ComponentState& state, int x, int y) {
 
             // Irregular sprites refine the rect with a per-pixel transparency
             // mask (see SpriteFrame::opaque). A transparent pixel is a miss.
-            if (!frame.opaque.empty()) {
+            const auto cell = itemInt(state, id, "cell");
+            const auto* opacity = &frame.opaque;
+            if (cell >= 0 && cell < static_cast<std::int64_t>(frame.animationOpaque.size())) {
+                opacity = &frame.animationOpaque[static_cast<std::size_t>(cell)];
+            }
+            if (!opacity->empty()) {
                 const auto cx = x - left;
                 const auto cy = y - top;
                 if (cx >= static_cast<std::int64_t>(frame.width) ||
                     cy >= static_cast<std::int64_t>(frame.height) ||
-                    frame.opaque[static_cast<std::size_t>(cy) * frame.width + cx] == 0) {
+                    (*opacity)[static_cast<std::size_t>(cy) * frame.width + cx] == 0) {
                     continue;
                 }
             }
@@ -880,6 +1477,14 @@ Candidate topItemIn(const ComponentState& state, int x, int y) {
         for (std::size_t r = state.indexedImages.size(); r-- > 0;) {
             const int id = static_cast<int>(r);
             if (itemInt(state, id, "visible") == 0) continue;
+            // Colouring boards serialize six variants per paintable object and
+            // may append one composite decoration (SLON's paint buckets). The
+            // decoration has no variants and is not an input target in the
+            // original holder; routing it through the six-colour script hides
+            // it after an out-of-range ShowBitmap call.
+            if (state.indexedImages.size() > 6 &&
+                state.indexedImages.size() % 6 == 1 &&
+                r + 1 == state.indexedImages.size()) continue;
             const auto& geom = state.indexedImages[r];
             const auto left = itemInt(state, id, "x");
             const auto top = itemInt(state, id, "y");
@@ -926,6 +1531,25 @@ Candidate topItemIn(const ComponentState& state, int x, int y) {
             if (best.index == -1 || layer > best.layer) {
                 best.index = id;
                 best.layer = static_cast<std::int32_t>(layer);
+            }
+        }
+    } else if (state.kind == HolderKind::Puzzle) {
+        std::int64_t bestOrder = std::numeric_limits<std::int64_t>::min();
+        for (const auto& [id, item] : state.items) {
+            if (id < 0 || static_cast<std::size_t>(id) >= state.puzzleChips.size() ||
+                itemInt(state, id, "visible") == 0 || itemInt(state, id, "locked") != 0) continue;
+            const auto& geom = state.puzzleChips[static_cast<std::size_t>(id)];
+            const auto left = itemInt(state, id, "x");
+            const auto top = itemInt(state, id, "y");
+            if (x < left || x >= left + geom.width || y < top || y >= top + geom.height) continue;
+            const auto pixel = static_cast<std::size_t>(y - top) * geom.width +
+                               static_cast<std::size_t>(x - left);
+            if (pixel >= geom.pixels.size() || geom.pixels[pixel] == geom.transparentIndex) continue;
+            const auto order = itemInt(state, id, "z");
+            if (best.index == -1 || order > bestOrder) {
+                best.index = id;
+                best.layer = 1;
+                bestOrder = order;
             }
         }
     }
@@ -1036,6 +1660,7 @@ const char* clickEventFor(HolderKind kind) {
         case HolderKind::MultiBitmap:   return "MouseClickOnDown";
         case HolderKind::TransparentVideoHolder: return "MouseClickOnDown";
         case HolderKind::TextHolder: return "ClickOnText";
+        case HolderKind::Puzzle: return "MouseStartDrag";
         default: return nullptr;
     }
 }
@@ -1091,6 +1716,22 @@ void Page::lButtonDown(int x, int y) {
             dragged["glideX1000"] = Value::integer(sx * 1000);
             dragged["glideY1000"] = Value::integer(sy * 1000);
         }
+    } else if (hit.kind == HolderKind::Puzzle) {
+        auto* c = resolve(hit.component);
+        if (c != nullptr && hit.index >= 0 &&
+            static_cast<std::size_t>(hit.index) < c->puzzleChips.size()) {
+            dragging_ = true;
+            dragId_ = hit.index;
+            const int chipX = static_cast<int>(itemInt(*c, hit.index, "x"));
+            const int chipY = static_cast<int>(itemInt(*c, hit.index, "y"));
+            grabOffsetX_ = x - chipX;
+            grabOffsetY_ = y - chipY;
+            std::int64_t topOrder = 0;
+            for (const auto& [otherId, other] : c->items) {
+                topOrder = std::max(topOrder, itemInt(*c, otherId, "z"));
+            }
+            c->items[hit.index]["z"] = Value::integer(topOrder + 1);
+        }
     }
 }
 
@@ -1104,7 +1745,7 @@ void Page::lButtonUp(int x, int y) {
     // A dragged sprite additionally reports its final bounding box via MouseDrop.
     if (dragging_) {
         auto* state = resolve(pressed_.component);
-        if (state != nullptr && dragId_ >= 0 &&
+        if (state != nullptr && pressed_.kind == HolderKind::SpriteHolder && dragId_ >= 0 &&
             static_cast<std::size_t>(dragId_) < state->sprites.size()) {
             const auto& geom = state->sprites[dragId_];
             const auto phase = itemInt(*state, dragId_, "phase");
@@ -1118,6 +1759,29 @@ void Page::lButtonUp(int x, int y) {
                      {Value::integer(dragId_), Value::integer(left), Value::integer(top),
                       Value::integer(left + static_cast<std::int64_t>(frame.width)),
                       Value::integer(top + static_cast<std::int64_t>(frame.height))});
+        } else if (state != nullptr && pressed_.kind == HolderKind::Puzzle && dragId_ >= 0 &&
+                   static_cast<std::size_t>(dragId_) < state->puzzleChips.size()) {
+            const auto& geom = state->puzzleChips[static_cast<std::size_t>(dragId_)];
+            auto& chip = state->items[dragId_];
+            const auto dx = itemInt(*state, dragId_, "x") - geom.originalX;
+            const auto dy = itemInt(*state, dragId_, "y") - geom.originalY;
+            if (dx * dx + dy * dy <= 20 * 20) {
+                chip["x"] = Value::integer(geom.originalX);
+                chip["y"] = Value::integer(geom.originalY);
+                chip["locked"] = Value::integer(1);
+                runEvent(pressed_.component + ".ChipLock", {});
+                const bool complete = std::all_of(
+                    state->items.begin(), state->items.end(), [&](const auto& entry) {
+                        return itemInt(*state, entry.first, "locked") != 0;
+                    });
+                if (complete) {
+                    runEvent(pressed_.component + ".GameOver",
+                             {state->props.count("puzzleId") ? state->props["puzzleId"]
+                                                             : Value::integer(0)});
+                }
+            } else {
+                runEvent(pressed_.component + ".MouseDrop", {});
+            }
         }
     }
 
@@ -1150,8 +1814,41 @@ void Page::videoEnd(int id) {
     fireKindEvent(*this, components_, HolderKind::TransparentVideoHolder, "TheEnd", id);
 }
 
+void Page::externalVideoEnd(int id) {
+    if (auto* state = resolve("Video_Holder")) {
+        auto& item = state->items[id];
+        item["playing"] = Value::integer(0);
+    }
+    fireKindEvent(*this, components_, HolderKind::VideoHolder, "TheEnd", id);
+}
+
 void Page::soundEnd(int id) {
     fireKindEvent(*this, components_, HolderKind::SoundHolder, "EndPlaySound", id);
+}
+
+void Page::textEnd(int id) {
+    if (auto* state = resolve("Text_Holder")) {
+        state->items[id]["playing"] = Value::integer(0);
+    }
+    fireKindEvent(*this, components_, HolderKind::TextHolder, "EndOfSynchroText", id);
+}
+
+void Page::recorderEndRecord(bool hasData) {
+    if (auto* state = resolve("Recorder")) {
+        state->props["recording"] = Value::integer(0);
+        const std::string file = state->props.count("file") ? state->props["file"].toString() : "";
+        state->props["recorded:" + file] = Value::integer(hasData ? 1 : 0);
+    }
+    runEvent("Recorder.EndRecordSound", {});
+}
+
+void Page::recorderEndPlay() {
+    if (auto* state = resolve("Recorder")) state->props["playing"] = Value::integer(0);
+    runEvent("Recorder.EndPlaySound", {});
+}
+
+void Page::recorderProgress(int percentFull) {
+    runEvent("Recorder.Progress", {Value::integer(percentFull)});
 }
 
 void Page::animationEnd(int id) {
@@ -1170,16 +1867,36 @@ void Page::mouseMove(int x, int y) {
         return;
     }
 
-    // Hover follows the same merged layer order as clicks. This matters for
-    // CURSORS.GRP: when its toolbar is open, the layer-8 button sprites cover
-    // the layer-5 full-page hotspot that closes it. Dispatching hover to every
-    // holder independently made that covered hotspot close the toolbar as soon
-    // as the pointer left the one-pixel reveal strip.
+    // The non-holder Panorama DLL supplies its own mouse steering when
+    // enabled. Edge pressure changes direction; returning to the middle stops
+    // it. Panorama_Holder pages drive the same state explicitly through their
+    // scripted GoLeft/GoRight/Stop calls.
+    for (auto& state : components_) {
+        if (state.kind != HolderKind::Panorama || state.props["panEnabled"].toInt() == 0) continue;
+        state.props["panVelocity"] = Value::integer(x < 160 ? -90 : (x > 480 ? 90 : 0));
+        state.props["panVelocityY"] = Value::integer(y < 120 ? -90 : (y > 360 ? 90 : 0));
+    }
+
+    // Visual hover follows merged layer order, but page HotSpotHolder also
+    // receives its own hover route. RZECZKA deliberately puts its scrolling
+    // edge hotspot behind interactive sprites: the finger cursor belongs to
+    // the sprite while the hotspot still starts the panorama glide. Group
+    // hotspots remain merged so a deployed toolbar button can cover its
+    // full-page close strip.
     const Hit hit = findHit(x, y);
+    std::map<std::string, Hit> active;
+    if (hit.index != -1) active[hit.component] = hit;
+    for (const auto& state : components_) {
+        if (state.kind != HolderKind::HotSpotHolder) continue;
+        const auto candidate = topItemIn(state, x, y);
+        if (candidate.index == -1) continue;
+        active[state.displayName] = {state.displayName, state.kind, candidate.index};
+    }
 
     for (auto it = hoverByComponent_.begin(); it != hoverByComponent_.end();) {
         const Hit old = it->second;
-        if (old.component == hit.component && old.index == hit.index) {
+        const auto current = active.find(old.component);
+        if (current != active.end() && current->second.index == old.index) {
             ++it;
             continue;
         }
@@ -1187,11 +1904,11 @@ void Page::mouseMove(int x, int y) {
         it = hoverByComponent_.erase(it);
     }
 
-    if (hit.index != -1) {
-        const auto oldIt = hoverByComponent_.find(hit.component);
-        if (oldIt == hoverByComponent_.end() || oldIt->second.index != hit.index) {
-            fireHitEvent(hit, "MouseMoveIn");
-            hoverByComponent_[hit.component] = hit;
+    for (const auto& [component, current] : active) {
+        const auto oldIt = hoverByComponent_.find(component);
+        if (oldIt == hoverByComponent_.end() || oldIt->second.index != current.index) {
+            fireHitEvent(current, "MouseMoveIn");
+            hoverByComponent_[component] = current;
         }
     }
 }
@@ -1217,6 +1934,26 @@ bool Page::mouseWheel(int x, int y, int wheelDelta) {
                 target = &state;
                 targetId = id;
                 bestLayer = layer;
+            }
+        }
+    }
+    // The original holder receives wheel messages at the page window and then
+    // scrolls its active text, even when the pointer is over surrounding art.
+    // Fall back to the highest visible mouse-enabled entry when no text rect
+    // is directly under the cursor.
+    if (target == nullptr) {
+        for (auto& state : components_) {
+            if (state.kind != HolderKind::TextHolder) continue;
+            for (auto& [id, item] : state.items) {
+                if (id < 0 || static_cast<std::size_t>(id) >= state.texts.size()) continue;
+                if (itemInt(state, id, "visible") == 0 ||
+                    itemInt(state, id, "mouseEnabled") == 0) continue;
+                const auto layer = itemInt(state, id, "z");
+                if (target == nullptr || layer > bestLayer) {
+                    target = &state;
+                    targetId = id;
+                    bestLayer = layer;
+                }
             }
         }
     }

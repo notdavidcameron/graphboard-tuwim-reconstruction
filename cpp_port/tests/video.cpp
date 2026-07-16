@@ -52,6 +52,7 @@ void testDecodeAndSeek() {
     geometry.height = 1;
     geometry.frameCount = 2;
     geometry.frameDurationMs = 100;
+    geometry.streamTransparentIndex = 30;
     geometry.streamOffset = 0;
     geometry.streamByteCount = static_cast<std::uint32_t>(bytes.size());
 

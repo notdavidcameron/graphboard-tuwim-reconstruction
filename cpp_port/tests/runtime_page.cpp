@@ -363,7 +363,10 @@ void testTextHolderWheelScrolling() {
     for (int i = 0; i < 10; ++i) assert(page->mouseWheel(50, 50, -120));
     assert(item(text, 0, "offsetY").toInt() == -260);
 
-    assert(!page->mouseWheel(500, 400, 120));  // outside the text rect
+    // The active TextHolder owns the page-window wheel even over surrounding
+    // artwork, matching the native holder's routing.
+    assert(page->mouseWheel(500, 400, 120));
+    assert(item(text, 0, "offsetY").toInt() == -206);
     page->callComponent("Text_Holder", "DisableMouse", {Value::integer(0)});
     assert(!page->mouseWheel(50, 50, 120));
 
@@ -371,6 +374,56 @@ void testTextHolderWheelScrolling() {
                         {Value::integer(0), Value::integer(7), Value::integer(-36)});
     assert(item(text, 0, "offsetX").toInt() == 7);
     assert(item(text, 0, "offsetY").toInt() == -36);
+    page->callComponent("Text_Holder", "SetText",
+                        {Value::integer(0), Value::string("hover label")});
+    assert(text->texts[0].text == "hover label");
+}
+
+void testStopAnimationPausesSpriteTravel() {
+    const auto bytes = buildSyntheticBdf(
+        "void OnOpenPage(){ Sprite_Holder.GotoXY(0,100,400); "
+        "Sprite_Holder.ContinueAnimation(0); }\n");
+    BinaryReader reader(bytes);
+    auto page = Page::loadFromReader(reader, "sprite-travel-pause");
+    page->open();
+    page->advanceTime(1000);
+
+    const auto* sprite = page->component("Sprite_Holder");
+    const auto movingX = item(sprite, 0, "x").toInt();
+    assert(movingX < 400);
+    page->callComponent("Sprite_Holder", "StopAnimation", {Value::integer(0)});
+    page->advanceTime(2000);
+    assert(item(sprite, 0, "x").toInt() == movingX);
+
+    // A new GotoXY is an explicit new movement command and must release the
+    // old pause (RZECZKA repeatedly retargets its panorama from edge hovers).
+    page->callComponent("Sprite_Holder", "GotoXY",
+                        {Value::integer(0), Value::integer(0), Value::integer(400)});
+    page->advanceTime(1000);
+    const auto retargetedX = item(sprite, 0, "x").toInt();
+    assert(retargetedX < movingX);
+
+    page->callComponent("Sprite_Holder", "ContinueAnimation", {Value::integer(0)});
+    page->advanceTime(1000);
+    assert(item(sprite, 0, "x").toInt() < retargetedX);
+}
+
+void testKeyUpReleasesInstrumentLatch() {
+    const auto bytes = buildSyntheticBdf(
+        "void OnOpenPage(){ int held=0; int hits=0; }\n"
+        "void OnKeyDown(int key){ if(key==held) return; held=key; "
+        "hits=hits+1; SetCursor(hits); }\n"
+        "void OnKeyUp(int key){ held=0; }\n");
+    BinaryReader reader(bytes);
+    auto page = Page::loadFromReader(reader, "key-release");
+    page->open();
+    page->keyDown(81);
+    assert(page->cursor() == 1);
+    page->keyDown(81);  // OS auto-repeat while held is ignored by the page script.
+    assert(page->cursor() == 1);
+    page->keyUp(81);
+    page->keyDown(81);  // A genuine second press is accepted.
+    assert(page->cursor() == 2);
 }
 
 void testGroupNamespaceAndHitRouting() {
@@ -830,6 +883,21 @@ void testVideoClockChain() {
     auto page = Page::loadFromReader(reader, "video-clock");
     page->open();   // Play(0) scheduled to end at t=1000
 
+    // TransparentVideoHolder has one playback channel. Starting another clip
+    // immediately stops the first and cancels its pending TheEnd; this is what
+    // prevents an old click animation from continuing across a bright/dark
+    // scene-state transition.
+    page->callComponent("Transparent_Video_Holder", "Play",
+                        {Value::integer(1), Value::integer(0)});
+    assert(item(page->component("Transparent_Video_Holder"), 0, "playing").toInt() == 0);
+    assert(item(page->component("Transparent_Video_Holder"), 0, "hasPlayed").toInt() == 0);
+    assert(item(page->component("Transparent_Video_Holder"), 0, "visible").toInt() == 0);
+    assert(item(page->component("Transparent_Video_Holder"), 1, "playing").toInt() == 1);
+    page->callComponent("Transparent_Video_Holder", "Play",
+                        {Value::integer(0), Value::integer(0)});
+    assert(item(page->component("Transparent_Video_Holder"), 1, "playing").toInt() == 0);
+    assert(item(page->component("Transparent_Video_Holder"), 0, "playing").toInt() == 1);
+
     // Nothing has ended yet.
     assert(!page->hasGlobal("played") || page->getGlobal("played").toInt() == 0);
 
@@ -968,12 +1036,13 @@ void testCrossKindLayerPrecedence() {
     page->lButtonDown(90, 90);
     assert(item(sprite, 0, "phase").toInt() == 99);
 
-    // Hover uses the same layer precedence. The covered hotspot must not also
-    // receive MouseMoveIn, or CURSORS.GRP immediately retracts its toolbar.
+    // Page hotspots receive hover alongside the top visual item (scroll-edge
+    // hotspots can sit behind sprites); group toolbar hotspots remain merged.
+    // Map ordering leaves the sprite's visual cursor handler last here.
     page->mouseMove(60, 60);
     assert(item(sprite, 0, "phase").toInt() == 60);
     page->mouseMove(90, 90);
-    assert(item(sprite, 0, "phase").toInt() == 109);
+    assert(item(sprite, 0, "phase").toInt() == 60); // hotspot was already entered
 }
 
 // A page with a single Bitmap_Holder holding one bitmap. Bitmap blob layout:
@@ -1133,6 +1202,8 @@ void testBitmapVsHotSpotLayer() {
 int main() {
     testDriveSyntheticPage();
     testTextHolderWheelScrolling();
+    testStopAnimationPausesSpriteTravel();
+    testKeyUpReleasesInstrumentLatch();
     testGroupNamespaceAndHitRouting();
     testEqualLayerDispatchOrder();
     testHotSpotCallbacks();

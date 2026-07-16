@@ -112,11 +112,13 @@ HotSpotHolderState parseHotSpotHolderState(BinaryReader& reader);
 // uses the offsets here.) Pixel/phase data trails the blob header; its exact
 // framing is still being recovered, so the blob bytes are exposed by range.
 // -------------------------------------------------------------------------
-// One animation frame of a definition. The blob carries a frame table at
+// One script-visible phase of a definition. The blob carries a phase table at
 // blob+0x6c with stride 0x4c; SpriteHolder::LButtonDown (@ 10008c80) computes
 // the hit rect from `frame = def + 0x6c + phase*0x4c`, reading width at
 // frame+0x14 and height at frame+0x18. For phase 0 that is blob+0x80/+0x84,
 // which is why the definition header's width/height agree with frames[0].
+// frame+0x00 is the timer-cell count and frame+0x10 is the complete horizontal
+// strip width (cell width * count); frame+0x20 is the cell duration in ms.
 //
 // A rect hit is refined per-pixel when the frame opts in (frame+0x08 != 0) and
 // the definition opts in (def+0x24 != 0): the click misses if the pixel under
@@ -132,6 +134,12 @@ struct SpriteFrame {
     // comes from the page palette; `transparentIndex` (frame+0x04) is skipped.
     std::vector<std::uint8_t> pixels;
     std::uint8_t transparentIndex = 0;
+    // A script-visible phase may contain several horizontally packed timer
+    // cells. `pixels`/`opaque` mirror cell 0 for compatibility; these vectors
+    // contain every cell in playback order.
+    std::vector<std::vector<std::uint8_t>> animationPixels;
+    std::vector<std::vector<std::uint8_t>> animationOpaque;
+    std::uint32_t cellDurationMs = 100;
 };
 
 struct SpriteDefinition {
@@ -157,6 +165,7 @@ struct SpriteInstance {
     // LButtonUp @ 10008fd0 fires MouseDrop only for these). CUDA's butterflies
     // are 1; DYZIO's flying food is 0.
     bool dragEnabled = false;
+    std::int32_t unknown38 = 0;           // record+0x38; not GotoXY velocity
 };
 
 struct SpriteHolderState {
@@ -287,6 +296,7 @@ struct SoundEntry {
     // Playback length in ms, from the WAV (data-chunk bytes / fmt byte-rate);
     // 0 if the bytes are not a parseable RIFF/WAVE. Used to schedule EndPlaySound.
     std::uint32_t durationMs = 0;
+    bool looping = false;               // record+0x00: DirectSound loop mode
 };
 
 struct SoundHolderState {
@@ -376,7 +386,8 @@ struct BitmapHolderBitmap {
     std::size_t blobOffset = 0;
     std::int32_t left = 0, top = 0, right = 0, bottom = 0;
     std::int32_t layer = 0;           // blob+0x18 ("deep")
-    bool initiallyHidden = false;     // blob+0x2c: revealed later via ShowBitmap
+    bool initiallyHidden = false;     // blob+0x2c, purpose still uncertain
+    std::uint32_t stateWord = 0;      // blob+0x00: persisted shown state for overlays
     std::string name;                 // blob+0x34
     std::size_t pixelOffset = 0;      // blobOffset + 0x80 (pixels; 0x10 trailer follows)
     bool pixelSizeConsistent = false; // stride*(bottom-top) == blobByteCount-0x90
@@ -419,6 +430,12 @@ struct PuzzleChip {
     std::uint32_t pixelByteCount = 0;
     std::size_t pixelOffset = 0;
     std::uint32_t subRecordCount = 0;
+    struct Connection {
+        std::int32_t chipId = -1;
+        std::int32_t dx = 0;
+        std::int32_t dy = 0;
+    };
+    std::vector<Connection> connections;
 };
 
 struct PuzzleBoard {

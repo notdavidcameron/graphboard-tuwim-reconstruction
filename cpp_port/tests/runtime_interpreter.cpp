@@ -333,6 +333,7 @@ void OnOpenPage()
    Debug(base.GetLength());
    Group.Transparent_Video_Holder.MoveTo(licznik,filmy[licznik].left,filmy[licznik].top);
 }
+
 )S";
 
     RecordingHost host;
@@ -353,6 +354,27 @@ void OnOpenPage()
     assert(value.toInt() == 1 && std::abs(value.toDouble() - 1.5) < 0.000001);
 }
 
+void testZeroInitializedArraysAndCompoundGuards() {
+    const char* script = R"S(
+void OnOpenPage()
+{
+   int count=10;
+   int differences[count];
+}
+void Mark(int id)
+{
+   if((id >= 1) && (id <= 10) && (differences[id-1] == 0))
+      differences[id-1]=1;
+}
+)S";
+    RecordingHost host;
+    Interpreter interp(script, host);
+    interp.runHandler("OnOpenPage", {});
+    assert(interp.getGlobal("differences[0]").toInt() == 0);
+    interp.runHandler("Mark", {Value::integer(1)});
+    assert(interp.getGlobal("differences[0]").toInt() == 1);
+}
+
 } // namespace
 
 int main() {
@@ -365,5 +387,6 @@ int main() {
     testComponentOutParameters();
     testCStringNavigationHelpers();
     testBrzechwaRectStringAndRealValues();
+    testZeroInitializedArraysAndCompoundGuards();
     return 0;
 }

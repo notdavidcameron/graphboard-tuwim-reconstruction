@@ -36,4 +36,10 @@ export function attachInput(canvas, api) {
       e.preventDefault();
     }
   });
+  window.addEventListener("keyup", (e) => {
+    api.keyUp(e.keyCode);
+    if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", " "].includes(e.key)) {
+      e.preventDefault();
+    }
+  });
 }

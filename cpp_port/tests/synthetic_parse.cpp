@@ -391,6 +391,7 @@ void testTransparentVideoHolderState() {
         header[off + 3] = static_cast<std::uint8_t>((v >> 24) & 0xff);
     };
     putU32(0x68, 0xada77777u);           // magic
+    putU32(0x74, 199);                   // authored transparent colour index
     putU32(0x7c, 100);                   // frameDurationMs
     putU32(0x80, 6);                     // width  (stride 8)
     putU32(0x84, 2);                     // height
@@ -424,6 +425,7 @@ void testTransparentVideoHolderState() {
     assert(e.stream.magic == 0xada77777u);
     assert(e.stream.width == 6 && e.stream.height == 2);
     assert(e.stream.frameCount == 3);
+    assert(e.transparentIndex == 0xaa);  // repeated still-frame corner matte
     assert(e.stream.audioSampleRate == 22050);
     assert(e.originalX == 12 && e.originalY == 34);
     assert(e.stageX == 56 && e.stageY == 78);

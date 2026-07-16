@@ -50,13 +50,26 @@ using graphboard::runtime::Project;
 // for JS to replay through WebAudio. Each play event owns a copy of its PCM so
 // the pointer stays valid until the next drain, regardless of page changes.
 struct AudioEvent {
-    enum class Type { Play, Stop, StopComponent, StopAll };
+    enum class Type {
+        Play, PlayMedia, Stop, StopComponent, Volume, Recorder,
+        PlayVideo, StopVideoComponent, StopAll
+    };
     Type type;
     std::string key;               // "component/id" (Stop) or prefix (StopComponent)
     std::vector<std::uint8_t> pcm; // raw samples, WAV framing already stripped
     std::uint32_t sampleRate = 0;
     std::uint32_t bitsPerSample = 0;
     std::uint32_t channels = 0;
+    bool loop = false;
+    bool textCompletion = false;
+    std::string fileName;
+    int id = 0;
+    int x = 0;
+    int y = 0;
+    int fromFrame = -1;
+    int toFrame = -1;
+    int volume = 0;
+    std::string action;
 };
 
 // Same RIFF/WAVE walk gbgame's AudioEngine does.
@@ -281,7 +294,84 @@ void processHostCalls() {
         const int id = call.args.empty() ? 0 : static_cast<int>(call.args[0].toInt());
         const std::string key = state->displayName + "/" + std::to_string(id);
 
-        if (state->kind == graphboard::HolderKind::SoundHolder) {
+        if (state->kind == graphboard::HolderKind::Recorder) {
+            if (call.name == "OpenFile" || call.name == "CloseFile" ||
+                call.name == "Record" || call.name == "Stop" ||
+                call.name == "Play" || call.name == "EmptyFile") {
+                AudioEvent ev;
+                ev.type = AudioEvent::Type::Recorder;
+                ev.action = call.name;
+                if (call.name == "OpenFile" && !call.args.empty()) {
+                    ev.fileName = call.args[0].toString();
+                } else {
+                    const auto file = state->props.find("file");
+                    if (file != state->props.end()) ev.fileName = file->second.toString();
+                }
+                g.audioEvents.push_back(std::move(ev));
+            }
+        } else if (state->kind == graphboard::HolderKind::TextHolder) {
+            if (call.name == "PlaySynchroText" && id >= 0) {
+                bool queued = false;
+                if (static_cast<std::size_t>(id) < state->soundClips.size()) {
+                    const auto& clip = state->soundClips[static_cast<std::size_t>(id)];
+                    if (clip.byteCount != 0 &&
+                        clip.offset + clip.byteCount <= g.pageBytes.size()) {
+                    std::uint32_t rate = 0, channels = 0, bits = 0;
+                    std::size_t dataOff = 0, dataBytes = 0;
+                    const std::uint8_t* wav = g.pageBytes.data() + clip.offset;
+                    if (parseWav(wav, clip.byteCount, rate, channels, bits, dataOff,
+                                 dataBytes)) {
+                        AudioEvent stop;
+                        stop.type = AudioEvent::Type::StopComponent;
+                        stop.key = state->displayName + "/";
+                        g.audioEvents.push_back(std::move(stop));
+
+                        AudioEvent ev;
+                        ev.type = AudioEvent::Type::Play;
+                        ev.key = key;
+                        ev.pcm.assign(wav + dataOff, wav + dataOff + dataBytes);
+                        ev.sampleRate = rate;
+                        ev.bitsPerSample = bits;
+                        ev.channels = channels;
+                        ev.id = id;
+                        ev.textCompletion = true;
+                        g.audioEvents.push_back(std::move(ev));
+                        queued = true;
+                    }
+                    }
+                }
+                // Most poem pages keep narration in a sibling .EXS file. EXS
+                // is a normal RIFF/WAVE stream despite its extension; let the
+                // browser fetch and decode it lazily instead of copying several
+                // megabytes through MEMFS.
+                if (!queued && static_cast<std::size_t>(id) < state->texts.size() &&
+                    !state->texts[static_cast<std::size_t>(id)].synchroFile.empty()) {
+                    AudioEvent stop;
+                    stop.type = AudioEvent::Type::StopComponent;
+                    stop.key = state->displayName + "/";
+                    g.audioEvents.push_back(std::move(stop));
+
+                    AudioEvent ev;
+                    ev.type = AudioEvent::Type::PlayMedia;
+                    ev.key = key;
+                    ev.fileName = state->texts[static_cast<std::size_t>(id)].synchroFile;
+                    ev.id = id;
+                    ev.textCompletion = true;
+                    g.audioEvents.push_back(std::move(ev));
+                }
+            } else if (call.name == "StopSynchroText") {
+                AudioEvent ev;
+                ev.type = AudioEvent::Type::Stop;
+                ev.key = key;
+                g.audioEvents.push_back(std::move(ev));
+            } else if (call.name == "SetSoundParameters") {
+                AudioEvent ev;
+                ev.type = AudioEvent::Type::Volume;
+                ev.key = key;
+                ev.volume = call.args.size() > 1 ? static_cast<int>(call.args[1].toInt()) : 0;
+                g.audioEvents.push_back(std::move(ev));
+            }
+        } else if (state->kind == graphboard::HolderKind::SoundHolder) {
             if (call.name == "PlayDSound" || call.name == "PlayDSoundEx") {
                 if (id >= 0 && static_cast<std::size_t>(id) < state->soundClips.size()) {
                     const auto& clip = state->soundClips[static_cast<std::size_t>(id)];
@@ -300,10 +390,20 @@ void processHostCalls() {
                             ev.sampleRate = rate;
                             ev.bitsPerSample = bits;
                             ev.channels = channels;
+                            const auto item = state->items.find(id);
+                            ev.loop = item != state->items.end() &&
+                                item->second.count("looping") != 0 &&
+                                item->second.at("looping").toInt() != 0;
                             g.audioEvents.push_back(std::move(ev));
                         }
                     }
                 }
+            } else if (call.name == "SetPlayDSoundParameters") {
+                AudioEvent ev;
+                ev.type = AudioEvent::Type::Volume;
+                ev.key = key;
+                ev.volume = call.args.size() > 1 ? static_cast<int>(call.args[1].toInt()) : 0;
+                g.audioEvents.push_back(std::move(ev));
             } else if (call.name == "Stop" || call.name == "StopDSound") {
                 AudioEvent ev;
                 ev.type = AudioEvent::Type::Stop;
@@ -337,6 +437,31 @@ void processHostCalls() {
             } else if (call.name == "Stop" || call.name == "StopAll") {
                 AudioEvent ev;
                 ev.type = AudioEvent::Type::StopComponent;
+                ev.key = state->displayName + "/";
+                g.audioEvents.push_back(std::move(ev));
+            }
+        } else if (state->kind == graphboard::HolderKind::VideoHolder) {
+            if ((call.name == "Play" || call.name == "PlayFromTo" ||
+                 call.name == "NewPlay" || call.name == "NewPlayFromTo") &&
+                id >= 0 && static_cast<std::size_t>(id) < state->externalVideos.size()) {
+                const auto& video = state->externalVideos[static_cast<std::size_t>(id)];
+                AudioEvent ev;
+                ev.type = AudioEvent::Type::PlayVideo;
+                ev.key = state->displayName + "/" + std::to_string(id);
+                ev.fileName = video.fileName;
+                ev.id = id;
+                ev.x = video.x;
+                ev.y = video.y;
+                if ((call.name == "PlayFromTo" || call.name == "NewPlayFromTo") &&
+                    call.args.size() >= 3) {
+                    ev.fromFrame = static_cast<int>(call.args[1].toInt());
+                    ev.toFrame = static_cast<int>(call.args[2].toInt());
+                }
+                g.audioEvents.push_back(std::move(ev));
+            } else if (call.name == "Stop" || call.name == "NewStop" ||
+                       call.name == "NewClose") {
+                AudioEvent ev;
+                ev.type = AudioEvent::Type::StopVideoComponent;
                 ev.key = state->displayName + "/";
                 g.audioEvents.push_back(std::move(ev));
             }
@@ -407,6 +532,13 @@ bool sceneIsLive() {
     if (g.video.anyPlaying()) return true;
     auto liveSprites = [](const std::vector<graphboard::runtime::ComponentState>& components) {
         for (const auto& c : components) {
+            if (c.kind == graphboard::HolderKind::Panorama ||
+                c.kind == graphboard::HolderKind::PanoramaHolder) {
+                const auto vx = c.props.find("panVelocity");
+                const auto vy = c.props.find("panVelocityY");
+                if ((vx != c.props.end() && vx->second.toInt() != 0) ||
+                    (vy != c.props.end() && vy->second.toInt() != 0)) return true;
+            }
             if (c.kind != graphboard::HolderKind::SpriteHolder) continue;
             for (const auto& [id, item] : c.items) {
                 const auto anim = item.find("animating");
@@ -625,6 +757,52 @@ void gb_key_down(int vk) {
     runScriptEvent([&](Page& page) { page.keyDown(vk); });
 }
 
+// Direct page entry for development, QA and shareable ?page= links. The JS
+// loader provisions the requested BDF in MEMFS before calling this function.
+EMSCRIPTEN_KEEPALIVE
+int gb_open_page(const char* pageNameUtf8) {
+    if (!g.project || !pageNameUtf8 || !*pageNameUtf8) return 0;
+    try {
+        g.project->openPage(pageNameUtf8);
+        loadPageVisuals();
+        processHostCalls();
+        return 1;
+    } catch (const std::exception& ex) {
+        g.status = ex.what();
+        return 0;
+    }
+}
+
+EMSCRIPTEN_KEEPALIVE
+void gb_key_up(int vk) {
+    runScriptEvent([&](Page& page) { page.keyUp(vk); });
+}
+
+EMSCRIPTEN_KEEPALIVE
+void gb_external_video_end(int id) {
+    runScriptEvent([&](Page& page) { page.externalVideoEnd(id); });
+}
+
+EMSCRIPTEN_KEEPALIVE
+void gb_text_audio_end(int id) {
+    runScriptEvent([&](Page& page) { page.textEnd(id); });
+}
+
+EMSCRIPTEN_KEEPALIVE
+void gb_recorder_end_record(int hasData) {
+    runScriptEvent([&](Page& page) { page.recorderEndRecord(hasData != 0); });
+}
+
+EMSCRIPTEN_KEEPALIVE
+void gb_recorder_end_play() {
+    runScriptEvent([&](Page& page) { page.recorderEndPlay(); });
+}
+
+EMSCRIPTEN_KEEPALIVE
+void gb_recorder_progress(int percentFull) {
+    runScriptEvent([&](Page& page) { page.recorderProgress(percentFull); });
+}
+
 // ---- frame buffer ----
 
 // Composite if dirty. Returns 1 when the RGBA buffer changed.
@@ -657,22 +835,24 @@ EMSCRIPTEN_KEEPALIVE const std::uint8_t* gb_frame_ptr() { return g.rgba.data(); 
 EMSCRIPTEN_KEEPALIVE int gb_frame_w() { return g.frame.width; }
 EMSCRIPTEN_KEEPALIVE int gb_frame_h() { return g.frame.height; }
 
-// 1 when JS should hide the CSS cursor: the page hides the pointer (index < 0)
-// or the group cursor is being composited. Mirrors gbgame's WM_SETCURSOR.
+// -3 is the external-video mode used by the four TV pages. The legacy overlay
+// window supplied its own arrow there; keep the browser arrow visible over the
+// canvas. Other negative values (notably THEEND's -2) suppress the pointer.
 EMSCRIPTEN_KEEPALIVE
 int gb_cursor_hidden() {
     const Page* page = g.project ? g.project->currentPage() : nullptr;
     if (!page) return 0;
-    return page->cursor() < 0 || activeCursor() != nullptr ? 1 : 0;
+    return (page->cursor() < 0 && page->cursor() != -3) || activeCursor() != nullptr ? 1 : 0;
 }
 
 // ---- audio + text for the JS device layer ----
 
 // Drain queued audio commands as JSON:
 //   [{"type":"play","key":"Sound_Holder/3","ptr":123,"len":456,
-//     "rate":22050,"bits":8,"channels":1},
+//     "rate":22050,"bits":8,"channels":1,"loop":true},
 //    {"type":"stop","key":...}, {"type":"stopComponent","key":prefix},
-//    {"type":"stopAll"}]
+//    {"type":"playVideo","file":"T03A.AVI","id":1,"x":24,"y":24},
+//    {"type":"stopVideoComponent","key":"Video_Holder/"}, {"type":"stopAll"}]
 // PCM pointers stay valid until the NEXT drain call — JS must copy the sample
 // bytes out of HEAPU8 synchronously.
 EMSCRIPTEN_KEEPALIVE
@@ -694,7 +874,18 @@ const char* gb_drain_events() {
                     ",\"len\":" + std::to_string(ev.pcm.size()) +
                     ",\"rate\":" + std::to_string(ev.sampleRate) +
                     ",\"bits\":" + std::to_string(ev.bitsPerSample) +
-                    ",\"channels\":" + std::to_string(ev.channels) + "}";
+                    ",\"channels\":" + std::to_string(ev.channels) +
+                    ",\"loop\":" + (ev.loop ? "true" : "false") +
+                    ",\"id\":" + std::to_string(ev.id) +
+                    ",\"textEnd\":" + (ev.textCompletion ? "true" : "false") + "}";
+                break;
+            case AudioEvent::Type::PlayMedia:
+                g.eventsJson += "{\"type\":\"playMedia\",\"key\":";
+                appendJsonString(g.eventsJson, ev.key);
+                g.eventsJson += ",\"file\":";
+                appendJsonString(g.eventsJson, ev.fileName);
+                g.eventsJson += ",\"id\":" + std::to_string(ev.id) +
+                    ",\"textEnd\":" + (ev.textCompletion ? "true" : "false") + "}";
                 break;
             case AudioEvent::Type::Stop:
                 g.eventsJson += "{\"type\":\"stop\",\"key\":";
@@ -703,6 +894,34 @@ const char* gb_drain_events() {
                 break;
             case AudioEvent::Type::StopComponent:
                 g.eventsJson += "{\"type\":\"stopComponent\",\"key\":";
+                appendJsonString(g.eventsJson, ev.key);
+                g.eventsJson += "}";
+                break;
+            case AudioEvent::Type::Volume:
+                g.eventsJson += "{\"type\":\"volume\",\"key\":";
+                appendJsonString(g.eventsJson, ev.key);
+                g.eventsJson += ",\"value\":" + std::to_string(ev.volume) + "}";
+                break;
+            case AudioEvent::Type::Recorder:
+                g.eventsJson += "{\"type\":\"recorder\",\"action\":";
+                appendJsonString(g.eventsJson, ev.action);
+                g.eventsJson += ",\"file\":";
+                appendJsonString(g.eventsJson, ev.fileName);
+                g.eventsJson += "}";
+                break;
+            case AudioEvent::Type::PlayVideo:
+                g.eventsJson += "{\"type\":\"playVideo\",\"key\":";
+                appendJsonString(g.eventsJson, ev.key);
+                g.eventsJson += ",\"file\":";
+                appendJsonString(g.eventsJson, ev.fileName);
+                g.eventsJson += ",\"id\":" + std::to_string(ev.id) +
+                    ",\"x\":" + std::to_string(ev.x) +
+                    ",\"y\":" + std::to_string(ev.y) +
+                    ",\"from\":" + std::to_string(ev.fromFrame) +
+                    ",\"to\":" + std::to_string(ev.toFrame) + "}";
+                break;
+            case AudioEvent::Type::StopVideoComponent:
+                g.eventsJson += "{\"type\":\"stopVideoComponent\",\"key\":";
                 appendJsonString(g.eventsJson, ev.key);
                 g.eventsJson += "}";
                 break;
@@ -741,10 +960,24 @@ const char* gb_text_items_json() {
                 }
                 if (!first) g.textJson.push_back(',');
                 first = false;
-                g.textJson += "{\"l\":" + std::to_string(text.left) +
+                const auto offsetX = item.find("offsetX");
+                const auto offsetY = item.find("offsetY");
+                const auto playing = item.find("playing");
+                const int x = offsetX != item.end() ? static_cast<int>(offsetX->second.toInt()) : 0;
+                const int y = offsetY != item.end() ? static_cast<int>(offsetY->second.toInt()) : 0;
+                g.textJson += "{\"id\":" + std::to_string(id) +
+                              ",\"l\":" + std::to_string(text.left + x) +
                               ",\"t\":" + std::to_string(text.top) +
-                              ",\"r\":" + std::to_string(text.right) +
-                              ",\"b\":" + std::to_string(text.bottom) + ",\"text\":";
+                              ",\"r\":" + std::to_string(text.right + x) +
+                              ",\"b\":" + std::to_string(text.bottom) +
+                              ",\"offsetY\":" + std::to_string(y) +
+                              ",\"playing\":" +
+                                  ((playing != item.end() && playing->second.toInt() != 0) ? "true" : "false") +
+                              ",\"color\":[" +
+                                  std::to_string(component.props.at("textColorR").toInt()) + "," +
+                                  std::to_string(component.props.at("textColorG").toInt()) + "," +
+                                  std::to_string(component.props.at("textColorB").toInt()) +
+                              "],\"text\":";
                 appendJsonString(g.textJson, graphboard::cp1250ToUtf8(cleaned));
                 g.textJson += "}";
             }

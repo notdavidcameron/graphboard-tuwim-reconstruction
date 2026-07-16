@@ -1,48 +1,89 @@
-// TextHolder pass: the indexed scene comes out of the portable renderer, but
-// text uses the platform font — same split gbgame makes with DrawTextW. This
-// draws the shim's visible text items with DT_WORDBREAK-style wrapping.
+// TextHolder canvas pass. Besides the holder's manual offsets, synchronized
+// narration follows the active line and highlights it, approximating the old
+// FontControl karaoke display when only the WAV/EXS stream survives.
 
 const FONT = '18px "Segoe UI", Tahoma, sans-serif';
-const COLOR = "rgb(24, 24, 24)";
 const LINE_HEIGHT = 22;
 
+function wrapLines(ctx, text, width) {
+  const lines = [];
+  for (const paragraph of text.split(/\r\n|\r|\n/)) {
+    if (!paragraph) {
+      lines.push("");
+      continue;
+    }
+    let line = "";
+    for (const word of paragraph.split(" ")) {
+      const candidate = line ? `${line} ${word}` : word;
+      if (line && ctx.measureText(candidate).width > width) {
+        lines.push(line);
+        line = word;
+      } else {
+        line = candidate;
+      }
+    }
+    lines.push(line);
+  }
+  return lines;
+}
+
+function activeLineForProgress(lines, progress) {
+  if (!(progress >= 0) || !lines.length) return -1;
+  const weights = lines.map((line) => Math.max(1, line.trim().length));
+  const total = weights.reduce((sum, value) => sum + value, 0);
+  let cursor = Math.min(0.999999, progress) * total;
+  for (let i = 0; i < weights.length; i++) {
+    if (cursor < weights[i]) return i;
+    cursor -= weights[i];
+  }
+  return lines.length - 1;
+}
+
 /**
- * @param {CanvasRenderingContext2D} ctx - canvas at native page resolution
- * @param {Array<{l:number,t:number,r:number,b:number,text:string}>} items
+ * @param {CanvasRenderingContext2D} ctx
+ * @param {Array<object>} items
+ * @param {(key:string)=>number} progressForKey returns 0..1, or -1 when idle
  */
-export function drawTextItems(ctx, items) {
+export function drawTextItems(ctx, items, progressForKey = () => -1) {
   if (!items.length) return;
   ctx.save();
   ctx.font = FONT;
-  ctx.fillStyle = COLOR;
   ctx.textBaseline = "top";
+
   for (const item of items) {
-    const width = item.r - item.l;
-    let y = item.t;
-    for (const paragraph of item.text.split(/\r\n|\r|\n/)) {
-      if (y >= item.b) break;
-      if (paragraph === "") {
-        y += LINE_HEIGHT;
-        continue;
-      }
-      // Greedy word wrap, like DrawText's DT_WORDBREAK.
-      let line = "";
-      for (const word of paragraph.split(" ")) {
-        const candidate = line ? line + " " + word : word;
-        if (line && ctx.measureText(candidate).width > width) {
-          ctx.fillText(line, item.l, y);
-          y += LINE_HEIGHT;
-          if (y >= item.b) { line = ""; break; }
-          line = word;
-        } else {
-          line = candidate;
-        }
-      }
-      if (line && y < item.b) {
-        ctx.fillText(line, item.l, y);
-        y += LINE_HEIGHT;
-      }
+    const width = Math.max(1, item.r - item.l);
+    const lines = wrapLines(ctx, item.text, width);
+    const progress = item.playing ? progressForKey(`Text_Holder/${item.id}`) : -1;
+    const active = activeLineForProgress(lines, progress);
+    const viewportHeight = Math.max(1, item.b - item.t);
+    let offset = Number(item.offsetY) || 0;
+
+    // Keep the narrated line near the middle of the text viewport. Manual
+    // wheel/stanza offsets remain authoritative while narration is idle.
+    if (active >= 0) {
+      const desired = Math.floor((viewportHeight - LINE_HEIGHT) / 2) - active * LINE_HEIGHT;
+      const minimum = Math.min(0, viewportHeight - lines.length * LINE_HEIGHT);
+      offset = Math.max(minimum, Math.min(0, desired));
     }
+
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(item.l, item.t, width, viewportHeight);
+    ctx.clip();
+    const color = Array.isArray(item.color) ? item.color : [24, 24, 24];
+    for (let i = 0; i < lines.length; i++) {
+      const y = item.t + offset + i * LINE_HEIGHT;
+      if (y + LINE_HEIGHT <= item.t || y >= item.b) continue;
+      if (i === active) {
+        ctx.fillStyle = "rgba(255, 241, 92, 0.72)";
+        ctx.fillRect(item.l - 2, y - 1, width + 4, LINE_HEIGHT);
+        ctx.fillStyle = "rgb(20, 20, 20)";
+      } else {
+        ctx.fillStyle = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+      }
+      ctx.fillText(lines[i], item.l, y);
+    }
+    ctx.restore();
   }
   ctx.restore();
 }

@@ -32,6 +32,7 @@ struct SpriteGeometry {
 // script-mutable (MoveTo) and lives in items; the size, layer and transparency
 // mask are fixed.
 struct BitmapGeometry {
+    std::string name;
     std::int32_t layer = 0;
     std::int32_t width = 0;
     std::int32_t height = 0;
@@ -82,8 +83,22 @@ struct DibGeometry {
 struct TextGeometry {
     std::int32_t left = 0, top = 0, right = 0, bottom = 0;
     std::string text;
+    std::string synchroFile;       // external RIFF/WAV .EXS, when referenced
     std::uint32_t lineCount = 0;
     std::uint32_t lineHeight = 18;
+};
+
+struct ExternalVideoGeometry {
+    std::int32_t x = 0, y = 0;
+    std::string fileName;
+};
+
+struct PuzzleChipGeometry {
+    std::int32_t originalX = 0, originalY = 0;
+    std::int32_t solutionX = 0, solutionY = 0;
+    std::int32_t width = 0, height = 0;
+    std::vector<std::uint8_t> pixels;   // top-down indexed pixels
+    std::uint8_t transparentIndex = 0;
 };
 
 struct ComponentState {
@@ -98,6 +113,8 @@ struct ComponentState {
     std::vector<IndexedGeometry> indexedImages; // MultiBitmap/Panorama images
     std::vector<DibGeometry> dibImages;    // Panorama_Holder packed DIBs
     std::vector<TextGeometry> texts;       // Text_Holder layout/content
+    std::vector<ExternalVideoGeometry> externalVideos; // Video_Holder AVI entries
+    std::vector<PuzzleChipGeometry> puzzleChips; // Puzzle board 0 chip geometry
     std::vector<SoundClip> soundClips;     // Sound_Holder embedded WAVs
     // Playback length per clip id, in ms: video = frameDurationMs*frameCount,
     // sound = WAV data length. Used by the clock to schedule TheEnd/EndPlaySound.
@@ -150,6 +167,7 @@ public:
     // when a text entry consumed the wheel event (including a boundary hit).
     bool mouseWheel(int x, int y, int wheelDelta);
     void keyDown(int key) { runEvent("OnKeyDown", {Value::integer(key)}); }
+    void keyUp(int key) { runEvent("OnKeyUp", {Value::integer(key)}); }
 
     // Playback-completion callbacks (component->script). The board fires these
     // when a clip finishes; headless, a driver delivers them explicitly. Each
@@ -158,7 +176,12 @@ public:
     // (Transparent_Video_Holder.TheEnd(id) -> Play(id+1)); the others complete
     // sounds and animations.
     void videoEnd(int id);       // Transparent_Video_Holder.TheEnd(id)
+    void externalVideoEnd(int id); // Video_Holder.TheEnd(id)
     void soundEnd(int id);       // Sound_Holder.EndPlaySound(id)
+    void textEnd(int id);        // Text_Holder.EndOfSynchroText(id)
+    void recorderEndRecord(bool hasData);
+    void recorderEndPlay();
+    void recorderProgress(int percentFull);
     void animationEnd(int id);   // Sprite_Holder.EndAnimation(id)
 
     // Advance the simulated clock by `ms`, firing each clip's completion callback

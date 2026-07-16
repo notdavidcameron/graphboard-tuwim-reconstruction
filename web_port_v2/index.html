@@ -17,6 +17,8 @@
     height: 100%;
   }
   #screen { image-rendering: pixelated; background: #000; }
+  #videoLayer { position: absolute; inset: 0; pointer-events: none; }
+  .external-video { position: absolute; display: block; object-fit: fill; }
   #overlay {
     position: absolute; inset: 0;
     display: flex; flex-direction: column;
@@ -41,17 +43,26 @@
     font-size: 11px; color: #9ab; background: none; border: 1px solid #345;
     border-radius: 4px; padding: 2px 8px; cursor: pointer;
   }
+  #project-link {
+    position: absolute; left: 50%; bottom: 7px; transform: translateX(-50%);
+    z-index: 5; color: #9ab; font-size: 11px; text-decoration: none;
+    padding: 2px 8px; border-radius: 4px; background: rgba(16, 16, 20, .72);
+  }
+  #project-link:hover { color: #fff; text-decoration: underline; }
 </style>
 </head>
 <body>
 <div id="stage">
   <canvas id="screen" width="640" height="480"></canvas>
+  <div id="videoLayer" aria-hidden="true"></div>
   <div id="overlay">
     <h1>Multimedialny świat Juliana Tuwima</h1>
     <div id="progress">Ładowanie silnika…</div>
     <button id="start" disabled>Graj</button>
   </div>
   <div id="hud"></div>
+  <a id="project-link" href="https://github.com/notdavidcameron/graphboard-tuwim-reconstruction"
+     target="_blank" rel="noopener noreferrer">Kod źródłowy na GitHubie</a>
   <button id="fullscreen" title="Pełny ekran">⛶</button>
 </div>
 <script type="module" src="src/main.js"></script>

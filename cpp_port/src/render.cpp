@@ -96,6 +96,11 @@ std::int64_t itemInt(const ComponentState& c, int id, const std::string& key) {
     return ki == ci->second.end() ? 0 : ki->second.toInt();
 }
 
+std::int64_t propInt(const ComponentState& c, const std::string& key) {
+    const auto it = c.props.find(key);
+    return it == c.props.end() ? 0 : it->second.toInt();
+}
+
 // One blit request, resolved to a fixed rectangle of indexed pixels.
 struct Drawable {
     std::int32_t layer = 0;
@@ -130,6 +135,33 @@ void blitScaled(Image& dst, const Image& src) {
         const int sy = static_cast<int>(static_cast<std::int64_t>(y) * src.height / dst.height);
         for (int x = 0; x < dst.width; ++x) {
             const int sx = static_cast<int>(static_cast<std::int64_t>(x) * src.width / dst.width);
+            const std::size_t s = (static_cast<std::size_t>(sy) * src.width + sx) * 3;
+            dst.set(x, y, src.rgb[s], src.rgb[s + 1], src.rgb[s + 2]);
+        }
+    }
+}
+
+void blitPanorama(Image& dst, const Image& src, const ComponentState& state) {
+    if (dst.width <= 0 || dst.height <= 0 || src.width <= 0 || src.height <= 0) return;
+    auto angle = propInt(state, "panAngle") % 360;
+    if (angle < 0) angle += 360;
+    const std::int64_t pan1000 = propInt(state, "panX1000") +
+                                 angle * src.width * 1000 / 360;
+    const auto rawPan = static_cast<int>((pan1000 / 1000) % src.width);
+    const int pan = rawPan < 0 ? rawPan + src.width : rawPan;
+    const int maxPanY = std::max(0, src.height - dst.height);
+    const int panY = std::clamp(static_cast<int>(propInt(state, "panY1000") / 1000),
+                                0, maxPanY);
+    for (int y = 0; y < dst.height; ++y) {
+        const int sy = src.height >= dst.height
+            ? std::min(src.height - 1, panY + y)
+            : static_cast<int>(static_cast<std::int64_t>(y) * src.height / dst.height);
+        for (int x = 0; x < dst.width; ++x) {
+            const int localX = src.width >= dst.width
+                ? x : static_cast<int>(static_cast<std::int64_t>(x) * src.width / dst.width);
+            const int sx = state.kind == graphboard::HolderKind::PanoramaHolder
+                ? std::clamp(pan + localX, 0, src.width - 1)
+                : (pan + localX) % src.width;
             const std::size_t s = (static_cast<std::size_t>(sy) * src.width + sx) * 3;
             dst.set(x, y, src.rgb[s], src.rgb[s + 1], src.rgb[s + 2]);
         }
@@ -181,7 +213,7 @@ Image renderPage(const runtime::Page& page, const std::vector<std::uint8_t>& byt
                             source.set(x, y, color[2], color[1], color[0]);
                         }
                     }
-                    blitScaled(img, source);
+                    blitPanorama(img, source, c);
                 }
             } else if (c.kind == graphboard::HolderKind::PanoramaHolder) {
                 for (const auto& [id, item] : c.items) {
@@ -192,7 +224,7 @@ Image renderPage(const runtime::Page& page, const std::vector<std::uint8_t>& byt
                     panoramaHeader.dibOffset = geom.offset;
                     panoramaHeader.dibByteCount = static_cast<std::uint32_t>(geom.byteCount);
                     const Image source = renderBackground(bytes, panoramaHeader);
-                    blitScaled(img, source);
+                    blitPanorama(img, source, c);
                 }
             }
         }
@@ -221,22 +253,33 @@ Image renderPage(const runtime::Page& page, const std::vector<std::uint8_t>& byt
     std::vector<Drawable> draws;
     std::size_t order = 0;
     bool suppressInitialTvh = false;
+    bool opaqueGrzesiuCollage = false;
     {
         std::size_t fullBackgrounds = 0;
         std::size_t tvhEntries = 0;
+        std::size_t bitmapEntries = 0;
+        std::size_t spriteEntries = 0;
         for (const auto& c : page.components()) {
             if (c.kind == graphboard::HolderKind::BitmapHolder) {
+                bitmapEntries += c.bitmaps.size();
                 for (const auto& bitmap : c.bitmaps) {
                     if (bitmap.width == img.width && bitmap.height == img.height) ++fullBackgrounds;
                 }
             } else if (c.kind == graphboard::HolderKind::TransparentVideoHolder) {
                 tvhEntries += c.videos.size();
+            } else if (c.kind == graphboard::HolderKind::SpriteHolder) {
+                spriteEntries += c.sprites.size();
             }
         }
         // PSTRYK persists both complete lighting backgrounds plus 14 transition
         // clips. Their serialized still patches are working buffers, not initial
         // layers; drawing them duplicates the chair/table/bear in rectangles.
         suppressInitialTvh = fullBackgrounds == 2 && tvhEntries == 14;
+        // GRZESIU's large stamp collage transition (entry 5) replaces the
+        // resting stick figure, including its face. Its stream is an opaque
+        // captured patch; colour-keying the decoded frame reveals the original
+        // face underneath and makes it appear stuck during the animation.
+        opaqueGrzesiuCollage = tvhEntries == 15 && bitmapEntries == 1 && spriteEntries == 2;
     }
     auto collect = [&](const std::vector<runtime::ComponentState>& components) {
       for (const auto& c : components) {
@@ -256,7 +299,12 @@ Image renderPage(const runtime::Page& page, const std::vector<std::uint8_t>& byt
                 const auto phase = itemInt(c, id, "phase");
                 if (phase < 0 || phase >= static_cast<std::int64_t>(geom.frames.size())) continue;
                 const auto& f = geom.frames[static_cast<std::size_t>(phase)];
-                if (f.pixels.empty()) continue;
+                const auto cell = itemInt(c, id, "cell");
+                const auto* pixels = &f.pixels;
+                if (cell >= 0 && cell < static_cast<std::int64_t>(f.animationPixels.size())) {
+                    pixels = &f.animationPixels[static_cast<std::size_t>(cell)];
+                }
+                if (pixels->empty()) continue;
                 Drawable d;
                 d.layer = static_cast<std::int32_t>(itemInt(c, id, "z"));
                 d.order = order++;
@@ -264,7 +312,7 @@ Image renderPage(const runtime::Page& page, const std::vector<std::uint8_t>& byt
                 d.y = static_cast<int>(itemInt(c, id, "y"));
                 d.w = static_cast<int>(f.width);
                 d.h = static_cast<int>(f.height);
-                d.pixels = f.pixels.data();
+                d.pixels = pixels->data();
                 d.stride = f.width;
                 // Sprite drawing is normally colour-keyed independently of
                 // whether the holder requests a per-pixel click mask. KOTEK's
@@ -320,6 +368,44 @@ Image renderPage(const runtime::Page& page, const std::vector<std::uint8_t>& byt
                 d.transparent = 30; // MultiBmp's serialized transparent colour
                 draws.push_back(d);
             }
+        } else if (c.kind == graphboard::HolderKind::Puzzle) {
+            std::vector<int> ids;
+            ids.reserve(c.items.size());
+            for (const auto& [id, item] : c.items) ids.push_back(id);
+            std::stable_sort(ids.begin(), ids.end(), [&](int a, int b) {
+                return itemInt(c, a, "z") < itemInt(c, b, "z");
+            });
+            const bool showFull = c.props.count("showFullBitmap") &&
+                                  c.props.at("showFullBitmap").toInt() != 0;
+            const int fullX = c.props.count("fullBitmapX")
+                                  ? static_cast<int>(c.props.at("fullBitmapX").toInt())
+                                  : 0;
+            const int fullY = c.props.count("fullBitmapY")
+                                  ? static_cast<int>(c.props.at("fullBitmapY").toInt())
+                                  : 0;
+            const int fullZ = c.props.count("fullBitmapZ")
+                                  ? static_cast<int>(c.props.at("fullBitmapZ").toInt())
+                                  : 1;
+            for (const int id : ids) {
+                if (id < 0 || static_cast<std::size_t>(id) >= c.puzzleChips.size() ||
+                    itemInt(c, id, "visible") == 0) continue;
+                const auto& geom = c.puzzleChips[static_cast<std::size_t>(id)];
+                if (geom.width <= 0 || geom.height <= 0 || geom.pixels.empty()) continue;
+                Drawable d;
+                d.layer = showFull ? fullZ : 1;
+                d.order = order++;
+                d.x = showFull ? fullX + geom.solutionX
+                               : static_cast<int>(itemInt(c, id, "x"));
+                d.y = showFull ? fullY + geom.solutionY
+                               : static_cast<int>(itemInt(c, id, "y"));
+                d.w = geom.width;
+                d.h = geom.height;
+                d.pixels = geom.pixels.data();
+                d.stride = static_cast<std::size_t>(geom.width);
+                d.useTransparent = true;
+                d.transparent = geom.transparentIndex;
+                draws.push_back(d);
+            }
         } else if (c.kind == graphboard::HolderKind::TransparentVideoHolder) {
             for (const auto& [id, item] : c.items) {
                 if (id < 0 || static_cast<std::size_t>(id) >= c.videos.size()) continue;
@@ -354,7 +440,7 @@ Image renderPage(const runtime::Page& page, const std::vector<std::uint8_t>& byt
                         d.pixels = frame;
                         d.stride = static_cast<std::size_t>(geom.width);
                         d.palette = palette;
-                d.useTransparent = true;
+                d.useTransparent = !(opaqueGrzesiuCollage && id == 5 && playing);
                 d.transparent = geom.transparentIndex;
                 d.secondaryTransparent = geom.streamTransparentIndex;
                 const int pageGreen = greenKeyIndex(pagePalette);

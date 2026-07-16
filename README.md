@@ -1,35 +1,32 @@
 # GraphBoard / Tuwim Reconstruction
 
 Reverse-engineering and reconstruction of the GraphBoard engine and its
-`.BDF` / `.GRP` content from *Multimedialny świat Juliana Tuwima*. The primary
-deliverable is a native C++ port (`cpp_port/`) that parses the real project
-files and plays them back; an earlier static HTML scene viewer (`web_port/`)
-remains as a secondary, browser-based reference.
+`.BDF` / `.GRP` content from *Multimedialny świat Juliana Tuwima*.
+
+The primary implementation is the C++ runtime in `cpp_port/`. It powers both
+the native Windows player and the active WebAssembly browser player in
+`web_port_v2/`. The earlier JavaScript-only viewer is preserved under
+`archive/web_port_legacy/` as a recovery reference.
 
 ## What Is Here
 
-- **`cpp_port/`** — the active C++ reconstruction: a `gbinspect` CLI that
-  parses and headlessly drives `START.PRJ` / `.BDF` / `.GRP` files, and
-  `gbgame`, a native Windows player with GDI rendering, embedded BoardVideo
-  decoding, audio, input, timers, page navigation, and the sliding
-  `CURSORS.GRP` toolbar. See [`cpp_port/README.md`](cpp_port/README.md) for
-  build instructions, current scope, and the real-file regression check.
-- **`ghidra_import/`** — component DLL references/decompilation notes used
-  during reverse engineering.
+- **`cpp_port/`** — the active reconstruction: parsers, runtime, renderer,
+  authoring tools, tests, the native `gbgame` player, and the `gbweb`
+  WebAssembly bridge.
+- **`web_port_v2/`** — the active browser player. It supplies canvas,
+  WebAudio, external video, text, input, and lazy data loading around the same
+  C++ runtime.
+- **`archive/web_port_legacy/`** — the obsolete static scene viewer and its
+  partial JavaScript runtime, kept only for asset/recovery reference.
+- **`ghidra_import/`** — component DLL references and decompilation notes.
 - **`graphboard_file_formats.md`** — recovered file-format structures and
-  Ghidra findings that back both ports.
-- **`extracted_assets/`** — recovered visual/audio assets, extracted by
-  `graphboard_extract_assets.py`, used by the web viewer and by asset-adjacent
-  tooling.
-- **`gbtrace/`** — an INT3/VEH DLL injector for live-tracing the real
-  `Tuwim.exe`, used to confirm serializer call sites and timing (e.g. glide
-  speeds) against ground truth.
-- **`web_port/`** — a no-build HTML/CSS/JS archive viewer for every exported
-  BDF scene, GRP library, embedded asset, cursor, script, and loose WAV/AVI
-  file. It includes a partial GraphBoard script runtime and is exported from
-  `extracted_assets/` via `graphboard_export_scene.py`.
+  Ghidra findings.
+- **`extracted_assets/`** — canonical recovered visual/audio assets and
+  metadata used by recovery tooling.
+- **`gbtrace/`** — the live-tracing injector used to confirm behavior against
+  the original executable.
 
-## C++ Port (Primary)
+## Native C++ Port
 
 Build and test:
 
@@ -39,55 +36,51 @@ cmake --build cpp_port/build
 ctest --test-dir cpp_port/build -C Debug --output-on-failure
 ```
 
-Run the real-file regression check (123 recovered facts against the original
-game data):
+Run the real-file regression checks or launch the native player:
 
 ```powershell
 .\cpp_port\tools\verify_scenes.ps1
-```
-
-Inspect or headlessly drive a file, or launch the native player:
-
-```powershell
-.\cpp_port\build\gbinspect.exe "C:\path\to\START.PRJ"
+.\cpp_port\build\Debug\gbinspect.exe "C:\path\to\START.PRJ"
 .\cpp_port\build-mingw\gbgame.exe "C:\path\to\DATA\START.PRJ"
 ```
 
-See [`cpp_port/README.md`](cpp_port/README.md) for full build options
-(including the portable MinGW release build), current scope, known gaps, and
-the headless-drive flags (`--click`, `--move`, `--follow`, etc.).
+See [`cpp_port/README.md`](cpp_port/README.md) for build variants, scope, and
+headless drive options.
 
-## Web Viewer (Secondary)
+## WebAssembly Port
 
-From the repository root:
+Build the `gbweb` Emscripten target and copy its generated module:
+
+```powershell
+cmake --build cpp_port\build-wasm --target gbweb --parallel
+Copy-Item cpp_port\build-wasm\gbweb.js web_port_v2\engine\gbweb.js -Force
+Copy-Item cpp_port\build-wasm\gbweb.wasm web_port_v2\engine\gbweb.wasm -Force
+```
+
+Package the original DATA folder. FFmpeg is required to transcode the legacy
+Indeo AVIs to browser video plus WebAudio tracks:
+
+```powershell
+python .\tools\build_web_data.py "C:\path\to\Tuwim\DATA" .\web_port_v2\data\tuwim --link --ffmpeg "C:\path\to\ffmpeg.exe"
+```
+
+Serve the repository root:
 
 ```powershell
 python -m http.server 8765
 ```
 
-Then open `http://127.0.0.1:8765/web_port/index.html`. The archive browser
-supports searchable BDF/GRP/media collections, per-component and per-asset
-inspection, phase/frame previews, geometry overlays, zoom controls, audio
-playback, raw JSON, and deep links such as `?scene=RADIO`, `?group=CURSORS`,
-or `?media=audio-RADIO`. The BDF runtime supports common page calls
-(`LoadGroup`, `LoadPage`, `SetCursor`, `SetTimer`, and
-sound/video/bitmap/sprite/hotspot/text holder basics), but it is not a
-faithful reimplementation — treat runtime behavior as a visual sanity check,
-not ground truth.
+Open `http://127.0.0.1:8765/web_port_v2/index.html`. For QA, open a specific
+page with `?page=TANIEC_T`; the `.BDF` suffix is optional.
 
-Regenerate scenes after extracting new assets:
-
-```powershell
-python .\graphboard_export_scene.py --extracted .\extracted_assets --output .\web_port --project "C:\Users\Administrator\Desktop\Multimedialny świat Juliana Tuwima PL\Tuwim\DATA\START.PRJ"
-```
+The archived viewer remains available at
+`/archive/web_port_legacy/index.html`, but it is no longer an implementation
+target.
 
 ## Compile Reconstruction Notes
 
-The source-style C++ reconstructions under `cpp_port/reconstructed/` (direct,
-readable translations of specific Ghidra decompiler output, distinct from the
-higher-level `cpp_port` port above) are kept compile-checkable as object
-files via the root `CMakeLists.txt`. With Chocolatey-installed `mingw`,
-`cmake`, and `ninja`, run:
+The readable source-style reconstructions under `cpp_port/reconstructed/` are
+kept compile-checkable through the root CMake project:
 
 ```powershell
 .\tools\compile_reconstructions.ps1
@@ -95,6 +88,6 @@ files via the root `CMakeLists.txt`. With Chocolatey-installed `mingw`,
 
 ## Notes
 
-The repository includes recovered assets for local preservation/research.
+The repository includes recovered assets for local preservation and research.
 Keep repository visibility and sharing choices appropriate for the source
 material.

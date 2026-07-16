@@ -209,34 +209,62 @@ SpriteHolderState parseSpriteHolderState(BinaryReader& reader) {
                 SpriteFrame f;
                 f.width = readU32At(blob, frame + 0x14);
                 f.height = readU32At(blob, frame + 0x18);
+                const auto storedDuration = readU32At(blob, frame + 0x20);
 
                 const bool frameFits = frame + kSpriteFrameBytes <= blob.size();
                 if (frameFits && f.width > 0 && f.height > 0) {
                     f.transparentIndex = static_cast<std::uint8_t>(readU32At(blob, frame + 0x04));
                     const std::size_t rowWidth = readU32At(blob, frame + 0x10);
+                    const auto storedCells = static_cast<std::size_t>(readU32At(blob, frame));
+                    const std::size_t cellCount = storedCells > 0 && storedCells <= 64 &&
+                        rowWidth >= static_cast<std::size_t>(f.width) * storedCells
+                            ? storedCells : 1;
+                    // The serialized time belongs to the complete horizontal
+                    // animation strip. Dividing it between its cells matches
+                    // the holder timer; treating it as a per-cell delay makes
+                    // PLOTKI's three/four-pose reactions take several seconds.
+                    if (storedDuration > 0 && storedDuration <= 5000) {
+                        // Short values are the repeating cell interval (CUDA's
+                        // wings: roughly 70 ms). Long values on click-reaction
+                        // strips describe the whole gesture (PLOTKI: 500 ms).
+                        f.cellDurationMs = storedDuration >= 250 && cellCount > 1
+                            ? std::max<std::uint32_t>(1, storedDuration /
+                                  static_cast<std::uint32_t>(cellCount))
+                            : storedDuration;
+                    } else {
+                        f.cellDurationMs = 100;
+                    }
                     const std::size_t stride = (rowWidth + 3) & ~std::size_t{3};
                     const std::size_t pixels = kSpriteBlobPixelBase + readU32At(blob, frame + 0x48);
-                    if (stride >= f.width && pixels + stride * f.height <= blob.size()) {
+                    if (rowWidth >= static_cast<std::size_t>(f.width) * cellCount &&
+                        stride >= rowWidth && pixels + stride * f.height <= blob.size()) {
                         // Store the frame's pixels top-down for rendering; build
                         // the hit-test opacity mask from them when the def+frame
                         // both opt into the per-pixel test.
                         const bool wantsMask =
                             defWantsPixelTest && readU32At(blob, frame + 0x08) != 0;
-                        f.pixels.assign(static_cast<std::size_t>(f.width) * f.height, 0);
-                        if (wantsMask) {
-                            f.opaque.assign(static_cast<std::size_t>(f.width) * f.height, 0);
-                        }
-                        for (std::uint32_t row = 0; row < f.height; ++row) {
-                            const std::size_t src = pixels + (f.height - 1 - row) * stride;
-                            for (std::uint32_t col = 0; col < f.width; ++col) {
-                                const std::uint8_t px = blob[src + col];
-                                f.pixels[row * f.width + col] = px;
-                                if (wantsMask) {
-                                    f.opaque[row * f.width + col] =
-                                        px != f.transparentIndex ? 1 : 0;
+                        f.animationPixels.resize(cellCount);
+                        if (wantsMask) f.animationOpaque.resize(cellCount);
+                        for (std::size_t cell = 0; cell < cellCount; ++cell) {
+                            auto& cellPixels = f.animationPixels[cell];
+                            cellPixels.assign(static_cast<std::size_t>(f.width) * f.height, 0);
+                            auto* cellMask = wantsMask ? &f.animationOpaque[cell] : nullptr;
+                            if (cellMask) cellMask->assign(cellPixels.size(), 0);
+                            for (std::uint32_t row = 0; row < f.height; ++row) {
+                                const std::size_t src = pixels + (f.height - 1 - row) * stride +
+                                                        cell * f.width;
+                                for (std::uint32_t col = 0; col < f.width; ++col) {
+                                    const std::uint8_t px = blob[src + col];
+                                    cellPixels[row * f.width + col] = px;
+                                    if (cellMask) {
+                                        (*cellMask)[row * f.width + col] =
+                                            px != f.transparentIndex ? 1 : 0;
+                                    }
                                 }
                             }
                         }
+                        f.pixels = f.animationPixels.front();
+                        if (wantsMask) f.opaque = f.animationOpaque.front();
                     }
                 }
                 definition.frames.push_back(std::move(f));
@@ -259,6 +287,7 @@ SpriteHolderState parseSpriteHolderState(BinaryReader& reader) {
         instance.phase = static_cast<std::int32_t>(readU32At(record, 0x5c));
         instance.visible = static_cast<std::int32_t>(readU32At(record, 0x88));
         instance.dragEnabled = readU32At(record, 0x1c) == 1;
+        instance.unknown38 = static_cast<std::int32_t>(readU32At(record, 0x38));
         state.instances.push_back(instance);
     }
 
@@ -341,23 +370,31 @@ TransparentVideoHolderState parseTransparentVideoHolderState(BinaryReader& reade
         const auto entryHeight = readU32At(entryBytes, 0x84);
         entry.stillFrameByteCount = dibStride8(entryWidth) * entryHeight;
         entry.stillFrameOffset = reader.position();
-        // Saved TVH frames carry a flat matte that is not always the stream
-        // header's +0x74 value (notably PSTRYK and TANIEC). The holder treats
-        // that dominant index as transparent when compositing the still and
-        // decoded frames.
-        std::array<std::uint32_t, 256> histogram{};
+        // Persisted stills are stage snapshots and can use a different matte
+        // from the BoardVideo stream. Recover the key from the complete image
+        // perimeter: artwork may cover one or more corners, while the matte is
+        // normally present along most of the serialized boundary. Looking at
+        // the perimeter (rather than the whole rectangle) also avoids choosing
+        // a large interior object such as FIGIELEK's curtain or a stamp.
+        entry.transparentIndex = static_cast<std::uint8_t>(entry.stream.transparentIndex);
         const auto& file = reader.bytes();
         const auto stride = dibStride8(entryWidth);
-        if (entry.stillFrameOffset + entry.stillFrameByteCount <= file.size()) {
-            for (std::uint32_t y = 0; y < entryHeight; ++y) {
-                const auto row = entry.stillFrameOffset + static_cast<std::size_t>(y) * stride;
-                for (std::uint32_t x = 0; x < entryWidth; ++x) ++histogram[file[row + x]];
+        if (entryWidth != 0 && entryHeight != 0 &&
+            entry.stillFrameOffset + entry.stillFrameByteCount <= file.size()) {
+            std::array<std::size_t, 256> counts{};
+            const auto pixel = [&](std::uint32_t x, std::uint32_t y) {
+                return file[entry.stillFrameOffset + static_cast<std::size_t>(y) * stride + x];
+            };
+            for (std::uint32_t x = 0; x < entryWidth; ++x) {
+                ++counts[pixel(x, 0)];
+                if (entryHeight > 1) ++counts[pixel(x, entryHeight - 1)];
+            }
+            for (std::uint32_t y = 1; y + 1 < entryHeight; ++y) {
+                ++counts[pixel(0, y)];
+                if (entryWidth > 1) ++counts[pixel(entryWidth - 1, y)];
             }
             entry.transparentIndex = static_cast<std::uint8_t>(
-                std::distance(histogram.begin(),
-                              std::max_element(histogram.begin(), histogram.end())));
-        } else {
-            entry.transparentIndex = static_cast<std::uint8_t>(entry.stream.transparentIndex);
+                std::distance(counts.begin(), std::max_element(counts.begin(), counts.end())));
         }
         reader.skip(entry.stillFrameByteCount);
 
@@ -417,6 +454,7 @@ SoundHolderState parseSoundHolderState(BinaryReader& reader) {
         sound.durationMs = wavDurationMs(soundBytes);
 
         const auto record = reader.readBytes(kSoundRecordBytes);
+        sound.looping = readU32At(record, 0x00) != 0;
         sound.archiveStart = readU32At(record, 0x04);
         sound.archiveEnd = readU32At(record, 0x08);
         sound.name = readNulPaddedName(record, 0x0c, 0x20);
@@ -547,10 +585,11 @@ BitmapHolderState parseBitmapHolderState(BinaryReader& reader) {
             // 10003f50). Pixels are bottom-up from blob+0x80, transparent index
             // at blob+0x04.
             bitmap.transparentIndex = static_cast<std::uint8_t>(readU32At(blob, 0x04));
-            // blob+0x2c == 1 marks a bitmap the script reveals with ShowBitmap
-            // later: WYBORW's 25 hover-tooltip titles and PIEKARZ's script-shown
-            // items carry 1, KRAWIEC's initially-visible pieces and GRZESIU's
-            // static scenery carry 0 (all 203 DATA bitmaps surveyed).
+            bitmap.stateWord = readU32At(blob, 0x00);
+            // blob+0x00 persists the shown state for placed overlays. Complete
+            // page-art records commonly store zero despite being the backing
+            // canvas, so the page compositor handles that structural case.
+            // blob+0x2c is retained for further recovery but is not visibility.
             bitmap.initiallyHidden = readU32At(blob, 0x2c) != 0;
             const bool wantsPixelTest =
                 readU32At(blob, 0x20) != 0 && readU32At(blob, 0x28) != 0;
@@ -609,7 +648,15 @@ PuzzleState parsePuzzleState(BinaryReader& reader) {
             puzzleChip.pixelByteCount = reader.readU32();
             puzzleChip.pixelOffset = reader.position();
             reader.skip(puzzleChip.pixelByteCount);
-            reader.skip(static_cast<std::size_t>(puzzleChip.subRecordCount) * kSubRecordBytes);
+            puzzleChip.connections.reserve(puzzleChip.subRecordCount);
+            for (std::uint32_t sub = 0; sub < puzzleChip.subRecordCount; ++sub) {
+                const auto connection = reader.readBytes(kSubRecordBytes);
+                puzzleChip.connections.push_back({
+                    static_cast<std::int32_t>(readU32At(connection, 0x00)),
+                    static_cast<std::int32_t>(readU32At(connection, 0x04)),
+                    static_cast<std::int32_t>(readU32At(connection, 0x08)),
+                });
+            }
             puzzleBoard.chips.push_back(puzzleChip);
         }
         state.boards.push_back(std::move(puzzleBoard));

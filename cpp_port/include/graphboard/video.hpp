@@ -15,9 +15,9 @@ namespace graphboard {
 // TransparentVideoHolder.dll:1000b8a0; see
 // reconstructed/TransparentVideoHolder_reconstructed.cpp).
 //
-// Frames decode incrementally (each record patches the previous frame), so
-// seeking backwards replays from frame 0; a playback loop that asks for
-// monotonically increasing indices pays each record once.
+// Changed records are cumulative deltas against the preceding decoded frame;
+// records explicitly marked unchanged retain it. The original holder draws
+// each changed rectangle into a persistent backing DIB before compositing it.
 class BoardVideoDecoder {
 public:
     // `fileBytes` is the whole .BDF; `geom` locates the stream inside it.
@@ -53,8 +53,8 @@ private:
     };
 
     void applyRecord(const VideoRecord& rec);
-
     int width_ = 0, height_ = 0, frameCount_ = 0;
+    std::uint8_t transparentIndex_ = 0;
     std::uint32_t audioSampleRate_ = 0, audioBitsPerSample_ = 0, audioChannels_ = 0;
     std::vector<std::uint8_t> records_;       // raw chunk-record bytes
     std::vector<VideoRecord> videoRecords_;   // one per frame, in frame order

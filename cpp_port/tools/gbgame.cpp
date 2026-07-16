@@ -45,7 +45,7 @@ using graphboard::runtime::Page;
 using graphboard::runtime::Project;
 
 constexpr UINT_PTR kTickTimerId = 1;
-constexpr int kTickMs = 33;
+constexpr int kTickMs = 16;
 // LoadPage chains are script-driven; bound follows per pump so a page cycle
 // (A loads B loads A ...) cannot wedge the UI thread.
 constexpr int kMaxFollowsPerPump = 8;
@@ -74,7 +74,8 @@ public:
 
     // `pcm` is raw sample data (already stripped of any WAV framing).
     void play(const std::string& key, std::vector<std::uint8_t> pcm,
-              std::uint32_t sampleRate, std::uint32_t bitsPerSample, std::uint32_t channels) {
+              std::uint32_t sampleRate, std::uint32_t bitsPerSample, std::uint32_t channels,
+              bool loop = false) {
         stop(key);
         if (pcm.empty() || sampleRate == 0 || channels == 0 || bitsPerSample == 0) {
             return;
@@ -95,6 +96,10 @@ public:
         }
         clip->header.lpData = reinterpret_cast<LPSTR>(clip->pcm.data());
         clip->header.dwBufferLength = static_cast<DWORD>(clip->pcm.size());
+        if (loop) {
+            clip->header.dwFlags = WHDR_BEGINLOOP | WHDR_ENDLOOP;
+            clip->header.dwLoops = 0xffffffffu;
+        }
         if (waveOutPrepareHeader(clip->device, &clip->header, sizeof(clip->header)) !=
             MMSYSERR_NOERROR) {
             waveOutClose(clip->device);
@@ -109,14 +114,15 @@ public:
     }
 
     // Play a complete RIFF/WAVE file image.
-    void playWav(const std::string& key, const std::uint8_t* wav, std::size_t byteCount) {
+    void playWav(const std::string& key, const std::uint8_t* wav, std::size_t byteCount,
+                 bool loop = false) {
         std::uint32_t sampleRate = 0, channels = 0, bits = 0;
         std::size_t dataOff = 0, dataBytes = 0;
         if (!parseWav(wav, byteCount, sampleRate, channels, bits, dataOff, dataBytes)) {
             return;
         }
         play(key, std::vector<std::uint8_t>(wav + dataOff, wav + dataOff + dataBytes),
-             sampleRate, bits, channels);
+             sampleRate, bits, channels, loop);
     }
 
     void stop(const std::string& key) {
@@ -437,14 +443,29 @@ void processHostCalls() {
         const int id = call.args.empty() ? 0 : static_cast<int>(call.args[0].toInt());
         const std::string key = state->displayName + "/" + std::to_string(id);
 
-        if (state->kind == graphboard::HolderKind::SoundHolder) {
+        if (state->kind == graphboard::HolderKind::TextHolder) {
+            if (call.name == "PlaySynchroText" && id >= 0 &&
+                static_cast<std::size_t>(id) < state->soundClips.size()) {
+                const auto& clip = state->soundClips[static_cast<std::size_t>(id)];
+                if (clip.byteCount != 0 && clip.offset + clip.byteCount <= g.pageBytes.size()) {
+                    g.audio.stopComponent(state->displayName + "/");
+                    g.audio.playWav(key, g.pageBytes.data() + clip.offset, clip.byteCount, false);
+                }
+            } else if (call.name == "StopSynchroText") {
+                g.audio.stop(key);
+            }
+        } else if (state->kind == graphboard::HolderKind::SoundHolder) {
             if (call.name == "PlayDSound" || call.name == "PlayDSoundEx") {
                 if (id >= 0 && static_cast<std::size_t>(id) < state->soundClips.size()) {
                     const auto& clip = state->soundClips[static_cast<std::size_t>(id)];
                     const auto& source = state->displayName.rfind("Group.", 0) == 0
                                              ? page->groupBytes() : g.pageBytes;
                     if (clip.offset + clip.byteCount <= source.size()) {
-                        g.audio.playWav(key, source.data() + clip.offset, clip.byteCount);
+                        const auto itemIt = state->items.find(id);
+                        const bool loop = itemIt != state->items.end() &&
+                            itemIt->second.count("looping") &&
+                            itemIt->second.at("looping").toInt() != 0;
+                        g.audio.playWav(key, source.data() + clip.offset, clip.byteCount, loop);
                     }
                 }
             } else if (call.name == "Stop" || call.name == "StopDSound") {
@@ -559,25 +580,51 @@ POINT toPagePoint(LPARAM lParam) {
     return clientToPagePoint({GET_X_LPARAM(lParam), GET_Y_LPARAM(lParam)});
 }
 
-// A page with a running video or animating sprite changes appearance every
-// tick even when no script call lands.
-bool sceneIsLive() {
+// Hash only state that can change the composited image. This avoids rebuilding
+// a 640x480 frame on every timer tick when an authored animation has a
+// 100 ms phase interval (or a video is still within the same frame).
+std::size_t visualRevision() {
     const Page* page = g.project ? g.project->currentPage() : nullptr;
-    if (!page) return false;
-    if (g.video.anyPlaying()) return true;
-    auto liveSprites = [](const std::vector<graphboard::runtime::ComponentState>& components) {
+    if (!page) return 0;
+    std::size_t hash = 1469598103934665603ull;
+    auto mix = [&](std::int64_t value) {
+        hash ^= static_cast<std::size_t>(value);
+        hash *= 1099511628211ull;
+    };
+    auto mixComponents = [&](const std::vector<graphboard::runtime::ComponentState>& components) {
         for (const auto& c : components) {
-            if (c.kind != graphboard::HolderKind::SpriteHolder) continue;
             for (const auto& [id, item] : c.items) {
-                const auto anim = item.find("animating");
-                if (anim != item.end() && anim->second.toInt() != 0) return true;
-                const auto glide = item.find("gliding");
-                if (glide != item.end() && glide->second.toInt() != 0) return true;
+                mix(id);
+                for (const char* key : {"x", "y", "z", "visible", "phase", "cell", "playing",
+                                        "hasPlayed", "offsetX", "offsetY", "locked"}) {
+                    const auto it = item.find(key);
+                    if (it != item.end()) mix(it->second.toInt());
+                }
+                if (c.kind == graphboard::HolderKind::TransparentVideoHolder && id >= 0 &&
+                    static_cast<std::size_t>(id) < c.videos.size()) {
+                    const auto playing = item.find("playing");
+                    if (playing != item.end() && playing->second.toInt() != 0) {
+                        const auto& video = c.videos[static_cast<std::size_t>(id)];
+                        const int start = item.count("playStartMs")
+                                              ? static_cast<int>(item.at("playStartMs").toInt())
+                                              : 0;
+                        mix(video.frameDurationMs > 0
+                                ? (page->clockMs() - start) / video.frameDurationMs
+                                : page->clockMs());
+                    }
+                }
+            }
+            for (const char* key : {"showFullBitmap", "fullBitmapX", "fullBitmapY",
+                                    "fullBitmapZ", "openPanorama", "panX1000", "panY1000",
+                                    "panAngle"}) {
+                const auto it = c.props.find(key);
+                if (it != c.props.end()) mix(it->second.toInt());
             }
         }
-        return false;
     };
-    return liveSprites(page->components()) || liveSprites(page->groupComponents());
+    mixComponents(page->components());
+    mixComponents(page->groupComponents());
+    return hash;
 }
 
 const CursorBitmap* activeCursor() {
@@ -650,10 +697,14 @@ void onTick() {
 
     g.audio.reapFinished();
 
+    const Page* pageBeforeTick = g.project->currentPage();
+    const std::size_t revisionBefore = visualRevision();
+
     // Clip playback clock: fires TheEnd/EndPlaySound/EndAnimation on schedule,
     // which is what paces the intro cutscene chain.
     runScriptEvent([&](Page& page) { page.advanceTime(elapsed); });
-    if (sceneIsLive()) {
+    if (g.project && g.project->currentPage() == pageBeforeTick &&
+        visualRevision() != revisionBefore) {
         g.dirty = true;
     }
 
@@ -681,9 +732,13 @@ void onTick() {
 void onPaint() {
     PAINTSTRUCT ps;
     HDC dc = BeginPaint(gWnd, &ps);
+    RECT rc;
+    GetClientRect(gWnd, &rc);
+    HDC paintDc = CreateCompatibleDC(dc);
+    HBITMAP paintBitmap = CreateCompatibleBitmap(dc, std::max(1L, rc.right),
+                                                  std::max(1L, rc.bottom));
+    HGDIOBJ oldBitmap = SelectObject(paintDc, paintBitmap);
     if (!g.blit.empty()) {
-        RECT rc;
-        GetClientRect(gWnd, &rc);
         BITMAPINFO bmi{};
         bmi.bmiHeader.biSize = sizeof(bmi.bmiHeader);
         bmi.bmiHeader.biWidth = g.frame.width;
@@ -691,8 +746,8 @@ void onPaint() {
         bmi.bmiHeader.biPlanes = 1;
         bmi.bmiHeader.biBitCount = 32;
         bmi.bmiHeader.biCompression = BI_RGB;
-        SetStretchBltMode(dc, HALFTONE);
-        StretchDIBits(dc, 0, 0, rc.right, rc.bottom, 0, 0, g.frame.width, g.frame.height,
+        SetStretchBltMode(paintDc, HALFTONE);
+        StretchDIBits(paintDc, 0, 0, rc.right, rc.bottom, 0, 0, g.frame.width, g.frame.height,
                       g.blit.data(), &bmi, DIB_RGB_COLORS, SRCCOPY);
 
         // TextHolder uses the platform font here while the indexed scene stays
@@ -700,15 +755,25 @@ void onPaint() {
         // such as TRALALA, which intentionally hide all picture layers on open.
         const Page* page = g.project ? g.project->currentPage() : nullptr;
         if (page) {
-            SetBkMode(dc, TRANSPARENT);
-            SetTextColor(dc, RGB(24, 24, 24));
+            SetBkMode(paintDc, TRANSPARENT);
+            // The 1997 player used the Win9x-era sans-serif raster aesthetic;
+            // Arial is substantially closer in metrics and stroke shape than
+            // modern Segoe UI while retaining Polish glyph coverage.
             HFONT font = CreateFontW(-18, 0, 0, 0, FW_NORMAL, FALSE, FALSE, FALSE,
                                      EASTEUROPE_CHARSET, OUT_DEFAULT_PRECIS,
-                                     CLIP_DEFAULT_PRECIS, CLEARTYPE_QUALITY,
-                                     DEFAULT_PITCH | FF_DONTCARE, L"Segoe UI");
-            HGDIOBJ oldFont = SelectObject(dc, font);
+                                     CLIP_DEFAULT_PRECIS, ANTIALIASED_QUALITY,
+                                     VARIABLE_PITCH | FF_SWISS, L"Arial");
+            HGDIOBJ oldFont = SelectObject(paintDc, font);
             for (const auto& component : page->components()) {
                 if (component.kind != graphboard::HolderKind::TextHolder) continue;
+                const auto colorPart = [&](const char* name, int fallback) {
+                    const auto it = component.props.find(name);
+                    return it == component.props.end() ? fallback
+                                                       : static_cast<int>(it->second.toInt());
+                };
+                SetTextColor(paintDc, RGB(colorPart("textColorR", 24),
+                                     colorPart("textColorG", 24),
+                                     colorPart("textColorB", 24)));
                 for (const auto& [id, item] : component.items) {
                     const auto visible = item.find("visible");
                     if (visible == item.end() || visible->second.toInt() == 0 || id < 0 ||
@@ -735,22 +800,28 @@ void onPaint() {
                     RECT tr = viewport;
                     OffsetRect(&tr, MulDiv(offsetX, rc.right, g.frame.width),
                                MulDiv(offsetY, rc.bottom, g.frame.height));
-                    const int saved = SaveDC(dc);
-                    IntersectClipRect(dc, viewport.left, viewport.top, viewport.right, viewport.bottom);
-                    DrawTextW(dc, wide.c_str(), static_cast<int>(wide.size()), &tr,
-                              DT_LEFT | DT_TOP | DT_WORDBREAK | DT_NOPREFIX);
-                    RestoreDC(dc, saved);
+                    const int saved = SaveDC(paintDc);
+                    IntersectClipRect(paintDc, viewport.left, viewport.top,
+                                      viewport.right, viewport.bottom);
+                    const bool singleLine = cleaned.find_first_of("\r\n") == std::string::npos;
+                    const UINT format = singleLine
+                        ? DT_CENTER | DT_VCENTER | DT_SINGLELINE | DT_NOPREFIX
+                        : DT_LEFT | DT_TOP | DT_WORDBREAK | DT_NOPREFIX;
+                    DrawTextW(paintDc, wide.c_str(), static_cast<int>(wide.size()), &tr, format);
+                    RestoreDC(paintDc, saved);
                 }
             }
-            SelectObject(dc, oldFont);
+            SelectObject(paintDc, oldFont);
             DeleteObject(font);
         }
-        drawGraphBoardCursor(dc, rc);
+        drawGraphBoardCursor(paintDc, rc);
     } else {
-        RECT rc;
-        GetClientRect(gWnd, &rc);
-        FillRect(dc, &rc, reinterpret_cast<HBRUSH>(GetStockObject(BLACK_BRUSH)));
+        FillRect(paintDc, &rc, reinterpret_cast<HBRUSH>(GetStockObject(BLACK_BRUSH)));
     }
+    BitBlt(dc, 0, 0, rc.right, rc.bottom, paintDc, 0, 0, SRCCOPY);
+    SelectObject(paintDc, oldBitmap);
+    DeleteObject(paintBitmap);
+    DeleteDC(paintDc);
     EndPaint(gWnd, &ps);
 }
 
@@ -816,6 +887,9 @@ LRESULT CALLBACK wndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
             return 0;
         case WM_KEYDOWN:
             runScriptEvent([&](Page& page) { page.keyDown(static_cast<int>(wParam)); });
+            return 0;
+        case WM_KEYUP:
+            runScriptEvent([&](Page& page) { page.keyUp(static_cast<int>(wParam)); });
             return 0;
         case WM_SETCURSOR:
             if (LOWORD(lParam) == HTCLIENT && g.project && g.project->currentPage()) {

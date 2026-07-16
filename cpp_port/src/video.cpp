@@ -28,6 +28,7 @@ BoardVideoDecoder::BoardVideoDecoder(const std::vector<std::uint8_t>& fileBytes,
                                      const runtime::VideoGeometry& geom) {
     width_ = geom.width;
     height_ = geom.height;
+    transparentIndex_ = geom.streamTransparentIndex;
     const int declaredFrameCount = geom.frameCount;
     frameCount_ = 0;
     const auto width = static_cast<std::size_t>(width_ > 0 ? width_ : 0);
@@ -79,7 +80,7 @@ BoardVideoDecoder::BoardVideoDecoder(const std::vector<std::uint8_t>& fileBytes,
 
     frameCount_ = std::min<int>(declaredFrameCount, static_cast<int>(videoRecords_.size()));
     if (frameCount_ <= 0) return;
-    frame_.assign(width * height, 0);
+    frame_.assign(width * height, transparentIndex_);
 }
 
 // Decode one RLE rect into frame_ (top-down here; the original writes into a
@@ -139,13 +140,13 @@ const std::vector<std::uint8_t>& BoardVideoDecoder::frameAt(int index) {
     }
     index = std::clamp(index, 0, static_cast<int>(videoRecords_.size()) - 1);
     if (index < decodedFrame_) {
-        // Deltas only patch forward; replay from the full frame 0.
-        std::fill(frame_.begin(), frame_.end(), 0);
+        std::fill(frame_.begin(), frame_.end(), transparentIndex_);
         decodedFrame_ = -1;
     }
     while (decodedFrame_ < index) {
         ++decodedFrame_;
-        applyRecord(videoRecords_[static_cast<std::size_t>(decodedFrame_)]);
+        const auto& record = videoRecords_[static_cast<std::size_t>(decodedFrame_)];
+        applyRecord(record);
     }
     return frame_;
 }

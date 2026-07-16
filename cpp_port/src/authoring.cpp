@@ -259,6 +259,7 @@ std::vector<std::uint8_t> makeSpriteBlob(const SpriteDefinitionDocument& definit
         requireImage(frame.image, "Sprite frame");
         const std::size_t frameOffset = kSpriteFrameTable + i * kSpriteFrameBytes;
         const std::size_t pitch = stride4(frame.image.width);
+        putU32(blob, frameOffset + 0x00, 1); // one timer cell in an authored frame
         putU32(blob, frameOffset + 0x04, frame.image.transparentIndex);
         putU32(blob, frameOffset + 0x08, frame.pixelHitTest ? 1u : 0u);
         putU32(blob, frameOffset + 0x10, frame.image.width);

@@ -140,6 +140,8 @@ json spriteStateToJson(const graphboard::SpriteHolderState& state) {
         json frames = json::array();
         for (const auto& frame : definition.frames) {
             json f = {{"width", frame.width}, {"height", frame.height}};
+            f["animationCellCount"] = frame.animationPixels.size();
+            f["cellDurationMs"] = frame.cellDurationMs;
             if (!frame.opaque.empty()) {
                 std::size_t opaque = 0;
                 for (const auto v : frame.opaque) opaque += v;
@@ -278,6 +280,8 @@ json bitmapHolderStateToJson(const graphboard::BitmapHolderState& state) {
             {"name", t(bitmap.name)},
             {"rect", {bitmap.left, bitmap.top, bitmap.right, bitmap.bottom}},
             {"layer", bitmap.layer},
+            {"stateWord", bitmap.stateWord},
+            {"initiallyHidden", bitmap.initiallyHidden},
             {"blobByteCount", bitmap.blobByteCount},
             {"pixelOffset", bitmap.pixelOffset},
             {"pixelSizeConsistent", bitmap.pixelSizeConsistent},
@@ -745,7 +749,7 @@ int drivePage(const std::filesystem::path& path, const std::string& handler) {
 // One synthetic input event applied through the Page's raw-input entry points.
 struct InputEvent {
     enum class Kind {
-        Click, Down, Up, RClick, Move, Drag, Timer, Key,
+        Click, Down, Up, RClick, Move, Wheel, Drag, Timer, Key,
         VideoEnd, SoundEnd, AnimEnd, Advance,
     } kind;
     int a = 0;  // x, key code for Key, item id for *End, or drag start-x
@@ -763,6 +767,7 @@ void applyEvents(graphboard::runtime::Page& page, const std::vector<InputEvent>&
             case InputEvent::Kind::Up:     page.lButtonUp(ev.a, ev.b); break;
             case InputEvent::Kind::RClick: page.rButtonDown(ev.a, ev.b); break;
             case InputEvent::Kind::Move:   page.mouseMove(ev.a, ev.b); break;
+            case InputEvent::Kind::Wheel:  page.mouseWheel(ev.a, ev.b, ev.c); break;
             case InputEvent::Kind::Drag:   page.drag(ev.a, ev.b, ev.c, ev.d); break;
             case InputEvent::Kind::Timer:  page.timer(); break;
             case InputEvent::Kind::Key:    page.keyDown(ev.a); break;
@@ -918,6 +923,11 @@ int main(int argc, char** argv) {
                 const auto [x, y] = parseXY(args[++i]);
                 events.push_back({InputEvent::Kind::Move, x, y});
                 interact = true;
+            } else if (isFlag(args[i], "--wheel") && i + 2 < args.size()) {
+                const auto [x, y] = parseXY(args[++i]);
+                const int delta = std::stoi(argToUtf8(args[++i]));
+                events.push_back({InputEvent::Kind::Wheel, x, y, delta});
+                interact = true;
             } else if (isFlag(args[i], "--down") && i + 1 < args.size()) {
                 const auto [x, y] = parseXY(args[++i]);
                 events.push_back({InputEvent::Kind::Down, x, y});
@@ -967,7 +977,7 @@ int main(int argc, char** argv) {
     if (file.empty()) {
         std::cerr << "usage: gbinspect <START.PRJ|PAGE.BDF> [--run <handler>] [--drive <handler>]\n"
                      "       gbinspect <PAGE.BDF> [--no-open] (--click X,Y | --rclick X,Y |\n"
-                     "                 --move X,Y | --down X,Y | --up X,Y |\n"
+                     "                 --move X,Y | --wheel X,Y DELTA | --down X,Y | --up X,Y |\n"
                      "                 --drag X1,Y1,X2,Y2 | --timer | --key N)...\n"
                      "       gbinspect <START.PRJ> [--follow N] (--click X,Y | ...)...\n"
                      "                 runs the global setup block, opens the startup page,\n"

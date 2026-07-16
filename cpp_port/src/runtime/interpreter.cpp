@@ -370,21 +370,16 @@ Interpreter::Flow Interpreter::execDeclaration() {
     while (pos_ < tokens_.size() && tok().kind == TokenKind::Identifier) {
         const std::string name = tok().text;
         ++pos_;
-        // Array dimension(s): consume the bracketed size. Elements are created
-        // lazily as scoped synthetic paths when they are assigned.
+        // Arrays are represented as scoped synthetic paths (name[0], name[1],
+        // ...). GraphBoard zero-initializes them; many shipped scripts test an
+        // element before its first assignment (notably every difference-game
+        // `roznice[]` table), so materialize the first dimension here.
+        std::int64_t elementCount = -1;
         while (atPunct("[")) {
-            int depth = 0;
-            while (pos_ < tokens_.size() && tok().kind != TokenKind::End) {
-                if (atPunct("[")) {
-                    ++depth;
-                } else if (atPunct("]")) {
-                    --depth;
-                    ++pos_;
-                    if (depth == 0) break;
-                    continue;
-                }
-                ++pos_;
-            }
+            ++pos_;
+            const auto count = parseExpression().toInt();
+            if (elementCount < 0) elementCount = std::max<std::int64_t>(0, count);
+            if (atPunct("]")) ++pos_;
         }
         Value init;
         if (atPunct("=")) {
@@ -392,6 +387,9 @@ Interpreter::Flow Interpreter::execDeclaration() {
             init = parseExpression();
         }
         declare(name, std::move(init));
+        for (std::int64_t i = 0; i < elementCount; ++i) {
+            declare(name + "[" + std::to_string(i) + "]", Value::integer(0));
+        }
         if (atPunct(",")) {
             ++pos_;
             continue;

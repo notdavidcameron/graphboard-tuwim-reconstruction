@@ -6,6 +6,7 @@ export class AudioEngine {
   constructor() {
     this.context = null;           // created on first user gesture
     this.playing = new Map();      // key -> AudioBufferSourceNode
+    this.volumes = new Map();      // DirectSound hundredths-of-a-decibel values
   }
 
   /** Must be called from a user-gesture handler (autoplay policy). */
@@ -22,7 +23,7 @@ export class AudioEngine {
    * @param {string} key
    * @param {Uint8Array} pcm - raw samples (WAV framing already stripped)
    */
-  play(key, pcm, rate, bits, channels) {
+  play(key, pcm, rate, bits, channels, loop = false, onEnded = null) {
     if (!this.context || !pcm.length || !rate || !channels) return;
     this.stop(key);
     const bytesPerSample = bits / 8;
@@ -46,12 +47,57 @@ export class AudioEngine {
     }
     const source = this.context.createBufferSource();
     source.buffer = buffer;
-    source.connect(this.context.destination);
+    source.loop = Boolean(loop);
+    const gain = this.context.createGain();
+    gain.gain.value = this.gainFor(key);
+    source.connect(gain).connect(this.context.destination);
+    source._gbGain = gain;
+    source._gbStart = this.context.currentTime;
+    source._gbDuration = buffer.duration;
     source.onended = () => {
-      if (this.playing.get(key) === source) this.playing.delete(key);
+      if (this.playing.get(key) === source) {
+        this.playing.delete(key);
+        onEnded?.();
+      }
     };
     source.start();
     this.playing.set(key, source);
+  }
+
+  async playMedia(key, url, offsetSeconds = 0, durationSeconds = null, onEnded = null) {
+    if (!this.context || !url) return;
+    this.stop(key);
+    const pending = { cancelled: false, stop() { this.cancelled = true; } };
+    this.playing.set(key, pending);
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const buffer = await this.context.decodeAudioData(await response.arrayBuffer());
+      if (pending.cancelled || this.playing.get(key) !== pending) return;
+      const offset = Math.max(0, Math.min(Number(offsetSeconds) || 0, buffer.duration));
+      const source = this.context.createBufferSource();
+      source.buffer = buffer;
+      const gain = this.context.createGain();
+      gain.gain.value = this.gainFor(key);
+      source.connect(gain).connect(this.context.destination);
+      source._gbGain = gain;
+      source._gbStart = this.context.currentTime;
+      source._gbDuration = Number(durationSeconds) > 0
+        ? Math.min(Number(durationSeconds), buffer.duration - offset)
+        : buffer.duration - offset;
+      source.onended = () => {
+        if (this.playing.get(key) === source) {
+          this.playing.delete(key);
+          onEnded?.();
+        }
+      };
+      this.playing.set(key, source);
+      if (Number(durationSeconds) > 0) source.start(0, offset, Number(durationSeconds));
+      else source.start(0, offset);
+    } catch (error) {
+      if (this.playing.get(key) === pending) this.playing.delete(key);
+      console.error(`Unable to decode external audio ${url}:`, error);
+    }
   }
 
   stop(key) {
@@ -60,6 +106,25 @@ export class AudioEngine {
       this.playing.delete(key);
       try { source.stop(); } catch { /* already ended */ }
     }
+  }
+
+  gainFor(key) {
+    const value = Math.max(-10000, Math.min(0, Number(this.volumes.get(key)) || 0));
+    return value <= -10000 ? 0 : Math.pow(10, value / 2000);
+  }
+
+  setVolume(key, value) {
+    this.volumes.set(key, Number(value) || 0);
+    const source = this.playing.get(key);
+    if (source?._gbGain && this.context) {
+      source._gbGain.gain.setTargetAtTime(this.gainFor(key), this.context.currentTime, 0.015);
+    }
+  }
+
+  progress(key) {
+    const source = this.playing.get(key);
+    if (!this.context || !source?._gbDuration) return -1;
+    return Math.max(0, Math.min(1, (this.context.currentTime - source._gbStart) / source._gbDuration));
   }
 
   stopComponent(prefix) {

@@ -5,10 +5,11 @@
 import createGbWeb from "../engine/gbweb.js";
 import { DataLoader } from "./loader.js";
 import { AudioEngine } from "./audio.js";
+import { VideoEngine } from "./video.js";
+import { RecorderEngine } from "./recorder.js";
 import { drawTextItems } from "./text.js";
 import { attachInput } from "./input.js";
 
-const TICK_MS = 33;               // gbgame's kTickMs
 const MAX_FOLLOWS_PER_PUMP = 8;   // gbgame's kMaxFollowsPerPump
 
 const canvas = document.getElementById("screen");
@@ -19,12 +20,15 @@ const startBtn = document.getElementById("start");
 const hud = document.getElementById("hud");
 
 const audio = new AudioEngine();
+let video = null;
+let recorder = null;
 let Module = null;
 let api = null;
 let loader = null;
 let navigating = false;   // a page fetch is in flight; pause the clock
 let lastTick = 0;
-let intervalId = 0;
+let animationFrameId = 0;
+let baseFrame = null;
 
 function setProgress(msg) { progress.textContent = msg; }
 
@@ -41,16 +45,37 @@ function reportStatus() {
 function drainAudio() {
   const events = JSON.parse(api.drainEvents());
   for (const ev of events) {
+    const onEnded = ev.textEnd ? () => {
+      if (!api || navigating) return;
+      api.textAudioEnd(ev.id);
+      drainAudio();
+      pumpNavigation();
+      blitIfDirty();
+    } : null;
     if (ev.type === "play") {
       // Copy synchronously: the pointer is only valid until the next drain.
       const pcm = Module.HEAPU8.slice(ev.ptr, ev.ptr + ev.len);
-      audio.play(ev.key, pcm, ev.rate, ev.bits, ev.channels);
+      audio.play(ev.key, pcm, ev.rate, ev.bits, ev.channels, ev.loop, onEnded);
+    } else if (ev.type === "playMedia") {
+      const url = loader.assetUrl(ev.file);
+      if (url) audio.playMedia(ev.key, url, 0, null, onEnded);
+      else console.error(`Text_Holder asset is not packaged: ${ev.file}`);
     } else if (ev.type === "stop") {
       audio.stop(ev.key);
     } else if (ev.type === "stopComponent") {
       audio.stopComponent(ev.key);
     } else if (ev.type === "stopAll") {
       audio.stopAll();
+      video?.stopAll();
+      recorder?.stop();
+    } else if (ev.type === "volume") {
+      audio.setVolume(ev.key, ev.value);
+    } else if (ev.type === "recorder") {
+      recorder?.dispatch(ev);
+    } else if (ev.type === "playVideo") {
+      video?.play(ev);
+    } else if (ev.type === "stopVideoComponent") {
+      video?.stopComponent(ev.key);
     }
   }
 }
@@ -63,10 +88,11 @@ function fitCanvas() {
   );
   canvas.style.width = `${Math.floor(canvas.width * scale)}px`;
   canvas.style.height = `${Math.floor(canvas.height * scale)}px`;
+  video?.fit();
 }
 
-function blitIfDirty() {
-  if (!api.render()) return;
+function blitIfDirty(forceText = false) {
+  const rendered = api.render();
   const w = api.frameW();
   const h = api.frameH();
   if (w <= 0 || h <= 0) return;
@@ -75,15 +101,19 @@ function blitIfDirty() {
     canvas.height = h;
     fitCanvas();
   }
-  const ptr = api.framePtr();
-  const pixels = new Uint8ClampedArray(Module.HEAPU8.buffer, ptr, w * h * 4);
-  ctx.putImageData(new ImageData(pixels.slice(), w, h), 0, 0);
-  drawTextItems(ctx, JSON.parse(api.textItems()));
+  if (rendered) {
+    const ptr = api.framePtr();
+    const pixels = new Uint8ClampedArray(Module.HEAPU8.buffer, ptr, w * h * 4);
+    baseFrame = new ImageData(pixels.slice(), w, h);
+  }
+  if (!baseFrame || (!rendered && !forceText)) return;
+  ctx.putImageData(baseFrame, 0, 0);
+  drawTextItems(ctx, JSON.parse(api.textItems()), (key) => audio.progress(key));
   canvas.style.cursor = api.cursorHidden() ? "none" : "default";
 }
 
 function endGame(message) {
-  clearInterval(intervalId);
+  cancelAnimationFrame(animationFrameId);
   audio.stopAll();
   overlay.classList.remove("hidden");
   overlay.querySelector("h1").textContent = message;
@@ -127,15 +157,18 @@ async function pumpNavigation() {
   }
 }
 
-function onTick() {
-  if (navigating) return;
-  const now = performance.now();
+function onAnimationFrame(now) {
+  animationFrameId = requestAnimationFrame(onAnimationFrame);
+  if (navigating) {
+    lastTick = now;
+    return;
+  }
   const elapsed = Math.round(now - lastTick);
   lastTick = now;
   api.tick(elapsed);
   drainAudio();
   pumpNavigation();
-  blitIfDirty();
+  blitIfDirty(true);
 }
 
 async function boot() {
@@ -147,6 +180,7 @@ async function boot() {
     loadProject: cw("gb_load_project", "number", ["string"]),
     startupPage: cw("gb_startup_page", "string", []),
     openStartup: cw("gb_open_startup", "number", []),
+    openPage: cw("gb_open_page", "number", ["string"]),
     exited: cw("gb_exited", "number", []),
     status: cw("gb_status", "string", []),
     currentPage: cw("gb_current_page", "string", []),
@@ -159,6 +193,12 @@ async function boot() {
     mouseUp: cw("gb_mouse_up", null, ["number", "number"]),
     mouseRDown: cw("gb_mouse_rdown", null, ["number", "number"]),
     keyDown: cw("gb_key_down", null, ["number"]),
+    keyUp: cw("gb_key_up", null, ["number"]),
+    externalVideoEnd: cw("gb_external_video_end", null, ["number"]),
+    textAudioEnd: cw("gb_text_audio_end", null, ["number"]),
+    recorderEndRecord: cw("gb_recorder_end_record", null, ["number"]),
+    recorderEndPlay: cw("gb_recorder_end_play", null, []),
+    recorderProgress: cw("gb_recorder_progress", null, ["number"]),
     render: cw("gb_render", "number", []),
     framePtr: cw("gb_frame_ptr", "number", []),
     frameW: cw("gb_frame_w", "number", []),
@@ -168,22 +208,39 @@ async function boot() {
     textItems: cw("gb_text_items_json", "string", []),
   };
 
+  recorder = new RecorderEngine({
+    endRecord: (hasData) => { api.recorderEndRecord(hasData ? 1 : 0); drainAudio(); blitIfDirty(true); },
+    endPlay: () => { api.recorderEndPlay(); drainAudio(); blitIfDirty(true); },
+    progress: (percent) => { api.recorderProgress(percent); blitIfDirty(true); },
+  });
+
   loader = new DataLoader(Module, "data/tuwim/", setProgress);
   await loader.init();
+  video = new VideoEngine(document.getElementById("videoLayer"), canvas, loader, audio, (id) => {
+    if (!api || navigating) return;
+    api.externalVideoEnd(id);
+    drainAudio();
+    pumpNavigation();
+    blitIfDirty();
+  });
   setProgress("Wczytywanie danych gry…");
   await loader.preloadBoot();
 
   if (!api.loadProject("/data/START.PRJ")) {
     throw new Error("START.PRJ: " + api.status());
   }
-  await loader.ensure(api.startupPage());
+  const pageParam = new URL(window.location.href).searchParams.get("page");
+  const requestedPage = pageParam
+    ? (pageParam.toLowerCase().endsWith(".bdf") ? pageParam : `${pageParam}.bdf`)
+    : "";
+  await loader.ensure(requestedPage || api.startupPage());
 
   setProgress("");
   startBtn.disabled = false;
   startBtn.addEventListener("click", async () => {
     audio.unlock();
     overlay.classList.add("hidden");
-    if (!api.openStartup()) {
+    if (!(requestedPage ? api.openPage(requestedPage) : api.openStartup())) {
       endGame("Błąd: " + api.status());
       return;
     }
@@ -192,17 +249,18 @@ async function boot() {
     reportStatus();
     await pumpNavigation();   // OnOpenPage may already have queued a LoadPage
     lastTick = performance.now();
-    intervalId = setInterval(onTick, TICK_MS);
+    animationFrameId = requestAnimationFrame(onAnimationFrame);
   }, { once: true });
 }
 
 attachInput(canvas, {
   mouseMove: (x, y) => api && !navigating && api.mouseMove(x, y),
   mouseLeave: () => api && api.mouseLeave(),
-  mouseDown: (x, y) => { if (api && !navigating) { api.mouseDown(x, y); drainAudio(); pumpNavigation(); blitIfDirty(); } },
+  mouseDown: (x, y) => { if (api && !navigating) { audio.unlock(); api.mouseDown(x, y); drainAudio(); pumpNavigation(); blitIfDirty(); } },
   mouseUp: (x, y) => { if (api && !navigating) { api.mouseUp(x, y); drainAudio(); pumpNavigation(); blitIfDirty(); } },
-  mouseRDown: (x, y) => { if (api && !navigating) { api.mouseRDown(x, y); drainAudio(); pumpNavigation(); blitIfDirty(); } },
-  keyDown: (vk) => { if (api && !navigating) { api.keyDown(vk); drainAudio(); pumpNavigation(); blitIfDirty(); } },
+  mouseRDown: (x, y) => { if (api && !navigating) { audio.unlock(); api.mouseRDown(x, y); drainAudio(); pumpNavigation(); blitIfDirty(); } },
+  keyDown: (vk) => { if (api && !navigating) { audio.unlock(); api.keyDown(vk); drainAudio(); pumpNavigation(); blitIfDirty(); } },
+  keyUp: (vk) => { if (api && !navigating) { api.keyUp(vk); drainAudio(); pumpNavigation(); blitIfDirty(); } },
 });
 
 window.addEventListener("resize", fitCanvas);

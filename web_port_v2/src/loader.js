@@ -31,6 +31,28 @@ export class DataLoader {
     return this.manifest.get(name.toLowerCase()) || null;
   }
 
+  /** Browser media produced from a legacy external asset (currently AVI -> MP4). */
+  mediaInfo(name) {
+    const entry = this.lookup(name);
+    if (!entry?.media) return null;
+    const encoded = String(entry.media).split("/").map(encodeURIComponent).join("/");
+    const audioEncoded = entry.audio
+      ? String(entry.audio).split("/").map(encodeURIComponent).join("/")
+      : "";
+    return {
+      ...entry,
+      url: this.baseUrl + encoded,
+      audioUrl: audioEncoded ? this.baseUrl + audioEncoded : "",
+    };
+  }
+
+  /** URL for a manifest-backed asset that the browser can consume directly. */
+  assetUrl(name) {
+    const entry = this.lookup(name);
+    if (!entry) return "";
+    return this.baseUrl + String(entry.file).split("/").map(encodeURIComponent).join("/");
+  }
+
   /** Fetch one file into MEMFS (no-op if already resident). Returns canonical path. */
   async ensure(name) {
     const entry = this.lookup(name);
