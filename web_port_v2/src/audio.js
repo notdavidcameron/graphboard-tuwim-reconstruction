@@ -2,6 +2,75 @@
 // of gbgame's AudioEngine: overlapping clips keyed "component/id" so a script
 // Stop silences exactly the clip it names.
 
+/**
+ * Hide SynchroText's one-sample line markers without changing the stream
+ * length. The original files are RIFF/WAVE PCM with an .EXS extension; the
+ * marker is -32768 for 16-bit audio (or 255 for 8-bit audio), and is consumed
+ * by the legacy synchronizer rather than sent to the speaker.
+ */
+export function concealSyncMarkersInWav(arrayBuffer) {
+  if (!(arrayBuffer instanceof ArrayBuffer) || arrayBuffer.byteLength < 12) return arrayBuffer;
+  const source = new DataView(arrayBuffer);
+  const ascii = (offset, value) => {
+    if (offset + value.length > source.byteLength) return false;
+    for (let i = 0; i < value.length; i++) {
+      if (source.getUint8(offset + i) !== value.charCodeAt(i)) return false;
+    }
+    return true;
+  };
+  if (!ascii(0, "RIFF") || !ascii(8, "WAVE")) return arrayBuffer;
+  const riffEnd = Math.min(source.byteLength, source.getUint32(4, true) + 8);
+  let pos = 12;
+  let channels = 0;
+  let bits = 0;
+  let dataStart = -1;
+  let dataBytes = 0;
+  while (pos + 8 <= riffEnd) {
+    const size = source.getUint32(pos + 4, true);
+    if (size > riffEnd - pos - 8) break;
+    if (ascii(pos, "fmt ") && size >= 16) {
+      const format = source.getUint16(pos + 8, true);
+      channels = source.getUint16(pos + 10, true);
+      bits = source.getUint16(pos + 22, true);
+      if (format !== 1) return arrayBuffer;
+    } else if (ascii(pos, "data")) {
+      dataStart = pos + 8;
+      dataBytes = size;
+    }
+    pos += 8 + size + (size & 1);
+  }
+  if (dataStart < 0 || !channels || (bits !== 8 && bits !== 16)) return arrayBuffer;
+
+  const result = arrayBuffer.slice(0);
+  const view = new DataView(result);
+  const bytesPerSample = bits / 8;
+  const frameBytes = channels * bytesPerSample;
+  const dataEnd = Math.min(result.byteLength, dataStart + dataBytes);
+  const frames = Math.floor((dataEnd - dataStart) / frameBytes);
+  const sampleOffset = (frame, channel) => dataStart + frame * frameBytes + channel * bytesPerSample;
+  for (let frame = 0; frame < frames; frame++) {
+    for (let channel = 0; channel < channels; channel++) {
+      const offset = sampleOffset(frame, channel);
+      const marker = bits === 8
+        ? view.getUint8(offset) === 0xff
+        : view.getInt16(offset, true) === -32768;
+      if (!marker) continue;
+      const previousFrame = frame > 0 ? frame - 1 : frame;
+      const nextFrame = frame + 1 < frames ? frame + 1 : frame;
+      const previousOffset = sampleOffset(previousFrame, channel);
+      const nextOffset = sampleOffset(nextFrame, channel);
+      if (bits === 8) {
+        view.setUint8(offset, Math.round((view.getUint8(previousOffset) + view.getUint8(nextOffset)) / 2));
+      } else {
+        const previous = view.getInt16(previousOffset, true);
+        const next = view.getInt16(nextOffset, true);
+        view.setInt16(offset, Math.trunc((previous + next) / 2), true);
+      }
+    }
+  }
+  return result;
+}
+
 export class AudioEngine {
   constructor() {
     this.context = null;           // created on first user gesture
@@ -63,7 +132,8 @@ export class AudioEngine {
     this.playing.set(key, source);
   }
 
-  async playMedia(key, url, offsetSeconds = 0, durationSeconds = null, onEnded = null) {
+  async playMedia(key, url, offsetSeconds = 0, durationSeconds = null, onEnded = null,
+                  { sanitizeSyncMarkers = false } = {}) {
     if (!this.context || !url) return;
     this.stop(key);
     const pending = { cancelled: false, stop() { this.cancelled = true; } };
@@ -71,7 +141,9 @@ export class AudioEngine {
     try {
       const response = await fetch(url);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const buffer = await this.context.decodeAudioData(await response.arrayBuffer());
+      let encoded = await response.arrayBuffer();
+      if (sanitizeSyncMarkers) encoded = concealSyncMarkersInWav(encoded);
+      const buffer = await this.context.decodeAudioData(encoded);
       if (pending.cancelled || this.playing.get(key) !== pending) return;
       const offset = Math.max(0, Math.min(Number(offsetSeconds) || 0, buffer.duration));
       const source = this.context.createBufferSource();

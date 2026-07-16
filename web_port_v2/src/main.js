@@ -29,28 +29,19 @@ let navigating = false;   // a page fetch is in flight; pause the clock
 let lastTick = 0;
 let animationFrameId = 0;
 let baseFrame = null;
-const textFallbackStarts = new Map();
-const TEXT_NARRATION_DELAY_MS = 2500;
+// PlaySynchroText is emitted by the recovered Sound_Holder.EndPlaySound
+// callback, so it already begins after the title/intro clip. A second delay
+// here would shift the karaoke display and invite duplicate-start races.
+const TEXT_NARRATION_DELAY_MS = 0;
 const delayedMediaStarts = new Map();
 
 function textProgress(item, key) {
-  const isPoem = item.text.length > 160;
-  if (!item.playing && !isPoem) {
-    textFallbackStarts.delete(key);
-    return -1;
-  }
+  if (!item.playing) return -1;
   const decodedProgress = audio.progress(key);
-  if (decodedProgress >= 0) {
-    textFallbackStarts.delete(key);
-    return decodedProgress;
-  }
-  // EXS decoding is asynchronous and can take a few frames on larger pages.
-  // Keep the karaoke UI moving during that gap; decoded WebAudio progress
-  // replaces this estimate as soon as the source is ready.
-  if (!textFallbackStarts.has(key)) {
-    textFallbackStarts.set(key, performance.now() + TEXT_NARRATION_DELAY_MS);
-  }
-  return Math.min(0.999, Math.max(0, (performance.now() - textFallbackStarts.get(key)) / 180000));
+  // External .EXS narration is decoded asynchronously. Hold the first line
+  // until WebAudio exposes the actual source start time; an optimistic timer
+  // would advance, then visibly jump back to 0 when decoding completes.
+  return decodedProgress >= 0 ? decodedProgress : 0;
 }
 
 function setProgress(msg) { progress.textContent = msg; }
@@ -88,12 +79,16 @@ function drainAudio() {
             if (previous) window.clearTimeout(previous);
             const timer = window.setTimeout(() => {
               delayedMediaStarts.delete(ev.key);
-              if (!audio.playing.has(ev.key)) audio.playMedia(ev.key, url, 0, null, onEnded);
+              if (!audio.playing.has(ev.key)) {
+                audio.playMedia(ev.key, url, 0, null, onEnded,
+                  { sanitizeSyncMarkers: Boolean(ev.textEnd) });
+              }
             }, TEXT_NARRATION_DELAY_MS);
             delayedMediaStarts.set(ev.key, timer);
           }
         } else {
-          audio.playMedia(ev.key, url, 0, null, onEnded);
+          audio.playMedia(ev.key, url, 0, null, onEnded,
+            { sanitizeSyncMarkers: Boolean(ev.textEnd) });
         }
       }
       else console.error(`Text_Holder asset is not packaged: ${ev.file}`);

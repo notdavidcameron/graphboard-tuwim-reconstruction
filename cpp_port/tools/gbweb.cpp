@@ -114,6 +114,59 @@ bool parseWav(const std::uint8_t* wav, std::size_t n, std::uint32_t& sampleRate,
     return haveFmt && dataBytes > 0;
 }
 
+// TextHolder/SynchroText reserves the full-scale PCM sample as a line-sync
+// cue: 0x8000 for 16-bit audio and 0xff for 8-bit audio.  The original player
+// consumes that cue while advancing the text and does not send the sentinel to
+// the speaker.  Conceal it by interpolating the neighbouring sample, keeping
+// the exact sample count (and therefore the cue timing) unchanged.
+void concealSyncMarkers(std::vector<std::uint8_t>& pcm, std::uint32_t bits,
+                        std::uint32_t channels) {
+    if (channels == 0 || (bits != 8 && bits != 16)) return;
+    const std::size_t bytesPerSample = bits / 8;
+    const std::size_t frameBytes = bytesPerSample * channels;
+    if (frameBytes == 0) return;
+    const std::size_t frames = pcm.size() / frameBytes;
+    auto sampleOffset = [&](std::size_t frame, std::size_t channel) {
+        return frame * frameBytes + channel * bytesPerSample;
+    };
+    for (std::size_t frame = 0; frame < frames; ++frame) {
+        for (std::size_t channel = 0; channel < channels; ++channel) {
+            const auto offset = sampleOffset(frame, channel);
+            bool marker = false;
+            if (bits == 8) {
+                marker = pcm[offset] == 0xff;
+            } else {
+                const auto raw = static_cast<std::uint16_t>(pcm[offset]) |
+                                 (static_cast<std::uint16_t>(pcm[offset + 1]) << 8);
+                marker = raw == 0x8000;
+            }
+            if (!marker) continue;
+
+            const auto previousFrame = frame > 0 ? frame - 1 : frame;
+            const auto nextFrame = frame + 1 < frames ? frame + 1 : frame;
+            const auto previousOffset = sampleOffset(previousFrame, channel);
+            const auto nextOffset = sampleOffset(nextFrame, channel);
+            if (bits == 8) {
+                const int previous = pcm[previousOffset];
+                const int next = pcm[nextOffset];
+                pcm[offset] = static_cast<std::uint8_t>((previous + next) / 2);
+            } else {
+                const auto previousRaw = static_cast<std::uint16_t>(pcm[previousOffset]) |
+                                         (static_cast<std::uint16_t>(pcm[previousOffset + 1]) << 8);
+                const auto nextRaw = static_cast<std::uint16_t>(pcm[nextOffset]) |
+                                     (static_cast<std::uint16_t>(pcm[nextOffset + 1]) << 8);
+                const auto previous = static_cast<std::int16_t>(previousRaw);
+                const auto next = static_cast<std::int16_t>(nextRaw);
+                const auto replacement = static_cast<std::int16_t>((static_cast<int>(previous) +
+                                                                      static_cast<int>(next)) / 2);
+                const auto replacementRaw = static_cast<std::uint16_t>(replacement);
+                pcm[offset] = static_cast<std::uint8_t>(replacementRaw & 0xff);
+                pcm[offset + 1] = static_cast<std::uint8_t>(replacementRaw >> 8);
+            }
+        }
+    }
+}
+
 // ---------------------------------------------------------------------------
 // Video frames: identical to gbgame's VideoPlayer — one BoardVideoDecoder per
 // Transparent_Video_Holder entry, queried by renderPage.
@@ -315,14 +368,13 @@ void processHostCalls() {
                 g.audioEvents.push_back(std::move(ev));
             }
         } else if (state->kind == graphboard::HolderKind::TextHolder) {
-            const bool showStartsSynchro =
-                call.name == "ShowText" && id >= 0 &&
-                static_cast<std::size_t>(id) < state->texts.size() &&
-                !state->texts[static_cast<std::size_t>(id)].synchroFile.empty();
-            if ((call.name == "PlaySynchroText" || showStartsSynchro) && id >= 0) {
+            // ShowText only changes visibility. The original script starts
+            // narration explicitly with PlaySynchroText (often from the
+            // preceding Sound_Holder.EndPlaySound callback); starting here as
+            // well would restart the poem when that callback arrives.
+            if (call.name == "PlaySynchroText" && id >= 0) {
                 bool queued = false;
-                if (call.name == "PlaySynchroText" &&
-                    static_cast<std::size_t>(id) < state->soundClips.size()) {
+                if (static_cast<std::size_t>(id) < state->soundClips.size()) {
                     const auto& clip = state->soundClips[static_cast<std::size_t>(id)];
                     if (clip.byteCount != 0 &&
                         clip.offset + clip.byteCount <= g.pageBytes.size()) {
@@ -345,6 +397,7 @@ void processHostCalls() {
                         ev.channels = channels;
                         ev.id = id;
                         ev.textCompletion = true;
+                        concealSyncMarkers(ev.pcm, bits, channels);
                         g.audioEvents.push_back(std::move(ev));
                         queued = true;
                     }
