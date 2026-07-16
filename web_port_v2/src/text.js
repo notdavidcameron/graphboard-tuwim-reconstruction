@@ -70,7 +70,11 @@ export function drawTextItems(ctx, items, progressForKey = () => -1) {
     ctx.beginPath();
     ctx.rect(item.l, item.t, width, viewportHeight);
     ctx.clip();
-    const color = Array.isArray(item.color) ? item.color : [24, 24, 24];
+    // The serialized FontControl colour is frequently bright green, which is
+    // faithful to the old palette but unreadable over the scanned artwork.
+    // Keep the karaoke highlight distinct and use a stable near-black text
+    // colour for the ordinary poem lines.
+    const color = [20, 20, 20];
     for (let i = 0; i < lines.length; i++) {
       const y = item.t + offset + i * LINE_HEIGHT;
       if (y + LINE_HEIGHT <= item.t || y >= item.b) continue;
