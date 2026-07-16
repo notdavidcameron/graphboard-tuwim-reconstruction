@@ -2,7 +2,7 @@
 // narration follows the active line and highlights it, approximating the old
 // FontControl karaoke display when only the WAV/EXS stream survives.
 
-const FONT = '700 19px "Segoe UI", Tahoma, sans-serif';
+const FONT = '700 17px "Segoe UI", Tahoma, sans-serif';
 const LINE_HEIGHT = 22;
 
 function wrapLines(ctx, text, width) {
@@ -69,14 +69,14 @@ export function drawTextItems(ctx, items, progressForKey = () => -1) {
       offset = Math.max(minimum, Math.min(0, desired));
     }
 
+    // A dark veil and bright lettering remain legible over both pale and dark
+    // scanned artwork without hiding the scene completely.
+    ctx.fillStyle = "rgba(0, 0, 0, 0.58)";
+    ctx.fillRect(item.l - 8, item.t - 6, width + 16, viewportHeight + 12);
     ctx.save();
     ctx.beginPath();
     ctx.rect(item.l, item.t, width, viewportHeight);
     ctx.clip();
-    // A dark veil and bright lettering remain legible over both pale and dark
-    // scanned artwork without hiding the scene completely.
-    ctx.fillStyle = "rgba(0, 0, 0, 0.58)";
-    ctx.fillRect(item.l, item.t, width, viewportHeight);
     // The serialized FontControl colour is frequently bright green, which is
     // faithful to the old palette but unreadable over the scanned artwork.
     // Keep the karaoke highlight distinct and use a stable near-black text

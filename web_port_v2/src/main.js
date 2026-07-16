@@ -30,6 +30,7 @@ let lastTick = 0;
 let animationFrameId = 0;
 let baseFrame = null;
 const textFallbackStarts = new Map();
+const TEXT_NARRATION_DELAY_MS = 2500;
 
 function textProgress(item, key) {
   const isPoem = item.text.length > 160;
@@ -45,8 +46,10 @@ function textProgress(item, key) {
   // EXS decoding is asynchronous and can take a few frames on larger pages.
   // Keep the karaoke UI moving during that gap; decoded WebAudio progress
   // replaces this estimate as soon as the source is ready.
-  if (!textFallbackStarts.has(key)) textFallbackStarts.set(key, performance.now());
-  return Math.min(0.999, (performance.now() - textFallbackStarts.get(key)) / 180000);
+  if (!textFallbackStarts.has(key)) {
+    textFallbackStarts.set(key, performance.now() + TEXT_NARRATION_DELAY_MS);
+  }
+  return Math.min(0.999, Math.max(0, (performance.now() - textFallbackStarts.get(key)) / 180000));
 }
 
 function setProgress(msg) { progress.textContent = msg; }
@@ -77,7 +80,13 @@ function drainAudio() {
       audio.play(ev.key, pcm, ev.rate, ev.bits, ev.channels, ev.loop, onEnded);
     } else if (ev.type === "playMedia") {
       const url = loader.assetUrl(ev.file);
-      if (url) audio.playMedia(ev.key, url, 0, null, onEnded);
+      if (url) {
+        if (ev.textEnd) {
+          window.setTimeout(() => audio.playMedia(ev.key, url, 0, null, onEnded), TEXT_NARRATION_DELAY_MS);
+        } else {
+          audio.playMedia(ev.key, url, 0, null, onEnded);
+        }
+      }
       else console.error(`Text_Holder asset is not packaged: ${ev.file}`);
     } else if (ev.type === "stop") {
       audio.stop(ev.key);
