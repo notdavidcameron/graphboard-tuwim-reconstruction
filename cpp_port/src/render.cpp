@@ -253,33 +253,22 @@ Image renderPage(const runtime::Page& page, const std::vector<std::uint8_t>& byt
     std::vector<Drawable> draws;
     std::size_t order = 0;
     bool suppressInitialTvh = false;
-    bool opaqueGrzesiuCollage = false;
     {
         std::size_t fullBackgrounds = 0;
         std::size_t tvhEntries = 0;
-        std::size_t bitmapEntries = 0;
-        std::size_t spriteEntries = 0;
         for (const auto& c : page.components()) {
             if (c.kind == graphboard::HolderKind::BitmapHolder) {
-                bitmapEntries += c.bitmaps.size();
                 for (const auto& bitmap : c.bitmaps) {
                     if (bitmap.width == img.width && bitmap.height == img.height) ++fullBackgrounds;
                 }
             } else if (c.kind == graphboard::HolderKind::TransparentVideoHolder) {
                 tvhEntries += c.videos.size();
-            } else if (c.kind == graphboard::HolderKind::SpriteHolder) {
-                spriteEntries += c.sprites.size();
             }
         }
         // PSTRYK persists both complete lighting backgrounds plus 14 transition
         // clips. Their serialized still patches are working buffers, not initial
         // layers; drawing them duplicates the chair/table/bear in rectangles.
         suppressInitialTvh = fullBackgrounds == 2 && tvhEntries == 14;
-        // GRZESIU's large stamp collage transition (entry 5) replaces the
-        // resting stick figure, including its face. Its stream is an opaque
-        // captured patch; colour-keying the decoded frame reveals the original
-        // face underneath and makes it appear stuck during the animation.
-        opaqueGrzesiuCollage = tvhEntries == 15 && bitmapEntries == 1 && spriteEntries == 2;
     }
     auto collect = [&](const std::vector<runtime::ComponentState>& components) {
       for (const auto& c : components) {
@@ -440,7 +429,9 @@ Image renderPage(const runtime::Page& page, const std::vector<std::uint8_t>& byt
                         d.pixels = frame;
                         d.stride = static_cast<std::size_t>(geom.width);
                         d.palette = palette;
-                d.useTransparent = !(opaqueGrzesiuCollage && id == 5 && playing);
+                // GRZESIU's collage stream contains a keyed green surround;
+                // keep palette transparency enabled while it is animated.
+                d.useTransparent = true;
                 d.transparent = geom.transparentIndex;
                 d.secondaryTransparent = geom.streamTransparentIndex;
                 const int pageGreen = greenKeyIndex(pagePalette);

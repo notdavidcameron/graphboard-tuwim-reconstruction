@@ -31,6 +31,7 @@ let animationFrameId = 0;
 let baseFrame = null;
 const textFallbackStarts = new Map();
 const TEXT_NARRATION_DELAY_MS = 2500;
+const delayedMediaStarts = new Map();
 
 function textProgress(item, key) {
   const isPoem = item.text.length > 160;
@@ -82,17 +83,32 @@ function drainAudio() {
       const url = loader.assetUrl(ev.file);
       if (url) {
         if (ev.textEnd) {
-          window.setTimeout(() => audio.playMedia(ev.key, url, 0, null, onEnded), TEXT_NARRATION_DELAY_MS);
+          if (!audio.playing.has(ev.key)) {
+            const previous = delayedMediaStarts.get(ev.key);
+            if (previous) window.clearTimeout(previous);
+            const timer = window.setTimeout(() => {
+              delayedMediaStarts.delete(ev.key);
+              if (!audio.playing.has(ev.key)) audio.playMedia(ev.key, url, 0, null, onEnded);
+            }, TEXT_NARRATION_DELAY_MS);
+            delayedMediaStarts.set(ev.key, timer);
+          }
         } else {
           audio.playMedia(ev.key, url, 0, null, onEnded);
         }
       }
       else console.error(`Text_Holder asset is not packaged: ${ev.file}`);
     } else if (ev.type === "stop") {
+      const timer = delayedMediaStarts.get(ev.key);
+      if (timer) { window.clearTimeout(timer); delayedMediaStarts.delete(ev.key); }
       audio.stop(ev.key);
     } else if (ev.type === "stopComponent") {
+      for (const [key, timer] of delayedMediaStarts) {
+        if (key.startsWith(ev.key)) { window.clearTimeout(timer); delayedMediaStarts.delete(key); }
+      }
       audio.stopComponent(ev.key);
     } else if (ev.type === "stopAll") {
+      for (const timer of delayedMediaStarts.values()) window.clearTimeout(timer);
+      delayedMediaStarts.clear();
       audio.stopAll();
       video?.stopAll();
       recorder?.stop();
