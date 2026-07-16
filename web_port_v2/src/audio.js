@@ -71,6 +71,60 @@ export function concealSyncMarkersInWav(arrayBuffer) {
   return result;
 }
 
+/** Return the original SynchroText cue positions in seconds. */
+export function syncMarkerTimesInWav(arrayBuffer) {
+  if (!(arrayBuffer instanceof ArrayBuffer) || arrayBuffer.byteLength < 12) return [];
+  const view = new DataView(arrayBuffer);
+  const ascii = (offset, value) => {
+    if (offset + value.length > view.byteLength) return false;
+    for (let i = 0; i < value.length; i++) {
+      if (view.getUint8(offset + i) !== value.charCodeAt(i)) return false;
+    }
+    return true;
+  };
+  if (!ascii(0, "RIFF") || !ascii(8, "WAVE")) return [];
+  const riffEnd = Math.min(view.byteLength, view.getUint32(4, true) + 8);
+  let pos = 12;
+  let channels = 0;
+  let bits = 0;
+  let sampleRate = 0;
+  let dataStart = -1;
+  let dataBytes = 0;
+  while (pos + 8 <= riffEnd) {
+    const size = view.getUint32(pos + 4, true);
+    if (size > riffEnd - pos - 8) break;
+    if (ascii(pos, "fmt ") && size >= 16) {
+      if (view.getUint16(pos + 8, true) !== 1) return [];
+      channels = view.getUint16(pos + 10, true);
+      sampleRate = view.getUint32(pos + 12, true);
+      bits = view.getUint16(pos + 22, true);
+    } else if (ascii(pos, "data")) {
+      dataStart = pos + 8;
+      dataBytes = size;
+    }
+    pos += 8 + size + (size & 1);
+  }
+  if (dataStart < 0 || !channels || !sampleRate || (bits !== 8 && bits !== 16)) return [];
+  const bytesPerSample = bits / 8;
+  const frameBytes = channels * bytesPerSample;
+  const dataEnd = Math.min(view.byteLength, dataStart + dataBytes);
+  const frames = Math.floor((dataEnd - dataStart) / frameBytes);
+  const markers = [];
+  for (let frame = 0; frame < frames; frame++) {
+    let marker = false;
+    for (let channel = 0; channel < channels; channel++) {
+      const offset = dataStart + frame * frameBytes + channel * bytesPerSample;
+      if ((bits === 8 && view.getUint8(offset) === 0xff) ||
+          (bits === 16 && view.getInt16(offset, true) === -32768)) {
+        marker = true;
+        break;
+      }
+    }
+    if (marker) markers.push(frame / sampleRate);
+  }
+  return markers;
+}
+
 export class AudioEngine {
   constructor() {
     this.context = null;           // created on first user gesture
@@ -142,6 +196,7 @@ export class AudioEngine {
       const response = await fetch(url);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       let encoded = await response.arrayBuffer();
+      const syncMarkers = sanitizeSyncMarkers ? syncMarkerTimesInWav(encoded) : [];
       if (sanitizeSyncMarkers) encoded = concealSyncMarkersInWav(encoded);
       const buffer = await this.context.decodeAudioData(encoded);
       if (pending.cancelled || this.playing.get(key) !== pending) return;
@@ -155,6 +210,8 @@ export class AudioEngine {
       source._gbDuration = Number(durationSeconds) > 0
         ? Math.min(Number(durationSeconds), buffer.duration - offset)
         : buffer.duration - offset;
+      source._gbOffset = offset;
+      source._gbSyncMarkers = syncMarkers;
       source.onended = () => {
         if (this.playing.get(key) === source) {
           this.playing.delete(key);
@@ -195,6 +252,18 @@ export class AudioEngine {
     const source = this.playing.get(key);
     if (!this.context || !source?._gbDuration) return -1;
     return Math.max(0, Math.min(1, (this.context.currentTime - source._gbStart) / source._gbDuration));
+  }
+
+  syncProgress(key) {
+    const source = this.playing.get(key);
+    if (!this.context || !source?._gbSyncMarkers?.length) return -1;
+    const elapsed = (this.context.currentTime - source._gbStart) + (source._gbOffset || 0);
+    let marker = 0;
+    while (marker + 1 < source._gbSyncMarkers.length &&
+           source._gbSyncMarkers[marker + 1] <= elapsed) {
+      marker++;
+    }
+    return marker / source._gbSyncMarkers.length;
   }
 
   stopComponent(prefix) {

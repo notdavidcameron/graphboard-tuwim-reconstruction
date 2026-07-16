@@ -5,9 +5,12 @@
 const FONT = '700 17px "Segoe UI", Tahoma, sans-serif';
 const LINE_HEIGHT = 22;
 
-function wrapLines(ctx, text, width) {
+function wrapLines(ctx, text, width, syncSourceLines = []) {
   const lines = [];
-  for (const paragraph of text.split(/\r\n|\r|\n/)) {
+  const spoken = new Set(syncSourceLines.map((line) => Number(line)));
+  const spokenGroups = [];
+  for (const [sourceIndex, paragraph] of text.split(/\r\n|\r|\n/).entries()) {
+    const groupStart = lines.length;
     if (!paragraph) {
       lines.push("");
       continue;
@@ -23,12 +26,18 @@ function wrapLines(ctx, text, width) {
       }
     }
     lines.push(line);
+    if (spoken.has(sourceIndex)) spokenGroups.push([groupStart, lines.length - 1]);
   }
-  return lines;
+  return { lines, spokenGroups };
 }
 
-function activeLineForProgress(lines, progress) {
+function activeLineForProgress(lines, progress, spokenGroups = []) {
   if (!(progress >= 0) || !lines.length) return -1;
+  if (spokenGroups.length) {
+    const marker = Math.min(spokenGroups.length - 1,
+      Math.floor(Math.min(0.999999, progress) * spokenGroups.length));
+    return spokenGroups[marker][0];
+  }
   const weights = lines.map((line) => Math.max(1, line.trim().length));
   const total = weights.reduce((sum, value) => sum + value, 0);
   let cursor = Math.min(0.999999, progress) * total;
@@ -52,12 +61,13 @@ export function drawTextItems(ctx, items, progressForKey = () => -1) {
 
   for (const item of items) {
     const width = Math.max(1, item.r - item.l);
-    const lines = wrapLines(ctx, item.text, width);
+    const wrapped = wrapLines(ctx, item.text, width, item.syncLines);
+    const lines = wrapped.lines;
     const isPoem = item.text.length > 160;
     const progress = (item.playing || isPoem)
       ? progressForKey(`Text_Holder/${item.id}`, item)
       : -1;
-    const active = activeLineForProgress(lines, progress);
+    const active = activeLineForProgress(lines, progress, wrapped.spokenGroups);
     const viewportHeight = Math.max(1, item.b - item.t);
     let offset = Number(item.offsetY) || 0;
 

@@ -997,9 +997,10 @@ const char* gb_drain_events() {
     return g.eventsJson.c_str();
 }
 
-// Visible TextHolder items as JSON [{"l":..,"t":..,"r":..,"b":..,"text":".."}],
-// text already cp1250→UTF-8 with the per-line leading '/' markers stripped —
-// the same cleanup gbgame's paint pass applies before DrawTextW.
+// Visible TextHolder items as JSON [{"l":..,"t":..,"r":..,"b":..,
+// "syncLines":[...],"text":".."}]. Text is already cp1250→UTF-8 with the
+// per-line leading '/' markers stripped; syncLines preserves the source line
+// indices needed to align karaoke highlights with the external audio cues.
 EMSCRIPTEN_KEEPALIVE
 const char* gb_text_items_json() {
     g.textJson = "[";
@@ -1014,12 +1015,33 @@ const char* gb_text_items_json() {
                     static_cast<std::size_t>(id) >= component.texts.size()) continue;
                 const auto& text = component.texts[static_cast<std::size_t>(id)];
                 std::string cleaned;
+                std::vector<std::size_t> syncLines;
                 cleaned.reserve(text.text.size());
-                bool lineStart = true;
-                for (char ch : text.text) {
-                    if (lineStart && ch == '/') continue;
-                    cleaned.push_back(ch);
-                    lineStart = ch == '\n' || ch == '\r';
+                std::size_t sourceLine = 0;
+                std::size_t lineStart = 0;
+                while (lineStart <= text.text.size()) {
+                    std::size_t lineEnd = lineStart;
+                    while (lineEnd < text.text.size() && text.text[lineEnd] != '\r' &&
+                           text.text[lineEnd] != '\n') {
+                        ++lineEnd;
+                    }
+                    const auto lineLength = lineEnd - lineStart;
+                    if (lineLength > 0 && text.text[lineStart] == '/') {
+                        syncLines.push_back(sourceLine);
+                        cleaned.append(text.text, lineStart + 1, lineLength - 1);
+                    } else {
+                        cleaned.append(text.text, lineStart, lineLength);
+                    }
+                    if (lineEnd >= text.text.size()) break;
+                    if (text.text[lineEnd] == '\r' && lineEnd + 1 < text.text.size() &&
+                        text.text[lineEnd + 1] == '\n') {
+                        cleaned += "\r\n";
+                        lineStart = lineEnd + 2;
+                    } else {
+                        cleaned.push_back(text.text[lineEnd]);
+                        lineStart = lineEnd + 1;
+                    }
+                    ++sourceLine;
                 }
                 if (!first) g.textJson.push_back(',');
                 first = false;
@@ -1040,7 +1062,12 @@ const char* gb_text_items_json() {
                                   std::to_string(component.props.at("textColorR").toInt()) + "," +
                                   std::to_string(component.props.at("textColorG").toInt()) + "," +
                                   std::to_string(component.props.at("textColorB").toInt()) +
-                              "],\"text\":";
+                              "],\"syncLines\":[";
+                for (std::size_t sync = 0; sync < syncLines.size(); ++sync) {
+                    if (sync != 0) g.textJson.push_back(',');
+                    g.textJson += std::to_string(syncLines[sync]);
+                }
+                g.textJson += "],\"text\":";
                 appendJsonString(g.textJson, graphboard::cp1250ToUtf8(cleaned));
                 g.textJson += "}";
             }

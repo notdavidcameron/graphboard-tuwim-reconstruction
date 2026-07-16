@@ -1,55 +1,61 @@
-# GraphBoard / Tuwim Reconstruction
+# GraphBoard / Tuwim reconstruction
 
-Reverse-engineering and reconstruction of the GraphBoard engine and its
-`.BDF` / `.GRP` content from *Multimedialny świat Juliana Tuwima*.
+This repository reconstructs the GraphBoard runtime and the `.BDF` / `.GRP`
+content from *Multimedialny świat Juliana Tuwima*. The main implementation is
+the shared C++ runtime in [`cpp_port/`](cpp_port/), used by both the native
+player and the active WebAssembly browser port.
 
-The primary implementation is the C++ runtime in `cpp_port/`. It powers both
-the native Windows player and the active WebAssembly browser player in
-`web_port_v2/`. The earlier JavaScript-only viewer is preserved under
-`archive/web_port_legacy/` as a recovery reference.
+The project is a preservation and research effort. The recovered game assets
+are kept in the repository for local reconstruction; treat them appropriately
+when sharing or redistributing the project.
 
-## What Is Here
+## Current browser player
 
-- **`cpp_port/`** — the active reconstruction: parsers, runtime, renderer,
-  authoring tools, tests, the native `gbgame` player, and the `gbweb`
-  WebAssembly bridge.
-- **`web_port_v2/`** — the active browser player. It supplies canvas,
-  WebAudio, external video, text, input, and lazy data loading around the same
-  C++ runtime.
-- **`archive/web_port_legacy/`** — the obsolete static scene viewer and its
-  partial JavaScript runtime, kept only for asset/recovery reference.
-- **`ghidra_import/`** — component DLL references and decompilation notes.
-- **`graphboard_file_formats.md`** — recovered file-format structures and
-  Ghidra findings.
-- **`extracted_assets/`** — canonical recovered visual/audio assets and
-  metadata used by recovery tooling.
-- **`gbtrace/`** — the live-tracing injector used to confirm behavior against
-  the original executable.
+[`web_port_v2/`](web_port_v2/) is the active browser implementation. It loads
+the C++ runtime through WebAssembly and provides:
 
-## Native C++ Port
+- the 640×480 canvas renderer and pixel-art scaling;
+- reconstructed page scripts, hotspots, sprites, groups, and animations;
+- WebAudio playback, volume control, and external video playback;
+- synchronized poem narration from the original `.EXS` / `.EXS_` RIFF/WAVE
+  files, including scrolling text and line highlighting;
+- recorder pages using the browser microphone API;
+- lazy loading of page data so the initial page can start quickly.
 
-Build and test:
+The former JavaScript-only viewer is archived under
+[`archive/web_port_legacy/`](archive/web_port_legacy/) and is read-only
+recovery reference. It is not the implementation target.
 
-```powershell
-cmake -S cpp_port -B cpp_port/build
-cmake --build cpp_port/build
-ctest --test-dir cpp_port/build -C Debug --output-on-failure
-```
+## Run locally
 
-Run the real-file regression checks or launch the native player:
+The browser must be served over HTTP. Opening `index.html` directly as
+`file://` prevents the browser from loading the WASM module and data files.
+
+From the repository root:
 
 ```powershell
-.\cpp_port\tools\verify_scenes.ps1
-.\cpp_port\build\Debug\gbinspect.exe "C:\path\to\START.PRJ"
-.\cpp_port\build-mingw\gbgame.exe "C:\path\to\DATA\START.PRJ"
+python -m http.server 8765
 ```
 
-See [`cpp_port/README.md`](cpp_port/README.md) for build variants, scope, and
-headless drive options.
+Then open:
 
-## WebAssembly Port
+```text
+http://127.0.0.1:8765/web_port_v2/index.html
+```
 
-Build the `gbweb` Emscripten target and copy its generated module:
+For QA, start on a particular page with a `?page=` query, for example:
+
+```text
+http://127.0.0.1:8765/web_port_v2/index.html?page=SLON
+```
+
+The browser player requires generated files under `web_port_v2/engine/` and
+`web_port_v2/data/`. These directories are intentionally ignored by Git.
+
+## Build the WebAssembly engine
+
+An Emscripten-enabled CMake toolchain is required to rebuild the browser
+engine:
 
 ```powershell
 cmake --build cpp_port\build-wasm --target gbweb --parallel
@@ -57,37 +63,82 @@ Copy-Item cpp_port\build-wasm\gbweb.js web_port_v2\engine\gbweb.js -Force
 Copy-Item cpp_port\build-wasm\gbweb.wasm web_port_v2\engine\gbweb.wasm -Force
 ```
 
-Package the original DATA folder. FFmpeg is required to transcode the legacy
-Indeo AVIs to browser video plus WebAudio tracks:
+The checked-in browser source is in `web_port_v2/src/`; the generated engine
+files are local build artifacts.
+
+## Package the original game data
+
+To regenerate the browser data package from the original `DATA` directory, use
+the packager below. FFmpeg is needed for the legacy Indeo AVI files and their
+browser-compatible audio/video output.
 
 ```powershell
-python .\tools\build_web_data.py "C:\path\to\Tuwim\DATA" .\web_port_v2\data\tuwim --link --ffmpeg "C:\path\to\ffmpeg.exe"
+python .\tools\build_web_data.py `
+  "C:\path\to\Tuwim\DATA" `
+  .\web_port_v2\data\tuwim `
+  --link `
+  --ffmpeg "C:\path\to\ffmpeg.exe"
 ```
 
-Serve the repository root:
+The packager includes external `.EXS` / `.EXS_` narration files. Although the
+extension is not `.wav`, these files contain RIFF/WAVE PCM audio. Their
+full-scale synchronization samples are consumed by the browser player for
+line timing and concealed before playback to avoid audible marker pops.
+
+## Native runtime and tests
+
+Configure and build the native C++ targets:
 
 ```powershell
-python -m http.server 8765
+cmake -S cpp_port -B cpp_port\build
+cmake --build cpp_port\build --config Release --parallel
+ctest --test-dir cpp_port\build -C Release --output-on-failure
 ```
 
-Open `http://127.0.0.1:8765/web_port_v2/index.html`. For QA, open a specific
-page with `?page=TANIEC_T`; the `.BDF` suffix is optional.
-
-The archived viewer remains available at
-`/archive/web_port_legacy/index.html`, but it is no longer an implementation
-target.
-
-## Compile Reconstruction Notes
-
-The readable source-style reconstructions under `cpp_port/reconstructed/` are
-kept compile-checkable through the root CMake project:
+Useful tools include:
 
 ```powershell
+.\cpp_port\build\Release\gbinspect.exe "C:\path\to\DATA\SLON.BDF"
 .\tools\compile_reconstructions.ps1
 ```
 
-## Notes
+`gbinspect` walks recovered component-private serializers and prints the
+parsed page, component, text, sound, and script state. See
+[`cpp_port/README.md`](cpp_port/README.md) for native player and headless-drive
+details.
 
-The repository includes recovered assets for local preservation and research.
-Keep repository visibility and sharing choices appropriate for the source
-material.
+## Repository layout
+
+- `cpp_port/` — parsers, runtime, renderer, native tools, tests, and the
+  `gbweb` WebAssembly bridge.
+- `web_port_v2/` — active browser entry point, device adapters, and local
+  generated engine/data directories.
+- `archive/web_port_legacy/` — obsolete JavaScript-only viewer kept for
+  recovery comparison.
+- `extracted_assets/` — canonical recovered images, audio, metadata, and
+  embedded component assets.
+- `graphboard_file_formats.md` — recovered `.PRJ`, `.BDF`, `.GRP`, component,
+  and script-engine format notes.
+- `cpp_port/reconstructed/` — readable source-style reconstructions based on
+  the original executable and component DLLs.
+- `ghidra_import/` — reference binaries, decompiler output, and targeted
+  reverse-engineering notes.
+- `gbtrace/` — tracing helpers used to compare behavior with the original
+  Windows executable.
+
+## Known limitations
+
+This is an incremental reconstruction rather than a complete replacement for
+the original Windows runtime. Some component-private formats and group
+behaviors remain best-effort, and a few old indexed-animation transparency
+cases can still vary by browser. The recorder and some rarely used pages also
+depend on browser permissions and media support.
+
+For implementation status and recovered serializer details, consult the
+project notes in `AGENTS.md`, `graphboard_file_formats.md`, and
+`cpp_port/docs/`.
+
+## Source repository
+
+The project is hosted at
+[github.com/notdavidcameron/graphboard-tuwim-reconstruction](https://github.com/notdavidcameron/graphboard-tuwim-reconstruction).

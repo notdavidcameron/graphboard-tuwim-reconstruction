@@ -37,6 +37,8 @@ const delayedMediaStarts = new Map();
 
 function textProgress(item, key) {
   if (!item.playing) return -1;
+  const synchronizedProgress = audio.syncProgress(key);
+  if (synchronizedProgress >= 0) return synchronizedProgress;
   const decodedProgress = audio.progress(key);
   // External .EXS narration is decoded asynchronously. Hold the first line
   // until WebAudio exposes the actual source start time; an optimistic timer
