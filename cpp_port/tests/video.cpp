@@ -53,6 +53,9 @@ void testDecodeAndSeek() {
     geometry.frameCount = 2;
     geometry.frameDurationMs = 100;
     geometry.streamTransparentIndex = 30;
+    geometry.drawTransparentIndex = 30;
+    geometry.persistentBacking = true;
+    geometry.transparencyEnabled = true;
     geometry.streamOffset = 0;
     geometry.streamByteCount = static_cast<std::uint32_t>(bytes.size());
 
@@ -78,6 +81,33 @@ void testDecodeAndSeek() {
     assert(decoder.lastDecodedFrame() == 0);
 }
 
+void testDirectStreamDoesNotRetainOldRectangles() {
+    std::vector<std::uint8_t> bytes(0x4e8, 0);
+    appendRecord(bytes, 0xff000001u, 0, 0, 2, 1, {2, 7, 8});
+    appendRecord(bytes, 0xff000001u, 2, 0, 4, 1, {2, 9, 10});
+
+    VideoGeometry geometry;
+    geometry.width = 4;
+    geometry.height = 1;
+    geometry.frameCount = 2;
+    geometry.streamOffset = 0;
+    geometry.streamByteCount = static_cast<std::uint32_t>(bytes.size());
+    geometry.persistentBacking = false;
+    geometry.transparencyEnabled = true;
+    geometry.streamTransparentIndex = 30;
+    geometry.drawTransparentIndex = 30;
+
+    BoardVideoDecoder decoder(bytes, geometry);
+    const auto& first = decoder.frameAt(0);
+    assert(first[0] == 7 && first[1] == 8);
+    assert(decoder.currentLeft() == 0 && decoder.currentRight() == 2);
+
+    const auto& second = decoder.frameAt(1);
+    assert(second[0] == 0 && second[1] == 0);
+    assert(second[2] == 9 && second[3] == 10);
+    assert(decoder.currentLeft() == 2 && decoder.currentRight() == 4);
+}
+
 void testMalformedStream() {
     std::vector<std::uint8_t> bytes(32, 0);
     VideoGeometry geometry;
@@ -94,6 +124,7 @@ void testMalformedStream() {
 
 int main() {
     testDecodeAndSeek();
+    testDirectStreamDoesNotRetainOldRectangles();
     testMalformedStream();
     return 0;
 }

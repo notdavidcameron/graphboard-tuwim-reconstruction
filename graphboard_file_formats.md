@@ -460,6 +460,9 @@ Every board-video header starts at the `Board Video File Ver:0` string and has a
 
 ```text
 +0x68 u32 magic = 0xada77777
++0x6c u32 persistent-backing flag
++0x70 u32 playback/invalidation transparency flag
++0x74 u32 playback transparent palette index
 +0x80 u32 frame width
 +0x84 u32 frame height
 +0x88 u32 chunk-record count
@@ -470,6 +473,22 @@ Every board-video header starts at the `Board Video File Ver:0` string and has a
 +0xe0 u32 audio byte rate          // 44100 in RZECZKA
 +0xe4 u32 maximum compressed video chunk size
 ```
+
+The playable stream header and the header copy at the start of the following
+`holderEntry[0x568]` are not interchangeable. `TVH_ProcessVideoChunks` uses the
+playable stream's `+0x6c/+0x70` flags to choose retained-backing and redraw
+behavior, while `TVH_Draw` uses the holder-entry copy's `+0x70/+0x74` as the
+actual colour-key switch/index. These values differ in shipped pages (for
+example GRZESIU entries 9 and 10), so the runtime preserves both copies.
+
+For retained streams, the DLL allocates a zeroed full-size 8-bpp backing DIB,
+decodes every changed rectangle into it with transparency disabled, and applies
+the holder-entry colour key only when that backing DIB is drawn. The board host
+callback (`Tuwim.exe:0040c840`, `GraphBrdViewCallback_RedrawRect`) then calls
+`GraphBrdView_ComposeToBackBufferAndBlit` (`0040c2c0`) to restore the dirty page
+rectangle and redraw components layer-by-layer. GRZESIU clip 5 stores the clean
+orange-stamp pixels directly in its later full-frame BoardVideo records; no
+background synthesis or image repair is involved.
 
 Chunk records begin at `header + 0x4e8`:
 

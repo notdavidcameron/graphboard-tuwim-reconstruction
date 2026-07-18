@@ -35,6 +35,18 @@ public:
     // Index of the frame currently decoded in the buffer (-1 before any decode).
     int lastDecodedFrame() const { return decodedFrame_; }
 
+    // The original DLL has two playback modes. Streams with header+0x6c set
+    // retain all decoded deltas in a full-size backing DIB. Other streams draw
+    // only the current record rectangle into the board's freshly composed
+    // surface. These accessors let the renderer reproduce that distinction.
+    bool persistentBacking() const { return persistentBacking_; }
+    bool transparencyEnabled() const { return transparencyEnabled_; }
+    std::uint8_t transparentIndex() const { return transparentIndex_; }
+    int currentLeft() const { return currentLeft_; }
+    int currentTop() const { return currentTop_; }
+    int currentRight() const { return currentRight_; }
+    int currentBottom() const { return currentBottom_; }
+
     // The stream's own palette: 256 RGBQUAD entries (blue, green, red, pad).
     const std::vector<std::uint8_t>& palette() const { return palette_; }
 
@@ -55,6 +67,8 @@ private:
     void applyRecord(const VideoRecord& rec);
     int width_ = 0, height_ = 0, frameCount_ = 0;
     std::uint8_t transparentIndex_ = 0;
+    bool persistentBacking_ = false;
+    bool transparencyEnabled_ = false;
     std::uint32_t audioSampleRate_ = 0, audioBitsPerSample_ = 0, audioChannels_ = 0;
     std::vector<std::uint8_t> records_;       // raw chunk-record bytes
     std::vector<VideoRecord> videoRecords_;   // one per frame, in frame order
@@ -63,6 +77,7 @@ private:
 
     std::vector<std::uint8_t> frame_;         // width*height top-down, current state
     int decodedFrame_ = -1;                   // index frame_ holds, -1 = none
+    int currentLeft_ = 0, currentTop_ = 0, currentRight_ = 0, currentBottom_ = 0;
 };
 
 } // namespace graphboard

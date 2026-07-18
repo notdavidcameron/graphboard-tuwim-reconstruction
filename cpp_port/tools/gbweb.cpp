@@ -190,24 +190,24 @@ public:
         add(page.groupComponents(), page.groupBytes());
     }
 
-    const std::uint8_t* currentFrame(const std::string& component, int entry,
-                                     const std::uint8_t*& palette) override {
+    FrameView currentFrame(const std::string& component, int entry) override {
+        FrameView view;
         const auto it = decoders_.find(component);
         if (it == decoders_.end() || entry < 0 ||
             static_cast<std::size_t>(entry) >= it->second.size() || !page_) {
-            return nullptr;
+            return view;
         }
         auto& decoder = *it->second[static_cast<std::size_t>(entry)];
         const auto* c = page_->component(component);
-        if (!c) return nullptr;
+        if (!c) return view;
         const auto ci = c->items.find(entry);
-        if (ci == c->items.end()) return nullptr;
+        if (ci == c->items.end()) return view;
         auto itemInt = [&](const char* key) -> int {
             const auto vi = ci->second.find(key);
             return vi != ci->second.end() ? static_cast<int>(vi->second.toInt()) : 0;
         };
         if (itemInt("playing") == 0 && itemInt("hasPlayed") == 0) {
-            return nullptr;
+            return view;
         }
         int index;
         if (itemInt("playing") != 0) {
@@ -219,9 +219,24 @@ public:
             index = (std::max)(decoder.lastDecodedFrame(), 0);
         }
         const auto& frame = decoder.frameAt(index);
-        if (frame.empty()) return nullptr;
-        palette = decoder.palette().size() >= 1024 ? decoder.palette().data() : nullptr;
-        return frame.data();
+        if (frame.empty()) return view;
+        int left = 0, top = 0, right = decoder.width(), bottom = decoder.height();
+        if (!decoder.persistentBacking()) {
+            left = decoder.currentLeft();
+            top = decoder.currentTop();
+            right = decoder.currentRight();
+            bottom = decoder.currentBottom();
+        }
+        if (left >= right || top >= bottom) return view;
+        view.pixels = frame.data() + static_cast<std::size_t>(top) * decoder.width() + left;
+        view.stride = static_cast<std::size_t>(decoder.width());
+        view.x = left;
+        view.y = top;
+        view.width = right - left;
+        view.height = bottom - top;
+        view.useTransparency = decoder.transparencyEnabled();
+        view.transparentIndex = decoder.transparentIndex();
+        return view;
     }
 
     graphboard::BoardVideoDecoder* decoder(const std::string& component, int entry) {

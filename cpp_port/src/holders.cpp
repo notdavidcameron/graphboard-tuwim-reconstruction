@@ -346,6 +346,8 @@ TransparentVideoHolderState parseTransparentVideoHolderState(BinaryReader& reade
         }
         const auto header = reader.readBytes(kBoardVideoHeaderBytes);
         entry.stream.magic = readU32At(header, 0x68);
+        entry.stream.persistentBacking = readU32At(header, 0x6c) != 0;
+        entry.stream.transparencyEnabled = readU32At(header, 0x70) != 0;
         entry.stream.transparentIndex = readU32At(header, 0x74);
         entry.stream.frameDurationMs = readU32At(header, 0x7c);
         entry.stream.width = static_cast<std::int32_t>(readU32At(header, 0x80));
@@ -363,6 +365,13 @@ TransparentVideoHolderState parseTransparentVideoHolderState(BinaryReader& reade
         entry.stageY = static_cast<std::int32_t>(readU32At(entryBytes, 0x550));
         entry.stageZ = static_cast<std::int32_t>(readU32At(entryBytes, 0x554));
         entry.showStillAtRest = readU32At(entryBytes, 0x504) != 0;
+        // Playback and drawing consult different header copies. The stream
+        // header controls decode/invalidation; TVH_Draw uses the 0x568-byte
+        // holder entry copy. They genuinely differ in shipped data (GRZESIU
+        // entries 9 and 10), so do not collapse them into one inferred key.
+        entry.drawTransparencyEnabled = readU32At(entryBytes, 0x70) != 0;
+        entry.drawTransparentIndex =
+            static_cast<std::uint8_t>(readU32At(entryBytes, 0x74));
 
         // The still frame is sized from the ENTRY's header copy, exactly as
         // TVH_LoadPrivateState computes it.
