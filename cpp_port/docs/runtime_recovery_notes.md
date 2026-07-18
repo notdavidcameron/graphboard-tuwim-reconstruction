@@ -483,9 +483,9 @@ The native pump now samples at 16 ms, while fixed-point glide and panorama
 positions retain subpixel progress; this removes visible 30 Hz stepping without
 forcing redundant composites. TransparentVideoHolder playback has one
 foreground channel: starting a new scripted `Play` stops the prior click clip
-and cancels its pending `TheEnd`. GRZESIU's two idle doodles are recovered as
-separate ambient loops because that old runtime-only state is absent from both
-its script and serialized private block. MROZ's PanoramaHolder uses its
+and cancels its pending `TheEnd`. GRZESIU's authored idle expressions remain
+in its SpriteHolder; the runtime does not synthesize additional TVH playback
+that the page script never requested. MROZ's PanoramaHolder uses its
 90-degree authored start as an offset, auto-scrolls at 30 px/s, and clamps/stops
 at the actual remaining source edge. Page hotspots also receive their
 holder-local hover route beneath a foreground sprite, preserving RZECZKA's edge

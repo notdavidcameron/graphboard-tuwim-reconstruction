@@ -234,6 +234,8 @@ struct BoardVideoStreamInfo {
     std::uint32_t streamByteCount = 0;
     std::size_t streamOffset = 0;   // file offset of "Board Video File Ver:0"
     std::uint32_t magic = 0;        // header+0x68, expected 0xada77777
+    bool persistentBacking = false; // header+0x6c: decode deltas into a retained DIB
+    bool transparencyEnabled = false; // header+0x70: colour-key while drawing
     std::uint32_t transparentIndex = 0; // header+0x74
     std::uint32_t frameDurationMs = 0;  // header+0x7c
     std::int32_t width = 0;         // header+0x80
@@ -258,6 +260,8 @@ struct TransparentVideoEntry {
     // WYBORW's 25 menu characters carry 1; its two menu-overlay entries carry 0.
     bool showStillAtRest = false;
     std::uint8_t transparentIndex = 0; // dominant saved-frame matte colour
+    bool drawTransparencyEnabled = false; // entry header copy +0x70
+    std::uint8_t drawTransparentIndex = 0; // entry header copy +0x74
 };
 
 struct TransparentVideoHolderState {

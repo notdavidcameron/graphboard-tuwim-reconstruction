@@ -28,7 +28,9 @@ BoardVideoDecoder::BoardVideoDecoder(const std::vector<std::uint8_t>& fileBytes,
                                      const runtime::VideoGeometry& geom) {
     width_ = geom.width;
     height_ = geom.height;
-    transparentIndex_ = geom.streamTransparentIndex;
+    transparentIndex_ = geom.drawTransparentIndex;
+    persistentBacking_ = geom.persistentBacking;
+    transparencyEnabled_ = geom.transparencyEnabled;
     const int declaredFrameCount = geom.frameCount;
     frameCount_ = 0;
     const auto width = static_cast<std::size_t>(width_ > 0 ? width_ : 0);
@@ -80,7 +82,12 @@ BoardVideoDecoder::BoardVideoDecoder(const std::vector<std::uint8_t>& fileBytes,
 
     frameCount_ = std::min<int>(declaredFrameCount, static_cast<int>(videoRecords_.size()));
     if (frameCount_ <= 0) return;
-    frame_.assign(width * height, transparentIndex_);
+    // TVH_ReadFirstChunk allocates its persistent DIB with GMEM_ZEROINIT and
+    // decodes records with transparency disabled. Keying happens only later,
+    // in TVH_Draw. Keeping raw indices here is essential: index 30 in a later
+    // GRZESIU frame exposes the page, while its opaque stamp pixels cover the
+    // stick figure at the animation's origin.
+    frame_.assign(width * height, 0);
 }
 
 // Decode one RLE rect into frame_ (top-down here; the original writes into a
@@ -140,13 +147,23 @@ const std::vector<std::uint8_t>& BoardVideoDecoder::frameAt(int index) {
     }
     index = std::clamp(index, 0, static_cast<int>(videoRecords_.size()) - 1);
     if (index < decodedFrame_) {
-        std::fill(frame_.begin(), frame_.end(), transparentIndex_);
+        std::fill(frame_.begin(), frame_.end(), 0);
         decodedFrame_ = -1;
+        currentLeft_ = currentTop_ = currentRight_ = currentBottom_ = 0;
     }
     while (decodedFrame_ < index) {
         ++decodedFrame_;
         const auto& record = videoRecords_[static_cast<std::size_t>(decodedFrame_)];
+        if (!persistentBacking_ && !record.unchanged) {
+            std::fill(frame_.begin(), frame_.end(), 0);
+        }
         applyRecord(record);
+        if (!record.unchanged) {
+            currentLeft_ = std::clamp(record.left, 0, width_);
+            currentTop_ = std::clamp(record.top, 0, height_);
+            currentRight_ = std::clamp(record.right, currentLeft_, width_);
+            currentBottom_ = std::clamp(record.bottom, currentTop_, height_);
+        }
     }
     return frame_;
 }

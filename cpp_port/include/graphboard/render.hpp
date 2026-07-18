@@ -18,16 +18,22 @@ namespace graphboard {
 // components (sprites, bitmaps) composite on top of it.
 Image renderBackground(const std::vector<std::uint8_t>& bytes, const BdfHeader& header);
 
-// Supplies decoded frames for Transparent_Video_Holder entries that are
-// currently playing. Returns width*height 8-bpp top-down pixels (drawn with
-// `palette`, 256 RGBQUAD entries), or nullptr to fall back to the entry's
-// still frame. Implemented by the interactive shell, which owns the
-// BoardVideoDecoder cache; headless renders pass nothing and get still frames.
+// Supplies the native TVH draw view for a currently playing entry. Persistent
+// streams expose their full retained DIB; direct streams expose only the current
+// record rectangle. Pixels are 8-bpp page-palette indices, exactly as the DLL
+// writes them into the board backbuffer.
 class VideoFrameSource {
 public:
+    struct FrameView {
+        const std::uint8_t* pixels = nullptr;
+        std::size_t stride = 0;
+        int x = 0, y = 0, width = 0, height = 0;
+        bool useTransparency = false;
+        std::uint8_t transparentIndex = 0;
+    };
+
     virtual ~VideoFrameSource() = default;
-    virtual const std::uint8_t* currentFrame(const std::string& component, int entry,
-                                             const std::uint8_t*& palette) = 0;
+    virtual FrameView currentFrame(const std::string& component, int entry) = 0;
 };
 
 // Render the page's live scene: the background, then every visible sprite,

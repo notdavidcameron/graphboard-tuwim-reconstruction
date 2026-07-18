@@ -2,7 +2,7 @@
 // core owns all game state; this file owns the devices — canvas, WebAudio,
 // clock, input — and the navigation pump that fetches pages on demand.
 
-import createGbWeb from "../engine/gbweb.js";
+import createGbWeb from "../engine/gbweb.js?v=27";
 import { DataLoader } from "./loader.js";
 import { AudioEngine } from "./audio.js";
 import { VideoEngine } from "./video.js";
@@ -215,7 +215,7 @@ function onAnimationFrame(now) {
 
 async function boot() {
   Module = await createGbWeb({
-    locateFile: (file) => "engine/" + file,
+    locateFile: (file) => "engine/" + file + "?v=27",
   });
   const cw = (name, ret, args) => Module.cwrap(name, ret, args);
   api = {

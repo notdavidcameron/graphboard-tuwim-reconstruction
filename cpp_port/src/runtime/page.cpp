@@ -139,6 +139,10 @@ void seedFromPrivateState(BinaryReader& reader, ComponentState& state) {
                 geom.transparentIndex = e.transparentIndex;
                 geom.streamTransparentIndex =
                     static_cast<std::uint8_t>(e.stream.transparentIndex);
+                geom.drawTransparentIndex = e.drawTransparentIndex;
+                geom.persistentBacking = e.stream.persistentBacking;
+                geom.streamTransparencyEnabled = e.stream.transparencyEnabled;
+                geom.transparencyEnabled = e.drawTransparencyEnabled;
                 geom.streamOffset = e.stream.streamOffset;
                 geom.streamByteCount = e.stream.streamByteCount;
                 geom.paletteOffset = e.stream.streamOffset + 0xe8;
@@ -586,31 +590,6 @@ void Page::runEvent(const std::string& name, const std::vector<Value>& args) {
     if (interpreter_ && interpreter_->hasHandler(name)) {
         interpreter_->runHandler(name, args);
     }
-    if (name == "OnOpenPage") {
-        // One shipped board contains two authored idle doodles whose looping
-        // state lives in the old holder's runtime state rather than in its
-        // script/private serialization. Keep this content-recovery fallback
-        // structural (15 TVH clips, two one-frame smile overlays and one work
-        // bitmap) instead of coupling it to a filename. Ambient clips use a
-        // separate channel and therefore do not violate TVH's single on-click
-        // playback rule.
-        auto* tvh = resolve("Transparent_Video_Holder");
-        const auto* sprites = resolve("Sprite_Holder");
-        const auto* bitmap = resolve("Bitmap_Holder");
-        if (tvh && sprites && bitmap && tvh->videos.size() == 15 &&
-            sprites->sprites.size() == 2 && bitmap->bitmaps.size() == 1) {
-            for (const int id : {9, 10}) {
-                auto& idle = tvh->items[id];
-                idle["ambient"] = Value::integer(1);
-                idle["looping"] = Value::integer(1);
-                idle["playing"] = Value::integer(1);
-                idle["hasPlayed"] = Value::integer(1);
-                idle["playStartMs"] = Value::integer(clockMs_);
-                idle["visible"] = Value::integer(1);
-                scheduleCompletion(*tvh, "TheEnd", id);
-            }
-        }
-    }
 }
 
 bool Page::hasGlobal(const std::string& name) const {
@@ -1043,11 +1022,10 @@ Host::ComponentResult Page::callComponent(const std::string& component, const st
         cancelCompletions(state->displayName, id);
         if (state->kind == HolderKind::TransparentVideoHolder) {
             // The DLL has one active click-playback channel per holder. Starting
-            // a new entry freezes the previous one at its current decoded frame
-            // and cancels its completion callback.
+            // a new entry replaces the previous one and cancels its completion
+            // callback.
             for (auto& [otherId, other] : state->items) {
                 if (otherId == id) continue;
-                if (other.count("ambient") && other["ambient"].toInt() != 0) continue;
                 if (other.count("playing") && other["playing"].toInt() != 0) {
                     other["playing"] = Value::integer(0);
                     other["hasPlayed"] = Value::integer(0);
@@ -1400,7 +1378,15 @@ Candidate topItemIn(const ComponentState& state, int x, int y) {
         for (auto it = state.hotspots.rbegin(); it != state.hotspots.rend(); ++it) {
             const auto& h = *it;
             if (h.enabled == 0) continue;
-            if (x < h.left || x > h.right || y < h.top || y > h.bottom) continue;
+            // The shared cursor groups open the toolbar from an invisible
+            // 10-20 px strip at the right edge (hotspot 0). Give that one
+            // specific trigger a little inward hover tolerance; do not alter
+            // authored hotspot geometry or any other interactive rectangle.
+            const bool toolbarEdgeTrigger =
+                state.displayName.rfind("Group.", 0) == 0 && h.id == 0 &&
+                h.left >= 600 && (h.right - h.left) <= 64;
+            const auto left = h.left - (toolbarEdgeTrigger ? 32 : 0);
+            if (x < left || x > h.right || y < h.top || y > h.bottom) continue;
             if (best.index == -1 || h.layer > best.layer) {
                 best.index = h.id;
                 best.layer = h.layer;

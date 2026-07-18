@@ -391,6 +391,8 @@ void testTransparentVideoHolderState() {
         header[off + 3] = static_cast<std::uint8_t>((v >> 24) & 0xff);
     };
     putU32(0x68, 0xada77777u);           // magic
+    putU32(0x6c, 1);                     // retained backing DIB
+    putU32(0x70, 1);                     // colour-keyed draw
     putU32(0x74, 199);                   // authored transparent colour index
     putU32(0x7c, 100);                   // frameDurationMs
     putU32(0x80, 6);                     // width  (stride 8)
@@ -409,6 +411,8 @@ void testTransparentVideoHolderState() {
     };
     putEntryU32(0x80, 6);                // entry width -> still frame stride 8
     putEntryU32(0x84, 2);                // entry height -> still 16 bytes
+    putEntryU32(0x70, 1);                // TVH_Draw enables colour key
+    putEntryU32(0x74, 77);               // TVH_Draw key (may differ from stream)
     putEntryU32(0x508, 12);              // originalX
     putEntryU32(0x50c, 34);              // originalY
     putEntryU32(0x54c, 56);              // stageX
@@ -423,6 +427,9 @@ void testTransparentVideoHolderState() {
     assert(state.entries.size() == 1);
     const auto& e = state.entries[0];
     assert(e.stream.magic == 0xada77777u);
+    assert(e.stream.persistentBacking);
+    assert(e.stream.transparencyEnabled);
+    assert(e.drawTransparencyEnabled && e.drawTransparentIndex == 77);
     assert(e.stream.width == 6 && e.stream.height == 2);
     assert(e.stream.frameCount == 3);
     assert(e.transparentIndex == 0xaa);  // repeated still-frame corner matte

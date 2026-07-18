@@ -52,6 +52,10 @@ struct VideoGeometry {
     std::int32_t frameCount = 0;
     std::uint8_t transparentIndex = 0;
     std::uint8_t streamTransparentIndex = 0;
+    std::uint8_t drawTransparentIndex = 0;
+    bool persistentBacking = false;
+    bool streamTransparencyEnabled = false;
+    bool transparencyEnabled = false; // entry header copy: TVH_Draw colour key
     std::size_t streamOffset = 0;       // "Board Video File" header start
     std::uint32_t streamByteCount = 0;  // header + chunk records
     std::size_t paletteOffset = 0;      // streamOffset + 0xe8: 256 RGBQUADs

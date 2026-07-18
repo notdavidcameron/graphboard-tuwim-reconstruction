@@ -120,15 +120,6 @@ std::size_t dibStride(std::size_t width) {
     return (width + 3) & ~std::size_t{3};
 }
 
-int greenKeyIndex(const std::uint8_t* palette) {
-    if (!palette) return -1;
-    for (int i = 0; i < 256; ++i) {
-        const auto* c = palette + static_cast<std::size_t>(i) * 4;
-        if (c[0] == 0 && c[1] == 255 && c[2] == 0) return i;
-    }
-    return -1;
-}
-
 void blitScaled(Image& dst, const Image& src) {
     if (dst.width <= 0 || dst.height <= 0 || src.width <= 0 || src.height <= 0) return;
     for (int y = 0; y < dst.height; ++y) {
@@ -422,21 +413,23 @@ Image renderPage(const runtime::Page& page, const std::vector<std::uint8_t>& byt
                 d.w = geom.width;
                 d.h = geom.height;
                 if (videoFrames) {
-                    const std::uint8_t* palette = nullptr;
-                    const std::uint8_t* frame =
-                        videoFrames->currentFrame(c.displayName, id, palette);
-                    if (frame) {
-                        d.pixels = frame;
-                        d.stride = static_cast<std::size_t>(geom.width);
-                        d.palette = palette;
-                // GRZESIU's collage stream contains a keyed green surround;
-                // keep palette transparency enabled while it is animated.
-                d.useTransparent = true;
-                d.transparent = geom.transparentIndex;
-                d.secondaryTransparent = geom.streamTransparentIndex;
-                const int pageGreen = greenKeyIndex(pagePalette);
-                if (pageGreen >= 0) d.secondaryTransparent = pageGreen;
-                draws.push_back(d);
+                    const auto frame = videoFrames->currentFrame(c.displayName, id);
+                    if (frame.pixels && frame.width > 0 && frame.height > 0) {
+                        d.x += frame.x;
+                        d.y += frame.y;
+                        d.w = frame.width;
+                        d.h = frame.height;
+                        d.pixels = frame.pixels;
+                        d.stride = frame.stride;
+                        // TVH_Draw copies indexed pixels into the board's
+                        // 8-bpp backbuffer. The page palette therefore remains
+                        // authoritative; the stream palette is editor/import
+                        // metadata, not a second compositing colour space.
+                        d.palette = nullptr;
+                        d.useTransparent = frame.useTransparency;
+                        d.transparent = frame.transparentIndex;
+                        d.secondaryTransparent = -1;
+                        draws.push_back(d);
                         continue;
                     }
                 }
@@ -447,23 +440,16 @@ Image renderPage(const runtime::Page& page, const std::vector<std::uint8_t>& byt
                 if (!shown) continue;
                 const std::size_t stride = dibStride(static_cast<std::size_t>(geom.width));
                 if (geom.stillFrameOffset + stride * geom.height > bytes.size()) continue;
-                const std::uint8_t* videoPalette =
-                    geom.paletteOffset + 1024 <= bytes.size() ? bytes.data() + geom.paletteOffset
-                                                              : nullptr;
                 d.pixels = bytes.data() + geom.stillFrameOffset;
                 d.stride = stride;
                 d.bottomUp = true;
-                // The persisted still is a snapshot of the page/stage surface
-                // and therefore uses the page palette. Only decoded BoardVideo
-                // frames use the stream's private palette.
+                // TVH_Draw uses the copied BoardVideo header's +0x70/+0x74
+                // fields for saved stills too. Perimeter-derived matte colours
+                // are useful to asset exporters, but are not runtime state.
                 d.palette = nullptr;
-                d.useTransparent = true;
-                d.transparent = geom.transparentIndex;
-                d.secondaryTransparent = geom.streamTransparentIndex;
-                if (suppressInitialTvh && (id == 1 || id == 5)) {
-                    const int green = greenKeyIndex(videoPalette);
-                    if (green >= 0) d.transparent = static_cast<std::uint8_t>(green);
-                }
+                d.useTransparent = geom.transparencyEnabled;
+                d.transparent = geom.drawTransparentIndex;
+                d.secondaryTransparent = -1;
                 draws.push_back(d);
             }
         }
