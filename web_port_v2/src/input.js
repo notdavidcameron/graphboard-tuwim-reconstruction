@@ -14,6 +14,7 @@ export function attachInput(canvas, api) {
     // keys (188/190) returned by browser keyCode for the same physical keys.
     Comma: 44,
     Period: 46,
+    Slash: 47,
     BracketLeft: 91,
     BracketRight: 93,
   };
@@ -21,9 +22,11 @@ export function attachInput(canvas, api) {
   const virtualKey = (event) => {
     if (event.code === "Comma") return 44;
     if (event.code === "Period") return 46;
+    if (event.code === "Slash") return 47;
     const legacyCode = Number(event.keyCode || event.which);
     if (legacyCode === 188) return 44;
     if (legacyCode === 190) return 46;
+    if (legacyCode === 191) return 47;
     return legacyCode || codeToVirtualKey[event.code] || 0;
   };
 
@@ -33,7 +36,7 @@ export function attachInput(canvas, api) {
     // running.
     if (event.ctrlKey || event.altKey || event.metaKey) return false;
     return [
-      "Tab", "ShiftLeft", "ShiftRight", "Comma", "Period",
+      "Tab", "ShiftLeft", "ShiftRight", "Comma", "Period", "Slash",
       "BracketLeft", "BracketRight",
       "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Space",
     ].includes(event.code);

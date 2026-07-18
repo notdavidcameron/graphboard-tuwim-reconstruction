@@ -12,6 +12,11 @@ import { attachInput } from "./input.js";
 
 const MAX_FOLLOWS_PER_PUMP = 8;   // gbgame's kMaxFollowsPerPump
 
+const dataRoot = document.body.dataset.gameDataRoot;
+if (!dataRoot) {
+  throw new Error("Player page is missing data-game-data-root");
+}
+
 const canvas = document.getElementById("screen");
 const ctx = canvas.getContext("2d");
 const overlay = document.getElementById("overlay");
@@ -256,7 +261,7 @@ async function boot() {
     progress: (percent) => { api.recorderProgress(percent); blitIfDirty(true); },
   });
 
-  loader = new DataLoader(Module, "data/tuwim/", setProgress);
+  loader = new DataLoader(Module, dataRoot, setProgress);
   await loader.init();
   video = new VideoEngine(document.getElementById("videoLayer"), canvas, loader, audio, (id) => {
     if (!api || navigating) return;

@@ -7,7 +7,7 @@ to browser-decodable MP4, and writes manifest.json for lazy page and media
 loading.
 
 Usage:
-  python tools/build_web_data.py "<path to DATA>" web_port_v2/data/tuwim [--link]
+  python tools/build_web_data.py "<path to DATA>" web_port_v2/data/<game> [--link]
 
 --link uses NTFS hard links instead of copies (same-volume dev setups).
 """
